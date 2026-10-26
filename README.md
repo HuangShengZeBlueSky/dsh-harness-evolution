@@ -1,59 +1,62 @@
 # DSH Harness Evolution
 
-**Evolve the harness. Keep the actor model frozen. Release the working plugins.**
+**Five benchmarks. Native plugins. Measured results.**
 
-A growing collection of evolved [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/deepseek-harness) artifacts across **ALFWorld · DBBench · WebShop · OSBench · τ²-Telecom**. Every release includes executable plugins, its composition, evaluation protocol, evolution curve, and a Mermaid architecture diagram.
+Evolved [DSH](https://github.com/deepseek-ai/deepseek-harness) harnesses for a frozen **Qwen3-4B** actor. Each artifact includes working plugin source, an architecture diagram, its evolution curve, and the measured evaluation protocol.
 
-[**Full leaderboard**](LEADERBOARD.md) · [**Evolution curves**](docs/CURVES.md) · [**Method overview**](docs/METHOD.md) · [**Run a harness**](docs/RUNNING.md) · [**Publish a release**](docs/PUBLISHING.md) · [**Metric definitions**](docs/METRICS.md)
+[**Leaderboard**](LEADERBOARD.md) · [**Evolution curves**](docs/CURVES.md) · [**Download**](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/archive/refs/heads/main.zip) · [**Run**](docs/RUNNING.md) · [**Publish an update**](docs/PUBLISHING.md)
 
-## Current published results
+![Five published harnesses and Life-Harness reference waterlines](assets/leaderboard.png)
+
+**Read the scores:** green = our released artifact; gold marker = Life-Harness paper reference. AgentBench trial counts differ. Telecom also uses a different user simulator and account-review integration. [Metric definitions and comparison scope →](docs/METRICS.md)
+
+## Choose a harness
+
+Pick a task, see what the harness does, then open its **source**, **diagram**, or **curve**. 插件源码、框图、进化曲线均可直接进入。
 
 <!-- LEADERBOARD:START -->
 
-| Benchmark | Released artifact | Ours Pass@1 | Life-Harness paper | Numerical gap |
-|---|---|---:|---:|---:|
-| ALFWorld | [v18 · 方法2 · Astra自由方案](harnesses/alfworld/20261026-method1-sol61-v18) | **95.41%** | 88.07% | +7.34 pp |
-| DBBench | [v35 · L4 · Agent结构与多插件职责](harnesses/dbbench/20261026-l4-h0-sol61-v35) | **70.56%** | 65.00% | +5.56 pp |
-| WebShop | [v28 · L5 · 场景专用循环](harnesses/webshop/20261026-l5-h0-sol61-v28) | **44.50%** | 45.50% | -1.00 pp |
-| OSBench | [v17 · L4 · Agent结构与多插件职责](harnesses/osbench/20261026-l4-h0-sol61-v17) | **38.89%** | 39.60% | -0.71 pp |
-| τ²-Telecom | [v06 · 方法2消融 · Luna修复版起点](harnesses/telecom/20261026-start-luna-repaired-v06) | **84.17%** | 90.00% | -5.83 pp |
-
-Updated from published release records. Numerical differences are descriptive, not protocol-matched superiority claims.
+| Harness · success | What it solves | Selected artifact | Explore |
+|---|---|---|---|
+| **ALFWorld · 95.41%** | Household procedures + visible-state guidance | [v18 · 2 registrations](harnesses/alfworld/20261026-method1-sol61-v18) | [Source](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [Diagram](harnesses/alfworld/20261026-method1-sol61-v18#architecture) · [Curve](harnesses/alfworld/20261026-method1-sol61-v18#evolution) |
+| **DBBench · 70.56%** | SQL grounding, execution, recovery and submission | [v35 · 8 registrations](harnesses/dbbench/20261026-l4-h0-sol61-v35) | [Source](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [Diagram](harnesses/dbbench/20261026-l4-h0-sol61-v35#architecture) · [Curve](harnesses/dbbench/20261026-l4-h0-sol61-v35#evolution) |
+| **WebShop · 44.50%** | Search, product options and budget-aware checkout | [v28 · 5 registrations](harnesses/webshop/20261026-l5-h0-sol61-v28) | [Source](harnesses/webshop/20261026-l5-h0-sol61-v28/plugins) · [Diagram](harnesses/webshop/20261026-l5-h0-sol61-v28#architecture) · [Curve](harnesses/webshop/20261026-l5-h0-sol61-v28#evolution) |
+| **OSBench · 38.89%** | File inspection, shell-task contracts and recovery | [v17 · 5 registrations](harnesses/osbench/20261026-l4-h0-sol61-v17) | [Source](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [Diagram](harnesses/osbench/20261026-l4-h0-sol61-v17#architecture) · [Curve](harnesses/osbench/20261026-l4-h0-sol61-v17#evolution) |
+| **τ²-Telecom · 84.17%** | Customer identity, device diagnosis and account review | [v06 · 35 registrations](harnesses/telecom/20261026-start-luna-repaired-v06) | [Source](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [Diagram](harnesses/telecom/20261026-start-luna-repaired-v06#architecture) · [Curve](harnesses/telecom/20261026-start-luna-repaired-v06#evolution) |
 
 <!-- LEADERBOARD:END -->
 
-Scores are selected from **completed, training-selected final artifacts**. The best artifact across experiments is selected retrospectively for publication; this is a release leaderboard, not an independent confirmatory evaluation. Actor: **Qwen3-4B-Instruct-2507**. Optimizer models are listed separately on each artifact page.
+WebShop ranks by **strict success**, not partial reward. Its mean reward is shown separately. Registration counts describe implementation, not independent causal gains. A version such as `v35` is the selected checkpoint within its experiment, not the number of completed rounds.
 
-**Comparison scope:** Life-Harness paper numbers are reference waterlines, not our measurements. AgentBench: paper one trial vs our three; Telecom: paper DeepSeek-V4-Flash user vs our GLM-5.3-Flash user, with additional account-facts/review integration. No overall “beats Life-Harness” claim is made. [Protocol details](docs/METRICS.md)
+## How the harness evolves
 
-## The idea
-
-One recurring problem class should have an explicit plugin responsibility. Inspect the current agent and its existing capabilities before proposing another plugin. Keep changes only when their real execution and configured training/validation criteria support adoption.
+**Map the current agent → identify a recurring problem → give a plugin an explicit responsibility → evaluate → adopt or reject.**
 
 ```mermaid
 flowchart LR
-    A[Training failures] --> B[Current agent and plugin map]
-    B --> C[Problem class and mechanism proposal]
-    C --> D[Implement DSH plugins]
-    D --> E[Run and compare on development tasks]
-    E --> F{Adopt?}
-    F -->|Yes| B
-    F -->|No: retain evidence| C
-    F -->|Evolution budget ends| G[Freeze selected harness]
-    G --> H[Final test]
-    H --> I[Versioned artifact and leaderboard]
+    A[Training failures] --> B[Agent capability map]
+    B --> C[Plugin mechanism]
+    C --> D[Development evaluation]
+    D -->|Adopt or revise| B
+    D -->|Budget ends| E[Freeze selected harness]
+    E --> F[Final test and release]
 ```
 
-This public repository presents the method at a high level and releases final products. Detailed paper claims and unpublished research designs are not included. Plugin counts describe implementation, not independent causal gains.
+One problem class should have an explicit plugin responsibility; plugins can cooperate and redundant guidance can be removed. This repository shares the method overview and final products, not unpublished paper details. [Method overview →](docs/METHOD.md)
 
-## A release-driven leaderboard
+## Publish once, update the leaderboard
 
-Publish a harness directory and its measured result; `tools/publish.py` adds an immutable release record, regenerates the leaderboard, and plots the supplied curve. Previous releases remain available. Data and artifacts move together in the same Git commit. No private experiment service is polled and no unfinished result is automatically published.
+**New harness + test data + curve → versioned release → refreshed leaderboard.**
 
-## 中文说明
+The publication tool preserves previous artifacts. GitHub Actions rebuilds the overview, scores, artifact pages and curves when release data changes. No private experiment service is polled. [Publication guide →](docs/PUBLISHING.md)
 
-这里公开五个场景的最终 harness 产物、插件职责框图、真实进化曲线，以及与 Life-Harness 论文和本地复测水位的对照。方法核心是 **基于 DSH 的插件进化：先梳理当前 Agent 能力，再让一类插件解决一类问题，通过实际评测决定采用**。后续发布新产物并提供数据即可更新榜单，旧版本保留。
+<details>
+<summary>Evaluation provenance and acknowledgements</summary>
 
-## Acknowledgements
+Scores come from completed, training-selected final artifacts. Choosing the best artifact across experiments for publication is retrospective selection, not a new untouched evaluation. The portable package has been checked for loading; reported scores come from the original completed runs.
 
-Built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Benchmarks and comparison protocols draw on [Life-Harness](https://github.com/Tianshi-Xu/Life-Harness), [AgentBench](https://github.com/THUDM/AgentBench), [ALFWorld](https://github.com/alfworld/alfworld), [WebShop](https://github.com/princeton-nlp/WebShop), and [τ²-bench](https://github.com/sierra-research/tau2-bench). See [third-party notices](docs/THIRD_PARTY.md).
+Paper waterlines, local baseline/full measurements and published artifact scores remain separate in the [full leaderboard](LEADERBOARD.md). Unmeasured costs are shown as missing, not zero.
+
+Built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Benchmarks and reference protocols draw on [Life-Harness](https://github.com/Tianshi-Xu/Life-Harness), [AgentBench](https://github.com/THUDM/AgentBench), [ALFWorld](https://github.com/alfworld/alfworld), [WebShop](https://github.com/princeton-nlp/WebShop), and [τ²-bench](https://github.com/sierra-research/tau2-bench). [MIT license](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md)
+
+</details>

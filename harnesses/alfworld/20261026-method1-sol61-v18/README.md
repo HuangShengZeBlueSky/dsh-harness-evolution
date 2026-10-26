@@ -2,9 +2,13 @@
 
 Two native plugins combine household procedures with a coach driven by visible observations. The released final checkpoint was re-evaluated on 109 tasks × 3 repeats.
 
-**Pass@1: 95.41%** · 327 valid episodes · 109 tasks × 3 repeats
+| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+|---:|---|---:|---|
+| **95.41%** | **v18** / 20 rounds | 2 | 109 tasks × 3 repeats |
 
-Actor: **Qwen3-4B-Instruct-2507**. Optimizer: **Sol 6.1 high**. Method: **方法2 · Astra自由方案**. Budget: **20 rounds**.
+[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **方法2 · Astra自由方案**.
 
 ## Architecture
 

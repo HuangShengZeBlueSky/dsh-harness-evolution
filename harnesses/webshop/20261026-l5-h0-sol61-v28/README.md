@@ -2,9 +2,13 @@
 
 Five plugins track selected options, search evidence, purchase readiness, price evidence, and bounded budget-aware search recovery. L5 adoption targets strict success rather than partial shopping reward.
 
-**Pass@1: 44.50%** · 600 valid episodes · 200 tasks × 3 repeats
+| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+|---:|---|---:|---|
+| **44.50%** | **v28** / 40 rounds | 5 | 200 tasks × 3 repeats |
 
-Actor: **Qwen3-4B-Instruct-2507**. Optimizer: **Sol 6.1 high**. Method: **L5 · 场景专用循环**. Budget: **40 rounds**.
+[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L5 · 场景专用循环**.
 
 ## Architecture
 

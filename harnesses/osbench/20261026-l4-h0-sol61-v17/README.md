@@ -2,9 +2,13 @@
 
 Five plugins structure shell-task interpretation, file inspection, sample evidence, global aggregation, and recovery from repeated commands. The actor and OS task evaluator remain frozen.
 
-**Pass@1: 38.89%** · 432 valid episodes · 144 tasks × 3 repeats
+| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+|---:|---|---:|---|
+| **38.89%** | **v17** / 40 rounds | 5 | 144 tasks × 3 repeats |
 
-Actor: **Qwen3-4B-Instruct-2507**. Optimizer: **Sol 6.1 high**. Method: **L4 · Agent结构与多插件职责**. Budget: **40 rounds**.
+[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L4 · Agent结构与多插件职责**.
 
 ## Architecture
 

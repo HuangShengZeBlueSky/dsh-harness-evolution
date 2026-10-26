@@ -4,11 +4,58 @@ import json, re
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
 
 ROOT=Path(__file__).resolve().parents[1]
 NAMES={'alfworld':'ALFWorld','dbbench':'DBBench','webshop':'WebShop','osbench':'OSBench','telecom':'τ²-Telecom'}
+PURPOSES={
+ 'alfworld':'Household procedures + visible-state guidance',
+ 'dbbench':'SQL grounding, execution, recovery and submission',
+ 'webshop':'Search, product options and budget-aware checkout',
+ 'osbench':'File inspection, shell-task contracts and recovery',
+ 'telecom':'Customer identity, device diagnosis and account review',
+}
+ROUTES={'alfworld':'Free plugin evolution','dbbench':'L4 · Agent capability map','webshop':'L5 · Strict-success objective','osbench':'L4 · Agent capability map','telecom':'Repaired-start continuation'}
 def pct(v):return '—' if v is None else f'{100*v:.2f}%'
 def score(v):return '—' if v is None else f'{100*v:.2f}'
+def count_modules(r):return len(json.loads((ROOT/r['artifact']/'composition.json').read_text())['methods'])
+
+def overview(winners,refs):
+ """A single readable GitHub-native scoreboard, generated from release records."""
+ (ROOT/'assets').mkdir(exist_ok=True)
+ fig=plt.figure(figsize=(13.2,7.4),dpi=160);ax=fig.add_axes([0,0,1,1]);ax.set_xlim(0,1320);ax.set_ylim(740,0);ax.axis('off')
+ fig.patch.set_facecolor('#f2f5fa')
+ ax.add_patch(FancyBboxPatch((20,20),1280,700,boxstyle='round,pad=0,rounding_size=18',facecolor='white',edgecolor='#e2e8f0'))
+ ax.add_patch(FancyBboxPatch((20,20),1280,137,boxstyle='round,pad=0,rounding_size=18',facecolor='#101e35',edgecolor='none'))
+ ax.add_patch(plt.Rectangle((20,126),1280,31,color='#101e35',linewidth=0))
+ ax.text(52,57,'DSH  /  HARNESS EVOLUTION',color='#75d8c6',fontsize=12,fontweight='bold',va='center')
+ ax.text(52,98,'Five benchmarks. Released, working harnesses.',color='white',fontsize=23,fontweight='bold',va='center')
+ ax.text(52,132,'Frozen Qwen3-4B actor  ·  Native DSH plugins  ·  Versioned artifacts and measured curves',color='#b8c7dc',fontsize=11,va='center')
+ latest=max(r['published_on'] for r in winners.values())
+ ax.text(1264,56,'PUBLISHED  '+latest,color='#b8c7dc',fontsize=10,ha='right',va='center')
+ for x,label,align in [(52,'HARNESS / SELECTED CHECKPOINT','left'),(443,'SUCCESS  ·  0–100%','left'),(894,'OUR TEST','right'),(1053,'LIFE-HARNESS','right'),(1259,'NUMERICAL GAP','right')]:
+  ax.text(x,187,label,color='#69778c',fontsize=10,fontweight='bold',ha=align,va='center')
+ for i,(domain,r) in enumerate(winners.items()):
+  y=213+i*85;ours=r['metrics']['pass_at_1']*100;paper=refs[domain]['full']*100;gap=ours-paper
+  if i%2==0:ax.add_patch(FancyBboxPatch((36,y),1248,78,boxstyle='round,pad=0,rounding_size=10',facecolor='#f5f7fb',edgecolor='none'))
+  ax.text(52,y+22,NAMES[domain],fontsize=16,color='#152942',fontweight='bold',va='center')
+  ax.text(52,y+53,f"{r['checkpoint']}  ·  {count_modules(r)} registrations  ·  {r['rounds']} rounds",fontsize=10,color='#66768b',va='center')
+  x=443;width=310;cy=y+33
+  ax.add_patch(FancyBboxPatch((x,cy-5),width,10,boxstyle='round,pad=0,rounding_size=5',facecolor='#e5ebf3',edgecolor='none'))
+  ax.add_patch(FancyBboxPatch((x,cy-5),width*ours/100,10,boxstyle='round,pad=0,rounding_size=5',facecolor='#169984',edgecolor='none'))
+  ax.scatter([x+width*paper/100],[cy],marker='D',s=50,color='#d39838',edgecolors='white',linewidths=1,zorder=4)
+  extra='Strict success · mean reward '+score(r['metrics']['mean_reward']) if domain=='webshop' else 'Different user simulator + account-review protocol' if domain=='telecom' else ROUTES[domain]
+  ax.text(x,y+62,extra,fontsize=9,color='#66768b',va='center')
+  ax.text(894,y+32,f'{ours:.2f}%',fontsize=21,fontweight='bold',color='#0c7968',ha='right',va='center')
+  ax.text(1053,y+32,f'{paper:.2f}%',fontsize=16,color='#67758a',ha='right',va='center')
+  ax.text(1259,y+32,f'{gap:+.2f} pp',fontsize=15,fontweight='bold',color='#344967',ha='right',va='center')
+  ax.text(1259,y+58,'reference only' if domain!='telecom' else 'different protocol',fontsize=9,color='#7e899a',ha='right',va='center')
+ ax.text(52,670,'●  Our completed tests: 3 repeats     ◆  Life-Harness: author-reported paper waterline',fontsize=10,color='#53657b',va='center')
+ ax.text(52,699,'Paper AgentBench uses 1 repeat. Numerical gaps are descriptive; they are not equal-protocol superiority claims.',fontsize=9,color='#778498',va='center')
+ fig.savefig(ROOT/'assets/leaderboard.png',dpi=160,facecolor=fig.get_facecolor());plt.close(fig)
+
+def artifact_links(r):
+ a=r['artifact'];return f'[Source]({a}/plugins) · [Diagram]({a}#architecture) · [Curve]({a}#evolution)'
 def records():return [json.loads(f.read_text()) for f in sorted((ROOT/'results').glob('*--*.json'))]
 def validate(r):
  a=ROOT/r['artifact'];c=r['coverage'];m=r['metrics']
@@ -52,17 +99,22 @@ def plot(a,r,reference):
 def artifact_page(a,r):
  c=json.loads((a/'card.json').read_text());p=r['protocol'];composition=json.loads((a/'composition.json').read_text())
  lines=[f"# {NAMES[r['benchmark']]} · {r['checkpoint']}",'',c['summary'],'',
- f"**Pass@1: {pct(r['metrics']['pass_at_1'])}** · {r['coverage']['valid_episodes']} valid episodes · {r['coverage']['tasks']} tasks × {r['coverage']['repeats']} repeats",'',
- f"Actor: **{p['actor']}**. Optimizer: **{r['optimizer']}**. Method: **{r['method']}**. Budget: **{r['rounds']} rounds**.",'',
+ '| Test success | Selected checkpoint | Plugin registrations | Test coverage |','|---:|---|---:|---|',
+ f"| **{pct(r['metrics']['pass_at_1'])}** | **{r['checkpoint']}** / {r['rounds']} rounds | {len(composition['methods'])} | {r['coverage']['tasks']} tasks × {r['coverage']['repeats']} repeats |",'',
+ '[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)','',
+ f"Actor: **{p['actor']}** · Optimizer: **{r['optimizer']}** · Method: **{r['method']}**.",'',
  '## Architecture','', '```mermaid',(a/'diagram.mmd').read_text().strip(),'```','',
  c.get('diagram_note','Arrows show runtime responsibilities, not independent causal gains.'),'','## Evolution','',
  '![Recorded evolution](evolution.png)','',
  '[Machine-readable curve](curve.json) · [Evaluation protocol](protocol.json) · [Composition](composition.json)','',
  'Development curves show recorded candidate scores; rotating batches can cause rises and falls. Test dots represent actual measurements only. WebShop development scores here are mean reward; its published ranking uses strict success.','',
- '## Plugin inventory','', '| Module | Responsibility |','|---|---|']
+ '## Plugin inventory','']
+ if len(composition['methods'])>12:lines+=['<details>','<summary>Expand all native registrations and responsibilities</summary>','']
+ lines+=['| Module | Responsibility |','|---|---|']
  for m in composition['methods']:
   name=Path(m['module']).name;responsibility=c['responsibilities'].get(m['id'],c['responsibilities'].get(name,m.get('surface','Runtime intervention')))
   lines.append(f"| [{name}]({m['module']}) | {responsibility} |")
+ if len(composition['methods'])>12:lines+=['','</details>']
  lines+=['','## Load this artifact','','```bash',f"MODEL_BASE_URL=http://localhost:8000/v1 node tools/serve.mjs {r['artifact']}",'```','',
  'Run from the repository root after `npm install`. This starts the native DSH bridge. Supply the benchmark environment/executor separately; see [integration instructions](../../../docs/RUNNING.md).','',
  '## Evaluation notes','']+['- '+n for n in r['notes']]+['',
@@ -75,13 +127,16 @@ def main():
  for r in rows:
   a=validate(r);plot(a,r,refs[r['benchmark']]['full']*100);artifact_page(a,r)
  winners={d:max([r for r in rows if r['benchmark']==d],key=lambda r:(r['metrics']['pass_at_1'],r['published_on'])) for d in NAMES}
+ overview(winners,refs)
  table=['| Benchmark | Released artifact | Ours Pass@1 | Life-Harness paper | Numerical gap |','|---|---|---:|---:|---:|']
  for d,r in winners.items():
   gap=(r['metrics']['pass_at_1']-refs[d]['full'])*100
   table.append(f"| {NAMES[d]} | [{r['checkpoint']} · {r['method']}]({r['artifact']}) | **{pct(r['metrics']['pass_at_1'])}** | {pct(refs[d]['full'])} | {gap:+.2f} pp |")
  table+='\nUpdated from published release records. Numerical differences are descriptive, not protocol-matched superiority claims.'.splitlines()
- readme=ROOT/'README.md';text=readme.read_text();text=re.sub(r'<!-- LEADERBOARD:START -->.*?<!-- LEADERBOARD:END -->','<!-- LEADERBOARD:START -->\n\n'+'\n'.join(table)+'\n\n<!-- LEADERBOARD:END -->',text,flags=re.S);readme.write_text(text)
- lines=['# Published harness leaderboard','', 'Updated by release, with prior artifacts retained. Actor: Qwen3-4B-Instruct-2507. Ranking uses success, not WebShop partial reward.','']+table+['',
+ readme=ROOT/'README.md';text=readme.read_text();cards=['| Harness · success | What it solves | Selected artifact | Explore |','|---|---|---|---|']
+ for d,r in winners.items():cards.append(f"| **{NAMES[d]} · {pct(r['metrics']['pass_at_1'])}** | {PURPOSES[d]} | [{r['checkpoint']} · {count_modules(r)} registrations]({r['artifact']}) | {artifact_links(r)} |")
+ text=re.sub(r'<!-- LEADERBOARD:START -->.*?<!-- LEADERBOARD:END -->','<!-- LEADERBOARD:START -->\n\n'+'\n'.join(cards)+'\n\n<!-- LEADERBOARD:END -->',text,flags=re.S);readme.write_text(text)
+ lines=['# Published harness leaderboard','', '![Current published harnesses](assets/leaderboard.png)','', '[Choose a harness](README.md#choose-a-harness) · [All curves](docs/CURVES.md) · [Publish an update](docs/PUBLISHING.md)','', 'Updated by release, with prior artifacts retained. Actor: Qwen3-4B-Instruct-2507. Ranking uses success, not WebShop partial reward.','']+table+['',
  '## Waterlines: sources kept separate','', '| Benchmark | Paper bare | Paper Life-Harness | Local bare | Local Life-Harness full | Published best |','|---|---:|---:|---:|---:|---:|']
  for d,r in winners.items():
   l=local[d];bare=l['baseline_strict'] if d=='webshop' else l['baseline']

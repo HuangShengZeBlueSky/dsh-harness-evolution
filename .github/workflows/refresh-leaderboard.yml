@@ -26,7 +26,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md LEADERBOARD.md docs/CURVES.md results/leaderboard.json harnesses
+          git add README.md LEADERBOARD.md docs/CURVES.md results/leaderboard.json harnesses assets
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh published harness leaderboard and curves'
             git push

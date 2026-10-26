@@ -1,5 +1,9 @@
 # Published harness leaderboard
 
+![Current published harnesses](assets/leaderboard.png)
+
+[Choose a harness](README.md#choose-a-harness) · [All curves](docs/CURVES.md) · [Publish an update](docs/PUBLISHING.md)
+
 Updated by release, with prior artifacts retained. Actor: Qwen3-4B-Instruct-2507. Ranking uses success, not WebShop partial reward.
 
 | Benchmark | Released artifact | Ours Pass@1 | Life-Harness paper | Numerical gap |

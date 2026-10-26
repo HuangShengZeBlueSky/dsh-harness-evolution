@@ -2,9 +2,13 @@
 
 A repaired Luna-derived starting harness continued with the Sol optimizer. The release contains 30 migrated source surfaces plus five evolved custom plugins, with the measured Telecom review bridge and account-facts integration.
 
-**Pass@1: 84.17%** · 120 valid episodes · 40 tasks × 3 repeats
+| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+|---:|---|---:|---|
+| **84.17%** | **v06** / 8 rounds | 35 | 40 tasks × 3 repeats |
 
-Actor: **Qwen3-4B-Instruct-2507**. Optimizer: **Sol high**. Method: **方法2消融 · Luna修复版起点**. Budget: **8 rounds**.
+[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol high** · Method: **方法2消融 · Luna修复版起点**.
 
 ## Architecture
 
@@ -52,6 +56,9 @@ Development curves show recorded candidate scores; rotating batches can cause ri
 
 ## Plugin inventory
 
+<details>
+<summary>Expand all native registrations and responsibilities</summary>
+
 | Module | Responsibility |
 |---|---|
 | [001-prompt.mjs](plugins/001-prompt.mjs) | Inherited task/policy prompt surface. |
@@ -89,6 +96,8 @@ Development curves show recorded candidate scores; rotating batches can cause ri
 | [device.mjs](plugins/device.mjs) | Guide customer-side device diagnosis and confirmation. |
 | [contract.mjs](plugins/contract.mjs) | Check contract and service-state obligations. |
 | [payment.mjs](plugins/payment.mjs) | Track billing and payment completion. |
+
+</details>
 
 ## Load this artifact
 
