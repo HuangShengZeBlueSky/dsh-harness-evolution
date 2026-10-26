@@ -10,7 +10,7 @@ A repaired Luna-derived starting harness continued with the Sol optimizer. The r
 
 [**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
 
-Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol high** · Method: **方法2消融 · Luna修复版起点**.
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol high** · Method: **Method 2 continuation · Repaired Luna-derived start**.
 
 ## Architecture
 
@@ -54,7 +54,7 @@ Functional grouping: 35 registrations are not 35 independently proven mechanisms
 
 [Machine-readable curve](curve.json) · [Evaluation protocol](protocol.json) · [Composition](composition.json)
 
-Development curves show recorded candidate scores; rotating batches can cause rises and falls. Test dots represent actual measurements only. WebShop development scores here are mean reward; its published ranking uses strict success.
+Diamonds mark adoption records; the vertical line marks the released checkpoint. Training batches can rotate. Test dots represent actual measurements only.
 
 ## Plugin inventory
 
@@ -100,6 +100,9 @@ Development curves show recorded candidate scores; rotating batches can cause ri
 | [payment.mjs](plugins/payment.mjs) | Track billing and payment completion. |
 
 </details>
+
+**Why v06 rather than the highest historical test point?** v05 measured 87.50% on historical tests, but the training-selected final checkpoint is v06 (84.17%). We publish that final selection instead of retrospectively substituting a test-peak checkpoint. The eight new candidates were v03–v10, continuing from v02.
+
 
 ## Load this artifact
 

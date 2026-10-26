@@ -48,5 +48,7 @@
     "Paper AgentBench scores use one trial; these results average three trials.",
     "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
   ],
-  "source_experiment": "alfworld-official50-20r-20261022/method1-sol61"
+  "source_experiment": "alfworld-official50-20r-20261022/method1-sol61",
+  "comparison_group": "alfworld-qwen3-4b-release-v1",
+  "method_en": "Method 2 · Free plugin evolution"
 }

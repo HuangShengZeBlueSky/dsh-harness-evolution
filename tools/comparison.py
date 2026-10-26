@@ -9,6 +9,9 @@ from matplotlib.font_manager import FontProperties
 NAMES={'alfworld':'ALFWorld','dbbench':'DBBench','webshop':'WebShop','osbench':'OSBench','telecom':'τ²-Telecom'}
 PURPOSE_ZH={'alfworld':'家务任务流程与可见状态指导','dbbench':'数据库结构与取值对齐、SQL 执行和结果提交','webshop':'商品检索、规格选择、价格核验与购买','osbench':'文件检查、命令语义、全局统计与重复恢复','telecom':'客户线路身份、设备诊断、账单与账户复核'}
 def pct(v):return '—' if v is None else f'{v*100:.2f}%'
+def group_label(root,r,zh=False):
+ primary=json.loads((root/'results/leaderboard-policy.json').read_text())['primary_groups']
+ return ('主榜组' if zh else 'Primary') if primary[r['benchmark']]==r['comparison_group'] else r['comparison_group']
 def count(root,r):return len(json.loads((root/r['artifact']/'composition.json').read_text())['methods'])
 def matrix(winners,catalog,zh=False):
  labels=['裸模型' if zh else 'Bare']+[m['label'] for m in catalog['methods'][1:]]+['我们' if zh else 'Ours']
@@ -72,16 +75,17 @@ def leaderboard(root,winners,rows,catalog,refs,local,zh=False):
  '## '+('本地复测水位' if zh else 'Local measured waterlines'),'','| '+('场景 | 本地裸模型 | 本地 Life-Harness full | 当前产物 |' if zh else 'Benchmark | Local bare | Local Life-Harness full | Current artifact |'),'|---|---:|---:|---:|']
  for d,r in winners.items():
   l=local[d];lines.append(f"| {NAMES[d]} | {pct(l['baseline_strict'] if d=='webshop' else l['baseline'])} | {pct(l['full'])} | {pct(r['metrics']['pass_at_1'])} |")
- lines+=['','## '+('全部已发布产物' if zh else 'All published artifacts'),'','| '+('场景 | 产物 | 成功率 | 发布日期 |' if zh else 'Benchmark | Artifact | Success | Published |'),'|---|---|---:|---|']
- for r in sorted(rows,key=lambda r:(r['benchmark'],-r['metrics']['pass_at_1'])):lines.append(f"| {NAMES[r['benchmark']]} | [{r['release_id']}]({r['artifact']}{'/README.zh-CN.md' if zh else ''}) | {pct(r['metrics']['pass_at_1'])} | {r['published_on']} |")
+ lines+=['','## '+('全部已发布产物' if zh else 'All published artifacts'),'','| '+('场景 | 产物 | 成功率 | 比较组 | 发布日期 |' if zh else 'Benchmark | Artifact | Success | Comparison | Published |'),'|---|---|---:|---|---|']
+ for r in sorted(rows,key=lambda r:(r['benchmark'],-r['metrics']['pass_at_1'])):lines.append(f"| {NAMES[r['benchmark']]} | [{r['release_id']}]({r['artifact']}{'/README.zh-CN.md' if zh else ''}) | {pct(r['metrics']['pass_at_1'])} | {group_label(root,r,zh)} | {r['published_on']} |")
  lines+=['',('[论文原文与数值来源]' if zh else '[Paper and numerical sources]')+'('+catalog['source_url']+') · '+('[结构化对照数据]' if zh else '[Structured comparison data]')+'(results/paper-baselines.json) · [English protocol notes](docs/METRICS.md)','']
+ lines+=['',('主榜只在已登记的同组评测条件内选最高分；不同模型或协议的产物保留在版本表，不自动替换主榜。' if zh else 'Primary champions are selected only within registered comparison groups. Other actors/protocols remain in the release table without automatically replacing the primary champion.'),'']
  (root/('LEADERBOARD.zh-CN.md' if zh else 'LEADERBOARD.md')).write_text('\n'.join(lines))
 
 def chinese_readme(root,winners):
  lines=['# DSH Harness Evolution','','[English](README.md) | **简体中文**','','**五个场景，多种方法对照，可直接查看的插件产物。**','','基于 DSH 的 harness 进化，固定 Qwen3-4B 做题模型。每个产物包含插件源码、运行接口、Mermaid 框图、真实进化曲线和测试配置。','','[**完整榜单**](LEADERBOARD.zh-CN.md) · [**进化曲线**](docs/CURVES.zh-CN.md) · [**方法概览**](docs/METHOD.zh-CN.md) · [**下载全部产物**](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/archive/refs/heads/main.zip)','','![多方法成绩总览](assets/leaderboard.zh-CN.png)','','榜单包含裸模型、ALIGN、AgentSquare、Meta-Harness、AHE、Life-Harness 和我们。其他方法使用论文报告值，不是我们重跑的结果；缺失的场景留空。','','## 选择 Harness 产物','','| 场景与成绩 | 解决的问题 | 检查点 | 直接查看 |','|---|---|---|---|']
  for d,r in winners.items():
   a=r['artifact'];lines.append(f"| **{NAMES[d]} · {pct(r['metrics']['pass_at_1'])}** | {PURPOSE_ZH[d]} | [{r['checkpoint']} · {count(root,r)} 个注册项]({a}/README.zh-CN.md) | [源码]({a}/plugins) · [框图]({a}/README.zh-CN.md#结构框图) · [曲线]({a}/README.zh-CN.md#进化曲线) |")
- lines+=['','WebShop 按严格成功率排序，平均奖励单独展示。插件注册数量不代表独立证明有效的机制数量。','', '## 方法概览','','先维护当前 Agent 的能力和插件职责，再从训练失败中找问题类，提出插件改动，通过实际评测决定采用。允许插件协作，也允许删除重复或有副作用的指导。这里只公开方法概览和产物，不展开尚未公开的论文细节。','','```mermaid','flowchart LR','    A[训练失败] --> B[当前能力与插件职责]','    B --> C[问题类与插件机制]','    C --> D[开发集评测]','    D -->|采用或修订| B','    D -->|预算结束| E[冻结检查点]','    E --> F[最终测试并发布]','```','','## 后续如何更新','','**新 harness＋测试数据＋进化曲线 → 发布新版本 → 自动更新中英文榜单。**','','使用 `tools/publish.py` 添加产物；推送后 GitHub Actions 自动生成中英文首页总览、榜单和产物页，旧版本保留。提供新的产物和实测数据即可更新，不需要公开内部实验日志。[发布说明](docs/PUBLISHING.md) · [运行说明](docs/RUNNING.md)','','## 如何理解比较','','论文采用的优化模型、六轮预算和测试重复次数与我们不同；ALIGN 使用自身发布划分；Telecom 还存在用户模拟器、账户事实接口与额外复核调用的差异。主榜是来源明确的数值对照，不把所有结果包装成严格同协议排名。原始测试成绩沿用已完成实验，本次发布不代表重新跑完评测。','','[MIT 许可证](LICENSE) · [致谢与第三方声明](docs/THIRD_PARTY.md)','']
+ lines+=['','WebShop 按严格成功率排序，平均奖励单独展示。插件注册数量不代表独立证明有效的机制数量。','', '## 方法概览','','先维护当前 Agent 的能力和插件职责，再从训练失败中找问题类，提出插件改动，通过实际评测决定采用。允许插件协作，也允许删除重复或有副作用的指导。这里只公开方法概览和产物，不展开尚未公开的论文细节。','','```mermaid','flowchart LR','    A[训练失败] --> B[当前能力与插件职责]','    B --> C[问题类与插件机制]','    C --> D[开发集评测]','    D -->|采用或修订| B','    D -->|预算结束| E[冻结检查点]','    E --> F[最终测试并发布]','```','','## 后续如何更新','','**新 harness＋测试数据＋进化曲线 → 发布新版本 → 自动更新中英文榜单。**','','使用 `tools/publish.py` 添加产物；推送后 GitHub Actions 自动生成中英文首页总览、榜单和产物页，旧版本保留。提供新的产物和实测数据即可更新，不需要公开内部实验日志。[发布说明](docs/PUBLISHING.zh-CN.md) · [运行说明](docs/RUNNING.zh-CN.md)','','## 如何理解比较','','论文采用的优化模型、六轮预算和测试重复次数与我们不同；ALIGN 使用自身发布划分；Telecom 还存在用户模拟器、账户事实接口与额外复核调用的差异。主榜是来源明确的数值对照，不把所有结果包装成严格同协议排名。原始测试成绩沿用已完成实验，本次发布不代表重新跑完评测。','','[MIT 许可证](LICENSE) · [致谢与第三方声明](docs/THIRD_PARTY.md)','']
  (root/'README.zh-CN.md').write_text('\n'.join(lines))
 
 def artifact_zh(root,r):
@@ -112,7 +116,7 @@ def artifact_zh(root,r):
 
 ![真实记录的进化曲线](evolution.png)
 
-上图为候选训练成绩和已采用版本的验证成绩；下图仅显示实际测过的测试点。训练批次可能轮换，曲线上下波动不等于固定测试集能力下降。WebShop 开发曲线展示平均奖励，采用和主榜使用严格成功率。灰线是论文各方法在该场景报告的最高数值，只作参考。
+上图为候选训练成绩和已采用版本的验证成绩；下图仅显示实际测过的测试点。训练批次可能轮换，曲线上下波动不等于固定测试集能力下降。WebShop 开发曲线已补齐实际用于采用的严格成功率；平均奖励仍保留在曲线数据中。菱形标记采用记录，竖线标记发布检查点。灰线是论文各方法在该场景报告的最高数值，只作参考。
 
 [曲线数据](curve.json) · [完整插件职责表](README.md#plugin-inventory) · [多方法榜单](../../../LEADERBOARD.zh-CN.md)
 
@@ -125,13 +129,14 @@ npm install
 MODEL_BASE_URL=http://localhost:8000/v1 node tools/serve.mjs {r['artifact']}
 ```
 
-该命令启动 harness 运行时。基准环境、任务数据和做题模型服务另行提供。[运行说明](../../../docs/RUNNING.md)
+该命令启动 harness 运行时。基准环境、任务数据和做题模型服务另行提供。[运行说明](../../../docs/RUNNING.zh-CN.md)
 
 ## 评测口径
 
 成绩来自原实验的完整有效测试，不是发布后重新评测。当前产物是在各实验最终选定版本之间，依据已获得的测试成绩挑选发布的；不是新的独立盲测。插件数量是实现登记数，不代表每个插件都已单独证明有收益。
 """
  if r['benchmark']=='telecom':text+='\nTelecom 使用 GLM-5.3-Flash 用户模拟器，并包含账户事实适配与额外复核调用；与论文对照存在协议差异。30 个继承表面组件加 5 个定制插件，不等于 35 类独立创新机制。\n'
+ if r['benchmark']=='telecom':text+='\n**为什么发布 v06 而不是历史测试峰值？**v05 历史测试为 87.50%，但训练选定的最终版是 v06（84.17%）。这里保留实验最终选择，不用测试峰值倒选替代。八个新增候选为 v03 至 v10，起点为 v02。\n'
  (a/'README.zh-CN.md').write_text(text)
  en=a/'README.md';s=en.read_text();s=s.replace('\n\n','\n\n**English** | [简体中文](README.zh-CN.md)\n\n',1);en.write_text(s)
 

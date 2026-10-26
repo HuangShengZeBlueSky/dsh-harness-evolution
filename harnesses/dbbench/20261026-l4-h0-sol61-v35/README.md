@@ -10,7 +10,7 @@ Eight responsibilities coordinate SQL schema/literal grounding, write completion
 
 [**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
 
-Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L4 · Agent结构与多插件职责**.
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L4 · Agent capability map**.
 
 ## Architecture
 
@@ -49,7 +49,7 @@ Arrows show runtime responsibilities, not independent causal gains.
 
 [Machine-readable curve](curve.json) · [Evaluation protocol](protocol.json) · [Composition](composition.json)
 
-Development curves show recorded candidate scores; rotating batches can cause rises and falls. Test dots represent actual measurements only. WebShop development scores here are mean reward; its published ranking uses strict success.
+Diamonds mark adoption records; the vertical line marks the released checkpoint. Training batches can rotate. Test dots represent actual measurements only.
 
 ## Plugin inventory
 

@@ -10,7 +10,10 @@
       "champion_validation": 0.6168055555555555,
       "test": null,
       "strict_test": null,
-      "adopted": null
+      "adopted": null,
+      "training_strict": 0.35,
+      "validation_strict": 0.2,
+      "champion_validation_strict": 0.2
     },
     {
       "round": 1,
@@ -20,7 +23,10 @@
       "champion_validation": 0.6305555555555555,
       "test": null,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "training_strict": 0.425,
+      "validation_strict": 0.23333333333333334,
+      "champion_validation_strict": 0.23333333333333334
     },
     {
       "round": 2,
@@ -30,7 +36,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "training_strict": 0.45,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 3,
@@ -40,7 +49,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.3,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 4,
@@ -50,7 +62,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.35,
+      "validation_strict": 0.26666666666666666,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 5,
@@ -60,7 +75,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.275,
+      "validation_strict": 0.23333333333333334,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 6,
@@ -70,7 +88,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.325,
+      "validation_strict": 0.2833333333333333,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 7,
@@ -80,7 +101,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.325,
+      "validation_strict": 0.3,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 8,
@@ -90,7 +114,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.45,
+      "validation_strict": 0.2833333333333333,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 9,
@@ -100,7 +127,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.26666666666666666,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 10,
@@ -110,7 +140,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.26666666666666666,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 11,
@@ -120,7 +153,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.25,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 12,
@@ -130,7 +166,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.3,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 13,
@@ -140,7 +179,10 @@
       "champion_validation": 0.7055555555555556,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.35,
+      "validation_strict": 0.3333333333333333,
+      "champion_validation_strict": 0.31666666666666665
     },
     {
       "round": 14,
@@ -150,7 +192,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "training_strict": 0.475,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 15,
@@ -160,7 +205,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.425,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 16,
@@ -170,7 +218,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.3,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 17,
@@ -180,7 +231,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.375,
+      "validation_strict": 0.3333333333333333,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 18,
@@ -190,7 +244,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.3,
+      "validation_strict": 0.3333333333333333,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 19,
@@ -200,7 +257,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.375,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 20,
@@ -210,7 +270,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.45,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 21,
@@ -220,7 +283,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 22,
@@ -230,7 +296,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.275,
+      "validation_strict": 0.3,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 23,
@@ -240,7 +309,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.375,
+      "validation_strict": 0.3,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 24,
@@ -250,7 +322,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.325,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 25,
@@ -260,7 +335,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "training_strict": 0.4,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 26,
@@ -270,7 +348,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.5,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 27,
@@ -280,7 +361,10 @@
       "champion_validation": 0.6936111111111111,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.45,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 28,
@@ -290,7 +374,10 @@
       "champion_validation": 0.7047222222222222,
       "test": 0.7068277777777777,
       "strict_test": 0.445,
-      "adopted": true
+      "adopted": true,
+      "training_strict": 0.35,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 29,
@@ -300,7 +387,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.375,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 30,
@@ -310,7 +400,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.375,
+      "validation_strict": 0.31666666666666665,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 31,
@@ -320,7 +413,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 32,
@@ -330,7 +426,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.475,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 33,
@@ -340,7 +439,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.45,
+      "validation_strict": 0.3333333333333333,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 34,
@@ -350,7 +452,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.325,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 35,
@@ -360,7 +465,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.375,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 36,
@@ -370,7 +478,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.325,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 37,
@@ -380,7 +491,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 38,
@@ -390,7 +504,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.475,
+      "validation_strict": 0.35,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 39,
@@ -400,7 +517,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.4,
+      "validation_strict": 0.3,
+      "champion_validation_strict": 0.35
     },
     {
       "round": 40,
@@ -410,7 +530,10 @@
       "champion_validation": 0.7047222222222222,
       "test": null,
       "strict_test": null,
-      "adopted": false
+      "adopted": false,
+      "training_strict": 0.325,
+      "validation_strict": 0.3333333333333333,
+      "champion_validation_strict": 0.35
     }
   ],
   "series": {
@@ -418,6 +541,9 @@
     "validation": "candidate validation mean",
     "champion_validation": "selected checkpoint validation mean",
     "test": "measured mean reward (WebShop) or success",
-    "strict_test": "measured strict success"
+    "strict_test": "measured strict success",
+    "training_strict": "candidate training strict success",
+    "validation_strict": "candidate validation strict success",
+    "champion_validation_strict": "selected checkpoint validation strict success"
   }
 }

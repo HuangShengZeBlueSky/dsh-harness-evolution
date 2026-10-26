@@ -54,7 +54,7 @@ flowchart LR
 
 **新 harness＋测试数据＋进化曲线 → 发布新版本 → 自动更新中英文榜单。**
 
-使用 `tools/publish.py` 添加产物；推送后 GitHub Actions 自动生成中英文首页总览、榜单和产物页，旧版本保留。提供新的产物和实测数据即可更新，不需要公开内部实验日志。[发布说明](docs/PUBLISHING.md) · [运行说明](docs/RUNNING.md)
+使用 `tools/publish.py` 添加产物；推送后 GitHub Actions 自动生成中英文首页总览、榜单和产物页，旧版本保留。提供新的产物和实测数据即可更新，不需要公开内部实验日志。[发布说明](docs/PUBLISHING.zh-CN.md) · [运行说明](docs/RUNNING.zh-CN.md)
 
 ## 如何理解比较
 

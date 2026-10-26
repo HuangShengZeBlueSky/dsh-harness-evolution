@@ -1,0 +1,136 @@
+{
+  "primary_groups": {
+    "webshop": "webshop-qwen3-4b-release-v1",
+    "dbbench": "dbbench-qwen3-4b-release-v1",
+    "telecom": "telecom-qwen3-4b-release-v1",
+    "alfworld": "alfworld-qwen3-4b-release-v1",
+    "osbench": "osbench-qwen3-4b-release-v1"
+  },
+  "groups": {
+    "webshop-qwen3-4b-release-v1": {
+      "benchmark": "webshop",
+      "label": "WebShop 100k / Qwen3-4B / 200 × 3",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 20,
+        "max_model_calls": 20,
+        "task_count": 200,
+        "repeats": 3,
+        "user_model": null,
+        "environment": "WebShop 100k products",
+        "runtime": "native DSH benchmark/setup bridge",
+        "catalog_documents": 99995,
+        "goals": 1021,
+        "extra_body": {
+          "parallel_tool_calls": false,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        },
+        "send_seed": false,
+        "trial_seeds": null
+      }
+    },
+    "dbbench-qwen3-4b-release-v1": {
+      "benchmark": "dbbench",
+      "label": "DBBench MySQL / Qwen3-4B / 300 × 3",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": null,
+        "max_model_calls": 15,
+        "task_count": 300,
+        "repeats": 3,
+        "user_model": null,
+        "environment": "AgentBench MySQL 8.4.11; 15 model calls",
+        "runtime": "native DSH benchmark/setup bridge",
+        "catalog_documents": null,
+        "goals": null,
+        "extra_body": {
+          "parallel_tool_calls": false,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        },
+        "send_seed": false,
+        "trial_seeds": null
+      }
+    },
+    "telecom-qwen3-4b-release-v1": {
+      "benchmark": "telecom",
+      "label": "Telecom GLM user + account review / Qwen3-4B / 40 × 3",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 2048,
+        "max_steps": 200,
+        "max_model_calls": null,
+        "task_count": 40,
+        "repeats": 3,
+        "user_model": "GLM-5.3-Flash",
+        "environment": null,
+        "runtime": "native DSH Telecom bridge with account review and auxiliary requests",
+        "catalog_documents": null,
+        "goals": null,
+        "extra_body": null,
+        "send_seed": null,
+        "trial_seeds": [
+          626729,
+          373753,
+          361454
+        ]
+      }
+    },
+    "alfworld-qwen3-4b-release-v1": {
+      "benchmark": "alfworld",
+      "label": "ALFWorld official 109 / Qwen3-4B / 3 repeats",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 50,
+        "max_model_calls": 50,
+        "task_count": 109,
+        "repeats": 3,
+        "user_model": null,
+        "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks",
+        "runtime": "native DSH benchmark/setup bridge",
+        "catalog_documents": null,
+        "goals": null,
+        "extra_body": {
+          "top_p": 0.8,
+          "top_k": 20,
+          "parallel_tool_calls": false
+        },
+        "send_seed": true,
+        "trial_seeds": null
+      }
+    },
+    "osbench-qwen3-4b-release-v1": {
+      "benchmark": "osbench",
+      "label": "OSBench Docker / Qwen3-4B / 144 × 3",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 16,
+        "max_model_calls": 16,
+        "task_count": 144,
+        "repeats": 3,
+        "user_model": null,
+        "environment": "AgentBench OS isolated Docker task environment",
+        "runtime": "native DSH benchmark/setup bridge",
+        "catalog_documents": null,
+        "goals": null,
+        "extra_body": {
+          "parallel_tool_calls": false
+        },
+        "send_seed": true,
+        "trial_seeds": null
+      }
+    }
+  }
+}

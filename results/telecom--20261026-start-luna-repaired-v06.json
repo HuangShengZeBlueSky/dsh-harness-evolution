@@ -46,5 +46,7 @@
     "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
     "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
   ],
-  "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired"
+  "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired",
+  "comparison_group": "telecom-qwen3-4b-release-v1",
+  "method_en": "Method 2 continuation · Repaired Luna-derived start"
 }

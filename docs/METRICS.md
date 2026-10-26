@@ -32,10 +32,14 @@ Local bare and Life-Harness-full columns preserve our measured reference waterli
 
 ## Reading evolution curves
 
-The development panel shows actual candidate training and selected validation values. Rotating training batches are not a single fixed evaluation set. WebShop's development panel displays mean reward, while strict success determines its L5 adoption and leaderboard ranking. The test panel displays only actually measured checkpoints; it never fills unmeasured intermediate checkpoints with synthetic scores. Earlier Telecom/ALFWorld histories include historical checkpoint tests; newer L4/L5 runs test only the final selected checkpoint.
+The development panel shows actual candidate training and selected validation values. Rotating training batches are not a single fixed evaluation set. WebShop's development panel displays the strict-success training and validation values used by L5 adoption; mean rewards remain available in curve.json. The test panel displays only actually measured checkpoints; it never fills unmeasured intermediate checkpoints with synthetic scores. Earlier Telecom/ALFWorld histories include historical checkpoint tests; newer L4/L5 runs test only the final selected checkpoint.
 
 The first publication packages completed evaluation artifacts. Portable import paths and local runtime paths were adjusted for release; the published package has been checked for loading, but these scores are not claimed to come from a fresh public-package rerun.
 
 ## Other paper-evaluated approaches
 
 The bilingual leaderboard also includes Meta-Harness and AHE from Table 1, and ALIGN/AgentSquare from Table 11. These are results reported by the Life-Harness authors, not our reruns. The paper uses six evolution rounds with GPT-5.5 for Meta-Harness, AHE and Life-Harness; our optimizers and budgets differ. ALIGN uses its released split. Missing settings and unreported costs stay null. The reference line in artifact test plots is now the highest reported comparison-method value for that benchmark, with the method named.
+
+## Primary comparison groups
+
+Primary champions are selected within the registered groups in `results/leaderboard-policy.json`. Actor, task counts, repeats, budgets, environment, sampling and simulator/runtime interfaces must match the declared group. Different groups remain in the release table and do not silently replace the current primary champion. This grouping aligns recorded evaluation settings; it is not proof that different evolution methods have equal development budgets.

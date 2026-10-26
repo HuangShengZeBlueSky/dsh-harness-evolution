@@ -80,12 +80,15 @@ WebShop 当前产物平均奖励为 **70.68/100**；主榜使用严格成功率�
 
 ## 全部已发布产物
 
-| 场景 | 产物 | 成功率 | 发布日期 |
-|---|---|---:|---|
-| ALFWorld | [20261026-method1-sol61-v18](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | 95.41% | 2026-10-26 |
-| DBBench | [20261026-l4-h0-sol61-v35](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | 70.56% | 2026-10-26 |
-| OSBench | [20261026-l4-h0-sol61-v17](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | 38.89% | 2026-10-26 |
-| τ²-Telecom | [20261026-start-luna-repaired-v06](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | 84.17% | 2026-10-26 |
-| WebShop | [20261026-l5-h0-sol61-v28](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md) | 44.50% | 2026-10-26 |
+| 场景 | 产物 | 成功率 | 比较组 | 发布日期 |
+|---|---|---:|---|---|
+| ALFWorld | [20261026-method1-sol61-v18](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | 95.41% | 主榜组 | 2026-10-26 |
+| DBBench | [20261026-l4-h0-sol61-v35](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | 70.56% | 主榜组 | 2026-10-26 |
+| OSBench | [20261026-l4-h0-sol61-v17](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | 38.89% | 主榜组 | 2026-10-26 |
+| τ²-Telecom | [20261026-start-luna-repaired-v06](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | 84.17% | 主榜组 | 2026-10-26 |
+| WebShop | [20261026-l5-h0-sol61-v28](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md) | 44.50% | 主榜组 | 2026-10-26 |
 
 [论文原文与数值来源](https://arxiv.org/html/2605.22166v3) · [结构化对照数据](results/paper-baselines.json) · [English protocol notes](docs/METRICS.md)
+
+
+主榜只在已登记的同组评测条件内选最高分；不同模型或协议的产物保留在版本表，不自动替换主榜。

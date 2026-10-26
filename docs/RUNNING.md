@@ -1,5 +1,7 @@
 # Load and integrate a released harness
 
+**English** | [简体中文](RUNNING.zh-CN.md)
+
 Requires Node.js 22.19 or later and access to an OpenAI-compatible Qwen3-4B-Instruct-2507 endpoint. Exact DSH package versions are in `package.json`.
 
 ```bash
@@ -33,6 +35,8 @@ The released composition contains 30 inherited prompt/description/schema/result/
 python -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
+# Linux: install a Chinese font once (macOS uses the system Heiti font).
+# sudo apt-get install fonts-noto-cjk
 python tools/build.py
 ```
 

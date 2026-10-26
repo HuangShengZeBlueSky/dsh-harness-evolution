@@ -10,7 +10,7 @@ Five plugins track selected options, search evidence, purchase readiness, price 
 
 [**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
 
-Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L5 · 场景专用循环**.
+Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L5 · Benchmark-specific loop**.
 
 ## Architecture
 
@@ -47,7 +47,7 @@ Arrows show runtime responsibilities, not independent causal gains.
 
 [Machine-readable curve](curve.json) · [Evaluation protocol](protocol.json) · [Composition](composition.json)
 
-Development curves show recorded candidate scores; rotating batches can cause rises and falls. Test dots represent actual measurements only. WebShop development scores here are mean reward; its published ranking uses strict success.
+WebShop development curves show the actual strict-success adoption objective. Mean rewards remain in curve.json. Diamonds mark adoption records; the vertical line marks the released checkpoint. Training batches can rotate. Test dots represent actual measurements only.
 
 ## Plugin inventory
 
