@@ -1,5 +1,7 @@
 # τ²-Telecom · v06
 
+**English** | [简体中文](README.zh-CN.md)
+
 A repaired Luna-derived starting harness continued with the Sol optimizer. The release contains 30 migrated source surfaces plus five evolved custom plugins, with the measured Telecom review bridge and account-facts integration.
 
 | Test success | Selected checkpoint | Plugin registrations | Test coverage |

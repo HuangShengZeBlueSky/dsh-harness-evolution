@@ -1,5 +1,7 @@
 # DBBench · v35
 
+**English** | [简体中文](README.zh-CN.md)
+
 Eight responsibilities coordinate SQL schema/literal grounding, write completion, result submission, recovery, and budget use. L4 maintains the agent capability map before proposing changes.
 
 | Test success | Selected checkpoint | Plugin registrations | Test coverage |

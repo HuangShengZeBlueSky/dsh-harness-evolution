@@ -4,7 +4,7 @@ import json, re
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch
+import comparison
 
 ROOT=Path(__file__).resolve().parents[1]
 NAMES={'alfworld':'ALFWorld','dbbench':'DBBench','webshop':'WebShop','osbench':'OSBench','telecom':'τ²-Telecom'}
@@ -19,40 +19,6 @@ ROUTES={'alfworld':'Free plugin evolution','dbbench':'L4 · Agent capability map
 def pct(v):return '—' if v is None else f'{100*v:.2f}%'
 def score(v):return '—' if v is None else f'{100*v:.2f}'
 def count_modules(r):return len(json.loads((ROOT/r['artifact']/'composition.json').read_text())['methods'])
-
-def overview(winners,refs):
- """A single readable GitHub-native scoreboard, generated from release records."""
- (ROOT/'assets').mkdir(exist_ok=True)
- fig=plt.figure(figsize=(13.2,7.4),dpi=160);ax=fig.add_axes([0,0,1,1]);ax.set_xlim(0,1320);ax.set_ylim(740,0);ax.axis('off')
- fig.patch.set_facecolor('#f2f5fa')
- ax.add_patch(FancyBboxPatch((20,20),1280,700,boxstyle='round,pad=0,rounding_size=18',facecolor='white',edgecolor='#e2e8f0'))
- ax.add_patch(FancyBboxPatch((20,20),1280,137,boxstyle='round,pad=0,rounding_size=18',facecolor='#101e35',edgecolor='none'))
- ax.add_patch(plt.Rectangle((20,126),1280,31,color='#101e35',linewidth=0))
- ax.text(52,57,'DSH  /  HARNESS EVOLUTION',color='#75d8c6',fontsize=12,fontweight='bold',va='center')
- ax.text(52,98,'Five benchmarks. Released, working harnesses.',color='white',fontsize=23,fontweight='bold',va='center')
- ax.text(52,132,'Frozen Qwen3-4B actor  ·  Native DSH plugins  ·  Versioned artifacts and measured curves',color='#b8c7dc',fontsize=11,va='center')
- latest=max(r['published_on'] for r in winners.values())
- ax.text(1264,56,'PUBLISHED  '+latest,color='#b8c7dc',fontsize=10,ha='right',va='center')
- for x,label,align in [(52,'HARNESS / SELECTED CHECKPOINT','left'),(443,'SUCCESS  ·  0–100%','left'),(894,'OUR TEST','right'),(1053,'LIFE-HARNESS','right'),(1259,'NUMERICAL GAP','right')]:
-  ax.text(x,187,label,color='#69778c',fontsize=10,fontweight='bold',ha=align,va='center')
- for i,(domain,r) in enumerate(winners.items()):
-  y=213+i*85;ours=r['metrics']['pass_at_1']*100;paper=refs[domain]['full']*100;gap=ours-paper
-  if i%2==0:ax.add_patch(FancyBboxPatch((36,y),1248,78,boxstyle='round,pad=0,rounding_size=10',facecolor='#f5f7fb',edgecolor='none'))
-  ax.text(52,y+22,NAMES[domain],fontsize=16,color='#152942',fontweight='bold',va='center')
-  ax.text(52,y+53,f"{r['checkpoint']}  ·  {count_modules(r)} registrations  ·  {r['rounds']} rounds",fontsize=10,color='#66768b',va='center')
-  x=443;width=310;cy=y+33
-  ax.add_patch(FancyBboxPatch((x,cy-5),width,10,boxstyle='round,pad=0,rounding_size=5',facecolor='#e5ebf3',edgecolor='none'))
-  ax.add_patch(FancyBboxPatch((x,cy-5),width*ours/100,10,boxstyle='round,pad=0,rounding_size=5',facecolor='#169984',edgecolor='none'))
-  ax.scatter([x+width*paper/100],[cy],marker='D',s=50,color='#d39838',edgecolors='white',linewidths=1,zorder=4)
-  extra='Strict success · mean reward '+score(r['metrics']['mean_reward']) if domain=='webshop' else 'Different user simulator + account-review protocol' if domain=='telecom' else ROUTES[domain]
-  ax.text(x,y+62,extra,fontsize=9,color='#66768b',va='center')
-  ax.text(894,y+32,f'{ours:.2f}%',fontsize=21,fontweight='bold',color='#0c7968',ha='right',va='center')
-  ax.text(1053,y+32,f'{paper:.2f}%',fontsize=16,color='#67758a',ha='right',va='center')
-  ax.text(1259,y+32,f'{gap:+.2f} pp',fontsize=15,fontweight='bold',color='#344967',ha='right',va='center')
-  ax.text(1259,y+58,'reference only' if domain!='telecom' else 'different protocol',fontsize=9,color='#7e899a',ha='right',va='center')
- ax.text(52,670,'●  Our completed tests: 3 repeats     ◆  Life-Harness: author-reported paper waterline',fontsize=10,color='#53657b',va='center')
- ax.text(52,699,'Paper AgentBench uses 1 repeat. Numerical gaps are descriptive; they are not equal-protocol superiority claims.',fontsize=9,color='#778498',va='center')
- fig.savefig(ROOT/'assets/leaderboard.png',dpi=160,facecolor=fig.get_facecolor());plt.close(fig)
 
 def artifact_links(r):
  a=r['artifact'];return f'[Source]({a}/plugins) · [Diagram]({a}#architecture) · [Curve]({a}#evolution)'
@@ -89,7 +55,7 @@ def plot(a,r,reference):
   axes[1].scatter([p['round'] for p in valid],[p[key]*100 for p in valid],color='#0d876f',s=36,label='Measured checkpoint tests',zorder=3)
  selected=next((p['round'] for p in points if str(p['version']).lstrip('v0')==r['checkpoint'].lstrip('v0')),r['rounds'])
  axes[1].scatter([selected],[r['metrics']['pass_at_1']*100],marker='*',s=170,color='#0d876f',edgecolor='white',zorder=4,label='Released checkpoint')
- axes[1].axhline(reference,linestyle='--',color='#8c96a8',linewidth=1,label='Life-Harness paper (reference only)')
+ axes[1].axhline(reference[1]*100,linestyle='--',color='#8c96a8',linewidth=1,label=f'Highest paper value: {reference[0]} (reference)')
  axes[1].set_ylabel('Test success / %');axes[1].set_xlabel('Candidate / round index')
  axes[1].legend(loc='lower right',frameon=False,fontsize=8)
  maximum=max([p['round'] for p in points]+[r['rounds']]);axes[1].set_xlim(-.6,maximum+.6)
@@ -124,38 +90,19 @@ def artifact_page(a,r):
 def main():
  rows=records();paper=json.loads((ROOT/'results/life-harness-paper.json').read_text());refs={r['id']:r for r in paper['rows']}
  local={r['id']:r for r in json.loads((ROOT/'results/local-references.json').read_text())}
+ catalog=json.loads((ROOT/'results/paper-baselines.json').read_text())
  for r in rows:
-  a=validate(r);plot(a,r,refs[r['benchmark']]['full']*100);artifact_page(a,r)
+  reference=max([(m['label'],m['pass_at_1'][r['benchmark']]) for m in catalog['methods'] if m['id']!='bare' and m['pass_at_1'][r['benchmark']] is not None],key=lambda x:x[1])
+  a=validate(r);plot(a,r,reference);artifact_page(a,r)
  winners={d:max([r for r in rows if r['benchmark']==d],key=lambda r:(r['metrics']['pass_at_1'],r['published_on'])) for d in NAMES}
- overview(winners,refs)
- table=['| Benchmark | Released artifact | Ours Pass@1 | Life-Harness paper | Numerical gap |','|---|---|---:|---:|---:|']
- for d,r in winners.items():
-  gap=(r['metrics']['pass_at_1']-refs[d]['full'])*100
-  table.append(f"| {NAMES[d]} | [{r['checkpoint']} · {r['method']}]({r['artifact']}) | **{pct(r['metrics']['pass_at_1'])}** | {pct(refs[d]['full'])} | {gap:+.2f} pp |")
- table+='\nUpdated from published release records. Numerical differences are descriptive, not protocol-matched superiority claims.'.splitlines()
  readme=ROOT/'README.md';text=readme.read_text();cards=['| Harness · success | What it solves | Selected artifact | Explore |','|---|---|---|---|']
  for d,r in winners.items():cards.append(f"| **{NAMES[d]} · {pct(r['metrics']['pass_at_1'])}** | {PURPOSES[d]} | [{r['checkpoint']} · {count_modules(r)} registrations]({r['artifact']}) | {artifact_links(r)} |")
  text=re.sub(r'<!-- LEADERBOARD:START -->.*?<!-- LEADERBOARD:END -->','<!-- LEADERBOARD:START -->\n\n'+'\n'.join(cards)+'\n\n<!-- LEADERBOARD:END -->',text,flags=re.S);readme.write_text(text)
- lines=['# Published harness leaderboard','', '![Current published harnesses](assets/leaderboard.png)','', '[Choose a harness](README.md#choose-a-harness) · [All curves](docs/CURVES.md) · [Publish an update](docs/PUBLISHING.md)','', 'Updated by release, with prior artifacts retained. Actor: Qwen3-4B-Instruct-2507. Ranking uses success, not WebShop partial reward.','']+table+['',
- '## Waterlines: sources kept separate','', '| Benchmark | Paper bare | Paper Life-Harness | Local bare | Local Life-Harness full | Published best |','|---|---:|---:|---:|---:|---:|']
- for d,r in winners.items():
-  l=local[d];bare=l['baseline_strict'] if d=='webshop' else l['baseline']
-  lines.append(f"| {NAMES[d]} | {pct(refs[d]['baseline'])} | {pct(refs[d]['full'])} | {pct(bare)} | {pct(l['full'])} | {pct(r['metrics']['pass_at_1'])} |")
- lines+=['','— means not available in the aligned local record, not zero. Local references are measurements in our environment, not author claims. Their detailed protocol comparability is described in [metrics](docs/METRICS.md).','',
- '## Additional metrics','', '| Benchmark | Metric | Ours | Life-Harness paper |','|---|---|---:|---:|']
- w=winners['webshop'];t=winners['telecom']
- lines += [f"| WebShop | Mean reward / 100 | {score(w['metrics']['mean_reward'])} | Not reported in main comparison |",f"| τ²-Telecom | Pass@3: at least one of three | {pct(t['metrics']['pass_at_3'])} | {pct(refs['telecom']['pass_at_3'])} |",f"| τ²-Telecom | Pass³: all three | {pct(t['metrics']['pass_cubed'])} | {pct(refs['telecom']['pass_cubed'])} |",'',
- '## Evolution cost','', '| Benchmark | Our evolution tokens | Paper Life-Harness evolution tokens |','|---|---:|---:|']
- for d,r in winners.items():lines.append(f"| {NAMES[d]} | {r['evolution_tokens'] if r['evolution_tokens'] is not None else 'Not consolidated'} | {refs[d]['evolution_tokens']/1e6:g} million |")
- lines+=['','Paper costs are rounded from Table 1. Our missing aggregate is not zero; no efficiency advantage is claimed.','',
- '## All published versions','', '| Benchmark | Release | Checkpoint | Pass@1 | Mean reward / 100 | Date |','|---|---|---|---:|---:|---|']
- for r in sorted(rows,key=lambda r:(r['benchmark'],-r['metrics']['pass_at_1'])):lines.append(f"| {NAMES[r['benchmark']]} | [{r['release_id']}]({r['artifact']}) | {r['checkpoint']} | {pct(r['metrics']['pass_at_1'])} | {score(r['metrics']['mean_reward'])} | {r['published_on']} |")
- lines+=['','Sources: [Life-Harness paper, Tables 1 and 10](https://arxiv.org/html/2605.22166v3), [official implementation](https://github.com/Tianshi-Xu/Life-Harness), and this repository’s [release records](results).','']
- (ROOT/'LEADERBOARD.md').write_text('\n'.join(lines))
  curves=['# Evolution curves','','Recorded development scores and measured test checkpoints for the current published artifacts. Unmeasured test points are left empty.','']
  for d,r in winners.items():
   curves += [f"## {NAMES[d]}",'',f"[{r['release_id']} — architecture and plugins](../{r['artifact']})",'',f"![{NAMES[d]} evolution](../{r['artifact']}/evolution.png)",'']
  (ROOT/'docs/CURVES.md').write_text('\n'.join(curves))
- (ROOT/'results/leaderboard.json').write_text(json.dumps({'schema_version':1,'update_mode':'release-driven','champions':winners,'releases':rows},ensure_ascii=False,indent=2)+'\n')
+ comparison.render(ROOT,winners,rows,refs,local)
+ (ROOT/'results/leaderboard.json').write_text(json.dumps({'schema_version':1,'update_mode':'release-driven','champions':winners,'releases':rows,'paper_references':catalog},ensure_ascii=False,indent=2)+'\n')
  print(f'Rendered {len(rows)} releases across {len(winners)} benchmarks.')
 if __name__=='__main__':main()

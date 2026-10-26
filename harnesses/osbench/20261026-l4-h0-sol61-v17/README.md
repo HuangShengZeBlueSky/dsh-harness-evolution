@@ -1,5 +1,7 @@
 # OSBench · v17
 
+**English** | [简体中文](README.zh-CN.md)
+
 Five plugins structure shell-task interpretation, file inspection, sample evidence, global aggregation, and recovery from repeated commands. The actor and OS task evaluator remain frozen.
 
 | Test success | Selected checkpoint | Plugin registrations | Test coverage |

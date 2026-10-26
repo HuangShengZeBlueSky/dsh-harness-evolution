@@ -1,5 +1,7 @@
 # WebShop · v28
 
+**English** | [简体中文](README.zh-CN.md)
+
 Five plugins track selected options, search evidence, purchase readiness, price evidence, and bounded budget-aware search recovery. L5 adoption targets strict success rather than partial shopping reward.
 
 | Test success | Selected checkpoint | Plugin registrations | Test coverage |

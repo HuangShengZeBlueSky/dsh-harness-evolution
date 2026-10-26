@@ -1,14 +1,16 @@
 # DSH Harness Evolution
 
+**English** | [简体中文](README.zh-CN.md)
+
 **Five benchmarks. Native plugins. Measured results.**
 
 Evolved [DSH](https://github.com/deepseek-ai/deepseek-harness) harnesses for a frozen **Qwen3-4B** actor. Each artifact includes working plugin source, an architecture diagram, its evolution curve, and the measured evaluation protocol.
 
 [**Leaderboard**](LEADERBOARD.md) · [**Evolution curves**](docs/CURVES.md) · [**Download**](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/archive/refs/heads/main.zip) · [**Run**](docs/RUNNING.md) · [**Publish an update**](docs/PUBLISHING.md)
 
-![Five published harnesses and Life-Harness reference waterlines](assets/leaderboard.png)
+![Five benchmarks with Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and our artifacts](assets/leaderboard.png)
 
-**Read the scores:** green = our released artifact; gold marker = Life-Harness paper reference. AgentBench trial counts differ. Telecom also uses a different user simulator and account-review integration. [Metric definitions and comparison scope →](docs/METRICS.md)
+**Read the scores:** compare **Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and Ours**. Green marks our released artifacts; other columns are results reported by the Life-Harness authors. Missing results stay empty. Evolution budgets, trials, ALIGN task splits and Telecom protocols differ. [Metric definitions and comparison scope →](docs/METRICS.md)
 
 ## Choose a harness
 

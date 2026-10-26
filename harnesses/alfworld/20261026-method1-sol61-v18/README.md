@@ -1,5 +1,7 @@
 # ALFWorld · v18
 
+**English** | [简体中文](README.zh-CN.md)
+
 Two native plugins combine household procedures with a coach driven by visible observations. The released final checkpoint was re-evaluated on 109 tasks × 3 repeats.
 
 | Test success | Selected checkpoint | Plugin registrations | Test coverage |

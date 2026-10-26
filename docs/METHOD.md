@@ -1,5 +1,7 @@
 # Method overview
 
+**English** | [简体中文](METHOD.zh-CN.md)
+
 We evolve the runtime harness around a frozen actor using DSH's native plugin system. A plugin can provide a procedure, maintain episode state, clarify tool descriptions, check a proposed action, annotate real receipts, or guide recovery. The intervention should have an explicit responsibility and a reason grounded in observed failures.
 
 **One problem class, one explicit responsibility.** This is a design principle, not a requirement to create exactly one source file per failure or to forbid cooperation. Several plugins may cooperate; redundant or conflicting guidance can be removed. More plugins is not itself progress.
