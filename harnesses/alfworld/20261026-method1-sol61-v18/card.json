@@ -1,0 +1,7 @@
+{
+  "summary": "Two native plugins combine household procedures with a coach driven by visible observations. The released final checkpoint was re-evaluated on 109 tasks × 3 repeats.",
+  "responsibilities": {
+    "household-procedure": "Household task procedure guidance: inspect, retrieve, transform, and place.",
+    "visible-step-coach": "Step guidance grounded in currently visible scene and action feedback."
+  }
+}

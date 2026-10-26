@@ -1,0 +1,10 @@
+{
+  "summary": "Five plugins structure shell-task interpretation, file inspection, sample evidence, global aggregation, and recovery from repeated commands. The actor and OS task evaluator remain frozen.",
+  "responsibilities": {
+    "inspection-contract": "Inspect relevant files and schema before committing to a command.",
+    "global-projection": "Preserve task-wide aggregation and projection semantics.",
+    "sample-evidence": "Use actual sampled contents instead of guessed fields or separators.",
+    "task-contract": "State target, scope, filtering, and answer requirements.",
+    "repetition-recovery": "Detect repeated commands and prompt a changed strategy."
+  }
+}

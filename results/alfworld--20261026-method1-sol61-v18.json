@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "release_id": "20261026-method1-sol61-v18",
+  "benchmark": "alfworld",
+  "checkpoint": "v18",
+  "method": "方法2 · Astra自由方案",
+  "optimizer": "Sol 6.1 high",
+  "rounds": 20,
+  "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
+  "published_on": "2026-10-26",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 109,
+    "repeats": 3,
+    "valid_episodes": 327,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.9541284403669725,
+    "mean_reward": null,
+    "pass_at_3": null,
+    "pass_cubed": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_steps": 50,
+    "max_model_calls": 50,
+    "task_count": 109,
+    "repeats": 3,
+    "start": "H0",
+    "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+    "runtime": "native DSH benchmark/setup bridge",
+    "extra_body": {
+      "top_p": 0.8,
+      "top_k": 20,
+      "parallel_tool_calls": false
+    },
+    "send_seed": true,
+    "timeout_seconds": 575,
+    "max_retries": 0,
+    "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks"
+  },
+  "notes": [
+    "Paper AgentBench scores use one trial; these results average three trials.",
+    "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
+  ],
+  "source_experiment": "alfworld-official50-20r-20261022/method1-sol61"
+}

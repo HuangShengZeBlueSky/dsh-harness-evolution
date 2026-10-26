@@ -1,0 +1,18 @@
+flowchart TD
+    O[Visible task and observations]
+    S[DSH system prompt and state]
+    M[Frozen Qwen3 4B actor]
+    T[Native tool execution hooks]
+    X[Benchmark environment and real receipts]
+    P["Household procedure"]
+    C["Visible-step coach"]
+    O --> P
+    O --> C
+    P --> S
+    C --> S
+    S --> M
+    M --> T
+    T --> X
+    X --> O
+    classDef plugin fill:#e8f0ff,stroke:#3861d8,color:#142c55
+    class P,C plugin

@@ -1,0 +1,74 @@
+{
+  "model": "Qwen3-4B-Instruct",
+  "paper_version": "arXiv:2605.22166v3",
+  "paper_date": "2026-10-15",
+  "checked_date": "2026-10-23",
+  "source_url": "https://arxiv.org/html/2605.22166v3",
+  "repository_url": "https://github.com/Tianshi-Xu/Life-Harness",
+  "source_tables": "表1、表10；AppWorld为表13",
+  "metric": "Pass@1 成功率",
+  "claim_scope": "作者论文报告，未作为我们的实测结果或能力上限。论文报告、飞书历史复测、本次同期复测分别展示。",
+  "protocol_note": "论文AgentBench每题测1次；我们当前正式测试为3遍。WebShop的45.50%是成功率，论文主结果未给出对应平均奖励，不能与飞书73.43%平均奖励比较。τ与τ²使用DeepSeek-V4-Flash用户模拟器，我们Telecom实验使用GLM，不能直接排名。",
+  "rows": [
+    {
+      "id": "alfworld",
+      "title": "ALFWorld",
+      "baseline": 0.1651,
+      "full": 0.8807,
+      "trials": 1,
+      "test_tasks": 109,
+      "max_steps": 50,
+      "note": "作者表10；每题1次成功率。",
+      "evolution_tokens": 24000000
+    },
+    {
+      "id": "dbbench",
+      "title": "DBBench",
+      "baseline": 0.44,
+      "full": 0.65,
+      "trials": 1,
+      "test_tasks": 300,
+      "max_steps": 15,
+      "note": "作者表10；每题1次成功率。",
+      "evolution_tokens": 11000000
+    },
+    {
+      "id": "webshop",
+      "title": "WebShop",
+      "baseline": 0.295,
+      "full": 0.455,
+      "trials": 1,
+      "test_tasks": 200,
+      "max_steps": 20,
+      "note": "成功率，不是平均奖励；论文主结果未报告该行平均奖励。",
+      "evolution_tokens": 38000000
+    },
+    {
+      "id": "osbench",
+      "title": "OSBench",
+      "baseline": 0.215,
+      "full": 0.396,
+      "trials": 1,
+      "test_tasks": 144,
+      "max_steps": 16,
+      "note": "沿用作者表10原数值39.60%；每题1次成功率。",
+      "evolution_tokens": 26000000
+    },
+    {
+      "id": "telecom",
+      "title": "τ²-Telecom",
+      "baseline": 0.2583,
+      "full": 0.9,
+      "pass_cubed": 0.775,
+      "trials": 3,
+      "test_tasks": 40,
+      "max_steps": 200,
+      "note": "v3作者报告；用户模拟器DeepSeek-V4-Flash，与我们的GLM条件不同。",
+      "evolution_tokens": 43000000,
+      "pass_at_3": 1.0,
+      "baseline_pass_at_3": 0.475,
+      "baseline_pass_cubed": 0.075
+    }
+  ],
+  "cost_note": "Table 1: evolution tokens; paper values are rounded in units of 10^7."
+}

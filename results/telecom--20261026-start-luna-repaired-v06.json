@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "release_id": "20261026-start-luna-repaired-v06",
+  "benchmark": "telecom",
+  "checkpoint": "v06",
+  "method": "方法2消融 · Luna修复版起点",
+  "optimizer": "Sol high",
+  "rounds": 8,
+  "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
+  "published_on": "2026-10-26",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 40,
+    "repeats": 3,
+    "valid_episodes": 120,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.8416666666666667,
+    "pass_at_3": 1.0,
+    "pass_cubed": 0.625,
+    "mean_reward": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "max_steps": 200,
+    "user_model": "GLM-5.3-Flash",
+    "task_count": 40,
+    "repeats": 3,
+    "trial_seeds": [
+      626729,
+      373753,
+      361454
+    ],
+    "start": "repaired Luna-derived checkpoint; not H0",
+    "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
+    "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
+  },
+  "notes": [
+    "Historical tests were visible during the campaign; not a fresh blind test.",
+    "User simulator differs from the Life-Harness paper; no direct ranking claim.",
+    "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
+    "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
+  ],
+  "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired"
+}

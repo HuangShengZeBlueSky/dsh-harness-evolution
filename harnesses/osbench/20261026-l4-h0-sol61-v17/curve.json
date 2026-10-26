@@ -1,0 +1,423 @@
+{
+  "primary_metric": "success",
+  "note": "Training points may use rotating batches. Do not interpret their connecting line as a fixed-set monotone improvement. Test points exist only when actually evaluated.",
+  "points": [
+    {
+      "round": 0,
+      "version": "baseline",
+      "after": 0.55,
+      "validation": 0.5,
+      "champion_validation": 0.5,
+      "test": null,
+      "strict_test": null,
+      "adopted": null
+    },
+    {
+      "round": 1,
+      "version": "v01",
+      "after": 0.575,
+      "validation": 0.55,
+      "champion_validation": 0.55,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 2,
+      "version": "v02",
+      "after": 0.625,
+      "validation": 0.55,
+      "champion_validation": 0.55,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 3,
+      "version": "v03",
+      "after": 0.6625,
+      "validation": 0.65,
+      "champion_validation": 0.65,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 4,
+      "version": "v04",
+      "after": 0.65,
+      "validation": 0.5,
+      "champion_validation": 0.65,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 5,
+      "version": "v05",
+      "after": 0.6625,
+      "validation": 0.65,
+      "champion_validation": 0.65,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 6,
+      "version": "v06",
+      "after": 0.6125,
+      "validation": 0.45,
+      "champion_validation": 0.65,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 7,
+      "version": "v07",
+      "after": 0.675,
+      "validation": 0.55,
+      "champion_validation": 0.65,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 8,
+      "version": "v08",
+      "after": 0.6875,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 9,
+      "version": "v09",
+      "after": 0.6375,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 10,
+      "version": "v10",
+      "after": 0.7,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 11,
+      "version": "v11",
+      "after": 0.675,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 12,
+      "version": "v12",
+      "after": 0.675,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 13,
+      "version": "v13",
+      "after": 0.675,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 14,
+      "version": "v14",
+      "after": 0.6875,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 15,
+      "version": "v15",
+      "after": 0.65,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 16,
+      "version": "v16",
+      "after": 0.525,
+      "validation": 0.4,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 17,
+      "version": "v17",
+      "after": 0.725,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": 0.3888888888888889,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 18,
+      "version": "v18",
+      "after": 0.675,
+      "validation": 0.55,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 19,
+      "version": "v19",
+      "after": 0.6625,
+      "validation": 0.75,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 20,
+      "version": "v20",
+      "after": 0.5875,
+      "validation": 0.55,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 21,
+      "version": "v21",
+      "after": 0.6375,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 22,
+      "version": "v22",
+      "after": 0.6875,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 23,
+      "version": "v23",
+      "after": 0.6875,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 24,
+      "version": "v24",
+      "after": 0.625,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 25,
+      "version": "v25",
+      "after": 0.675,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 26,
+      "version": "v26",
+      "after": 0.5875,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 27,
+      "version": "v27",
+      "after": 0.6625,
+      "validation": 0.5,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 28,
+      "version": "v28",
+      "after": 0.65,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 29,
+      "version": "v29",
+      "after": 0.6875,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 30,
+      "version": "v30",
+      "after": 0.6875,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 31,
+      "version": "v31",
+      "after": 0.6625,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 32,
+      "version": "v32",
+      "after": 0.6375,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 33,
+      "version": "v33",
+      "after": 0.675,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 34,
+      "version": "v34",
+      "after": 0.6875,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 35,
+      "version": "v35",
+      "after": 0.6875,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 36,
+      "version": "v36",
+      "after": 0.6125,
+      "validation": 0.5,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 37,
+      "version": "v37",
+      "after": 0.65,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 38,
+      "version": "v38",
+      "after": 0.675,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 39,
+      "version": "v39",
+      "after": 0.6,
+      "validation": 0.5,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 40,
+      "version": "v40",
+      "after": 0.675,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    }
+  ],
+  "series": {
+    "after": "candidate training mean",
+    "validation": "candidate validation mean",
+    "champion_validation": "selected checkpoint validation mean",
+    "test": "measured mean reward (WebShop) or success",
+    "strict_test": "measured strict success"
+  }
+}

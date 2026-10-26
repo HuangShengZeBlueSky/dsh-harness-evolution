@@ -1,0 +1,223 @@
+{
+  "primary_metric": "success",
+  "note": "Training points may use rotating batches. Do not interpret their connecting line as a fixed-set monotone improvement. Test points exist only when actually evaluated.",
+  "points": [
+    {
+      "round": 0,
+      "version": "baseline",
+      "after": null,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": null
+    },
+    {
+      "round": 1,
+      "version": "v01",
+      "after": 0.2,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.18654434250764526,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 2,
+      "version": "v02",
+      "after": 0.22,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 3,
+      "version": "v03",
+      "after": 0.8,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9357798165137615,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 4,
+      "version": "v04",
+      "after": 0.96,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9418960244648318,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 5,
+      "version": "v05",
+      "after": 0.84,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 6,
+      "version": "v06",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9541284403669725,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 7,
+      "version": "v07",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9541284403669725,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 8,
+      "version": "v08",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 9,
+      "version": "v09",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9541284403669725,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 10,
+      "version": "v10",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9541284403669725,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 11,
+      "version": "v11",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9541284403669725,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 12,
+      "version": "v12",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 13,
+      "version": "v13",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 14,
+      "version": "v14",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 15,
+      "version": "v15",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 16,
+      "version": "v16",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 17,
+      "version": "v17",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 18,
+      "version": "v18",
+      "after": 1.0,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.9541284403669725,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 19,
+      "version": "v19",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 20,
+      "version": "v20",
+      "after": 0.98,
+      "validation": null,
+      "champion_validation": null,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    }
+  ],
+  "series": {
+    "after": "candidate training mean",
+    "validation": "candidate validation mean",
+    "champion_validation": "selected checkpoint validation mean",
+    "test": "measured mean reward (WebShop) or success",
+    "strict_test": "measured strict success"
+  }
+}

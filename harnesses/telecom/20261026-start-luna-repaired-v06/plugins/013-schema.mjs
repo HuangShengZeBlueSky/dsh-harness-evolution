@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/resume_line/13";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/resume_line/13", "surface": "schema", "target": "resume_line", "config": {"parameters": {"properties": {"customer_id": {"description": "ID of the customer who owns the line.", "type": "string"}, "line_id": {"description": "ID of the line to resume.", "type": "string"}}, "required": ["customer_id", "line_id"], "type": "object"}}, "title": "schema · resume_line", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/013-schema.mjs"});}

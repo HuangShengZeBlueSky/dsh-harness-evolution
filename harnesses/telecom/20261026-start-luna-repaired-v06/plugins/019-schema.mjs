@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/get_data_usage/19";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/get_data_usage/19", "surface": "schema", "target": "get_data_usage", "config": {"parameters": {"properties": {"customer_id": {"description": "ID of the customer who owns the line.", "type": "string"}, "line_id": {"description": "ID of the line to check usage for.", "type": "string"}}, "required": ["customer_id", "line_id"], "type": "object"}}, "title": "schema · get_data_usage", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/019-schema.mjs"});}

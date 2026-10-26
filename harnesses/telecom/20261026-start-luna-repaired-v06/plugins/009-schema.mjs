@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/get_details_by_id/9";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/get_details_by_id/9", "surface": "schema", "target": "get_details_by_id", "config": {"parameters": {"properties": {"id": {"description": "The ID of the object to retrieve.", "type": "string"}}, "required": ["id"], "type": "object"}}, "title": "schema · get_details_by_id", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/009-schema.mjs"});}

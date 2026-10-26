@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/get_customer_by_phone/3";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/get_customer_by_phone/3", "surface": "schema", "target": "get_customer_by_phone", "config": {"parameters": {"properties": {"phone_number": {"description": "The phone number to search for.", "type": "string"}}, "required": ["phone_number"], "type": "object"}}, "title": "schema · get_customer_by_phone", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/003-schema.mjs"});}

@@ -1,0 +1,23 @@
+flowchart TD
+    O[Visible task and observations]
+    S[DSH system prompt and state]
+    M[Frozen Qwen3 4B actor]
+    T[Native tool execution hooks]
+    X[Benchmark environment and real receipts]
+    A["Task contract + inspection"]
+    B["Sample evidence"]
+    C["Global projection"]
+    D["Repetition recovery"]
+    O --> A
+    X --> B
+    A --> S
+    B --> S
+    C --> S
+    X --> D
+    D --> S
+    S --> M
+    M --> T
+    T --> X
+    X --> O
+    classDef plugin fill:#e8f0ff,stroke:#3861d8,color:#142c55
+    class A,B,C,D plugin

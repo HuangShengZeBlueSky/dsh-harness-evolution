@@ -1,0 +1,10 @@
+{
+  "summary": "Five plugins track selected options, search evidence, purchase readiness, price evidence, and bounded budget-aware search recovery. L5 adoption targets strict success rather than partial shopping reward.",
+  "responsibilities": {
+    "option-ledger": "Track real option selections and outstanding requested specifications.",
+    "search-evidence": "Use visible search/product evidence for candidate comparison.",
+    "checkout-loop": "Control premature or repeated checkout attempts.",
+    "price-evidence": "Check visible price against the user budget.",
+    "budget-search": "At most one bounded alternative click after an explicitly over-budget choice."
+  }
+}

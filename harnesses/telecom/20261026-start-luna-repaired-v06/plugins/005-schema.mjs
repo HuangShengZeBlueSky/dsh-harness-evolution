@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/get_customer_by_id/5";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/get_customer_by_id/5", "surface": "schema", "target": "get_customer_by_id", "config": {"parameters": {"properties": {"customer_id": {"description": "The unique identifier of the customer.", "type": "string"}}, "required": ["customer_id"], "type": "object"}}, "title": "schema · get_customer_by_id", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/005-schema.mjs"});}

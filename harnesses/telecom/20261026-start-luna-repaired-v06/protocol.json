@@ -1,0 +1,17 @@
+{
+  "actor": "Qwen3-4B-Instruct-2507",
+  "temperature": 0,
+  "max_tokens": 2048,
+  "max_steps": 200,
+  "user_model": "GLM-5.3-Flash",
+  "task_count": 40,
+  "repeats": 3,
+  "trial_seeds": [
+    626729,
+    373753,
+    361454
+  ],
+  "start": "repaired Luna-derived checkpoint; not H0",
+  "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
+  "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
+}

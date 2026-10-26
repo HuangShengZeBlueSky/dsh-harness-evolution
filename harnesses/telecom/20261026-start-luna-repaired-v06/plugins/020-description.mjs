@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/description/enable_roaming/20";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/description/enable_roaming/20", "surface": "description", "target": "enable_roaming", "config": {"text": "Enables roaming on the carrier account for an exact customer and owned line\n\nfrom account lookup results. This does not toggle Data Roaming on the user's\nphone; if the device setting is off, guide the user to enable it separately."}, "title": "description · enable_roaming", "source_path": "historical first actor request.tools", "implementation": "native-source-description", "native": true, "module": "plugins/020-description.mjs"});}

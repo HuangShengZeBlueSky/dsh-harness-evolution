@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "release_id": "20261026-l4-h0-sol61-v17",
+  "benchmark": "osbench",
+  "checkpoint": "v17",
+  "method": "L4 · Agent结构与多插件职责",
+  "optimizer": "Sol 6.1 high",
+  "rounds": 40,
+  "artifact": "harnesses/osbench/20261026-l4-h0-sol61-v17",
+  "published_on": "2026-10-26",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 144,
+    "repeats": 3,
+    "valid_episodes": 432,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.3888888888888889,
+    "mean_reward": null,
+    "pass_at_3": null,
+    "pass_cubed": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_steps": 16,
+    "max_model_calls": 16,
+    "task_count": 144,
+    "repeats": 3,
+    "start": "H0",
+    "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+    "runtime": "native DSH benchmark/setup bridge",
+    "extra_body": {
+      "parallel_tool_calls": false
+    },
+    "send_seed": true,
+    "timeout_seconds": 575,
+    "max_retries": 0,
+    "environment": "AgentBench OS isolated Docker task environment"
+  },
+  "notes": [
+    "Paper AgentBench scores use one trial; these results average three trials."
+  ],
+  "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61"
+}

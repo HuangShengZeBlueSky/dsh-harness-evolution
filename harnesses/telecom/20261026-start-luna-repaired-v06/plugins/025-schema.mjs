@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/transfer_to_human_agents/25";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/transfer_to_human_agents/25", "surface": "schema", "target": "transfer_to_human_agents", "config": {"parameters": {"properties": {"summary": {"description": "A summary of the user's issue.", "type": "string"}}, "required": ["summary"], "type": "object"}}, "title": "schema · transfer_to_human_agents", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/025-schema.mjs"});}

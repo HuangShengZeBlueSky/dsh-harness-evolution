@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/description/get_customer_by_name/6";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/description/get_customer_by_name/6", "surface": "description", "target": "get_customer_by_name", "config": {"text": "Searches for customers by name and DOB. May return multiple matches if names are similar,\n\nDOB helps disambiguate."}, "title": "description · get_customer_by_name", "source_path": "historical first actor request.tools", "implementation": "native-source-description", "native": true, "module": "plugins/006-description.mjs"});}

@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/disable_roaming/23";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/disable_roaming/23", "surface": "schema", "target": "disable_roaming", "config": {"parameters": {"properties": {"customer_id": {"description": "ID of the customer who owns the line.", "type": "string"}, "line_id": {"description": "ID of the line to disable roaming for.", "type": "string"}}, "required": ["customer_id", "line_id"], "type": "object"}}, "title": "schema · disable_roaming", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/023-schema.mjs"});}

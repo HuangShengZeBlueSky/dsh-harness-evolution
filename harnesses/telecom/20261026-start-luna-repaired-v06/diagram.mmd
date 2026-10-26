@@ -1,0 +1,29 @@
+flowchart TD
+    O[Visible task and observations]
+    S[DSH system prompt and state]
+    M[Frozen Qwen3 4B actor]
+    T[Native tool execution hooks]
+    X[Benchmark environment and real receipts]
+    A["Inherited prompt + 13 tool descriptions"]
+    B["13 tool schemas + 2 result processors"]
+    C["Structured quota/refuel memory"]
+    D["Identity + receipts + device"]
+    E["Contract + payment"]
+    F["Account-facts adapter + auxiliary review"]
+    O --> A
+    O --> D
+    X --> B
+    X --> C
+    A --> S
+    B --> S
+    C --> S
+    D --> S
+    E --> S
+    X --> F
+    F --> S
+    S --> M
+    M --> T
+    T --> X
+    X --> O
+    classDef plugin fill:#e8f0ff,stroke:#3861d8,color:#142c55
+    class A,B,C,D,E,F plugin

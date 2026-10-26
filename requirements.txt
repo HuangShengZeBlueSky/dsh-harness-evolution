@@ -1,0 +1,2 @@
+matplotlib>=3.9,<4
+PyYAML>=6,<7

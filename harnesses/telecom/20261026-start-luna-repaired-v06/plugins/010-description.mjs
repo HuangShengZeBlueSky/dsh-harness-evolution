@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/description/suspend_line/10";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/description/suspend_line/10", "surface": "description", "target": "suspend_line", "config": {"text": "Suspends a specific line (max 6 months).\n\nChecks: Line status must be Active.\nLogic: Sets line status to Suspended, records suspension_start_date."}, "title": "description · suspend_line", "source_path": "historical first actor request.tools", "implementation": "native-source-description", "native": true, "module": "plugins/010-description.mjs"});}

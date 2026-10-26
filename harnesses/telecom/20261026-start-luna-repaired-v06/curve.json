@@ -1,0 +1,103 @@
+{
+  "primary_metric": "success",
+  "note": "Training points may use rotating batches. Do not interpret their connecting line as a fixed-set monotone improvement. Test points exist only when actually evaluated.",
+  "points": [
+    {
+      "round": 2,
+      "version": 2,
+      "after": 0.7072072072072072,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.7666666666666667,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 3,
+      "version": 3,
+      "after": 0.7522522522522522,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.7583333333333333,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 4,
+      "version": 4,
+      "after": 0.7567567567567568,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.7833333333333333,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 5,
+      "version": 5,
+      "after": 0.7612612612612613,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.875,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 6,
+      "version": 6,
+      "after": 0.8243243243243243,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.8416666666666667,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 7,
+      "version": 7,
+      "after": 0.8153153153153153,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.8333333333333334,
+      "strict_test": null,
+      "adopted": null
+    },
+    {
+      "round": 8,
+      "version": 8,
+      "after": 0.8018018018018018,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.8,
+      "strict_test": null,
+      "adopted": null
+    },
+    {
+      "round": 9,
+      "version": 9,
+      "after": 0.8153153153153153,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.85,
+      "strict_test": null,
+      "adopted": null
+    },
+    {
+      "round": 10,
+      "version": 10,
+      "after": 0.7747747747747747,
+      "validation": null,
+      "champion_validation": null,
+      "test": 0.8083333333333333,
+      "strict_test": null,
+      "adopted": null
+    }
+  ],
+  "series": {
+    "after": "candidate training mean",
+    "validation": "candidate validation mean",
+    "champion_validation": "selected checkpoint validation mean",
+    "test": "measured mean reward (WebShop) or success",
+    "strict_test": "measured strict success"
+  }
+}

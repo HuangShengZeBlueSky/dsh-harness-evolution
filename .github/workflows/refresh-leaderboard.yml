@@ -1,0 +1,33 @@
+name: Refresh published leaderboard
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'results/**'
+      - 'harnesses/**'
+      - 'tools/build.py'
+permissions:
+  contents: write
+concurrency:
+  group: published-leaderboard
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python tools/build.py
+      - name: Commit regenerated public views
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md LEADERBOARD.md docs/CURVES.md results/leaderboard.json harnesses
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh published harness leaderboard and curves'
+            git push
+          fi

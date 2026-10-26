@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/get_bills_for_customer/15";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/get_bills_for_customer/15", "surface": "schema", "target": "get_bills_for_customer", "config": {"parameters": {"properties": {"customer_id": {"description": "ID of the customer.", "type": "string"}, "limit": {"default": 12, "description": "Maximum number of bills to return.", "type": "integer"}}, "required": ["customer_id"], "type": "object"}}, "title": "schema · get_bills_for_customer", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/015-schema.mjs"});}

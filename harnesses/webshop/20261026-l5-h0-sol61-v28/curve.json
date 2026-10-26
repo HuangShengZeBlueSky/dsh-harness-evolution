@@ -1,0 +1,423 @@
+{
+  "primary_metric": "strict_success",
+  "note": "Training points may use rotating batches. Do not interpret their connecting line as a fixed-set monotone improvement. Test points exist only when actually evaluated.",
+  "points": [
+    {
+      "round": 0,
+      "version": "baseline",
+      "after": 0.6765833333333333,
+      "validation": 0.6168055555555555,
+      "champion_validation": 0.6168055555555555,
+      "test": null,
+      "strict_test": null,
+      "adopted": null
+    },
+    {
+      "round": 1,
+      "version": "v01",
+      "after": 0.7236666666666667,
+      "validation": 0.6305555555555555,
+      "champion_validation": 0.6305555555555555,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 2,
+      "version": "v02",
+      "after": 0.7042857142857143,
+      "validation": 0.7055555555555556,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 3,
+      "version": "v03",
+      "after": 0.6645833333333333,
+      "validation": 0.6440277777777778,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 4,
+      "version": "v04",
+      "after": 0.6927083333333334,
+      "validation": 0.6586111111111111,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 5,
+      "version": "v05",
+      "after": 0.5441666666666667,
+      "validation": 0.6280555555555556,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 6,
+      "version": "v06",
+      "after": 0.665,
+      "validation": 0.6783333333333333,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 7,
+      "version": "v07",
+      "after": 0.6616666666666666,
+      "validation": 0.6683333333333333,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 8,
+      "version": "v08",
+      "after": 0.7092857142857143,
+      "validation": 0.6690277777777778,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 9,
+      "version": "v09",
+      "after": 0.69,
+      "validation": 0.6926388888888889,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 10,
+      "version": "v10",
+      "after": 0.69625,
+      "validation": 0.6638888888888889,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 11,
+      "version": "v11",
+      "after": 0.6408333333333334,
+      "validation": 0.6677777777777778,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 12,
+      "version": "v12",
+      "after": 0.6254166666666666,
+      "validation": 0.7055555555555556,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 13,
+      "version": "v13",
+      "after": 0.6570833333333334,
+      "validation": 0.7013888888888888,
+      "champion_validation": 0.7055555555555556,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 14,
+      "version": "v14",
+      "after": 0.6955357142857143,
+      "validation": 0.6936111111111111,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 15,
+      "version": "v15",
+      "after": 0.68125,
+      "validation": 0.6644444444444444,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 16,
+      "version": "v16",
+      "after": 0.6839583333333333,
+      "validation": 0.6977777777777777,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 17,
+      "version": "v17",
+      "after": 0.6016666666666667,
+      "validation": 0.6836111111111111,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 18,
+      "version": "v18",
+      "after": 0.6254166666666666,
+      "validation": 0.6908333333333333,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 19,
+      "version": "v19",
+      "after": 0.6695833333333333,
+      "validation": 0.6884722222222223,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 20,
+      "version": "v20",
+      "after": 0.6767857142857143,
+      "validation": 0.6891666666666667,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 21,
+      "version": "v21",
+      "after": 0.6816666666666666,
+      "validation": 0.6934722222222223,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 22,
+      "version": "v22",
+      "after": 0.6589583333333333,
+      "validation": 0.6783333333333333,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 23,
+      "version": "v23",
+      "after": 0.6158333333333333,
+      "validation": 0.6755555555555556,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 24,
+      "version": "v24",
+      "after": 0.5979166666666667,
+      "validation": 0.6672222222222222,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 25,
+      "version": "v25",
+      "after": 0.6966666666666667,
+      "validation": 0.6936111111111111,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": true
+    },
+    {
+      "round": 26,
+      "version": "v26",
+      "after": 0.7288690476190476,
+      "validation": 0.6936111111111111,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 27,
+      "version": "v27",
+      "after": 0.69375,
+      "validation": 0.6880555555555555,
+      "champion_validation": 0.6936111111111111,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 28,
+      "version": "v28",
+      "after": 0.7120833333333333,
+      "validation": 0.7047222222222222,
+      "champion_validation": 0.7047222222222222,
+      "test": 0.7068277777777777,
+      "strict_test": 0.445,
+      "adopted": true
+    },
+    {
+      "round": 29,
+      "version": "v29",
+      "after": 0.6083333333333333,
+      "validation": 0.7008333333333333,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 30,
+      "version": "v30",
+      "after": 0.6945833333333333,
+      "validation": 0.67,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 31,
+      "version": "v31",
+      "after": 0.6979166666666666,
+      "validation": 0.6908333333333333,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 32,
+      "version": "v32",
+      "after": 0.7092857142857143,
+      "validation": 0.6936111111111111,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 33,
+      "version": "v33",
+      "after": 0.70875,
+      "validation": 0.6797222222222222,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 34,
+      "version": "v34",
+      "after": 0.6995833333333333,
+      "validation": 0.7047222222222222,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 35,
+      "version": "v35",
+      "after": 0.6266666666666667,
+      "validation": 0.6936111111111111,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 36,
+      "version": "v36",
+      "after": 0.6210416666666667,
+      "validation": 0.7047222222222222,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 37,
+      "version": "v37",
+      "after": 0.6841666666666667,
+      "validation": 0.7047222222222222,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 38,
+      "version": "v38",
+      "after": 0.7301190476190477,
+      "validation": 0.6991666666666667,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 39,
+      "version": "v39",
+      "after": 0.6854166666666667,
+      "validation": 0.6605555555555556,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    },
+    {
+      "round": 40,
+      "version": "v40",
+      "after": 0.6545833333333333,
+      "validation": 0.6811111111111111,
+      "champion_validation": 0.7047222222222222,
+      "test": null,
+      "strict_test": null,
+      "adopted": false
+    }
+  ],
+  "series": {
+    "after": "candidate training mean",
+    "validation": "candidate validation mean",
+    "champion_validation": "selected checkpoint validation mean",
+    "test": "measured mean reward (WebShop) or success",
+    "strict_test": "measured strict success"
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "alfworld",
+    "title": "ALFWorld",
+    "baseline": 0.1345565749235474,
+    "baseline_strict": null,
+    "full": 0.8776758409785933
+  },
+  {
+    "id": "dbbench",
+    "title": "DBBench",
+    "baseline": 0.43555555555555553,
+    "baseline_strict": null,
+    "full": 0.6411111111111111
+  },
+  {
+    "id": "webshop",
+    "title": "WebShop",
+    "baseline": 0.6083845238095238,
+    "baseline_strict": 0.28,
+    "full": null
+  },
+  {
+    "id": "osbench",
+    "title": "OSBench",
+    "baseline": 0.3333333333333333,
+    "baseline_strict": null,
+    "full": 0.3680555555555556
+  },
+  {
+    "id": "telecom",
+    "title": "τ² Telecom",
+    "baseline": 0.43333333333333335,
+    "baseline_strict": 0.43333333333333335,
+    "full": null
+  }
+]

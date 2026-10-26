@@ -1,0 +1,18 @@
+{
+  "methods": [
+    {
+      "id": "household-procedure",
+      "module": "plugins/household-procedure.mjs",
+      "config": {}
+    },
+    {
+      "id": "visible-step-coach",
+      "module": "plugins/visible-step-coach.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "household-procedure",
+    "visible-step-coach"
+  ]
+}

@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/description/refuel_data/26";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/description/refuel_data/26", "surface": "description", "target": "refuel_data", "config": {"text": "Adds data on the carrier account for an exact customer and owned line, and\n\ncharges the plan's per-GB rate. Use after reading data usage and completing the\npolicy's amount and price confirmation; the policy permits at most 2 GB."}, "title": "description · refuel_data", "source_path": "historical first actor request.tools", "implementation": "native-source-description", "native": true, "module": "plugins/026-description.mjs"});}

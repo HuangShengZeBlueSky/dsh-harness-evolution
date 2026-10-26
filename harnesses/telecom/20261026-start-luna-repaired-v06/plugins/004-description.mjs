@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/description/get_customer_by_id/4";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/description/get_customer_by_id/4", "surface": "description", "target": "get_customer_by_id", "config": {"text": "Retrieves a customer using an exact customer ID supplied by the user or\n\nreturned by a prior account lookup. Do not construct or guess an ID."}, "title": "description · get_customer_by_id", "source_path": "historical first actor request.tools", "implementation": "native-source-description", "native": true, "module": "plugins/004-description.mjs"});}

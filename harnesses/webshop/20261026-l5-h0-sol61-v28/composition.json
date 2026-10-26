@@ -1,0 +1,56 @@
+{
+  "methods": [
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "search-evidence",
+      "module": "plugins/search-evidence.mjs",
+      "config": {
+        "top": 3
+      }
+    },
+    {
+      "id": "checkout-loop",
+      "module": "plugins/checkout-loop.mjs",
+      "config": {
+        "auto": true,
+        "delegate": true,
+        "manualFirst": true,
+        "exact": true,
+        "compound": true,
+        "maxAutoOptions": 3,
+        "phaseOnly": true
+      }
+    },
+    {
+      "id": "price-evidence",
+      "module": "plugins/price-evidence.mjs",
+      "config": {
+        "gate": true,
+        "recoverBudget": true,
+        "maxRecoveries": 1,
+        "phaseOnly": true,
+        "warnOnly": true
+      }
+    },
+    {
+      "id": "budget-search",
+      "module": "plugins/budget-search.mjs",
+      "config": {
+        "earlyBudget": true,
+        "maxRecoveries": 1,
+        "phaseOnly": true
+      }
+    }
+  ],
+  "selected": [
+    "option-ledger",
+    "search-evidence",
+    "checkout-loop",
+    "price-evidence",
+    "budget-search"
+  ]
+}

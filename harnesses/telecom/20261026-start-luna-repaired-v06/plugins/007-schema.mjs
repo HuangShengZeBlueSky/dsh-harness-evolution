@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/schema/get_customer_by_name/7";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/schema/get_customer_by_name/7", "surface": "schema", "target": "get_customer_by_name", "config": {"parameters": {"properties": {"full_name": {"description": "The full name of the customer.", "type": "string"}, "dob": {"description": "Date of birth for verification, in the format YYYY-MM-DD.", "type": "string"}}, "required": ["full_name", "dob"], "type": "object"}}, "title": "schema · get_customer_by_name", "source_path": "historical first actor request.tools", "implementation": "native-source-schema", "native": true, "module": "plugins/007-schema.mjs"});}

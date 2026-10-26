@@ -1,0 +1,13 @@
+{
+  "summary": "Eight responsibilities coordinate SQL schema/literal grounding, write completion, result submission, recovery, and budget use. L4 maintains the agent capability map before proposing changes.",
+  "responsibilities": {
+    "schema-contract": "Exact schema names and bounded SQL identifier checks.",
+    "literal-contract": "Ground filter values in observed database literals.",
+    "write-workflow": "Track mutation execution and actual completion receipts.",
+    "result-bridge": "Align observed result shape with final submission.",
+    "sql-recovery": "Remember SQL errors and guide non-repeating recovery.",
+    "budget-conductor": "Use remaining model-call budget and finish deliberately.",
+    "numeric-calendar": "Handle numeric/date formats and relevant profiling.",
+    "intent-contract": "Translate task intent into operation and direction constraints."
+  }
+}

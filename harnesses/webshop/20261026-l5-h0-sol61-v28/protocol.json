@@ -1,0 +1,24 @@
+{
+  "actor": "Qwen3-4B-Instruct-2507",
+  "temperature": 0,
+  "max_tokens": 4096,
+  "max_steps": 20,
+  "max_model_calls": 20,
+  "task_count": 200,
+  "repeats": 3,
+  "start": "H0",
+  "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+  "runtime": "native DSH benchmark/setup bridge",
+  "extra_body": {
+    "parallel_tool_calls": false,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "send_seed": false,
+  "timeout_seconds": 180,
+  "max_retries": 2,
+  "environment": "WebShop 100k products",
+  "catalog_documents": 99995,
+  "goals": 1021
+}

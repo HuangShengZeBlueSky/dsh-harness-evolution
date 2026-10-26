@@ -1,0 +1,3 @@
+import {installSourceSurface} from "../lib/source-surfaces.mjs";
+export const name="new-luna-luna-luna/description/resume_line/12";
+export function apply(ctx){installSourceSurface(ctx,{"id": "new-luna-luna-luna/description/resume_line/12", "surface": "description", "target": "resume_line", "config": {"text": "Resumes a suspended line.\n\nChecks: Line status must be Suspended or Pending Activation.\nLogic: Sets line status to Active, clears suspension_start_date."}, "title": "description · resume_line", "source_path": "historical first actor request.tools", "implementation": "native-source-description", "native": true, "module": "plugins/012-description.mjs"});}

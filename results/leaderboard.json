@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "update_mode": "release-driven",
+  "champions": {
+    "alfworld": {
+      "schema_version": 1,
+      "release_id": "20261026-method1-sol61-v18",
+      "benchmark": "alfworld",
+      "checkpoint": "v18",
+      "method": "方法2 · Astra自由方案",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 20,
+      "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 109,
+        "repeats": 3,
+        "valid_episodes": 327,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.9541284403669725,
+        "mean_reward": null,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 50,
+        "max_model_calls": 50,
+        "task_count": 109,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "top_p": 0.8,
+          "top_k": 20,
+          "parallel_tool_calls": false
+        },
+        "send_seed": true,
+        "timeout_seconds": 575,
+        "max_retries": 0,
+        "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks"
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials.",
+        "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
+      ],
+      "source_experiment": "alfworld-official50-20r-20261022/method1-sol61"
+    },
+    "dbbench": {
+      "schema_version": 1,
+      "release_id": "20261026-l4-h0-sol61-v35",
+      "benchmark": "dbbench",
+      "checkpoint": "v35",
+      "method": "L4 · Agent结构与多插件职责",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 40,
+      "artifact": "harnesses/dbbench/20261026-l4-h0-sol61-v35",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 300,
+        "repeats": 3,
+        "valid_episodes": 900,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.7055555555555556,
+        "mean_reward": null,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": null,
+        "max_model_calls": 15,
+        "task_count": 300,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "parallel_tool_calls": false,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        },
+        "send_seed": false,
+        "timeout_seconds": 740,
+        "max_retries": 0,
+        "environment": "AgentBench MySQL 8.4.11; 15 model calls"
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials."
+      ],
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61"
+    },
+    "webshop": {
+      "schema_version": 1,
+      "release_id": "20261026-l5-h0-sol61-v28",
+      "benchmark": "webshop",
+      "checkpoint": "v28",
+      "method": "L5 · 场景专用循环",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 40,
+      "artifact": "harnesses/webshop/20261026-l5-h0-sol61-v28",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 200,
+        "repeats": 3,
+        "valid_episodes": 600,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.445,
+        "mean_reward": 0.7068277777777777,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 20,
+        "max_model_calls": 20,
+        "task_count": 200,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "parallel_tool_calls": false,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        },
+        "send_seed": false,
+        "timeout_seconds": 180,
+        "max_retries": 2,
+        "environment": "WebShop 100k products",
+        "catalog_documents": 99995,
+        "goals": 1021
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials."
+      ],
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61"
+    },
+    "osbench": {
+      "schema_version": 1,
+      "release_id": "20261026-l4-h0-sol61-v17",
+      "benchmark": "osbench",
+      "checkpoint": "v17",
+      "method": "L4 · Agent结构与多插件职责",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 40,
+      "artifact": "harnesses/osbench/20261026-l4-h0-sol61-v17",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 144,
+        "repeats": 3,
+        "valid_episodes": 432,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.3888888888888889,
+        "mean_reward": null,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 16,
+        "max_model_calls": 16,
+        "task_count": 144,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "parallel_tool_calls": false
+        },
+        "send_seed": true,
+        "timeout_seconds": 575,
+        "max_retries": 0,
+        "environment": "AgentBench OS isolated Docker task environment"
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials."
+      ],
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61"
+    },
+    "telecom": {
+      "schema_version": 1,
+      "release_id": "20261026-start-luna-repaired-v06",
+      "benchmark": "telecom",
+      "checkpoint": "v06",
+      "method": "方法2消融 · Luna修复版起点",
+      "optimizer": "Sol high",
+      "rounds": 8,
+      "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 40,
+        "repeats": 3,
+        "valid_episodes": 120,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.8416666666666667,
+        "pass_at_3": 1.0,
+        "pass_cubed": 0.625,
+        "mean_reward": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 2048,
+        "max_steps": 200,
+        "user_model": "GLM-5.3-Flash",
+        "task_count": 40,
+        "repeats": 3,
+        "trial_seeds": [
+          626729,
+          373753,
+          361454
+        ],
+        "start": "repaired Luna-derived checkpoint; not H0",
+        "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
+        "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
+      },
+      "notes": [
+        "Historical tests were visible during the campaign; not a fresh blind test.",
+        "User simulator differs from the Life-Harness paper; no direct ranking claim.",
+        "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
+        "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
+      ],
+      "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired"
+    }
+  },
+  "releases": [
+    {
+      "schema_version": 1,
+      "release_id": "20261026-method1-sol61-v18",
+      "benchmark": "alfworld",
+      "checkpoint": "v18",
+      "method": "方法2 · Astra自由方案",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 20,
+      "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 109,
+        "repeats": 3,
+        "valid_episodes": 327,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.9541284403669725,
+        "mean_reward": null,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 50,
+        "max_model_calls": 50,
+        "task_count": 109,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "top_p": 0.8,
+          "top_k": 20,
+          "parallel_tool_calls": false
+        },
+        "send_seed": true,
+        "timeout_seconds": 575,
+        "max_retries": 0,
+        "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks"
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials.",
+        "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
+      ],
+      "source_experiment": "alfworld-official50-20r-20261022/method1-sol61"
+    },
+    {
+      "schema_version": 1,
+      "release_id": "20261026-l4-h0-sol61-v35",
+      "benchmark": "dbbench",
+      "checkpoint": "v35",
+      "method": "L4 · Agent结构与多插件职责",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 40,
+      "artifact": "harnesses/dbbench/20261026-l4-h0-sol61-v35",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 300,
+        "repeats": 3,
+        "valid_episodes": 900,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.7055555555555556,
+        "mean_reward": null,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": null,
+        "max_model_calls": 15,
+        "task_count": 300,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "parallel_tool_calls": false,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        },
+        "send_seed": false,
+        "timeout_seconds": 740,
+        "max_retries": 0,
+        "environment": "AgentBench MySQL 8.4.11; 15 model calls"
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials."
+      ],
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61"
+    },
+    {
+      "schema_version": 1,
+      "release_id": "20261026-l4-h0-sol61-v17",
+      "benchmark": "osbench",
+      "checkpoint": "v17",
+      "method": "L4 · Agent结构与多插件职责",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 40,
+      "artifact": "harnesses/osbench/20261026-l4-h0-sol61-v17",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 144,
+        "repeats": 3,
+        "valid_episodes": 432,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.3888888888888889,
+        "mean_reward": null,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 16,
+        "max_model_calls": 16,
+        "task_count": 144,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "parallel_tool_calls": false
+        },
+        "send_seed": true,
+        "timeout_seconds": 575,
+        "max_retries": 0,
+        "environment": "AgentBench OS isolated Docker task environment"
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials."
+      ],
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61"
+    },
+    {
+      "schema_version": 1,
+      "release_id": "20261026-start-luna-repaired-v06",
+      "benchmark": "telecom",
+      "checkpoint": "v06",
+      "method": "方法2消融 · Luna修复版起点",
+      "optimizer": "Sol high",
+      "rounds": 8,
+      "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 40,
+        "repeats": 3,
+        "valid_episodes": 120,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.8416666666666667,
+        "pass_at_3": 1.0,
+        "pass_cubed": 0.625,
+        "mean_reward": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 2048,
+        "max_steps": 200,
+        "user_model": "GLM-5.3-Flash",
+        "task_count": 40,
+        "repeats": 3,
+        "trial_seeds": [
+          626729,
+          373753,
+          361454
+        ],
+        "start": "repaired Luna-derived checkpoint; not H0",
+        "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
+        "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
+      },
+      "notes": [
+        "Historical tests were visible during the campaign; not a fresh blind test.",
+        "User simulator differs from the Life-Harness paper; no direct ranking claim.",
+        "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
+        "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
+      ],
+      "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired"
+    },
+    {
+      "schema_version": 1,
+      "release_id": "20261026-l5-h0-sol61-v28",
+      "benchmark": "webshop",
+      "checkpoint": "v28",
+      "method": "L5 · 场景专用循环",
+      "optimizer": "Sol 6.1 high",
+      "rounds": 40,
+      "artifact": "harnesses/webshop/20261026-l5-h0-sol61-v28",
+      "published_on": "2026-10-26",
+      "evaluation_complete": true,
+      "coverage": {
+        "tasks": 200,
+        "repeats": 3,
+        "valid_episodes": 600,
+        "invalid_episodes": 0
+      },
+      "metrics": {
+        "pass_at_1": 0.445,
+        "mean_reward": 0.7068277777777777,
+        "pass_at_3": null,
+        "pass_cubed": null
+      },
+      "evolution_tokens": null,
+      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+      "protocol": {
+        "actor": "Qwen3-4B-Instruct-2507",
+        "temperature": 0,
+        "max_tokens": 4096,
+        "max_steps": 20,
+        "max_model_calls": 20,
+        "task_count": 200,
+        "repeats": 3,
+        "start": "H0",
+        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+        "runtime": "native DSH benchmark/setup bridge",
+        "extra_body": {
+          "parallel_tool_calls": false,
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        },
+        "send_seed": false,
+        "timeout_seconds": 180,
+        "max_retries": 2,
+        "environment": "WebShop 100k products",
+        "catalog_documents": 99995,
+        "goals": 1021
+      },
+      "notes": [
+        "Paper AgentBench scores use one trial; these results average three trials."
+      ],
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61"
+    }
+  ]
+}
