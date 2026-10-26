@@ -4,7 +4,7 @@
 
 ![多方法榜单](assets/leaderboard.zh-CN.png)
 
-| 场景 | 裸模型 | ALIGN | AgentSquare | Meta-Harness | AHE | Life-Harness | 我们 |
+| 场景 | 裸模型 | ALIGN | AgentSquare | Meta-Harness | AHE | Life-Harness v3 | 我们 |
 |---|---|---|---|---|---|---|---|
 | ALFWorld | 16.51% | 28.36% | 29.36% | 35.80% | 89.00% | 88.07% | **95.41%** |
 | DBBench | 44.00% | — | — | 50.30% | 57.30% | 65.00% | **70.56%** |
@@ -16,6 +16,25 @@
 
 论文 Meta-Harness、AHE、Life-Harness 均采用 GPT-5.5 优化六轮；我们的优化器与轮数不同。论文 AgentBench 每题一次，我们每题三次。ALIGN 使用其发布划分。Telecom 还存在用户模拟器、账户事实接口与额外复核调用的差异，因此不将这些数值合成一个严格公平排名。
 
+<!-- TELECOM-HISTORY:START -->
+
+## Telecom：历史水位与当前产物
+
+![Telecom 新旧版本对照](assets/telecom-history.zh-CN.png)
+
+**相对 v1/v2 的报告值，我们的成功率高 26.67 个百分点，三次全成功率高 32.50 个百分点。**新版 v3 仍并列展示；这是跨报告的数值差，不是同协议因果增益。
+
+| 版本 / 产物 | 日期 | Pass@1 | Pass@3 至少一次 | Pass³ 三次全成功 |
+|---|---|---:|---:|---:|
+| [Life-Harness v1](https://arxiv.org/html/2605.22166v1) | 2026-05-21 | 57.50% | 87.50% | 30.00% |
+| [Life-Harness v2](https://arxiv.org/html/2605.22166v2) | 2026-05-27 | 57.50% | 87.50% | 30.00% |
+| [Life-Harness v3](https://arxiv.org/html/2605.22166v3) | 2026-10-15 | 90.00% | 100.00% | 77.50% |
+| [我们 · v06](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | 2026-10-26 | **84.17%** | **100.00%** | **62.50%** |
+
+来源：[v1 表 7](https://arxiv.org/html/2605.22166v1)、[v2 表 8](https://arxiv.org/html/2605.22166v2)、[v3 表 10](https://arxiv.org/html/2605.22166v3)。均取 Qwen3-4B 行，不混入 18 模型均值。旧新版论文均使用 DeepSeek-V4-Flash 用户模型；我们使用 GLM-5.3-Flash，另有账户事实与额外复核接口，不能直接归因于 loop。
+
+<!-- TELECOM-HISTORY:END -->
+
 ## 每种方法做什么
 
 | 方法 | 简明思路 |
@@ -25,7 +44,7 @@
 | AgentSquare | 搜索模块化智能体架构。 |
 | Meta-Harness | 结合历史代码、分数和轨迹搜索 harness 程序。 |
 | AHE | 修改 harness 组件文件，通过评测检验改动是否产生预期效果。 |
-| Life-Harness | 围绕交互生命周期的四层结构进化干预机制。 |
+| Life-Harness v3 | 围绕交互生命周期的四层结构进化干预机制。 |
 | 我们 | 基于 DSH 的插件进化：先维护当前能力结构，再针对问题类设计插件并评测采用。 |
 
 ## Telecom 稳定性与 WebShop 平均奖励

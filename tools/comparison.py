@@ -1,5 +1,6 @@
 """Bilingual, release-driven views of published artifacts and paper baselines."""
 import json
+import history
 from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
@@ -33,7 +34,7 @@ def overview(root,winners,catalog,zh=False):
  text(52,188,'产物 / 检查点' if zh else 'ARTIFACT / CHECKPOINT',fontsize=11,color='#69778c',fontweight='bold')
  for x,label in zip(xs,labels):
   text(x,181,label,ha='center',fontsize=11,color='#0c7968' if label==labels[-1] else '#344967',fontweight='bold')
-  text(x,203,('本地实测' if zh else 'LOCAL TEST') if label==labels[-1] else ('论文报告' if zh else 'PAPER'),ha='center',fontsize=8,color='#8792a3')
+  text(x,203,('本地实测' if zh else 'LOCAL TEST') if label==labels[-1] else ('论文 v3' if zh else 'PAPER v3') if label=='Life-Harness' else ('论文报告' if zh else 'PAPER'),ha='center',fontsize=8,color='#8792a3')
  for i,(d,r) in enumerate(winners.items()):
   y=222+i*78
   if i%2==0:ax.add_patch(FancyBboxPatch((36,y),1378,72,boxstyle='round,pad=0,rounding_size=10',facecolor='#f5f7fb',edgecolor='none'))
@@ -43,6 +44,9 @@ def overview(root,winners,catalog,zh=False):
   values=[m['pass_at_1'][d] for m in catalog['methods']]+[r['metrics']['pass_at_1']]
   for j,(x,value) in enumerate(zip(xs,values)):
    text(x,y+34,'—' if value is None else f'{value*100:.2f}',ha='center',fontsize=19 if j==6 else 16,fontweight='bold' if j==6 else 'normal',color='#0c7968' if j==6 else '#a3acb9' if value is None else '#344967')
+   if d=='telecom' and j==5:
+    old=history.data(root)[0]['metrics']['pass_at_1']
+    text(x,y+58,f'v1/v2: {old*100:.2f}',ha='center',fontsize=8,color='#66768b')
  text(52,639,'数值单位：%  ·  — 表示论文未报告该场景  ·  每个产物均附源码、框图和进化曲线' if zh else 'All values in %  ·  — = not reported for this setting  ·  Source, architecture and evolution curve included',fontsize=10,color='#53657b')
  text(52,671,'对照来源：Life-Harness 论文表 1、10、11；其作者报告的其他方法结果，并非我们的复测。' if zh else 'References: Life-Harness Tables 1, 10 and 11. Other-method results are reported by that paper, not rerun by us.',fontsize=9,color='#778498')
  text(52,699,'轮数、优化模型、测试重复次数存在差异；ALIGN 划分不同；Telecom 用户模拟器及运行接口不同。' if zh else 'Evolution budgets and trials differ. ALIGN uses its own split. Telecom simulator and runtime-access protocols differ.',fontsize=9,color='#778498')
@@ -135,6 +139,7 @@ def render(root,winners,rows,refs,local):
  catalog=json.loads((root/'results/paper-baselines.json').read_text())
  for zh in [False,True]:overview(root,winners,catalog,zh);leaderboard(root,winners,rows,catalog,refs,local,zh)
  chinese_readme(root,winners)
+ history.render(root,winners['telecom'])
  for r in rows:artifact_zh(root,r)
  curves=['# 进化曲线','','[English](CURVES.md) | **简体中文**','','只展示真实记录的开发成绩与测试点；未测检查点不补画测试分数。','']
  for d,r in winners.items():curves += [f'## {NAMES[d]}','',f"[检查点 {r['checkpoint']}：源码与框图](../{r['artifact']}/README.zh-CN.md)",'',f"![{NAMES[d]} 进化曲线](../{r['artifact']}/evolution.png)",'']

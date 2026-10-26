@@ -4,7 +4,7 @@
 
 ![Multi-method leaderboard](assets/leaderboard.png)
 
-| Benchmark | Bare | ALIGN | AgentSquare | Meta-Harness | AHE | Life-Harness | Ours |
+| Benchmark | Bare | ALIGN | AgentSquare | Meta-Harness | AHE | Life-Harness v3 | Ours |
 |---|---|---|---|---|---|---|---|
 | ALFWorld | 16.51% | 28.36% | 29.36% | 35.80% | 89.00% | 88.07% | **95.41%** |
 | DBBench | 44.00% | — | — | 50.30% | 57.30% | 65.00% | **70.56%** |
@@ -16,6 +16,25 @@
 
 The paper evolves Meta-Harness, AHE and Life-Harness for six rounds with GPT-5.5. Our optimizer and budgets differ. Paper AgentBench uses one trial; ours uses three. ALIGN uses its released split. Telecom also differs in user simulator, account-facts access and auxiliary review. The table is a reference comparison, not a controlled overall ranking.
 
+<!-- TELECOM-HISTORY:START -->
+
+## Telecom: historical waterlines and our release
+
+![Telecom historical and current references](assets/telecom-history.png)
+
+**Our Pass@1 is 26.67 pp higher than the v1/v2 report; all-three success is 32.50 pp higher.** The newer v3 result remains visible. These are cross-report numerical differences, not matched-protocol causal gains.
+
+| Version / artifact | Date | Pass@1 | Pass@3 at least one | Pass³ all three |
+|---|---|---:|---:|---:|
+| [Life-Harness v1](https://arxiv.org/html/2605.22166v1) | 2026-05-21 | 57.50% | 87.50% | 30.00% |
+| [Life-Harness v2](https://arxiv.org/html/2605.22166v2) | 2026-05-27 | 57.50% | 87.50% | 30.00% |
+| [Life-Harness v3](https://arxiv.org/html/2605.22166v3) | 2026-10-15 | 90.00% | 100.00% | 77.50% |
+| [Ours · v06](harnesses/telecom/20261026-start-luna-repaired-v06) | 2026-10-26 | **84.17%** | **100.00%** | **62.50%** |
+
+Sources: [v1 Table 7](https://arxiv.org/html/2605.22166v1), [v2 Table 8](https://arxiv.org/html/2605.22166v2), [v3 Table 10](https://arxiv.org/html/2605.22166v3). These are Qwen3-4B rows, not the 18-model averages. Both old and new papers use DeepSeek-V4-Flash users; ours uses GLM-5.3-Flash plus account-facts/review integration. Differences cannot be attributed to the loop alone.
+
+<!-- TELECOM-HISTORY:END -->
+
 ## What each method does
 
 | Method | Approach |
@@ -25,7 +44,7 @@ The paper evolves Meta-Harness, AHE and Life-Harness for six rounds with GPT-5.5
 | AgentSquare | Searches modular agent architectures. |
 | Meta-Harness | Searches harness programs using previous code, scores, and traces. |
 | AHE | Edits harness files and checks expected effects in evaluations. |
-| Life-Harness | Evolves interventions across four interaction lifecycle layers. |
+| Life-Harness v3 | Evolves interventions across four interaction lifecycle layers. |
 | Ours | Evolve DSH plugins after mapping current capabilities; assign problem-class responsibilities and evaluate adoption. |
 
 ## Telecom reliability and WebShop mean reward

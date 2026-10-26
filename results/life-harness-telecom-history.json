@@ -1,0 +1,50 @@
+{
+  "benchmark": "telecom",
+  "checked_on": "2026-10-26",
+  "versions": [
+    {
+      "version": "v1",
+      "published_on": "2026-05-21",
+      "table": "7",
+      "source_url": "https://arxiv.org/html/2605.22166v1",
+      "actor": "Qwen3-4B-Instruct",
+      "user_model": "DeepSeek-V4-Flash",
+      "repeats": 3,
+      "metrics": {
+        "pass_at_1": 0.575,
+        "pass_at_3": 0.875,
+        "pass_cubed": 0.3
+      }
+    },
+    {
+      "version": "v2",
+      "published_on": "2026-05-27",
+      "table": "8",
+      "source_url": "https://arxiv.org/html/2605.22166v2",
+      "actor": "Qwen3-4B-Instruct",
+      "user_model": "DeepSeek-V4-Flash",
+      "repeats": 3,
+      "metrics": {
+        "pass_at_1": 0.575,
+        "pass_at_3": 0.875,
+        "pass_cubed": 0.3
+      }
+    },
+    {
+      "version": "v3",
+      "published_on": "2026-10-15",
+      "table": "10",
+      "source_url": "https://arxiv.org/html/2605.22166v3",
+      "actor": "Qwen3-4B-Instruct",
+      "user_model": "DeepSeek-V4-Flash",
+      "repeats": 3,
+      "metrics": {
+        "pass_at_1": 0.9,
+        "pass_at_3": 1,
+        "pass_cubed": 0.775
+      }
+    }
+  ],
+  "note_en": "Versioned paper reports, not our reruns. Qwen3-4B row, not the 18-model average. Score changes alone do not establish why the result changed. Our simulator and runtime-access protocol differ.",
+  "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
+}

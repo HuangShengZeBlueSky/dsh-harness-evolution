@@ -12,6 +12,18 @@
 
 榜单包含裸模型、ALIGN、AgentSquare、Meta-Harness、AHE、Life-Harness 和我们。其他方法使用论文报告值，不是我们重跑的结果；缺失的场景留空。
 
+<!-- TELECOM-HISTORY:START -->
+
+## Telecom：历史水位与当前产物
+
+![Telecom 新旧版本对照](assets/telecom-history.zh-CN.png)
+
+**相对 v1/v2 的报告值，我们的成功率高 26.67 个百分点，三次全成功率高 32.50 个百分点。**新版 v3 仍并列展示；这是跨报告的数值差，不是同协议因果增益。
+
+来源：[v1 表 7](https://arxiv.org/html/2605.22166v1)、[v2 表 8](https://arxiv.org/html/2605.22166v2)、[v3 表 10](https://arxiv.org/html/2605.22166v3)。均取 Qwen3-4B 行，不混入 18 模型均值。旧新版论文均使用 DeepSeek-V4-Flash 用户模型；我们使用 GLM-5.3-Flash，另有账户事实与额外复核接口，不能直接归因于 loop。
+
+<!-- TELECOM-HISTORY:END -->
+
 ## 选择 Harness 产物
 
 | 场景与成绩 | 解决的问题 | 检查点 | 直接查看 |
