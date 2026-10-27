@@ -4,13 +4,39 @@
 
 Two native plugins combine household procedures with a coach driven by visible observations. The released final checkpoint was re-evaluated on 109 tasks × 3 repeats.
 
-| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+**Release basis: Training-selected final checkpoint**.
+
+| Test success | Published checkpoint | Plugin registrations | Test coverage |
 |---:|---|---:|---|
 | **95.41%** | **v18** / 20 rounds | 2 | 109 tasks × 3 repeats |
 
-[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+[**Plugin source**](plugins) · [**Method flow**](#method-flow) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
 
 Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **Method 2 · Free plugin evolution**.
+
+## Method flow
+
+```mermaid
+flowchart TD
+    A["H0: no enhancement plugins"]
+    B["Diagnose training failures and current capabilities"]
+    C["Freely design and compose native plugins"]
+    D["Same 50-task parent and candidate evaluation"]
+    E["Training improves and change takes effect"]
+    F["Freeze training-selected final checkpoint v18"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    F --> T["Final-checkpoint test"]
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    T --> P["This release: v18"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release
+```
 
 ## Architecture
 

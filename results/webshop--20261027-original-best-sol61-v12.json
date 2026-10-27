@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "release_id": "20261027-original-best-sol61-v12",
+  "benchmark": "webshop",
+  "checkpoint": "v12",
+  "method": "方法1协同 · 旧最佳续跑",
+  "optimizer": "Sol 6.1 high",
+  "rounds": 40,
+  "artifact": "harnesses/webshop/20261027-original-best-sol61-v12",
+  "published_on": "2026-10-27",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 200,
+    "repeats": 3,
+    "valid_episodes": 600,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.47,
+    "mean_reward": 0.7121246031746031,
+    "pass_at_3": null,
+    "pass_cubed": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_steps": 20,
+    "max_model_calls": 20,
+    "task_count": 200,
+    "repeats": 3,
+    "start": "old method-1 final checkpoint v37",
+    "selection": "same-batch mean reward improves with two effective plugin changes; retrospective adopted checkpoint selected for publication",
+    "runtime": "native DSH benchmark/setup bridge",
+    "extra_body": {
+      "parallel_tool_calls": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "send_seed": false,
+    "timeout_seconds": 180,
+    "max_retries": 2,
+    "environment": "WebShop 100k products",
+    "catalog_documents": 99995,
+    "goals": 1021
+  },
+  "notes": [
+    "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
+    "Original training-selected final checkpoint is v36. Its identity and original result are retained.",
+    "Paper AgentBench uses one trial; this measurement averages three repeats.",
+    "The v01 training score of zero is a real 50/50-valid evaluation: a plugin scope error broke ledger receipts and the candidate was rejected. The failed candidate remains visible in the development curve."
+  ],
+  "source_experiment": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+  "comparison_group": "webshop-qwen3-4b-release-v1",
+  "method_en": "Method 1 cooperative · Best-checkpoint continuation",
+  "selection_kind": "retrospective_adopted",
+  "promoted": true,
+  "campaign_final_checkpoint": "v36",
+  "campaign_final_test": {
+    "mean": 0.7058523809523809,
+    "strict_pass_at_1": 0.44333333333333336,
+    "valid": 600
+  },
+  "evaluation_repeats": {
+    "0": 0.7181273809523809,
+    "1": 0.7060607142857143,
+    "2": 0.7121857142857143
+  }
+}

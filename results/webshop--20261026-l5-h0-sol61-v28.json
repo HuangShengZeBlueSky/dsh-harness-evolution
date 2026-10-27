@@ -52,5 +52,6 @@
   ],
   "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
   "comparison_group": "webshop-qwen3-4b-release-v1",
-  "method_en": "L5 · Benchmark-specific loop"
+  "method_en": "L5 · Benchmark-specific loop",
+  "selection_kind": "training_final"
 }

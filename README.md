@@ -10,7 +10,19 @@ Evolved [DSH](https://github.com/deepseek-ai/deepseek-harness) harnesses for a f
 
 ![Five benchmarks with Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and our artifacts](assets/leaderboard.png)
 
-**Read the scores:** compare **Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and Ours**. Green marks our released artifacts; other columns are results reported by the Life-Harness authors. Missing results stay empty. Evolution budgets, trials, ALIGN task splits and Telecom protocols differ. [Metric definitions and comparison scope →](docs/METRICS.md)
+**Read the scores:** compare **Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and Ours**. Green marks the best measured published promoted checkpoints, including labelled retrospective discoveries. Training-final results are retained separately in the full leaderboard; other columns are results reported by the Life-Harness authors. Missing results stay empty. Evolution budgets, trials, ALIGN task splits and Telecom protocols differ. [Metric definitions and comparison scope →](docs/METRICS.md)
+
+<!-- LATEST:START -->
+
+## Latest releases · 2026-10-27
+
+| Benchmark | Artifact / success | Release basis | Explore |
+|---|---|---|---|
+| WebShop | [v12 · **47.00%**](harnesses/webshop/20261027-original-best-sol61-v12) | Retrospective | [Method](harnesses/webshop/20261027-original-best-sol61-v12#method-flow) · [Harness](harnesses/webshop/20261027-original-best-sol61-v12#architecture) · [Curve](harnesses/webshop/20261027-original-best-sol61-v12#evolution) |
+| DBBench | [v32 · **70.33%**](harnesses/dbbench/20261027-l4-h0-sol61-v32) | Retrospective | [Method](harnesses/dbbench/20261027-l4-h0-sol61-v32#method-flow) · [Harness](harnesses/dbbench/20261027-l4-h0-sol61-v32#architecture) · [Curve](harnesses/dbbench/20261027-l4-h0-sol61-v32#evolution) |
+| OSBench | [v08 · **38.66%**](harnesses/osbench/20261027-l5-h0-sol61-v08) | Retrospective | [Method](harnesses/osbench/20261027-l5-h0-sol61-v08#method-flow) · [Harness](harnesses/osbench/20261027-l5-h0-sol61-v08#architecture) · [Curve](harnesses/osbench/20261027-l5-h0-sol61-v08#evolution) |
+
+<!-- LATEST:END -->
 
 <!-- TELECOM-HISTORY:START -->
 
@@ -32,11 +44,11 @@ Pick a task, see what the harness does, then open its **source**, **diagram**, o
 
 | Harness · success | What it solves | Selected artifact | Explore |
 |---|---|---|---|
-| **ALFWorld · 95.41%** | Household procedures + visible-state guidance | [v18 · 2 registrations](harnesses/alfworld/20261026-method1-sol61-v18) | [Source](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [Diagram](harnesses/alfworld/20261026-method1-sol61-v18#architecture) · [Curve](harnesses/alfworld/20261026-method1-sol61-v18#evolution) |
-| **DBBench · 70.56%** | SQL grounding, execution, recovery and submission | [v35 · 8 registrations](harnesses/dbbench/20261026-l4-h0-sol61-v35) | [Source](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [Diagram](harnesses/dbbench/20261026-l4-h0-sol61-v35#architecture) · [Curve](harnesses/dbbench/20261026-l4-h0-sol61-v35#evolution) |
-| **WebShop · 44.50%** | Search, product options and budget-aware checkout | [v28 · 5 registrations](harnesses/webshop/20261026-l5-h0-sol61-v28) | [Source](harnesses/webshop/20261026-l5-h0-sol61-v28/plugins) · [Diagram](harnesses/webshop/20261026-l5-h0-sol61-v28#architecture) · [Curve](harnesses/webshop/20261026-l5-h0-sol61-v28#evolution) |
-| **OSBench · 38.89%** | File inspection, shell-task contracts and recovery | [v17 · 5 registrations](harnesses/osbench/20261026-l4-h0-sol61-v17) | [Source](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [Diagram](harnesses/osbench/20261026-l4-h0-sol61-v17#architecture) · [Curve](harnesses/osbench/20261026-l4-h0-sol61-v17#evolution) |
-| **τ²-Telecom · 84.17%** | Customer identity, device diagnosis and account review | [v06 · 35 registrations](harnesses/telecom/20261026-start-luna-repaired-v06) | [Source](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [Diagram](harnesses/telecom/20261026-start-luna-repaired-v06#architecture) · [Curve](harnesses/telecom/20261026-start-luna-repaired-v06#evolution) |
+| **ALFWorld · 95.41%** | Household procedures + visible-state guidance | [v18 · Training final](harnesses/alfworld/20261026-method1-sol61-v18) | [Source](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [Diagram](harnesses/alfworld/20261026-method1-sol61-v18#architecture) · [Curve](harnesses/alfworld/20261026-method1-sol61-v18#evolution) |
+| **DBBench · 70.56%** | SQL grounding, execution, recovery and submission | [v35 · Training final](harnesses/dbbench/20261026-l4-h0-sol61-v35) | [Source](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [Diagram](harnesses/dbbench/20261026-l4-h0-sol61-v35#architecture) · [Curve](harnesses/dbbench/20261026-l4-h0-sol61-v35#evolution) |
+| **WebShop · 47.00%** | Search, product options and budget-aware checkout | [v12 · Retrospective](harnesses/webshop/20261027-original-best-sol61-v12) | [Source](harnesses/webshop/20261027-original-best-sol61-v12/plugins) · [Diagram](harnesses/webshop/20261027-original-best-sol61-v12#architecture) · [Curve](harnesses/webshop/20261027-original-best-sol61-v12#evolution) |
+| **OSBench · 38.89%** | File inspection, shell-task contracts and recovery | [v17 · Training final](harnesses/osbench/20261026-l4-h0-sol61-v17) | [Source](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [Diagram](harnesses/osbench/20261026-l4-h0-sol61-v17#architecture) · [Curve](harnesses/osbench/20261026-l4-h0-sol61-v17#evolution) |
+| **τ²-Telecom · 84.17%** | Customer identity, device diagnosis and account review | [v06 · Training final](harnesses/telecom/20261026-start-luna-repaired-v06) | [Source](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [Diagram](harnesses/telecom/20261026-start-luna-repaired-v06#architecture) · [Curve](harnesses/telecom/20261026-start-luna-repaired-v06#evolution) |
 
 <!-- LEADERBOARD:END -->
 
@@ -67,7 +79,7 @@ The publication tool preserves previous artifacts. GitHub Actions rebuilds the o
 <details>
 <summary>Evaluation provenance and acknowledgements</summary>
 
-Scores come from completed, training-selected final artifacts. Choosing the best artifact across experiments for publication is retrospective selection, not a new untouched evaluation. The portable package has been checked for loading; reported scores come from the original completed runs.
+Scores come from complete tests of published promoted artifacts. Releases explicitly distinguish training-selected final artifacts from retrospectively selected adopted checkpoints. Choosing a release using observed test scores is not a new untouched evaluation. The portable package has been checked for loading; reported scores come from the original completed runs.
 
 Paper waterlines, local baseline/full measurements and published artifact scores remain separate in the [full leaderboard](LEADERBOARD.md). Unmeasured costs are shown as missing, not zero.
 

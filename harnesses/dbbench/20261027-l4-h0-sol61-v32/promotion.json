@@ -1,0 +1,19 @@
+{
+  "candidate": "v32",
+  "parent": "v28",
+  "adopted": true,
+  "reason": "同批完整50题，33至35；改动实际进入请求或控制，严格提升采用",
+  "training": {
+    "episodes": 50,
+    "valid": 50,
+    "invalid": 0,
+    "mean": 0.7,
+    "repeat_means": {
+      "0": 0.7
+    },
+    "repeat_standard_deviation": 0.0
+  },
+  "validation": null,
+  "parent_validation": null,
+  "selection_metric": "success"
+}

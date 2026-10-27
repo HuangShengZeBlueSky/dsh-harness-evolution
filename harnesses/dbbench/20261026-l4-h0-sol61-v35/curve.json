@@ -78,9 +78,10 @@
       "after": 0.64,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6377777777777778,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 8,
@@ -98,9 +99,10 @@
       "after": 0.72,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6577777777777778,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 10,
@@ -108,9 +110,10 @@
       "after": 0.7,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6544444444444445,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 11,
@@ -128,9 +131,10 @@
       "after": 0.78,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6555555555555556,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 13,
@@ -148,9 +152,10 @@
       "after": 0.66,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6533333333333333,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 15,
@@ -168,9 +173,10 @@
       "after": 0.64,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6755555555555556,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 17,
@@ -178,9 +184,10 @@
       "after": 0.72,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6744444444444444,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 18,
@@ -218,9 +225,10 @@
       "after": 0.74,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6888888888888889,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 22,
@@ -228,9 +236,10 @@
       "after": 0.66,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6822222222222222,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 23,
@@ -238,9 +247,10 @@
       "after": 0.78,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6866666666666666,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 24,
@@ -258,9 +268,10 @@
       "after": 0.74,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6877777777777778,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 26,
@@ -278,9 +289,10 @@
       "after": 0.76,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6788888888888889,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 28,
@@ -288,9 +300,10 @@
       "after": 0.68,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.6888888888888889,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 29,
@@ -328,9 +341,10 @@
       "after": 0.7,
       "validation": null,
       "champion_validation": null,
-      "test": null,
+      "test": 0.7033333333333334,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 33,
@@ -360,7 +374,8 @@
       "champion_validation": null,
       "test": 0.7055555555555556,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "original"
     },
     {
       "round": 36,
@@ -419,5 +434,7 @@
     "champion_validation": "selected checkpoint validation mean",
     "test": "measured mean reward (WebShop) or success",
     "strict_test": "measured strict success"
-  }
+  },
+  "snapshot_at": "2026-10-27T10:46:49.531595+08:00",
+  "measured_test_points": 15
 }

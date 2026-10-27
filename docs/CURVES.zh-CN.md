@@ -18,9 +18,9 @@
 
 ## WebShop
 
-[检查点 v28：源码与框图](../harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md)
+[检查点 v12：源码与框图](../harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md)
 
-![WebShop 进化曲线](../harnesses/webshop/20261026-l5-h0-sol61-v28/evolution.png)
+![WebShop 进化曲线](../harnesses/webshop/20261027-original-best-sol61-v12/evolution.png)
 
 ## OSBench
 

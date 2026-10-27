@@ -4,13 +4,39 @@
 
 Eight responsibilities coordinate SQL schema/literal grounding, write completion, result submission, recovery, and budget use. L4 maintains the agent capability map before proposing changes.
 
-| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+**Release basis: Training-selected final checkpoint**.
+
+| Test success | Published checkpoint | Plugin registrations | Test coverage |
 |---:|---|---:|---|
 | **70.56%** | **v35** / 40 rounds | 8 | 300 tasks × 3 repeats |
 
-[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+[**Plugin source**](plugins) · [**Method flow**](#method-flow) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
 
 Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol 6.1 high** · Method: **L4 · Agent capability map**.
+
+## Method flow
+
+```mermaid
+flowchart TD
+    A["H0: no enhancement plugins"]
+    B["Maintain agent structure and plugin responsibility map"]
+    C["Propose a problem-class repair, then implement plugins"]
+    D["Same 50-task training batch"]
+    E["Training improves and change takes effect"]
+    F["Freeze the training-selected final checkpoint v35"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    F --> T["Final-checkpoint test"]
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    T --> P["This release: v35"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release
+```
 
 ## Architecture
 

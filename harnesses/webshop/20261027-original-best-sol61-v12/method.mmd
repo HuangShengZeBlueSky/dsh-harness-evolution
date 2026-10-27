@@ -1,0 +1,19 @@
+flowchart TD
+    A["Old method-1 final checkpoint v37"]
+    B["Diagnose visible search and option-selection failures"]
+    C["Cooperative edits to two or more effective plugins"]
+    D["Parent vs candidate on the same 50 training tasks"]
+    E["Mean reward improves and edits take effect"]
+    F["Freeze the training-selected final checkpoint v36"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    F --> T["Final-checkpoint test"]
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    R --> P["This release: v12"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release

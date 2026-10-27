@@ -4,13 +4,38 @@
 
 A repaired Luna-derived starting harness continued with the Sol optimizer. The release contains 30 migrated source surfaces plus five evolved custom plugins, with the measured Telecom review bridge and account-facts integration.
 
-| Test success | Selected checkpoint | Plugin registrations | Test coverage |
+**Release basis: Training-selected final checkpoint**.
+
+| Test success | Published checkpoint | Plugin registrations | Test coverage |
 |---:|---|---:|---|
 | **84.17%** | **v06** / 8 rounds | 35 | 40 tasks × 3 repeats |
 
-[**Plugin source**](plugins) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
+[**Plugin source**](plugins) · [**Method flow**](#method-flow) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)
 
 Actor: **Qwen3-4B-Instruct-2507** · Optimizer: **Sol high** · Method: **Method 2 continuation · Repaired Luna-derived start**.
+
+## Method flow
+
+```mermaid
+flowchart TD
+    A["Repaired Luna-derived starting checkpoint v02"]
+    B["Diagnose training trajectories and existing native surfaces"]
+    C["Revise native plugins and their composition"]
+    D["Paired training evaluation: 74 tasks x 3"]
+    E["Training success improves"]
+    F["Record historical per-version tests: 40 tasks x 3"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    F --> P["This release: v06"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release
+```
 
 ## Architecture
 

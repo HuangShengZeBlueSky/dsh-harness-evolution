@@ -1,0 +1,19 @@
+{
+  "candidate": "v08",
+  "parent": "v05",
+  "adopted": true,
+  "reason": "训练0.554217→0.566265，配对改善4退步3；验证与模板宏平均均不降且改动生效",
+  "training": {
+    "episodes": 83,
+    "valid": 83,
+    "invalid": 0,
+    "mean": 0.5662650602409639,
+    "repeat_means": {
+      "0": 0.5662650602409639
+    },
+    "repeat_standard_deviation": 0.0
+  },
+  "validation": 0.6470588235294118,
+  "parent_validation": 0.5882352941176471,
+  "selection_metric": "success"
+}

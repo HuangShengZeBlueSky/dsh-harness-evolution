@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "release_id": "20261027-l5-h0-sol61-v08",
+  "benchmark": "osbench",
+  "checkpoint": "v08",
+  "method": "L5 · 场景专用循环",
+  "optimizer": "Sol 6.1 high",
+  "rounds": 40,
+  "artifact": "harnesses/osbench/20261027-l5-h0-sol61-v08",
+  "published_on": "2026-10-27",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 144,
+    "repeats": 3,
+    "valid_episodes": 432,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.38657407407407407,
+    "mean_reward": null,
+    "pass_at_3": null,
+    "pass_cubed": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_steps": 16,
+    "max_model_calls": 16,
+    "task_count": 144,
+    "repeats": 3,
+    "start": "H0",
+    "selection": "training improvement plus validation and family-macro nondecrease; retrospective adopted checkpoint selected for publication",
+    "runtime": "native DSH benchmark/setup bridge",
+    "extra_body": {
+      "parallel_tool_calls": false
+    },
+    "send_seed": true,
+    "timeout_seconds": 575,
+    "max_retries": 0,
+    "environment": "AgentBench OS isolated Docker task environment"
+  },
+  "notes": [
+    "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
+    "Original training-selected final checkpoint is v11. Its identity and original result are retained.",
+    "Paper AgentBench uses one trial; this measurement averages three repeats."
+  ],
+  "source_experiment": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61",
+  "comparison_group": "osbench-qwen3-4b-release-v1",
+  "method_en": "L5 · Task-family validation",
+  "selection_kind": "retrospective_adopted",
+  "promoted": true,
+  "campaign_final_checkpoint": "v11",
+  "campaign_final_test": {
+    "mean": 0.3819444444444444,
+    "strict_pass_at_1": null,
+    "valid": 432
+  },
+  "evaluation_repeats": {
+    "0": 0.4097222222222222,
+    "1": 0.3680555555555556,
+    "2": 0.3819444444444444
+  }
+}

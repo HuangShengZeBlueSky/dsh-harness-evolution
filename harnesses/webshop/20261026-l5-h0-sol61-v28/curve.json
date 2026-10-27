@@ -190,12 +190,13 @@
       "after": 0.6955357142857143,
       "validation": 0.6936111111111111,
       "champion_validation": 0.6936111111111111,
-      "test": null,
-      "strict_test": null,
+      "test": 0.6835361111111111,
+      "strict_test": 0.4166666666666667,
       "adopted": true,
       "training_strict": 0.475,
       "validation_strict": 0.35,
-      "champion_validation_strict": 0.35
+      "champion_validation_strict": 0.35,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 15,
@@ -333,12 +334,13 @@
       "after": 0.6966666666666667,
       "validation": 0.6936111111111111,
       "champion_validation": 0.6936111111111111,
-      "test": null,
-      "strict_test": null,
+      "test": 0.7056194444444445,
+      "strict_test": 0.43833333333333335,
       "adopted": true,
       "training_strict": 0.4,
       "validation_strict": 0.35,
-      "champion_validation_strict": 0.35
+      "champion_validation_strict": 0.35,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 26,
@@ -377,7 +379,8 @@
       "adopted": true,
       "training_strict": 0.35,
       "validation_strict": 0.35,
-      "champion_validation_strict": 0.35
+      "champion_validation_strict": 0.35,
+      "test_origin": "original"
     },
     {
       "round": 29,
@@ -545,5 +548,7 @@
     "training_strict": "candidate training strict success",
     "validation_strict": "candidate validation strict success",
     "champion_validation_strict": "selected checkpoint validation strict success"
-  }
+  },
+  "snapshot_at": "2026-10-27T10:46:49.534422+08:00",
+  "measured_test_points": 3
 }

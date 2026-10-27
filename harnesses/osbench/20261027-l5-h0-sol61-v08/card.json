@@ -1,0 +1,8 @@
+{
+  "summary": "Two focused mechanisms: recover an explicit answer_action directive into a native call, and review zero-valued shell results against real files and patterns. L5 uses held-out task-family validation.",
+  "summary_zh": "两个专职机制：将明确的 answer_action 文本恢复为原生提交调用；遇到零结果时根据真实文件和模式复核。L5 使用任务族留出验证。",
+  "responsibilities": {
+    "answer-call-repair": "Recover an explicit JSON answer_action directive, preserving the original answer arguments.",
+    "zero-result-review": "Trigger targeted file/pattern checks after a real zero result; zero can still be a valid answer."
+  }
+}

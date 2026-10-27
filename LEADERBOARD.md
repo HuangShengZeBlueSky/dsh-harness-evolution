@@ -8,9 +8,21 @@
 |---|---|---|---|---|---|---|---|
 | ALFWorld | 16.51% | 28.36% | 29.36% | 35.80% | 89.00% | 88.07% | **95.41%** |
 | DBBench | 44.00% | — | — | 50.30% | 57.30% | 65.00% | **70.56%** |
-| WebShop | 29.50% | 18.00% | 18.50% | 42.50% | 39.00% | 45.50% | **44.50%** |
+| WebShop | 29.50% | 18.00% | 18.50% | 42.50% | 39.00% | 45.50% | **47.00%** |
 | OSBench | 21.50% | — | — | 25.70% | 37.50% | 39.60% | **38.89%** |
 | τ²-Telecom | 25.83% | — | — | 50.80% | 95.00% | 90.00% | **84.17%** |
+
+The Ours column shows the highest complete test score among published promoted checkpoints, including retrospective releases. Training-selected final artifacts remain separate below; a retrospective high score is not a fresh independent test.
+
+## Training-final artifacts versus best measured promoted checkpoints
+
+| Benchmark | Best training-final artifact | Best measured promoted checkpoint | Release basis |
+|---|---|---|---|
+| ALFWorld | [v18 · 95.41%](harnesses/alfworld/20261026-method1-sol61-v18) | [v18 · 95.41%](harnesses/alfworld/20261026-method1-sol61-v18) | Training final |
+| DBBench | [v35 · 70.56%](harnesses/dbbench/20261026-l4-h0-sol61-v35) | [v35 · 70.56%](harnesses/dbbench/20261026-l4-h0-sol61-v35) | Training final |
+| WebShop | [v28 · 44.50%](harnesses/webshop/20261026-l5-h0-sol61-v28) | [v12 · 47.00%](harnesses/webshop/20261027-original-best-sol61-v12) | Retrospective |
+| OSBench | [v17 · 38.89%](harnesses/osbench/20261026-l4-h0-sol61-v17) | [v17 · 38.89%](harnesses/osbench/20261026-l4-h0-sol61-v17) | Training final |
+| τ²-Telecom | [v06 · 84.17%](harnesses/telecom/20261026-start-luna-repaired-v06) | [v06 · 84.17%](harnesses/telecom/20261026-start-luna-repaired-v06) | Training final |
 
 **Provenance:** other-method scores are reported by the Life-Harness authors, not measured by us. Meta-Harness/AHE: Table 1; bare/Life-Harness: Table 10; ALIGN/AgentSquare: Table 11. Published precision is retained; missing is not zero.
 
@@ -54,7 +66,7 @@ Sources: [v1 Table 7](https://arxiv.org/html/2605.22166v1), [v2 Table 8](https:/
 | Pass@3 · at least one success | 47.50% | — | — | 100.00% | 100.00% |
 | Pass³ · all three succeed | 7.50% | 40.00% | 87.50% | 77.50% | 62.50% |
 
-Current WebShop mean reward is **70.68/100**; the main table ranks strict success, not partial reward.
+Current WebShop mean reward is **71.21/100**; the main table ranks strict success, not partial reward.
 
 ## Evolution cost · million tokens
 
@@ -74,7 +86,7 @@ Paper costs are rounded values from Table 1. Missing local cost is not zero; no 
 |---|---:|---:|---:|
 | ALFWorld | 13.46% | 87.77% | 95.41% |
 | DBBench | 43.56% | 64.11% | 70.56% |
-| WebShop | 28.00% | — | 44.50% |
+| WebShop | 28.00% | — | 47.00% |
 | OSBench | 33.33% | 36.81% | 38.89% |
 | τ²-Telecom | 43.33% | — | 84.17% |
 
@@ -82,11 +94,14 @@ Paper costs are rounded values from Table 1. Missing local cost is not zero; no 
 
 | Benchmark | Artifact | Success | Comparison | Published |
 |---|---|---:|---|---|
-| ALFWorld | [20261026-method1-sol61-v18](harnesses/alfworld/20261026-method1-sol61-v18) | 95.41% | Primary | 2026-10-26 |
-| DBBench | [20261026-l4-h0-sol61-v35](harnesses/dbbench/20261026-l4-h0-sol61-v35) | 70.56% | Primary | 2026-10-26 |
-| OSBench | [20261026-l4-h0-sol61-v17](harnesses/osbench/20261026-l4-h0-sol61-v17) | 38.89% | Primary | 2026-10-26 |
-| τ²-Telecom | [20261026-start-luna-repaired-v06](harnesses/telecom/20261026-start-luna-repaired-v06) | 84.17% | Primary | 2026-10-26 |
-| WebShop | [20261026-l5-h0-sol61-v28](harnesses/webshop/20261026-l5-h0-sol61-v28) | 44.50% | Primary | 2026-10-26 |
+| ALFWorld | [20261026-method1-sol61-v18](harnesses/alfworld/20261026-method1-sol61-v18) | 95.41% | Primary · Training final | 2026-10-26 |
+| DBBench | [20261026-l4-h0-sol61-v35](harnesses/dbbench/20261026-l4-h0-sol61-v35) | 70.56% | Primary · Training final | 2026-10-26 |
+| DBBench | [20261027-l4-h0-sol61-v32](harnesses/dbbench/20261027-l4-h0-sol61-v32) | 70.33% | Primary · Retrospective | 2026-10-27 |
+| OSBench | [20261026-l4-h0-sol61-v17](harnesses/osbench/20261026-l4-h0-sol61-v17) | 38.89% | Primary · Training final | 2026-10-26 |
+| OSBench | [20261027-l5-h0-sol61-v08](harnesses/osbench/20261027-l5-h0-sol61-v08) | 38.66% | Primary · Retrospective | 2026-10-27 |
+| τ²-Telecom | [20261026-start-luna-repaired-v06](harnesses/telecom/20261026-start-luna-repaired-v06) | 84.17% | Primary · Training final | 2026-10-26 |
+| WebShop | [20261027-original-best-sol61-v12](harnesses/webshop/20261027-original-best-sol61-v12) | 47.00% | Primary · Retrospective | 2026-10-27 |
+| WebShop | [20261026-l5-h0-sol61-v28](harnesses/webshop/20261026-l5-h0-sol61-v28) | 44.50% | Primary · Training final | 2026-10-26 |
 
 [Paper and numerical sources](https://arxiv.org/html/2605.22166v3) · [Structured comparison data](results/paper-baselines.json) · [English protocol notes](docs/METRICS.md)
 

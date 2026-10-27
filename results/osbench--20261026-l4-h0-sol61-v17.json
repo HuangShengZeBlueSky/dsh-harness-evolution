@@ -47,5 +47,6 @@
   ],
   "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
   "comparison_group": "osbench-qwen3-4b-release-v1",
-  "method_en": "L4 · Agent capability map"
+  "method_en": "L4 · Agent capability map",
+  "selection_kind": "training_final"
 }

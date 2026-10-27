@@ -50,5 +50,6 @@
   ],
   "source_experiment": "alfworld-official50-20r-20261022/method1-sol61",
   "comparison_group": "alfworld-qwen3-4b-release-v1",
-  "method_en": "Method 2 · Free plugin evolution"
+  "method_en": "Method 2 · Free plugin evolution",
+  "selection_kind": "training_final"
 }

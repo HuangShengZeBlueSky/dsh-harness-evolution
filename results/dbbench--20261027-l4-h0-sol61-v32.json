@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "release_id": "20261027-l4-h0-sol61-v32",
+  "benchmark": "dbbench",
+  "checkpoint": "v32",
+  "method": "L4 · Agent结构与多插件职责",
+  "optimizer": "Sol 6.1 high",
+  "rounds": 40,
+  "artifact": "harnesses/dbbench/20261027-l4-h0-sol61-v32",
+  "published_on": "2026-10-27",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 300,
+    "repeats": 3,
+    "valid_episodes": 900,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.7033333333333334,
+    "mean_reward": null,
+    "pass_at_3": null,
+    "pass_cubed": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_steps": null,
+    "max_model_calls": 15,
+    "task_count": 300,
+    "repeats": 3,
+    "start": "H0",
+    "selection": "training/validation only; final selected checkpoint evaluated after evolution",
+    "runtime": "native DSH benchmark/setup bridge",
+    "extra_body": {
+      "parallel_tool_calls": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "send_seed": false,
+    "timeout_seconds": 740,
+    "max_retries": 0,
+    "environment": "AgentBench MySQL 8.4.11; 15 model calls"
+  },
+  "notes": [
+    "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
+    "Original training-selected final checkpoint is v35. Its identity and original result are retained.",
+    "Paper AgentBench uses one trial; this measurement averages three repeats."
+  ],
+  "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+  "comparison_group": "dbbench-qwen3-4b-release-v1",
+  "method_en": "L4 · Agent capability map",
+  "selection_kind": "retrospective_adopted",
+  "promoted": true,
+  "campaign_final_checkpoint": "v35",
+  "campaign_final_test": {
+    "mean": 0.7055555555555556,
+    "strict_pass_at_1": null,
+    "valid": 900
+  },
+  "evaluation_repeats": {
+    "0": 0.7066666666666667,
+    "1": 0.7033333333333334,
+    "2": 0.7
+  }
+}

@@ -88,9 +88,10 @@
       "after": 0.6875,
       "validation": 0.7,
       "champion_validation": 0.7,
-      "test": null,
+      "test": 0.3819444444444444,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "retrospective_backfill"
     },
     {
       "round": 9,
@@ -180,7 +181,8 @@
       "champion_validation": 0.7,
       "test": 0.3888888888888889,
       "strict_test": null,
-      "adopted": true
+      "adopted": true,
+      "test_origin": "original"
     },
     {
       "round": 18,
@@ -419,5 +421,7 @@
     "champion_validation": "selected checkpoint validation mean",
     "test": "measured mean reward (WebShop) or success",
     "strict_test": "measured strict success"
-  }
+  },
+  "snapshot_at": "2026-10-27T10:46:49.537242+08:00",
+  "measured_test_points": 2
 }

@@ -1,0 +1,18 @@
+flowchart TD
+    A["Repaired Luna-derived starting checkpoint v02"]
+    B["Diagnose training trajectories and existing native surfaces"]
+    C["Revise native plugins and their composition"]
+    D["Paired training evaluation: 74 tasks x 3"]
+    E["Training success improves"]
+    F["Record historical per-version tests: 40 tasks x 3"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    F --> P["This release: v06"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release

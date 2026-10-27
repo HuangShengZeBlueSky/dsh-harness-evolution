@@ -1,0 +1,14 @@
+{
+  "summary": "L4 intermediate checkpoint v32: eight plugin responsibilities, with numeric/date profiling and reduced tie-related guidance. Its 70.33% test result corroborates the later final v35 at 70.56%.",
+  "responsibilities": {
+    "schema-contract": "Exact schema names and bounded SQL identifier checks.",
+    "literal-contract": "Ground filter values in observed database literals.",
+    "write-workflow": "Track mutation execution and actual completion receipts.",
+    "result-bridge": "Align observed result shape with final submission.",
+    "sql-recovery": "Remember SQL errors and guide non-repeating recovery.",
+    "budget-conductor": "Use remaining model-call budget and finish deliberately.",
+    "numeric-calendar": "Handle numeric/date formats and relevant profiling.",
+    "intent-contract": "Translate task intent into operation and direction constraints."
+  },
+  "summary_zh": "L4 中间检查点 v32：八个插件职责，强化数值与日期样例并减少并列值指导。70.33%的测试成绩支持后续最终版v35的70.56%并非孤立高点。"
+}

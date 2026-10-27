@@ -1,0 +1,19 @@
+flowchart TD
+    A["H0: no enhancement plugins"]
+    B["Map current capabilities and problem classes"]
+    C["Implement focused native plugins"]
+    D["83 training tasks plus 17 held-out family tasks"]
+    E["Train improves; validation and family macro score do not fall"]
+    F["Freeze the training-selected final checkpoint v11"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    F --> T["Final-checkpoint test"]
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    R --> P["This release: v08"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release

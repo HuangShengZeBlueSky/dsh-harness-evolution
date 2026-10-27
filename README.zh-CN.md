@@ -10,7 +10,19 @@
 
 ![多方法成绩总览](assets/leaderboard.zh-CN.png)
 
-榜单包含裸模型、ALIGN、AgentSquare、Meta-Harness、AHE、Life-Harness 和我们。其他方法使用论文报告值，不是我们重跑的结果；缺失的场景留空。
+榜单包含裸模型、ALIGN、AgentSquare、Meta-Harness、AHE、Life-Harness 和我们。我们的主列展示最佳已测晋升点，可能来自回溯补测；训练最终版另列。其他方法使用论文报告值；缺失的场景留空。
+
+<!-- LATEST:START -->
+
+## 最新发布 · 2026-10-27
+
+| 场景 | 产物 / 成功率 | 发布依据 | 直接查看 |
+|---|---|---|---|
+| WebShop | [v12 · **47.00%**](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md) | 回溯补测 | [方法流程](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#方法流程图) · [Harness框图](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#结构框图) · [曲线](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#进化曲线) |
+| DBBench | [v32 · **70.33%**](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md) | 回溯补测 | [方法流程](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md#方法流程图) · [Harness框图](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md#结构框图) · [曲线](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md#进化曲线) |
+| OSBench | [v08 · **38.66%**](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md) | 回溯补测 | [方法流程](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md#方法流程图) · [Harness框图](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md#结构框图) · [曲线](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md#进化曲线) |
+
+<!-- LATEST:END -->
 
 <!-- TELECOM-HISTORY:START -->
 
@@ -28,11 +40,11 @@
 
 | 场景与成绩 | 解决的问题 | 检查点 | 直接查看 |
 |---|---|---|---|
-| **ALFWorld · 95.41%** | 家务任务流程与可见状态指导 | [v18 · 2 个注册项](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | [源码](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [框图](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md#结构框图) · [曲线](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md#进化曲线) |
-| **DBBench · 70.56%** | 数据库结构与取值对齐、SQL 执行和结果提交 | [v35 · 8 个注册项](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | [源码](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [框图](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md#结构框图) · [曲线](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md#进化曲线) |
-| **WebShop · 44.50%** | 商品检索、规格选择、价格核验与购买 | [v28 · 5 个注册项](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md) | [源码](harnesses/webshop/20261026-l5-h0-sol61-v28/plugins) · [框图](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md#结构框图) · [曲线](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md#进化曲线) |
-| **OSBench · 38.89%** | 文件检查、命令语义、全局统计与重复恢复 | [v17 · 5 个注册项](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | [源码](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [框图](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md#结构框图) · [曲线](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md#进化曲线) |
-| **τ²-Telecom · 84.17%** | 客户线路身份、设备诊断、账单与账户复核 | [v06 · 35 个注册项](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | [源码](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [框图](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md#结构框图) · [曲线](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md#进化曲线) |
+| **ALFWorld · 95.41%** | 家务任务流程与可见状态指导 | [v18 · 训练最终版](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | [源码](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [框图](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md#结构框图) · [曲线](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md#进化曲线) |
+| **DBBench · 70.56%** | 数据库结构与取值对齐、SQL 执行和结果提交 | [v35 · 训练最终版](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | [源码](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [框图](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md#结构框图) · [曲线](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md#进化曲线) |
+| **WebShop · 47.00%** | 商品检索、规格选择、价格核验与购买 | [v12 · 回溯补测](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md) | [源码](harnesses/webshop/20261027-original-best-sol61-v12/plugins) · [框图](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#结构框图) · [曲线](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#进化曲线) |
+| **OSBench · 38.89%** | 文件检查、命令语义、全局统计与重复恢复 | [v17 · 训练最终版](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | [源码](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [框图](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md#结构框图) · [曲线](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md#进化曲线) |
+| **τ²-Telecom · 84.17%** | 客户线路身份、设备诊断、账单与账户复核 | [v06 · 训练最终版](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | [源码](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [框图](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md#结构框图) · [曲线](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md#进化曲线) |
 
 WebShop 按严格成功率排序，平均奖励单独展示。插件注册数量不代表独立证明有效的机制数量。
 

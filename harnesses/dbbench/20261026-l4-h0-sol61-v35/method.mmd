@@ -1,0 +1,19 @@
+flowchart TD
+    A["H0: no enhancement plugins"]
+    B["Maintain agent structure and plugin responsibility map"]
+    C["Propose a problem-class repair, then implement plugins"]
+    D["Same 50-task training batch"]
+    E["Training improves and change takes effect"]
+    F["Freeze the training-selected final checkpoint v35"]
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -->|Adopt or reject; continue| B
+    E -->|Budget ends| F
+    F --> T["Final-checkpoint test"]
+    E --> K["Archive promoted checkpoints"]
+    K -.-> R["Independent retrospective tests; no optimizer feedback"]
+    T --> P["This release: v35"]
+    classDef release fill:#e3f5ef,stroke:#0c7968,color:#145b4b
+    class P release

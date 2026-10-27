@@ -6,7 +6,7 @@ The leaderboard is **release-driven**. It updates when a maintainer publishes an
 
 1. Give the new artifact a unique `release_id`; retain prior releases.
 2. Include executable plugin files and `composition.json`, `protocol.json`, `curve.json`, `diagram.mmd`, and `card.json`. Existing artifact directories are concrete templates.
-3. Supply a result JSON or YAML using the fields of an existing `results/<benchmark>--<release>.json`. Set `comparison_group` from `results/leaderboard-policy.json`. Scores are fractions from 0 to 1. Record full valid coverage and the actual protocol. Missing cost or unsupported metrics stay `null`.
+3. Supply a result JSON or YAML using the fields of an existing `results/<benchmark>--<release>.json`. Set `comparison_group` from `results/leaderboard-policy.json` and declare `selection_kind`: `training_final` or `retrospective_adopted`. A retrospective release must include the actual `promotion.json` adoption record and original `campaign_final_checkpoint`. Scores are fractions from 0 to 1. Record full valid coverage and the actual protocol. Missing cost or unsupported metrics stay `null`.
 4. Register it and regenerate the leaderboard:
 
 ```bash

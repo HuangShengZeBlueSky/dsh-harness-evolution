@@ -1,0 +1,13 @@
+flowchart TD
+    U[Visible task and real shell receipts] --> Q[Frozen Qwen3-4B]
+    Q --> B[Native bash or answer tool call]
+    Q --> T[Explicit answer_action text with valid JSON]
+    T --> A[answer-call-repair: preserve answer arguments]
+    A --> B
+    B --> E[OS task environment]
+    E --> Z{Actual zero count result?}
+    Z -->|Yes| R[zero-result-review: files and pattern evidence]
+    R --> S[DSH episode state and prompt guidance]
+    S --> Q
+    Z -->|Other result| Q
+    E --> J[External benchmark scoring]

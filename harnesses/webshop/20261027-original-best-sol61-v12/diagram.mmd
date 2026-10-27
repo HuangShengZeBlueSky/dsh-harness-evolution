@@ -1,0 +1,14 @@
+flowchart TD
+    U[Visible user requirement and page] --> P[Visible-state parsing helpers]
+    P --> S[search-evidence: identity, features, price]
+    P --> O[option-ledger: real variant selections]
+    R[Shared resume-policy helpers] --> S
+    R --> O
+    S --> A[DSH prompt and episode state]
+    O --> A
+    A --> Q[Frozen Qwen3-4B]
+    Q --> G[Native pre-execute checks]
+    G --> E[WebShop search / click / buy]
+    E --> F[Real page receipts]
+    F --> P
+    E --> J[External benchmark scoring]

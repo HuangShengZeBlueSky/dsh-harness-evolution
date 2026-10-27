@@ -24,7 +24,7 @@ Each artifact's `protocol.json` records its measured actor, budgets, environment
 
 ## Reading the leaderboard
 
-The published champion is the highest **success score among released, completed final artifacts** for that benchmark. Comparing final artifacts across experiments is retrospective selection using test scores; it does not produce a new untouched test result. Ties retain an existing record unless a later release is explicitly added.
+The primary figure shows the highest **success score among released, promoted checkpoints with complete tests**, within the registered comparison group. A separate table preserves the best training-selected final artifact. `training_final` and `retrospective_adopted` are different release categories. Comparing final artifacts across experiments is retrospective selection using test scores; it does not produce a new untouched test result. Ties retain an existing record unless a later release is explicitly added.
 
 The numerical gap to the paper is descriptive. Different trial counts, starting points, development budgets, simulator models, runtime access, and auxiliary-call budgets prevent treating every gap as a controlled method comparison. In particular, Telecom is a separate protocol lane, even where task names match.
 

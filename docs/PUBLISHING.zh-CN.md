@@ -7,7 +7,7 @@
 1. 为新产物分配唯一 `release_id`，保留旧版本。
 2. 目录包含插件代码、`composition.json`、`protocol.json`、`curve.json`、`diagram.mmd` 和 `card.json`。现有产物就是可用模板。
 3. 参考 `results/<场景>--<版本>.json` 提供 JSON 或 YAML 结果。分数为 0 到 1；完整填写任务数、重复次数和有效场数。成本未汇总就填 `null`。
-4. 选择 `results/leaderboard-policy.json` 中匹配的 `comparison_group`。如果做题模型、任务集、预算、环境或用户模拟器变了，新增比较组。新组会显示在版本表，但不会自动替换原协议的主榜产物。
+4. 选择 `results/leaderboard-policy.json` 中匹配的 `comparison_group`。注明 `selection_kind` 为 `training_final`（训练最终版）或 `retrospective_adopted`（回溯高分晋升点）；后者必须附真实 `promotion.json` 及原 `campaign_final_checkpoint`。如果做题模型、任务集、预算、环境或用户模拟器变了，新增比较组。新组会显示在版本表，但不会自动替换原协议的主榜产物。
 
 ```bash
 # 先核对，不改文件

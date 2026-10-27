@@ -1,0 +1,18 @@
+{
+  "methods": [
+    {
+      "id": "answer-call-repair",
+      "config": {},
+      "module": "plugins/answer-call-repair.mjs"
+    },
+    {
+      "id": "zero-result-review",
+      "config": {},
+      "module": "plugins/zero-result-review.mjs"
+    }
+  ],
+  "selected": [
+    "answer-call-repair",
+    "zero-result-review"
+  ]
+}

@@ -16,9 +16,9 @@ Recorded development scores and measured test checkpoints for the current publis
 
 ## WebShop
 
-[20261026-l5-h0-sol61-v28 — architecture and plugins](../harnesses/webshop/20261026-l5-h0-sol61-v28)
+[20261027-original-best-sol61-v12 — architecture and plugins](../harnesses/webshop/20261027-original-best-sol61-v12)
 
-![WebShop evolution](../harnesses/webshop/20261026-l5-h0-sol61-v28/evolution.png)
+![WebShop evolution](../harnesses/webshop/20261027-original-best-sol61-v12/evolution.png)
 
 ## OSBench
 

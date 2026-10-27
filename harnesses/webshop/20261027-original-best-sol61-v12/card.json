@@ -1,0 +1,8 @@
+{
+  "summary": "Two cooperative plugins combine visible search evidence with explicit option tracking. Starting from an earlier method-1 final harness, v12 reached 47.00% strict success in retrospective testing. Its original adoption objective was mean reward, not strict success.",
+  "summary_zh": "两个协同插件分别维护检索证据与规格选择记录。从旧方法1最终版 v37 续跑，v12 回溯补测严格成功率达47.00%；原晋升目标是平均奖励，并非严格成功率。",
+  "responsibilities": {
+    "search-evidence": "Ground product search, price and feature evidence; check legal page actions.",
+    "option-ledger": "Track actual variant choices and remaining requested specifications."
+  }
+}

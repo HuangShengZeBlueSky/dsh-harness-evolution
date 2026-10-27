@@ -48,5 +48,6 @@
   ],
   "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired",
   "comparison_group": "telecom-qwen3-4b-release-v1",
-  "method_en": "Method 2 continuation · Repaired Luna-derived start"
+  "method_en": "Method 2 continuation · Repaired Luna-derived start",
+  "selection_kind": "training_final"
 }
