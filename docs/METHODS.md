@@ -4,6 +4,9 @@
 
 **We evolve executable harnesses between a model and its environment.** The outer optimizer reads training evidence, edits plugins, evaluates and selects. Inside an episode, plugins maintain state, check actions, process real tool receipts and guide recovery. Skills organize responsibilities, Workflows organize experiments, and DSH provides runtime extension points; these are not mutually exclusive actor architectures.
 
+
+[Controlled V4 review protocol and numeric paired outcomes](../results/research/mechanism-evidence.json).
+
 ## Findings worth retaining
 
 1. **The useful DSH capability is executable intervention, beyond additional prompting.** State, action checks and bounded recovery expose inspectable intervention points. One Telecom V4 paired test measured 95/120 with the intervention versus 80/120 without it: 15 improvements and no regressions. This supports that plugin under that protocol, not all plugins or the whole search method.

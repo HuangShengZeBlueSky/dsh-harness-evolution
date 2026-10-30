@@ -9,6 +9,7 @@ NAMES={'alfworld':'ALFWorld','dbbench':'DBBench','webshop':'WebShop','osbench':'
 def read(p):return json.loads(p.read_text())
 def pct(x):return '—' if x is None else f'{x*100:.2f}%'
 def method_id(g):
+ if g.get('method_id'):return g['method_id']
  f=g.get('family','');m=g.get('method','');ident=g.get('id','')
  if f=='M1':return 'M1_cooperative'
  if f=='M2':return 'M2_free'
