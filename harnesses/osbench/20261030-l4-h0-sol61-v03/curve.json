@@ -1,0 +1,394 @@
+{
+  "metric": "success",
+  "note": "Training/validation and checkpoint tests are separate. No test interpolation.",
+  "points": [
+    {
+      "round": 0,
+      "version": "baseline",
+      "after": 0.55,
+      "validation": 0.5,
+      "champion_validation": 0.5,
+      "adopted": null,
+      "test": null
+    },
+    {
+      "round": 1,
+      "version": "v01",
+      "after": 0.575,
+      "validation": 0.55,
+      "champion_validation": 0.55,
+      "adopted": true,
+      "test": null
+    },
+    {
+      "round": 2,
+      "version": "v02",
+      "after": 0.625,
+      "validation": 0.55,
+      "champion_validation": 0.55,
+      "adopted": true,
+      "test": null
+    },
+    {
+      "round": 3,
+      "version": "v03",
+      "after": 0.6625,
+      "validation": 0.65,
+      "champion_validation": 0.65,
+      "adopted": true,
+      "test": 0.39351851851851855,
+      "strict_test": null,
+      "independent_test": {
+        "test": 0.39351851851851855,
+        "strict_test": null,
+        "source": "高分晋升检查点回溯补测"
+      },
+      "test_kind": "retrospective_adopted",
+      "repeat_test": [
+        0.3888888888888889,
+        0.375,
+        0.4166666666666667
+      ]
+    },
+    {
+      "round": 4,
+      "version": "v04",
+      "after": 0.65,
+      "validation": 0.5,
+      "champion_validation": 0.65,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 5,
+      "version": "v05",
+      "after": 0.6625,
+      "validation": 0.65,
+      "champion_validation": 0.65,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 6,
+      "version": "v06",
+      "after": 0.6125,
+      "validation": 0.45,
+      "champion_validation": 0.65,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 7,
+      "version": "v07",
+      "after": 0.675,
+      "validation": 0.55,
+      "champion_validation": 0.65,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 8,
+      "version": "v08",
+      "after": 0.6875,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": true,
+      "test": 0.3819444444444444,
+      "strict_test": null,
+      "independent_test": {
+        "test": 0.3819444444444444,
+        "strict_test": null,
+        "source": "高分晋升检查点回溯补测"
+      }
+    },
+    {
+      "round": 9,
+      "version": "v09",
+      "after": 0.6375,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 10,
+      "version": "v10",
+      "after": 0.7,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 11,
+      "version": "v11",
+      "after": 0.675,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 12,
+      "version": "v12",
+      "after": 0.675,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 13,
+      "version": "v13",
+      "after": 0.675,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 14,
+      "version": "v14",
+      "after": 0.6875,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 15,
+      "version": "v15",
+      "after": 0.65,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 16,
+      "version": "v16",
+      "after": 0.525,
+      "validation": 0.4,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 17,
+      "version": "v17",
+      "after": 0.725,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": true,
+      "test": 0.3888888888888889,
+      "strict_test": null
+    },
+    {
+      "round": 18,
+      "version": "v18",
+      "after": 0.675,
+      "validation": 0.55,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 19,
+      "version": "v19",
+      "after": 0.6625,
+      "validation": 0.75,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 20,
+      "version": "v20",
+      "after": 0.5875,
+      "validation": 0.55,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 21,
+      "version": "v21",
+      "after": 0.6375,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 22,
+      "version": "v22",
+      "after": 0.6875,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 23,
+      "version": "v23",
+      "after": 0.6875,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 24,
+      "version": "v24",
+      "after": 0.625,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 25,
+      "version": "v25",
+      "after": 0.675,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 26,
+      "version": "v26",
+      "after": 0.5875,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 27,
+      "version": "v27",
+      "after": 0.6625,
+      "validation": 0.5,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 28,
+      "version": "v28",
+      "after": 0.65,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 29,
+      "version": "v29",
+      "after": 0.6875,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 30,
+      "version": "v30",
+      "after": 0.6875,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 31,
+      "version": "v31",
+      "after": 0.6625,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 32,
+      "version": "v32",
+      "after": 0.6375,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 33,
+      "version": "v33",
+      "after": 0.675,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 34,
+      "version": "v34",
+      "after": 0.6875,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 35,
+      "version": "v35",
+      "after": 0.6875,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 36,
+      "version": "v36",
+      "after": 0.6125,
+      "validation": 0.5,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 37,
+      "version": "v37",
+      "after": 0.65,
+      "validation": 0.65,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 38,
+      "version": "v38",
+      "after": 0.675,
+      "validation": 0.7,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 39,
+      "version": "v39",
+      "after": 0.6,
+      "validation": 0.5,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    },
+    {
+      "round": 40,
+      "version": "v40",
+      "after": 0.675,
+      "validation": 0.6,
+      "champion_validation": 0.7,
+      "adopted": false,
+      "test": null
+    }
+  ]
+}

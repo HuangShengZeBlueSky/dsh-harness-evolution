@@ -1,0 +1,92 @@
+{
+  "frozen_before_semantic_analysis": true,
+  "unit": "task × frozen candidate version × native repeat",
+  "checkpoints": [
+    0,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    40
+  ],
+  "semantic_sampling": {
+    "seed": 20261029,
+    "strata": [
+      "benchmark",
+      "method",
+      "version",
+      "native_success"
+    ],
+    "failure_per_stratum": 8,
+    "success_per_stratum": 4,
+    "selection": "uniform without replacement; retain inclusion probability; diagnostic cases excluded from weighted prevalence"
+  },
+  "labels": [
+    "unknown",
+    "task_interpretation",
+    "missing_information",
+    "state_tracking",
+    "planning_or_order",
+    "tool_arguments",
+    "tool_result_interpretation",
+    "recovery_or_loop",
+    "termination_or_submission",
+    "implementation_fault"
+  ],
+  "Q_fields": [
+    "label",
+    "component",
+    "trigger",
+    "symptom",
+    "evidence",
+    "root_cause_hypothesis",
+    "alternative_explanation",
+    "testable_repair",
+    "confidence"
+  ],
+  "confidence_interpretation": "Analyst judgment, not a causal probability",
+  "phase_interpretation": "Only actual runner executions or visible tool requests; absence of observation is unknown, not success or zero conditional failure. A phase may occur repeatedly or out of order.",
+  "domains": {
+    "ALFWorld": {
+      "navigation": "\\b(go to|look|open|close)\\b",
+      "acquisition": "\\b(take|pick up)\\b",
+      "transformation": "\\b(heat|cool|clean|use)\\b",
+      "placement": "\\b(put|move|place)\\b"
+    },
+    "DBBench": {
+      "schema_inspection": "\\b(show|describe|information_schema)\\b",
+      "query": "\\bselect\\b",
+      "mutation": "\\b(insert|update|delete|alter|create|drop)\\b",
+      "submission": "commit_final_answer"
+    },
+    "OSBench": {
+      "inspection": "\\b(ls|cat|head|tail|find|file|stat)\\b",
+      "transformation": "\\b(grep|awk|sed|sort|uniq|wc|cut|python|jq|xargs)\\b",
+      "submission": "commit_final_answer|submit|finish"
+    },
+    "WebShop": {
+      "search": "search\\[",
+      "item_view": "click\\[[A-Za-z0-9]{10}\\]",
+      "option_selection": "click\\[(?!Buy Now|Back to Search|Next|Prev|[A-Za-z0-9]{10}\\])",
+      "purchase": "click\\[Buy Now\\]"
+    },
+    "Telecom": {
+      "diagnostic_tool": "check_|get_|diagnos|status|lookup",
+      "customer_action": "toggle|enable|disable|reset|restart|reboot|set_|update_|pay_|remove_|insert_",
+      "verification": "speed_test|test_connection|verify|test_service",
+      "termination": "transfer|end_call|finish|terminate"
+    }
+  },
+  "prospective_rule": "Analyst gets only current parent TRAIN traces and proposal/patch available before candidate execution. Freeze predictions before candidate evaluation. Independent test never enters optimizer or prospective packets.",
+  "comparisons": "Astra/Luna/original DSH are read-only historical descriptions, with missing or incomparable records explicitly skipped. Only five benchmarks x dsh-summary/dsh-mechanism are active40-round arms. Both conditions share native start/model/task schedule/scorer/adoption, but later parent versions and trajectories can differ.",
+  "interventions": "Existing intervention results retained as prior-scope background only. Current scope does not schedule new rollback, extra optimization arms or seeds.",
+  "scope": "historical_plus_two_feedback_loops",
+  "feedback_output_budget": {
+    "max_total_characters": 16000,
+    "both_conditions_same_cap": true,
+    "usage": "Real CLI tokens and elapsed time recorded separately; completed earlier outputs retained with their original declared budgets."
+  },
+  "checkpoint_policy": "New ten feedback arms only may receive independent fixed-task observation replay; history never supplemented. Probes are training observations, never candidate selection or final independent tests."
+}

@@ -28,13 +28,13 @@ The primary figure shows the highest **success score among released, promoted ch
 
 The numerical gap to the paper is descriptive. Different trial counts, starting points, development budgets, simulator models, runtime access, and auxiliary-call budgets prevent treating every gap as a controlled method comparison. In particular, Telecom is a separate protocol lane, even where task names match.
 
-Local bare and Life-Harness-full columns preserve our measured reference waterlines. ALFWorld's standardized comparison is paired to the published implementation; DBBench/OSBench values are local reference runs, not universal author scores. WebShop and Telecom have no aligned local-full entry in this release. Their missing value is intentional.
+Local bare and Life-Harness-full columns preserve our measured reference waterlines. ALFWorld's standardized comparison is paired to the published implementation; DBBench/OSBench values are local reference runs, not universal author scores. WebShop has no aligned local-full entry. The newer Telecom built-in Life-Harness reproduction uses a GLM user: baseline 37/120 and full 69/120. The earlier DSH H0 value 52/120 belongs to another runtime and remains separate. This reproduction is not a certified evaluation of the paper-final evolved bundle.
 
 ## Reading evolution curves
 
 The development panel shows actual candidate training and selected validation values. Rotating training batches are not a single fixed evaluation set. WebShop's development panel displays the strict-success training and validation values used by L5 adoption; mean rewards remain available in curve.json. The test panel displays only actually measured checkpoints; it never fills unmeasured intermediate checkpoints with synthetic scores. Earlier Telecom/ALFWorld histories include historical checkpoint tests; newer L4/L5 runs test only the final selected checkpoint.
 
-The first publication packages completed evaluation artifacts. Portable import paths and local runtime paths were adjusted for release; the published package has been checked for loading, but these scores are not claimed to come from a fresh public-package rerun.
+The publication packages completed evaluation artifacts. Portable import paths and local runtime paths were adjusted for release; the published package has been checked for loading, but these scores are not claimed to come from a fresh public-package rerun.
 
 ## Other paper-evaluated approaches
 
@@ -43,3 +43,17 @@ The bilingual leaderboard also includes Meta-Harness and AHE from Table 1, and A
 ## Primary comparison groups
 
 Primary champions are selected within the registered groups in `results/leaderboard-policy.json`. Actor, task counts, repeats, budgets, environment, sampling and simulator/runtime interfaces must match the declared group. Different groups remain in the release table and do not silently replace the current primary champion. This grouping aligns recorded evaluation settings; it is not proof that different evolution methods have equal development budgets.
+
+## Detailed campaign records (2026-10-30)
+
+[Research records](../results/research/README.md) link each method to its configuration, task IDs/seeds, parent/candidate decisions and selected final test. They include observed trial scores, population standard deviations, any-of-three/all-of-three task outcomes, valid coverage, native invalid attempts, paired repairs/regressions and available runtime event counts. There is one independent search per named group: evaluation repeats do not provide independent search repetitions.
+
+WebShop L5 strict training/validation fields are explicit; its native reward means may decrease when strict success rises. L3 archive retention and champion changes are separate. Intended-target repairs do not necessarily explain all observed global improvement.
+
+OS feedback illustrates why reliability matters: mechanism feedback has higher mean success (32.87% vs summary 29.40%) but lower all-three success (25.00% vs 26.39%); any-of-three is 40.28% vs 32.64%. This is one search per condition, not a general superiority claim.
+
+Runtime request/action/event counts and episode elapsed times are observations, not causal gains. Summed episode time is aggregate concurrent work, not wall-clock time; first-to-last decision span excludes startup and final test. Unconsolidated optimizer/learning tokens and currency costs remain null. Imported experience/components have prior costs.
+
+Protocol differences are visible in [profile-index.json](../evolution/profile-index.json): DB/Web L4 use 300 training tasks without validation, L5 uses 240+60; OS L4 uses 80+20 and L5 83+17. L6 lacks independent validation; L7–L9 use 300+60. These are not a clean one-variable ladder. Historical configuration gaps are marked curve_only instead of being backfilled with a newer profile.
+
+The collector exports numerical per-task outcomes without conversation content and does not run experiments. [Reproduction](REPRODUCING.md) distinguishes loading a harness, executing a loop, and reproducing an original complete benchmark protocol. The public package's scripted integration check is not a rerun of historical benchmark scores.

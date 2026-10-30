@@ -1,0 +1,11 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["variant-ledger"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P1["action-grounding"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P2["feature-inspection"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["pack-count"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["product-kind"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["named-drink"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P6["bedding-size"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

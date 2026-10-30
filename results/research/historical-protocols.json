@@ -1,0 +1,844 @@
+{
+  "groups": [
+    {
+      "id": "alfworld-official50-20r-20261022/method1-astra",
+      "method_id": "M2_free",
+      "config_file": "protocols/alfworld-official50-20r-20261022--method1-astra.json",
+      "task_manifest_file": "tasks/alfworld-official50-20r-20261022--method1-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "alfworld-official50-20r-20261022/method1-luna",
+      "method_id": "M2_free",
+      "config_file": "protocols/alfworld-official50-20r-20261022--method1-luna.json",
+      "task_manifest_file": "tasks/alfworld-official50-20r-20261022--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "alfworld-official50-20r-20261022/method1-sol61",
+      "method_id": "M2_free",
+      "config_file": "protocols/alfworld-official50-20r-20261022--method1-sol61.json",
+      "task_manifest_file": "tasks/alfworld-official50-20r-20261022--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "alfworld-official50-20r-20261022/method2-astra",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/alfworld-official50-20r-20261022--method2-astra.json",
+      "task_manifest_file": "tasks/alfworld-official50-20r-20261022--method2-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "alfworld-official50-20r-20261022/method2-luna",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/alfworld-official50-20r-20261022--method2-luna.json",
+      "task_manifest_file": "tasks/alfworld-official50-20r-20261022--method2-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "alfworld-official50-20r-20261022/method2-sol61",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/alfworld-official50-20r-20261022--method2-sol61.json",
+      "task_manifest_file": "tasks/alfworld-official50-20r-20261022--method2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "dbbench-methods-20r-20261023/method1-astra",
+      "method_id": "M2_free",
+      "config_file": "protocols/dbbench-methods-20r-20261023--method1-astra.json",
+      "task_manifest_file": "tasks/dbbench-methods-20r-20261023--method1-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "dbbench-methods-20r-20261023/method1-luna",
+      "method_id": "M2_free",
+      "config_file": "protocols/dbbench-methods-20r-20261023--method1-luna.json",
+      "task_manifest_file": "tasks/dbbench-methods-20r-20261023--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "dbbench-methods-20r-20261023/method1-sol61",
+      "method_id": "M2_free",
+      "config_file": "protocols/dbbench-methods-20r-20261023--method1-sol61.json",
+      "task_manifest_file": "tasks/dbbench-methods-20r-20261023--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "dbbench-methods-20r-20261023/method2-astra",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/dbbench-methods-20r-20261023--method2-astra.json",
+      "task_manifest_file": "tasks/dbbench-methods-20r-20261023--method2-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "dbbench-methods-20r-20261023/method2-sol61",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/dbbench-methods-20r-20261023--method2-sol61.json",
+      "task_manifest_file": "tasks/dbbench-methods-20r-20261023--method2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/dbbench/method1-luna",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--dbbench--method1-luna.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--dbbench--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/dbbench/method1-sol61",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--dbbench--method1-sol61.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--dbbench--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l1-sol61",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--dbbench--l1-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--dbbench--l1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l1-sol61#stage20",
+      "method_id": "L1",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l1-luna",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--dbbench--l1-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--dbbench--l1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l2-sol61",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--dbbench--l2-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--dbbench--l2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l2-sol61#stage20",
+      "method_id": "L2",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l2-luna",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--dbbench--l2-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--dbbench--l2-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l3-sol61",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--dbbench--l3-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--dbbench--l3-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l3-sol61#stage20",
+      "method_id": "L3",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/dbbench/l3-luna",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--dbbench--l3-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--dbbench--l3-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+      "method_id": "L4",
+      "config_file": "protocols/loop-expansion-sol40-20261026--dbbench--l4-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--dbbench--l4-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61",
+      "method_id": "L4_seeded",
+      "config_file": "protocols/loop-expansion-sol40-20261026--dbbench--l4-best-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--dbbench--l4-best-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/dbbench/original-best-sol61",
+      "method_id": "resume",
+      "config_file": "protocols/loop-expansion-sol40-20261026--dbbench--original-best-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--dbbench--original-best-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61",
+      "method_id": "L5",
+      "config_file": "protocols/loop-expansion-sol40-20261026--dbbench--l5-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--dbbench--l5-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61",
+      "method_id": "L6",
+      "config_file": "protocols/loop-l6-attribution-40r-20261026--dbbench--l6-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-l6-attribution-40r-20261026--dbbench--l6-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/dbbench/l7-sol61",
+      "method_id": "L7",
+      "config_file": "protocols/loop-l789-sol40-20261026--dbbench--l7-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--dbbench--l7-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61",
+      "method_id": "L8_internal",
+      "config_file": "protocols/loop-l789-sol40-20261026--dbbench--l8-internal-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--dbbench--l8-internal-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/dbbench/l8-external-sol61",
+      "method_id": "L8_external",
+      "config_file": "protocols/loop-l789-sol40-20261026--dbbench--l8-external-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--dbbench--l8-external-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/dbbench/l9-sol61",
+      "method_id": "L9",
+      "config_file": "protocols/loop-l789-sol40-20261026--dbbench--l9-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--dbbench--l9-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "webshop-methods-20r-20261023/method1-astra",
+      "method_id": "M2_free",
+      "config_file": "protocols/webshop-methods-20r-20261023--method1-astra.json",
+      "task_manifest_file": "tasks/webshop-methods-20r-20261023--method1-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "webshop-methods-20r-20261023/method1-luna",
+      "method_id": "M2_free",
+      "config_file": "protocols/webshop-methods-20r-20261023--method1-luna.json",
+      "task_manifest_file": "tasks/webshop-methods-20r-20261023--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "webshop-methods-20r-20261023/method1-sol61",
+      "method_id": "M2_free",
+      "config_file": "protocols/webshop-methods-20r-20261023--method1-sol61.json",
+      "task_manifest_file": "tasks/webshop-methods-20r-20261023--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "webshop-methods-20r-20261023/method2-astra",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/webshop-methods-20r-20261023--method2-astra.json",
+      "task_manifest_file": "tasks/webshop-methods-20r-20261023--method2-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "webshop-methods-20r-20261023/method2-sol61",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/webshop-methods-20r-20261023--method2-sol61.json",
+      "task_manifest_file": "tasks/webshop-methods-20r-20261023--method2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/webshop/method1-luna",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--webshop--method1-luna.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--webshop--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/webshop/method1-sol61",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--webshop--method1-sol61.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--webshop--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l1-sol61",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--webshop--l1-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--webshop--l1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l1-sol61#stage20",
+      "method_id": "L1",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l1-luna",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--webshop--l1-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--webshop--l1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l2-sol61",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--webshop--l2-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--webshop--l2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l2-sol61#stage20",
+      "method_id": "L2",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l2-luna",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--webshop--l2-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--webshop--l2-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l3-sol61",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--webshop--l3-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--webshop--l3-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l3-sol61#stage20",
+      "method_id": "L3",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/webshop/l3-luna",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--webshop--l3-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--webshop--l3-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61",
+      "method_id": "L4",
+      "config_file": "protocols/loop-expansion-sol40-20261026--webshop--l4-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--webshop--l4-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/webshop/l4-best-sol61",
+      "method_id": "L4_seeded",
+      "config_file": "protocols/loop-expansion-sol40-20261026--webshop--l4-best-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--webshop--l4-best-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+      "method_id": "resume",
+      "config_file": "protocols/loop-expansion-sol40-20261026--webshop--original-best-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--webshop--original-best-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
+      "method_id": "L5",
+      "config_file": "protocols/loop-expansion-sol40-20261026--webshop--l5-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--webshop--l5-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61",
+      "method_id": "L6",
+      "config_file": "protocols/loop-l6-attribution-40r-20261026--webshop--l6-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-l6-attribution-40r-20261026--webshop--l6-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/webshop/l7-sol61",
+      "method_id": "L7",
+      "config_file": "protocols/loop-l789-sol40-20261026--webshop--l7-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--webshop--l7-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/webshop/l8-internal-sol61",
+      "method_id": "L8_internal",
+      "config_file": "protocols/loop-l789-sol40-20261026--webshop--l8-internal-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--webshop--l8-internal-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/webshop/l8-external-sol61",
+      "method_id": "L8_external",
+      "config_file": "protocols/loop-l789-sol40-20261026--webshop--l8-external-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--webshop--l8-external-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/webshop/l9-sol61",
+      "method_id": "L9",
+      "config_file": "protocols/loop-l789-sol40-20261026--webshop--l9-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--webshop--l9-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "os-life-aligned-20r-20261023/method1-astra",
+      "method_id": "M2_free",
+      "config_file": "protocols/os-life-aligned-20r-20261023--method1-astra.json",
+      "task_manifest_file": "tasks/os-life-aligned-20r-20261023--method1-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "os-life-aligned-20r-20261023/method1-luna",
+      "method_id": "M2_free",
+      "config_file": "protocols/os-life-aligned-20r-20261023--method1-luna.json",
+      "task_manifest_file": "tasks/os-life-aligned-20r-20261023--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "os-life-aligned-20r-20261023/method1-sol61",
+      "method_id": "M2_free",
+      "config_file": "protocols/os-life-aligned-20r-20261023--method1-sol61.json",
+      "task_manifest_file": "tasks/os-life-aligned-20r-20261023--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "os-life-aligned-20r-20261023/method2-astra",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/os-life-aligned-20r-20261023--method2-astra.json",
+      "task_manifest_file": "tasks/os-life-aligned-20r-20261023--method2-astra.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "os-life-aligned-20r-20261023/method2-luna",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/os-life-aligned-20r-20261023--method2-luna.json",
+      "task_manifest_file": "tasks/os-life-aligned-20r-20261023--method2-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "os-life-aligned-20r-20261023/method2-sol61",
+      "method_id": "M1_cooperative",
+      "config_file": "protocols/os-life-aligned-20r-20261023--method2-sol61.json",
+      "task_manifest_file": "tasks/os-life-aligned-20r-20261023--method2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/osbench/method1-luna",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--osbench--method1-luna.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--osbench--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/osbench/method1-sol61",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--osbench--method1-sol61.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--osbench--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l1-sol61",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--osbench--l1-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--osbench--l1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l1-sol61#stage20",
+      "method_id": "L1",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l1-luna",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--osbench--l1-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--osbench--l1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l2-sol61",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--osbench--l2-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--osbench--l2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l2-sol61#stage20",
+      "method_id": "L2",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l2-luna",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--osbench--l2-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--osbench--l2-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l3-sol61",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--osbench--l3-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--osbench--l3-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l3-sol61#stage20",
+      "method_id": "L3",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/osbench/l3-luna",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--osbench--l3-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--osbench--l3-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
+      "method_id": "L4",
+      "config_file": "protocols/loop-expansion-sol40-20261026--osbench--l4-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--osbench--l4-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/osbench/l4-best-sol61",
+      "method_id": "L4_seeded",
+      "config_file": "protocols/loop-expansion-sol40-20261026--osbench--l4-best-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--osbench--l4-best-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/osbench/original-best-sol61",
+      "method_id": "resume",
+      "config_file": "protocols/loop-expansion-sol40-20261026--osbench--original-best-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--osbench--original-best-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61",
+      "method_id": "L5",
+      "config_file": "protocols/loop-expansion-sol40-20261026--osbench--l5-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-expansion-sol40-20261026--osbench--l5-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61",
+      "method_id": "L6",
+      "config_file": "protocols/loop-l6-attribution-40r-20261026--osbench--l6-h0-sol61.json",
+      "task_manifest_file": "tasks/loop-l6-attribution-40r-20261026--osbench--l6-h0-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/osbench/l7-sol61",
+      "method_id": "L7",
+      "config_file": "protocols/loop-l789-sol40-20261026--osbench--l7-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--osbench--l7-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/osbench/l8-internal-sol61",
+      "method_id": "L8_internal",
+      "config_file": "protocols/loop-l789-sol40-20261026--osbench--l8-internal-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--osbench--l8-internal-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/osbench/l8-external-sol61",
+      "method_id": "L8_external",
+      "config_file": "protocols/loop-l789-sol40-20261026--osbench--l8-external-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--osbench--l8-external-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-l789-sol40-20261026/osbench/l9-sol61",
+      "method_id": "L9",
+      "config_file": "protocols/loop-l789-sol40-20261026--osbench--l9-sol61.json",
+      "task_manifest_file": "tasks/loop-l789-sol40-20261026--osbench--l9-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "tau-luna",
+      "method_id": "luna20",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-astra",
+      "method_id": "astra_original",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-start-luna",
+      "method_id": "M2_free",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-start-sol",
+      "method_id": "M2_free",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-old-luna-persistent",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-old-luna-fresh",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-old-sol-persistent",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-old-sol-fresh",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-h0-luna-persistent",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-h0-luna-fresh",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-h0-sol-persistent",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-h0-sol-fresh",
+      "method_id": "startpoint_ablation",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "tau-fusion",
+      "method_id": "fusion",
+      "config_file": null,
+      "task_manifest_file": null,
+      "availability": "curve_only",
+      "note": "Archived stage or legacy controller: exact configuration is not inferred from a different live configuration."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/telecom-h0/method1-luna",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--telecom-h0--method1-luna.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--telecom-h0--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/telecom-h0/method1-sol61",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--telecom-h0--method1-sol61.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--telecom-h0--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/telecom-v1/method1-luna",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--telecom-v1--method1-luna.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--telecom-v1--method1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "method2-playbook-30r-20261024/telecom-v1/method1-sol61",
+      "method_id": "playbook",
+      "config_file": "protocols/method2-playbook-30r-20261024--telecom-v1--method1-sol61.json",
+      "task_manifest_file": "tasks/method2-playbook-30r-20261024--telecom-v1--method1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/telecom/l1-sol61",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--telecom--l1-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--telecom--l1-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/telecom/l1-luna",
+      "method_id": "L1",
+      "config_file": "protocols/loop-comparison-20r-20261025--telecom--l1-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--telecom--l1-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/telecom/l2-sol61",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--telecom--l2-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--telecom--l2-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/telecom/l2-luna",
+      "method_id": "L2",
+      "config_file": "protocols/loop-comparison-20r-20261025--telecom--l2-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--telecom--l2-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/telecom/l3-sol61",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--telecom--l3-sol61.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--telecom--l3-sol61.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    },
+    {
+      "id": "loop-comparison-20r-20261025/telecom/l3-luna",
+      "method_id": "L3",
+      "config_file": "protocols/loop-comparison-20r-20261025--telecom--l3-luna.json",
+      "task_manifest_file": "tasks/loop-comparison-20r-20261025--telecom--l3-luna.json",
+      "availability": "recorded_yaml",
+      "note": "Frozen settings may reference external environment assets; this is not a complete runnable bundle."
+    }
+  ]
+}

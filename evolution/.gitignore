@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+*.log
+.env
+workspaces/
+.smoke/
+*.egg-info/
+.runtime/
+.DS_Store

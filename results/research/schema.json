@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "join_key": "id",
+  "rates": "fractions in [0, 1], not percentages",
+  "run_fields": {
+    "candidate_budget": "configured candidate rounds",
+    "decisions_completed": "recorded adopt/reject decisions",
+    "adopted_candidates": "adopted=True decisions; branch retention need not change champion",
+    "final_selection": "original training/development-selected checkpoint record",
+    "final_test": "aggregates from that exact checkpoint only",
+    "independent_search_repetitions": "one adaptive campaign per group",
+    "curve": "native recorded development decisions"
+  },
+  "curve_fields": {
+    "training.mean": "native average reward; success rate for binary environments",
+    "training_strict": "fraction with score >= 1 where reported",
+    "validation": "original decision field; may be mean or strict depending on variant",
+    "validation_strict": "explicit strict-success fraction only",
+    "validation_mean_reward": "explicit average validation reward",
+    "paired": "success repairs/regressions from mechanism records",
+    "paired_reward": "reward increases/decreases from parent comparison",
+    "planned_target_repairs": "repairs in diagnosed clusters assigned to an edited plugin; null without a target record",
+    "batch": "rotating training batch index or null",
+    "runtime_evidence": "reported per-plugin loads, hook events, input matches and runner controls, not causal attribution"
+  },
+  "final_test_fields": {
+    "strict_repeat_population_std": "population standard deviation of observed repeat strict-success rates",
+    "observed_any_success_3": "per-task success in at least one of three observed trials",
+    "observed_all_success_3": "per-task success in all three observed trials",
+    "runtime.elapsed_seconds.sum": "sum of valid episode elapsed seconds; not experiment wall time"
+  },
+  "null_policy": "Unmeasured/unavailable/inapplicable remains null; not zero.",
+  "scope": "Historical and new feedback data use heterogeneous protocols; joining rows does not make a controlled comparison."
+}

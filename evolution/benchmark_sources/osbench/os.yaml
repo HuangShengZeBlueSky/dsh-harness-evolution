@@ -1,0 +1,132 @@
+default:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    concurrency: 32
+    round_limit: 16
+    # ─── Harness config (OS) ────────────────────────────────────────────────
+    # Disabled by default; enable per-profile (see os-env_train below).
+    enabled: false
+    h2: true   # rescue text-embedded tool calls (JSON/kwarg/positional/bare/XML) + safety + duplicate-bash gate
+    h3: true   # static shell-strategy / tool-format hints
+    h4: true   # post-step monitor: truncation / errors / empty / loop + budget warn/force
+    h5: true   # BM25 skill library (27 skills) + per-step guidance
+    # Only h2/h3/h4/h5 are exposed — budget lives in h4, answer normalisation in h2.
+    h5_top_k: 1
+    # Minimum BM25 score for a skill to be injected (v6: guards low-relevance injections).
+    h5_score_threshold: 7.5
+    tools:
+      - type: "function"
+        function:
+          name: "bash_action"
+          description: "Execute bash code to perform an operation in the Linux environment."
+          parameters:
+            type: "object"
+            properties:
+              script:
+                type: "string"
+                description: "The bash script to be executed."
+            required:
+              - "script"
+            additionalProperties: False
+
+      - type: "function"
+        function:
+          name: "finish_action"
+          description: "Indicate that the task has been finished or need some additional information to be finished."
+          parameters:
+            type: "object"
+            properties:
+              thought:
+                type: "string"
+                description: "The thought or reason indicating the task is finished."
+            required:
+              - "thought"
+            additionalProperties: False
+
+      - type: "function"
+        function:
+          name: "answer_action"
+          description: "Provide the answer to the question."
+          parameters:
+            type: "object"
+            properties:
+              answer:
+                type: "string"
+                description: "The answer to the question."
+            required:
+              - "answer"
+            additionalProperties: False
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    env_driver: docker
+    env_options:
+      network_name: os_interaction_default
+      state_driver: redis
+      state_options:
+        connection:
+          host: redis
+
+os-std:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-std"
+    enabled: false
+    h2: false
+    h3: true
+    h4: false
+    h5: true
+    h5_top_k: 1
+    h5_score_threshold: 7.5
+    data_config:
+      files:
+        - problem_file: data/os_interaction/data/1/*.json
+          script_dir: data/os_interaction/scripts/1/
+          index_prefix: "std-001-"
+        - problem_file: data/os_interaction/data/2/*.json
+          script_dir: data/os_interaction/scripts/2/
+          index_prefix: "std-002-"
+        - problem_file: data/os_interaction/data/3/*.json
+          script_dir: data/os_interaction/scripts/3/
+          index_prefix: "std-003-"
+        - problem_file: data/os_interaction/data/4/*.json
+          script_dir: data/os_interaction/scripts/4/
+          index_prefix: "std-004-"
+        - problem_file: data/os_interaction/data/5/*.json
+          script_dir: data/os_interaction/scripts/5/
+          index_prefix: "std-005-"
+        - problem_file: data/os_interaction/data/6/*.json
+          script_dir: data/os_interaction/scripts/6/
+          index_prefix: "std-006-"
+        - problem_file: data/os_interaction/data/7/*.json
+          script_dir: data/os_interaction/scripts/7/
+          index_prefix: "std-007-"
+
+      bk: [ ]
+      ignore: [ ]
+
+os-env_train:
+  parameters:
+    name: "os-env_train"
+    shuffle_seed: 4444
+    sample_size: 100
+    # Enable harness for training-split iteration (test split stays untouched)
+    enabled: true
+    h2: true
+    h3: true
+    h4: true
+    h5: true
+    h5_top_k: 1
+    h5_score_threshold: 7.5
+    data_config:
+      files:
+        - problem_file: data/os_interaction/train_0317/training.json
+          script_dir: data/os_interaction/scripts/7/
+          index_prefix: "train-0223-"
+      bk: [ ]
+      ignore: [ ]

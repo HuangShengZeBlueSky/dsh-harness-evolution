@@ -1,0 +1,36 @@
+{
+  "methods": [
+    {
+      "id": "option-state",
+      "module": "plugins/option-state.mjs",
+      "config": {}
+    },
+    {
+      "id": "click-grounding",
+      "module": "plugins/click-grounding.mjs",
+      "config": {}
+    },
+    {
+      "id": "required-options",
+      "module": "plugins/required-options.mjs",
+      "config": {}
+    },
+    {
+      "id": "product-type",
+      "module": "plugins/product-type.mjs",
+      "config": {}
+    },
+    {
+      "id": "feature-evidence",
+      "module": "plugins/feature-evidence.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "option-state",
+    "click-grounding",
+    "required-options",
+    "product-type",
+    "feature-evidence"
+  ]
+}

@@ -9,7 +9,7 @@
 | ALFWorld | 16.51% | 28.36% | 29.36% | 35.80% | 89.00% | 88.07% | **95.41%** |
 | DBBench | 44.00% | — | — | 50.30% | 57.30% | 65.00% | **70.56%** |
 | WebShop | 29.50% | 18.00% | 18.50% | 42.50% | 39.00% | 45.50% | **47.00%** |
-| OSBench | 21.50% | — | — | 25.70% | 37.50% | 39.60% | **38.89%** |
+| OSBench | 21.50% | — | — | 25.70% | 37.50% | 39.60% | **39.35%** |
 | τ²-Telecom | 25.83% | — | — | 50.80% | 95.00% | 90.00% | **84.17%** |
 
 主表“我们”展示已发布、已晋升检查点的完整测试最高值，可能来自回溯补测。训练最终选定版单独保留如下；回溯高分不是新的独立盲测。
@@ -21,7 +21,7 @@
 | ALFWorld | [v18 · 95.41%](harnesses/alfworld/20261026-method1-sol61-v18) | [v18 · 95.41%](harnesses/alfworld/20261026-method1-sol61-v18) | 训练最终版 |
 | DBBench | [v35 · 70.56%](harnesses/dbbench/20261026-l4-h0-sol61-v35) | [v35 · 70.56%](harnesses/dbbench/20261026-l4-h0-sol61-v35) | 训练最终版 |
 | WebShop | [v28 · 44.50%](harnesses/webshop/20261026-l5-h0-sol61-v28) | [v12 · 47.00%](harnesses/webshop/20261027-original-best-sol61-v12) | 回溯补测 |
-| OSBench | [v17 · 38.89%](harnesses/osbench/20261026-l4-h0-sol61-v17) | [v17 · 38.89%](harnesses/osbench/20261026-l4-h0-sol61-v17) | 训练最终版 |
+| OSBench | [v17 · 38.89%](harnesses/osbench/20261026-l4-h0-sol61-v17) | [v03 · 39.35%](harnesses/osbench/20261030-l4-h0-sol61-v03) | 回溯补测 |
 | τ²-Telecom | [v06 · 84.17%](harnesses/telecom/20261026-start-luna-repaired-v06) | [v06 · 84.17%](harnesses/telecom/20261026-start-luna-repaired-v06) | 训练最终版 |
 
 **来源与口径：**其他方法数值由 Life-Harness 作者在论文中报告，并非我们的复测。Meta-Harness、AHE 来自表 1；裸模型、Life-Harness 使用表 10；ALIGN、AgentSquare 来自表 11。保留原文精度；缺失值不是零。
@@ -87,8 +87,8 @@ WebShop 当前产物平均奖励为 **71.21/100**；主榜使用严格成功率�
 | ALFWorld | 13.46% | 87.77% | 95.41% |
 | DBBench | 43.56% | 64.11% | 70.56% |
 | WebShop | 28.00% | — | 47.00% |
-| OSBench | 33.33% | 36.81% | 38.89% |
-| τ²-Telecom | 43.33% | — | 84.17% |
+| OSBench | 33.33% | 36.81% | 39.35% |
+| τ²-Telecom | 30.83% | 57.50% | 84.17% |
 
 ## 全部已发布产物
 
@@ -97,6 +97,7 @@ WebShop 当前产物平均奖励为 **71.21/100**；主榜使用严格成功率�
 | ALFWorld | [20261026-method1-sol61-v18](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | 95.41% | 主榜组 · 训练最终版 | 2026-10-26 |
 | DBBench | [20261026-l4-h0-sol61-v35](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | 70.56% | 主榜组 · 训练最终版 | 2026-10-26 |
 | DBBench | [20261027-l4-h0-sol61-v32](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md) | 70.33% | 主榜组 · 回溯补测 | 2026-10-27 |
+| OSBench | [20261030-l4-h0-sol61-v03](harnesses/osbench/20261030-l4-h0-sol61-v03/README.zh-CN.md) | 39.35% | 主榜组 · 回溯补测 | 2026-10-30 |
 | OSBench | [20261026-l4-h0-sol61-v17](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | 38.89% | 主榜组 · 训练最终版 | 2026-10-26 |
 | OSBench | [20261027-l5-h0-sol61-v08](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md) | 38.66% | 主榜组 · 回溯补测 | 2026-10-27 |
 | τ²-Telecom | [20261026-start-luna-repaired-v06](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | 84.17% | 主榜组 · 训练最终版 | 2026-10-26 |

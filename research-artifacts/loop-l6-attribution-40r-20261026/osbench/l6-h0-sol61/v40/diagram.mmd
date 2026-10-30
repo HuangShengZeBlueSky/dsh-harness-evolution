@@ -1,0 +1,18 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["line-count"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P1["home-path"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P2["prefix-free"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P3["disk-total"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P4["time-filter"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P5["count-receipt"] -. "benchmark/setup / tools/post-execute" .-> H
+    P6["file-discovery"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P7["filename-identity"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P8["regex-dialect"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P9["temporal-extrema"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P10["calendar-weekday"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P11["repeat-result"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P12["date-filter"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P13["date-prefix"] -. "benchmark/setup / tools/pre-execute" .-> H

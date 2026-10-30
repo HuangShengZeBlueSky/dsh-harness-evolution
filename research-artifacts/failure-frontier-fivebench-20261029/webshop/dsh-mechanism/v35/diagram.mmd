@@ -1,0 +1,10 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["result-coverage"] -. "benchmark/setup / tools/post-execute" .-> H
+    P1["detail-navigation"] -. "benchmark/setup / tools/post-execute" .-> H
+    P2["option-focus"] -. "benchmark/setup / tools/post-execute" .-> H
+    P3["budget-guard"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["action-availability"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["blue-variant"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

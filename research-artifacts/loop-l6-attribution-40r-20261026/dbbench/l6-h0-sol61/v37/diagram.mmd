@@ -1,0 +1,13 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["literal-fidelity"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P1["write-receipts"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P2["schema-identity"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P3["entity-coverage"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["mutation-contract"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["answer-arguments"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P6["date-order"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P7["formatted-assignment"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P8["max-result"] -. "benchmark/setup / tools/post-execute" .-> H

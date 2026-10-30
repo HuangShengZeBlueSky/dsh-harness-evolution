@@ -1,0 +1,18 @@
+{
+  "methods": [
+    {
+      "id": "statistic-guard",
+      "module": "plugins/statistic-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "scope-inputs",
+      "module": "plugins/scope-inputs.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "statistic-guard",
+    "scope-inputs"
+  ]
+}

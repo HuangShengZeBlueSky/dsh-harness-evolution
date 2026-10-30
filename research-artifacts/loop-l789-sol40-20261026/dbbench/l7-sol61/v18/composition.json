@@ -1,0 +1,30 @@
+{
+  "methods": [
+    {
+      "id": "write-receipt",
+      "module": "plugins/write-receipt.mjs",
+      "config": {}
+    },
+    {
+      "id": "sql-recovery",
+      "module": "plugins/sql-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-id-max",
+      "module": "plugins/numeric-id-max.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-value-extrema",
+      "module": "plugins/numeric-value-extrema.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "write-receipt",
+    "sql-recovery",
+    "numeric-id-max",
+    "numeric-value-extrema"
+  ]
+}

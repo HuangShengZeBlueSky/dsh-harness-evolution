@@ -1,0 +1,114 @@
+{
+  "methods": [
+    {
+      "id": "canonical-word-values",
+      "module": "plugins/canonical-word-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "repair-text-submit",
+      "module": "repair-text-submit.mjs",
+      "config": {}
+    },
+    {
+      "id": "grep-prefix-guard",
+      "module": "plugins/grep-prefix-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "matching-line-guard",
+      "module": "plugins/matching-line-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "shell-path-recovery",
+      "module": "plugins/shell-path-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "grep-regex-guard",
+      "module": "plugins/grep-regex-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "temporal-comparison-guard",
+      "module": "plugins/temporal-comparison-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "schema-field-contract",
+      "module": "plugins/schema-field-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-field-filter",
+      "module": "plugins/numeric-field-filter.mjs",
+      "config": {}
+    },
+    {
+      "id": "size-total-contract",
+      "module": "plugins/size-total-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "literal-case-contract",
+      "module": "plugins/literal-case-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "nul-file-total",
+      "module": "plugins/nul-file-total.mjs",
+      "config": {}
+    },
+    {
+      "id": "date-component-projection",
+      "module": "plugins/date-component-projection.mjs",
+      "config": {}
+    },
+    {
+      "id": "date-value-contract",
+      "module": "plugins/date-value-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "ranked-distinct-contract",
+      "module": "plugins/ranked-distinct-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "explicit-tool-transport",
+      "module": "plugins/explicit-tool-transport.mjs",
+      "config": {}
+    },
+    {
+      "id": "semantic-command-transport",
+      "module": "plugins/semantic-command-transport.mjs",
+      "config": {}
+    },
+    {
+      "id": "execution-receipt-gate",
+      "module": "plugins/execution-receipt-gate.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "canonical-word-values",
+    "repair-text-submit",
+    "grep-prefix-guard",
+    "matching-line-guard",
+    "shell-path-recovery",
+    "grep-regex-guard",
+    "temporal-comparison-guard",
+    "schema-field-contract",
+    "numeric-field-filter",
+    "size-total-contract",
+    "literal-case-contract",
+    "nul-file-total",
+    "date-component-projection",
+    "date-value-contract",
+    "ranked-distinct-contract",
+    "explicit-tool-transport",
+    "semantic-command-transport",
+    "execution-receipt-gate"
+  ]
+}

@@ -1,0 +1,7 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["answer-call-repair"] -. "benchmark/setup / llm/stream / session/disposed / …" .-> H
+    P1["zero-result-review"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P2["sample-schema"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H

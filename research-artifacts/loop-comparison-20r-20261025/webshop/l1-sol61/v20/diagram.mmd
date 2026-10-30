@@ -1,0 +1,9 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["options"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P1["variant-gate"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P2["budget"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["title-compare"] -. "benchmark/setup / tools/post-execute" .-> H
+    P4["action-check"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

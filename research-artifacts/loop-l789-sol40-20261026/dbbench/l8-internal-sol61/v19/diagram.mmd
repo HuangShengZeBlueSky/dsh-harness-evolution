@@ -1,0 +1,6 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["literal-fidelity"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P1["next-id-max"] -. "benchmark/setup / tools/pre-execute" .-> H

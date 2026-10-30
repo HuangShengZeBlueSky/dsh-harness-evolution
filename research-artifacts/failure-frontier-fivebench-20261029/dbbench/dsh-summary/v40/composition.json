@@ -1,0 +1,126 @@
+{
+  "methods": [
+    {
+      "id": "exact-identifiers",
+      "module": "plugins/exact-identifiers.mjs",
+      "config": {}
+    },
+    {
+      "id": "write-literals",
+      "module": "plugins/write-literals.mjs",
+      "config": {}
+    },
+    {
+      "id": "write-receipts",
+      "module": "plugins/write-receipts.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-sequence",
+      "module": "plugins/numeric-sequence.mjs",
+      "config": {}
+    },
+    {
+      "id": "format-evidence",
+      "module": "plugins/format-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "answer-coverage",
+      "module": "plugins/answer-coverage.mjs",
+      "config": {}
+    },
+    {
+      "id": "submission-shape",
+      "module": "plugins/submission-shape.mjs",
+      "config": {}
+    },
+    {
+      "id": "update-intent",
+      "module": "plugins/update-intent.mjs",
+      "config": {}
+    },
+    {
+      "id": "schema-spelling",
+      "module": "plugins/schema-spelling.mjs",
+      "config": {}
+    },
+    {
+      "id": "task-literals",
+      "module": "plugins/task-literals.mjs",
+      "config": {}
+    },
+    {
+      "id": "bounded-pattern",
+      "module": "plugins/bounded-pattern.mjs",
+      "config": {}
+    },
+    {
+      "id": "boolean-groups",
+      "module": "plugins/boolean-groups.mjs",
+      "config": {}
+    },
+    {
+      "id": "predicate-memory",
+      "module": "plugins/predicate-memory.mjs",
+      "config": {}
+    },
+    {
+      "id": "empty-values",
+      "module": "plugins/empty-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "insert-before-submit",
+      "module": "plugins/insert-before-submit.mjs",
+      "config": {}
+    },
+    {
+      "id": "tool-protocol",
+      "module": "plugins/tool-protocol.mjs",
+      "config": {}
+    },
+    {
+      "id": "result-literals",
+      "module": "plugins/result-literals.mjs",
+      "config": {}
+    },
+    {
+      "id": "suffix-boundary",
+      "module": "plugins/suffix-boundary.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-empty",
+      "module": "plugins/numeric-empty.mjs",
+      "config": {}
+    },
+    {
+      "id": "contains-scope",
+      "module": "plugins/contains-scope.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "exact-identifiers",
+    "write-literals",
+    "write-receipts",
+    "numeric-sequence",
+    "format-evidence",
+    "answer-coverage",
+    "submission-shape",
+    "update-intent",
+    "schema-spelling",
+    "task-literals",
+    "bounded-pattern",
+    "boolean-groups",
+    "predicate-memory",
+    "empty-values",
+    "insert-before-submit",
+    "tool-protocol",
+    "result-literals",
+    "suffix-boundary",
+    "numeric-empty",
+    "contains-scope"
+  ]
+}

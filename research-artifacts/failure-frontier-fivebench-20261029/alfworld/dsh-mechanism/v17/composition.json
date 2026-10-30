@@ -1,0 +1,24 @@
+{
+  "methods": [
+    {
+      "id": "light-state",
+      "module": "plugins/light-state.mjs",
+      "config": {}
+    },
+    {
+      "id": "processing-state",
+      "module": "plugins/processing-state.mjs",
+      "config": {}
+    },
+    {
+      "id": "transfer-state",
+      "module": "plugins/transfer-state.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "light-state",
+    "processing-state",
+    "transfer-state"
+  ]
+}

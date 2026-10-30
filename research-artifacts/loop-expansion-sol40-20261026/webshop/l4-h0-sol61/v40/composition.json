@@ -1,0 +1,81 @@
+{
+  "methods": [
+    {
+      "id": "budget-check",
+      "module": "plugins/budget-check.mjs",
+      "config": {}
+    },
+    {
+      "id": "details-return",
+      "module": "plugins/details-return.mjs",
+      "config": {}
+    },
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "query-cleanup",
+      "module": "plugins/query-cleanup.mjs",
+      "config": {}
+    },
+    {
+      "id": "identity-evidence",
+      "module": "plugins/identity-evidence.mjs",
+      "config": {
+        "min_gain": 1.8,
+        "max_review_step": 14
+      }
+    },
+    {
+      "id": "action-recovery",
+      "module": "plugins/action-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "comparison-stop",
+      "module": "plugins/comparison-stop.mjs",
+      "config": {}
+    },
+    {
+      "id": "retrieval-focus",
+      "module": "plugins/retrieval-focus.mjs",
+      "config": {}
+    },
+    {
+      "id": "named-identity",
+      "module": "plugins/named-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "variant-evidence",
+      "module": "plugins/variant-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "capacity-match",
+      "module": "plugins/capacity-match.mjs",
+      "config": {}
+    },
+    {
+      "id": "named-color",
+      "module": "plugins/named-color.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "budget-check",
+    "details-return",
+    "option-ledger",
+    "query-cleanup",
+    "identity-evidence",
+    "action-recovery",
+    "comparison-stop",
+    "retrieval-focus",
+    "named-identity",
+    "variant-evidence",
+    "capacity-match",
+    "named-color"
+  ]
+}

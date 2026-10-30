@@ -1,0 +1,126 @@
+{
+  "methods": [
+    {
+      "id": "schema-contract",
+      "module": "plugins/schema-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "literal-values",
+      "module": "plugins/literal-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "completion-ledger",
+      "module": "plugins/completion-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "call-recovery",
+      "module": "plugins/call-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "rank-identifier",
+      "module": "plugins/rank-identifier.mjs",
+      "config": {}
+    },
+    {
+      "id": "write-number-style",
+      "module": "plugins/write-number-style.mjs",
+      "config": {}
+    },
+    {
+      "id": "year-list",
+      "module": "plugins/year-list.mjs",
+      "config": {}
+    },
+    {
+      "id": "unit-values",
+      "module": "plugins/unit-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "apostrophe-recovery",
+      "module": "plugins/apostrophe-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-comparisons",
+      "module": "plugins/numeric-comparisons.mjs",
+      "config": {}
+    },
+    {
+      "id": "entity-lookup",
+      "module": "plugins/entity-lookup.mjs",
+      "config": {}
+    },
+    {
+      "id": "grouped-count",
+      "module": "plugins/grouped-count.mjs",
+      "config": {}
+    },
+    {
+      "id": "global-identifiers",
+      "module": "plugins/global-identifiers.mjs",
+      "config": {}
+    },
+    {
+      "id": "list-members",
+      "module": "plugins/list-members.mjs",
+      "config": {}
+    },
+    {
+      "id": "brand-coverage",
+      "module": "plugins/brand-coverage.mjs",
+      "config": {}
+    },
+    {
+      "id": "operation-contract",
+      "module": "plugins/operation-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "year-boundary",
+      "module": "plugins/year-boundary.mjs",
+      "config": {}
+    },
+    {
+      "id": "missing-values",
+      "module": "plugins/missing-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "medal-manifest",
+      "module": "plugins/medal-manifest.mjs",
+      "config": {}
+    },
+    {
+      "id": "qualified-values",
+      "module": "plugins/qualified-values.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "schema-contract",
+    "literal-values",
+    "completion-ledger",
+    "call-recovery",
+    "rank-identifier",
+    "write-number-style",
+    "year-list",
+    "unit-values",
+    "apostrophe-recovery",
+    "numeric-comparisons",
+    "entity-lookup",
+    "grouped-count",
+    "global-identifiers",
+    "list-members",
+    "brand-coverage",
+    "operation-contract",
+    "year-boundary",
+    "missing-values",
+    "medal-manifest",
+    "qualified-values"
+  ]
+}

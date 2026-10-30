@@ -1,0 +1,48 @@
+{
+  "methods": [
+    {
+      "id": "schema-values",
+      "module": "plugins/schema-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "write-ledger",
+      "module": "plugins/write-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "query-submit",
+      "module": "plugins/query-submit.mjs",
+      "config": {}
+    },
+    {
+      "id": "date-conversion-review",
+      "module": "plugins/date-conversion-review.mjs",
+      "config": {}
+    },
+    {
+      "id": "next-value-review",
+      "module": "plugins/next-value-review.mjs",
+      "config": {}
+    },
+    {
+      "id": "record-submit-review",
+      "module": "plugins/record-submit-review.mjs",
+      "config": {}
+    },
+    {
+      "id": "single-column-answers",
+      "module": "plugins/single-column-answers.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "schema-values",
+    "write-ledger",
+    "query-submit",
+    "date-conversion-review",
+    "next-value-review",
+    "record-submit-review",
+    "single-column-answers"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "collected_at": "2026-10-30T07:29:07.032424+00:00",
+  "scope": "Five benchmark artifacts and registered method campaigns; not a claim that all historical protocols are interchangeable.",
+  "selected_checkpoints": {
+    "alfworld": {
+      "method": "方法2（Astra自由方案）",
+      "optimizer": "Sol 6.1 high",
+      "checkpoint": "v18",
+      "source_experiment": "alfworld-official50-20r-20261022/method1-sol61",
+      "test_rate": 0.9541284403669725,
+      "valid_episodes": 327,
+      "tasks": 109,
+      "repeats": 3,
+      "original_test_episodes": 109,
+      "original_test_successes": 104,
+      "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
+      "note": "原最终测试104/109；选定产物后独立复测312/327。方法1/Sol v18同分。"
+    },
+    "dbbench": {
+      "method": "L4 H0",
+      "optimizer": "Sol 6.1 high",
+      "checkpoint": "v35",
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+      "test_rate": 0.7055555555555556,
+      "valid_episodes": 900,
+      "tasks": 300,
+      "repeats": 3,
+      "artifact": "harnesses/dbbench/20261026-l4-h0-sol61-v35"
+    },
+    "webshop": {
+      "method": "L5 H0",
+      "optimizer": "Sol 6.1 high",
+      "checkpoint": "v28",
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
+      "test_rate": 0.445,
+      "valid_episodes": 600,
+      "tasks": 200,
+      "repeats": 3,
+      "artifact": "harnesses/webshop/20261026-l5-h0-sol61-v28",
+      "metric": "strict_pass_at_1"
+    },
+    "osbench": {
+      "method": "L4 H0",
+      "optimizer": "Sol 6.1 high",
+      "checkpoint": "v17",
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
+      "test_rate": 0.3888888888888889,
+      "valid_episodes": 432,
+      "tasks": 144,
+      "repeats": 3,
+      "artifact": "harnesses/osbench/20261026-l4-h0-sol61-v17"
+    },
+    "telecom": {
+      "method": "方法2，Luna修复版起点续进化",
+      "optimizer": "Sol high",
+      "checkpoint": "v06",
+      "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired",
+      "test_rate": 0.8416666666666667,
+      "valid_episodes": 120,
+      "tasks": 40,
+      "repeats": 3,
+      "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
+      "note": "历史已选版；包含account_facts与辅助review能力，用户模拟器GLM，不能与论文不同权限/用户模型直接视为等协议。"
+    }
+  },
+  "retrospective_checkpoints": {
+    "webshop": {
+      "method": "旧最佳原方法续跑",
+      "checkpoint": "v12",
+      "test_rate": 0.47,
+      "valid_episodes": 600,
+      "artifact": "harnesses/webshop/20261027-original-best-sol61-v12",
+      "kind": "retrospective_test",
+      "metric": "strict_pass_at_1"
+    },
+    "osbench": {
+      "method": "L4 H0",
+      "checkpoint": "v03",
+      "test_rate": 0.39351851851851855,
+      "valid_episodes": 432,
+      "artifact": "harnesses/osbench/20261030-l4-h0-sol61-v03",
+      "kind": "retrospective_test"
+    },
+    "dbbench": {
+      "method": "L4 H0",
+      "checkpoint": "v32",
+      "test_rate": 0.7033333333333334,
+      "valid_episodes": 900,
+      "artifact": "harnesses/dbbench/20261027-l4-h0-sol61-v32",
+      "kind": "retrospective_test"
+    }
+  },
+  "original_dashboard_status": {
+    "cards": 89,
+    "complete": 81,
+    "stopped_by_user": 8
+  },
+  "native_final_summaries": 51,
+  "curve_groups": 105,
+  "high_value_backfill": {
+    "counts": {
+      "complete": 106
+    },
+    "test_checkpoints": 106,
+    "test_episodes": 70320,
+    "done_test_episodes": 70320
+  },
+  "telecom_public_reproduction": [
+    {
+      "arm": "baseline",
+      "valid": 120,
+      "invalid": 0,
+      "expected": 120,
+      "complete": true,
+      "score": 0.30833333333333335,
+      "updated_at": 1793074617.9450066,
+      "task_match": true,
+      "started_at": 1793070937.8127346
+    },
+    {
+      "arm": "full",
+      "valid": 120,
+      "invalid": 0,
+      "expected": 120,
+      "complete": true,
+      "score": 0.575,
+      "updated_at": 1793074238.2921903,
+      "task_match": true,
+      "started_at": 1793070937.7848308
+    }
+  ]
+}

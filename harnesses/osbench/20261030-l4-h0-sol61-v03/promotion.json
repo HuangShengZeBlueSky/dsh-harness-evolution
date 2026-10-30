@@ -1,0 +1,16 @@
+{
+  "candidate": "v03",
+  "parent": "v02",
+  "adopted": true,
+  "training": {
+    "episodes": 80,
+    "valid": 80,
+    "invalid": 0,
+    "mean": 0.6625
+  },
+  "validation": 0.65,
+  "parent_validation": 0.55,
+  "selection_metric": "success",
+  "loop": "L4",
+  "reason": "Same-batch train improved; changes reached real input or control; validation did not regress."
+}

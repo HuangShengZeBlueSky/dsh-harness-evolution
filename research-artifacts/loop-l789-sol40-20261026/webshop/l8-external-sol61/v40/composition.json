@@ -1,0 +1,60 @@
+{
+  "methods": [
+    {
+      "id": "variant-state",
+      "module": "plugins/variant-state.mjs",
+      "config": {}
+    },
+    {
+      "id": "identity-cue",
+      "module": "plugins/identity-cue.mjs",
+      "config": {}
+    },
+    {
+      "id": "size-recovery",
+      "module": "plugins/size-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "feature-evidence",
+      "module": "plugins/feature-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "code-search",
+      "module": "plugins/code-search.mjs",
+      "config": {}
+    },
+    {
+      "id": "laptop-evidence",
+      "module": "plugins/laptop-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "dimension-route",
+      "module": "plugins/dimension-route.mjs",
+      "config": {}
+    },
+    {
+      "id": "pack-recovery",
+      "module": "plugins/pack-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "free-evidence",
+      "module": "plugins/free-evidence.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "variant-state",
+    "identity-cue",
+    "size-recovery",
+    "feature-evidence",
+    "code-search",
+    "laptop-evidence",
+    "dimension-route",
+    "pack-recovery",
+    "free-evidence"
+  ]
+}

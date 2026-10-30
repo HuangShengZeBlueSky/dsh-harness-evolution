@@ -1,0 +1,42 @@
+{
+  "methods": [
+    {
+      "id": "clean-unique",
+      "module": "plugins/clean-unique.mjs",
+      "config": {}
+    },
+    {
+      "id": "shell-recovery",
+      "module": "plugins/shell-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "matching-lines",
+      "module": "plugins/matching-lines.mjs",
+      "config": {}
+    },
+    {
+      "id": "log-order",
+      "module": "plugins/log-order.mjs",
+      "config": {}
+    },
+    {
+      "id": "line-length",
+      "module": "plugins/line-length.mjs",
+      "config": {}
+    },
+    {
+      "id": "gzip-content",
+      "module": "plugins/gzip-content.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "clean-unique",
+    "shell-recovery",
+    "matching-lines",
+    "log-order",
+    "line-length",
+    "gzip-content"
+  ]
+}

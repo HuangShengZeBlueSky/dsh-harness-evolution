@@ -1,0 +1,95 @@
+{
+  "description": "New native work directories explicitly enabled for this feedback comparison; no credentials or historical paths.",
+  "groups": [
+    {
+      "id": "alfworld-dsh-summary",
+      "benchmark": "alfworld",
+      "role": "feedback_comparison",
+      "method": "dsh-summary",
+      "adapter": "native",
+      "path": "experiments/alfworld/dsh-summary",
+      "candidate_budget": 40
+    },
+    {
+      "id": "alfworld-dsh-mechanism",
+      "benchmark": "alfworld",
+      "role": "feedback_comparison",
+      "method": "dsh-mechanism",
+      "adapter": "native",
+      "path": "experiments/alfworld/dsh-mechanism",
+      "candidate_budget": 40
+    },
+    {
+      "id": "dbbench-dsh-summary",
+      "benchmark": "dbbench",
+      "role": "feedback_comparison",
+      "method": "dsh-summary",
+      "adapter": "native",
+      "path": "experiments/dbbench/dsh-summary",
+      "candidate_budget": 40
+    },
+    {
+      "id": "dbbench-dsh-mechanism",
+      "benchmark": "dbbench",
+      "role": "feedback_comparison",
+      "method": "dsh-mechanism",
+      "adapter": "native",
+      "path": "experiments/dbbench/dsh-mechanism",
+      "candidate_budget": 40
+    },
+    {
+      "id": "webshop-dsh-summary",
+      "benchmark": "webshop",
+      "role": "feedback_comparison",
+      "method": "dsh-summary",
+      "adapter": "native",
+      "path": "experiments/webshop/dsh-summary",
+      "candidate_budget": 40
+    },
+    {
+      "id": "webshop-dsh-mechanism",
+      "benchmark": "webshop",
+      "role": "feedback_comparison",
+      "method": "dsh-mechanism",
+      "adapter": "native",
+      "path": "experiments/webshop/dsh-mechanism",
+      "candidate_budget": 40
+    },
+    {
+      "id": "osbench-dsh-summary",
+      "benchmark": "osbench",
+      "role": "feedback_comparison",
+      "method": "dsh-summary",
+      "adapter": "native",
+      "path": "experiments/osbench/dsh-summary",
+      "candidate_budget": 40
+    },
+    {
+      "id": "osbench-dsh-mechanism",
+      "benchmark": "osbench",
+      "role": "feedback_comparison",
+      "method": "dsh-mechanism",
+      "adapter": "native",
+      "path": "experiments/osbench/dsh-mechanism",
+      "candidate_budget": 40
+    },
+    {
+      "id": "telecom-dsh-summary",
+      "benchmark": "telecom",
+      "role": "feedback_comparison",
+      "method": "dsh-summary",
+      "adapter": "telecom",
+      "path": "experiments/telecom/dsh-summary",
+      "candidate_budget": 40
+    },
+    {
+      "id": "telecom-dsh-mechanism",
+      "benchmark": "telecom",
+      "role": "feedback_comparison",
+      "method": "dsh-mechanism",
+      "adapter": "telecom",
+      "path": "experiments/telecom/dsh-mechanism",
+      "candidate_budget": 40
+    }
+  ]
+}

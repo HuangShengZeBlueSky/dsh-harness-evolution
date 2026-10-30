@@ -1,0 +1,126 @@
+{
+  "methods": [
+    {
+      "id": "sql-recovery",
+      "module": "plugins/sql-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "empty-result-recovery",
+      "module": "plugins/empty-result-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "execution-grounding",
+      "module": "plugins/execution-grounding.mjs",
+      "config": {}
+    },
+    {
+      "id": "identifier-literals",
+      "module": "plugins/identifier-literals.mjs",
+      "config": {}
+    },
+    {
+      "id": "result-fidelity",
+      "module": "plugins/result-fidelity.mjs",
+      "config": {}
+    },
+    {
+      "id": "output-fields",
+      "module": "plugins/output-fields.mjs",
+      "config": {}
+    },
+    {
+      "id": "ordinal-aggregate",
+      "module": "plugins/ordinal-aggregate.mjs",
+      "config": {}
+    },
+    {
+      "id": "year-shape",
+      "module": "plugins/year-shape.mjs",
+      "config": {}
+    },
+    {
+      "id": "suffix-scope",
+      "module": "plugins/suffix-scope.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-literal",
+      "module": "plugins/numeric-literal.mjs",
+      "config": {}
+    },
+    {
+      "id": "query-rebuild",
+      "module": "plugins/query-rebuild.mjs",
+      "config": {}
+    },
+    {
+      "id": "date-preview",
+      "module": "plugins/date-preview.mjs",
+      "config": {}
+    },
+    {
+      "id": "contains-case",
+      "module": "plugins/contains-case.mjs",
+      "config": {}
+    },
+    {
+      "id": "formatted-write",
+      "module": "plugins/formatted-write.mjs",
+      "config": {}
+    },
+    {
+      "id": "table-axis",
+      "module": "plugins/table-axis.mjs",
+      "config": {}
+    },
+    {
+      "id": "field-scope",
+      "module": "plugins/field-scope.mjs",
+      "config": {}
+    },
+    {
+      "id": "literal-fidelity",
+      "module": "plugins/literal-fidelity.mjs",
+      "config": {}
+    },
+    {
+      "id": "format-evidence",
+      "module": "plugins/format-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "predicate-carry",
+      "module": "plugins/predicate-carry.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-id-max",
+      "module": "plugins/numeric-id-max.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "sql-recovery",
+    "empty-result-recovery",
+    "execution-grounding",
+    "identifier-literals",
+    "result-fidelity",
+    "output-fields",
+    "ordinal-aggregate",
+    "year-shape",
+    "suffix-scope",
+    "numeric-literal",
+    "query-rebuild",
+    "date-preview",
+    "contains-case",
+    "formatted-write",
+    "table-axis",
+    "field-scope",
+    "literal-fidelity",
+    "format-evidence",
+    "predicate-carry",
+    "numeric-id-max"
+  ]
+}

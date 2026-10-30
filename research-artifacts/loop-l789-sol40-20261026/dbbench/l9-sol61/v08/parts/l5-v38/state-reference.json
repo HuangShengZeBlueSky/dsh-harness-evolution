@@ -1,0 +1,176 @@
+{
+  "parent": "v33",
+  "at": 1792985231.422586,
+  "modules": [
+    {
+      "id": "schema-contract",
+      "module": "plugins/schema-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble"
+      ]
+    },
+    {
+      "id": "literal-values",
+      "module": "plugins/literal-values.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble"
+      ]
+    },
+    {
+      "id": "completion-ledger",
+      "module": "plugins/completion-ledger.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "call-recovery",
+      "module": "plugins/call-recovery.mjs",
+      "hooks_seen_in_source": [
+        "agent/pre-step",
+        "benchmark/setup",
+        "system-prompt/assemble"
+      ]
+    },
+    {
+      "id": "rank-identifier",
+      "module": "plugins/rank-identifier.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "write-number-style",
+      "module": "plugins/write-number-style.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "year-list",
+      "module": "plugins/year-list.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "unit-values",
+      "module": "plugins/unit-values.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "apostrophe-recovery",
+      "module": "plugins/apostrophe-recovery.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute"
+      ]
+    },
+    {
+      "id": "numeric-comparisons",
+      "module": "plugins/numeric-comparisons.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "entity-lookup",
+      "module": "plugins/entity-lookup.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "grouped-count",
+      "module": "plugins/grouped-count.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "global-identifiers",
+      "module": "plugins/global-identifiers.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "list-members",
+      "module": "plugins/list-members.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "brand-coverage",
+      "module": "plugins/brand-coverage.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "operation-contract",
+      "module": "plugins/operation-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "year-boundary",
+      "module": "plugins/year-boundary.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "missing-values",
+      "module": "plugins/missing-values.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "medal-manifest",
+      "module": "plugins/medal-manifest.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "qualified-values",
+      "module": "plugins/qualified-values.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    }
+  ]
+}

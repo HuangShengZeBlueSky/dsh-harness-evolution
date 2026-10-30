@@ -1,0 +1,42 @@
+{
+  "methods": [
+    {
+      "id": "result-coverage",
+      "module": "plugins/result-coverage.mjs",
+      "config": {}
+    },
+    {
+      "id": "detail-navigation",
+      "module": "plugins/detail-navigation.mjs",
+      "config": {}
+    },
+    {
+      "id": "option-focus",
+      "module": "plugins/option-focus.mjs",
+      "config": {}
+    },
+    {
+      "id": "budget-guard",
+      "module": "plugins/budget-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "action-availability",
+      "module": "plugins/action-availability.mjs",
+      "config": {}
+    },
+    {
+      "id": "blue-variant",
+      "module": "plugins/blue-variant.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "result-coverage",
+    "detail-navigation",
+    "option-focus",
+    "budget-guard",
+    "action-availability",
+    "blue-variant"
+  ]
+}

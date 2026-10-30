@@ -1,0 +1,24 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["sql-recovery"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P1["empty-result-recovery"] -. "benchmark/setup / tools/post-execute" .-> H
+    P2["execution-grounding"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["identifier-literals"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["result-fidelity"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["output-fields"] -. "benchmark/setup / tools/post-execute" .-> H
+    P6["ordinal-aggregate"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P7["year-shape"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P8["suffix-scope"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P9["numeric-literal"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P10["query-rebuild"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P11["date-preview"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P12["contains-case"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P13["formatted-write"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P14["table-axis"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P15["field-scope"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P16["literal-fidelity"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P17["format-evidence"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P18["predicate-carry"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P19["numeric-id-max"] -. "benchmark/setup / tools/post-execute" .-> H

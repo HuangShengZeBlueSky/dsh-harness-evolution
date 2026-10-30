@@ -1,0 +1,4 @@
+{
+  "methods": [{"id":"options","module":"plugins/options.mjs","config":{}},{"id":"search","module":"plugins/search.mjs","config":{}},{"id":"compare","module":"plugins/compare.mjs","config":{}}],
+  "selected": ["options","search","compare"]
+}

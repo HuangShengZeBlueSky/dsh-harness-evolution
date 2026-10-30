@@ -1,0 +1,75 @@
+name: webshop-l9-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: batches/batch-01.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 20
+  max_model_calls: 20
+  timeout_seconds: 900
+  no_tool_feedback: You must call a tool! NEVER respond with only text.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 180
+    max_retries: 2
+    send_seed: false
+    extra_body:
+      parallel_tool_calls: false
+      chat_template_kwargs:
+        enable_thinking: false
+  environment:
+    factory: environment.py:create_environment
+    url: ${WEBSHOP_URL}
+    system_prompt_file: system-prompt.txt
+    tools_file: tools.json
+  train_batches:
+  - batches/batch-01.jsonl
+  - batches/batch-02.jsonl
+  - batches/batch-03.jsonl
+  - batches/batch-04.jsonl
+  - batches/batch-05.jsonl
+  - batches/batch-06.jsonl
+  validation: validation.jsonl
+  runner: webshop
+domain: WebShop
+start_label: H0；历史零部件可选
+batch_id: l789-20261026
+loop:
+  variant: L9
+  label: 零部件选择与组装
+  baseline_pool: common-300-plus-60
+  require_repair_plan: true
+  selection_metric: strict_success
+  review_next_batch: false
+  validation_families: {}
+  experience_sources: []
+  test_policy: only final selected checkpoint
+  historical_prior: true
+  requires_seed_artifact: false
+learning:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  record_calls: true

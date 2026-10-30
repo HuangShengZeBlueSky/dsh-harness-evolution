@@ -1,0 +1,60 @@
+{
+  "methods": [
+    {
+      "id": "literal-fidelity",
+      "module": "plugins/literal-fidelity.mjs",
+      "config": {}
+    },
+    {
+      "id": "write-receipts",
+      "module": "plugins/write-receipts.mjs",
+      "config": {}
+    },
+    {
+      "id": "schema-identity",
+      "module": "plugins/schema-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "entity-coverage",
+      "module": "plugins/entity-coverage.mjs",
+      "config": {}
+    },
+    {
+      "id": "mutation-contract",
+      "module": "plugins/mutation-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "answer-arguments",
+      "module": "plugins/answer-arguments.mjs",
+      "config": {}
+    },
+    {
+      "id": "date-order",
+      "module": "plugins/date-order.mjs",
+      "config": {}
+    },
+    {
+      "id": "formatted-assignment",
+      "module": "plugins/formatted-assignment.mjs",
+      "config": {}
+    },
+    {
+      "id": "max-result",
+      "module": "plugins/max-result.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "literal-fidelity",
+    "write-receipts",
+    "schema-identity",
+    "entity-coverage",
+    "mutation-contract",
+    "answer-arguments",
+    "date-order",
+    "formatted-assignment",
+    "max-result"
+  ]
+}

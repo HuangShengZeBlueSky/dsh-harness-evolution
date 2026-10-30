@@ -1,0 +1,18 @@
+{
+  "methods": [
+    {
+      "id": "search-evidence",
+      "module": "plugins/search-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "search-evidence",
+    "option-ledger"
+  ]
+}

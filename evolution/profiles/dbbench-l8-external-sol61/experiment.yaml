@@ -1,0 +1,85 @@
+name: dbbench-l8-external-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: batches/batch-01.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 100000
+  max_model_calls: 15
+  timeout_seconds: 1500
+  no_tool_feedback: No executable tool calls found. Please call a tool.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 740
+    max_retries: 0
+    send_seed: false
+    extra_body:
+      parallel_tool_calls: false
+      chat_template_kwargs:
+        enable_thinking: false
+  environment:
+    factory: environment.py:create_environment
+    mysql_host: 127.0.0.1
+    mysql_port: 13316
+    mysql_password_env: MYSQL_PASSWORD
+  train_batches:
+  - batches/batch-01.jsonl
+  - batches/batch-02.jsonl
+  - batches/batch-03.jsonl
+  - batches/batch-04.jsonl
+  - batches/batch-05.jsonl
+  - batches/batch-06.jsonl
+  validation: validation.jsonl
+  runner: dbbench
+  transport:
+    model_url: ${BENCH_CHAT_URL}
+    tokenizer_url: ${BENCH_TOKENIZER_URL}
+    max_context_tokens: 32768
+    max_output_tokens: 4096
+    request_timeout_seconds: 240
+    transport_retries: 2
+    max_model_calls: 15
+domain: DBBench
+start_label: H0；整次实验经验
+batch_id: l789-20261026
+loop:
+  variant: L8-external
+  label: 整次实验外部经验
+  baseline_pool: common-300-plus-60
+  require_repair_plan: true
+  selection_metric: strict_success
+  review_next_batch: true
+  validation_families: {}
+  experience_sources:
+  - ../dbbench-l4-h0-sol61
+  - ../dbbench-l5-h0-sol61
+  test_policy: only final selected checkpoint
+  historical_prior: true
+  requires_seed_artifact: false
+learning:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  record_calls: true

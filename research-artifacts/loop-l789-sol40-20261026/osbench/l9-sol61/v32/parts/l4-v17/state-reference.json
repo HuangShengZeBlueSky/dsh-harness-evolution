@@ -1,0 +1,39 @@
+{
+  "parent": "v08",
+  "at": 1792967437.8080137,
+  "modules": [
+    {
+      "id": "inspection-contract",
+      "module": "plugins/inspection-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble"
+      ]
+    },
+    {
+      "id": "global-projection",
+      "module": "plugins/global-projection.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "sample-evidence",
+      "module": "plugins/sample-evidence.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "task-contract",
+      "module": "plugins/task-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble"
+      ]
+    }
+  ]
+}

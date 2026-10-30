@@ -1,0 +1,12 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["sql-schema"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P1["sql-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P2["sql-values"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P3["sql-plan"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P4["sql-identifiers"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P5["sql-literals"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P6["sql-numeric"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P7["sql-ordinal"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H

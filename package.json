@@ -1,6 +1,6 @@
 {
   "name": "dsh-harness-evolution",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -46,6 +46,6 @@
     "koffi": "3.1.1",
     "zod": "4.6.7"
   },
-  "description": "Released evolved DSH harness artifacts",
+  "description": "Evolved DSH harnesses, reproducible loop strategies, protocols and measured evolution curves",
   "license": "MIT"
 }

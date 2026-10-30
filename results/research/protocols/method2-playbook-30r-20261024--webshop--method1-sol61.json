@@ -1,0 +1,60 @@
+{
+  "name": "webshop-playbook-sol61",
+  "method": "astra_autonomous",
+  "rounds": 30,
+  "baseline": "baseline",
+  "runtime": "runtime",
+  "harness_api": "harness-api.md",
+  "min_improvement": 0,
+  "test_schedule": "final",
+  "optimizer": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "sandbox": "danger-full-access"
+  },
+  "benchmark": {
+    "kind": "python",
+    "train": "batches/batch-01.jsonl",
+    "test": "test.jsonl",
+    "direction": "maximize",
+    "success_score": 1,
+    "concurrency": 8,
+    "max_steps": 20,
+    "max_model_calls": 20,
+    "timeout_seconds": 900,
+    "no_tool_feedback": "You must call a tool! NEVER respond with only text.",
+    "model": {
+      "name": "Qwen3-4B-Instruct-2507",
+      "base_url": "${SERVICE_ENDPOINT}",
+      "api_key_env": "",
+      "temperature": 0,
+      "max_tokens": 4096,
+      "timeout_seconds": 180,
+      "max_retries": 2,
+      "send_seed": false,
+      "extra_body": {
+        "parallel_tool_calls": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "environment": {
+      "factory": "environment.py:create_environment",
+      "url": "${SERVICE_ENDPOINT}",
+      "system_prompt_file": "${ASSET_ROOT}/system-prompt.txt",
+      "tools_file": "${ASSET_ROOT}/tools.json"
+    },
+    "train_batches": [
+      "batches/batch-01.jsonl",
+      "batches/batch-02.jsonl",
+      "batches/batch-03.jsonl",
+      "batches/batch-04.jsonl",
+      "batches/batch-05.jsonl",
+      "batches/batch-06.jsonl"
+    ]
+  },
+  "domain": "WebShop",
+  "start_label": "H0零增强插件",
+  "playbook": "PLAYBOOK.md"
+}

@@ -1,0 +1,74 @@
+name: osbench-l6-h0-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: batches/batch-01.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 18
+  max_steps: 16
+  max_model_calls: 16
+  timeout_seconds: 900
+  no_tool_feedback: No tool call detected. Please call a tool.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 575
+    max_retries: 0
+    send_seed: false
+    extra_body:
+      parallel_tool_calls: false
+      chat_template_kwargs:
+        enable_thinking: false
+  environment:
+    factory: environment.py:create_environment
+    docker_host: unix:///var/run/docker.sock
+    life_harness: false
+  train_batches:
+  - batches/batch-01.jsonl
+  - batches/batch-02.jsonl
+  - batches/batch-03.jsonl
+  - batches/batch-04.jsonl
+  - batches/batch-05.jsonl
+  - batches/batch-06.jsonl
+  runner: osbench
+  transport:
+    model_url: ${BENCH_CHAT_URL}
+    tokenizer_url: ${BENCH_TOKENIZER_URL}
+    max_context_tokens: 32768
+    max_output_tokens: 4096
+    request_timeout_seconds: 575
+    transport_retries: 2
+    max_model_calls: 16
+domain: OSBench
+start_label: H0零增强插件
+playbook: PLAYBOOK.md
+batch_id: l6-20261026
+loop:
+  variant: L6
+  label: 归因与能力状态驱动修复
+  baseline_pool: l6-h0
+  require_repair_plan: true
+  selection_metric: strict_success
+  test_policy: only final selected checkpoint
+  training_protocol: public six 50-task batches, cycled for 40-round extension
+  comparison_scope: not paper optimizer or equal six-round budget
+  requires_seed_artifact: false

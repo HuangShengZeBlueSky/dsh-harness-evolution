@@ -1,0 +1,20 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["repair-text-submit"] -. "benchmark/setup / llm/stream / system-prompt/assemble / …" .-> H
+    P1["unique-values"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P2["grep-dialect"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P3["matching-lines"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P4["command-lexemes"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P5["execution-recovery"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P6["field-contract"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P7["case-contract"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P8["selection-contract"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P9["ranking-contract"] -. "benchmark/setup / llm/stream / system-prompt/assemble" .-> H
+    P10["temporal-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P11["status-contract"] -. "attachment resolved in module" .-> H
+    P12["word-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P13["message-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P14["line-content-contract"] -. "attachment resolved in module" .-> H
+    P15["size-query-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H

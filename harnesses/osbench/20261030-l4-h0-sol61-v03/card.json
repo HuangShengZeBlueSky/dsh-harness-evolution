@@ -1,0 +1,9 @@
+{
+  "summary": "Three focused plugins guide file inspection, task-wide aggregation and evidence-based field selection. This earlier promoted checkpoint outscored the campaign final in retrospective tests.",
+  "summary_zh": "三个插件分别指导文件检查、全局统计和基于真实样本的字段判断。这个已晋升的早期检查点在回溯补测中高于原最终版。",
+  "responsibilities": {
+    "inspection-contract": "Inspect relevant files and schema before choosing a command.",
+    "global-projection": "Preserve task-wide aggregation and projection semantics.",
+    "sample-evidence": "Ground fields and delimiters in actual sampled contents."
+  }
+}

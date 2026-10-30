@@ -1,0 +1,11 @@
+export const name='budget';
+const words=s=>new Set(s.toLowerCase().replace(/\b(?:and\s+)?price\b.*$/,'').match(/[a-z0-9]+/g)||[]);
+export function apply(ctx,config){ctx.on('benchmark/setup',async(p,next)=>{await next();const {ac,audit}=p;let limit=Infinity,request='',price=0,current='',warned=false;const products=new Map();
+ ac.on('tools/post-execute',async(call,result,next)=>{const d=await next();if(d.kind!=='accept')return d;const text=p.getRawBusinessResult(call.callId)?.content||'';request=text.match(/Instruction:\s*\[SEP\]\s*(.*?)\s*\[SEP\]/s)?.[1]||request;limit=Number(request.match(/price lower than\s*([\d.]+)/i)?.[1]||Infinity);
+ let args=call.arguments;if(typeof args==='string')try{args=JSON.parse(args)}catch{}if(call.name==='click_action'&&/^b[a-z0-9]{9}$/i.test(args?.value||''))current=args.value.toLowerCase();
+ const parts=text.split('[SEP]').map(x=>x.trim());for(let i=0;i<parts.length-2;i++)if(/^B[A-Z0-9]{9}$/i.test(parts[i])&&/^\$/.test(parts[i+2]))products.set(parts[i].toLowerCase(),{id:parts[i].toLowerCase(),title:parts[i+1],price:Number(parts[i+2].match(/[\d.]+/)?.[0]||Infinity)});
+ const value=text.match(/\[SEP\]\s*Price:\s*\$([\d.]+)/);if(value)price=Number(value[1]);return d;});
+ ac.on('tools/pre-execute',async(call,next)=>{const d=await next();if(d.kind!=='allow'||call.name!=='click_action'||warned||price<limit)return d;let args=call.arguments;if(typeof args==='string')try{args=JSON.parse(args)}catch{}if(args?.value?.toLowerCase()!=='buy now')return d;
+ const target=words(request);const candidates=[...products.values()].filter(x=>x.id!==current&&x.price<limit).map(x=>({...x,overlap:[...words(x.title)].filter(w=>target.has(w)).length})).sort((a,b)=>b.overlap-a.overlap);if(!candidates.length)return d;warned=true;const best=candidates[0];const reason='This product costs $'+price+'; the instruction requires lower than $'+limit+'. Do not buy it yet. Click "< prev" to return to results, then inspect '+best.id+' ('+best.title+', $'+best.price+'), an already visible alternative within budget. Verify its required options before buying.';audit({method_id:name,hook:'tools/pre-execute',call_id:call.callId,decision:'deny',reason});return {kind:'deny',reason};
+ });
+});}

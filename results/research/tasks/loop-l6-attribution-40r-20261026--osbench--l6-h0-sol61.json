@@ -1,0 +1,3715 @@
+{
+  "train": [
+    {
+      "file": "batch-01.jsonl",
+      "rows": [
+        {
+          "task_id": "train/0317",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0896",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0988",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0273",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0579",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0188",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0590",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0755",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0192",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0368",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0998",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0877",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0859",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0749",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0781",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0157",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0397",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0138",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0220",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0266",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0883",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0921",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0807",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0102",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0023",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0789",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0013",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0011",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0409",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0135",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0928",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0024",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0310",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0230",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0555",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0154",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0687",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0298",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0683",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0577",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0170",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0139",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0444",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0666",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0918",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0554",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0965",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0786",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0447",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0198",
+          "trial": 0,
+          "seed": 42
+        }
+      ],
+      "unique_tasks": 50,
+      "episodes": 50
+    },
+    {
+      "file": "batch-02.jsonl",
+      "rows": [
+        {
+          "task_id": "train/0245",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0763",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0630",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0841",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0029",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0219",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0723",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0267",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0034",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0934",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0335",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0146",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0915",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0866",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0203",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0759",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0856",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0746",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0970",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0471",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0610",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0499",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0193",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0808",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0313",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0001",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0107",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0754",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0785",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0799",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0358",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0352",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0263",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0470",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0734",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0111",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0083",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0326",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0709",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0768",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0465",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0638",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0087",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0189",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0971",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0826",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0338",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0322",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0500",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0404",
+          "trial": 0,
+          "seed": 42
+        }
+      ],
+      "unique_tasks": 50,
+      "episodes": 50
+    },
+    {
+      "file": "batch-03.jsonl",
+      "rows": [
+        {
+          "task_id": "train/0692",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0232",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0021",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0621",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0215",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0950",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0845",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0483",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0018",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0152",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0588",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0913",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0551",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0184",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0116",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0817",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0347",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0672",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0642",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0562",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0187",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0073",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0432",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0885",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0269",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0437",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0671",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0306",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0166",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0624",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0408",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0699",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0035",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0350",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0538",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0909",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0452",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0275",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0382",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0481",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0162",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0598",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0169",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0185",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0811",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0908",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0144",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0127",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0342",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0695",
+          "trial": 0,
+          "seed": 42
+        }
+      ],
+      "unique_tasks": 50,
+      "episodes": 50
+    },
+    {
+      "file": "batch-04.jsonl",
+      "rows": [
+        {
+          "task_id": "train/0649",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0738",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0208",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0639",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0002",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0512",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0389",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0015",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0332",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0978",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0550",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0302",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0615",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0280",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0800",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0384",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0130",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0557",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0515",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0196",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0631",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0559",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0900",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0325",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0767",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0380",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0425",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0784",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0882",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0568",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0654",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0489",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0632",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0022",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0026",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0643",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0412",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0416",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0779",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0211",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0164",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0387",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0923",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0074",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0016",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0536",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0160",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0633",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0634",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0532",
+          "trial": 0,
+          "seed": 42
+        }
+      ],
+      "unique_tasks": 50,
+      "episodes": 50
+    },
+    {
+      "file": "batch-05.jsonl",
+      "rows": [
+        {
+          "task_id": "train/0264",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0798",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0809",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0393",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0907",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0897",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0143",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0991",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0341",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0944",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0947",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0027",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0028",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0829",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0344",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0511",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0099",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0945",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0235",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0284",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0207",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0960",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0625",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0967",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0902",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0051",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0071",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0426",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0959",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0518",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0010",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0171",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0531",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0445",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0364",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0244",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0249",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0045",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0112",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0385",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0062",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0870",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0782",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0477",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0516",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0818",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0436",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0942",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0260",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0195",
+          "trial": 0,
+          "seed": 42
+        }
+      ],
+      "unique_tasks": 50,
+      "episodes": 50
+    },
+    {
+      "file": "batch-06.jsonl",
+      "rows": [
+        {
+          "task_id": "train/0172",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0080",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0701",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0223",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0705",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0494",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0457",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0886",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0402",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0718",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0665",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0222",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0794",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0863",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0739",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0213",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0904",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0861",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0541",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0711",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0469",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0693",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0936",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0064",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0505",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0963",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0629",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0067",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0091",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0433",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0707",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0424",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0561",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0177",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0285",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0058",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0872",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0917",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0580",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0795",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0937",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0975",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0221",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0484",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0816",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0151",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0903",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0329",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0231",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "train/0458",
+          "trial": 0,
+          "seed": 42
+        }
+      ],
+      "unique_tasks": 50,
+      "episodes": 50
+    }
+  ],
+  "test": [
+    {
+      "file": "test.jsonl",
+      "rows": [
+        {
+          "task_id": "test/0000",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0001",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0002",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0003",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0004",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0005",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0006",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0007",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0008",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0009",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0010",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0011",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0012",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0013",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0014",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0015",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0016",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0017",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0018",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0019",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0020",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0021",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0022",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0023",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0024",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0025",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0026",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0027",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0028",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0029",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0030",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0031",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0032",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0033",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0034",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0035",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0036",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0037",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0038",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0039",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0040",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0041",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0042",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0043",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0044",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0045",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0046",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0047",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0048",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0049",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0050",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0051",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0052",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0053",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0054",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0055",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0056",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0057",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0058",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0059",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0060",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0061",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0062",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0063",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0064",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0065",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0066",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0067",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0068",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0069",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0070",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0071",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0072",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0073",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0074",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0075",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0076",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0077",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0078",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0079",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0080",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0081",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0082",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0083",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0084",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0085",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0086",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0087",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0088",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0089",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0090",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0091",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0092",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0093",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0094",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0095",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0096",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0097",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0098",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0099",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0100",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0101",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0102",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0103",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0104",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0105",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0106",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0107",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0108",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0109",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0110",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0111",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0112",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0113",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0114",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0115",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0116",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0117",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0118",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0119",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0120",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0121",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0122",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0123",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0124",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0125",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0126",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0127",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0128",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0129",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0130",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0131",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0132",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0133",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0134",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0135",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0136",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0137",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0138",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0139",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0140",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0141",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0142",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0143",
+          "trial": 0,
+          "seed": 42
+        },
+        {
+          "task_id": "test/0000",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0001",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0002",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0003",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0004",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0005",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0006",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0007",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0008",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0009",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0010",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0011",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0012",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0013",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0014",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0015",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0016",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0017",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0018",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0019",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0020",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0021",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0022",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0023",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0024",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0025",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0026",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0027",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0028",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0029",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0030",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0031",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0032",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0033",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0034",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0035",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0036",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0037",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0038",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0039",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0040",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0041",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0042",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0043",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0044",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0045",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0046",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0047",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0048",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0049",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0050",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0051",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0052",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0053",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0054",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0055",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0056",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0057",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0058",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0059",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0060",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0061",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0062",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0063",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0064",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0065",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0066",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0067",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0068",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0069",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0070",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0071",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0072",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0073",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0074",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0075",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0076",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0077",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0078",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0079",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0080",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0081",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0082",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0083",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0084",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0085",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0086",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0087",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0088",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0089",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0090",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0091",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0092",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0093",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0094",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0095",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0096",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0097",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0098",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0099",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0100",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0101",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0102",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0103",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0104",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0105",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0106",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0107",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0108",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0109",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0110",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0111",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0112",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0113",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0114",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0115",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0116",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0117",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0118",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0119",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0120",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0121",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0122",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0123",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0124",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0125",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0126",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0127",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0128",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0129",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0130",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0131",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0132",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0133",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0134",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0135",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0136",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0137",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0138",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0139",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0140",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0141",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0142",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0143",
+          "trial": 1,
+          "seed": 43
+        },
+        {
+          "task_id": "test/0000",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0001",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0002",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0003",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0004",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0005",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0006",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0007",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0008",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0009",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0010",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0011",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0012",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0013",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0014",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0015",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0016",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0017",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0018",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0019",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0020",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0021",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0022",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0023",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0024",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0025",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0026",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0027",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0028",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0029",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0030",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0031",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0032",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0033",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0034",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0035",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0036",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0037",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0038",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0039",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0040",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0041",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0042",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0043",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0044",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0045",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0046",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0047",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0048",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0049",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0050",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0051",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0052",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0053",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0054",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0055",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0056",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0057",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0058",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0059",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0060",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0061",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0062",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0063",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0064",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0065",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0066",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0067",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0068",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0069",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0070",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0071",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0072",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0073",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0074",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0075",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0076",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0077",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0078",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0079",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0080",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0081",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0082",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0083",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0084",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0085",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0086",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0087",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0088",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0089",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0090",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0091",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0092",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0093",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0094",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0095",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0096",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0097",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0098",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0099",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0100",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0101",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0102",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0103",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0104",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0105",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0106",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0107",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0108",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0109",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0110",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0111",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0112",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0113",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0114",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0115",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0116",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0117",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0118",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0119",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0120",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0121",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0122",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0123",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0124",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0125",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0126",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0127",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0128",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0129",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0130",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0131",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0132",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0133",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0134",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0135",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0136",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0137",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0138",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0139",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0140",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0141",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0142",
+          "trial": 2,
+          "seed": 44
+        },
+        {
+          "task_id": "test/0143",
+          "trial": 2,
+          "seed": 44
+        }
+      ],
+      "unique_tasks": 144,
+      "episodes": 432
+    }
+  ]
+}

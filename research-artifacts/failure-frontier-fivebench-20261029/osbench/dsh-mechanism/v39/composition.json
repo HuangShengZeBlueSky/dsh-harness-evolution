@@ -1,0 +1,78 @@
+{
+  "methods": [
+    {
+      "id": "count-unit",
+      "module": "plugins/count-unit.mjs",
+      "config": {}
+    },
+    {
+      "id": "unique-scope",
+      "module": "plugins/unique-scope.mjs",
+      "config": {}
+    },
+    {
+      "id": "shell-recovery",
+      "module": "plugins/shell-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "actual-submit",
+      "module": "plugins/actual-submit.mjs",
+      "config": {}
+    },
+    {
+      "id": "size-unit",
+      "module": "plugins/size-unit.mjs",
+      "config": {}
+    },
+    {
+      "id": "file-threshold",
+      "module": "plugins/file-threshold.mjs",
+      "config": {}
+    },
+    {
+      "id": "event-timestamp",
+      "module": "plugins/event-timestamp.mjs",
+      "config": {}
+    },
+    {
+      "id": "date-range",
+      "module": "plugins/date-range.mjs",
+      "config": {}
+    },
+    {
+      "id": "path-component",
+      "module": "plugins/path-component.mjs",
+      "config": {}
+    },
+    {
+      "id": "hour-field",
+      "module": "plugins/hour-field.mjs",
+      "config": {}
+    },
+    {
+      "id": "word-line",
+      "module": "plugins/word-line.mjs",
+      "config": {}
+    },
+    {
+      "id": "compressed-set",
+      "module": "plugins/compressed-set.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "count-unit",
+    "unique-scope",
+    "shell-recovery",
+    "actual-submit",
+    "size-unit",
+    "file-threshold",
+    "event-timestamp",
+    "date-range",
+    "path-component",
+    "hour-field",
+    "word-line",
+    "compressed-set"
+  ]
+}

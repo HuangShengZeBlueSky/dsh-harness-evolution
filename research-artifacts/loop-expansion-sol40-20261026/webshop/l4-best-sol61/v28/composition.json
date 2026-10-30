@@ -1,0 +1,92 @@
+{
+  "methods": [
+    {
+      "id": "search-evidence",
+      "module": "plugins/search-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "purchase-closure",
+      "module": "plugins/purchase-closure.mjs",
+      "config": {
+        "startStep": 12
+      }
+    },
+    {
+      "id": "shade-ledger",
+      "module": "plugins/shade-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "garment-identity",
+      "module": "plugins/garment-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "demand-ledger",
+      "module": "plugins/demand-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "option-contract",
+      "module": "plugins/option-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "feature-proof",
+      "module": "plugins/feature-proof.mjs",
+      "config": {}
+    },
+    {
+      "id": "code-ledger",
+      "module": "plugins/code-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "ring-identity",
+      "module": "plugins/ring-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "measurement-contract",
+      "module": "plugins/measurement-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "ingredient-options",
+      "module": "plugins/ingredient-options.mjs",
+      "config": {}
+    },
+    {
+      "id": "search-frontier",
+      "module": "plugins/search-frontier.mjs",
+      "config": {}
+    },
+    {
+      "id": "comparison-board",
+      "module": "plugins/comparison-board.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "search-evidence",
+    "option-ledger",
+    "purchase-closure",
+    "shade-ledger",
+    "garment-identity",
+    "demand-ledger",
+    "option-contract",
+    "feature-proof",
+    "code-ledger",
+    "ring-identity",
+    "measurement-contract",
+    "ingredient-options",
+    "search-frontier",
+    "comparison-board"
+  ]
+}

@@ -2,74 +2,51 @@
 
 [English](README.md) | **简体中文**
 
-**五个场景，多种方法对照，可直接查看的插件产物。**
+**方法、进化曲线、可复现配置与真实插件产物。**
 
-基于 DSH 的 harness 进化，固定 Qwen3-4B 做题模型。每个产物包含插件源码、运行接口、Mermaid 框图、真实进化曲线和测试配置。
+固定做题模型，进化运行时 Harness。我们公开每种循环改了什么、怎样采用候选、结果如何，以及代码目前能复现到哪一层。
 
-[**完整榜单**](LEADERBOARD.zh-CN.md) · [**进化曲线**](docs/CURVES.zh-CN.md) · [**方法概览**](docs/METHOD.zh-CN.md) · [**下载全部产物**](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/archive/refs/heads/main.zip)
+[**交互式摘要与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)
 
-![多方法成绩总览](assets/leaderboard.zh-CN.png)
+## 五场景产物
 
-榜单包含裸模型、ALIGN、AgentSquare、Meta-Harness、AHE、Life-Harness 和我们。我们的主列展示最佳已测晋升点，可能来自回溯补测；训练最终版另列。其他方法使用论文报告值；缺失的场景留空。
+| 场景 | 最佳已发布最终版 | 已发布回溯高点 | Life-Harness v3参考 |
+|---|---:|---:|---:|
+| ALFWorld | [95.41% · v18](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | — | 88.07% |
+| DBBench | [70.56% · v35](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | — | 65.00% |
+| WebShop | [44.50% · v28](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md) | [47.00% · v12](harnesses/webshop/20261027-original-best-sol61-v12) | 45.50% |
+| OSBench | [38.89% · v17](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | [39.35% · v03](harnesses/osbench/20261030-l4-h0-sol61-v03) | 39.60% |
+| Telecom | [84.17% · v06](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | — | 90.00% |
 
-<!-- LATEST:START -->
+这是不同方法及协议下的产物，不是一套统一算法的五场景成绩。最终版按各实验训练／验证规则选定；跨实验比较和回溯高点均已观察测试。论文预算、重复次数及 Telecom 用户／接口不同。主榜保留 ALIGN、AgentSquare、Meta-Harness、AHE 及 Life-Harness 历史版本。
 
-## 最新发布 · 2026-10-27
+## 这次审查留下的结论
 
-| 场景 | 产物 / 成功率 | 发布依据 | 直接查看 |
-|---|---|---|---|
-| WebShop | [v12 · **47.00%**](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md) | 回溯补测 | [方法流程](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#方法流程图) · [Harness框图](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#结构框图) · [曲线](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#进化曲线) |
-| DBBench | [v32 · **70.33%**](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md) | 回溯补测 | [方法流程](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md#方法流程图) · [Harness框图](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md#结构框图) · [曲线](harnesses/dbbench/20261027-l4-h0-sol61-v32/README.zh-CN.md#进化曲线) |
-| OSBench | [v08 · **38.66%**](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md) | 回溯补测 | [方法流程](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md#方法流程图) · [Harness框图](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md#结构框图) · [曲线](harnesses/osbench/20261027-l5-h0-sol61-v08/README.zh-CN.md#进化曲线) |
+- **改进并不单调。** L4／L5仍较强；L8传入了经验但未产生稳定收益，L9组件复用也未全面超过旧高点。
+- **配置变化也是变量。** DB／Web的L4是300训练、无独立验证；L5是240训练＋60验证。不能把全部差距归因于一个新增模块。
+- **选择规则仍有改进空间。** Web回溯47.00%高于该组最终44.33%；OS早期39.35%高于最终38.89%。保留原选择，不倒写历史。
+- **总分提高与机制成立分别判断。** 已加载、已触发、已传入经验是执行事实；目标修复和整体收益是另外两层证据。
 
-<!-- LATEST:END -->
+- **平均分与稳定性分开。** OS机制反馈平均成功32.87%高于摘要29.40%，三次全过25.00%却低于26.39%；单次搜索显示覆盖与稳定性没有同步改善。
 
-<!-- TELECOM-HISTORY:START -->
+![各方法最终测试](assets/method-final-tests.png)
 
-## Telecom：历史水位与当前产物
+## 从一份公共基础开始复现
 
-![Telecom 新旧版本对照](assets/telecom-history.zh-CN.png)
+`evolution/` 提供三场景 L1–L9 的共同运行代码、36份配置、任务编号与一个离线小例子。每种方法以“输入 → 改动 → 评测 → 采用 → 最终选择”说明；所有历史方法的可复现层级逐项标明。
 
-**相对 v1/v2 的报告值，我们的成功率高 26.67 个百分点，三次全成功率高 32.50 个百分点。**新版 v3 仍并列展示；这是跨报告的数值差，不是同协议因果增益。
-
-来源：[v1 表 7](https://arxiv.org/html/2605.22166v1)、[v2 表 8](https://arxiv.org/html/2605.22166v2)、[v3 表 10](https://arxiv.org/html/2605.22166v3)。均取 Qwen3-4B 行，不混入 18 模型均值。旧新版论文均使用 DeepSeek-V4-Flash 用户模型；我们使用 GLM-5.3-Flash，另有账户事实与额外复核接口，不能直接归因于 loop。
-
-<!-- TELECOM-HISTORY:END -->
-
-## 选择 Harness 产物
-
-| 场景与成绩 | 解决的问题 | 检查点 | 直接查看 |
-|---|---|---|---|
-| **ALFWorld · 95.41%** | 家务任务流程与可见状态指导 | [v18 · 训练最终版](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | [源码](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [框图](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md#结构框图) · [曲线](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md#进化曲线) |
-| **DBBench · 70.56%** | 数据库结构与取值对齐、SQL 执行和结果提交 | [v35 · 训练最终版](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | [源码](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [框图](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md#结构框图) · [曲线](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md#进化曲线) |
-| **WebShop · 47.00%** | 商品检索、规格选择、价格核验与购买 | [v12 · 回溯补测](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md) | [源码](harnesses/webshop/20261027-original-best-sol61-v12/plugins) · [框图](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#结构框图) · [曲线](harnesses/webshop/20261027-original-best-sol61-v12/README.zh-CN.md#进化曲线) |
-| **OSBench · 38.89%** | 文件检查、命令语义、全局统计与重复恢复 | [v17 · 训练最终版](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | [源码](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [框图](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md#结构框图) · [曲线](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md#进化曲线) |
-| **τ²-Telecom · 84.17%** | 客户线路身份、设备诊断、账单与账户复核 | [v06 · 训练最终版](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | [源码](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [框图](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md#结构框图) · [曲线](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md#进化曲线) |
-
-WebShop 按严格成功率排序，平均奖励单独展示。插件注册数量不代表独立证明有效的机制数量。
-
-## 方法概览
-
-先维护当前 Agent 的能力和插件职责，再从训练失败中找问题类，提出插件改动，通过实际评测决定采用。允许插件协作，也允许删除重复或有副作用的指导。这里只公开方法概览和产物，不展开尚未公开的论文细节。
-
-```mermaid
-flowchart LR
-    A[训练失败] --> B[当前能力与插件职责]
-    B --> C[问题类与插件机制]
-    C --> D[开发集评测]
-    D -->|采用或修订| B
-    D -->|预算结束| E[冻结检查点]
-    E --> F[最终测试并发布]
+```bash
+python -m pip install -e evolution
+dsh-evolve profiles
+python evolution/scripts/smoke.py ./workspaces/smoke
 ```
 
-## 后续如何更新
+该例子验证真实DSH运行钩子和一轮采用链，使用脚本模型，不是基准分数复测。正式运行另需模型、数据和环境；ALFWorld／Telecom及反馈扩展的接入边界见运行说明。
 
-**新 harness＋测试数据＋进化曲线 → 发布新版本 → 自动更新中英文榜单。**
+## 数据怎样读与更新
 
-使用 `tools/publish.py` 添加产物；推送后 GitHub Actions 自动生成中英文首页总览、榜单和产物页，旧版本保留。提供新的产物和实测数据即可更新，不需要公开内部实验日志。[发布说明](docs/PUBLISHING.zh-CN.md) · [运行说明](docs/RUNNING.zh-CN.md)
+[逐轮记录与详细指标](results/research/README.md) · [统计口径](docs/METRICS.zh-CN.md) · [全部已发布产物](LEADERBOARD.zh-CN.md) · [发布指南](docs/PUBLISHING.zh-CN.md)
 
-## 如何理解比较
+训练／验证／测试分开绘制，未测点不补线；每次重复、有效场数、采用与退步、模型和划分均可查看。时间注明计量范围，缺失成本不填零，三次测试不是三次独立搜索。新增实测记录后重新构建即可更新，网页显示采集日期，不冒充实时监控。
 
-论文采用的优化模型、六轮预算和测试重复次数与我们不同；ALIGN 使用自身发布划分；Telecom 还存在用户模拟器、账户事实接口与额外复核调用的差异。主榜是来源明确的数值对照，不把所有结果包装成严格同协议排名。原始测试成绩沿用已完成实验，本次发布不代表重新跑完评测。
-
-[MIT 许可证](LICENSE) · [致谢与第三方声明](docs/THIRD_PARTY.md)
+[MIT](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md) · [DSH](https://github.com/deepseek-ai/deepseek-harness)

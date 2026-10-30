@@ -1,0 +1,90 @@
+{
+  "methods": [
+    {
+      "id": "schema-contract",
+      "module": "plugins/schema-contract.mjs",
+      "config": {
+        "guard": true,
+        "errorMemory": false,
+        "concise": true
+      }
+    },
+    {
+      "id": "literal-contract",
+      "module": "plugins/literal-contract.mjs",
+      "config": {
+        "samples": 5,
+        "limit": 7500,
+        "strict": true,
+        "relevantRows": true
+      }
+    },
+    {
+      "id": "write-workflow",
+      "module": "plugins/write-workflow.mjs",
+      "config": {
+        "verify": false,
+        "receipt": true,
+        "proof": true,
+        "dedupe": true
+      }
+    },
+    {
+      "id": "result-bridge",
+      "module": "plugins/result-bridge.mjs",
+      "config": {
+        "annotate": true,
+        "live": true,
+        "guard": true,
+        "selectOnly": true
+      }
+    },
+    {
+      "id": "sql-recovery",
+      "module": "plugins/sql-recovery.mjs",
+      "config": {
+        "memory": true,
+        "guard": true
+      }
+    },
+    {
+      "id": "budget-conductor",
+      "module": "plugins/budget-conductor.mjs",
+      "config": {
+        "threshold": 9,
+        "last": true
+      }
+    },
+    {
+      "id": "numeric-calendar",
+      "module": "plugins/numeric-calendar.mjs",
+      "config": {
+        "ties": false,
+        "formats": true,
+        "selectOnly": true,
+        "relevantOnly": true,
+        "profile": true,
+        "guard": true
+      }
+    },
+    {
+      "id": "intent-contract",
+      "module": "plugins/intent-contract.mjs",
+      "config": {
+        "precise": false,
+        "concise": true,
+        "directionGuard": true
+      }
+    }
+  ],
+  "selected": [
+    "schema-contract",
+    "literal-contract",
+    "write-workflow",
+    "result-bridge",
+    "sql-recovery",
+    "budget-conductor",
+    "numeric-calendar",
+    "intent-contract"
+  ]
+}

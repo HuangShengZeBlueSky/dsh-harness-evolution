@@ -1,0 +1,206 @@
+{
+  "paper_references": {
+    "schema_version": 1,
+    "source_url": "https://arxiv.org/html/2605.22166v3",
+    "paper_version": "2605.22166v3",
+    "checked_on": "2026-10-26",
+    "actor": "Qwen3-4B-Instruct",
+    "provenance": "Other-method results are as reported by the Life-Harness authors; these are not our reruns or necessarily the original method authors' scores.",
+    "protocol_notes": [
+      "Meta-Harness, AHE and Life-Harness use six evolution rounds and the same training batches within the paper, with GPT-5.5 as evolution model. Our campaign budgets and optimizers differ.",
+      "ALIGN and AgentSquare are released final harness evaluations on ALFWorld and WebShop. ALIGN uses its released task split; AgentSquare uses the Life-Harness task selection.",
+      "Paper AgentBench uses one evaluation per task. Our released scores average three. Telecom simulator/access/auxiliary-call conditions differ.",
+      "Table 1 values and evolution-token totals are rounded; Table 10/11 values retain their published precision. Null means not reported here, never zero."
+    ],
+    "methods": [
+      {
+        "id": "bare",
+        "label": "Bare / 裸模型",
+        "description_en": "Frozen actor without an evolved harness.",
+        "description_zh": "冻结做题模型，不添加进化后的 harness。",
+        "table": "10",
+        "pass_at_1": {
+          "alfworld": 0.1651,
+          "dbbench": 0.44,
+          "webshop": 0.295,
+          "osbench": 0.215,
+          "telecom": 0.2583
+        },
+        "evolution_tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "telecom_pass_at_3": 0.475,
+        "telecom_pass_cubed": 0.075
+      },
+      {
+        "id": "align",
+        "label": "ALIGN",
+        "description_en": "Generates an environment interface for the agent.",
+        "description_zh": "为智能体生成环境交互接口。",
+        "table": "11",
+        "pass_at_1": {
+          "alfworld": 0.2836,
+          "dbbench": null,
+          "webshop": 0.18,
+          "osbench": null,
+          "telecom": null
+        },
+        "evolution_tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "telecom_pass_at_3": null,
+        "telecom_pass_cubed": null
+      },
+      {
+        "id": "agentsquare",
+        "label": "AgentSquare",
+        "description_en": "Searches modular agent architectures.",
+        "description_zh": "搜索模块化智能体架构。",
+        "table": "11",
+        "pass_at_1": {
+          "alfworld": 0.2936,
+          "dbbench": null,
+          "webshop": 0.185,
+          "osbench": null,
+          "telecom": null
+        },
+        "evolution_tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "telecom_pass_at_3": null,
+        "telecom_pass_cubed": null
+      },
+      {
+        "id": "meta",
+        "label": "Meta-Harness",
+        "description_en": "Searches harness programs using previous code, scores, and traces.",
+        "description_zh": "结合历史代码、分数和轨迹搜索 harness 程序。",
+        "table": "1",
+        "pass_at_1": {
+          "alfworld": 0.358,
+          "dbbench": 0.503,
+          "webshop": 0.425,
+          "osbench": 0.257,
+          "telecom": 0.508
+        },
+        "evolution_tokens": {
+          "alfworld": 37000000,
+          "dbbench": 33000000,
+          "webshop": 37000000,
+          "osbench": 27000000,
+          "telecom": 21000000
+        },
+        "telecom_pass_at_3": null,
+        "telecom_pass_cubed": 0.4
+      },
+      {
+        "id": "ahe",
+        "label": "AHE",
+        "description_en": "Edits harness files and checks expected effects in evaluations.",
+        "description_zh": "修改 harness 组件文件，通过评测检验改动是否产生预期效果。",
+        "table": "1",
+        "pass_at_1": {
+          "alfworld": 0.89,
+          "dbbench": 0.573,
+          "webshop": 0.39,
+          "osbench": 0.375,
+          "telecom": 0.95
+        },
+        "evolution_tokens": {
+          "alfworld": 96000000,
+          "dbbench": 105000000,
+          "webshop": 104000000,
+          "osbench": 94000000,
+          "telecom": 88000000
+        },
+        "telecom_pass_at_3": null,
+        "telecom_pass_cubed": 0.875
+      },
+      {
+        "id": "life",
+        "label": "Life-Harness v3",
+        "description_en": "Evolves interventions across four interaction lifecycle layers.",
+        "description_zh": "围绕交互生命周期的四层结构进化干预机制。",
+        "table": "10 / 1",
+        "pass_at_1": {
+          "alfworld": 0.8807,
+          "dbbench": 0.65,
+          "webshop": 0.455,
+          "osbench": 0.396,
+          "telecom": 0.9
+        },
+        "evolution_tokens": {
+          "alfworld": 24000000,
+          "dbbench": 11000000,
+          "webshop": 38000000,
+          "osbench": 26000000,
+          "telecom": 43000000
+        },
+        "telecom_pass_at_3": 1.0,
+        "telecom_pass_cubed": 0.775
+      }
+    ]
+  },
+  "telecom_history": {
+    "benchmark": "telecom",
+    "checked_on": "2026-10-26",
+    "versions": [
+      {
+        "version": "v1",
+        "published_on": "2026-05-21",
+        "table": "7",
+        "source_url": "https://arxiv.org/html/2605.22166v1",
+        "actor": "Qwen3-4B-Instruct",
+        "user_model": "DeepSeek-V4-Flash",
+        "repeats": 3,
+        "metrics": {
+          "pass_at_1": 0.575,
+          "pass_at_3": 0.875,
+          "pass_cubed": 0.3
+        }
+      },
+      {
+        "version": "v2",
+        "published_on": "2026-05-27",
+        "table": "8",
+        "source_url": "https://arxiv.org/html/2605.22166v2",
+        "actor": "Qwen3-4B-Instruct",
+        "user_model": "DeepSeek-V4-Flash",
+        "repeats": 3,
+        "metrics": {
+          "pass_at_1": 0.575,
+          "pass_at_3": 0.875,
+          "pass_cubed": 0.3
+        }
+      },
+      {
+        "version": "v3",
+        "published_on": "2026-10-15",
+        "table": "10",
+        "source_url": "https://arxiv.org/html/2605.22166v3",
+        "actor": "Qwen3-4B-Instruct",
+        "user_model": "DeepSeek-V4-Flash",
+        "repeats": 3,
+        "metrics": {
+          "pass_at_1": 0.9,
+          "pass_at_3": 1,
+          "pass_cubed": 0.775
+        }
+      }
+    ],
+    "note_en": "Versioned paper reports, not our reruns. Qwen3-4B row, not the 18-model average. Score changes alone do not establish why the result changed. Our simulator and runtime-access protocol differ.",
+    "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
+  }
+}

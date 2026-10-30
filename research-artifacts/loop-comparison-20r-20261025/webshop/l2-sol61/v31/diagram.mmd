@@ -1,0 +1,12 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["options"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P1["price-rescue"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P2["missing-size"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["dimension-memory"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["title-rescue"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["feature-probe"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P6["finish-budget"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P7["count-options"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

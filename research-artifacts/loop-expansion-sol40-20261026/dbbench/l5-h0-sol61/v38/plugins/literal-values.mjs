@@ -1,0 +1,7 @@
+export const name='literal-values';
+export function apply(ctx){ctx.on('benchmark/setup',async(p,next)=>{
+ await next();const info=p.taskContext.table.table_info,q=p.taskContext.description.toLowerCase();
+ const samples=info.columns.map((c,i)=>{const vals=[...new Set(info.rows.map(r=>String(r[i]??'')))];const relevant=vals.filter(v=>v.length>2&&q.includes(v.toLowerCase()));const show=[...new Set([...vals.slice(0,4),...relevant,...vals.slice(-2)])].slice(0,12);return JSON.stringify(c.name)+': '+JSON.stringify(show);}).join('\n');
+ const text='Original-value contract. The database stores text. Initial public field examples (not the state after edits):\n'+samples+'\nPreserve exact user-specified strings, comma separators, punctuation, percent signs, capitalization, ordinal/medal labels, country suffixes and date spacing. Do not convert an explicitly requested string into a different date/time/number format. For unspecified style inspect existing values; do not guess field content from its label. Distinguish numeric comparison from exact text equality; numeric coercion can include annotated values accidentally. For abbreviations query DISTINCT values and match real stored spelling. SQL strings use single quotes; escape embedded apostrophes by doubling them and use valid JSON function arguments.';
+ p.ac.on('system-prompt/assemble',async(a,c,n)=>{const r=await n();p.audit({method_id:name,hook:'system-prompt/assemble',text});return {...r,sections:[...r.sections,{name,order:30,text,interpolate:false}]};});
+});}

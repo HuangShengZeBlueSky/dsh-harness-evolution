@@ -1,0 +1,11 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["option-ledger"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P1["purchase-price"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P2["cable-length"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["cable-count"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["fixed-color"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["dessert-identity"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P6["energy-series"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

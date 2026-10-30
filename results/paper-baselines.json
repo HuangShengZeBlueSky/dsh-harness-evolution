@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source_url": "https://arxiv.org/html/2605.22166v3",
   "paper_version": "2605.22166v3",
-  "checked_on": "2026-10-26",
+  "checked_on": "2026-10-30",
   "actor": "Qwen3-4B-Instruct",
   "provenance": "Other-method results are as reported by the Life-Harness authors; these are not our reruns or necessarily the original method authors' scores.",
   "protocol_notes": [

@@ -1,5 +1,7 @@
 # Evolution curves
 
+[**Explore every method, model and benchmark curve**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en). Development, original final tests and retrospective measurements remain distinct; export the selected curve.
+
 Recorded development scores and measured test checkpoints for the current published artifacts. Unmeasured test points are left empty.
 
 ## ALFWorld
@@ -22,9 +24,9 @@ Recorded development scores and measured test checkpoints for the current publis
 
 ## OSBench
 
-[20261026-l4-h0-sol61-v17 — architecture and plugins](../harnesses/osbench/20261026-l4-h0-sol61-v17)
+[20261030-l4-h0-sol61-v03 — architecture and plugins](../harnesses/osbench/20261030-l4-h0-sol61-v03)
 
-![OSBench evolution](../harnesses/osbench/20261026-l4-h0-sol61-v17/evolution.png)
+![OSBench evolution](../harnesses/osbench/20261030-l4-h0-sol61-v03/evolution.png)
 
 ## τ²-Telecom
 

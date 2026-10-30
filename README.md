@@ -2,87 +2,51 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-**Five benchmarks. Native plugins. Measured results.**
+**Methods, evolution curves, reproducible configurations, and measured plugin artifacts.**
 
-Evolved [DSH](https://github.com/deepseek-ai/deepseek-harness) harnesses for a frozen **Qwen3-4B** actor. Each artifact includes working plugin source, an architecture diagram, its evolution curve, and the measured evaluation protocol.
+Freeze the actor and evolve its runtime harness. Inspect what each loop changes, how candidates are selected, what happened, and which reproduction steps are actually supported.
 
-[**Leaderboard**](LEADERBOARD.md) · [**Evolution curves**](docs/CURVES.md) · [**Download**](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/archive/refs/heads/main.zip) · [**Run**](docs/RUNNING.md) · [**Publish an update**](docs/PUBLISHING.md)
+[**Interactive summary and all curves**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)
 
-![Five benchmarks with Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and our artifacts](assets/leaderboard.png)
+## Five benchmark artifacts
 
-**Read the scores:** compare **Bare, ALIGN, AgentSquare, Meta-Harness, AHE, Life-Harness and Ours**. Green marks the best measured published promoted checkpoints, including labelled retrospective discoveries. Training-final results are retained separately in the full leaderboard; other columns are results reported by the Life-Harness authors. Missing results stay empty. Evolution budgets, trials, ALIGN task splits and Telecom protocols differ. [Metric definitions and comparison scope →](docs/METRICS.md)
+| Benchmark | Best released final-selected artifact | Retrospective high point | Life-Harness v3 reference |
+|---|---:|---:|---:|
+| ALFWorld | [95.41% · v18](harnesses/alfworld/20261026-method1-sol61-v18) | — | 88.07% |
+| DBBench | [70.56% · v35](harnesses/dbbench/20261026-l4-h0-sol61-v35) | — | 65.00% |
+| WebShop | [44.50% · v28](harnesses/webshop/20261026-l5-h0-sol61-v28) | [47.00% · v12](harnesses/webshop/20261027-original-best-sol61-v12) | 45.50% |
+| OSBench | [38.89% · v17](harnesses/osbench/20261026-l4-h0-sol61-v17) | [39.35% · v03](harnesses/osbench/20261030-l4-h0-sol61-v03) | 39.60% |
+| Telecom | [84.17% · v06](harnesses/telecom/20261026-start-luna-repaired-v06) | — | 90.00% |
 
-<!-- LATEST:START -->
+These artifacts come from different methods and protocols, not one unified algorithm. Each final artifact follows its campaign selection rule; cross-campaign ranking and retrospective peaks use observed tests. Paper budgets, repeats, and Telecom simulator/access differ. The full leaderboard retains ALIGN, AgentSquare, Meta-Harness, AHE, and historical Life-Harness versions.
 
-## Latest releases · 2026-10-27
+## What the audit established
 
-| Benchmark | Artifact / success | Release basis | Explore |
-|---|---|---|---|
-| WebShop | [v12 · **47.00%**](harnesses/webshop/20261027-original-best-sol61-v12) | Retrospective | [Method](harnesses/webshop/20261027-original-best-sol61-v12#method-flow) · [Harness](harnesses/webshop/20261027-original-best-sol61-v12#architecture) · [Curve](harnesses/webshop/20261027-original-best-sol61-v12#evolution) |
-| DBBench | [v32 · **70.33%**](harnesses/dbbench/20261027-l4-h0-sol61-v32) | Retrospective | [Method](harnesses/dbbench/20261027-l4-h0-sol61-v32#method-flow) · [Harness](harnesses/dbbench/20261027-l4-h0-sol61-v32#architecture) · [Curve](harnesses/dbbench/20261027-l4-h0-sol61-v32#evolution) |
-| OSBench | [v08 · **38.66%**](harnesses/osbench/20261027-l5-h0-sol61-v08) | Retrospective | [Method](harnesses/osbench/20261027-l5-h0-sol61-v08#method-flow) · [Harness](harnesses/osbench/20261027-l5-h0-sol61-v08#architecture) · [Curve](harnesses/osbench/20261027-l5-h0-sol61-v08#evolution) |
+- **More loop machinery did not reliably improve results.** L4/L5 remain strong; L8 delivered experience without consistent gains, and L9 did not dominate the earlier checkpoints.
+- **Protocol changes are additional variables.** DB/Web L4 use 300 training tasks and no separate validation; L5 uses 240+60. Their score difference is not a clean component ablation.
+- **Selection leaves headroom.** Web retrospective 47.00% exceeds that campaign final 44.33%; OS early 39.35% exceeds final 38.89%. Original selections are preserved.
+- **Overall gain and mechanism support are separate.** Loading, triggering, and experience delivery are execution facts; intended repairs and global outcome changes require additional evidence.
 
-<!-- LATEST:END -->
+- **Mean success and reliability can diverge.** OS mechanism feedback reached 32.87% versus summary 29.40%, yet all-three success was 25.00% versus 26.39%. This is a single-search observation.
 
-<!-- TELECOM-HISTORY:START -->
+![Final tests by method](assets/method-final-tests.png)
 
-## Telecom: historical waterlines and our release
+## Reproduce from a shared core
 
-![Telecom historical and current references](assets/telecom-history.png)
+`evolution/` supplies shared three-benchmark L1–L9 code, 36 profiles, task IDs and a small offline example. Each method documents inputs → edits → evaluation → adoption → final selection, with explicit reproduction coverage.
 
-**Our Pass@1 is 26.67 pp higher than the v1/v2 report; all-three success is 32.50 pp higher.** The newer v3 result remains visible. These are cross-report numerical differences, not matched-protocol causal gains.
-
-Sources: [v1 Table 7](https://arxiv.org/html/2605.22166v1), [v2 Table 8](https://arxiv.org/html/2605.22166v2), [v3 Table 10](https://arxiv.org/html/2605.22166v3). These are Qwen3-4B rows, not the 18-model averages. Both old and new papers use DeepSeek-V4-Flash users; ours uses GLM-5.3-Flash plus account-facts/review integration. Differences cannot be attributed to the loop alone.
-
-<!-- TELECOM-HISTORY:END -->
-
-## Choose a harness
-
-Pick a task, see what the harness does, then open its **source**, **diagram**, or **curve**. 插件源码、框图、进化曲线均可直接进入。
-
-<!-- LEADERBOARD:START -->
-
-| Harness · success | What it solves | Selected artifact | Explore |
-|---|---|---|---|
-| **ALFWorld · 95.41%** | Household procedures + visible-state guidance | [v18 · Training final](harnesses/alfworld/20261026-method1-sol61-v18) | [Source](harnesses/alfworld/20261026-method1-sol61-v18/plugins) · [Diagram](harnesses/alfworld/20261026-method1-sol61-v18#architecture) · [Curve](harnesses/alfworld/20261026-method1-sol61-v18#evolution) |
-| **DBBench · 70.56%** | SQL grounding, execution, recovery and submission | [v35 · Training final](harnesses/dbbench/20261026-l4-h0-sol61-v35) | [Source](harnesses/dbbench/20261026-l4-h0-sol61-v35/plugins) · [Diagram](harnesses/dbbench/20261026-l4-h0-sol61-v35#architecture) · [Curve](harnesses/dbbench/20261026-l4-h0-sol61-v35#evolution) |
-| **WebShop · 47.00%** | Search, product options and budget-aware checkout | [v12 · Retrospective](harnesses/webshop/20261027-original-best-sol61-v12) | [Source](harnesses/webshop/20261027-original-best-sol61-v12/plugins) · [Diagram](harnesses/webshop/20261027-original-best-sol61-v12#architecture) · [Curve](harnesses/webshop/20261027-original-best-sol61-v12#evolution) |
-| **OSBench · 38.89%** | File inspection, shell-task contracts and recovery | [v17 · Training final](harnesses/osbench/20261026-l4-h0-sol61-v17) | [Source](harnesses/osbench/20261026-l4-h0-sol61-v17/plugins) · [Diagram](harnesses/osbench/20261026-l4-h0-sol61-v17#architecture) · [Curve](harnesses/osbench/20261026-l4-h0-sol61-v17#evolution) |
-| **τ²-Telecom · 84.17%** | Customer identity, device diagnosis and account review | [v06 · Training final](harnesses/telecom/20261026-start-luna-repaired-v06) | [Source](harnesses/telecom/20261026-start-luna-repaired-v06/plugins) · [Diagram](harnesses/telecom/20261026-start-luna-repaired-v06#architecture) · [Curve](harnesses/telecom/20261026-start-luna-repaired-v06#evolution) |
-
-<!-- LEADERBOARD:END -->
-
-WebShop ranks by **strict success**, not partial reward. Its mean reward is shown separately. Registration counts describe implementation, not independent causal gains. A version such as `v35` is the selected checkpoint within its experiment, not the number of completed rounds.
-
-## How the harness evolves
-
-**Map the current agent → identify a recurring problem → give a plugin an explicit responsibility → evaluate → adopt or reject.**
-
-```mermaid
-flowchart LR
-    A[Training failures] --> B[Agent capability map]
-    B --> C[Plugin mechanism]
-    C --> D[Development evaluation]
-    D -->|Adopt or revise| B
-    D -->|Budget ends| E[Freeze selected harness]
-    E --> F[Final test and release]
+```bash
+python -m pip install -e evolution
+dsh-evolve profiles
+python evolution/scripts/smoke.py ./workspaces/smoke
 ```
 
-One problem class should have an explicit plugin responsibility; plugins can cooperate and redundant guidance can be removed. This repository shares the method overview and final products, not unpublished paper details. [Method overview →](docs/METHOD.md)
+This scripted-model example exercises real DSH hooks and one adoption cycle; it does not remeasure benchmark scores. Formal runs require models, data and environments. ALFWorld/Telecom and feedback-extension integration boundaries are documented.
 
-## Publish once, update the leaderboard
+## Read and update the data
 
-**New harness + test data + curve → versioned release → refreshed leaderboard.**
+[Round records and detailed statistics](results/research/README.md) · [Metric definitions](docs/METRICS.md) · [All artifacts](LEADERBOARD.md) · [Publishing](docs/PUBLISHING.md)
 
-The publication tool preserves previous artifacts. GitHub Actions rebuilds the overview, scores, artifact pages and curves when release data changes. No private experiment service is polled. [Publication guide →](docs/PUBLISHING.md)
+Training, validation and test measurements remain separate. Inspect repeats, valid coverage, adoption/regression, models and splits. Time fields state their scope; missing costs stay null; three test trials are not three independent searches. New measured records rebuild the site, which shows a collection date rather than pretending to be a live monitor.
 
-<details>
-<summary>Evaluation provenance and acknowledgements</summary>
-
-Scores come from complete tests of published promoted artifacts. Releases explicitly distinguish training-selected final artifacts from retrospectively selected adopted checkpoints. Choosing a release using observed test scores is not a new untouched evaluation. The portable package has been checked for loading; reported scores come from the original completed runs.
-
-Paper waterlines, local baseline/full measurements and published artifact scores remain separate in the [full leaderboard](LEADERBOARD.md). Unmeasured costs are shown as missing, not zero.
-
-Built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Benchmarks and reference protocols draw on [Life-Harness](https://github.com/Tianshi-Xu/Life-Harness), [AgentBench](https://github.com/THUDM/AgentBench), [ALFWorld](https://github.com/alfworld/alfworld), [WebShop](https://github.com/princeton-nlp/WebShop), and [τ²-bench](https://github.com/sierra-research/tau2-bench). [MIT license](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md)
-
-</details>
+[MIT](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md) · [DSH](https://github.com/deepseek-ai/deepseek-harness)

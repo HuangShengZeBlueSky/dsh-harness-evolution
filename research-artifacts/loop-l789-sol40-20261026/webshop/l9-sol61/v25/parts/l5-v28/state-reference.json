@@ -1,0 +1,40 @@
+{
+  "parent": "v25",
+  "at": 1792973465.4544525,
+  "modules": [
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute"
+      ]
+    },
+    {
+      "id": "search-evidence",
+      "module": "plugins/search-evidence.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute"
+      ]
+    },
+    {
+      "id": "checkout-loop",
+      "module": "plugins/checkout-loop.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "price-evidence",
+      "module": "plugins/price-evidence.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "tools/pre-execute"
+      ]
+    }
+  ]
+}

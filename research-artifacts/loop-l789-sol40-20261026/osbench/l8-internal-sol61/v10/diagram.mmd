@@ -1,0 +1,8 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["unique-merge-guard"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P1["grep-pattern-recovery"] -. "benchmark/setup / tools/post-execute" .-> H
+    P2["path-input-recovery"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["matching-line-guard"] -. "benchmark/setup / tools/pre-execute" .-> H

@@ -1,0 +1,36 @@
+{
+  "methods": [
+    {
+      "id": "sql-recovery",
+      "module": "plugins/sql-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "mutation-ledger",
+      "module": "plugins/mutation-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "public-table-context",
+      "module": "plugins/public-table-context.mjs",
+      "config": {}
+    },
+    {
+      "id": "typed-order",
+      "module": "plugins/typed-order.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-text",
+      "module": "plugins/numeric-text.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "sql-recovery",
+    "mutation-ledger",
+    "public-table-context",
+    "typed-order",
+    "numeric-text"
+  ]
+}

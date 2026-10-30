@@ -1,0 +1,36 @@
+{
+  "methods": [
+    {
+      "id": "inspection-contract",
+      "module": "plugins/inspection-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "global-projection",
+      "module": "plugins/global-projection.mjs",
+      "config": {}
+    },
+    {
+      "id": "sample-evidence",
+      "module": "plugins/sample-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "task-contract",
+      "module": "plugins/task-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "repetition-recovery",
+      "module": "plugins/repetition-recovery.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "inspection-contract",
+    "global-projection",
+    "sample-evidence",
+    "task-contract",
+    "repetition-recovery"
+  ]
+}

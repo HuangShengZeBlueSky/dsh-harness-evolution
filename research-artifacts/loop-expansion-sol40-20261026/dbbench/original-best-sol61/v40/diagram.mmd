@@ -1,0 +1,19 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["sql-workflow"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P1["value-grounding"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P2["task-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P3["insert-grounding"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P4["numeric-identity"] -. "benchmark/setup / tools/post-execute" .-> H
+    P5["result-fields"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P6["finalization-contract"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P7["calendar-semantics"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P8["aggregate-format"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P9["schedule-order"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P10["insert-field-roles"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P11["insert-representation"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P12["schema-orientation"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P13["quantity-answer"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P14["listed-count"] -. "benchmark/setup / tools/pre-execute" .-> H

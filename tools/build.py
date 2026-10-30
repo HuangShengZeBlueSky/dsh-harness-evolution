@@ -133,5 +133,7 @@ def main():
  (ROOT/'docs/CURVES.md').write_text('\n'.join(curves))
  comparison.render(ROOT,winners,rows,refs,local,finals)
  (ROOT/'results/leaderboard.json').write_text(json.dumps({'schema_version':2,'update_mode':'release-driven','champions':finals,'best_measured':winners,'releases':rows,'paper_references':catalog,'comparison_policy':policy(),'telecom_history':json.loads((ROOT/'results/life-harness-telecom-history.json').read_text())},ensure_ascii=False,indent=2)+'\n')
+ from research_view import build as build_research
+ build_research(ROOT)
  print(f'Rendered {len(rows)} releases across {len(winners)} benchmarks.')
 if __name__=='__main__':main()

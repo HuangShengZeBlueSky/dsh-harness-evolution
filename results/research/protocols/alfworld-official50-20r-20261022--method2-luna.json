@@ -1,0 +1,53 @@
+{
+  "name": "official50-method2-luna",
+  "method": "luna_multi",
+  "rounds": 20,
+  "baseline": "baseline",
+  "runtime": "runtime",
+  "harness_api": "harness-api.txt",
+  "min_improvement": 0,
+  "test_schedule": "final",
+  "optimizer": {
+    "model": "gpt-6-luna",
+    "effort": "high",
+    "sandbox": "danger-full-access"
+  },
+  "benchmark": {
+    "kind": "python",
+    "train": "batches/batch-01.jsonl",
+    "test": "test.jsonl",
+    "direction": "maximize",
+    "success_score": 1,
+    "concurrency": 5,
+    "max_steps": 50,
+    "max_model_calls": 50,
+    "timeout_seconds": 1500,
+    "no_tool_feedback": "You MUST call the take_action tool — do NOT output plain text without a tool call.",
+    "model": {
+      "name": "Qwen3-4B-Instruct-2507",
+      "base_url": "${SERVICE_ENDPOINT}",
+      "api_key_env": "",
+      "temperature": 0,
+      "max_tokens": 4096,
+      "timeout_seconds": 180,
+      "max_retries": 2,
+      "send_seed": false,
+      "extra_body": {
+        "parallel_tool_calls": false
+      }
+    },
+    "environment": {
+      "factory": "environment.py:create_environment",
+      "data_root": "${ASSET_ROOT}/json_2.1.1",
+      "system_prompt_file": "${ASSET_ROOT}/system-prompt.txt"
+    },
+    "train_batches": [
+      "batches/batch-01.jsonl",
+      "batches/batch-02.jsonl",
+      "batches/batch-03.jsonl",
+      "batches/batch-04.jsonl",
+      "batches/batch-05.jsonl",
+      "batches/batch-06.jsonl"
+    ]
+  }
+}

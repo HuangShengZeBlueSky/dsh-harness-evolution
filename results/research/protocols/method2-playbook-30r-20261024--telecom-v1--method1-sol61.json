@@ -1,0 +1,27 @@
+{
+  "name": "telecom-v1-playbook-sol61",
+  "domain": "Telecom",
+  "engine": "telecom",
+  "method": "astra_autonomous",
+  "rounds": 30,
+  "start_label": "原始V1四插件",
+  "baseline": "baseline",
+  "playbook": "PLAYBOOK.md",
+  "optimizer": {
+    "model": "gpt-6.1-sol",
+    "effort": "high"
+  },
+  "benchmark": {
+    "train_tasks": 74,
+    "test_tasks": 40,
+    "trials": 3,
+    "concurrency": 12,
+    "max_steps": 200,
+    "timeout_seconds": 1500,
+    "model": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "simulator": "glm-5.3-flash",
+    "test_schedule": "final"
+  }
+}

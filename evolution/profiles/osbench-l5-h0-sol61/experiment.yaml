@@ -1,0 +1,87 @@
+name: osbench-l5-h0-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: train.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 16
+  max_model_calls: 16
+  timeout_seconds: 900
+  no_tool_feedback: No tool call detected. Please call a tool.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 575
+    max_retries: 0
+    send_seed: true
+    extra_body:
+      parallel_tool_calls: false
+  environment:
+    factory: environment.py:create_environment
+    docker_host: unix:///var/run/docker.sock
+    life_harness: false
+  validation: validation.jsonl
+  runner: osbench
+  transport:
+    model_url: ${BENCH_CHAT_URL}
+    tokenizer_url: ${BENCH_TOKENIZER_URL}
+    max_context_tokens: 32768
+    max_output_tokens: 4096
+    request_timeout_seconds: 575
+    transport_retries: 2
+    max_model_calls: 16
+domain: OSBench
+start_label: H0零增强插件
+playbook: PLAYBOOK.md
+batch_id: '20261026'
+loop:
+  variant: L5
+  label: 场景专用循环
+  require_agent_map: true
+  baseline_pool: l5-h0
+  test_policy: only final selected checkpoint
+  source_experiment: null
+  source_checkpoint: null
+  selection_metric: success
+  source_method: null
+  validation_families:
+    train/0154: temporal-filter
+    train/0613: temporal-filter
+    train/0749: temporal-filter
+    train/0825: temporal-filter
+    train/0839: temporal-filter
+    train/0979: temporal-filter
+    train/0872: temporal-filter
+    train/0460: temporal-filter
+    train/0656: temporal-filter
+    train/0671: other-count
+    train/0912: unique-entity
+    train/0331: unique-entity
+    train/0043: unique-entity
+    train/0680: aggregate
+    train/0246: aggregate
+    train/0390: aggregate
+    train/0790: aggregate
+  split_policy: Whole public task-mechanism families withheld from original 100 training
+    tasks; heuristic labels, no test content
+  requires_seed_artifact: false

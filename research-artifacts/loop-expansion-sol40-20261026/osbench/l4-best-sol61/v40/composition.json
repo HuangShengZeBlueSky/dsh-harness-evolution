@@ -1,0 +1,102 @@
+{
+  "methods": [
+    {
+      "id": "repair-text-submit",
+      "module": "repair-text-submit.mjs",
+      "config": {}
+    },
+    {
+      "id": "unique-values",
+      "module": "unique-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "grep-dialect",
+      "module": "grep-dialect.mjs",
+      "config": {}
+    },
+    {
+      "id": "matching-lines",
+      "module": "matching-lines.mjs",
+      "config": {}
+    },
+    {
+      "id": "command-lexemes",
+      "module": "command-lexemes.mjs",
+      "config": {}
+    },
+    {
+      "id": "execution-recovery",
+      "module": "execution-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "field-contract",
+      "module": "field-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "case-contract",
+      "module": "case-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "selection-contract",
+      "module": "selection-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "ranking-contract",
+      "module": "ranking-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "temporal-contract",
+      "module": "temporal-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "status-contract",
+      "module": "status-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "word-contract",
+      "module": "word-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "message-contract",
+      "module": "message-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "line-content-contract",
+      "module": "line-content-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "size-query-contract",
+      "module": "size-query-contract.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "repair-text-submit",
+    "unique-values",
+    "grep-dialect",
+    "matching-lines",
+    "command-lexemes",
+    "execution-recovery",
+    "field-contract",
+    "case-contract",
+    "selection-contract",
+    "ranking-contract",
+    "temporal-contract",
+    "status-contract",
+    "word-contract",
+    "message-contract",
+    "line-content-contract",
+    "size-query-contract"
+  ]
+}

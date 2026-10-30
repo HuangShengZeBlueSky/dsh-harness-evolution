@@ -1,0 +1,1 @@
+{"methods":[{"id":"protocol","module":"plugins/protocol.mjs","config":{}},{"id":"unique-gate","module":"plugins/unique-gate.mjs","config":{}},{"id":"regex-gate","module":"plugins/regex-gate.mjs","config":{}},{"id":"path-memory","module":"plugins/path-memory.mjs","config":{}}],"selected":["protocol","unique-gate","regex-gate","path-memory"]}

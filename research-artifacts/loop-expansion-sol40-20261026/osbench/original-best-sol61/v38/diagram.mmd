@@ -1,0 +1,22 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["canonical-word-values"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P1["repair-text-submit"] -. "benchmark/setup / llm/stream / system-prompt/assemble / …" .-> H
+    P2["grep-prefix-guard"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P3["matching-line-guard"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P4["shell-path-recovery"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P5["grep-regex-guard"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P6["temporal-comparison-guard"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P7["schema-field-contract"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P8["numeric-field-filter"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P9["size-total-contract"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P10["literal-case-contract"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P11["nul-file-total"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P12["date-component-projection"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P13["date-value-contract"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P14["ranked-distinct-contract"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P15["explicit-tool-transport"] -. "benchmark/setup / llm/stream / tools/post-execute" .-> H
+    P16["semantic-command-transport"] -. "benchmark/setup / llm/stream / tools/post-execute" .-> H
+    P17["execution-receipt-gate"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H

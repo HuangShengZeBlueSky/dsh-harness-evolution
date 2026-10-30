@@ -1,0 +1,48 @@
+{
+  "methods": [
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "purchase-price",
+      "module": "plugins/purchase-price.mjs",
+      "config": {}
+    },
+    {
+      "id": "cable-length",
+      "module": "plugins/cable-length.mjs",
+      "config": {}
+    },
+    {
+      "id": "cable-count",
+      "module": "plugins/cable-count.mjs",
+      "config": {}
+    },
+    {
+      "id": "fixed-color",
+      "module": "plugins/fixed-color.mjs",
+      "config": {}
+    },
+    {
+      "id": "dessert-identity",
+      "module": "plugins/dessert-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "energy-series",
+      "module": "plugins/energy-series.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "option-ledger",
+    "purchase-price",
+    "cable-length",
+    "cable-count",
+    "fixed-color",
+    "dessert-identity",
+    "energy-series"
+  ]
+}

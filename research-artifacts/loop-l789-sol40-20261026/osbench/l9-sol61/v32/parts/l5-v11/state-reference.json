@@ -1,0 +1,25 @@
+{
+  "parent": "v08",
+  "at": 1792958283.4809687,
+  "modules": [
+    {
+      "id": "answer-call-repair",
+      "module": "plugins/answer-call-repair.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "llm/stream",
+        "session/disposed",
+        "system-prompt/assemble"
+      ]
+    },
+    {
+      "id": "zero-result-review",
+      "module": "plugins/zero-result-review.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute"
+      ]
+    }
+  ]
+}

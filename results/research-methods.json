@@ -1,0 +1,1022 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-30",
+  "unit": "A method recipe, not an independently replicated result or a universally superior successor.",
+  "alias_note": "Historical directory method1 maps to M2_free; method2 maps to M1_cooperative. Use config method semantics, not directory digits.",
+  "common_runtime": "evolution/src/astra_evolve/project.py",
+  "methods": [
+    {
+      "id": "M1_cooperative",
+      "label_zh": "方法一：协同插件修改",
+      "label_en": "M1: coordinated plugin edits",
+      "one_line_zh": "同一优化会话，每轮协调修改至少两个启用插件。",
+      "one_line_en": "One persistent optimizer edits at least two active plugins per round.",
+      "change_zh": "限制每轮至少两个实质变更，并逐轮记录六层复盘。",
+      "change_en": "Require at least two substantive changes and a six-layer round review.",
+      "rule_zh": "同批训练均值严格提高，且修改插件有实际输入或控制记录，才有采用资格。",
+      "rule_en": "Require a strict same-batch training mean gain and observed input/control use of changed plugins.",
+      "inputs_zh": "父版、同批训练轨迹、既定接口与当前进度。",
+      "inputs_en": "Parent, current-batch training traces, fixed interfaces and progress.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/astra_evolve/project.py"
+      ],
+      "profile_scope": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "磁盘早期 method2／luna_multi 对应本方法；协同指插件协同，不是多个优化器。通用运行器并不自动恢复原二十轮提示、起点和全部环境。",
+      "limitations_en": "Historical method2 / luna_multi maps here. Coordination means plugin coordination, not multiple optimizers. The common runner alone does not reproduce original prompts, starts or environments."
+    },
+    {
+      "id": "M2_free",
+      "label_zh": "方法二：自由插件修改",
+      "label_en": "M2: free plugin edits",
+      "one_line_zh": "单一持续会话自由选择新增、修改、删除或组合插件。",
+      "one_line_en": "One persistent optimizer freely adds, edits, removes or combines plugins.",
+      "change_zh": "不设插件数量配额，保留同批比较及真实使用条件。",
+      "change_en": "Remove a plugin-count quota while retaining paired-batch evaluation and use evidence.",
+      "rule_zh": "同批训练均值严格提高，且变更插件实际进入输入或控制路径。",
+      "rule_en": "Require a strict same-batch training mean gain and observed use of changed plugins.",
+      "inputs_zh": "与方法一相同的任务批次与基线，逐组隔离训练材料。",
+      "inputs_en": "The same task batches and baseline as M1, with per-arm training materials isolated.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/astra_evolve/project.py"
+      ],
+      "profile_scope": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "磁盘早期 method1／astra_autonomous 对应本方法。两路线ALFWorld的Sol已选版均为95.41%；不能由此推广到所有场景。",
+      "limitations_en": "Historical method1 / astra_autonomous maps here. Selected Sol artifacts from both routes reached 95.41% on ALFWorld; this does not establish universal superiority."
+    },
+    {
+      "id": "astra_original",
+      "label_zh": "原始 Astra：已有插件起点",
+      "label_en": "Original Astra: seeded plugin evolution",
+      "one_line_zh": "持续会话接续已有 V1／V2 能力，自由改插件。",
+      "one_line_en": "A persistent session continues from existing V1/V2 capabilities.",
+      "change_zh": "真实业务回执驱动有界动作检查与恢复；没有固定插件配额。",
+      "change_en": "Use actual business receipts for bounded action checks and recovery; no fixed plugin quota.",
+      "rule_zh": "按完整训练成绩选择下一父版；历史测试测量不作为选版规则。",
+      "rule_en": "Select the next parent using complete training scores; historical test measurements do not define selection.",
+      "inputs_zh": "已有V1／V2代码与训练证据；Telecom双角色运行协议。",
+      "inputs_en": "V1/V2 code and training evidence under the Telecom two-role protocol.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "读取当前父版与失败",
+        "选择一个具体机制并实现",
+        "完整训练后保留更好父版"
+      ],
+      "steps_en": [
+        "Read the current parent and failures",
+        "Implement a concrete mechanism",
+        "Keep the better parent after full training"
+      ],
+      "final_selection_zh": "训练最终选V4：174/222；原测试96/120（80.00%）。",
+      "final_selection_en": "Training selects V4: 174/222; original test 96/120 (80.00%).",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "不是从空插件出发。后来的配对干预测量95/120与原96/120是不同测量；公开统一入口未复刻这套历史控制器。",
+      "limitations_en": "This is not an empty-plugin start. A later paired intervention measured 95/120; it is separate from the original 96/120. The public unified entry point does not reconstruct this historical controller."
+    },
+    {
+      "id": "luna20",
+      "label_zh": "Luna：空插件二十轮",
+      "label_en": "Luna: 20 rounds from empty plugins",
+      "one_line_zh": "从空插件起点出发，持续会话进化二十个候选。",
+      "one_line_en": "Evolve 20 candidates from empty plugins in one persistent session.",
+      "change_zh": "每轮至少两个启用插件发生实质变化，并保留六层复盘。",
+      "change_en": "Require two substantive active-plugin edits per round and retain the six-layer review.",
+      "rule_zh": "完整74题×3训练严格提高才接续；测试不指导下一轮。",
+      "rule_en": "Continue only after a strict full 74-task × 3 training gain; test does not guide the next round.",
+      "inputs_zh": "空插件起点、训练轨迹、同一优化会话。",
+      "inputs_en": "Empty-plugin start, training traces and the same optimizer session.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "归因及提出协调修改",
+        "实现并核对六层记录",
+        "完整训练、采用决定、继续当前最佳"
+      ],
+      "steps_en": [
+        "Diagnose and propose coordinated changes",
+        "Implement and review the six layers",
+        "Run full training, decide and continue the current best"
+      ],
+      "final_selection_zh": "训练选v14：115/222（51.80%）；测试56/120（46.67%）。",
+      "final_selection_en": "Training selects v14: 115/222 (51.80%); test 56/120 (46.67%).",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "与Astra同时不同模型、起点和编辑约束，不能解释成单独的模型能力差。历史配方尚未完整接入统一入口。",
+      "limitations_en": "Model, startpoint and editing constraints all differ from Astra; this is not an isolated model comparison. The historical recipe is not fully ported to the unified entry point."
+    },
+    {
+      "id": "playbook",
+      "label_zh": "DSH Playbook 三十轮",
+      "label_en": "DSH Playbook: 30 rounds",
+      "one_line_zh": "给优化器更具体的钩子能力、状态和实现指导。",
+      "one_line_en": "Give the optimizer explicit hook, state and implementation guidance.",
+      "change_zh": "改变提案前的指导，不把Playbook当执行时插件。",
+      "change_en": "Change proposal guidance; the Playbook itself is not a runtime plugin.",
+      "rule_zh": "保留各原生实例训练采用规则，按本实例预算结束。",
+      "rule_en": "Retain each native campaign’s training adoption rule and configured budget.",
+      "inputs_zh": "当前代码、训练证据、DSH能力指导；起点分H0与已有插件。",
+      "inputs_en": "Current code, training evidence and DSH guidance; starts include H0 and existing plugins.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom",
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "Telecom H0 Sol为77.50%；OS一个训练大幅上升的分支测试30.79%。指导更详细未带来跨场景一致收益；历史提示尚未全部移植。",
+      "limitations_en": "Telecom H0 Sol reached 77.50%; an OS branch with large training gains tested at 30.79%. More detailed guidance did not yield consistent cross-benchmark gains; historical prompts are not fully ported."
+    },
+    {
+      "id": "L1",
+      "label_zh": "L1：验证门槛",
+      "label_en": "L1: validation gate",
+      "one_line_zh": "训练变好，开发验证也不能变差。",
+      "one_line_en": "Training must improve without development-validation regression.",
+      "change_zh": "在同批训练晋升上增加固定验证集非退步条件。",
+      "change_en": "Add validation non-regression to the paired-batch training gate.",
+      "rule_zh": "当前冠军为父版；训练均值严格提高、验证均值不降、变更插件实际使用。",
+      "rule_en": "Parent must be the champion; require training mean gain, non-decreasing validation mean and changed-plugin use.",
+      "inputs_zh": "当前冠军、训练批次、固定开发验证集。",
+      "inputs_en": "Current champion, training batch and fixed development-validation set.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l123.py",
+        "evolution/src/dsh_evolve/loops/loop_policy.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "反复使用同一小验证集仍可能过拟合；三场景四十轮，历史Telecom二十轮另列。",
+      "limitations_en": "Repeated use of a small validation set can still overfit; the three-benchmark 40-round campaigns are separate from historical 20-round Telecom runs.",
+      "selected_final_test": {
+        "dbbench": 0.5433333333,
+        "webshop_strict": 0.3716666667,
+        "osbench": 0.3263888889
+      }
+    },
+    {
+      "id": "L2",
+      "label_zh": "L2：固定子集回放",
+      "label_en": "L2: fixed-subset replay",
+      "one_line_zh": "在L1上保护一小组预先选定的训练任务。",
+      "one_line_en": "Protect a preselected subset of training tasks on top of L1.",
+      "change_zh": "增加机制假设及固定任务子集回放。",
+      "change_en": "Add a mechanism hypothesis and fixed task-subset replay.",
+      "rule_zh": "L1全部条件，加回放子集分数总和不下降。",
+      "rule_en": "All L1 conditions, plus non-decreasing replay-subset score sum.",
+      "inputs_zh": "L1输入，加replay-ids.json所选任务。",
+      "inputs_en": "L1 inputs plus the tasks selected by replay-ids.json.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l123.py",
+        "evolution/src/dsh_evolve/loops/loop_policy.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "实际代码并非动态只回放父版成功题；总分非退步仍可由新修复抵消旧退步。",
+      "limitations_en": "The implementation does not dynamically choose only parent-success tasks. Aggregate non-regression can conceal regressions offset by repairs.",
+      "selected_final_test": {
+        "dbbench": 0.6122222222,
+        "webshop_strict": 0.3416666667,
+        "osbench": 0.2893518519
+      }
+    },
+    {
+      "id": "L3",
+      "label_zh": "L3：三个分支",
+      "label_en": "L3: three retained branches",
+      "one_line_zh": "分开管理可探索分支与当前冠军。",
+      "one_line_en": "Manage exploration branches separately from the current champion.",
+      "change_zh": "保留最多三个验证较好的候选，从最少访问分支继续。",
+      "change_en": "Retain up to three high-validation candidates and continue the least-visited branch.",
+      "rule_zh": "变更实际使用且验证不低于归档最低值（未满三项则可入档）；仅验证严格超过冠军才换冠军。",
+      "rule_en": "Require observed changed-plugin use and validation at least the archive minimum (or a free slot). Replace the champion only on strict validation improvement.",
+      "inputs_zh": "分支归档、使用次数、当前批次与固定验证。",
+      "inputs_en": "Branch archive, visit counts, current batch and fixed validation.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "选最少访问父版，同次数优先更高验证",
+        "执行共同候选流程",
+        "分别记录分支保留和冠军变化"
+      ],
+      "steps_en": [
+        "Choose the least-visited parent; break ties by higher validation",
+        "Execute the common candidate loop",
+        "Record archive retention and champion changes separately"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l123.py",
+        "evolution/src/dsh_evolve/loops/loop_policy.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "不要求每次入档都训练提升；已有分支归档不等于按机制互补保留的Archive方案。",
+      "limitations_en": "Archive admission need not improve training. This score-based archive is not the proposed mechanism-complementary archive.",
+      "selected_final_test": {
+        "dbbench": 0.5855555556,
+        "webshop_strict": 0.3983333333,
+        "osbench": 0.3587962963
+      }
+    },
+    {
+      "id": "L4",
+      "label_zh": "L4：插件能力结构",
+      "label_en": "L4: plugin capability map",
+      "one_line_zh": "先说明已有插件各管什么，再提出改动。",
+      "one_line_en": "Explain existing plugin responsibilities before proposing an edit.",
+      "change_zh": "候选生成前维护能力、状态、重叠、冲突和缺口。",
+      "change_en": "Maintain capabilities, state, overlap, conflicts and gaps before proposal.",
+      "rule_zh": "当前冠军为父版；训练均值严格提高且变更实际使用。仅在配置了独立验证时才要求其均值不降。",
+      "rule_en": "Use the current champion; require training mean gain and observed changed-plugin use. Require validation non-regression only when independent validation is configured.",
+      "inputs_zh": "当前源码、启用插件、当前训练批次；独立验证是否存在以实例配置为准。",
+      "inputs_en": "Current source, active plugins and training batch; whether an independent validation set exists is instance-specific.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "维护agent-state.md和proposal.md",
+        "实施最小必要插件改动",
+        "同批训练和验证后决定"
+      ],
+      "steps_en": [
+        "Update agent-state.md and proposal.md",
+        "Implement the necessary plugin edits",
+        "Decide after paired-batch training and validation"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l45.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "DB结果较强，但不是能力图的独立消融。L4 H0的DB/Web为300训练（6×50），无独立验证；不能概括成L4统一带验证门槛。",
+      "limitations_en": "The strong DB result is not an isolated capability-map ablation. L4 H0 DB/Web use 300 training tasks (6x50) without independent validation; L4 is not universally validation-gated.",
+      "selected_final_test": {
+        "dbbench": 0.7055555556,
+        "webshop_strict": 0.4083333333,
+        "osbench": 0.3888888889
+      }
+    },
+    {
+      "id": "L4_seeded",
+      "label_zh": "L4：已有最佳起点",
+      "label_en": "L4: seeded continuation",
+      "one_line_zh": "从旧训练选定产物继续L4。",
+      "one_line_en": "Continue L4 from an earlier training-selected artifact.",
+      "change_zh": "改变起点，L4机制不变。",
+      "change_en": "Change the startpoint while retaining L4.",
+      "rule_zh": "沿用L4门槛；基线必须是指定旧产物。",
+      "rule_en": "Use the L4 gate and the specified prior artifact as baseline.",
+      "inputs_zh": "L4输入，加指定起点的完整插件与组合。",
+      "inputs_en": "L4 inputs plus the complete specified seed artifact.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "维护agent-state.md和proposal.md",
+        "实施最小必要插件改动",
+        "同批训练和验证后决定"
+      ],
+      "steps_en": [
+        "Update agent-state.md and proposal.md",
+        "Implement the necessary plugin edits",
+        "Decide after paired-batch training and validation"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l45.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "requires_prior_artifact",
+      "limitations_zh": "高起点未稳定提高最终测试；初始化时不能用空插件偷偷代替旧起点。",
+      "limitations_en": "A stronger start did not consistently improve final tests; initialization must not substitute empty plugins for the required seed.",
+      "selected_final_test": {
+        "dbbench": 0.6244444444,
+        "webshop_strict": 0.42,
+        "osbench": 0.3726851852
+      }
+    },
+    {
+      "id": "resume",
+      "label_zh": "旧方法续跑",
+      "label_en": "Continue the original method",
+      "one_line_zh": "增加搜索预算，保留旧方法与训练选定起点。",
+      "one_line_en": "Extend the search budget while retaining the original method and training-selected start.",
+      "change_zh": "区分起点与额外搜索预算，不新增能力图要求。",
+      "change_en": "Separate seed and extra-budget effects without adding a capability-map requirement.",
+      "rule_zh": "以对应Resume实例的训练/验证门槛为准；不能自动视作L4。",
+      "rule_en": "Use the corresponding Resume instance’s training/validation gate; do not relabel it L4.",
+      "inputs_zh": "旧训练选定产物、原方法定义与后续训练材料。",
+      "inputs_en": "Prior training-selected artifact, original method definition and subsequent training materials.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l45.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "requires_prior_artifact",
+      "limitations_zh": "Web最终v36为44.33%；事后测试v12为47.00%，两者必须分开。",
+      "limitations_en": "Web final v36 tested at 44.33%; retrospective v12 tested at 47.00%. Keep both measurements and selection roles distinct.",
+      "selected_final_test": {
+        "dbbench": 0.6222222222,
+        "webshop_strict": 0.4433333333,
+        "osbench": 0.3564814815
+      }
+    },
+    {
+      "id": "L5",
+      "label_zh": "L5：场景化目标与验证",
+      "label_en": "L5: benchmark-specific objectives",
+      "one_line_zh": "数据库跨批检查、购物严格成功、操作系统按类别验证。",
+      "one_line_en": "Check another DB batch, optimize strict shopping success and validate OS categories.",
+      "change_zh": "继承L4能力梳理；调整各场景目标和门槛。",
+      "change_en": "Retain L4 capability review while changing benchmark objectives and gates.",
+      "rule_zh": "DB：L4加下一批不退步；Web：同批严格成功提高且验证严格成功不降；OS：L4加类别宏平均不降。",
+      "rule_en": "DB: L4 plus next-batch non-regression. Web: strict training-success gain and strict-validation non-regression. OS: L4 plus category-macro non-regression.",
+      "inputs_zh": "当前能力图、训练与验证；DB另读下一批，OS包含任务类别映射。",
+      "inputs_en": "Capability map, training and validation; an extra DB batch and OS task-family map.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "维护能力和场景问题提案",
+        "按场景评分与验证逻辑评测",
+        "门槛满足才采用，预算结束后最终测试"
+      ],
+      "steps_en": [
+        "Maintain capabilities and the benchmark-specific proposal",
+        "Evaluate with the benchmark’s objective and validation logic",
+        "Accept only when gates hold; test the final selection after the budget"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l45.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "相较L4，L5的DB/Web采用240训练（6×40）加60验证，同时改变了数据划分和门槛。Web平均奖励下降但严格成功提高可以合法采用。",
+      "limitations_en": "Relative to L4, L5 DB/Web use 240 training tasks (6x40) plus 60 validation tasks, changing both partitions and gates. A Web candidate may be accepted when mean reward falls but strict success improves.",
+      "selected_final_test": {
+        "dbbench": 0.6655555556,
+        "webshop_strict": 0.445,
+        "osbench": 0.3819444444
+      }
+    },
+    {
+      "id": "L6",
+      "label_zh": "L6：先计划后编码",
+      "label_en": "L6: plan before code",
+      "one_line_zh": "先写可核对的失败簇、修复位置和预期行为。",
+      "one_line_en": "Record trace-backed failure clusters, repair locations and expected behavior before coding.",
+      "change_zh": "把提案固定在实现之前，并统计成对修复/回退。",
+      "change_en": "Record the proposal before implementation and report paired repairs/regressions.",
+      "rule_zh": "同批严格成功提高；变更必须在计划内且有实际使用/移除证据；不要求原目标簇至少修好一题。",
+      "rule_en": "Require paired-batch strict-success gain, planned edits and observed use/removal evidence; no rule requires a repaired task in the original target cluster.",
+      "inputs_zh": "父版训练轨迹、插件状态、失败簇、成功对照。",
+      "inputs_en": "Parent training traces, plugin state, failure clusters and successful controls.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "准备候选并写analysis.json",
+        "plan冻结修复假设，再改插件",
+        "评测并核对目标修复、全体回退与采用门槛"
+      ],
+      "steps_en": [
+        "Prepare the candidate and write analysis.json",
+        "Record the repair hypothesis with plan, then edit plugins",
+        "Evaluate target repairs, global regressions and adoption eligibility"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l6.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "没有独立验证，使用300训练；没有完整继承L5。40次采用中11次未修好计划目标，总收益与解释命中必须分开。",
+      "limitations_en": "L6 uses 300 training tasks without independent validation and does not fully inherit L5. Eleven of 40 acceptances repaired none of their planned targets; total gains and explanation accuracy are separate.",
+      "selected_final_test": {
+        "dbbench": 0.5622222222,
+        "webshop_strict": 0.3983333333,
+        "osbench": 0.2939814815
+      }
+    },
+    {
+      "id": "L7",
+      "label_zh": "L7：失败覆盖与场景验证",
+      "label_en": "L7: failure coverage and benchmark validation",
+      "one_line_zh": "检查全部失败索引，深读代表轨迹，恢复场景验证。",
+      "one_line_en": "Cover all failed-task IDs, inspect representative traces and add benchmark validation.",
+      "change_zh": "在L6上约束失败覆盖，并加验证/下一批/类别宏平均门槛。",
+      "change_en": "Add failure-ID coverage and validation/next-batch/category gates to L6.",
+      "rule_zh": "L6条件加验证严格成功不降；DB下一批严格成功不降；OS类别宏平均不降。",
+      "rule_en": "L6 gates plus strict-validation non-regression; DB next-batch strict success and OS category macro must not regress.",
+      "inputs_zh": "L6输入，加完整失败索引、验证集与场景映射。",
+      "inputs_en": "L6 inputs plus the full failure index, validation set and benchmark mappings.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "所有失败编号归簇，允许未解决簇",
+        "执行L6计划、实现、评测",
+        "核对验证和场景门槛后决定"
+      ],
+      "steps_en": [
+        "Assign every failed-task ID to a cluster, allowing unresolved clusters",
+        "Execute L6 planning, implementation and evaluation",
+        "Apply validation and benchmark-specific gates before deciding"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l789.py",
+        "evolution/src/dsh_evolve/loops/l6.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "三场景为300训练加60验证，区别于L1-L3/L5的240加60。编号全覆盖不等于读完每条完整轨迹，也不是单变量变化。",
+      "limitations_en": "The three benchmarks use 300 training plus 60 validation tasks, unlike the 240+60 L1-L3/L5 setup. ID coverage is not full-trajectory reading, and this is not a one-variable change.",
+      "selected_final_test": {
+        "dbbench": 0.4966666667,
+        "webshop_strict": 0.365,
+        "osbench": 0.3171296296
+      }
+    },
+    {
+      "id": "L8_internal",
+      "label_zh": "L8：轮内经验",
+      "label_en": "L8: within-campaign experience",
+      "one_line_zh": "每轮决定后独立学习，下一轮读取简短经验。",
+      "one_line_en": "Learn separately after each decision; provide concise experience to the next round.",
+      "change_zh": "在L7上增加循环内经验更新，可保留、修订或删除旧经验。",
+      "change_en": "Add within-campaign experience updates to L7, retaining, revising or deleting prior lessons.",
+      "rule_zh": "采用规则同L7；经验写出或送达不自动赋予采用资格。",
+      "rule_en": "Use L7 adoption rules; writing or delivering experience does not make a candidate eligible.",
+      "inputs_zh": "上一版经验、计划、决定、实际结果、修复/退步/仍失败的训练例子。",
+      "inputs_en": "Prior experience, plan, decision, outcomes and training repair/regression/failure examples.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "按L7完成候选与决定",
+        "独立学习调用更新至多八条简短经验",
+        "下一候选说明哪些适用、不适用或需修订"
+      ],
+      "steps_en": [
+        "Complete the L7 candidate and decision",
+        "Use a separate learning call to update at most eight short lessons",
+        "Explain applicable, inapplicable or revisable lessons in the next proposal"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l789.py",
+        "evolution/src/dsh_evolve/loops/learning.py",
+        "evolution/prompts/INNER_PROMPT.txt"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "unified_profiles",
+      "limitations_zh": "120轮均生成并送入经验，但未稳定提高测试。经验调用增加资源成本，不能只统计候选次数。",
+      "limitations_en": "Experience was generated and passed forward for 120 rounds, without consistent test gains. Learning calls add resource cost beyond candidate counts.",
+      "selected_final_test": {
+        "dbbench": 0.4366666667,
+        "webshop_strict": 0.355,
+        "osbench": 0.3009259259
+      }
+    },
+    {
+      "id": "L8_external",
+      "label_zh": "L8：外部经验",
+      "label_en": "L8: prior-campaign experience",
+      "one_line_zh": "先总结旧训练活动，再固定指导一整次新搜索。",
+      "one_line_en": "Summarize prior training campaigns and hold that guidance fixed during a new search.",
+      "change_zh": "把跨活动经验与本次插件起点分开。",
+      "change_en": "Separate prior-campaign knowledge from the current plugin startpoint.",
+      "rule_zh": "采用规则同L7；本次结束后生成的经验只供下次活动，不回改本次结果。",
+      "rule_en": "Use L7 gates; experience written after completion is for a future campaign and does not alter this result.",
+      "inputs_zh": "旧L4/L5训练材料与新的空插件起点；不向学习器提供测试分数。",
+      "inputs_en": "Prior L4/L5 training material and a fresh empty-plugin start; do not supply test scores to the learner.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "先独立提炼并固定外部经验",
+        "四十轮候选沿用该经验，按L7选择",
+        "结束后总结供下次活动的经验"
+      ],
+      "steps_en": [
+        "Extract and freeze prior-campaign experience",
+        "Reuse it through 40 rounds with L7 selection",
+        "Summarize the completed campaign for a future run"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l789.py",
+        "evolution/src/dsh_evolve/loops/learning.py",
+        "evolution/prompts/OUTER_PROMPT.txt"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "requires_prior_training",
+      "limitations_zh": "空插件不等于无先验；旧活动和总结成本必须计入资源比较，测试结果不稳定。",
+      "limitations_en": "Empty plugins do not imply no prior knowledge. Prior campaigns and summarization belong in the resource budget; test results are inconsistent.",
+      "selected_final_test": {
+        "dbbench": 0.6033333333,
+        "webshop_strict": 0.3433333333,
+        "osbench": 0.3240740741
+      }
+    },
+    {
+      "id": "L9",
+      "label_zh": "L9：组件选择与组装",
+      "label_en": "L9: component selection and assembly",
+      "one_line_zh": "从当前失败出发，选择旧插件并检查组合关系。",
+      "one_line_en": "Select prior plugins from current failures and check their interactions.",
+      "change_zh": "在L7上加入训练选定组件目录、导入、兼容与冲突分析。",
+      "change_en": "Add a catalog of training-selected components, import and compatibility/conflict analysis to L7.",
+      "rule_zh": "采用规则同L7；组件导入前先列入修复计划，组装仍需实际评测。",
+      "rule_en": "Use L7 gates; plan component imports before assembly and evaluate the assembled candidate.",
+      "inputs_zh": "旧训练选定产物和训练证据、当前失败；不使用组件测试分数排序。",
+      "inputs_en": "Prior training-selected artifacts and training evidence, plus current failures; do not rank parts by test scores.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "建立能力、共享状态与冲突目录",
+        "在修复计划中选组件并调用component导入",
+        "适配组合后评测，按L7决定"
+      ],
+      "steps_en": [
+        "Catalog capabilities, shared state and conflicts",
+        "Select parts in the repair plan and import them with component",
+        "Adapt and evaluate the assembly, then use L7 selection"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [
+        "evolution/src/dsh_evolve/loops/l789.py",
+        "evolution/src/dsh_evolve/loops/learning.py"
+      ],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "completed_campaigns",
+      "reproduction_status": "requires_prior_artifacts_and_training",
+      "limitations_zh": "L7—L9中较强但未全面超过L4/L5；组件来自旧搜索，资源不等于冷启动。继承的导入记录不等于新增独立组件数。",
+      "limitations_en": "Strongest among L7–L9 but not consistently beyond L4/L5. Components come from prior search, not a resource-free cold start. Inherited import logs are not counts of new unique parts.",
+      "selected_final_test": {
+        "dbbench": 0.6744444444,
+        "webshop_strict": 0.4333333333,
+        "osbench": 0.3819444444
+      }
+    },
+    {
+      "id": "dsh_summary",
+      "label_zh": "摘要反馈",
+      "label_en": "Summary feedback",
+      "one_line_zh": "用普通简明摘要指导下一候选。",
+      "one_line_en": "Guide the next candidate with a concise ordinary summary.",
+      "change_zh": "在原生候选边界增加训练证据反馈；候选执行前记录预测。",
+      "change_en": "Add training-evidence feedback at the native candidate boundary; record a prediction before candidate execution.",
+      "rule_zh": "继承本场景原生采用规则，不把新反馈自动视为L7验证门槛；测试仅最终报告。",
+      "rule_en": "Retain the benchmark’s native adoption rule; feedback does not implicitly add L7 validation. Test only the final selection.",
+      "inputs_zh": "父版训练中抽取失败与成功对照；两臂共用反馈长度上限和分析模型设置。",
+      "inputs_en": "Sample parent training failures and successful controls; both arms share a feedback-length cap and analysis-model settings.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "抽取训练证据并产生指定反馈",
+        "写候选与事前预测，运行原生评测",
+        "按原生规则选择，再核对预测"
+      ],
+      "steps_en": [
+        "Sample training evidence and generate the assigned feedback",
+        "Write a candidate and a prospective prediction; run native evaluation",
+        "Select under the native rule and compare prediction with outcomes"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [],
+      "profile_scope": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench",
+        "telecom"
+      ],
+      "status": "partial_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "四场景已终测；Telecom仍无最终测试。每臂一次自适应搜索，后续父版自然分化，不是每轮固定同父版因果干预。",
+      "limitations_en": "Four benchmarks have final tests; Telecom does not yet. Each arm is one adaptive search with diverging parents, not repeated same-parent causal interventions."
+    },
+    {
+      "id": "dsh_mechanism",
+      "label_zh": "问题机制反馈",
+      "label_en": "Mechanism feedback",
+      "one_line_zh": "用问题分类、状态缺口、替代解释和可检验修复指导候选。",
+      "one_line_en": "Guide candidates with problem classes, state gaps, alternative explanations and testable repairs.",
+      "change_zh": "在原生候选边界增加训练证据反馈；候选执行前记录预测。",
+      "change_en": "Add training-evidence feedback at the native candidate boundary; record a prediction before candidate execution.",
+      "rule_zh": "继承本场景原生采用规则，不把新反馈自动视为L7验证门槛；测试仅最终报告。",
+      "rule_en": "Retain the benchmark’s native adoption rule; feedback does not implicitly add L7 validation. Test only the final selection.",
+      "inputs_zh": "父版训练中抽取失败与成功对照；两臂共用反馈长度上限和分析模型设置。",
+      "inputs_en": "Sample parent training failures and successful controls; both arms share a feedback-length cap and analysis-model settings.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "抽取训练证据并产生指定反馈",
+        "写候选与事前预测，运行原生评测",
+        "按原生规则选择，再核对预测"
+      ],
+      "steps_en": [
+        "Sample training evidence and generate the assigned feedback",
+        "Write a candidate and a prospective prediction; run native evaluation",
+        "Select under the native rule and compare prediction with outcomes"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [],
+      "profile_scope": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench",
+        "telecom"
+      ],
+      "status": "partial_campaigns",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "四场景已终测；Telecom仍无最终测试。每臂一次自适应搜索，后续父版自然分化，不是每轮固定同父版因果干预。",
+      "limitations_en": "Four benchmarks have final tests; Telecom does not yet. Each arm is one adaptive search with diverging parents, not repeated same-parent causal interventions."
+    },
+    {
+      "id": "legacy_skill",
+      "label_zh": "历史三角色Skill",
+      "label_en": "Historical three-role Skills",
+      "one_line_zh": "监控、归因、优化三个外层职责。",
+      "one_line_en": "Monitoring, attribution and optimization as three outer-loop responsibilities.",
+      "change_zh": "由会话与Skill指导训练、选簇、候选设计和晋升。",
+      "change_en": "Use sessions and Skills to guide evaluation, cluster choice, design and promotion.",
+      "rule_zh": "按具体活动Target／Full及轮末晋升规则。",
+      "rule_en": "Use the specific campaign’s Target/Full and round-end promotion rules.",
+      "inputs_zh": "对应活动的冻结父版、可见训练轨迹、角色/经验指令。",
+      "inputs_en": "The campaign’s frozen parent, visible training traces and role/experience instructions.",
+      "editable_zh": "对应历史实例允许的YAML、提示、工具、记忆或Harness修改面；并非原生DSH插件统一空间。",
+      "editable_en": "The historical instance’s allowed YAML, prompt, tool, memory or harness surfaces; not a unified native-DSH plugin space.",
+      "steps_zh": [
+        "读取本实例协议",
+        "执行指定角色或程序化阶段",
+        "按原规则选择并单独报告测试"
+      ],
+      "steps_en": [
+        "Read the instance protocol",
+        "Execute the assigned roles or programmatic stages",
+        "Select under the original rule and report tests separately"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "historical_varied",
+      "reproduction_status": "context_only",
+      "limitations_zh": "三职责不等于三个执行插件；不预设多个常驻模型必然更好。",
+      "limitations_en": "Three responsibilities are not three runtime plugins; multiple persistent models are not established as necessary."
+    },
+    {
+      "id": "legacy_workflow",
+      "label_zh": "历史程序化Workflow",
+      "label_en": "Historical programmatic Workflow",
+      "one_line_zh": "把预算、阶段、冻结、调度与晋升交给程序。",
+      "one_line_en": "Program the budgets, stages, freezing, scheduling and promotion.",
+      "change_zh": "保留模型诊断/设计，减少会话自行编排的不一致。",
+      "change_en": "Retain model diagnosis/design while reducing session-level orchestration inconsistencies.",
+      "rule_zh": "原五轮、十轮、后续十五轮模板分别保留；不能混成同一选择规则。",
+      "rule_en": "Keep the original five-round, ten-round and later fifteen-round templates distinct.",
+      "inputs_zh": "对应活动的冻结父版、可见训练轨迹、角色/经验指令。",
+      "inputs_en": "The campaign’s frozen parent, visible training traces and role/experience instructions.",
+      "editable_zh": "对应历史实例允许的YAML、提示、工具、记忆或Harness修改面；并非原生DSH插件统一空间。",
+      "editable_en": "The historical instance’s allowed YAML, prompt, tool, memory or harness surfaces; not a unified native-DSH plugin space.",
+      "steps_zh": [
+        "读取本实例协议",
+        "执行指定角色或程序化阶段",
+        "按原规则选择并单独报告测试"
+      ],
+      "steps_en": [
+        "Read the instance protocol",
+        "Execute the assigned roles or programmatic stages",
+        "Select under the original rule and report tests separately"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "historical_varied",
+      "reproduction_status": "context_only",
+      "limitations_zh": "原五轮未终测，后来补测不能倒写为原活动终测；权威YAML是工程改进。",
+      "limitations_en": "The original five-round campaign had no final test; later testing must not be retroactively labeled its final evaluation. YAML authority is an engineering change."
+    },
+    {
+      "id": "legacy_experience",
+      "label_zh": "历史经验与问题类型",
+      "label_en": "Historical experience and problem types",
+      "one_line_zh": "按问题类别或条件组织优化器知识。",
+      "one_line_en": "Organize optimizer knowledge by problem type or conditions.",
+      "change_zh": "经历按类型、六维标签、条件式指导及经验开关诊断。",
+      "change_en": "Includes type-based, six-axis and conditional guidance, plus experience-on/off diagnostics.",
+      "rule_zh": "经验只进入指定设计/修复阶段；探针、两题评测与完整搜索分别计量。",
+      "rule_en": "Provide experience only to the specified design/repair stages; distinguish probes, two-task evaluations and full search.",
+      "inputs_zh": "对应活动的冻结父版、可见训练轨迹、角色/经验指令。",
+      "inputs_en": "The campaign’s frozen parent, visible training traces and role/experience instructions.",
+      "editable_zh": "对应历史实例允许的YAML、提示、工具、记忆或Harness修改面；并非原生DSH插件统一空间。",
+      "editable_en": "The historical instance’s allowed YAML, prompt, tool, memory or harness surfaces; not a unified native-DSH plugin space.",
+      "steps_zh": [
+        "读取本实例协议",
+        "执行指定角色或程序化阶段",
+        "按原规则选择并单独报告测试"
+      ],
+      "steps_en": [
+        "Read the instance protocol",
+        "Execute the assigned roles or programmatic stages",
+        "Select under the original rule and report tests separately"
+      ],
+      "final_selection_zh": "按训练／验证规则锁定最终版，测试仅报告。",
+      "final_selection_en": "Seal the training/development-selected final checkpoint; use test only for reporting.",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "historical_varied",
+      "reproduction_status": "context_only",
+      "limitations_zh": "修改偏好变化和输入送达不是稳定行为收益；既有经验对照起点不同，四组严格匹配方案未运行。",
+      "limitations_en": "Changed edit preferences and input delivery are not stable behavior gains. Existing comparisons had differing initial evidence; the matched four-arm design was not run."
+    },
+    {
+      "id": "archive_proposal",
+      "label_zh": "能力互补Archive：提案",
+      "label_en": "Complementary archive: proposal",
+      "one_line_zh": "保留有互补能力的可执行组合，不只保留高分。",
+      "one_line_en": "Retain executable combinations with complementary capabilities, not only high scores.",
+      "change_zh": "将冠军选择、机制解释与多样性保留分开。",
+      "change_en": "Separate champion selection, mechanism explanation and diversity retention.",
+      "rule_zh": "尚未确定并实现新采用规则；不能报告为已验证算法。",
+      "rule_en": "No new selection algorithm has been implemented and established yet.",
+      "inputs_zh": "拟使用当前失败、行为差异、组件组合与资源预算。",
+      "inputs_en": "Proposed inputs: current failures, behavior differences, component combinations and budgets.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "先定义互补性与资源约束",
+        "再与L3分支和L9组件作匹配比较"
+      ],
+      "steps_en": [
+        "Define complementarity and resource constraints",
+        "Compare against matched L3 branch and L9 component baselines"
+      ],
+      "final_selection_zh": "未运行，没有最终测试。",
+      "final_selection_en": "Not run; no final tests.",
+      "runtime_code": [],
+      "profile_scope": [
+        "dbbench",
+        "webshop",
+        "osbench"
+      ],
+      "status": "proposal",
+      "reproduction_status": "not_implemented",
+      "limitations_zh": "不能把L3归档改名就算新增机制。",
+      "limitations_en": "Renaming the L3 archive does not constitute a new mechanism."
+    },
+    {
+      "id": "fusion",
+      "label_zh": "旧插件融合",
+      "label_en": "Prior-plugin fusion",
+      "one_line_zh": "从空插件起点出发，读取旧能力并改装组合。",
+      "one_line_en": "Start with empty plugins and adapt prior capabilities into combinations.",
+      "change_zh": "显式提供历史插件来源，检验复用能否改善新组合。",
+      "change_en": "Provide prior plugins explicitly and test whether reuse improves a new combination.",
+      "rule_zh": "保留该历史活动完整训练晋升规则，记录组合的共同效果。",
+      "rule_en": "Retain the historical full-training adoption rule and record the combination outcome.",
+      "inputs_zh": "空插件基线、历史插件和可见训练证据。",
+      "inputs_en": "Empty-plugin baseline, prior plugins and visible training evidence.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "十轮训练选定版测试59.17%；不是独立组件消融。",
+      "final_selection_en": "The training-selected ten-round artifact tested at 59.17%; this is not an independent component ablation.",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "historical_varied",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "可用组件相加不自动产生更强组合；复用具有历史信息成本。",
+      "limitations_en": "Adding available components does not automatically improve a combination; reuse has prior-information cost."
+    },
+    {
+      "id": "startpoint_ablation",
+      "label_zh": "起点与会话分支",
+      "label_en": "Startpoint and session variants",
+      "one_line_zh": "比较空插件或已有插件，以及持续或重开会话。",
+      "one_line_en": "Compare empty or seeded plugins and persistent or restarted sessions.",
+      "change_zh": "分别变化起点或会话保留方式，保留原角色模型及预算。",
+      "change_en": "Vary startpoint or session persistence while retaining the recorded model roles and budgets.",
+      "rule_zh": "使用每个分支原有训练选择规则；不同起点不共享同一纵向单调曲线。",
+      "rule_en": "Use each arm’s original training selection rule; different starts do not form one monotonic evolution curve.",
+      "inputs_zh": "指定初始产物、训练证据、模型与会话协议。",
+      "inputs_en": "Specified initial artifact, training evidence, model and session protocol.",
+      "editable_zh": "本轮候选的插件与组合；数据、评分、做题模型、任务预算固定。",
+      "editable_en": "Candidate plugins and composition; keep data, scoring, actor and episode budgets fixed.",
+      "steps_zh": [
+        "在当前批次重新评测父版，读取失败及成功对照",
+        "生成并冻结候选，运行同批训练与配置要求的验证",
+        "比较实际输入／控制记录与成绩，记录采用或拒绝"
+      ],
+      "steps_en": [
+        "Evaluate the parent on the current batch; read failures and successful controls",
+        "Generate and freeze a candidate; run paired-batch training and configured validation",
+        "Check input/control evidence and scores; record acceptance or rejection"
+      ],
+      "final_selection_zh": "保留各分支按训练选择的终点，单列中途停止与后补测试。",
+      "final_selection_en": "Keep each training-selected endpoint; mark stopped arms and later tests separately.",
+      "runtime_code": [],
+      "profile_scope": [
+        "telecom"
+      ],
+      "status": "historical_varied",
+      "reproduction_status": "historical_recipe",
+      "limitations_zh": "会话重开仍继承文件和代码，不等于没有历史知识；效应随起点变化。",
+      "limitations_en": "Restarted sessions still inherit files and code, so they are not history-free; effects depend on the startpoint."
+    }
+  ]
+}

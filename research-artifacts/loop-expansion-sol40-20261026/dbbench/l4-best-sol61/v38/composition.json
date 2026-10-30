@@ -1,0 +1,83 @@
+{
+  "methods": [
+    {
+      "id": "sql-workflow",
+      "module": "plugins/sql-workflow.mjs",
+      "config": {}
+    },
+    {
+      "id": "value-grounding",
+      "module": "plugins/value-grounding.mjs",
+      "config": {}
+    },
+    {
+      "id": "task-contract",
+      "module": "plugins/task-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "insert-grounding",
+      "module": "plugins/insert-grounding.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-identity",
+      "module": "plugins/numeric-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "order-semantics",
+      "module": "plugins/order-semantics.mjs",
+      "config": {}
+    },
+    {
+      "id": "update-evidence",
+      "module": "plugins/update-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "single-result-fidelity",
+      "module": "plugins/single-result-fidelity.mjs",
+      "config": {}
+    },
+    {
+      "id": "insertion-style",
+      "module": "plugins/insertion-style.mjs",
+      "config": {}
+    },
+    {
+      "id": "field-evidence-control",
+      "module": "plugins/field-evidence-control.mjs",
+      "config": {}
+    },
+    {
+      "id": "public-schema-contract",
+      "module": "plugins/public-schema-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "row-commit-contract",
+      "module": "plugins/row-commit-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "tool-description-contract",
+      "module": "plugins/tool-description-contract.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "sql-workflow",
+    "value-grounding",
+    "task-contract",
+    "insert-grounding",
+    "numeric-identity",
+    "order-semantics",
+    "update-evidence",
+    "insertion-style",
+    "field-evidence-control",
+    "public-schema-contract",
+    "row-commit-contract",
+    "tool-description-contract"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "methods": [
+    {
+      "id": "option-ledger",
+      "module": "parts/l5-v28/plugins/option-ledger.mjs",
+      "config": {
+        "requestCandidates": true
+      }
+    },
+    {
+      "id": "search-evidence",
+      "module": "parts/l5-v28/plugins/search-evidence.mjs",
+      "config": {
+        "top": 3,
+        "phaseOnly": true
+      }
+    },
+    {
+      "id": "price-evidence",
+      "module": "parts/l5-v28/plugins/price-evidence.mjs",
+      "config": {
+        "gate": true,
+        "recoverBudget": true,
+        "maxRecoveries": 1,
+        "phaseOnly": true,
+        "warnOnly": true
+      }
+    }
+  ],
+  "selected": [
+    "option-ledger",
+    "search-evidence",
+    "price-evidence"
+  ]
+}

@@ -1,0 +1,4814 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-10-30T07:29:07.032424+00:00",
+  "artifact_count": 44,
+  "policy": "Frozen final selections, not retrospective winners. Source locators are campaign-relative. Plugin logic is preserved.",
+  "artifacts": [
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "dbbench",
+      "group": "l1-sol61",
+      "checkpoint": "v20",
+      "source_experiment": "loop-comparison-20r-20261025/dbbench/l1-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/dbbench/l1-sol61/v20",
+      "source_frozen": "loop-comparison-20r-20261025/dbbench/l1-sol61/runs/frozen/v20",
+      "selected_methods": [
+        "text-fidelity",
+        "empty-result",
+        "write-receipt",
+        "budget-close"
+      ],
+      "files": 5,
+      "bytes": 5521,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v20",
+        "loop": "L1",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.575,
+            "repeat_means": {
+              "0": 0.575
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.5666666666666667,
+            "repeat_means": {
+              "0": 0.5666666666666667
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.5433333333333333,
+            "repeat_means": {
+              "0": 0.5333333333333333,
+              "1": 0.55,
+              "2": 0.5466666666666666
+            },
+            "repeat_standard_deviation": 0.007200822998230968
+          }
+        },
+        "source": "loop-comparison-20r-20261025/dbbench/l1-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l1-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/dbbench/l1-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/dbbench/l1-sol61",
+      "method_id": "L1",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--dbbench--l1-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--dbbench--l1-sol61.json",
+      "source_hook_names": {
+        "text-fidelity": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "empty-result": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "write-receipt": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "budget-close": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "dbbench",
+      "group": "l2-sol61",
+      "checkpoint": "v26",
+      "source_experiment": "loop-comparison-20r-20261025/dbbench/l2-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/dbbench/l2-sol61/v26",
+      "source_frozen": "loop-comparison-20r-20261025/dbbench/l2-sol61/runs/frozen/v26",
+      "selected_methods": [
+        "sql-recovery",
+        "mutation-ledger",
+        "public-table-context",
+        "typed-order",
+        "numeric-text"
+      ],
+      "files": 6,
+      "bytes": 8195,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v26",
+        "loop": "L2",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.625,
+            "repeat_means": {
+              "0": 0.625
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.7666666666666667,
+            "repeat_means": {
+              "0": 0.7666666666666667
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.6122222222222222,
+            "repeat_means": {
+              "0": 0.6166666666666667,
+              "1": 0.61,
+              "2": 0.61
+            },
+            "repeat_standard_deviation": 0.003142696805273565
+          }
+        },
+        "source": "loop-comparison-20r-20261025/dbbench/l2-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l2-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/dbbench/l2-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/dbbench/l2-sol61",
+      "method_id": "L2",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--dbbench--l2-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--dbbench--l2-sol61.json",
+      "source_hook_names": {
+        "sql-recovery": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "mutation-ledger": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "public-table-context": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "typed-order": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "numeric-text": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "dbbench",
+      "group": "l3-sol61",
+      "checkpoint": "v25",
+      "source_experiment": "loop-comparison-20r-20261025/dbbench/l3-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/dbbench/l3-sol61/v25",
+      "source_frozen": "loop-comparison-20r-20261025/dbbench/l3-sol61/runs/frozen/v25",
+      "selected_methods": [
+        "sql-schema",
+        "sql-contract",
+        "sql-values",
+        "sql-plan",
+        "sql-identifiers",
+        "sql-literals",
+        "sql-numeric",
+        "sql-ordinal"
+      ],
+      "files": 9,
+      "bytes": 23021,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v25",
+        "loop": "L3",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.55,
+            "repeat_means": {
+              "0": 0.55
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.6333333333333333,
+            "repeat_means": {
+              "0": 0.6333333333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.5855555555555556,
+            "repeat_means": {
+              "0": 0.5733333333333334,
+              "1": 0.5966666666666667,
+              "2": 0.5866666666666667
+            },
+            "repeat_standard_deviation": 0.009558139185602912
+          }
+        },
+        "source": "loop-comparison-20r-20261025/dbbench/l3-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l3-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/dbbench/l3-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/dbbench/l3-sol61",
+      "method_id": "L3",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--dbbench--l3-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--dbbench--l3-sol61.json",
+      "source_hook_names": {
+        "sql-schema": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "sql-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "sql-values": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "sql-plan": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "sql-identifiers": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "sql-literals": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "sql-numeric": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "sql-ordinal": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "osbench",
+      "group": "l1-sol61",
+      "checkpoint": "v31",
+      "source_experiment": "loop-comparison-20r-20261025/osbench/l1-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/osbench/l1-sol61/v31",
+      "source_frozen": "loop-comparison-20r-20261025/osbench/l1-sol61/runs/frozen/v31",
+      "selected_methods": [
+        "grep-check",
+        "user-field",
+        "line-query"
+      ],
+      "files": 4,
+      "bytes": 6879,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v31",
+        "loop": "L1",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 80,
+            "valid": 80,
+            "invalid": 0,
+            "mean": 0.6625,
+            "repeat_means": {
+              "0": 0.6625
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 20,
+            "valid": 20,
+            "invalid": 0,
+            "mean": 0.7,
+            "repeat_means": {
+              "0": 0.7
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3263888888888889,
+            "repeat_means": {
+              "0": 0.3402777777777778,
+              "1": 0.3194444444444444,
+              "2": 0.3194444444444444
+            },
+            "repeat_standard_deviation": 0.009820927516479843
+          }
+        },
+        "source": "loop-comparison-20r-20261025/osbench/l1-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l1-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/osbench/l1-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/osbench/l1-sol61",
+      "method_id": "L1",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--osbench--l1-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--osbench--l1-sol61.json",
+      "source_hook_names": {
+        "grep-check": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "user-field": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "line-query": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "osbench",
+      "group": "l2-sol61",
+      "checkpoint": "v18",
+      "source_experiment": "loop-comparison-20r-20261025/osbench/l2-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/osbench/l2-sol61/v18",
+      "source_frozen": "loop-comparison-20r-20261025/osbench/l2-sol61/runs/frozen/v18",
+      "selected_methods": [
+        "aggregation",
+        "line-count",
+        "regex-dialect",
+        "date-key",
+        "word-case",
+        "home-path",
+        "message-key"
+      ],
+      "files": 8,
+      "bytes": 13939,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v18",
+        "loop": "L2",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 80,
+            "valid": 80,
+            "invalid": 0,
+            "mean": 0.7625,
+            "repeat_means": {
+              "0": 0.7625
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 20,
+            "valid": 20,
+            "invalid": 0,
+            "mean": 0.65,
+            "repeat_means": {
+              "0": 0.65
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.28935185185185186,
+            "repeat_means": {
+              "0": 0.2986111111111111,
+              "1": 0.3055555555555556,
+              "2": 0.2638888888888889
+            },
+            "repeat_standard_deviation": 0.01822687007873105
+          }
+        },
+        "source": "loop-comparison-20r-20261025/osbench/l2-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l2-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/osbench/l2-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/osbench/l2-sol61",
+      "method_id": "L2",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--osbench--l2-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--osbench--l2-sol61.json",
+      "source_hook_names": {
+        "aggregation": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "line-count": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "regex-dialect": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "date-key": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "word-case": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "home-path": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "message-key": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "osbench",
+      "group": "l3-sol61",
+      "checkpoint": "v16",
+      "source_experiment": "loop-comparison-20r-20261025/osbench/l3-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/osbench/l3-sol61/v16",
+      "source_frozen": "loop-comparison-20r-20261025/osbench/l3-sol61/runs/frozen/v16",
+      "selected_methods": [
+        "protocol",
+        "unique-gate",
+        "regex-gate",
+        "path-memory"
+      ],
+      "files": 6,
+      "bytes": 5552,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v16",
+        "loop": "L3",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 80,
+            "valid": 80,
+            "invalid": 0,
+            "mean": 0.6,
+            "repeat_means": {
+              "0": 0.6
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 20,
+            "valid": 20,
+            "invalid": 0,
+            "mean": 0.7,
+            "repeat_means": {
+              "0": 0.7
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3587962962962963,
+            "repeat_means": {
+              "0": 0.3541666666666667,
+              "1": 0.3541666666666667,
+              "2": 0.3680555555555556
+            },
+            "repeat_standard_deviation": 0.0065472850109865545
+          }
+        },
+        "source": "loop-comparison-20r-20261025/osbench/l3-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l3-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/osbench/l3-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/osbench/l3-sol61",
+      "method_id": "L3",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--osbench--l3-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--osbench--l3-sol61.json",
+      "source_hook_names": {
+        "protocol": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "unique-gate": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "regex-gate": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "path-memory": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "webshop",
+      "group": "l1-sol61",
+      "checkpoint": "v20",
+      "source_experiment": "loop-comparison-20r-20261025/webshop/l1-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/webshop/l1-sol61/v20",
+      "source_frozen": "loop-comparison-20r-20261025/webshop/l1-sol61/runs/frozen/v20",
+      "selected_methods": [
+        "options",
+        "variant-gate",
+        "budget",
+        "title-compare",
+        "action-check"
+      ],
+      "files": 6,
+      "bytes": 10654,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v20",
+        "loop": "L1",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.7205357142857143,
+            "strict_pass_at_1": 0.425,
+            "strict_successes": 17,
+            "repeat_means": {
+              "0": 0.7205357142857143
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.6795833333333333,
+            "strict_pass_at_1": 0.25,
+            "strict_successes": 15,
+            "repeat_means": {
+              "0": 0.6795833333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6571361111111111,
+            "strict_pass_at_1": 0.37166666666666665,
+            "strict_successes": 223,
+            "repeat_means": {
+              "0": 0.6509833333333334,
+              "1": 0.65615,
+              "2": 0.664275
+            },
+            "repeat_standard_deviation": 0.0054709177802288655
+          }
+        },
+        "source": "loop-comparison-20r-20261025/webshop/l1-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l1-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/webshop/l1-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/webshop/l1-sol61",
+      "method_id": "L1",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--webshop--l1-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--webshop--l1-sol61.json",
+      "source_hook_names": {
+        "options": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "variant-gate": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "budget": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "title-compare": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "action-check": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "webshop",
+      "group": "l2-sol61",
+      "checkpoint": "v31",
+      "source_experiment": "loop-comparison-20r-20261025/webshop/l2-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/webshop/l2-sol61/v31",
+      "source_frozen": "loop-comparison-20r-20261025/webshop/l2-sol61/runs/frozen/v31",
+      "selected_methods": [
+        "options",
+        "price-rescue",
+        "missing-size",
+        "dimension-memory",
+        "title-rescue",
+        "feature-probe",
+        "finish-budget",
+        "count-options"
+      ],
+      "files": 9,
+      "bytes": 19285,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v31",
+        "loop": "L2",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.7411666666666666,
+            "strict_pass_at_1": 0.425,
+            "strict_successes": 17,
+            "repeat_means": {
+              "0": 0.7411666666666666
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.6404166666666666,
+            "strict_pass_at_1": 0.23333333333333334,
+            "strict_successes": 14,
+            "repeat_means": {
+              "0": 0.6404166666666666
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6292484126984127,
+            "strict_pass_at_1": 0.3416666666666667,
+            "strict_successes": 205,
+            "repeat_means": {
+              "0": 0.6315261904761905,
+              "1": 0.6296928571428572,
+              "2": 0.6265261904761905
+            },
+            "repeat_standard_deviation": 0.002065292255049012
+          }
+        },
+        "source": "loop-comparison-20r-20261025/webshop/l2-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l2-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/webshop/l2-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/webshop/l2-sol61",
+      "method_id": "L2",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--webshop--l2-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--webshop--l2-sol61.json",
+      "source_hook_names": {
+        "options": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "price-rescue": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "missing-size": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "dimension-memory": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "title-rescue": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "feature-probe": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "finish-budget": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "count-options": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-comparison-20r-20261025",
+      "benchmark": "webshop",
+      "group": "l3-sol61",
+      "checkpoint": "v17",
+      "source_experiment": "loop-comparison-20r-20261025/webshop/l3-sol61",
+      "artifact_path": "loop-comparison-20r-20261025/webshop/l3-sol61/v17",
+      "source_frozen": "loop-comparison-20r-20261025/webshop/l3-sol61/runs/frozen/v17",
+      "selected_methods": [
+        "options",
+        "search",
+        "compare"
+      ],
+      "files": 4,
+      "bytes": 12023,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v17",
+        "loop": "L3",
+        "test_policy": "only final selected checkpoint; no baseline or intermediate tests",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.6331249999999999,
+            "strict_pass_at_1": 0.35,
+            "strict_successes": 14,
+            "repeat_means": {
+              "0": 0.6331249999999999
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.7268055555555556,
+            "strict_pass_at_1": 0.36666666666666664,
+            "strict_successes": 22,
+            "repeat_means": {
+              "0": 0.7268055555555556
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6962190476190476,
+            "strict_pass_at_1": 0.3983333333333333,
+            "strict_successes": 239,
+            "repeat_means": {
+              "0": 0.6981357142857143,
+              "1": 0.6911357142857143,
+              "2": 0.6993857142857143
+            },
+            "repeat_standard_deviation": 0.0036305034851319895
+          }
+        },
+        "source": "loop-comparison-20r-20261025/webshop/l3-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l3-sol61",
+        "source_experiment": "loop-comparison-20r-20261025/webshop/l3-sol61"
+      },
+      "run_id": "loop-comparison-20r-20261025/webshop/l3-sol61",
+      "method_id": "L3",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-comparison-20r-20261025--webshop--l3-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-comparison-20r-20261025--webshop--l3-sol61.json",
+      "source_hook_names": {
+        "options": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "search": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "compare": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l4-best-sol61",
+      "checkpoint": "v38",
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61/v38",
+      "source_frozen": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61/runs/frozen/v38",
+      "selected_methods": [
+        "sql-workflow",
+        "value-grounding",
+        "task-contract",
+        "insert-grounding",
+        "numeric-identity",
+        "order-semantics",
+        "update-evidence",
+        "insertion-style",
+        "field-evidence-control",
+        "public-schema-contract",
+        "row-commit-contract",
+        "tool-description-contract"
+      ],
+      "files": 14,
+      "bytes": 40416,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v38",
+        "loop": "L4",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "旧最终版 v38",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.68,
+            "repeat_means": {
+              "0": 0.68
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.6244444444444445,
+            "repeat_means": {
+              "0": 0.6333333333333333,
+              "1": 0.6266666666666667,
+              "2": 0.6133333333333333
+            },
+            "repeat_standard_deviation": 0.008314794192830995
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l4-best-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/dbbench/l4-best-sol61",
+      "method_id": "L4_seeded",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--dbbench--l4-best-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--dbbench--l4-best-sol61.json",
+      "source_hook_names": {
+        "sql-workflow": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "value-grounding": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "task-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "insert-grounding": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "numeric-identity": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "order-semantics": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "update-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "insertion-style": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "field-evidence-control": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "public-schema-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "row-commit-contract": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "tool-description-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l4-h0-sol61",
+      "checkpoint": "v35",
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61/v35",
+      "source_frozen": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61/runs/frozen/v35",
+      "selected_methods": [
+        "schema-contract",
+        "literal-contract",
+        "write-workflow",
+        "result-bridge",
+        "sql-recovery",
+        "budget-conductor",
+        "numeric-calendar",
+        "intent-contract"
+      ],
+      "files": 9,
+      "bytes": 28391,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v35",
+        "loop": "L4",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "H0零增强插件",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.76,
+            "repeat_means": {
+              "0": 0.76
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.7055555555555556,
+            "repeat_means": {
+              "0": 0.7033333333333334,
+              "1": 0.7033333333333334,
+              "2": 0.71
+            },
+            "repeat_standard_deviation": 0.0031426968052735123
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l4-h0-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+      "method_id": "L4",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--dbbench--l4-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--dbbench--l4-h0-sol61.json",
+      "source_hook_names": {
+        "schema-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "literal-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "write-workflow": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "result-bridge": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "sql-recovery": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "budget-conductor": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "numeric-calendar": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "intent-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l5-h0-sol61",
+      "checkpoint": "v38",
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61/v38",
+      "source_frozen": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61/runs/frozen/v38",
+      "selected_methods": [
+        "schema-contract",
+        "literal-values",
+        "completion-ledger",
+        "call-recovery",
+        "rank-identifier",
+        "write-number-style",
+        "year-list",
+        "unit-values",
+        "apostrophe-recovery",
+        "numeric-comparisons",
+        "entity-lookup",
+        "grouped-count",
+        "global-identifiers",
+        "list-members",
+        "brand-coverage",
+        "operation-contract",
+        "year-boundary",
+        "missing-values",
+        "medal-manifest",
+        "qualified-values"
+      ],
+      "files": 22,
+      "bytes": 60664,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v38",
+        "loop": "L5",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "H0零增强插件",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.775,
+            "repeat_means": {
+              "0": 0.775
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.7833333333333333,
+            "repeat_means": {
+              "0": 0.7833333333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.6655555555555556,
+            "repeat_means": {
+              "0": 0.6533333333333333,
+              "1": 0.6733333333333333,
+              "2": 0.67
+            },
+            "repeat_standard_deviation": 0.008748897637790916
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l5-h0-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/dbbench/l5-h0-sol61",
+      "method_id": "L5",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--dbbench--l5-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--dbbench--l5-h0-sol61.json",
+      "source_hook_names": {
+        "schema-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "literal-values": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "completion-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "call-recovery": [
+          "agent/pre-step",
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "rank-identifier": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "write-number-style": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "year-list": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "unit-values": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "apostrophe-recovery": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "numeric-comparisons": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "entity-lookup": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "grouped-count": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "global-identifiers": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "list-members": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "brand-coverage": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "operation-contract": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "year-boundary": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "missing-values": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "medal-manifest": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "qualified-values": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "original-best-sol61",
+      "checkpoint": "v40",
+      "source_experiment": "loop-expansion-sol40-20261026/dbbench/original-best-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/dbbench/original-best-sol61/v40",
+      "source_frozen": "loop-expansion-sol40-20261026/dbbench/original-best-sol61/runs/frozen/v40",
+      "selected_methods": [
+        "sql-workflow",
+        "value-grounding",
+        "task-contract",
+        "insert-grounding",
+        "numeric-identity",
+        "result-fields",
+        "finalization-contract",
+        "calendar-semantics",
+        "aggregate-format",
+        "schedule-order",
+        "insert-field-roles",
+        "insert-representation",
+        "schema-orientation",
+        "quantity-answer",
+        "listed-count"
+      ],
+      "files": 16,
+      "bytes": 58117,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "Resume",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "旧最终版 v38",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.6,
+            "repeat_means": {
+              "0": 0.6
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.6222222222222222,
+            "repeat_means": {
+              "0": 0.61,
+              "1": 0.6333333333333333,
+              "2": 0.6233333333333333
+            },
+            "repeat_standard_deviation": 0.009558139185602912
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/dbbench/original-best-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "original-best-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/dbbench/original-best-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/dbbench/original-best-sol61",
+      "method_id": "resume",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--dbbench--original-best-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--dbbench--original-best-sol61.json",
+      "source_hook_names": {
+        "sql-workflow": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "value-grounding": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "task-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "insert-grounding": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "numeric-identity": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "result-fields": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "finalization-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "calendar-semantics": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "aggregate-format": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "schedule-order": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "insert-field-roles": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "insert-representation": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "schema-orientation": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "quantity-answer": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "listed-count": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l4-best-sol61",
+      "checkpoint": "v40",
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-best-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/osbench/l4-best-sol61/v40",
+      "source_frozen": "loop-expansion-sol40-20261026/osbench/l4-best-sol61/runs/frozen/v40",
+      "selected_methods": [
+        "repair-text-submit",
+        "unique-values",
+        "grep-dialect",
+        "matching-lines",
+        "command-lexemes",
+        "execution-recovery",
+        "field-contract",
+        "case-contract",
+        "selection-contract",
+        "ranking-contract",
+        "temporal-contract",
+        "status-contract",
+        "word-contract",
+        "message-contract",
+        "line-content-contract",
+        "size-query-contract"
+      ],
+      "files": 18,
+      "bytes": 47652,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L4",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "旧最终版 v05",
+        "train": {
+          "best": {
+            "episodes": 80,
+            "valid": 80,
+            "invalid": 0,
+            "mean": 0.875,
+            "repeat_means": {
+              "0": 0.875
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 20,
+            "valid": 20,
+            "invalid": 0,
+            "mean": 0.65,
+            "repeat_means": {
+              "0": 0.65
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3726851851851852,
+            "repeat_means": {
+              "0": 0.3611111111111111,
+              "1": 0.3611111111111111,
+              "2": 0.3958333333333333
+            },
+            "repeat_standard_deviation": 0.016368212527466373
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/osbench/l4-best-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l4-best-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-best-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/osbench/l4-best-sol61",
+      "method_id": "L4_seeded",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--osbench--l4-best-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--osbench--l4-best-sol61.json",
+      "source_hook_names": {
+        "repair-text-submit": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "unique-values": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "grep-dialect": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "matching-lines": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "command-lexemes": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "execution-recovery": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "field-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "case-contract": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "selection-contract": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "ranking-contract": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble"
+        ],
+        "temporal-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "status-contract": [],
+        "word-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "message-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "line-content-contract": [],
+        "size-query-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l4-h0-sol61",
+      "checkpoint": "v17",
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61/v17",
+      "source_frozen": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61/runs/frozen/v17",
+      "selected_methods": [
+        "inspection-contract",
+        "global-projection",
+        "sample-evidence",
+        "task-contract",
+        "repetition-recovery"
+      ],
+      "files": 6,
+      "bytes": 8358,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v17",
+        "loop": "L4",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "H0零增强插件",
+        "train": {
+          "best": {
+            "episodes": 80,
+            "valid": 80,
+            "invalid": 0,
+            "mean": 0.725,
+            "repeat_means": {
+              "0": 0.725
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 20,
+            "valid": 20,
+            "invalid": 0,
+            "mean": 0.7,
+            "repeat_means": {
+              "0": 0.7
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3888888888888889,
+            "repeat_means": {
+              "0": 0.3958333333333333,
+              "1": 0.3888888888888889,
+              "2": 0.3819444444444444
+            },
+            "repeat_standard_deviation": 0.005670115145331433
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l4-h0-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
+      "method_id": "L4",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--osbench--l4-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--osbench--l4-h0-sol61.json",
+      "source_hook_names": {
+        "inspection-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "global-projection": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "sample-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "task-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "repetition-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l5-h0-sol61",
+      "checkpoint": "v11",
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61/v11",
+      "source_frozen": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61/runs/frozen/v11",
+      "selected_methods": [
+        "answer-call-repair",
+        "zero-result-review",
+        "sample-schema"
+      ],
+      "files": 4,
+      "bytes": 6511,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v11",
+        "loop": "L5",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "H0零增强插件",
+        "train": {
+          "best": {
+            "episodes": 83,
+            "valid": 83,
+            "invalid": 0,
+            "mean": 0.6024096385542169,
+            "repeat_means": {
+              "0": 0.6024096385542169
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 17,
+            "valid": 17,
+            "invalid": 0,
+            "mean": 0.6470588235294118,
+            "repeat_means": {
+              "0": 0.6470588235294118
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3819444444444444,
+            "repeat_means": {
+              "0": 0.3611111111111111,
+              "1": 0.4027777777777778,
+              "2": 0.3819444444444444
+            },
+            "repeat_standard_deviation": 0.0170103454359943
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l5-h0-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61",
+      "method_id": "L5",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--osbench--l5-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--osbench--l5-h0-sol61.json",
+      "source_hook_names": {
+        "answer-call-repair": [
+          "benchmark/setup",
+          "llm/stream",
+          "session/disposed",
+          "system-prompt/assemble"
+        ],
+        "zero-result-review": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "sample-schema": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "original-best-sol61",
+      "checkpoint": "v38",
+      "source_experiment": "loop-expansion-sol40-20261026/osbench/original-best-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/osbench/original-best-sol61/v38",
+      "source_frozen": "loop-expansion-sol40-20261026/osbench/original-best-sol61/runs/frozen/v38",
+      "selected_methods": [
+        "canonical-word-values",
+        "repair-text-submit",
+        "grep-prefix-guard",
+        "matching-line-guard",
+        "shell-path-recovery",
+        "grep-regex-guard",
+        "temporal-comparison-guard",
+        "schema-field-contract",
+        "numeric-field-filter",
+        "size-total-contract",
+        "literal-case-contract",
+        "nul-file-total",
+        "date-component-projection",
+        "date-value-contract",
+        "ranked-distinct-contract",
+        "explicit-tool-transport",
+        "semantic-command-transport",
+        "execution-receipt-gate"
+      ],
+      "files": 19,
+      "bytes": 51378,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v38",
+        "loop": "Resume",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "success",
+        "startpoint": "旧最终版 v05",
+        "train": {
+          "best": {
+            "episodes": 80,
+            "valid": 80,
+            "invalid": 0,
+            "mean": 0.875,
+            "repeat_means": {
+              "0": 0.875
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 20,
+            "valid": 20,
+            "invalid": 0,
+            "mean": 0.7,
+            "repeat_means": {
+              "0": 0.7
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.35648148148148145,
+            "repeat_means": {
+              "0": 0.3541666666666667,
+              "1": 0.3333333333333333,
+              "2": 0.3819444444444444
+            },
+            "repeat_standard_deviation": 0.019912789970006076
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/osbench/original-best-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "original-best-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/osbench/original-best-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/osbench/original-best-sol61",
+      "method_id": "resume",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--osbench--original-best-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--osbench--original-best-sol61.json",
+      "source_hook_names": {
+        "canonical-word-values": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "repair-text-submit": [
+          "benchmark/setup",
+          "llm/stream",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "grep-prefix-guard": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "matching-line-guard": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "shell-path-recovery": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "grep-regex-guard": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "temporal-comparison-guard": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "schema-field-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "numeric-field-filter": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "size-total-contract": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "literal-case-contract": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "nul-file-total": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "date-component-projection": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "date-value-contract": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "ranked-distinct-contract": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "explicit-tool-transport": [
+          "benchmark/setup",
+          "llm/stream",
+          "tools/post-execute"
+        ],
+        "semantic-command-transport": [
+          "benchmark/setup",
+          "llm/stream",
+          "tools/post-execute"
+        ],
+        "execution-receipt-gate": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l4-best-sol61",
+      "checkpoint": "v28",
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/l4-best-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/webshop/l4-best-sol61/v28",
+      "source_frozen": "loop-expansion-sol40-20261026/webshop/l4-best-sol61/runs/frozen/v28",
+      "selected_methods": [
+        "search-evidence",
+        "option-ledger",
+        "purchase-closure",
+        "shade-ledger",
+        "garment-identity",
+        "demand-ledger",
+        "option-contract",
+        "feature-proof",
+        "code-ledger",
+        "ring-identity",
+        "measurement-contract",
+        "ingredient-options",
+        "search-frontier",
+        "comparison-board"
+      ],
+      "files": 17,
+      "bytes": 133074,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v28",
+        "loop": "L4",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "mean_reward",
+        "startpoint": "旧最终版 v37",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.7058333333333333,
+            "strict_pass_at_1": 0.42,
+            "strict_successes": 21,
+            "repeat_means": {
+              "0": 0.7058333333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.7023412698412699,
+            "strict_pass_at_1": 0.42,
+            "strict_successes": 252,
+            "repeat_means": {
+              "0": 0.7036190476190476,
+              "1": 0.6987023809523809,
+              "2": 0.7047023809523809
+            },
+            "repeat_standard_deviation": 0.0026108155861131552
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/webshop/l4-best-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l4-best-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/webshop/l4-best-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/webshop/l4-best-sol61",
+      "method_id": "L4_seeded",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--webshop--l4-best-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--webshop--l4-best-sol61.json",
+      "source_hook_names": {
+        "search-evidence": [
+          "+JSON.stringify({keywords})+",
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "option-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "purchase-closure": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "shade-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "garment-identity": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "demand-ledger": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "option-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "feature-proof": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "code-ledger": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "ring-identity": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "measurement-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "ingredient-options": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "search-frontier": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "comparison-board": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l4-h0-sol61",
+      "checkpoint": "v40",
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61/v40",
+      "source_frozen": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61/runs/frozen/v40",
+      "selected_methods": [
+        "budget-check",
+        "details-return",
+        "option-ledger",
+        "query-cleanup",
+        "identity-evidence",
+        "action-recovery",
+        "comparison-stop",
+        "retrieval-focus",
+        "named-identity",
+        "variant-evidence",
+        "capacity-match",
+        "named-color"
+      ],
+      "files": 14,
+      "bytes": 61300,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L4",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "mean_reward",
+        "startpoint": "H0零增强插件",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.7416666666666667,
+            "strict_pass_at_1": 0.44,
+            "strict_successes": 22,
+            "repeat_means": {
+              "0": 0.7416666666666667
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.7014428571428571,
+            "strict_pass_at_1": 0.4083333333333333,
+            "strict_successes": 245,
+            "repeat_means": {
+              "0": 0.7018595238095238,
+              "1": 0.7031095238095239,
+              "2": 0.6993595238095238
+            },
+            "repeat_standard_deviation": 0.0015590239111558152
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l4-h0-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/webshop/l4-h0-sol61",
+      "method_id": "L4",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--webshop--l4-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--webshop--l4-h0-sol61.json",
+      "source_hook_names": {
+        "budget-check": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "details-return": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "option-ledger": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "query-cleanup": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "identity-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "action-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "comparison-stop": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "retrieval-focus": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "named-identity": [
+          "+JSON.stringify({value})+",
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "variant-evidence": [
+          "+JSON.stringify({value:x.value})+",
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "capacity-match": [
+          "+JSON.stringify({keywords:",
+          "+JSON.stringify({value:offered[0].v})+",
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "named-color": [
+          "+JSON.stringify({keywords:query})+",
+          "+JSON.stringify({value:offered[0].v})+",
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l5-h0-sol61",
+      "checkpoint": "v28",
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61/v28",
+      "source_frozen": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61/runs/frozen/v28",
+      "selected_methods": [
+        "option-ledger",
+        "search-evidence",
+        "checkout-loop",
+        "price-evidence",
+        "budget-search"
+      ],
+      "files": 9,
+      "bytes": 59497,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v28",
+        "loop": "L5",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0零增强插件",
+        "train": {
+          "best": {
+            "episodes": 40,
+            "valid": 40,
+            "invalid": 0,
+            "mean": 0.7120833333333333,
+            "strict_pass_at_1": 0.35,
+            "strict_successes": 14,
+            "repeat_means": {
+              "0": 0.7120833333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "validation": {
+          "best": {
+            "episodes": 60,
+            "valid": 60,
+            "invalid": 0,
+            "mean": 0.7047222222222222,
+            "strict_pass_at_1": 0.35,
+            "strict_successes": 21,
+            "repeat_means": {
+              "0": 0.7047222222222222
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.7068277777777777,
+            "strict_pass_at_1": 0.445,
+            "strict_successes": 267,
+            "repeat_means": {
+              "0": 0.7001333333333333,
+              "1": 0.7094666666666667,
+              "2": 0.7108833333333333
+            },
+            "repeat_standard_deviation": 0.004768887076731586
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l5-h0-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
+      "method_id": "L5",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--webshop--l5-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--webshop--l5-h0-sol61.json",
+      "source_hook_names": {
+        "option-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "search-evidence": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "checkout-loop": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "price-evidence": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "budget-search": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-expansion-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "original-best-sol61",
+      "checkpoint": "v36",
+      "source_experiment": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+      "artifact_path": "loop-expansion-sol40-20261026/webshop/original-best-sol61/v36",
+      "source_frozen": "loop-expansion-sol40-20261026/webshop/original-best-sol61/runs/frozen/v36",
+      "selected_methods": [
+        "search-evidence",
+        "option-ledger"
+      ],
+      "files": 5,
+      "bytes": 162284,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v36",
+        "loop": "Resume",
+        "test_policy": "only final selected checkpoint",
+        "selection_metric": "mean_reward",
+        "startpoint": "旧最终版 v37",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.7566666666666667,
+            "strict_pass_at_1": 0.44,
+            "strict_successes": 22,
+            "repeat_means": {
+              "0": 0.7566666666666667
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.7058523809523809,
+            "strict_pass_at_1": 0.44333333333333336,
+            "strict_successes": 266,
+            "repeat_means": {
+              "0": 0.7029190476190477,
+              "1": 0.7053773809523809,
+              "2": 0.7092607142857142
+            },
+            "repeat_standard_deviation": 0.002610670766652066
+          }
+        },
+        "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "original-best-sol61",
+        "source_experiment": "loop-expansion-sol40-20261026/webshop/original-best-sol61"
+      },
+      "run_id": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+      "method_id": "resume",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-expansion-sol40-20261026--webshop--original-best-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-expansion-sol40-20261026--webshop--original-best-sol61.json",
+      "source_hook_names": {
+        "search-evidence": [
+          "+JSON.stringify({keywords})+",
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "option-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l6-attribution-40r-20261026",
+      "benchmark": "dbbench",
+      "group": "l6-h0-sol61",
+      "checkpoint": "v37",
+      "source_experiment": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61",
+      "artifact_path": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61/v37",
+      "source_frozen": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61/runs/frozen/v37",
+      "selected_methods": [
+        "literal-fidelity",
+        "write-receipts",
+        "schema-identity",
+        "entity-coverage",
+        "mutation-contract",
+        "answer-arguments",
+        "date-order",
+        "formatted-assignment",
+        "max-result"
+      ],
+      "files": 10,
+      "bytes": 18333,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v37",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.58,
+            "repeat_means": {
+              "0": 0.58
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.5622222222222222,
+            "repeat_means": {
+              "0": 0.5633333333333334,
+              "1": 0.56,
+              "2": 0.5633333333333334
+            },
+            "repeat_standard_deviation": 0.0015713484026367562
+          }
+        },
+        "source": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l6-h0-sol61",
+        "source_experiment": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61"
+      },
+      "run_id": "loop-l6-attribution-40r-20261026/dbbench/l6-h0-sol61",
+      "method_id": "L6",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l6-attribution-40r-20261026--dbbench--l6-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l6-attribution-40r-20261026--dbbench--l6-h0-sol61.json",
+      "source_hook_names": {
+        "literal-fidelity": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "write-receipts": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "schema-identity": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "entity-coverage": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "mutation-contract": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "answer-arguments": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "date-order": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "formatted-assignment": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "max-result": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l6-attribution-40r-20261026",
+      "benchmark": "osbench",
+      "group": "l6-h0-sol61",
+      "checkpoint": "v40",
+      "source_experiment": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61",
+      "artifact_path": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61/v40",
+      "source_frozen": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61/runs/frozen/v40",
+      "selected_methods": [
+        "line-count",
+        "home-path",
+        "prefix-free",
+        "disk-total",
+        "time-filter",
+        "count-receipt",
+        "file-discovery",
+        "filename-identity",
+        "regex-dialect",
+        "temporal-extrema",
+        "calendar-weekday",
+        "repeat-result",
+        "date-filter",
+        "date-prefix"
+      ],
+      "files": 15,
+      "bytes": 19887,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.74,
+            "repeat_means": {
+              "0": 0.74
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.29398148148148145,
+            "repeat_means": {
+              "0": 0.2916666666666667,
+              "1": 0.3055555555555556,
+              "2": 0.2847222222222222
+            },
+            "repeat_standard_deviation": 0.00866124395086562
+          }
+        },
+        "source": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l6-h0-sol61",
+        "source_experiment": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61"
+      },
+      "run_id": "loop-l6-attribution-40r-20261026/osbench/l6-h0-sol61",
+      "method_id": "L6",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l6-attribution-40r-20261026--osbench--l6-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l6-attribution-40r-20261026--osbench--l6-h0-sol61.json",
+      "source_hook_names": {
+        "line-count": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "home-path": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "prefix-free": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "disk-total": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "time-filter": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "count-receipt": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "file-discovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "filename-identity": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "regex-dialect": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "temporal-extrema": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "calendar-weekday": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "repeat-result": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "date-filter": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "date-prefix": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l6-attribution-40r-20261026",
+      "benchmark": "webshop",
+      "group": "l6-h0-sol61",
+      "checkpoint": "v30",
+      "source_experiment": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61",
+      "artifact_path": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61/v30",
+      "source_frozen": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61/runs/frozen/v30",
+      "selected_methods": [
+        "option-state",
+        "result-compare",
+        "budget-check",
+        "click-format",
+        "visit-memory",
+        "page-state"
+      ],
+      "files": 7,
+      "bytes": 12549,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v30",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.7156666666666667,
+            "strict_pass_at_1": 0.4,
+            "strict_successes": 20,
+            "repeat_means": {
+              "0": 0.7156666666666667
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6567222222222222,
+            "strict_pass_at_1": 0.3983333333333333,
+            "strict_successes": 239,
+            "repeat_means": {
+              "0": 0.6484583333333334,
+              "1": 0.6615833333333333,
+              "2": 0.660125
+            },
+            "repeat_standard_deviation": 0.005873702903830666
+          }
+        },
+        "source": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l6-h0-sol61",
+        "source_experiment": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61"
+      },
+      "run_id": "loop-l6-attribution-40r-20261026/webshop/l6-h0-sol61",
+      "method_id": "L6",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l6-attribution-40r-20261026--webshop--l6-h0-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l6-attribution-40r-20261026--webshop--l6-h0-sol61.json",
+      "source_hook_names": {
+        "option-state": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "result-compare": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "budget-check": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "click-format": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "visit-memory": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "page-state": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l7-sol61",
+      "checkpoint": "v18",
+      "source_experiment": "loop-l789-sol40-20261026/dbbench/l7-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/dbbench/l7-sol61/v18",
+      "source_frozen": "loop-l789-sol40-20261026/dbbench/l7-sol61/runs/frozen/v18",
+      "selected_methods": [
+        "write-receipt",
+        "sql-recovery",
+        "numeric-id-max",
+        "numeric-value-extrema"
+      ],
+      "files": 5,
+      "bytes": 9329,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v18",
+        "loop": "L7",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.54,
+            "repeat_means": {
+              "0": 0.54
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.49666666666666665,
+            "repeat_means": {
+              "0": 0.49666666666666665,
+              "1": 0.5033333333333333,
+              "2": 0.49
+            },
+            "repeat_standard_deviation": 0.0054433105395181635
+          }
+        },
+        "source": "loop-l789-sol40-20261026/dbbench/l7-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l7-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/dbbench/l7-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/dbbench/l7-sol61",
+      "method_id": "L7",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--dbbench--l7-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--dbbench--l7-sol61.json",
+      "source_hook_names": {
+        "write-receipt": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "sql-recovery": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "numeric-id-max": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "numeric-value-extrema": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l8-external-sol61",
+      "checkpoint": "v40",
+      "source_experiment": "loop-l789-sol40-20261026/dbbench/l8-external-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/dbbench/l8-external-sol61/v40",
+      "source_frozen": "loop-l789-sol40-20261026/dbbench/l8-external-sol61/runs/frozen/v40",
+      "selected_methods": [
+        "schema-values",
+        "write-ledger",
+        "query-submit",
+        "date-conversion-review",
+        "next-value-review",
+        "record-submit-review",
+        "single-column-answers"
+      ],
+      "files": 8,
+      "bytes": 24431,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L8-external",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.7,
+            "repeat_means": {
+              "0": 0.7
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.6033333333333334,
+            "repeat_means": {
+              "0": 0.6033333333333334,
+              "1": 0.6166666666666667,
+              "2": 0.59
+            },
+            "repeat_standard_deviation": 0.010886621079036372
+          }
+        },
+        "source": "loop-l789-sol40-20261026/dbbench/l8-external-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l8-external-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/dbbench/l8-external-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/dbbench/l8-external-sol61",
+      "method_id": "L8_external",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--dbbench--l8-external-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--dbbench--l8-external-sol61.json",
+      "source_hook_names": {
+        "schema-values": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "write-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "query-submit": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "date-conversion-review": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "next-value-review": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "record-submit-review": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "single-column-answers": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l8-internal-sol61",
+      "checkpoint": "v19",
+      "source_experiment": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61/v19",
+      "source_frozen": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61/runs/frozen/v19",
+      "selected_methods": [
+        "literal-fidelity",
+        "next-id-max"
+      ],
+      "files": 3,
+      "bytes": 4417,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v19",
+        "loop": "L8-internal",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.52,
+            "repeat_means": {
+              "0": 0.52
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.43666666666666665,
+            "repeat_means": {
+              "0": 0.43333333333333335,
+              "1": 0.43666666666666665,
+              "2": 0.44
+            },
+            "repeat_standard_deviation": 0.0027216552697590817
+          }
+        },
+        "source": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l8-internal-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/dbbench/l8-internal-sol61",
+      "method_id": "L8_internal",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--dbbench--l8-internal-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--dbbench--l8-internal-sol61.json",
+      "source_hook_names": {
+        "literal-fidelity": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "next-id-max": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "dbbench",
+      "group": "l9-sol61",
+      "checkpoint": "v08",
+      "source_experiment": "loop-l789-sol40-20261026/dbbench/l9-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/dbbench/l9-sol61/v08",
+      "source_frozen": "loop-l789-sol40-20261026/dbbench/l9-sol61/runs/frozen/v08",
+      "selected_methods": [
+        "schema-contract",
+        "literal-contract",
+        "completion-ledger",
+        "call-recovery",
+        "result-bridge",
+        "intent-contract",
+        "numeric-calendar"
+      ],
+      "files": 36,
+      "bytes": 96775,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v08",
+        "loop": "L9",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.78,
+            "repeat_means": {
+              "0": 0.78
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.6744444444444444,
+            "repeat_means": {
+              "0": 0.6766666666666666,
+              "1": 0.68,
+              "2": 0.6666666666666666
+            },
+            "repeat_standard_deviation": 0.005665577237325346
+          }
+        },
+        "source": "loop-l789-sol40-20261026/dbbench/l9-sol61/runs/final.json",
+        "benchmark": "dbbench",
+        "group": "l9-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/dbbench/l9-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/dbbench/l9-sol61",
+      "method_id": "L9",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--dbbench--l9-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--dbbench--l9-sol61.json",
+      "source_hook_names": {
+        "schema-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "literal-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "completion-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "call-recovery": [
+          "agent/pre-step",
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "result-bridge": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "intent-contract": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "numeric-calendar": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l7-sol61",
+      "checkpoint": "v32",
+      "source_experiment": "loop-l789-sol40-20261026/osbench/l7-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/osbench/l7-sol61/v32",
+      "source_frozen": "loop-l789-sol40-20261026/osbench/l7-sol61/runs/frozen/v32",
+      "selected_methods": [
+        "clean-unique",
+        "shell-recovery",
+        "matching-lines",
+        "log-order",
+        "line-length",
+        "gzip-content"
+      ],
+      "files": 7,
+      "bytes": 24904,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v32",
+        "loop": "L7",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.72,
+            "repeat_means": {
+              "0": 0.72
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.31712962962962965,
+            "repeat_means": {
+              "0": 0.3125,
+              "1": 0.3333333333333333,
+              "2": 0.3055555555555556
+            },
+            "repeat_standard_deviation": 0.011803285911094393
+          }
+        },
+        "source": "loop-l789-sol40-20261026/osbench/l7-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l7-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/osbench/l7-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/osbench/l7-sol61",
+      "method_id": "L7",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--osbench--l7-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--osbench--l7-sol61.json",
+      "source_hook_names": {
+        "clean-unique": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "shell-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "matching-lines": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "log-order": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "line-length": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "gzip-content": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l8-external-sol61",
+      "checkpoint": "v10",
+      "source_experiment": "loop-l789-sol40-20261026/osbench/l8-external-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/osbench/l8-external-sol61/v10",
+      "source_frozen": "loop-l789-sol40-20261026/osbench/l8-external-sol61/runs/frozen/v10",
+      "selected_methods": [
+        "dedup-values",
+        "ip-first-field",
+        "extension-source"
+      ],
+      "files": 4,
+      "bytes": 7062,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v10",
+        "loop": "L8-external",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.6,
+            "repeat_means": {
+              "0": 0.6
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.32407407407407407,
+            "repeat_means": {
+              "0": 0.3333333333333333,
+              "1": 0.3194444444444444,
+              "2": 0.3194444444444444
+            },
+            "repeat_standard_deviation": 0.0065472850109865545
+          }
+        },
+        "source": "loop-l789-sol40-20261026/osbench/l8-external-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l8-external-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/osbench/l8-external-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/osbench/l8-external-sol61",
+      "method_id": "L8_external",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--osbench--l8-external-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--osbench--l8-external-sol61.json",
+      "source_hook_names": {
+        "dedup-values": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "ip-first-field": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "extension-source": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l8-internal-sol61",
+      "checkpoint": "v10",
+      "source_experiment": "loop-l789-sol40-20261026/osbench/l8-internal-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/osbench/l8-internal-sol61/v10",
+      "source_frozen": "loop-l789-sol40-20261026/osbench/l8-internal-sol61/runs/frozen/v10",
+      "selected_methods": [
+        "unique-merge-guard",
+        "grep-pattern-recovery",
+        "path-input-recovery",
+        "matching-line-guard"
+      ],
+      "files": 5,
+      "bytes": 12083,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v10",
+        "loop": "L8-internal",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.68,
+            "repeat_means": {
+              "0": 0.68
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.30092592592592593,
+            "repeat_means": {
+              "0": 0.3194444444444444,
+              "1": 0.2847222222222222,
+              "2": 0.2986111111111111
+            },
+            "repeat_standard_deviation": 0.014269476858724477
+          }
+        },
+        "source": "loop-l789-sol40-20261026/osbench/l8-internal-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l8-internal-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/osbench/l8-internal-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/osbench/l8-internal-sol61",
+      "method_id": "L8_internal",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--osbench--l8-internal-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--osbench--l8-internal-sol61.json",
+      "source_hook_names": {
+        "unique-merge-guard": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "grep-pattern-recovery": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "path-input-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "matching-line-guard": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "osbench",
+      "group": "l9-sol61",
+      "checkpoint": "v32",
+      "source_experiment": "loop-l789-sol40-20261026/osbench/l9-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/osbench/l9-sol61/v32",
+      "source_frozen": "loop-l789-sol40-20261026/osbench/l9-sol61/runs/frozen/v32",
+      "selected_methods": [
+        "global-projection",
+        "answer-call-repair",
+        "shell-path-check",
+        "matching-line-check",
+        "grep-pattern-check",
+        "find-line-count-check"
+      ],
+      "files": 19,
+      "bytes": 24915,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v32",
+        "loop": "L9",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.72,
+            "repeat_means": {
+              "0": 0.72
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3819444444444444,
+            "repeat_means": {
+              "0": 0.375,
+              "1": 0.3888888888888889,
+              "2": 0.3819444444444444
+            },
+            "repeat_standard_deviation": 0.005670115145331433
+          }
+        },
+        "source": "loop-l789-sol40-20261026/osbench/l9-sol61/runs/final.json",
+        "benchmark": "osbench",
+        "group": "l9-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/osbench/l9-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/osbench/l9-sol61",
+      "method_id": "L9",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--osbench--l9-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--osbench--l9-sol61.json",
+      "source_hook_names": {
+        "global-projection": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "answer-call-repair": [
+          "benchmark/setup",
+          "llm/stream",
+          "session/disposed",
+          "system-prompt/assemble"
+        ],
+        "shell-path-check": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "matching-line-check": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "grep-pattern-check": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "find-line-count-check": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l7-sol61",
+      "checkpoint": "v15",
+      "source_experiment": "loop-l789-sol40-20261026/webshop/l7-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/webshop/l7-sol61/v15",
+      "source_frozen": "loop-l789-sol40-20261026/webshop/l7-sol61/runs/frozen/v15",
+      "selected_methods": [
+        "option-state",
+        "click-grounding",
+        "required-options",
+        "product-type",
+        "feature-evidence"
+      ],
+      "files": 6,
+      "bytes": 15988,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v15",
+        "loop": "L7",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.6859999999999999,
+            "strict_pass_at_1": 0.38,
+            "strict_successes": 19,
+            "repeat_means": {
+              "0": 0.6859999999999999
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6456928571428572,
+            "strict_pass_at_1": 0.365,
+            "strict_successes": 219,
+            "repeat_means": {
+              "0": 0.6433595238095238,
+              "1": 0.6418595238095238,
+              "2": 0.6518595238095238
+            },
+            "repeat_standard_deviation": 0.004403281604540983
+          }
+        },
+        "source": "loop-l789-sol40-20261026/webshop/l7-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l7-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/webshop/l7-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/webshop/l7-sol61",
+      "method_id": "L7",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--webshop--l7-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--webshop--l7-sol61.json",
+      "source_hook_names": {
+        "option-state": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "click-grounding": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "required-options": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "product-type": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "feature-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l8-external-sol61",
+      "checkpoint": "v40",
+      "source_experiment": "loop-l789-sol40-20261026/webshop/l8-external-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/webshop/l8-external-sol61/v40",
+      "source_frozen": "loop-l789-sol40-20261026/webshop/l8-external-sol61/runs/frozen/v40",
+      "selected_methods": [
+        "variant-state",
+        "identity-cue",
+        "size-recovery",
+        "feature-evidence",
+        "code-search",
+        "laptop-evidence",
+        "dimension-route",
+        "pack-recovery",
+        "free-evidence"
+      ],
+      "files": 10,
+      "bytes": 30314,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L8-external",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.6821666666666667,
+            "strict_pass_at_1": 0.4,
+            "strict_successes": 20,
+            "repeat_means": {
+              "0": 0.6821666666666667
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6408484126984126,
+            "strict_pass_at_1": 0.3433333333333333,
+            "strict_successes": 206,
+            "repeat_means": {
+              "0": 0.6410095238095238,
+              "1": 0.6413928571428571,
+              "2": 0.6401428571428571
+            },
+            "repeat_standard_deviation": 0.000522871936260101
+          }
+        },
+        "source": "loop-l789-sol40-20261026/webshop/l8-external-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l8-external-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/webshop/l8-external-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/webshop/l8-external-sol61",
+      "method_id": "L8_external",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--webshop--l8-external-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--webshop--l8-external-sol61.json",
+      "source_hook_names": {
+        "variant-state": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "identity-cue": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "size-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "feature-evidence": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "code-search": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "laptop-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "dimension-route": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "pack-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "free-evidence": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l8-internal-sol61",
+      "checkpoint": "v37",
+      "source_experiment": "loop-l789-sol40-20261026/webshop/l8-internal-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/webshop/l8-internal-sol61/v37",
+      "source_frozen": "loop-l789-sol40-20261026/webshop/l8-internal-sol61/runs/frozen/v37",
+      "selected_methods": [
+        "option-ledger",
+        "purchase-price",
+        "cable-length",
+        "cable-count",
+        "fixed-color",
+        "dessert-identity",
+        "energy-series"
+      ],
+      "files": 8,
+      "bytes": 28129,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v37",
+        "loop": "L8-internal",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.6929333333333333,
+            "strict_pass_at_1": 0.4,
+            "strict_successes": 20,
+            "repeat_means": {
+              "0": 0.6929333333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6565373015873016,
+            "strict_pass_at_1": 0.355,
+            "strict_successes": 213,
+            "repeat_means": {
+              "0": 0.6576928571428572,
+              "1": 0.6568595238095238,
+              "2": 0.6550595238095238
+            },
+            "repeat_standard_deviation": 0.0010989332650291794
+          }
+        },
+        "source": "loop-l789-sol40-20261026/webshop/l8-internal-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l8-internal-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/webshop/l8-internal-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/webshop/l8-internal-sol61",
+      "method_id": "L8_internal",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--webshop--l8-internal-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--webshop--l8-internal-sol61.json",
+      "source_hook_names": {
+        "option-ledger": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "purchase-price": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "cable-length": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "cable-count": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "fixed-color": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "dessert-identity": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "energy-series": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "loop-l789-sol40-20261026",
+      "benchmark": "webshop",
+      "group": "l9-sol61",
+      "checkpoint": "v25",
+      "source_experiment": "loop-l789-sol40-20261026/webshop/l9-sol61",
+      "artifact_path": "loop-l789-sol40-20261026/webshop/l9-sol61/v25",
+      "source_frozen": "loop-l789-sol40-20261026/webshop/l9-sol61/runs/frozen/v25",
+      "selected_methods": [
+        "option-ledger",
+        "search-evidence",
+        "price-evidence"
+      ],
+      "files": 12,
+      "bytes": 68594,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v25",
+        "loop": "L9",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.728,
+            "strict_pass_at_1": 0.38,
+            "strict_successes": 19,
+            "repeat_means": {
+              "0": 0.728
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6933527777777778,
+            "strict_pass_at_1": 0.43333333333333335,
+            "strict_successes": 260,
+            "repeat_means": {
+              "0": 0.6882583333333333,
+              "1": 0.6986666666666667,
+              "2": 0.6931333333333334
+            },
+            "repeat_standard_deviation": 0.0042520165876591375
+          }
+        },
+        "source": "loop-l789-sol40-20261026/webshop/l9-sol61/runs/final.json",
+        "benchmark": "webshop",
+        "group": "l9-sol61",
+        "source_experiment": "loop-l789-sol40-20261026/webshop/l9-sol61"
+      },
+      "run_id": "loop-l789-sol40-20261026/webshop/l9-sol61",
+      "method_id": "L9",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/loop-l789-sol40-20261026--webshop--l9-sol61.json",
+      "task_manifest_file": "results/research/tasks/loop-l789-sol40-20261026--webshop--l9-sol61.json",
+      "source_hook_names": {
+        "option-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "search-evidence": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "price-evidence": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "dbbench",
+      "group": "dsh-summary",
+      "checkpoint": "v40",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-summary",
+      "artifact_path": "failure-frontier-fivebench-20261029/dbbench/dsh-summary/v40",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-summary/runs/frozen/v40",
+      "selected_methods": [
+        "exact-identifiers",
+        "write-literals",
+        "write-receipts",
+        "numeric-sequence",
+        "format-evidence",
+        "answer-coverage",
+        "submission-shape",
+        "update-intent",
+        "schema-spelling",
+        "task-literals",
+        "bounded-pattern",
+        "boolean-groups",
+        "predicate-memory",
+        "empty-values",
+        "insert-before-submit",
+        "tool-protocol",
+        "result-literals",
+        "suffix-boundary",
+        "numeric-empty",
+        "contains-scope"
+      ],
+      "files": 21,
+      "bytes": 37267,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.5,
+            "repeat_means": {
+              "0": 0.5
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.5544444444444444,
+            "repeat_means": {
+              "0": 0.54,
+              "1": 0.56,
+              "2": 0.5633333333333334
+            },
+            "repeat_standard_deviation": 0.01030402055055078
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-summary/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-summary",
+      "method_id": "dsh_summary",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--dbbench--dsh-summary.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--dbbench--dsh-summary.json",
+      "source_hook_names": {
+        "exact-identifiers": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "write-literals": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "write-receipts": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "numeric-sequence": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "format-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "answer-coverage": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "submission-shape": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "update-intent": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "schema-spelling": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "task-literals": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "bounded-pattern": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "boolean-groups": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "predicate-memory": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "empty-values": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "insert-before-submit": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "tool-protocol": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "result-literals": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "suffix-boundary": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "numeric-empty": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "contains-scope": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "dbbench",
+      "group": "dsh-mechanism",
+      "checkpoint": "v37",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-mechanism",
+      "artifact_path": "failure-frontier-fivebench-20261029/dbbench/dsh-mechanism/v37",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-mechanism/runs/frozen/v37",
+      "selected_methods": [
+        "sql-recovery",
+        "empty-result-recovery",
+        "execution-grounding",
+        "identifier-literals",
+        "result-fidelity",
+        "output-fields",
+        "ordinal-aggregate",
+        "year-shape",
+        "suffix-scope",
+        "numeric-literal",
+        "query-rebuild",
+        "date-preview",
+        "contains-case",
+        "formatted-write",
+        "table-axis",
+        "field-scope",
+        "literal-fidelity",
+        "format-evidence",
+        "predicate-carry",
+        "numeric-id-max"
+      ],
+      "files": 21,
+      "bytes": 45591,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v37",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.58,
+            "repeat_means": {
+              "0": 0.58
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 900,
+            "valid": 900,
+            "invalid": 0,
+            "mean": 0.5577777777777778,
+            "repeat_means": {
+              "0": 0.5466666666666666,
+              "1": 0.5566666666666666,
+              "2": 0.57
+            },
+            "repeat_standard_deviation": 0.009558139185602912
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-mechanism/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/dbbench/dsh-mechanism",
+      "method_id": "dsh_mechanism",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--dbbench--dsh-mechanism.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--dbbench--dsh-mechanism.json",
+      "source_hook_names": {
+        "sql-recovery": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "empty-result-recovery": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "execution-grounding": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "identifier-literals": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "result-fidelity": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "output-fields": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "ordinal-aggregate": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "year-shape": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "suffix-scope": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "numeric-literal": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "query-rebuild": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "date-preview": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "contains-case": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "formatted-write": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "table-axis": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "field-scope": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "literal-fidelity": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "format-evidence": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "predicate-carry": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "numeric-id-max": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "webshop",
+      "group": "dsh-summary",
+      "checkpoint": "v40",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-summary",
+      "artifact_path": "failure-frontier-fivebench-20261029/webshop/dsh-summary/v40",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-summary/runs/frozen/v40",
+      "selected_methods": [
+        "variant-ledger",
+        "action-grounding",
+        "feature-inspection",
+        "pack-count",
+        "product-kind",
+        "named-drink",
+        "bedding-size"
+      ],
+      "files": 8,
+      "bytes": 26166,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v40",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.7143333333333334,
+            "strict_pass_at_1": 0.4,
+            "strict_successes": 20,
+            "repeat_means": {
+              "0": 0.7143333333333334
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6558928571428572,
+            "strict_pass_at_1": 0.39,
+            "strict_successes": 234,
+            "repeat_means": {
+              "0": 0.6601428571428571,
+              "1": 0.6536428571428571,
+              "2": 0.6538928571428572
+            },
+            "repeat_standard_deviation": 0.003006936425444796
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-summary/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-summary",
+      "method_id": "dsh_summary",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--webshop--dsh-summary.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--webshop--dsh-summary.json",
+      "source_hook_names": {
+        "variant-ledger": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "action-grounding": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "feature-inspection": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "pack-count": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "product-kind": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "named-drink": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "bedding-size": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "webshop",
+      "group": "dsh-mechanism",
+      "checkpoint": "v35",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-mechanism",
+      "artifact_path": "failure-frontier-fivebench-20261029/webshop/dsh-mechanism/v35",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-mechanism/runs/frozen/v35",
+      "selected_methods": [
+        "result-coverage",
+        "detail-navigation",
+        "option-focus",
+        "budget-guard",
+        "action-availability",
+        "blue-variant"
+      ],
+      "files": 7,
+      "bytes": 17935,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v35",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.6833333333333333,
+            "strict_pass_at_1": 0.38,
+            "strict_successes": 19,
+            "repeat_means": {
+              "0": 0.6833333333333333
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 600,
+            "valid": 600,
+            "invalid": 0,
+            "mean": 0.6666222222222222,
+            "strict_pass_at_1": 0.42333333333333334,
+            "strict_successes": 254,
+            "repeat_means": {
+              "0": 0.67235,
+              "1": 0.6591333333333333,
+              "2": 0.6683833333333333
+            },
+            "repeat_standard_deviation": 0.005537520727046452
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-mechanism/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-mechanism",
+      "method_id": "dsh_mechanism",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--webshop--dsh-mechanism.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--webshop--dsh-mechanism.json",
+      "source_hook_names": {
+        "result-coverage": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "detail-navigation": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "option-focus": [
+          "benchmark/setup",
+          "tools/post-execute"
+        ],
+        "budget-guard": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "action-availability": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "blue-variant": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "osbench",
+      "group": "dsh-summary",
+      "checkpoint": "v39",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-summary",
+      "artifact_path": "failure-frontier-fivebench-20261029/osbench/dsh-summary/v39",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-summary/runs/frozen/v39",
+      "selected_methods": [
+        "statistic-guard",
+        "scope-inputs"
+      ],
+      "files": 3,
+      "bytes": 16769,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v39",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.72,
+            "repeat_means": {
+              "0": 0.72
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.29398148148148145,
+            "repeat_means": {
+              "0": 0.3055555555555556,
+              "1": 0.2916666666666667,
+              "2": 0.2847222222222222
+            },
+            "repeat_standard_deviation": 0.00866124395086562
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-summary/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-summary",
+      "method_id": "dsh_summary",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--osbench--dsh-summary.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--osbench--dsh-summary.json",
+      "source_hook_names": {
+        "statistic-guard": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "scope-inputs": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "osbench",
+      "group": "dsh-mechanism",
+      "checkpoint": "v39",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-mechanism",
+      "artifact_path": "failure-frontier-fivebench-20261029/osbench/dsh-mechanism/v39",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-mechanism/runs/frozen/v39",
+      "selected_methods": [
+        "count-unit",
+        "unique-scope",
+        "shell-recovery",
+        "actual-submit",
+        "size-unit",
+        "file-threshold",
+        "event-timestamp",
+        "date-range",
+        "path-component",
+        "hour-field",
+        "word-line",
+        "compressed-set"
+      ],
+      "files": 13,
+      "bytes": 42911,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v39",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 0.72,
+            "repeat_means": {
+              "0": 0.72
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 432,
+            "valid": 432,
+            "invalid": 0,
+            "mean": 0.3287037037037037,
+            "repeat_means": {
+              "0": 0.3333333333333333,
+              "1": 0.3402777777777778,
+              "2": 0.3125
+            },
+            "repeat_standard_deviation": 0.01180328591109441
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-mechanism/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-mechanism",
+      "method_id": "dsh_mechanism",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--osbench--dsh-mechanism.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--osbench--dsh-mechanism.json",
+      "source_hook_names": {
+        "count-unit": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "unique-scope": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "shell-recovery": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "actual-submit": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "size-unit": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "file-threshold": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "event-timestamp": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/pre-execute"
+        ],
+        "date-range": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "path-component": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "hour-field": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "word-line": [
+          "benchmark/setup",
+          "tools/pre-execute"
+        ],
+        "compressed-set": [
+          "benchmark/setup",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "alfworld",
+      "group": "dsh-summary",
+      "checkpoint": "v18",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-summary",
+      "artifact_path": "failure-frontier-fivebench-20261029/alfworld/dsh-summary/v18",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-summary/runs/frozen/v18",
+      "selected_methods": [
+        "task-checklist",
+        "receipt-ledger"
+      ],
+      "files": 3,
+      "bytes": 12667,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v18",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 1.0,
+            "repeat_means": {
+              "0": 1.0
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 109,
+            "valid": 109,
+            "invalid": 0,
+            "mean": 0.9541284403669725,
+            "repeat_means": {
+              "0": 0.9541284403669725
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-summary/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-summary",
+      "method_id": "dsh_summary",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--alfworld--dsh-summary.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--alfworld--dsh-summary.json",
+      "source_hook_names": {
+        "task-checklist": [
+          "benchmark/setup",
+          "system-prompt/assemble"
+        ],
+        "receipt-ledger": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    },
+    {
+      "campaign": "failure-frontier-fivebench-20261029",
+      "benchmark": "alfworld",
+      "group": "dsh-mechanism",
+      "checkpoint": "v17",
+      "source_experiment": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-mechanism",
+      "artifact_path": "failure-frontier-fivebench-20261029/alfworld/dsh-mechanism/v17",
+      "source_frozen": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-mechanism/runs/frozen/v17",
+      "selected_methods": [
+        "light-state",
+        "processing-state",
+        "transfer-state"
+      ],
+      "files": 4,
+      "bytes": 19063,
+      "unresolved_relative_imports": [],
+      "final_result": {
+        "rounds": 40,
+        "best": "v17",
+        "loop": "L6",
+        "test_policy": "only final training-selected checkpoint",
+        "selection_metric": "strict_success",
+        "startpoint": "H0",
+        "train": {
+          "best": {
+            "episodes": 50,
+            "valid": 50,
+            "invalid": 0,
+            "mean": 1.0,
+            "repeat_means": {
+              "0": 1.0
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "test": {
+          "best": {
+            "episodes": 109,
+            "valid": 109,
+            "invalid": 0,
+            "mean": 0.944954128440367,
+            "repeat_means": {
+              "0": 0.944954128440367
+            },
+            "repeat_standard_deviation": 0.0
+          }
+        },
+        "source": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-mechanism/runs/final.json"
+      },
+      "run_id": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-mechanism",
+      "method_id": "dsh_mechanism",
+      "result_file": "results/research/runs.json",
+      "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--alfworld--dsh-mechanism.json",
+      "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--alfworld--dsh-mechanism.json",
+      "source_hook_names": {
+        "light-state": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute"
+        ],
+        "processing-state": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ],
+        "transfer-state": [
+          "benchmark/setup",
+          "system-prompt/assemble",
+          "tools/post-execute",
+          "tools/pre-execute"
+        ]
+      },
+      "diagram_note": "Dashed edges denote static source attachments, not temporal execution, activation frequency or causal gains."
+    }
+  ]
+}

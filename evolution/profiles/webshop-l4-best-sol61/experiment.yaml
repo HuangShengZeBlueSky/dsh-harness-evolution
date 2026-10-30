@@ -1,0 +1,67 @@
+name: webshop-l4-best-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: batches/batch-01.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 20
+  max_model_calls: 20
+  timeout_seconds: 900
+  no_tool_feedback: You must call a tool! NEVER respond with only text.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 180
+    max_retries: 2
+    send_seed: false
+    extra_body:
+      parallel_tool_calls: false
+      chat_template_kwargs:
+        enable_thinking: false
+  environment:
+    factory: environment.py:create_environment
+    url: ${WEBSHOP_URL}
+    system_prompt_file: system-prompt.txt
+    tools_file: tools.json
+  train_batches:
+  - batches/batch-01.jsonl
+  - batches/batch-02.jsonl
+  - batches/batch-03.jsonl
+  - batches/batch-04.jsonl
+  - batches/batch-05.jsonl
+  - batches/batch-06.jsonl
+  runner: webshop
+domain: WebShop
+start_label: 旧最终版 v37
+batch_id: '20261026'
+loop:
+  variant: L4
+  label: Agent结构与多插件职责
+  require_agent_map: true
+  baseline_pool: best-paired
+  test_policy: only final selected checkpoint
+  source_experiment: webshop-methods-20r-20261023/method2-sol61
+  source_checkpoint: v37
+  selection_metric: mean_reward
+  source_method: 方法1协同
+  requires_seed_artifact: true

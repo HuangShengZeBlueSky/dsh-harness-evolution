@@ -1,0 +1,84 @@
+name: osbench-L2-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: train.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 16
+  max_model_calls: 16
+  timeout_seconds: 900
+  no_tool_feedback: No tool call detected. Please call a tool.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 575
+    max_retries: 0
+    send_seed: true
+    extra_body:
+      parallel_tool_calls: false
+  environment:
+    factory: environment.py:create_environment
+    docker_host: unix:///var/run/docker.sock
+    life_harness: false
+  validation: validation.jsonl
+  runner: osbench
+  transport:
+    model_url: ${BENCH_CHAT_URL}
+    tokenizer_url: ${BENCH_TOKENIZER_URL}
+    max_context_tokens: 32768
+    max_output_tokens: 4096
+    request_timeout_seconds: 575
+    transport_retries: 2
+    max_model_calls: 16
+domain: OSBench
+start_label: H0零增强插件
+playbook: PLAYBOOK.md
+loop:
+  variant: L2
+  label: 机制与回放
+  archive_size: 1
+  test_policy: only_final_selected_checkpoint
+  validation_feedback: aggregate scores only; no validation trajectories
+  split_seed: 20261025
+  replay_ids:
+  - train/0358
+  - train/0154
+  - train/0626
+  - train/0613
+  - train/0492
+  - train/0749
+  - train/0825
+  - train/0714
+  - train/0066
+  - train/0085
+  - train/0043
+  - train/0779
+  - train/0839
+  - train/0497
+  - train/0004
+  - train/0624
+  - train/0998
+  - train/0136
+  - train/0629
+  - train/0563
+  requires_seed_artifact: false

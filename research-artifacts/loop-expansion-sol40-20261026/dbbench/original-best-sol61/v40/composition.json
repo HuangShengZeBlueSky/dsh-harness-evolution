@@ -1,0 +1,96 @@
+{
+  "methods": [
+    {
+      "id": "sql-workflow",
+      "module": "plugins/sql-workflow.mjs",
+      "config": {}
+    },
+    {
+      "id": "value-grounding",
+      "module": "plugins/value-grounding.mjs",
+      "config": {}
+    },
+    {
+      "id": "task-contract",
+      "module": "plugins/task-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "insert-grounding",
+      "module": "plugins/insert-grounding.mjs",
+      "config": {}
+    },
+    {
+      "id": "numeric-identity",
+      "module": "plugins/numeric-identity.mjs",
+      "config": {}
+    },
+    {
+      "id": "result-fields",
+      "module": "plugins/result-fields.mjs",
+      "config": {}
+    },
+    {
+      "id": "finalization-contract",
+      "module": "plugins/finalization-contract.mjs",
+      "config": {}
+    },
+    {
+      "id": "calendar-semantics",
+      "module": "plugins/calendar-semantics.mjs",
+      "config": {}
+    },
+    {
+      "id": "aggregate-format",
+      "module": "plugins/aggregate-format.mjs",
+      "config": {}
+    },
+    {
+      "id": "schedule-order",
+      "module": "plugins/schedule-order.mjs",
+      "config": {}
+    },
+    {
+      "id": "insert-field-roles",
+      "module": "plugins/insert-field-roles.mjs",
+      "config": {}
+    },
+    {
+      "id": "insert-representation",
+      "module": "plugins/insert-representation.mjs",
+      "config": {}
+    },
+    {
+      "id": "schema-orientation",
+      "module": "plugins/schema-orientation.mjs",
+      "config": {}
+    },
+    {
+      "id": "quantity-answer",
+      "module": "plugins/quantity-answer.mjs",
+      "config": {}
+    },
+    {
+      "id": "listed-count",
+      "module": "plugins/listed-count.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "sql-workflow",
+    "value-grounding",
+    "task-contract",
+    "insert-grounding",
+    "numeric-identity",
+    "result-fields",
+    "finalization-contract",
+    "calendar-semantics",
+    "aggregate-format",
+    "schedule-order",
+    "insert-field-roles",
+    "insert-representation",
+    "schema-orientation",
+    "quantity-answer",
+    "listed-count"
+  ]
+}

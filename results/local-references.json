@@ -30,8 +30,13 @@
   {
     "id": "telecom",
     "title": "τ² Telecom",
-    "baseline": 0.43333333333333335,
-    "baseline_strict": 0.43333333333333335,
-    "full": null
+    "baseline": 0.30833333333333335,
+    "baseline_strict": 0.30833333333333335,
+    "full": 0.575,
+    "historical_dsh_h0": 0.43333333333333335,
+    "protocol_note": "Public built-in Life-Harness, GLM user, 40 tasks x 3; not a certified paper-final evolved bundle. Historical DSH H0 is a separate runtime.",
+    "full_pass_at_3": 0.925,
+    "full_pass_cubed": 0.225,
+    "valid_episodes": 120
   }
 ]

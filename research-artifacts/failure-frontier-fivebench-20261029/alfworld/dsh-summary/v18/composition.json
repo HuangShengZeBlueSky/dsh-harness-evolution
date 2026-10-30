@@ -1,0 +1,1 @@
+{"methods":[{"id":"task-checklist","module":"plugins/task-checklist.mjs","config":{}},{"id":"receipt-ledger","module":"plugins/receipt-ledger.mjs","config":{}}],"selected":["task-checklist","receipt-ledger"]}

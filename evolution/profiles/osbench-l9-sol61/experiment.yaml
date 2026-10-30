@@ -1,0 +1,143 @@
+name: osbench-l9-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: batches/batch-01.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 16
+  max_model_calls: 16
+  timeout_seconds: 900
+  no_tool_feedback: No tool call detected. Please call a tool.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 575
+    max_retries: 0
+    send_seed: false
+    extra_body:
+      parallel_tool_calls: false
+      chat_template_kwargs:
+        enable_thinking: false
+  environment:
+    factory: environment.py:create_environment
+    docker_host: unix:///var/run/docker.sock
+    life_harness: false
+  train_batches:
+  - batches/batch-01.jsonl
+  - batches/batch-02.jsonl
+  - batches/batch-03.jsonl
+  - batches/batch-04.jsonl
+  - batches/batch-05.jsonl
+  - batches/batch-06.jsonl
+  validation: validation.jsonl
+  runner: osbench
+  transport:
+    model_url: ${BENCH_CHAT_URL}
+    tokenizer_url: ${BENCH_TOKENIZER_URL}
+    max_context_tokens: 32768
+    max_output_tokens: 4096
+    request_timeout_seconds: 575
+    transport_retries: 2
+    max_model_calls: 16
+domain: OSBench
+start_label: H0；历史零部件可选
+playbook: PLAYBOOK.md
+batch_id: l789-20261026
+loop:
+  variant: L9
+  label: 零部件选择与组装
+  baseline_pool: common-300-plus-60
+  require_repair_plan: true
+  selection_metric: strict_success
+  review_next_batch: false
+  validation_families:
+    train/0095: aggregate
+    train/0473: file-selection
+    train/0985: line-or-other
+    train/0201: temporal-extrema
+    train/0513: temporal-filter
+    train/0183: unique-entity
+    train/0636: unique-ip
+    train/0993: aggregate
+    train/0797: file-selection
+    train/0308: line-or-other
+    train/0591: temporal-extrema
+    train/0661: temporal-filter
+    train/0686: unique-entity
+    train/0744: unique-ip
+    train/0113: aggregate
+    train/0662: file-selection
+    train/0972: line-or-other
+    train/0995: temporal-extrema
+    train/0712: temporal-filter
+    train/0898: unique-entity
+    train/0421: unique-ip
+    train/0558: aggregate
+    train/0843: file-selection
+    train/0479: line-or-other
+    train/0997: temporal-extrema
+    train/0545: temporal-filter
+    train/0675: unique-entity
+    train/0528: unique-ip
+    train/0585: aggregate
+    train/0282: file-selection
+    train/0487: line-or-other
+    train/0722: temporal-extrema
+    train/0742: temporal-filter
+    train/0604: unique-entity
+    train/0820: unique-ip
+    train/0659: aggregate
+    train/0173: file-selection
+    train/0346: line-or-other
+    train/0517: temporal-extrema
+    train/0855: temporal-filter
+    train/0525: unique-entity
+    train/0544: unique-ip
+    train/0343: aggregate
+    train/0766: file-selection
+    train/0061: line-or-other
+    train/0994: temporal-extrema
+    train/0605: temporal-filter
+    train/0925: unique-entity
+    train/0645: unique-ip
+    train/0760: aggregate
+    train/0092: file-selection
+    train/0209: line-or-other
+    train/0756: temporal-extrema
+    train/0697: temporal-filter
+    train/0603: unique-entity
+    train/0354: unique-ip
+    train/0077: aggregate
+    train/0200: file-selection
+    train/0706: line-or-other
+    train/0582: temporal-extrema
+  experience_sources: []
+  test_policy: only final selected checkpoint
+  historical_prior: true
+  requires_seed_artifact: false
+learning:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  record_calls: true

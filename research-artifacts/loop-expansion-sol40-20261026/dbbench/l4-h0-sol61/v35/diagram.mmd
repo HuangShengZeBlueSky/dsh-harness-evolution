@@ -1,0 +1,12 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["schema-contract"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P1["literal-contract"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P2["write-workflow"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P3["result-bridge"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P4["sql-recovery"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P5["budget-conductor"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P6["numeric-calendar"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P7["intent-contract"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H

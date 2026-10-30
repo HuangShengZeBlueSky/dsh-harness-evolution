@@ -1,0 +1,10 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["option-state"] -. "benchmark/setup / tools/post-execute" .-> H
+    P1["result-compare"] -. "benchmark/setup / tools/post-execute" .-> H
+    P2["budget-check"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["click-format"] -. "benchmark/setup / tools/post-execute" .-> H
+    P4["visit-memory"] -. "benchmark/setup / tools/post-execute" .-> H
+    P5["page-state"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

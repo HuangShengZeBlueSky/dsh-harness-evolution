@@ -1,0 +1,24 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["exact-identifiers"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P1["write-literals"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P2["write-receipts"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P3["numeric-sequence"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute" .-> H
+    P4["format-evidence"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["answer-coverage"] -. "benchmark/setup / tools/post-execute" .-> H
+    P6["submission-shape"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P7["update-intent"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P8["schema-spelling"] -. "benchmark/setup / tools/post-execute" .-> H
+    P9["task-literals"] -. "benchmark/setup / system-prompt/assemble / tools/pre-execute" .-> H
+    P10["bounded-pattern"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P11["boolean-groups"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P12["predicate-memory"] -. "benchmark/setup / tools/post-execute" .-> H
+    P13["empty-values"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P14["insert-before-submit"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P15["tool-protocol"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P16["result-literals"] -. "benchmark/setup / tools/post-execute" .-> H
+    P17["suffix-boundary"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P18["numeric-empty"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P19["contains-scope"] -. "benchmark/setup / tools/pre-execute" .-> H

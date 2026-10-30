@@ -1,0 +1,24 @@
+{
+  "methods": [
+    {
+      "id": "answer-call-repair",
+      "module": "plugins/answer-call-repair.mjs",
+      "config": {}
+    },
+    {
+      "id": "zero-result-review",
+      "module": "plugins/zero-result-review.mjs",
+      "config": {}
+    },
+    {
+      "id": "sample-schema",
+      "module": "plugins/sample-schema.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "answer-call-repair",
+    "zero-result-review",
+    "sample-schema"
+  ]
+}

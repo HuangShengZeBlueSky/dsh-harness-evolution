@@ -1,0 +1,81 @@
+{
+  "parent": "v32",
+  "at": 1792972613.844255,
+  "modules": [
+    {
+      "id": "schema-contract",
+      "module": "plugins/schema-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "literal-contract",
+      "module": "plugins/literal-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble"
+      ]
+    },
+    {
+      "id": "write-workflow",
+      "module": "plugins/write-workflow.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "result-bridge",
+      "module": "plugins/result-bridge.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "sql-recovery",
+      "module": "plugins/sql-recovery.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "budget-conductor",
+      "module": "plugins/budget-conductor.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/post-execute"
+      ]
+    },
+    {
+      "id": "numeric-calendar",
+      "module": "plugins/numeric-calendar.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/pre-execute"
+      ]
+    },
+    {
+      "id": "intent-contract",
+      "module": "plugins/intent-contract.mjs",
+      "hooks_seen_in_source": [
+        "benchmark/setup",
+        "system-prompt/assemble",
+        "tools/pre-execute"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"methods": [{"id": "literal-fidelity", "module": "plugins/literal-fidelity.mjs", "config": {}}, {"id": "next-id-max", "module": "plugins/next-id-max.mjs", "config": {}}], "selected": ["literal-fidelity", "next-id-max"]}

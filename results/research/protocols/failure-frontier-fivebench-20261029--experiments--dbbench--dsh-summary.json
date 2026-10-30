@@ -1,0 +1,73 @@
+{
+  "name": "dbbench-dsh-summary-sol40-20261029",
+  "method": "astra_autonomous",
+  "rounds": 40,
+  "baseline": "baseline",
+  "runtime": "runtime",
+  "harness_api": "harness-api.md",
+  "min_improvement": 0,
+  "test_schedule": "final",
+  "optimizer": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "sandbox": "danger-full-access"
+  },
+  "benchmark": {
+    "kind": "python",
+    "train": "batches/batch-01.jsonl",
+    "test": "test.jsonl",
+    "direction": "maximize",
+    "success_score": 1,
+    "concurrency": 18,
+    "max_steps": 100000,
+    "max_model_calls": 15,
+    "timeout_seconds": 1500,
+    "no_tool_feedback": "No executable tool calls found. Please call a tool.",
+    "model": {
+      "name": "Qwen3-4B-Instruct-2507",
+      "base_url": "${MODEL_BASE_URL}",
+      "api_key_env": "",
+      "temperature": 0,
+      "max_tokens": 4096,
+      "timeout_seconds": 740,
+      "max_retries": 0,
+      "send_seed": false,
+      "extra_body": {
+        "parallel_tool_calls": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "environment": {
+      "factory": "environment.py:create_environment"
+    },
+    "train_batches": [
+      "batches/batch-01.jsonl",
+      "batches/batch-02.jsonl",
+      "batches/batch-03.jsonl",
+      "batches/batch-04.jsonl",
+      "batches/batch-05.jsonl",
+      "batches/batch-06.jsonl"
+    ]
+  },
+  "domain": "DBBench",
+  "start_label": "H0零增强插件",
+  "loop": {
+    "variant": "L6",
+    "label": "归因与能力状态驱动修复",
+    "baseline_pool": "l6-h0",
+    "require_repair_plan": true,
+    "selection_metric": "strict_success",
+    "test_policy": "only final selected checkpoint",
+    "training_protocol": "public six 50-task batches, cycled for 40-round extension",
+    "comparison_scope": "not paper optimizer or equal six-round budget"
+  },
+  "frontier": {
+    "feedback": "summary",
+    "prospective_prediction": true,
+    "analysis_model": "gpt-6-luna",
+    "effort": "high"
+  },
+  "publication_note": "Configuration evidence, not a complete environment bundle. Use the released reproduction instructions for executable setup."
+}

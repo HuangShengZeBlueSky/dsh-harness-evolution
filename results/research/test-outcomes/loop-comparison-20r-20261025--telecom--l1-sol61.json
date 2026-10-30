@@ -1,0 +1,682 @@
+{
+  "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 1.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 1.0
+    }
+  ],
+  "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 0.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ],
+  "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]": [
+    {
+      "trial": 0,
+      "seed": 626729,
+      "score": 1.0
+    },
+    {
+      "trial": 1,
+      "seed": 373753,
+      "score": 0.0
+    },
+    {
+      "trial": 2,
+      "seed": 361454,
+      "score": 0.0
+    }
+  ]
+}

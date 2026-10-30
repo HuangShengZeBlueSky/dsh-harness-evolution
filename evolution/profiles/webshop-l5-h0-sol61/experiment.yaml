@@ -1,0 +1,69 @@
+name: webshop-l5-h0-sol61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.md
+min_improvement: 0
+test_schedule: final
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-sol
+  effort: high
+  sandbox: workspace-write
+benchmark:
+  kind: python
+  train: train.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 12
+  max_steps: 20
+  max_model_calls: 20
+  timeout_seconds: 900
+  no_tool_feedback: You must call a tool! NEVER respond with only text.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 180
+    max_retries: 2
+    send_seed: false
+    extra_body:
+      parallel_tool_calls: false
+      chat_template_kwargs:
+        enable_thinking: false
+  environment:
+    factory: environment.py:create_environment
+    url: ${WEBSHOP_URL}
+    system_prompt_file: system-prompt.txt
+    tools_file: tools.json
+  train_batches:
+  - batches/batch-01.jsonl
+  - batches/batch-02.jsonl
+  - batches/batch-03.jsonl
+  - batches/batch-04.jsonl
+  - batches/batch-05.jsonl
+  - batches/batch-06.jsonl
+  validation: validation.jsonl
+  runner: webshop
+domain: WebShop
+start_label: H0零增强插件
+playbook: PLAYBOOK.md
+batch_id: '20261026'
+loop:
+  variant: L5
+  label: 场景专用循环
+  require_agent_map: true
+  baseline_pool: l5-h0
+  test_policy: only final selected checkpoint
+  source_experiment: null
+  source_checkpoint: null
+  selection_metric: strict_success
+  source_method: null
+  requires_seed_artifact: false

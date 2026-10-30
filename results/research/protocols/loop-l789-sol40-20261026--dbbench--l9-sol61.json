@@ -1,0 +1,75 @@
+{
+  "name": "dbbench-l9-sol61",
+  "method": "astra_autonomous",
+  "rounds": 40,
+  "baseline": "baseline",
+  "runtime": "runtime",
+  "harness_api": "harness-api.md",
+  "min_improvement": 0,
+  "test_schedule": "final",
+  "optimizer": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "sandbox": "danger-full-access"
+  },
+  "benchmark": {
+    "kind": "python",
+    "train": "batches/batch-01.jsonl",
+    "test": "test.jsonl",
+    "direction": "maximize",
+    "success_score": 1,
+    "concurrency": 12,
+    "max_steps": 100000,
+    "max_model_calls": 15,
+    "timeout_seconds": 1500,
+    "no_tool_feedback": "No executable tool calls found. Please call a tool.",
+    "model": {
+      "name": "Qwen3-4B-Instruct-2507",
+      "base_url": "${MODEL_BASE_URL}",
+      "api_key_env": "",
+      "temperature": 0,
+      "max_tokens": 4096,
+      "timeout_seconds": 740,
+      "max_retries": 0,
+      "send_seed": false,
+      "extra_body": {
+        "parallel_tool_calls": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "environment": {
+      "factory": "environment.py:create_environment"
+    },
+    "train_batches": [
+      "batches/batch-01.jsonl",
+      "batches/batch-02.jsonl",
+      "batches/batch-03.jsonl",
+      "batches/batch-04.jsonl",
+      "batches/batch-05.jsonl",
+      "batches/batch-06.jsonl"
+    ],
+    "validation": "validation.jsonl"
+  },
+  "domain": "DBBench",
+  "start_label": "H0；历史零部件可选",
+  "loop": {
+    "variant": "L9",
+    "label": "零部件选择与组装",
+    "baseline_pool": "common-300-plus-60",
+    "require_repair_plan": true,
+    "selection_metric": "strict_success",
+    "review_next_batch": true,
+    "validation_families": {},
+    "experience_sources": [],
+    "test_policy": "only final selected checkpoint",
+    "historical_prior": true
+  },
+  "learning": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "record_calls": true
+  },
+  "publication_note": "Configuration evidence, not a complete environment bundle. Use the released reproduction instructions for executable setup."
+}

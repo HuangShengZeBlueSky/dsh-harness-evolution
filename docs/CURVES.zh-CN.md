@@ -1,5 +1,7 @@
 # 进化曲线
 
+[**按方法、模型和场景查看全部进化曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/)。开发分数、原最终测试与回溯补测单独显示；可导出当前曲线。
+
 [English](CURVES.md) | **简体中文**
 
 只展示真实记录的开发成绩与测试点；未测检查点不补画测试分数。
@@ -24,9 +26,9 @@
 
 ## OSBench
 
-[检查点 v17：源码与框图](../harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md)
+[检查点 v03：源码与框图](../harnesses/osbench/20261030-l4-h0-sol61-v03/README.zh-CN.md)
 
-![OSBench 进化曲线](../harnesses/osbench/20261026-l4-h0-sol61-v17/evolution.png)
+![OSBench 进化曲线](../harnesses/osbench/20261030-l4-h0-sol61-v03/evolution.png)
 
 ## τ²-Telecom
 

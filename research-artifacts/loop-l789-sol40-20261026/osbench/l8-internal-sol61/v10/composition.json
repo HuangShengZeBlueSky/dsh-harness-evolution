@@ -1,0 +1,30 @@
+{
+  "methods": [
+    {
+      "id": "unique-merge-guard",
+      "module": "plugins/unique-merge-guard.mjs",
+      "config": {}
+    },
+    {
+      "id": "grep-pattern-recovery",
+      "module": "plugins/grep-pattern-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "path-input-recovery",
+      "module": "plugins/path-input-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "matching-line-guard",
+      "module": "plugins/matching-line-guard.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "unique-merge-guard",
+    "grep-pattern-recovery",
+    "path-input-recovery",
+    "matching-line-guard"
+  ]
+}

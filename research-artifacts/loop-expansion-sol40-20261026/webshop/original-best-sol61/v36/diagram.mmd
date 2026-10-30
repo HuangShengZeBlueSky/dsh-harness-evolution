@@ -1,0 +1,6 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["search-evidence"] -. "+JSON.stringify({keywords})+ / benchmark/setup / system-prompt/assemble / …" .-> H
+    P1["option-ledger"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H

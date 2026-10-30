@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "release_id": "20261030-l4-h0-sol61-v03",
+  "benchmark": "osbench",
+  "checkpoint": "v03",
+  "method": "L4 · Agent结构与多插件职责",
+  "optimizer": "Sol 6.1 high",
+  "rounds": 40,
+  "artifact": "harnesses/osbench/20261030-l4-h0-sol61-v03",
+  "published_on": "2026-10-30",
+  "evaluation_complete": true,
+  "coverage": {
+    "tasks": 144,
+    "repeats": 3,
+    "valid_episodes": 432,
+    "invalid_episodes": 0
+  },
+  "metrics": {
+    "pass_at_1": 0.39351851851851855,
+    "mean_reward": null,
+    "pass_at_3": null,
+    "pass_cubed": null
+  },
+  "evolution_tokens": null,
+  "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
+  "protocol": {
+    "actor": "Qwen3-4B-Instruct-2507",
+    "temperature": 0,
+    "max_tokens": 4096,
+    "max_steps": 16,
+    "max_model_calls": 16,
+    "task_count": 144,
+    "repeats": 3,
+    "start": "H0",
+    "selection": "training/validation promotion; retrospective adopted checkpoint selected for publication",
+    "runtime": "native DSH benchmark/setup bridge",
+    "extra_body": {
+      "parallel_tool_calls": false
+    },
+    "send_seed": true,
+    "timeout_seconds": 575,
+    "max_retries": 0,
+    "environment": "AgentBench OS isolated Docker task environment"
+  },
+  "notes": [
+    "Complete retrospective evaluation of a previously promoted checkpoint: 170 successes / 432 episodes. Original training-selected final v17 remains 168/432.",
+    "Selected for publication after observing checkpoint tests; this is not a new confirmatory test.",
+    "Three repeat accuracies: 38.89%, 37.50%, 41.67%; population standard deviation 1.73 percentage points.",
+    "Paper AgentBench uses one trial; this measurement averages three."
+  ],
+  "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
+  "comparison_group": "osbench-qwen3-4b-release-v1",
+  "method_en": "L4 · Agent capability map",
+  "selection_kind": "retrospective_adopted",
+  "promoted": true,
+  "campaign_final_checkpoint": "v17",
+  "campaign_final_test": {
+    "mean": 0.3888888888888889,
+    "strict_pass_at_1": null,
+    "valid": 432
+  },
+  "evaluation_repeats": {
+    "0": 0.3888888888888889,
+    "1": 0.375,
+    "2": 0.4166666666666667
+  }
+}

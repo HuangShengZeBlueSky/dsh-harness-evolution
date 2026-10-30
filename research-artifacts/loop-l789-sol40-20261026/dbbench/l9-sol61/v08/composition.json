@@ -1,0 +1,73 @@
+{
+  "methods": [
+    {
+      "id": "schema-contract",
+      "module": "parts/l4-v35/plugins/schema-contract.mjs",
+      "config": {
+        "guard": true,
+        "errorMemory": false,
+        "concise": true
+      }
+    },
+    {
+      "id": "literal-contract",
+      "module": "parts/l4-v35/plugins/literal-contract.mjs",
+      "config": {
+        "samples": 5,
+        "limit": 7500,
+        "strict": true,
+        "relevantRows": true
+      }
+    },
+    {
+      "id": "completion-ledger",
+      "module": "parts/l5-v38/plugins/completion-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "call-recovery",
+      "module": "parts/l5-v38/plugins/call-recovery.mjs",
+      "config": {}
+    },
+    {
+      "id": "result-bridge",
+      "module": "parts/l4-v35/plugins/result-bridge.mjs",
+      "config": {
+        "annotate": true,
+        "live": true,
+        "guard": true,
+        "selectOnly": true
+      }
+    },
+    {
+      "id": "intent-contract",
+      "module": "parts/l4-v35/plugins/intent-contract.mjs",
+      "config": {
+        "precise": false,
+        "concise": true,
+        "directionGuard": true
+      }
+    },
+    {
+      "id": "numeric-calendar",
+      "module": "parts/l4-v35/plugins/numeric-calendar.mjs",
+      "config": {
+        "ties": true,
+        "formats": true,
+        "selectOnly": true,
+        "relevantOnly": true,
+        "profile": true,
+        "guard": true
+      }
+    }
+  ],
+  "selected": [
+    "schema-contract",
+    "literal-contract",
+    "completion-ledger",
+    "call-recovery",
+    "result-bridge",
+    "intent-contract",
+    "numeric-calendar"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "os-life-aligned-method2-astra",
+  "method": "luna_multi",
+  "rounds": 40,
+  "baseline": "baseline",
+  "runtime": "runtime",
+  "harness_api": "harness-api.txt",
+  "min_improvement": 0,
+  "test_schedule": "final",
+  "optimizer": {
+    "model": "gpt-6-astra",
+    "effort": "high",
+    "sandbox": "danger-full-access"
+  },
+  "benchmark": {
+    "kind": "python",
+    "train": "train.jsonl",
+    "test": "test.jsonl",
+    "direction": "maximize",
+    "success_score": 1,
+    "concurrency": 16,
+    "max_steps": 16,
+    "max_model_calls": 16,
+    "timeout_seconds": 900,
+    "no_tool_feedback": "No tool call detected. Please call a tool.",
+    "model": {
+      "name": "Qwen3-4B-Instruct-2507",
+      "base_url": "${SERVICE_ENDPOINT}",
+      "api_key_env": "",
+      "temperature": 0,
+      "max_tokens": 4096,
+      "timeout_seconds": 575,
+      "max_retries": 0,
+      "send_seed": true,
+      "extra_body": {
+        "parallel_tool_calls": false
+      }
+    },
+    "environment": {
+      "factory": "environment.py:create_environment",
+      "life_harness": false
+    }
+  }
+}

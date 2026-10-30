@@ -1,0 +1,9 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["inspection-contract"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P1["global-projection"] -. "benchmark/setup / tools/pre-execute" .-> H
+    P2["sample-evidence"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P3["task-contract"] -. "benchmark/setup / system-prompt/assemble" .-> H
+    P4["repetition-recovery"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H

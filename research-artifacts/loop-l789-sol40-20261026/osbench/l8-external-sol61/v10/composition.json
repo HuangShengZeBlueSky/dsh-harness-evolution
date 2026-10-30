@@ -1,0 +1,24 @@
+{
+  "methods": [
+    {
+      "id": "dedup-values",
+      "module": "plugins/dedup-values.mjs",
+      "config": {}
+    },
+    {
+      "id": "ip-first-field",
+      "module": "plugins/ip-first-field.mjs",
+      "config": {}
+    },
+    {
+      "id": "extension-source",
+      "module": "plugins/extension-source.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "dedup-values",
+    "ip-first-field",
+    "extension-source"
+  ]
+}

@@ -1,0 +1,16 @@
+flowchart LR
+    A["Actor / 做题模型"] -->|"tool calls / 工具调用"| H["DSH lifecycle / 生命周期"]
+    H --> E["Environment / 真实环境"]
+    E -->|"receipts / 实际回执"| A
+    P0["budget-check"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P1["details-return"] -. "benchmark/setup / tools/post-execute" .-> H
+    P2["option-ledger"] -. "benchmark/setup / tools/post-execute" .-> H
+    P3["query-cleanup"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P4["identity-evidence"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P5["action-recovery"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P6["comparison-stop"] -. "benchmark/setup / system-prompt/assemble / tools/post-execute / …" .-> H
+    P7["retrieval-focus"] -. "benchmark/setup / tools/post-execute / tools/pre-execute" .-> H
+    P8["named-identity"] -. "+JSON.stringify({value})+ / benchmark/setup / tools/post-execute / …" .-> H
+    P9["variant-evidence"] -. "+JSON.stringify({value:x.value})+ / benchmark/setup / tools/post-execute / …" .-> H
+    P10["capacity-match"] -. "+JSON.stringify({keywords: / +JSON.stringify({value:offered[0].v})+ / benchmark/setup / …" .-> H
+    P11["named-color"] -. "+JSON.stringify({keywords:query})+ / +JSON.stringify({value:offered[0].v})+ / benchmark/setup / …" .-> H

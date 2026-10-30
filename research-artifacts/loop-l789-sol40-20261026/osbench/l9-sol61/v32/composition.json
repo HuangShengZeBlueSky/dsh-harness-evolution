@@ -1,0 +1,42 @@
+{
+  "methods": [
+    {
+      "id": "global-projection",
+      "module": "parts/l4-v17/plugins/global-projection.mjs",
+      "config": {}
+    },
+    {
+      "id": "answer-call-repair",
+      "module": "parts/l5-v11/plugins/answer-call-repair.mjs",
+      "config": {}
+    },
+    {
+      "id": "shell-path-check",
+      "module": "plugins/shell-path-check.mjs",
+      "config": {}
+    },
+    {
+      "id": "matching-line-check",
+      "module": "plugins/matching-line-check.mjs",
+      "config": {}
+    },
+    {
+      "id": "grep-pattern-check",
+      "module": "plugins/grep-pattern-check.mjs",
+      "config": {}
+    },
+    {
+      "id": "find-line-count-check",
+      "module": "plugins/find-line-count-check.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "global-projection",
+    "answer-call-repair",
+    "shell-path-check",
+    "matching-line-check",
+    "grep-pattern-check",
+    "find-line-count-check"
+  ]
+}

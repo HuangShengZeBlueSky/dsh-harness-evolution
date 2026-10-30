@@ -1,0 +1,38 @@
+name: my-benchmark
+output: runs
+rounds: 5
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: harness-api.txt
+min_improvement: 0
+test_schedule: each_version   # same schedule as original Astra; final is optional
+
+optimizer:
+  command: [codex]
+  model: gpt-6-astra
+  effort: high
+  sandbox: workspace-write   # portability default; original campaign used danger-full-access
+
+benchmark:
+  kind: alfworld              # alfworld, python, or command
+  train: train.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 1
+  max_steps: 50               # every attempted tool action, including denied calls
+  max_model_calls: 60
+  timeout_seconds: 300
+  model:
+    name: YOUR_TASK_MODEL
+    base_url: http://localhost:8000/v1
+    api_key_env: BENCH_API_KEY # leave empty if endpoint needs no key
+    temperature: 0
+    max_tokens: 2048
+    timeout_seconds: 90
+    max_retries: 2
+    send_seed: true
+  environment:
+    data_root: /path/to/alfworld/json_2.1.1
+    admissible_commands: false

@@ -24,3 +24,7 @@ git push
 For a corrected measurement, publish a new dated record and explain the correction rather than silently replacing an old artifact. For a different actor, task set, simulator, or runtime-access contract, register another comparison group in `results/leaderboard-policy.json`; do not reuse an incompatible group.
 
 The practical maintainer handoff is: **new harness + checkpoint identity + test metrics/coverage + protocol + curve**. Providing these is sufficient to prepare the next publication. Detailed private paper material is not required.
+
+## Research-method releases
+
+Update `results/research-methods.json`, the measured records/configurations under `results/research/`, and optionally a final artifact in `research-artifacts/` linked by its run ID. `python tools/build.py` regenerates the bilingual entry pages, method comparison figure, and offline-capable `site/index.html`. GitHub Pages serves that dated snapshot. Preserve original selection and older measurements; incomplete tests and historical configuration gaps remain explicit. Publish numerical outcomes and configurations, not raw conversations, credentials, or private machine paths.
