@@ -6,7 +6,7 @@
 
 固定做题模型，进化运行时 Harness。我们公开每种循环改了什么、怎样采用候选、结果如何，以及代码目前能复现到哪一层。
 
-[**架构与学习工作台**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html) · [**交互式摘要与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)
+[**8轮架构试验**](https://huangshengzebluesky.github.io/dsh-harness-evolution/pilot.html) · [**架构与学习工作台**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html) · [**交互式摘要与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)
 
 ## 五场景产物
 

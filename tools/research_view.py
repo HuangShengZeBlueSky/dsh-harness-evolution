@@ -71,7 +71,7 @@ def readmes(root,data):
   suffix='.zh-CN' if zh else '';other='[English](README.md) | **简体中文**' if zh else '**English** | [简体中文](README.zh-CN.md)'
   lines=['# DSH Harness Evolution','',other,'', '**方法、进化曲线、可复现配置与真实插件产物。**' if zh else '**Methods, evolution curves, reproducible configurations, and measured plugin artifacts.**','',
    '固定做题模型，进化运行时 Harness。我们公开每种循环改了什么、怎样采用候选、结果如何，以及代码目前能复现到哪一层。' if zh else 'Freeze the actor and evolve its runtime harness. Inspect what each loop changes, how candidates are selected, what happened, and which reproduction steps are actually supported.','',
-   f'[**架构与学习工作台**]({SITE}architecture.html) · [**交互式摘要与全部曲线**]({SITE}) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)' if zh else f'[**Architecture lab (中文)**]({SITE}architecture.html) · [**Interactive summary and all curves**]({SITE}?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)','',
+   f'[**8轮架构试验**]({SITE}pilot.html) · [**架构与学习工作台**]({SITE}architecture.html) · [**交互式摘要与全部曲线**]({SITE}) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)' if zh else f'[**Architecture lab (中文)**]({SITE}architecture.html) · [**Interactive summary and all curves**]({SITE}?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)','',
    '## 五场景产物' if zh else '## Five benchmark artifacts','',
    '| 场景 | 最佳已发布最终版 | 已发布回溯高点 | Life-Harness v3参考 |' if zh else '| Benchmark | Best released final-selected artifact | Retrospective high point | Life-Harness v3 reference |','|---|---:|---:|---:|']
   for b in NAMES:

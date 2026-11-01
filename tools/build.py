@@ -137,5 +137,7 @@ def main():
  build_research(ROOT)
  from build_architecture import build as build_architecture
  build_architecture(ROOT)
+ from build_pilot import build as build_pilot
+ build_pilot(ROOT)
  print(f'Rendered {len(rows)} releases across {len(winners)} benchmarks.')
 if __name__=='__main__':main()

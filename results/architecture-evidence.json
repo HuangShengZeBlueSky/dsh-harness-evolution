@@ -1,15 +1,16 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-11-01T04:35:51.128254+00:00",
+  "collected_at": "2026-11-01T15:06:59.587452+00:00",
   "scope": "Read-only fixed40 evolution and same-frozen-harness three-repeat audit",
   "summary": {
     "run_count": 40,
-    "original_final_complete": 23,
+    "original_final_complete": 25,
     "final_harness_audit_complete": 24,
-    "completed_decisions": 1026,
+    "completed_decisions": 1164,
     "planned_decisions": 1600,
     "repeat_audit_complete": 27,
-    "repeat_audit_total": 27
+    "repeat_audit_total": 27,
+    "final_test_available": 25
   },
   "definitions": {
     "scores": "Strict success in [0,1]. Train curves are original selection measurements; frozen-harness repeat statistics are separate.",
@@ -34,10 +35,10 @@
       "optimizer": "gpt-6-luna",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 5,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 13,
       "budget": 40,
-      "checkpoint": "v03",
+      "checkpoint": "v06",
       "baseline_train": 0.17,
       "curve": [
         {
@@ -107,24 +108,120 @@
           "repaired": 2,
           "regressed": 5,
           "candidate_success_set_change_from_previous": 5
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v03",
+          "candidate_train": 0.25,
+          "champion_train": 0.25,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 8
+        },
+        {
+          "round": 7,
+          "candidate": "v07",
+          "parent": "v06",
+          "candidate_train": 0.14,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 15,
+          "candidate_success_set_change_from_previous": 19
+        },
+        {
+          "round": 8,
+          "candidate": "v08",
+          "parent": "v06",
+          "candidate_train": 0.19,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 1,
+          "regressed": 7,
+          "candidate_success_set_change_from_previous": 17
+        },
+        {
+          "round": 9,
+          "candidate": "v09",
+          "parent": "v06",
+          "candidate_train": 0.19,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 1,
+          "regressed": 7,
+          "candidate_success_set_change_from_previous": 4
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v06",
+          "candidate_train": 0.19,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 6
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v06",
+          "candidate_train": 0.22,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 4,
+          "regressed": 7,
+          "candidate_success_set_change_from_previous": 9
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v06",
+          "candidate_train": 0.24,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 3,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 8
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v06",
+          "candidate_train": 0.24,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 5,
+          "candidate_success_set_change_from_previous": 8
         }
       ],
       "plateau": {
-        "window_rounds": 5,
-        "window_start": 1,
-        "window_end": 5,
-        "last_improvement_round": 3,
-        "rounds_since_last_improvement": 2,
-        "last10_adoptions": 2,
-        "last10_adoption_rate": 0.4,
-        "last10_champion_gain": 0.04999999999999999,
+        "window_rounds": 10,
+        "window_start": 4,
+        "window_end": 13,
+        "last_improvement_round": 6,
+        "rounds_since_last_improvement": 7,
+        "last10_adoptions": 1,
+        "last10_adoption_rate": 0.1,
+        "last10_champion_gain": 0.03,
         "last10_target_repairs": 3,
-        "last10_repaired": 30,
-        "last10_regressed": 30,
-        "last10_mean_success_set_change": 9.5,
-        "last10_unique_candidate_success_patterns": 5,
+        "last10_repaired": 25,
+        "last10_regressed": 61,
+        "last10_mean_success_set_change": 9,
+        "last10_unique_candidate_success_patterns": 10,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -228,10 +325,10 @@
       "optimizer": "gpt-6-luna",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "optimizer_retry",
-      "rounds": 4,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 13,
       "budget": 40,
-      "checkpoint": "v02",
+      "checkpoint": "v10",
       "baseline_train": 0.17,
       "curve": [
         {
@@ -289,24 +386,132 @@
           "repaired": 1,
           "regressed": 4,
           "candidate_success_set_change_from_previous": 6
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v02",
+          "candidate_train": 0.25,
+          "champion_train": 0.25,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 5,
+          "regressed": 2,
+          "candidate_success_set_change_from_previous": 10
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v05",
+          "candidate_train": 0.25,
+          "champion_train": 0.25,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 7,
+          "regressed": 7,
+          "candidate_success_set_change_from_previous": 14
+        },
+        {
+          "round": 7,
+          "candidate": "v07",
+          "parent": "v05",
+          "candidate_train": 0.31,
+          "champion_train": 0.31,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 10,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 14
+        },
+        {
+          "round": 8,
+          "candidate": "v08",
+          "parent": "v07",
+          "candidate_train": 0.28,
+          "champion_train": 0.31,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 3,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 9
+        },
+        {
+          "round": 9,
+          "candidate": "v09",
+          "parent": "v07",
+          "candidate_train": 0.37,
+          "champion_train": 0.37,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 14,
+          "regressed": 8,
+          "candidate_success_set_change_from_previous": 15
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v09",
+          "candidate_train": 0.42,
+          "champion_train": 0.42,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 9,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 13
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v10",
+          "candidate_train": 0.41,
+          "champion_train": 0.42,
+          "adopted": false,
+          "target_repairs": 2,
+          "repaired": 8,
+          "regressed": 9,
+          "candidate_success_set_change_from_previous": 17
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v10",
+          "candidate_train": 0.41,
+          "champion_train": 0.42,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 7,
+          "regressed": 8,
+          "candidate_success_set_change_from_previous": 14
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v10",
+          "candidate_train": 0.4,
+          "champion_train": 0.42,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 9,
+          "regressed": 11,
+          "candidate_success_set_change_from_previous": 19
         }
       ],
       "plateau": {
-        "window_rounds": 4,
-        "window_start": 1,
-        "window_end": 4,
-        "last_improvement_round": 2,
-        "rounds_since_last_improvement": 2,
-        "last10_adoptions": 1,
-        "last10_adoption_rate": 0.25,
-        "last10_champion_gain": 0.04999999999999999,
-        "last10_target_repairs": 0,
-        "last10_repaired": 16,
-        "last10_regressed": 20,
-        "last10_mean_success_set_change": 10.333333333333334,
-        "last10_unique_candidate_success_patterns": 4,
+        "window_rounds": 10,
+        "window_start": 4,
+        "window_end": 13,
+        "last_improvement_round": 10,
+        "rounds_since_last_improvement": 3,
+        "last10_adoptions": 4,
+        "last10_adoption_rate": 0.4,
+        "last10_champion_gain": 0.19999999999999998,
+        "last10_target_repairs": 7,
+        "last10_repaired": 73,
+        "last10_regressed": 63,
+        "last10_mean_success_set_change": 13.1,
+        "last10_unique_candidate_success_patterns": 10,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -377,6 +582,23 @@
               "train/pick_two_obj_and_place-Ladle-None-Drawer-2/trial_T20190906_162750_791095"
             ],
             "immediate_target_repairs": 0
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "recovery_or_loop",
+              "task_interpretation",
+              "termination_or_submission",
+              "tool_arguments",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "train/pick_and_place_simple-SoapBottle-None-GarbageCan-411/trial_T20190908_051545_764778",
+              "train/pick_cool_then_place_in_recep-Cup-None-SideTable-21/trial_T20190906_192755_687590"
+            ],
+            "immediate_target_repairs": 0
           }
         ],
         "baseline_failed_cohort": null,
@@ -394,10 +616,10 @@
       "optimizer": "gpt-6.1-terra",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "optimizer_retry",
-      "rounds": 5,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 15,
       "budget": 40,
-      "checkpoint": "v03",
+      "checkpoint": "v10",
       "baseline_train": 0.17,
       "curve": [
         {
@@ -467,24 +689,144 @@
           "repaired": 7,
           "regressed": 4,
           "candidate_success_set_change_from_previous": 15
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v03",
+          "candidate_train": 0.35,
+          "champion_train": 0.36,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 10,
+          "regressed": 11,
+          "candidate_success_set_change_from_previous": 22
+        },
+        {
+          "round": 7,
+          "candidate": "v07",
+          "parent": "v03",
+          "candidate_train": 0.36,
+          "champion_train": 0.36,
+          "adopted": false,
+          "target_repairs": 4,
+          "repaired": 6,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 17
+        },
+        {
+          "round": 8,
+          "candidate": "v08",
+          "parent": "v03",
+          "candidate_train": 0.36,
+          "champion_train": 0.36,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 10,
+          "regressed": 10,
+          "candidate_success_set_change_from_previous": 16
+        },
+        {
+          "round": 9,
+          "candidate": "v09",
+          "parent": "v03",
+          "candidate_train": 0.38,
+          "champion_train": 0.38,
+          "adopted": true,
+          "target_repairs": 3,
+          "repaired": 10,
+          "regressed": 8,
+          "candidate_success_set_change_from_previous": 16
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v09",
+          "candidate_train": 0.45,
+          "champion_train": 0.45,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 12,
+          "regressed": 5,
+          "candidate_success_set_change_from_previous": 17
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v10",
+          "candidate_train": 0.39,
+          "champion_train": 0.45,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 4,
+          "regressed": 10,
+          "candidate_success_set_change_from_previous": 14
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v10",
+          "candidate_train": 0.45,
+          "champion_train": 0.45,
+          "adopted": false,
+          "target_repairs": 2,
+          "repaired": 10,
+          "regressed": 10,
+          "candidate_success_set_change_from_previous": 18
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v10",
+          "candidate_train": 0.39,
+          "champion_train": 0.45,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 10,
+          "candidate_success_set_change_from_previous": 18
+        },
+        {
+          "round": 14,
+          "candidate": "v14",
+          "parent": "v10",
+          "candidate_train": 0.44,
+          "champion_train": 0.45,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 8,
+          "regressed": 9,
+          "candidate_success_set_change_from_previous": 23
+        },
+        {
+          "round": 15,
+          "candidate": "v15",
+          "parent": "v10",
+          "candidate_train": 0.38,
+          "champion_train": 0.45,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 11,
+          "candidate_success_set_change_from_previous": 22
         }
       ],
       "plateau": {
-        "window_rounds": 5,
-        "window_start": 1,
-        "window_end": 5,
-        "last_improvement_round": 3,
-        "rounds_since_last_improvement": 2,
-        "last10_adoptions": 3,
-        "last10_adoption_rate": 0.6,
-        "last10_champion_gain": 0.18999999999999997,
-        "last10_target_repairs": 2,
-        "last10_repaired": 46,
-        "last10_regressed": 22,
-        "last10_mean_success_set_change": 13.25,
-        "last10_unique_candidate_success_patterns": 5,
+        "window_rounds": 10,
+        "window_start": 6,
+        "window_end": 15,
+        "last_improvement_round": 10,
+        "rounds_since_last_improvement": 5,
+        "last10_adoptions": 2,
+        "last10_adoption_rate": 0.2,
+        "last10_champion_gain": 0.09000000000000002,
+        "last10_target_repairs": 14,
+        "last10_repaired": 78,
+        "last10_regressed": 90,
+        "last10_mean_success_set_change": 18.3,
+        "last10_unique_candidate_success_patterns": 10,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -575,10 +917,10 @@
       "optimizer": "gpt-6.1-terra",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 4,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 13,
       "budget": 40,
-      "checkpoint": "v04",
+      "checkpoint": "v12",
       "baseline_train": 0.17,
       "curve": [
         {
@@ -636,24 +978,132 @@
           "repaired": 7,
           "regressed": 3,
           "candidate_success_set_change_from_previous": 24
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v04",
+          "candidate_train": 0.22,
+          "champion_train": 0.22,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 7
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v05",
+          "candidate_train": 0.23,
+          "champion_train": 0.23,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 7
+        },
+        {
+          "round": 7,
+          "candidate": "v07",
+          "parent": "v06",
+          "candidate_train": 0.24,
+          "champion_train": 0.23,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 7
+        },
+        {
+          "round": 8,
+          "candidate": "v08",
+          "parent": "v06",
+          "candidate_train": 0.3,
+          "champion_train": 0.3,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 11,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 16
+        },
+        {
+          "round": 9,
+          "candidate": "v09",
+          "parent": "v08",
+          "candidate_train": 0.34,
+          "champion_train": 0.34,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 10,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 16
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v09",
+          "candidate_train": 0.36,
+          "champion_train": 0.36,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 11,
+          "regressed": 9,
+          "candidate_success_set_change_from_previous": 20
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v10",
+          "candidate_train": 0.34,
+          "champion_train": 0.36,
+          "adopted": false,
+          "target_repairs": 3,
+          "repaired": 7,
+          "regressed": 9,
+          "candidate_success_set_change_from_previous": 16
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v10",
+          "candidate_train": 0.38,
+          "champion_train": 0.38,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 10,
+          "regressed": 8,
+          "candidate_success_set_change_from_previous": 22
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v12",
+          "candidate_train": 0.37,
+          "champion_train": 0.38,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 8,
+          "regressed": 9,
+          "candidate_success_set_change_from_previous": 17
         }
       ],
       "plateau": {
-        "window_rounds": 4,
-        "window_start": 1,
-        "window_end": 4,
-        "last_improvement_round": 4,
-        "rounds_since_last_improvement": 0,
-        "last10_adoptions": 1,
-        "last10_adoption_rate": 0.25,
-        "last10_champion_gain": 0.03999999999999998,
-        "last10_target_repairs": 1,
-        "last10_repaired": 32,
-        "last10_regressed": 31,
-        "last10_mean_success_set_change": 23,
-        "last10_unique_candidate_success_patterns": 4,
+        "window_rounds": 10,
+        "window_start": 4,
+        "window_end": 13,
+        "last_improvement_round": 12,
+        "rounds_since_last_improvement": 1,
+        "last10_adoptions": 7,
+        "last10_adoption_rate": 0.7,
+        "last10_champion_gain": 0.21,
+        "last10_target_repairs": 11,
+        "last10_repaired": 76,
+        "last10_regressed": 57,
+        "last10_mean_success_set_change": 15.2,
+        "last10_unique_candidate_success_patterns": 10,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -723,6 +1173,22 @@
               "train/look_at_obj_in_light-Pillow-None-DeskLamp-307/trial_T20190908_190608_801964"
             ],
             "immediate_target_repairs": 0
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "task_interpretation",
+              "tool_arguments"
+            ],
+            "target_task_ids": [
+              "train/pick_and_place_simple-Cloth-None-SinkBasin-417/trial_T20190908_120440_221872",
+              "train/pick_and_place_simple-SoapBottle-None-GarbageCan-411/trial_T20190908_051545_764778",
+              "train/pick_cool_then_place_in_recep-Cup-None-SideTable-21/trial_T20190906_192755_687590",
+              "train/pick_two_obj_and_place-SoapBar-None-BathtubBasin-408/trial_T20190907_165913_913312"
+            ],
+            "immediate_target_repairs": 0
           }
         ],
         "baseline_failed_cohort": null,
@@ -739,9 +1205,9 @@
       "benchmark": "alfworld",
       "optimizer": "gpt-6.1-sol",
       "effort": "medium",
-      "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 14,
+      "status": "original_final_complete",
+      "live_phase_at_collection": "complete",
+      "rounds": 40,
       "budget": 40,
       "checkpoint": "v04",
       "baseline_train": 0.17,
@@ -921,24 +1387,336 @@
           "repaired": 0,
           "regressed": 0,
           "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 15,
+          "candidate": "v15",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 16,
+          "candidate": "v16",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 17,
+          "candidate": "v17",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 18,
+          "candidate": "v18",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 19,
+          "candidate": "v19",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 20,
+          "candidate": "v20",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 21,
+          "candidate": "v21",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 22,
+          "candidate": "v22",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 23,
+          "candidate": "v23",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 24,
+          "candidate": "v24",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 25,
+          "candidate": "v25",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 26,
+          "candidate": "v26",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 27,
+          "candidate": "v27",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 28,
+          "candidate": "v28",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 29,
+          "candidate": "v29",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 30,
+          "candidate": "v30",
+          "parent": "v04",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 31,
+          "candidate": "v31",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 32,
+          "candidate": "v32",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 33,
+          "candidate": "v33",
+          "parent": "v04",
+          "candidate_train": 0.86,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 12,
+          "candidate_success_set_change_from_previous": 12
+        },
+        {
+          "round": 34,
+          "candidate": "v34",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 12
+        },
+        {
+          "round": 35,
+          "candidate": "v35",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 36,
+          "candidate": "v36",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 37,
+          "candidate": "v37",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 38,
+          "candidate": "v38",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 39,
+          "candidate": "v39",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 40,
+          "candidate": "v40",
+          "parent": "v04",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
         }
       ],
       "plateau": {
         "window_rounds": 10,
-        "window_start": 5,
-        "window_end": 14,
+        "window_start": 31,
+        "window_end": 40,
         "last_improvement_round": 4,
-        "rounds_since_last_improvement": 10,
+        "rounds_since_last_improvement": 36,
         "last10_adoptions": 0,
         "last10_adoption_rate": 0.0,
         "last10_champion_gain": 0.0,
         "last10_target_repairs": 0,
         "last10_repaired": 0,
-        "last10_regressed": 18,
-        "last10_mean_success_set_change": 3.6,
+        "last10_regressed": 12,
+        "last10_mean_success_set_change": 2.5,
         "last10_unique_candidate_success_patterns": 2,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -1031,7 +1809,7 @@
         "semantic_failure_resolution": null,
         "note": "Target task success is not proof that the named failure mechanism disappeared. Task-level cohorts are paired by task/trial/seed; ordinary independent model runs, no shared request coupling."
       },
-      "test_success": null
+      "test_success": 0.9541284403669725
     },
     {
       "id": "simple40-alfworld-sol61-high",
@@ -1040,8 +1818,8 @@
       "optimizer": "gpt-6.1-sol",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "optimizer_running",
-      "rounds": 9,
+      "live_phase_at_collection": "evaluation_running",
+      "rounds": 39,
       "budget": 40,
       "checkpoint": "v06",
       "baseline_train": 0.17,
@@ -1161,22 +1939,382 @@
           "repaired": 0,
           "regressed": 0,
           "candidate_success_set_change_from_previous": 2
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 14,
+          "candidate": "v14",
+          "parent": "v06",
+          "candidate_train": 0.71,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 27,
+          "candidate_success_set_change_from_previous": 26
+        },
+        {
+          "round": 15,
+          "candidate": "v15",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 26
+        },
+        {
+          "round": 16,
+          "candidate": "v16",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 2
+        },
+        {
+          "round": 17,
+          "candidate": "v17",
+          "parent": "v06",
+          "candidate_train": 0.96,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 2,
+          "candidate_success_set_change_from_previous": 3
+        },
+        {
+          "round": 18,
+          "candidate": "v18",
+          "parent": "v06",
+          "candidate_train": 0.95,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 5
+        },
+        {
+          "round": 19,
+          "candidate": "v19",
+          "parent": "v06",
+          "candidate_train": 0.67,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 31,
+          "candidate_success_set_change_from_previous": 32
+        },
+        {
+          "round": 20,
+          "candidate": "v20",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 31
+        },
+        {
+          "round": 21,
+          "candidate": "v21",
+          "parent": "v06",
+          "candidate_train": 0.94,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 4
+        },
+        {
+          "round": 22,
+          "candidate": "v22",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 4
+        },
+        {
+          "round": 23,
+          "candidate": "v23",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 24,
+          "candidate": "v24",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 25,
+          "candidate": "v25",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 26,
+          "candidate": "v26",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 27,
+          "candidate": "v27",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 28,
+          "candidate": "v28",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 29,
+          "candidate": "v29",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 30,
+          "candidate": "v30",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 31,
+          "candidate": "v31",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 32,
+          "candidate": "v32",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 33,
+          "candidate": "v33",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 34,
+          "candidate": "v34",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 0
+        },
+        {
+          "round": 35,
+          "candidate": "v35",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 36,
+          "candidate": "v36",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 37,
+          "candidate": "v37",
+          "parent": "v06",
+          "candidate_train": 0.97,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 38,
+          "candidate": "v38",
+          "parent": "v06",
+          "candidate_train": 0.98,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 1
+        },
+        {
+          "round": 39,
+          "candidate": "v39",
+          "parent": "v06",
+          "candidate_train": 0.86,
+          "champion_train": 0.98,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 0,
+          "regressed": 12,
+          "candidate_success_set_change_from_previous": 12
         }
       ],
       "plateau": {
-        "window_rounds": 9,
-        "window_start": 1,
-        "window_end": 9,
+        "window_rounds": 10,
+        "window_start": 30,
+        "window_end": 39,
         "last_improvement_round": 6,
-        "rounds_since_last_improvement": 3,
-        "last10_adoptions": 6,
-        "last10_adoption_rate": 0.6666666666666666,
-        "last10_champion_gain": 0.8099999999999999,
-        "last10_target_repairs": 15,
-        "last10_repaired": 93,
+        "rounds_since_last_improvement": 33,
+        "last10_adoptions": 0,
+        "last10_adoption_rate": 0.0,
+        "last10_champion_gain": 0.0,
+        "last10_target_repairs": 0,
+        "last10_repaired": 0,
         "last10_regressed": 14,
-        "last10_mean_success_set_change": 11.75,
-        "last10_unique_candidate_success_patterns": 7,
+        "last10_mean_success_set_change": 1.6,
+        "last10_unique_candidate_success_patterns": 3,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
         "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
@@ -1274,10 +2412,10 @@
       "optimizer": "gpt-5.6-sol",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "optimizer_retry",
-      "rounds": 4,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 13,
       "budget": 40,
-      "checkpoint": "v03",
+      "checkpoint": "v13",
       "baseline_train": 0.17,
       "curve": [
         {
@@ -1335,24 +2473,132 @@
           "repaired": 3,
           "regressed": 4,
           "candidate_success_set_change_from_previous": 7
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v03",
+          "candidate_train": 0.2,
+          "champion_train": 0.2,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 1,
+          "regressed": 0,
+          "candidate_success_set_change_from_previous": 8
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v05",
+          "candidate_train": 0.24,
+          "champion_train": 0.24,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 7,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 10
+        },
+        {
+          "round": 7,
+          "candidate": "v07",
+          "parent": "v06",
+          "candidate_train": 0.21,
+          "champion_train": 0.24,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 2,
+          "regressed": 5,
+          "candidate_success_set_change_from_previous": 7
+        },
+        {
+          "round": 8,
+          "candidate": "v08",
+          "parent": "v06",
+          "candidate_train": 0.28,
+          "champion_train": 0.28,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 10,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 13
+        },
+        {
+          "round": 9,
+          "candidate": "v09",
+          "parent": "v08",
+          "candidate_train": 0.29,
+          "champion_train": 0.29,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 4,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 7
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v09",
+          "candidate_train": 0.3,
+          "champion_train": 0.3,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 5,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 9
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v10",
+          "candidate_train": 0.3,
+          "champion_train": 0.3,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 3,
+          "regressed": 3,
+          "candidate_success_set_change_from_previous": 6
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v10",
+          "candidate_train": 0.4,
+          "champion_train": 0.4,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 14,
+          "regressed": 4,
+          "candidate_success_set_change_from_previous": 18
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v12",
+          "candidate_train": 0.44,
+          "champion_train": 0.44,
+          "adopted": true,
+          "target_repairs": 3,
+          "repaired": 9,
+          "regressed": 5,
+          "candidate_success_set_change_from_previous": 14
         }
       ],
       "plateau": {
-        "window_rounds": 4,
-        "window_start": 1,
-        "window_end": 4,
-        "last_improvement_round": 3,
-        "rounds_since_last_improvement": 1,
-        "last10_adoptions": 1,
-        "last10_adoption_rate": 0.25,
-        "last10_champion_gain": 0.01999999999999999,
-        "last10_target_repairs": 3,
-        "last10_repaired": 18,
-        "last10_regressed": 25,
-        "last10_mean_success_set_change": 10,
-        "last10_unique_candidate_success_patterns": 4,
+        "window_rounds": 10,
+        "window_start": 4,
+        "window_end": 13,
+        "last_improvement_round": 13,
+        "rounds_since_last_improvement": 0,
+        "last10_adoptions": 7,
+        "last10_adoption_rate": 0.7,
+        "last10_champion_gain": 0.25,
+        "last10_target_repairs": 10,
+        "last10_repaired": 58,
+        "last10_regressed": 37,
+        "last10_mean_success_set_change": 9.9,
+        "last10_unique_candidate_success_patterns": 10,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -1427,6 +2673,23 @@
               "train/pick_heat_then_place_in_recep-Mug-None-Shelf-5/trial_T20190906_203924_704982"
             ],
             "immediate_target_repairs": 1
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "planning_or_order",
+              "recovery_or_loop",
+              "tool_arguments"
+            ],
+            "target_task_ids": [
+              "train/pick_and_place_simple-Newspaper-None-Sofa-211/trial_T20190906_174949_956681",
+              "train/pick_clean_then_place_in_recep-DishSponge-None-Cart-401/trial_T20190907_024617_000014",
+              "train/pick_clean_then_place_in_recep-Egg-None-DiningTable-23/trial_T20190908_083753_379941",
+              "train/pick_clean_then_place_in_recep-Spatula-None-CounterTop-19/trial_T20190906_181400_748701"
+            ],
+            "immediate_target_repairs": 1
           }
         ],
         "baseline_failed_cohort": null,
@@ -1444,10 +2707,10 @@
       "optimizer": "gpt-5.6-sol",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 5,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 16,
       "budget": 40,
-      "checkpoint": "v05",
+      "checkpoint": "v09",
       "baseline_train": 0.17,
       "curve": [
         {
@@ -1517,24 +2780,156 @@
           "repaired": 8,
           "regressed": 6,
           "candidate_success_set_change_from_previous": 14
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v05",
+          "candidate_train": 0.32,
+          "champion_train": 0.32,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 8,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 14
+        },
+        {
+          "round": 7,
+          "candidate": "v07",
+          "parent": "v06",
+          "candidate_train": 0.45,
+          "champion_train": 0.45,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 14,
+          "regressed": 1,
+          "candidate_success_set_change_from_previous": 15
+        },
+        {
+          "round": 8,
+          "candidate": "v08",
+          "parent": "v07",
+          "candidate_train": 0.42,
+          "champion_train": 0.45,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 3,
+          "regressed": 6,
+          "candidate_success_set_change_from_previous": 9
+        },
+        {
+          "round": 9,
+          "candidate": "v09",
+          "parent": "v07",
+          "candidate_train": 0.49,
+          "champion_train": 0.49,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 9,
+          "regressed": 5,
+          "candidate_success_set_change_from_previous": 15
+        },
+        {
+          "round": 10,
+          "candidate": "v10",
+          "parent": "v09",
+          "candidate_train": 0.47,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 5,
+          "regressed": 7,
+          "candidate_success_set_change_from_previous": 12
+        },
+        {
+          "round": 11,
+          "candidate": "v11",
+          "parent": "v09",
+          "candidate_train": 0.4,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 2,
+          "regressed": 11,
+          "candidate_success_set_change_from_previous": 13
+        },
+        {
+          "round": 12,
+          "candidate": "v12",
+          "parent": "v09",
+          "candidate_train": 0.47,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 6,
+          "regressed": 8,
+          "candidate_success_set_change_from_previous": 17
+        },
+        {
+          "round": 13,
+          "candidate": "v13",
+          "parent": "v09",
+          "candidate_train": 0.47,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 10,
+          "regressed": 12,
+          "candidate_success_set_change_from_previous": 18
+        },
+        {
+          "round": 14,
+          "candidate": "v14",
+          "parent": "v09",
+          "candidate_train": 0.38,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 4,
+          "regressed": 15,
+          "candidate_success_set_change_from_previous": 23
+        },
+        {
+          "round": 15,
+          "candidate": "v15",
+          "parent": "v09",
+          "candidate_train": 0.48,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 6,
+          "regressed": 7,
+          "candidate_success_set_change_from_previous": 24
+        },
+        {
+          "round": 16,
+          "candidate": "v16",
+          "parent": "v09",
+          "candidate_train": 0.42,
+          "champion_train": 0.49,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 3,
+          "regressed": 10,
+          "candidate_success_set_change_from_previous": 8
         }
       ],
       "plateau": {
-        "window_rounds": 5,
-        "window_start": 1,
-        "window_end": 5,
-        "last_improvement_round": 5,
-        "rounds_since_last_improvement": 0,
-        "last10_adoptions": 4,
-        "last10_adoption_rate": 0.8,
-        "last10_champion_gain": 0.12999999999999998,
-        "last10_target_repairs": 2,
-        "last10_repaired": 40,
-        "last10_regressed": 27,
-        "last10_mean_success_set_change": 12.75,
-        "last10_unique_candidate_success_patterns": 5,
+        "window_rounds": 10,
+        "window_start": 7,
+        "window_end": 16,
+        "last_improvement_round": 9,
+        "rounds_since_last_improvement": 7,
+        "last10_adoptions": 2,
+        "last10_adoption_rate": 0.2,
+        "last10_champion_gain": 0.16999999999999998,
+        "last10_target_repairs": 4,
+        "last10_repaired": 62,
+        "last10_regressed": 82,
+        "last10_mean_success_set_change": 15.4,
+        "last10_unique_candidate_success_patterns": 10,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -19650,8 +21045,8 @@
       "benchmark": "webshop",
       "optimizer": "gpt-5.6-sol",
       "effort": "medium",
-      "status": "sealed_final_completed_in_independent_audit",
-      "live_phase_at_collection": "optimizer_retry",
+      "status": "original_final_complete",
+      "live_phase_at_collection": "complete",
       "rounds": 40,
       "budget": 40,
       "checkpoint": "v34",
@@ -32073,8 +33468,8 @@
       "optimizer": "gpt-6-luna",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "optimizer_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 5,
       "budget": 40,
       "checkpoint": "v02",
       "baseline_train": 0.30180180180180183,
@@ -32110,24 +33505,60 @@
           "repaired": 59,
           "regressed": 25,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "v02",
+          "candidate_train": 0.44144144144144143,
+          "champion_train": 0.47297297297297297,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 33,
+          "regressed": 40,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v02",
+          "candidate_train": 0.38738738738738737,
+          "champion_train": 0.47297297297297297,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 17,
+          "regressed": 36,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v02",
+          "candidate_train": 0.46396396396396394,
+          "champion_train": 0.47297297297297297,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 30,
+          "regressed": 32,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 5,
         "window_start": 1,
-        "window_end": 2,
+        "window_end": 5,
         "last_improvement_round": 2,
-        "rounds_since_last_improvement": 0,
+        "rounds_since_last_improvement": 3,
         "last10_adoptions": 2,
-        "last10_adoption_rate": 1.0,
+        "last10_adoption_rate": 0.4,
         "last10_champion_gain": 0.17117117117117114,
-        "last10_target_repairs": 2,
-        "last10_repaired": 90,
-        "last10_regressed": 52,
+        "last10_target_repairs": 3,
+        "last10_repaired": 170,
+        "last10_regressed": 160,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32162,6 +33593,45 @@
               "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_usage_exceeded[PERSONA:Hard]"
             ],
             "immediate_target_repairs": 0
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": false,
+            "problem_labels": [
+              "task_interpretation",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+              "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_usage_exceeded[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 0
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": false,
+            "problem_labels": [
+              "tool_arguments"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+            ],
+            "immediate_target_repairs": 0
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": false,
+            "problem_labels": [
+              "tool_arguments"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 1
           }
         ],
         "baseline_failed_cohort": null,
@@ -32179,10 +33649,10 @@
       "optimizer": "gpt-6-luna",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 5,
       "budget": 40,
-      "checkpoint": "baseline",
+      "checkpoint": "v05",
       "baseline_train": 0.30180180180180183,
       "curve": [
         {
@@ -32216,24 +33686,60 @@
           "repaired": 19,
           "regressed": 25,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "baseline",
+          "candidate_train": 0.34684684684684686,
+          "champion_train": 0.34684684684684686,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 30,
+          "regressed": 20,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v03",
+          "candidate_train": 0.44144144144144143,
+          "champion_train": 0.44144144144144143,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 47,
+          "regressed": 26,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v04",
+          "candidate_train": 0.481981981981982,
+          "champion_train": 0.481981981981982,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 40,
+          "regressed": 31,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 5,
         "window_start": 1,
-        "window_end": 2,
-        "last_improvement_round": 0,
-        "rounds_since_last_improvement": 2,
-        "last10_adoptions": 0,
-        "last10_adoption_rate": 0.0,
-        "last10_champion_gain": 0.0,
-        "last10_target_repairs": 0,
-        "last10_repaired": 41,
-        "last10_regressed": 48,
+        "window_end": 5,
+        "last_improvement_round": 5,
+        "rounds_since_last_improvement": 0,
+        "last10_adoptions": 3,
+        "last10_adoption_rate": 0.6,
+        "last10_champion_gain": 0.18018018018018017,
+        "last10_target_repairs": 3,
+        "last10_repaired": 158,
+        "last10_regressed": 125,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32270,6 +33776,58 @@
               "[mms_issue]bad_network_preference|break_app_sms_permission|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]"
             ],
             "immediate_target_repairs": 0
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": true,
+            "problem_labels": [
+              "planning_or_order",
+              "recovery_or_loop",
+              "state_tracking",
+              "task_interpretation",
+              "termination_or_submission"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+              "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]"
+            ],
+            "immediate_target_repairs": 1
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": true,
+            "problem_labels": [
+              "planning_or_order",
+              "state_tracking",
+              "tool_arguments",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 2
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "recovery_or_loop",
+              "state_tracking",
+              "task_interpretation",
+              "tool_arguments",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]"
+            ],
+            "immediate_target_repairs": 0
           }
         ],
         "baseline_failed_cohort": null,
@@ -32287,10 +33845,10 @@
       "optimizer": "gpt-6.1-terra",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 5,
       "budget": 40,
-      "checkpoint": "v02",
+      "checkpoint": "v05",
       "baseline_train": 0.30180180180180183,
       "curve": [
         {
@@ -32324,24 +33882,60 @@
           "repaired": 39,
           "regressed": 27,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "v02",
+          "candidate_train": 0.38288288288288286,
+          "champion_train": 0.38288288288288286,
+          "adopted": true,
+          "target_repairs": 3,
+          "repaired": 44,
+          "regressed": 38,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v03",
+          "candidate_train": 0.3738738738738739,
+          "champion_train": 0.38288288288288286,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 35,
+          "regressed": 37,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v03",
+          "candidate_train": 0.42792792792792794,
+          "champion_train": 0.42792792792792794,
+          "adopted": true,
+          "target_repairs": 4,
+          "repaired": 44,
+          "regressed": 34,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 5,
         "window_start": 1,
-        "window_end": 2,
-        "last_improvement_round": 2,
+        "window_end": 5,
+        "last_improvement_round": 5,
         "rounds_since_last_improvement": 0,
-        "last10_adoptions": 1,
-        "last10_adoption_rate": 0.5,
-        "last10_champion_gain": 0.054054054054054,
-        "last10_target_repairs": 2,
-        "last10_repaired": 62,
-        "last10_regressed": 53,
+        "last10_adoptions": 3,
+        "last10_adoption_rate": 0.6,
+        "last10_champion_gain": 0.12612612612612611,
+        "last10_target_repairs": 10,
+        "last10_repaired": 185,
+        "last10_regressed": 162,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32379,6 +33973,57 @@
               "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]"
             ],
             "immediate_target_repairs": 2
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": true,
+            "problem_labels": [
+              "planning_or_order",
+              "termination_or_submission",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[service_issue]airplane_mode_on|break_apn_settings[PERSONA:Hard]",
+              "[service_issue]airplane_mode_on|break_apn_settings|unseat_sim_card[PERSONA:None]",
+              "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+              "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 3
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": false,
+            "problem_labels": [
+              "planning_or_order",
+              "termination_or_submission",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]"
+            ],
+            "immediate_target_repairs": 1
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "state_tracking",
+              "tool_arguments",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_on[PERSONA:None]",
+              "[mobile_data_issue]bad_network_preference|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+              "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]",
+              "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 4
           }
         ],
         "baseline_failed_cohort": null,
@@ -32396,10 +34041,10 @@
       "optimizer": "gpt-6.1-terra",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 5,
       "budget": 40,
-      "checkpoint": "v02",
+      "checkpoint": "v05",
       "baseline_train": 0.30180180180180183,
       "curve": [
         {
@@ -32433,24 +34078,60 @@
           "repaired": 67,
           "regressed": 22,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "v02",
+          "candidate_train": 0.5630630630630631,
+          "champion_train": 0.5630630630630631,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 41,
+          "regressed": 28,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v03",
+          "candidate_train": 0.47297297297297297,
+          "champion_train": 0.5630630630630631,
+          "adopted": false,
+          "target_repairs": 5,
+          "repaired": 28,
+          "regressed": 48,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v03",
+          "candidate_train": 0.5945945945945946,
+          "champion_train": 0.5945945945945946,
+          "adopted": true,
+          "target_repairs": 2,
+          "repaired": 42,
+          "regressed": 35,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 5,
         "window_start": 1,
-        "window_end": 2,
-        "last_improvement_round": 2,
+        "window_end": 5,
+        "last_improvement_round": 5,
         "rounds_since_last_improvement": 0,
-        "last10_adoptions": 1,
-        "last10_adoption_rate": 0.5,
-        "last10_champion_gain": 0.20270270270270263,
-        "last10_target_repairs": 8,
-        "last10_repaired": 96,
-        "last10_regressed": 52,
+        "last10_adoptions": 3,
+        "last10_adoption_rate": 0.6,
+        "last10_champion_gain": 0.2927927927927928,
+        "last10_target_repairs": 16,
+        "last10_repaired": 207,
+        "last10_regressed": 163,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32487,6 +34168,55 @@
               "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]"
             ],
             "immediate_target_repairs": 8
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": true,
+            "problem_labels": [
+              "planning_or_order",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+              "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]break_app_storage_permission|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]"
+            ],
+            "immediate_target_repairs": 1
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": false,
+            "problem_labels": [
+              "missing_information",
+              "planning_or_order",
+              "tool_arguments"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+              "[mms_issue]bad_wifi_calling|break_apn_mms_setting|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+              "[mms_issue]break_app_both_permissions|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+              "[service_issue]airplane_mode_on|break_apn_settings|unseat_sim_card[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 5
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "missing_information",
+              "planning_or_order"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 2
           }
         ],
         "baseline_failed_cohort": null,
@@ -32504,10 +34234,10 @@
       "optimizer": "gpt-6.1-sol",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 6,
       "budget": 40,
-      "checkpoint": "v01",
+      "checkpoint": "v06",
       "baseline_train": 0.30180180180180183,
       "curve": [
         {
@@ -32541,24 +34271,72 @@
           "repaired": 40,
           "regressed": 40,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "v01",
+          "candidate_train": 0.5630630630630631,
+          "champion_train": 0.481981981981982,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 49,
+          "regressed": 31,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v01",
+          "candidate_train": 0.46396396396396394,
+          "champion_train": 0.481981981981982,
+          "adopted": false,
+          "target_repairs": 4,
+          "repaired": 38,
+          "regressed": 42,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v01",
+          "candidate_train": 0.4774774774774775,
+          "champion_train": 0.481981981981982,
+          "adopted": false,
+          "target_repairs": 2,
+          "repaired": 32,
+          "regressed": 33,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v01",
+          "candidate_train": 0.5315315315315315,
+          "champion_train": 0.5315315315315315,
+          "adopted": true,
+          "target_repairs": 3,
+          "repaired": 44,
+          "regressed": 33,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 6,
         "window_start": 1,
-        "window_end": 2,
-        "last_improvement_round": 1,
-        "rounds_since_last_improvement": 1,
-        "last10_adoptions": 1,
-        "last10_adoption_rate": 0.5,
-        "last10_champion_gain": 0.18018018018018017,
-        "last10_target_repairs": 5,
-        "last10_repaired": 102,
-        "last10_regressed": 62,
+        "window_end": 6,
+        "last_improvement_round": 6,
+        "rounds_since_last_improvement": 0,
+        "last10_adoptions": 2,
+        "last10_adoption_rate": 0.3333333333333333,
+        "last10_champion_gain": 0.22972972972972971,
+        "last10_target_repairs": 15,
+        "last10_repaired": 265,
+        "last10_regressed": 201,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32596,6 +34374,52 @@
               "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
             ],
             "immediate_target_repairs": 1
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": false,
+            "problem_labels": [
+              "missing_information",
+              "planning_or_order",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 1
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": false,
+            "problem_labels": [
+              "missing_information",
+              "planning_or_order",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]",
+              "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 4
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": false,
+            "problem_labels": [
+              "missing_information",
+              "planning_or_order",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 2
           }
         ],
         "baseline_failed_cohort": null,
@@ -32613,10 +34437,10 @@
       "optimizer": "gpt-6.1-sol",
       "effort": "high",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 6,
       "budget": 40,
-      "checkpoint": "v01",
+      "checkpoint": "v04",
       "baseline_train": 0.30180180180180183,
       "curve": [
         {
@@ -32650,24 +34474,72 @@
           "repaired": 41,
           "regressed": 35,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "v01",
+          "candidate_train": 0.45495495495495497,
+          "champion_train": 0.45495495495495497,
+          "adopted": true,
+          "target_repairs": 0,
+          "repaired": 34,
+          "regressed": 28,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v03",
+          "candidate_train": 0.481981981981982,
+          "champion_train": 0.481981981981982,
+          "adopted": true,
+          "target_repairs": 3,
+          "repaired": 31,
+          "regressed": 25,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v04",
+          "candidate_train": 0.481981981981982,
+          "champion_train": 0.481981981981982,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 32,
+          "regressed": 32,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 6,
+          "candidate": "v06",
+          "parent": "v04",
+          "candidate_train": 0.481981981981982,
+          "champion_train": 0.481981981981982,
+          "adopted": false,
+          "target_repairs": 1,
+          "repaired": 35,
+          "regressed": 35,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 6,
         "window_start": 1,
-        "window_end": 2,
-        "last_improvement_round": 1,
-        "rounds_since_last_improvement": 1,
-        "last10_adoptions": 1,
+        "window_end": 6,
+        "last_improvement_round": 4,
+        "rounds_since_last_improvement": 2,
+        "last10_adoptions": 3,
         "last10_adoption_rate": 0.5,
-        "last10_champion_gain": 0.12612612612612611,
-        "last10_target_repairs": 3,
-        "last10_repaired": 91,
-        "last10_regressed": 57,
+        "last10_champion_gain": 0.18018018018018017,
+        "last10_target_repairs": 8,
+        "last10_repaired": 223,
+        "last10_regressed": 177,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32702,6 +34574,51 @@
               "[mms_issue]bad_wifi_calling|break_apn_mms_setting|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:None]"
             ],
             "immediate_target_repairs": 1
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": true,
+            "problem_labels": [
+              "implementation_fault",
+              "recovery_or_loop",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+              "[mms_issue]bad_wifi_calling|break_apn_mms_setting|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 0
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": true,
+            "problem_labels": [
+              "termination_or_submission"
+            ],
+            "target_task_ids": [
+              "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+              "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+              "[service_issue]lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]"
+            ],
+            "immediate_target_repairs": 3
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": false,
+            "problem_labels": [
+              "planning_or_order",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+              "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+              "[service_issue]break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 1
           }
         ],
         "baseline_failed_cohort": null,
@@ -32719,8 +34636,8 @@
       "optimizer": "gpt-5.6-sol",
       "effort": "medium",
       "status": "incomplete_not_convergence",
-      "live_phase_at_collection": "service_retry",
-      "rounds": 2,
+      "live_phase_at_collection": "optimizer_running",
+      "rounds": 5,
       "budget": 40,
       "checkpoint": "v01",
       "baseline_train": 0.30180180180180183,
@@ -32756,24 +34673,60 @@
           "repaired": 29,
           "regressed": 40,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "v01",
+          "candidate_train": 0.32882882882882886,
+          "champion_train": 0.4189189189189189,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 20,
+          "regressed": 40,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "v01",
+          "candidate_train": 0.3333333333333333,
+          "champion_train": 0.4189189189189189,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 21,
+          "regressed": 40,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "v01",
+          "candidate_train": 0.36486486486486486,
+          "champion_train": 0.4189189189189189,
+          "adopted": false,
+          "target_repairs": 0,
+          "repaired": 25,
+          "regressed": 37,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 5,
         "window_start": 1,
-        "window_end": 2,
+        "window_end": 5,
         "last_improvement_round": 1,
-        "rounds_since_last_improvement": 1,
+        "rounds_since_last_improvement": 4,
         "last10_adoptions": 1,
-        "last10_adoption_rate": 0.5,
+        "last10_adoption_rate": 0.2,
         "last10_champion_gain": 0.11711711711711709,
         "last10_target_repairs": 0,
-        "last10_repaired": 72,
-        "last10_regressed": 57,
+        "last10_repaired": 138,
+        "last10_regressed": 174,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
-        "infrastructure_interrupted": true,
+        "infrastructure_interrupted": false,
         "completion_note": "Unfinished runs are not eligible for a convergence conclusion, including when a process reports optimizer_running."
       },
       "early_cohorts": {
@@ -32811,6 +34764,53 @@
               "E009"
             ],
             "immediate_target_repairs": 0
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": false,
+            "problem_labels": [
+              "planning_or_order",
+              "termination_or_submission",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "E003",
+              "E005",
+              "E007"
+            ],
+            "immediate_target_repairs": 0
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": false,
+            "problem_labels": [
+              "recovery_or_loop",
+              "termination_or_submission",
+              "tool_arguments"
+            ],
+            "target_task_ids": [
+              "E002",
+              "E004",
+              "E009"
+            ],
+            "immediate_target_repairs": 0
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": false,
+            "problem_labels": [
+              "planning_or_order",
+              "task_interpretation",
+              "termination_or_submission"
+            ],
+            "target_task_ids": [
+              "E011",
+              "E022"
+            ],
+            "immediate_target_repairs": 0
           }
         ],
         "baseline_failed_cohort": null,
@@ -32829,9 +34829,9 @@
       "effort": "high",
       "status": "incomplete_not_convergence",
       "live_phase_at_collection": "optimizer_running",
-      "rounds": 2,
+      "rounds": 5,
       "budget": 40,
-      "checkpoint": "baseline",
+      "checkpoint": "v05",
       "baseline_train": 0.30180180180180183,
       "curve": [
         {
@@ -32865,20 +34865,56 @@
           "repaired": 28,
           "regressed": 28,
           "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 3,
+          "candidate": "v03",
+          "parent": "baseline",
+          "candidate_train": 0.2882882882882883,
+          "champion_train": 0.30180180180180183,
+          "adopted": false,
+          "target_repairs": 2,
+          "repaired": 27,
+          "regressed": 30,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 4,
+          "candidate": "v04",
+          "parent": "baseline",
+          "candidate_train": 0.4144144144144144,
+          "champion_train": 0.30180180180180183,
+          "adopted": false,
+          "target_repairs": 3,
+          "repaired": 44,
+          "regressed": 19,
+          "candidate_success_set_change_from_previous": null
+        },
+        {
+          "round": 5,
+          "candidate": "v05",
+          "parent": "baseline",
+          "candidate_train": 0.4009009009009009,
+          "champion_train": 0.4009009009009009,
+          "adopted": true,
+          "target_repairs": 1,
+          "repaired": 43,
+          "regressed": 21,
+          "candidate_success_set_change_from_previous": null
         }
       ],
       "plateau": {
-        "window_rounds": 2,
+        "window_rounds": 5,
         "window_start": 1,
-        "window_end": 2,
-        "last_improvement_round": 0,
-        "rounds_since_last_improvement": 2,
-        "last10_adoptions": 0,
-        "last10_adoption_rate": 0.0,
-        "last10_champion_gain": 0.0,
-        "last10_target_repairs": 3,
-        "last10_repaired": 51,
-        "last10_regressed": 56,
+        "window_end": 5,
+        "last_improvement_round": 5,
+        "rounds_since_last_improvement": 0,
+        "last10_adoptions": 1,
+        "last10_adoption_rate": 0.2,
+        "last10_champion_gain": 0.09909909909909909,
+        "last10_target_repairs": 9,
+        "last10_repaired": 165,
+        "last10_regressed": 126,
         "last10_mean_success_set_change": null,
         "last10_unique_candidate_success_patterns": null,
         "interpretation": "descriptive completed-candidate window; not a stop rule or global-optimum certificate",
@@ -32918,6 +34954,54 @@
               "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]"
             ],
             "immediate_target_repairs": 3
+          },
+          {
+            "round": 3,
+            "candidate": "v03",
+            "adopted": false,
+            "problem_labels": [
+              "planning_or_order",
+              "termination_or_submission"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]",
+              "[mms_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded[PERSONA:None]",
+              "[mms_issue]break_app_storage_permission|data_usage_exceeded[PERSONA:Easy]",
+              "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]"
+            ],
+            "immediate_target_repairs": 2
+          },
+          {
+            "round": 4,
+            "candidate": "v04",
+            "adopted": false,
+            "problem_labels": [
+              "planning_or_order",
+              "tool_arguments",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+              "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 3
+          },
+          {
+            "round": 5,
+            "candidate": "v05",
+            "adopted": true,
+            "problem_labels": [
+              "planning_or_order",
+              "tool_arguments",
+              "tool_result_interpretation"
+            ],
+            "target_task_ids": [
+              "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+              "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+              "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]"
+            ],
+            "immediate_target_repairs": 1
           }
         ],
         "baseline_failed_cohort": null,
