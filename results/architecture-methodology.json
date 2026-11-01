@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "updated_on": "2026-11-01",
-  "title": "DSH Loop 架构与机器学习思考",
-  "title_en": "DSH Loop Architecture and Learning",
+  "title": "DSH Loop：四个模块、八条宏观改进路线",
+  "title_en": "DSH Loop: four modules and eight architectural directions",
   "summary": "四个模块、一套公共执行基础。诊断搜索信号、候选空间和选择偏差，再逐项验证改进。",
   "summary_en": "Four modules on a shared execution core. Diagnose evidence quality, program search space, and selection bias before combining changes.",
   "modules": [
@@ -582,7 +582,11 @@
       "code_github": [
         "evolution/src/dsh_evolve/loops/l123.py",
         "evolution/src/dsh_evolve/loops/l45.py"
-      ]
+      ],
+      "axis": "选版规则",
+      "question": "候选池里是否已经有更好的产物，只是选错了？",
+      "comparison": "同一候选池：训练最佳 vs 独立开发验证选择",
+      "priority": "诊断先行"
     },
     {
       "id": "B",
@@ -618,7 +622,11 @@
       "code_github": [
         "evolution/src/dsh_evolve/keeper.py",
         "evolution/src/dsh_evolve/loops/l6.py"
-      ]
+      ],
+      "axis": "同一问题的修复机制",
+      "question": "已知同一问题时，哪种修复表示更有效？",
+      "comparison": "同一证据与知识：提示修复 vs 状态／动作／恢复修复",
+      "priority": "关键主对照"
     },
     {
       "id": "C",
@@ -654,6 +662,214 @@
       "code_github": [
         "evolution/src/dsh_evolve/loops/l789.py",
         "evolution/extensions/feedback/prediction_outcomes.py"
+      ],
+      "axis": "跨轮经验的更新规则",
+      "question": "经验是否真的改变下一轮，而不是重复讲故事？",
+      "comparison": "同长度、同学习预算：普通总结 vs 带反例和失效条件的经验",
+      "priority": "后续扩展"
+    },
+    {
+      "id": "D",
+      "title": "数据分配：生成与验证各看多少",
+      "title_en": "Development-data allocation",
+      "module": "observe",
+      "status": "proposal_not_run",
+      "axis": "训练／验证配比",
+      "question": "有限任务应该用于发现更多修法，还是用于更稳地选择？",
+      "comparison": "固定100个开发任务：60/40、80/20、90/10训练／验证；测试集保持独立",
+      "priority": "关键主对照",
+      "change": "固定总开发任务池，只改变用于候选生成和验证选择的配比；先测比例效应，再单独研究分层与去近重复。",
+      "unchanged": [
+        "同一总开发任务池、独立测试身份及评测环境",
+        "同一起点、优化模型、修改空间和选择器定义",
+        "候选及模型总预算；额外验证费用单列"
+      ],
+      "steps": [
+        "将开发任务预先分组并冻结身份；60/40、80/20、90/10只是可比较示例，不预设最佳比例。",
+        "候选只读训练证据；验证采用同一规则，报告各组有效样本和评测开销。",
+        "比较配比后，再用另一项单变量试验改变机制分层或近重复分组，避免把比例和样本质量混为一件事。"
+      ],
+      "expectation": "识别“训练覆盖不足”和“验证噪声过大”之间的权衡；可能用较少训练题得到更稳的选择，也可能因覆盖下降变差。",
+      "observable_success": [
+        "新确认任务上增益更稳定，而不是只缩小训练分差",
+        "不同开发划分重复下，结论方向一致",
+        "相同总预算下找到有效产物的概率提高"
+      ],
+      "refutation": "配比差异小于划分波动，或更多验证仅减少探索机会而未改善确认结果；应转查任务覆盖、候选质量或选择规则。",
+      "cost": "比例会改变训练和验证场次，需对齐总评测预算；独立划分重复也需单列。把当前100训练改成80训练＋20验证是新协议，不能称原实验续跑或无改动复现。",
+      "implementation": [
+        "在任务清单层明确train/validation身份",
+        "复用Project任务加载与evaluate，不重写场景运行器",
+        "记录比例、划分种子、任务家族和近重复组"
+      ],
+      "followup": "测试比例不通过观察test成绩调优。可另做“固定100训练、增加验证规模”的试验，但它回答预算扩张问题，不与固定总池对照混排。",
+      "code_github": [
+        "evolution/src/astra_evolve/project.py",
+        "evolution/src/dsh_evolve/loops/l123.py"
+      ]
+    },
+    {
+      "id": "E",
+      "title": "起点与阶段：从零学，还是接着改",
+      "title_en": "Initialization and staged evolution",
+      "module": "propose",
+      "status": "proposal_not_run",
+      "axis": "Harness初始化与预训练／后训练",
+      "question": "高起点能节省搜索，还是把后续改动锁在旧结构里？",
+      "comparison": "H0空增强 vs 训练／开发选定高点 vs 跨任务通用Harness；各自追加同样40轮",
+      "priority": "关键主对照",
+      "change": "先只改变起点：比较空增强、已有高点、广覆盖任务上形成的通用Harness；后续循环完全一致。",
+      "unchanged": [
+        "相同后训练任务、验证与测试身份",
+        "相同优化模型、修改空间、采用规则和40轮后训练预算",
+        "相同做题模型、工具权限和运行环境"
+      ],
+      "steps": [
+        "预先锁定三类起点，记录其原有能力、初始成绩、训练来源和历史成本；高点只能由训练／开发选择，不能由test挑选。",
+        "各起点追加同样40轮，允许同样的新增、修改、删除和组合操作；比较起点之上的净增益与回归。",
+        "若通用起点有价值，再单独比较“广覆盖预训练→领域后训练”与同总预算的一阶段搜索，避免起点和后训练算法同时变。"
+      ],
+      "expectation": "通用起点可能减少基础接口修复，释放预算给困难机制；高分起点也可能更难修改、组合冲突更多。",
+      "observable_success": [
+        "同样后训练预算下达到目标所需轮次更少",
+        "净增益、未见任务覆盖和回归控制优于直接追加旧规则",
+        "计入起点构建成本后，复用多个任务时仍有收益"
+      ],
+      "refutation": "最终优势完全来自更高初始分，后训练净增益很小；或强起点更早停滞、误伤更多，说明继承结构限制了可达更新。",
+      "cost": "同时报告新增40轮成本和累计成本；先前搜索、组件与经验不是免费资源。多个起点不能只按最终分数解释更新算法。",
+      "implementation": [
+        "复用baseline导入和prepare父版接口",
+        "将pretrain与posttrain任务身份、产物和预算分开保存",
+        "记录继承、删除、合并与新增能力的实际来源"
+      ],
+      "followup": "这里“预训练”指跨训练任务形成Harness代码／Skill先验，不更新做题模型权重。任务内在线状态适应是另一条轴，暂不同时改变。",
+      "code_github": [
+        "evolution/src/dsh_evolve/cli.py",
+        "evolution/src/astra_evolve/project.py",
+        "evolution/src/dsh_evolve/loops/l789.py"
+      ]
+    },
+    {
+      "id": "F",
+      "title": "平台期策略：何时换方向，何时停",
+      "title_en": "Plateau diagnosis and budget policy",
+      "module": "select",
+      "status": "proposal_not_run",
+      "axis": "搜索预算与平台期响应",
+      "question": "没有涨分时，是继续同类修改，还是改变本次搜索方向？",
+      "comparison": "固定调度 vs 在同一40轮预算内依据平台迹象切换已允许的编辑算子",
+      "priority": "后续扩展",
+      "change": "把平台诊断接到预算与算子选择：总候选预算仍为40轮，遇到重复低效方向时把剩余预算转给预先允许的另一类改动。",
+      "unchanged": [
+        "训练／验证／测试身份、起点和模型",
+        "允许的总修改空间与采用规则",
+        "40轮候选上限及总优化／评测预算"
+      ],
+      "steps": [
+        "预先规定观察窗口与需记录的信号：有效评测、开发增益、修复回退、干预覆盖和候选行为差异。",
+        "先排除额度与服务故障；再判断重复提案、覆盖不足、修复误伤抵消或分数分辨率限制。",
+        "按预先定义的响应表在已有算子间切换；只调整剩余40轮如何使用，不自动加轮数或开放新工具。"
+      ],
+      "expectation": "减少平台期反复进行同类无效改动；可能让相同预算覆盖更多有价值方向，不承诺最终上限更高。",
+      "observable_success": [
+        "单位有效评测成本的开发净收益提高",
+        "重复无效提案减少，而目标修复或有效覆盖增加",
+        "诊断出的平台类型能预测切换方向后是否改善"
+      ],
+      "refutation": "信号不稳定、频繁误切换，或新方向没有比固定调度更好；说明平台检测不可靠或瓶颈不在预算分配。",
+      "cost": "诊断和额外分析计入预算。100题单遍的严格成功率以1个百分点变化；零分数增益不等于中间行为没有改善。",
+      "implementation": [
+        "在keeper外围增加只读窗口统计与策略选择",
+        "复用现有paired/runtime证据，不新增一套评分器",
+        "将“运行中断”“当前算子平台”“总体停止”分别标记"
+      ],
+      "followup": "不定义通用“连续N轮不涨＝收敛”。若研究提前停止，应另做预先声明的停止策略对照，按实际消耗和剩余机会比较，而非声称与固定40轮等预算。",
+      "code_github": [
+        "evolution/src/dsh_evolve/keeper.py",
+        "evolution/src/astra_evolve/records.py",
+        "evolution/extensions/feedback/prediction_outcomes.py"
+      ]
+    },
+    {
+      "id": "G",
+      "title": "修改空间：提示、状态、工具还是整套流程",
+      "title_en": "Editable program-space comparison",
+      "module": "propose",
+      "status": "proposal_not_run",
+      "axis": "可搜索的程序参数结构",
+      "question": "效果受限，是生成器不会搜，还是允许的空间表达不了修复？",
+      "comparison": "提示限定 → 提示＋状态 → 动作／恢复 → 工具封装与编排；分别固定空间运行",
+      "priority": "关键主对照",
+      "change": "显式约束候选可编辑的结构，比较逐级扩大的程序搜索空间；记录允许空间与实际探索到的机制。",
+      "unchanged": [
+        "相同训练证据、父版和可见信息",
+        "相同做题模型、原生工具权限、任务步数及评分",
+        "同一总生成与评测预算、同一选择规则"
+      ],
+      "steps": [
+        "冻结四种编辑权限：只改提示；增加运行状态；增加动作前后控制和恢复；允许既有工具的封装与流程编排。",
+        "将同一任务证据交给各空间，记录提出及实际生效的编辑类型、作用范围和复杂度。",
+        "比较目标修复、未见任务收益与副作用；区分表达不了、没有搜到、实现失败和选择错误。"
+      ],
+      "expectation": "找出各场景的最小有效空间：部分问题文字足够，部分需要状态或控制；完整Harness空间可能因难搜而表现更差。",
+      "observable_success": [
+        "扩展空间带来原小空间难以表达的实际行为变化",
+        "相同总预算下的开发／确认收益提升",
+        "收益能与特定能力扩展对应，而非只是更多知识或调用次数"
+      ],
+      "refutation": "大空间只增加代码量、错误或误伤，行为覆盖与确认收益不升；应保留较小空间或改善搜索组织。",
+      "cost": "大空间会增加实现、验证和组合成本，需统一预算。工具封装中的每次原生调用仍计入原任务预算，不能通过宏工具隐藏额外动作。",
+      "implementation": [
+        "在候选权限与提案中声明editable_space",
+        "复用DSH钩子，记录prompt/state/action/recovery/composition算子",
+        "工具封装保持相同底层动作、信息和评分接口"
+      ],
+      "followup": "若新增工具提供新的观察、数据库访问或外部能力，那是新协议，应另列工具增强实验，不能当作纯“参数空间扩大”的公平对照。B比较同一问题的具体修法，G比较整个搜索过程允许的空间，二者不要混为一个实验。",
+      "code_github": [
+        "evolution/src/dsh_evolve/keeper.py",
+        "evolution/src/astra_evolve/project.py",
+        "evolution/src/dsh_evolve/loops/l6.py"
+      ]
+    },
+    {
+      "id": "H",
+      "title": "证据输入：先把正确问题交给生成器",
+      "title_en": "Evidence construction",
+      "module": "observe",
+      "status": "proposal_not_run",
+      "axis": "日志到诊断的输入结构",
+      "question": "生成器没有提出好改动，是能力不足，还是看错了材料？",
+      "comparison": "自由挑样例／末尾摘要 vs 失败机制覆盖＋匹配成功＋新增退步的证据包",
+      "priority": "诊断先行",
+      "change": "只改变证据包的构造方式：在相同输入预算内，增加机制覆盖、成功对照和近期回退，保留定位原轨迹的入口。",
+      "unchanged": [
+        "同一父版、训练任务和完整可访问日志",
+        "相同优化器、输入Token预算、候选数及编辑空间",
+        "相同评测、采用规则和经验更新方式"
+      ],
+      "steps": [
+        "从同一父版冻结两种证据输入；把失败机制分组视为可修订索引，不预设分组就是原因。",
+        "新证据包优先展示主要失败条件、相近成功对照、首次偏差和最近新增退步；不要以更多日志获得额外输入预算。",
+        "让相同生成器提出候选，核对选题、目标修复、跨题覆盖和重复无效建议。"
+      ],
+      "expectation": "减少对末尾症状和少数易读样例的偏好，使候选针对可复用机制；也可能因分类或压缩错误而漏掉关键细节。",
+      "observable_success": [
+        "同预算下目标修复和跨题覆盖更好",
+        "反复提出已失败修法的比例降低",
+        "诊断与实现能定位到具体运行状态和行为"
+      ],
+      "refutation": "证据包更整齐但候选、行为和效果没有改善；或摘要丢失必要上下文。说明需要改诊断能力或候选空间，而不是继续扩文档。",
+      "cost": "采样、归类及摘要的额外模型调用计入输入与总预算；原始日志仍可按需读取，不能把“读得更多”误写成“组织得更好”。",
+      "implementation": [
+        "在materials之上增加build_context接口",
+        "复用feedback的任务映射、采样概率和可见消息边界",
+        "记录证据覆盖与后续使用，不强制增加独立模型服务"
+      ],
+      "followup": "H只改上游证据，B只改下游机制生成。先分开比较，确认各自有效后再研究两者是否互补。",
+      "code_github": [
+        "evolution/src/astra_evolve/records.py",
+        "evolution/extensions/feedback/online_feedback.py",
+        "evolution/src/dsh_evolve/loops/l45.py"
       ]
     }
   ],
@@ -694,7 +910,7 @@
   "reproduction_scope": {
     "github": "公共evolution入口覆盖三场景L1–L9；ALFWorld、Telecom和反馈扩展的迁移边界见复现说明。",
     "codeup": "内部dsh/保留共同实现，legacy/及dsh/history/保存更多历史源码。映射不是对所有历史协议行为等价的承诺。",
-    "proposals": "A/B/C均为待验证方案，本页不会启动实验，也不预填效果。"
+    "proposals": "A—H均为待验证方案，本页不会启动实验，也不预填效果。"
   },
   "references": [
     {
