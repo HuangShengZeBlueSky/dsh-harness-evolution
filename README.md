@@ -6,9 +6,7 @@
 
 Freeze the actor and evolve its runtime harness. Inspect what each loop changes, how candidates are selected, what happened, and which reproduction steps are actually supported.
 
-[**Interactive summary and all curves**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)
-
-[**Architecture lab (中文)**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html)
+[**Architecture lab (中文)**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html) · [**Interactive summary and all curves**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)
 
 ## Five benchmark artifacts
 
