@@ -135,5 +135,7 @@ def main():
  (ROOT/'results/leaderboard.json').write_text(json.dumps({'schema_version':2,'update_mode':'release-driven','champions':finals,'best_measured':winners,'releases':rows,'paper_references':catalog,'comparison_policy':policy(),'telecom_history':json.loads((ROOT/'results/life-harness-telecom-history.json').read_text())},ensure_ascii=False,indent=2)+'\n')
  from research_view import build as build_research
  build_research(ROOT)
+ from build_architecture import build as build_architecture
+ build_architecture(ROOT)
  print(f'Rendered {len(rows)} releases across {len(winners)} benchmarks.')
 if __name__=='__main__':main()

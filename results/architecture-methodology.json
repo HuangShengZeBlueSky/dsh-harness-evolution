@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-01",
+  "title": "DSH Loop 架构与机器学习思考",
+  "title_en": "DSH Loop Architecture and Learning",
+  "summary": "四个模块、一套公共执行基础。诊断搜索信号、候选空间和选择偏差，再逐项验证改进。",
+  "summary_en": "Four modules on a shared execution core. Diagnose evidence quality, program search space, and selection bias before combining changes.",
+  "modules": [
+    {
+      "id": "observe",
+      "title": "观察与诊断",
+      "title_en": "Observe & diagnose",
+      "summary": "把真实轨迹变成候选生成能使用的证据。",
+      "input": [
+        "父版代码与真实运行记录",
+        "任务分布、成功标准与可见信息",
+        "历史修复／退步及成功对照"
+      ],
+      "output": [
+        "代表性证据包",
+        "当前能力与状态职责",
+        "可检验的修复假设与优先目标"
+      ],
+      "current": [
+        "完整可见消息、失败索引和运行作用记录已保存。",
+        "L4生成源码登记与钩子清单；L6/L7要求证据定位和修复映射。",
+        "反馈分支按最多8失败＋4成功抽样，提供摘要或机制诊断。"
+      ],
+      "gap": [
+        "日志索引偏向末尾症状；样例覆盖和首次偏差尚未充分组织。",
+        "插件清单不等于状态依赖、真实覆盖或能力边界。",
+        "分类与引用正确，不代表原因假设成立。"
+      ],
+      "history": [
+        "3skill归因",
+        "问题类型经验",
+        "L4能力说明",
+        "L6/L7计划与覆盖",
+        "summary/mechanism"
+      ],
+      "code_github": [
+        {
+          "path": "evolution/src/astra_evolve/records.py",
+          "function": "materials / runtime_evidence"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/l45.py",
+          "function": "Campaign.inspect"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/l6.py",
+          "function": "Campaign.plan"
+        },
+        {
+          "path": "evolution/extensions/feedback/online_feedback.py",
+          "function": "boundary"
+        }
+      ],
+      "code_codeup": [
+        {
+          "path": "dsh/src/astra_evolve/records.py",
+          "function": "materials / runtime_evidence"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/l45.py",
+          "function": "Campaign.inspect"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/l6.py",
+          "function": "Campaign.plan"
+        }
+      ],
+      "note": "代码链接指向共用实现；当前固定集简化版并未完整启用所有历史功能。"
+    },
+    {
+      "id": "propose",
+      "title": "候选设计与实现",
+      "title_en": "Design & implement",
+      "summary": "选择修复机制，再把机制写成可执行插件。",
+      "input": [
+        "选定父版与当前能力结构",
+        "证据、目标问题、预期行为及适用边界",
+        "可用钩子、允许修改面、历史尝试／组件",
+        "生成与评测预算"
+      ],
+      "output": [
+        "机制提案：改什么、何时生效、何时不生效",
+        "冻结候选：插件、状态、组合与父版关系"
+      ],
+      "current": [
+        "Project.prepare复制父版、准备工作区，不负责生成代码。",
+        "持续优化会话承担诊断、机制选择和实现；M1/M2改变修改约束。",
+        "L9可导入旧组件；DSH提供状态、动作前后处理和恢复干预。"
+      ],
+      "gap": [
+        "没有独立可替换的propose/implement接口，难定位候选失败的来源。",
+        "表述不同不等于机制多样；完整Harness空间也可能搜索不到有效区域。",
+        "强起点带来能力，也带来依赖和局部搜索偏好。"
+      ],
+      "history": [
+        "Astra自由修改",
+        "Luna协同修改",
+        "L4已有起点",
+        "L9组件组装"
+      ],
+      "code_github": [
+        {
+          "path": "evolution/src/astra_evolve/project.py",
+          "function": "Project.prepare"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/keeper.py",
+          "function": "prompt / run"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/l789.py",
+          "function": "Campaign.component"
+        },
+        {
+          "path": "evolution/reference/simple-fixed40/simple_loop.py",
+          "function": "当前简化控制器快照"
+        }
+      ],
+      "code_codeup": [
+        {
+          "path": "dsh/src/astra_evolve/project.py",
+          "function": "Project.prepare"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/keeper.py",
+          "function": "prompt / run"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/l789.py",
+          "function": "Campaign.component"
+        },
+        {
+          "path": "dsh/history/simple-fixed40/simple_loop.py",
+          "function": "当前简化控制器快照"
+        }
+      ],
+      "note": "代码链接指向共用实现；当前固定集简化版并未完整启用所有历史功能。"
+    },
+    {
+      "id": "select",
+      "title": "评测与选择",
+      "title_en": "Evaluate & select",
+      "summary": "确认实际收益，选择可泛化的下一父版。",
+      "input": [
+        "冻结候选与原父版",
+        "固定任务身份和开发验证",
+        "实际生效、配对修复／退步与资源开销"
+      ],
+      "output": [
+        "整体收益与回退",
+        "机制支持／反驳／未知",
+        "冠军决定和最终冻结选择"
+      ],
+      "current": [
+        "运行、完整有效结果、冻结和采用已程序化。",
+        "L1/L5/L7有不同验证门槛；L3区分分支保留与冠军改变。",
+        "当前L4-simple按固定训练严格成功提高采用，缺少独立开发验证。"
+      ],
+      "gap": [
+        "重复查询训练或验证都会产生选择偏差；一次涨分不保证泛化。",
+        "总分上涨可与原目标零修复同时发生。",
+        "普通同任务配对不等于共享前缀的受控因果干预。"
+      ],
+      "history": [
+        "Workflow程序化晋升",
+        "L1验证",
+        "L2回放",
+        "L3分支选择",
+        "L5场景目标",
+        "L6目标统计",
+        "L7验证"
+      ],
+      "code_github": [
+        {
+          "path": "evolution/src/astra_evolve/project.py",
+          "function": "Project.evaluate / report / decide"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/loop_policy.py",
+          "function": "select / parent"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/l45.py",
+          "function": "Campaign.report"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/l6.py",
+          "function": "Campaign.report"
+        },
+        {
+          "path": "evolution/reference/simple-fixed40/simple_loop.py",
+          "function": "当前简化控制器快照"
+        }
+      ],
+      "code_codeup": [
+        {
+          "path": "dsh/src/astra_evolve/project.py",
+          "function": "Project.evaluate / report / decide"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/loop_policy.py",
+          "function": "select / parent"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/l45.py",
+          "function": "Campaign.report"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/l6.py",
+          "function": "Campaign.report"
+        },
+        {
+          "path": "dsh/history/simple-fixed40/simple_loop.py",
+          "function": "当前简化控制器快照"
+        }
+      ],
+      "note": "代码链接指向共用实现；当前固定集简化版并未完整启用所有历史功能。"
+    },
+    {
+      "id": "learn",
+      "title": "经验与能力归档",
+      "title_en": "Learn & retain",
+      "summary": "把本轮结果转成下一轮不同的决策。",
+      "input": [
+        "实际结果与预期的差异",
+        "哪些条件下修复、误伤、未触发或仍未知",
+        "可复用组件和互补版本"
+      ],
+      "output": [
+        "有条件、可被反驳的经验",
+        "重复无效方向的记录",
+        "可选的组件／互补父版"
+      ],
+      "current": [
+        "L8已生成并传递轮内或外部经验。",
+        "L3保存三个按验证分排序的分支，L9复用训练选定组件。",
+        "事前预测已冻结并配对核对，但预测误差仍主要用于事后分析。"
+      ],
+      "gap": [
+        "采用不能自动转写为原因成立的成功经验。",
+        "文本经验送达不等于改变了后续行为。",
+        "分数前几名、组件库、行为互补Archive是三件事。"
+      ],
+      "history": [
+        "早期经验消融",
+        "L8内部／外部经验",
+        "L3分支",
+        "L9组件",
+        "事前预测与结果核对"
+      ],
+      "code_github": [
+        {
+          "path": "evolution/src/dsh_evolve/loops/l789.py",
+          "function": "Campaign.learn / initialize"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/learning.py",
+          "function": "campaign_packet / run_job"
+        },
+        {
+          "path": "evolution/src/dsh_evolve/loops/loop_policy.py",
+          "function": "select"
+        },
+        {
+          "path": "evolution/extensions/feedback/prediction_outcomes.py",
+          "function": "main"
+        }
+      ],
+      "code_codeup": [
+        {
+          "path": "dsh/src/dsh_evolve/loops/l789.py",
+          "function": "Campaign.learn / initialize"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/learning.py",
+          "function": "campaign_packet / run_job"
+        },
+        {
+          "path": "dsh/src/dsh_evolve/loops/loop_policy.py",
+          "function": "select"
+        }
+      ],
+      "note": "代码链接指向共用实现；当前固定集简化版并未完整启用所有历史功能。"
+    }
+  ],
+  "controls": [
+    {
+      "id": "distribution",
+      "title": "数据分布与划分",
+      "title_en": "Distribution & splits",
+      "summary": "比例只是表面；覆盖、难度、近重复和反复选版次数共同决定泛化。",
+      "questions": [
+        "训练是否覆盖目标任务的机制、表述与组合？",
+        "验证是否足够稳定，且没有被几十轮查询逐渐拟合？",
+        "同一模板的近重复是否跨越划分？"
+      ],
+      "decision": "固定训练集可以保留；验证任务身份与额外预算显式记录。已观察的测试只用于诊断，不回传新方案的选版。",
+      "avoid": "不要假定50/25/25或80/10/10在所有bench最优，也不要把类别均匀当作真实目标分布。"
+    },
+    {
+      "id": "initialization",
+      "title": "Harness起点",
+      "title_en": "Initialization",
+      "summary": "已有Harness是能力先验，也改变可到达的后续修改路径。",
+      "questions": [
+        "收益来自初始能力，还是来自后续更有效的更新？",
+        "强起点是否锁定了局部结构，使不同机制难以被提出？",
+        "继承插件之间的状态和顺序依赖是否被看懂？"
+      ],
+      "decision": "分别报告起点成绩、增量和先前搜索成本；同父版配对比较后续方法。",
+      "avoid": "高起点不保证更高最终版；H0加外部经验或组件也不是信息意义上的从零。"
+    },
+    {
+      "id": "edit_space",
+      "title": "允许修改的空间",
+      "title_en": "Editable space",
+      "summary": "提示、状态、动作、恢复和组件组合，是不同的程序搜索空间。",
+      "questions": [
+        "当前错误能否由允许的修改面表达？",
+        "扩大空间后，给定预算是否还能找到有效候选？",
+        "机制差异是否只是假装不同的提示措辞？"
+      ],
+      "decision": "允许空间与实际探索空间分别统计。先对同一知识和观察比较不同实现机制，保持评测基础固定。",
+      "avoid": "空间更大意味着更多可能，也可能意味着更难搜索、更高回归风险；不是自动更强。"
+    },
+    {
+      "id": "budget",
+      "title": "优化与评测预算",
+      "title_en": "Optimization & evaluation budget",
+      "summary": "轮数、候选数、读取轨迹、模型调用、重复评测和先验成本共同约束搜索。",
+      "questions": [
+        "40轮是否真探索了40种有效机制？",
+        "新增分析调用占用预算后，是否挤掉了候选评测？",
+        "平台期发生在信息不足、候选同质还是预算不足？"
+      ],
+      "decision": "同时报告有效候选、实测场次与可获得的调用成本；按相同总预算比较。",
+      "avoid": "不能用配置并发代替吞吐，或把旧组件与经验来源的成本记为零。"
+    }
+  ],
+  "history": [
+    {
+      "methods": "3skill → Workflow",
+      "module": "observe",
+      "change": "把监控、归因、优化职责及程序阶段明确化。",
+      "status": "implemented",
+      "finding": "角色分工与可恢复执行成立，不证明需要多个常驻模型。"
+    },
+    {
+      "methods": "Astra / Luna20 / M1 / M2",
+      "module": "propose",
+      "change": "自由修改、协同修改、起点与持续会话约束。",
+      "status": "implemented",
+      "finding": "历史起点、模型、预算不同，不能按最终分数直接归因。"
+    },
+    {
+      "methods": "L1 / L2 / L3",
+      "module": "select",
+      "change": "验证、固定子集回放、三个按验证分保留的分支。",
+      "status": "implemented",
+      "finding": "L2不是动态只回放成功题；L3不是能力互补归档。"
+    },
+    {
+      "methods": "L4 / L5",
+      "module": "observe",
+      "secondary_module": "select",
+      "change": "当前能力说明；场景化成功目标和验证。",
+      "status": "implemented",
+      "finding": "旧L4/L5较强，但训练/验证划分也变了，不能当作单变量升级。"
+    },
+    {
+      "methods": "L6 / L7",
+      "module": "observe",
+      "secondary_module": "select",
+      "change": "计划先于编码、证据定位、目标修复统计和失败覆盖。",
+      "status": "implemented",
+      "finding": "计划完整不等于原因正确；整体涨分可与原目标未修复并存。"
+    },
+    {
+      "methods": "L8 / L9",
+      "module": "learn",
+      "secondary_module": "propose",
+      "change": "轮内/外部经验和训练选定组件复用。",
+      "status": "implemented",
+      "finding": "传递与导入已发生，但稳定收益与互补组合仍需验证。"
+    },
+    {
+      "methods": "summary / mechanism / prediction",
+      "module": "observe",
+      "secondary_module": "learn",
+      "change": "独立反馈与执行前预测，之后配对核对。",
+      "status": "implemented_analysis_not_closed_loop",
+      "finding": "预测误差主要用于分析，没有完整反向控制候选或采用。"
+    },
+    {
+      "methods": "L4-simple fixed40",
+      "module": "select",
+      "secondary_module": "propose",
+      "change": "单链单候选，固定整集训练涨分采用，缩短诊断流程。",
+      "status": "implemented_partial_campaign",
+      "finding": "同时改变数据、选择和诊断，不是旧L4原样复现；已测DB/Web有H0相对收益，OS收益迁移不足。"
+    }
+  ],
+  "ml_insights": [
+    {
+      "id": "gradient",
+      "title": "日志是梯度吗？",
+      "title_en": "Are logs gradients?",
+      "summary": "这是有用的类比，但原始日志不是梯度。",
+      "analogy": "日志经证据筛选和归因，提供“可能该往哪里改”的方向信号；配对评测提供局部改动的效果反馈。",
+      "boundary": "Harness是离散程序与组合；现有代码没有可微目标、统一参数坐标或反向传播。应称方向建议或代理更新信号，不声称算出了梯度。",
+      "implication": "优化的不只是模型能力，也包括信号质量：覆盖偏、误归因或只看末尾症状，会让候选沿错误方向搜索。",
+      "code_modules": [
+        "observe",
+        "propose"
+      ]
+    },
+    {
+      "id": "second_order",
+      "title": "经验是二阶梯度吗？",
+      "title_en": "Is experience second-order information?",
+      "summary": "若经验学会“哪种更新在什么条件下有效”，更接近学习更新规则或预条件；不自动等于Hessian。",
+      "analogy": "一阶类比：本题哪里错。更高阶类比：这种错应采用什么修改、步子多大、哪些组合会误伤。经验可以调节提案分布、修改范围和选择信心。",
+      "boundary": "只有显式估计不同编辑方向的效果敏感性或交互，并用它控制更新，才有更强的二阶解释。当前L8是文本学习与传递，没有计算曲率。",
+      "implication": "经验条目要保留条件、动作、结果、反例与失效条件；评价标准是它是否改变下一轮决策并减少无效尝试。",
+      "code_modules": [
+        "learn",
+        "propose"
+      ],
+      "reference": "learned_optimizer"
+    },
+    {
+      "id": "selection_bias",
+      "title": "数据比例为何改变结果？",
+      "title_en": "Why do data splits alter outcomes?",
+      "summary": "训练决定看见哪些问题；验证决定保留哪些更新；测试估计未参与选择的效果。",
+      "analogy": "改配比既改变有效训练信息，也改变选择噪声与泛化估计的方差。相同100题若包含大量近重复，其有效多样性可能远小于100。",
+      "boundary": "训练和测试同分布也不保证有限样本分数相同；训练被用于自适应选择时，本来就会偏乐观。固定验证反复使用同样会被选择过程拟合。",
+      "implication": "先对齐任务家族、模板和难度，再比较划分；不要只调数字比例，更不要按测试反选比例。",
+      "code_modules": [
+        "observe",
+        "select"
+      ],
+      "reference": "selection_overfit"
+    },
+    {
+      "id": "initial_prior",
+      "title": "已有Harness改变的是初始能力和搜索先验",
+      "title_en": "A warm start changes ability and search prior",
+      "summary": "起点决定已经具备的机制、后续修改成本和局部依赖。",
+      "analogy": "它类似初始化与迁移先验：减少从零学基本机制的成本，也可能把候选锁在旧结构附近。",
+      "boundary": "强起点实验和H0实验的信息与累计预算不同；不能只用最终分数解释更新算法优劣。",
+      "implication": "比较同父版下的新增收益、跨题覆盖与干扰；必要时允许删减或重新组合，不只追加。",
+      "code_modules": [
+        "propose",
+        "learn"
+      ]
+    },
+    {
+      "id": "program_space",
+      "title": "修改面就是参数空间，但参数是程序",
+      "title_en": "The editable surface is a program parameter space",
+      "summary": "提示文本、持久状态、动作规则、恢复路径、插件图具有不同表达能力。",
+      "analogy": "小空间更易搜索但可能表达不了所需修复；大空间更有表达力但候选效率和选择难度更高。",
+      "boundary": "文件数、插件数和代码行数不是有效容量或机制多样性的可靠替代。相同代码长度可以有完全不同的作用范围。",
+      "implication": "记录本轮编辑算子、触发范围和行为差异，而不只记录改了哪些文件。",
+      "code_modules": [
+        "propose",
+        "select"
+      ]
+    },
+    {
+      "id": "convergence",
+      "title": "为什么会出现平台期？",
+      "title_en": "Why do evolution curves plateau?",
+      "summary": "固定任务有限、选择门槛、重复方向、噪声和可改空间都可能造成平台期。",
+      "analogy": "冠军单调曲线本身是选择规则构造的结果；候选可能在周围振荡。没有采用，不等于没有新能力。",
+      "boundary": "只能说在当前证据、算子、预算和评测精度下未发现可靠增益；不能由40轮曲线平坦推出全局收敛、模型能力上限或环境不可解。",
+      "implication": "先识别平台期类型，再决定补证据、换机制、改选择还是停止；停止应针对当前搜索条件。",
+      "code_modules": [
+        "observe",
+        "propose",
+        "select",
+        "learn"
+      ]
+    }
+  ],
+  "convergence_signals": [
+    {
+      "id": "gain",
+      "signal": "独立开发收益的边际变化",
+      "measuring": "按预先声明的窗口记录开发验证净增益、重复波动和单位评测预算收益；训练与验证分开。",
+      "interpretation": "收益持续小于可分辨波动，说明当前搜索的新增价值下降。",
+      "failurecase": "训练冠军不动可能只是采用门槛；少量任务得分离散，零增益不能证明没进步。"
+    },
+    {
+      "id": "repair",
+      "signal": "目标修复与回归抵消",
+      "measuring": "同任务父子比较：目标失败→成功、成功→失败、净变化；计划内与意外收益分列。",
+      "interpretation": "目标仍能修复但总分不涨，可能卡在副作用或选择；目标也修不好，可能卡在诊断或可改空间。",
+      "failurecase": "普通同task/trial/seed配对仍有模型随机差异，不能将全部变化因果归于某插件。"
+    },
+    {
+      "id": "novelty",
+      "signal": "候选机制和行为新颖性",
+      "measuring": "记录修改算子、适用条件和动作序列变化；比较是否反复提出相同无效机制。",
+      "interpretation": "新颖性下降且旧问题持续，提示搜索同质化或记忆未生效。",
+      "failurecase": "改动大或新颖不代表更好；很多有效更新是删除或收缩。"
+    },
+    {
+      "id": "coverage",
+      "signal": "有效干预覆盖",
+      "measuring": "新插件在目标任务上加载、进入实际请求／控制、改变后续动作的比例；三层分别计。",
+      "interpretation": "大量目标未触发，优先改输入、触发条件或可观察状态；触发充分仍失败，再查修复机制。",
+      "failurecase": "触发数量不是收益；未触发的测试任务仍可能被其它上下文变化影响。"
+    },
+    {
+      "id": "survival",
+      "signal": "早期失败的剩余比例与反复出现",
+      "measuring": "冻结早期失败任务集合F0，按检查点跟踪未修复、暂时修复后复发、稳定修复；另记新回归任务。",
+      "interpretation": "区分旧问题真正被解决、失败换到另一阶段、以及总体分数抵消。",
+      "failurecase": "只跟踪幸存失败会改变样本分母；新症状不一定是新根因。"
+    },
+    {
+      "id": "stage",
+      "signal": "阶段到达率与条件失败率",
+      "measuring": "按实际动作/回执记录到达某阶段的比例，及到达后失败比例；同步看同任务迁移。",
+      "interpretation": "前段修好后更多任务暴露后段问题，后段失败数上升未必是退化。",
+      "failurecase": "当前部分阶段用动作规则识别，未观测不等于零失败；不能假装读到不可见内部推理。"
+    },
+    {
+      "id": "calibration",
+      "signal": "诊断和事前预测是否更准确",
+      "measuring": "对执行前封存的预测核对后果、置信度和反例；无匹配结果记缺失。",
+      "interpretation": "预测持续失准提示错误机制理解；校准提高但得分不涨则可能是表达/搜索/选择瓶颈。",
+      "failurecase": "概率预测准确不等于文字机制得到因果证实；事后重写预测不可用。"
+    },
+    {
+      "id": "resource",
+      "signal": "资源或服务阻塞",
+      "measuring": "检查真实有效场次、最后决定、错误原因和耗时，而不仅是进程/服务状态。",
+      "interpretation": "没有有效新评测时是执行停滞，不能称研究收敛。",
+      "failurecase": "配置并发数、在线进程或耗尽额度后的重试不能充当进化进度。"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "A",
+      "title": "泛化选择：先校准保留什么",
+      "title_en": "Generalization-aware selection",
+      "module": "select",
+      "status": "proposal_not_run",
+      "change": "保留当前固定训练集与候选生成方式，增加身份明确的独立开发验证；冠军由开发收益与必要回归检查决定。",
+      "unchanged": [
+        "父版起点、做题模型、优化器与修改空间",
+        "固定训练任务，不增加为轮换大池",
+        "同一候选池的离线选版比较作为第一步"
+      ],
+      "steps": [
+        "先冻结相同候选池，比较训练最佳与开发验证选择；这一步不让选择反馈改变后续候选。",
+        "若离线诊断有价值，再做两条完整搜索；在线父版分化是方法效果的一部分，不能继续叫同候选池。",
+        "预先明确验证来源、总评测预算、停止原则，最终测试仅在选定后使用。"
+      ],
+      "expectation": "降低训练增益很大但开发能力不升的采用；可能牺牲一部分训练最高分，换取更稳的保留。",
+      "observable_success": [
+        "相同候选池中，开发选择更少选中回归版本",
+        "新确认任务上的H0相对增益更稳定",
+        "相同预算下训练—确认差距不再随轮数扩大"
+      ],
+      "refutation": "开发选择并未改善确认结果，或验证误差太大使选择不稳定；说明问题可能主要在覆盖/候选，而非仅选版。",
+      "cost": "新增验证场次必须单列并计入总预算；验证集也会因反复查询过拟合，必要时采用预先规定的分层或轮换验证机制，不能用test调它。",
+      "implementation": [
+        "复用Project.evaluate及L1/L5验证记录",
+        "增加显式selector，不重写运行器",
+        "固定候选池对照与在线搜索结果分开"
+      ],
+      "followup": "不与经验、Archive或生成器改动同时开启。",
+      "code_github": [
+        "evolution/src/dsh_evolve/loops/l123.py",
+        "evolution/src/dsh_evolve/loops/l45.py"
+      ]
+    },
+    {
+      "id": "B",
+      "title": "机制对照生成：让同一问题有不同修法",
+      "title_en": "Mechanism-contrast proposals",
+      "module": "propose",
+      "status": "proposal_not_run",
+      "change": "把同一证据上的提案与实现分开；在固定总预算内比较提示/知识修复与状态/动作/恢复修复。",
+      "unchanged": [
+        "同一父版、证据包和可见信息",
+        "相同目标任务、模型权限与选择器",
+        "两种修法的总优化与评测预算对齐"
+      ],
+      "steps": [
+        "先写短机制提案：触发条件、预期动作、成功路径保护及不适用范围。",
+        "同一知识分别实现两种可区分机制；不能给代码臂额外答案或隐藏状态。",
+        "按实际行为差异确认候选确实不同；比较目标修复、跨表述覆盖与误伤。"
+      ],
+      "expectation": "减少只改措辞的重复候选，识别哪些失败需要运行时状态/控制；不假设代码一律优于提示。",
+      "observable_success": [
+        "相同证据下产生实际不同的行为机制",
+        "目标修复能迁移到同机制的新任务表述",
+        "单位总预算的开发净收益高于自由单候选"
+      ],
+      "refutation": "不同表示行为相同，或控制候选误伤抵消收益；说明机械化不适用或证据/机制仍错。",
+      "cost": "两候选不自动获得两倍预算；可在相同总候选预算内分配候选方向，额外比较成本透明。",
+      "implementation": [
+        "保留prepare作为父版工作区",
+        "新增propose与implement逻辑边界，仍可一个优化会话",
+        "记录编辑算子和作用范围，不要求增加模型服务"
+      ],
+      "followup": "证据包先冻结；若同时更换证据采样，将无法区分上游和生成器收益。",
+      "code_github": [
+        "evolution/src/dsh_evolve/keeper.py",
+        "evolution/src/dsh_evolve/loops/l6.py"
+      ]
+    },
+    {
+      "id": "C",
+      "title": "校准经验：让结果真正改变下一轮",
+      "title_en": "Evidence-calibrated experience",
+      "module": "learn",
+      "status": "proposal_not_run",
+      "change": "保留现有生成与选择规则，将经验从“采用后的成功叙述”改为带条件、反例和失效状态的短更新记录。",
+      "unchanged": [
+        "相同起始父版、任务、生成器和选择规则；在线后续父版可随结果自然分化",
+        "同样的经验长度及学习调用预算",
+        "主对照仍是单链，不同时加入Archive"
+      ],
+      "steps": [
+        "从实际配对结果写清：预期是否发生、目标是否修复、是否误伤、哪些仍未知。",
+        "后续提案明确继承/拒绝哪条经验及其条件；反例可撤销或收缩经验。",
+        "比较普通总结与校准经验的下一轮行为、无效重复和开发收益。"
+      ],
+      "expectation": "减少把偶然总分上涨当成正确原因，降低重复无效修复；经验更短但更可用。",
+      "observable_success": [
+        "经验确实改变后续机制选择或适用范围",
+        "重复无效提案减少，目标修复或回归控制改善",
+        "在相同学习成本下提高开发净收益"
+      ],
+      "refutation": "经验虽然被引用，却没有改变候选或效果；或者条件记录过细，只记住个别任务。",
+      "cost": "复用已有轨迹与配对统计；新增学习调用按同预算比较，不把归因正确性委托给更多未经验证的模型。",
+      "implementation": [
+        "复用L8 learn与prediction_outcomes记录",
+        "经验状态为supported / contradicted / unresolved，按观察证据决定，不以adopt直接赋值",
+        "机制因果仍需要少量受控干预确认"
+      ],
+      "followup": "只有先发现“总分未胜但能力互补”的候选，才另开C2试验有限能力Archive；固定容量与预算，分开评估。",
+      "code_github": [
+        "evolution/src/dsh_evolve/loops/l789.py",
+        "evolution/extensions/feedback/prediction_outcomes.py"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "module": "observe",
+      "question": "早期问题到底修了多少？",
+      "answer": "固定早期失败集合F0，保留相同任务身份；逐版报告稳定修复、复发、未修复。另列新回归，不能只看总失败数。"
+    },
+    {
+      "module": "observe",
+      "question": "剩下的失败是什么？",
+      "answer": "把剩余失败分成未充分观察、归因不确定、未触发、触发但修复无效、已修复但误伤、超出当前修改面；这些是待证据核对的诊断，不直接等同模型能力上限。"
+    },
+    {
+      "module": "propose",
+      "question": "什么迹象说明应该换搜索方向？",
+      "answer": "代表证据充分但候选机制重复、目标长期不修复，提示更换算子或父版；不能仅因连续若干轮未采用就自动加复杂度。"
+    },
+    {
+      "module": "select",
+      "question": "什么时候可以停止？",
+      "answer": "在预先声明预算内，多个信号共同显示当前算子没有可分辨增益，且少量预设探针也未发现方向时，可停止当前搜索。结论是本条件下平台期，不是全局收敛。"
+    },
+    {
+      "module": "learn",
+      "question": "Archive是否现在就要上？",
+      "answer": "先检查拒绝候选是否存在可验证互补能力。没有互补对象时，加容量只会储存更多相似失败；有对象后才单独验证选择与组合机制。"
+    }
+  ],
+  "metric_definitions": {
+    "early_failure_resolution": "冻结早期失败集合F0；分子为在指定检查点达到预先定义成功标准的F0任务，分母始终为F0。普通一次成功与多次稳定成功分列。",
+    "regression": "同任务父版成功、候选失败的观测；随机运行下不是自动成立的组件因果标签。",
+    "stage_failure": "同时报告阶段到达率与到达后失败率，避免把更多任务走到后段误判成后段退化。",
+    "plateau": "在既定任务、信息、编辑算子、选择规则和预算下，未发现可分辨的新开发收益。",
+    "gap_decomposition": "Harness训练测试差距 = H0固有差距 + 优化带来的训练增益 - 优化带来的测试增益。该恒等分解不自动给出因果。"
+  },
+  "reproduction_scope": {
+    "github": "公共evolution入口覆盖三场景L1–L9；ALFWorld、Telecom和反馈扩展的迁移边界见复现说明。",
+    "codeup": "内部dsh/保留共同实现，legacy/及dsh/history/保存更多历史源码。映射不是对所有历史协议行为等价的承诺。",
+    "proposals": "A/B/C均为待验证方案，本页不会启动实验，也不预填效果。"
+  },
+  "references": [
+    {
+      "id": "selection_overfit",
+      "title": "Cawley & Talbot: On Over-fitting in Model Selection",
+      "url": "https://www.jmlr.org/papers/v11/cawley10a.html",
+      "use": "Repeated selection can overfit a selection criterion; supports validation discipline, not a claim about the cause of our exact scores."
+    },
+    {
+      "id": "learned_optimizer",
+      "title": "Andrychowicz et al.: Learning to learn by gradient descent by gradient descent",
+      "url": "https://arxiv.org/abs/1606.04474",
+      "use": "Optimization rules can themselves be learned. This motivates the analogy; our current textual experience is not that algorithm."
+    }
+  ]
+}

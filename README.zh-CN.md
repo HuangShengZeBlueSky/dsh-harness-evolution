@@ -8,6 +8,8 @@
 
 [**交互式摘要与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)
 
+[**架构与学习工作台**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html)
+
 ## 五场景产物
 
 | 场景 | 最佳已发布最终版 | 已发布回溯高点 | Life-Harness v3参考 |
