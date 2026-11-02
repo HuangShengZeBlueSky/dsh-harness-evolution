@@ -98,7 +98,7 @@ def plot(a,r,reference):
  selected=selected_point['round']
  axes[1].scatter([selected],[r['metrics']['pass_at_1']*100],marker='*',s=170,color='#0d876f',edgecolor='white',zorder=4,label='Published retrospective checkpoint' if r.get('selection_kind')=='retrospective_adopted' else 'Training-selected final checkpoint')
  axes[1].annotate(f"{r['checkpoint']} · {pct(r['metrics']['pass_at_1'])}",(selected,r['metrics']['pass_at_1']*100),xytext=(6,10),textcoords='offset points',fontsize=9,color='#0d7563')
- axes[1].axhline(reference[1]*100,linestyle='--',color='#8c96a8',linewidth=1,label=f'Highest paper value: {reference[0]} (reference)')
+ axes[1].axhline(reference[1]*100,linestyle='--',color='#8c96a8',linewidth=1,label=f'{reference[0]}: {reference[1]*100:.2f}% (paper reference)')
  # Each panel uses its own observed range; test scores never share a scale
  # with development scores. Keep ticks explicit because the origin is cropped.
  for ax,values in [(axes[0],[p[k]*100 for p in points for k,_,_ in series if p.get(k) is not None]),

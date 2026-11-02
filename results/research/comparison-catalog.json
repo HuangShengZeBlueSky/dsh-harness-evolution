@@ -27,9 +27,9 @@
         "webshop"
       ],
       "surface": "environment interface",
-      "status": "awaiting_native_adapter",
-      "reason_zh": "已核实原论文与代码，需将已释放接口接入固定题单；论文转引成绩不冒充本地复测。",
-      "reason_en": "Official paper/code verified; released interfaces require a fixed-task native adapter."
+      "status": "native_three_repeats_running",
+      "reason_zh": "公开ReAct接口已接入共同工具调用环境；ALFWorld109题×3、WebShop200题×3已启动。不是原作者表格数字的直接复写。",
+      "reason_en": "Released ReAct interfaces run in the shared tool-call runtime: ALFWorld109×3 and WebShop200×3. These are new adapted measurements."
     },
     {
       "name": "AgentSquare",
