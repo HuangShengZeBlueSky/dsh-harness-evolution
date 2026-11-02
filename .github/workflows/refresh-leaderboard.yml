@@ -39,6 +39,7 @@ jobs:
           git add README*.md LEADERBOARD*.md docs results/leaderboard.json results/research/observatory.json harnesses assets site
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh published methods, leaderboard and curves'
+            git pull --rebase origin main
             git push
           fi
       - uses: actions/configure-pages@v5
