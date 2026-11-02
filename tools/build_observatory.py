@@ -32,9 +32,11 @@ def build(root):
                 val = z.get('strict_test') if r['benchmark'] == 'webshop' else z.get('test')
                 if val is not None:
                     t = {'strict_pass_at_1': val, 'kind': 'retrospective_checkpoint', 'complete': True}
+            kept=(p.get('training') if p.get('adopted') else p.get('parent_training')) or {}
             pts.append({'round': p['round'], 'version': p['version'], 'parent': p.get('parent'),
-                        'adopted': p.get('adopted'), 'train': (p.get('training') or {}).get('mean'),
-                        'train_strict': p.get('training_strict'),
+                        'adopted': p.get('adopted'), 'train': kept.get('mean'),
+                        'candidate_train': (p.get('training') or {}).get('mean'),
+                        'train_strict': p.get('training_strict') if p.get('adopted') else kept.get('strict_pass_at_1'),
                         'reward': (p.get('training') or {}).get('mean'),
                         'validation': p.get('validation_strict') if p.get('validation_strict') is not None else p.get('validation'),
                         'batch': p.get('batch'), 'test': t.get('strict_pass_at_1'),

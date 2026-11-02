@@ -676,6 +676,94 @@
       "comparable": false,
       "reason_zh": "区分过拟合、推理开销扩大与可泛化收益；ALFWorld模型、任务划分不同，不并入主榜。其模型缩放主要改变做题模型，我们的对照改变优化模型。",
       "reason_en": "Separates overfitting, test-time scaling and generalizable gains. Different ALFWorld actors/splits; excluded from the main board. Its scaling changes executors, whereas our optimizer comparison changes improvers."
+    },
+    {
+      "name": "OPRO",
+      "url": "https://arxiv.org/abs/2309.03409",
+      "surface": "opro",
+      "comparable": false,
+      "reason_zh": "提示的黑盒优化；用已有解与成绩形成下一步候选。",
+      "reason_en": "Black-box prompt optimization using previous solutions and scores."
+    },
+    {
+      "name": "TextGrad",
+      "url": "https://arxiv.org/abs/2406.07496",
+      "surface": "textgrad",
+      "comparable": false,
+      "reason_zh": "通过文本反馈优化复合系统变量，可包含代码；反馈图提供优化组织。",
+      "reason_en": "Textual feedback over compound-system variables, including code."
+    },
+    {
+      "name": "ACE",
+      "url": "https://arxiv.org/abs/2510.04618",
+      "surface": "ace",
+      "comparable": false,
+      "reason_zh": "以生成、反思、整理维护增量经验上下文。",
+      "reason_en": "Incrementally maintained strategy contexts through generation, reflection and curation."
+    },
+    {
+      "name": "ADAS",
+      "url": "https://arxiv.org/abs/2408.08435",
+      "surface": "adas",
+      "comparable": false,
+      "reason_zh": "代码空间中的Agent设计与搜索。",
+      "reason_en": "Agent design and search in code space."
+    },
+    {
+      "name": "AFlow",
+      "url": "https://arxiv.org/abs/2410.10762",
+      "surface": "aflow",
+      "comparable": false,
+      "reason_zh": "工作流节点、算子与连接的搜索。",
+      "reason_en": "Search over workflow operators and connections."
+    },
+    {
+      "name": "AutoHarness",
+      "url": "https://arxiv.org/abs/2603.03329",
+      "surface": "autoharness",
+      "comparable": false,
+      "reason_zh": "合成游戏动作约束或代码策略；任务范围与本榜不同。",
+      "reason_en": "Synthesized game-action constraints and code policies; different benchmark scope."
+    },
+    {
+      "name": "HARBOR",
+      "url": "https://arxiv.org/abs/2604.20938",
+      "surface": "harbor",
+      "comparable": false,
+      "reason_zh": "给定Harness配置空间中的成本感知搜索。",
+      "reason_en": "Cost-aware optimization over a given harness configuration space."
+    },
+    {
+      "name": "Self-Harness",
+      "url": "https://arxiv.org/abs/2606.09498",
+      "surface": "selfharness",
+      "comparable": false,
+      "reason_zh": "执行Agent自修改运行框架；更新主体与外部优化器不同。",
+      "reason_en": "Agents editing their own runtime harness; a different adaptation actor."
+    },
+    {
+      "name": "Continual Harness",
+      "url": "https://arxiv.org/abs/2605.09998",
+      "surface": "continual",
+      "comparable": false,
+      "reason_zh": "持续交互中的在线提示、技能、记忆更新。",
+      "reason_en": "Online prompt, skill and memory updates during continuous interaction."
+    },
+    {
+      "name": "HarnessOpt-Bench",
+      "url": "https://arxiv.org/abs/2608.06301",
+      "surface": "optbench",
+      "comparable": false,
+      "reason_zh": "将优化模型、起点与固定评测预算纳入统一比较。",
+      "reason_en": "Common study of optimizers, seed harnesses and evaluation budgets."
+    },
+    {
+      "name": "SkillFM",
+      "url": "https://arxiv.org/abs/2609.39382",
+      "surface": "skillfm",
+      "comparable": false,
+      "reason_zh": "任务条件化技能生成；主榜保留其原文划分标记。",
+      "reason_en": "Task-conditioned skill generation; original split identified in the board."
     }
   ]
 }

@@ -56,6 +56,7 @@ def validate(r,artifact_dir=None):
 
 def plot(a,r,reference):
  points=json.loads((a/'curve.json').read_text())['points']
+ run={}
  raw=ROOT/'results/research/runs.json'
  if raw.exists():
   run=next((x for x in json.loads(raw.read_text())['runs'] if x['id']==r['source_experiment']),{})
@@ -74,7 +75,13 @@ def plot(a,r,reference):
   ax.set_facecolor('white');ax.spines[['top','right']].set_visible(False)
   ax.spines[['left','bottom']].set_color('#ced6e0');ax.grid(axis='y',color='#edf0f5')
  strict=r['benchmark']=='webshop' and all('training_strict' in p for p in points)
- series=[('training_strict','Candidate train (strict)','#bf7a24'),('champion_validation_strict','Selected validation (strict)','#3861d8')] if strict else [('after','Candidate train','#bf7a24'),('champion_validation','Selected validation','#3861d8')]
+ native={version_id(x['version']):x for x in run.get('curve',[])}
+ for p in points:
+  q=native.get(version_id(p['version']),{})
+  if q and q.get('adopted') is False:
+   parent=q.get('parent_training') or {}
+   p['after']=parent.get('mean');p['training_strict']=parent.get('strict_pass_at_1')
+ series=[('training_strict','Retained train (strict)','#bf7a24'),('champion_validation_strict','Selected validation (strict)','#3861d8')] if strict else [('after','Retained train','#bf7a24'),('champion_validation','Selected validation','#3861d8')]
  for key,label,color in series:
   valid=[p for p in points if p.get(key) is not None]
   if valid:axes[0].plot([p['round'] for p in valid],[p[key]*100 for p in valid],'.-',label=label,color=color,linewidth=1.6,markersize=4)

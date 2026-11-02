@@ -4,12 +4,13 @@
   "paper_version": "2605.22166v3",
   "checked_on": "2026-11-02",
   "actor": "Qwen3-4B-Instruct",
-  "provenance": "Other-method results are as reported by the Life-Harness authors; these are not our reruns or necessarily the original method authors' scores.",
+  "provenance": "Life-Harness comparison rows follow its v3 report. SkillFM* follows its original paper and task split. Per-method source identities are retained; these literature rows are separate from local evaluations.",
   "protocol_notes": [
     "Meta-Harness, AHE and Life-Harness use six evolution rounds and the same training batches within the paper, with GPT-5.5 as evolution model. Our campaign budgets and optimizers differ.",
     "ALIGN and AgentSquare are released final harness evaluations on ALFWorld and WebShop. ALIGN uses its released task split; AgentSquare uses the Life-Harness task selection.",
     "Paper AgentBench uses one evaluation per task. Our released scores average three. Telecom simulator/access/auxiliary-call conditions differ.",
-    "Table 1 values and evolution-token totals are rounded; Table 10/11 values retain their published precision. Null means not reported here, never zero."
+    "Table 1 values and evolution-token totals are rounded; Table 10/11 values retain their published precision. Null means not reported here, never zero.",
+    "SkillFM* uses its original task split and auxiliary skill generator; a same-executor literature reference with distinct data and compute. Source: https://arxiv.org/html/2609.39382"
   ],
   "methods": [
     {
@@ -170,6 +171,29 @@
         "webshop": 37750993,
         "telecom": 42638396
       }
+    },
+    {
+      "id": "skillfm",
+      "label": "SkillFM*",
+      "description_en": "Task-conditioned skill generation; original paper split and auxiliary generator.",
+      "description_zh": "任务条件化技能生成；采用原论文划分及辅助生成模型。",
+      "table": "SkillFM main results / Table 1",
+      "source_url": "https://arxiv.org/html/2609.39382",
+      "pass_at_1": {
+        "alfworld": 0.7701,
+        "dbbench": null,
+        "webshop": 0.146,
+        "osbench": null,
+        "telecom": null
+      },
+      "evolution_tokens": {
+        "alfworld": null,
+        "dbbench": null,
+        "webshop": null,
+        "osbench": null,
+        "telecom": null
+      },
+      "comparison_role": "same_executor_original_task_split"
     }
   ]
 }

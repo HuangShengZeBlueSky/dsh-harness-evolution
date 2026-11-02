@@ -35,7 +35,7 @@ def overview(root,winners,catalog,zh=False):
  text(52,96,'五个场景，多方法对照，可直接使用的插件产物' if zh else 'Five benchmarks. A broader method comparison.',color='white',fontsize=24,fontweight='bold')
  text(52,132,'同一做题模型系列：Qwen3-4B  ·  指标：成功率  ·  论文报告与我们的实测分别标注' if zh else 'Qwen3-4B actor family  ·  Success rate  ·  Paper-reported references and our measured artifacts',color='#b8c7dc',fontsize=11)
  text(1390,56,('发布：' if zh else 'PUBLISHED  ')+max(r['published_on'] for r in winners.values()),color='#b8c7dc',fontsize=10,ha='right')
- xs=[380,545,710,875,1040,1205,1365];labels=['裸模型' if zh else 'Bare','ALIGN','AgentSquare','Meta-Harness','AHE','Life-Harness','我们' if zh else 'Ours']
+ labels=[('裸模型' if zh else 'Bare') if m['id']=='bare' else m['label'].replace(' / 裸模型','') for m in catalog['methods']]+['我们' if zh else 'Ours'];xs=[380+i*(1365-380)/(len(labels)-1) for i in range(len(labels))]
  text(52,188,'产物 / 检查点' if zh else 'ARTIFACT / CHECKPOINT',fontsize=11,color='#69778c',fontweight='bold')
  for x,label in zip(xs,labels):
   text(x,181,label,ha='center',fontsize=11,color='#0c7968' if label==labels[-1] else '#344967',fontweight='bold')
@@ -48,12 +48,12 @@ def overview(root,winners,catalog,zh=False):
   text(52,y+51,f"{r['checkpoint']} · {release_label(r,zh)}",fontsize=10,color='#66768b')
   values=[m['pass_at_1'][d] for m in catalog['methods']]+[r['metrics']['pass_at_1']]
   for j,(x,value) in enumerate(zip(xs,values)):
-   text(x,y+34,'—' if value is None else f'{value*100:.2f}',ha='center',fontsize=19 if j==6 else 16,fontweight='bold' if j==6 else 'normal',color='#0c7968' if j==6 else '#a3acb9' if value is None else '#344967')
+   text(x,y+34,'—' if value is None else f'{value*100:.2f}',ha='center',fontsize=19 if j==len(labels)-1 else 16,fontweight='bold' if j==len(labels)-1 else 'normal',color='#0c7968' if j==len(labels)-1 else '#a3acb9' if value is None else '#344967')
    if d=='telecom' and j==5:
     old=history.data(root)[0]['metrics']['pass_at_1']
     text(x,y+58,f'v1/v2: {old*100:.2f}',ha='center',fontsize=8,color='#66768b')
  text(52,639,'数值单位：%  ·  — 表示论文未报告该场景  ·  每个产物均附源码、框图和进化曲线' if zh else 'All values in %  ·  — = not reported for this setting  ·  Source, architecture and evolution curve included',fontsize=10,color='#53657b')
- text(52,671,'对照来源：Life-Harness 论文表 1、10、11；其作者报告的其他方法结果，并非我们的复测。' if zh else 'References: Life-Harness Tables 1, 10 and 11. Other-method results are reported by that paper, not rerun by us.',fontsize=9,color='#778498')
+ text(52,671,'对照来源：Life-Harness 表 1、10、11；SkillFM*采用原论文划分。论文报告与本地复测分列。' if zh else 'References: Life-Harness Tables 1, 10, 11; SkillFM* uses its original split. Paper and local measurements are separate.',fontsize=9,color='#778498')
  text(52,699,'轮数、优化模型、测试重复次数存在差异；ALIGN 划分不同；Telecom 用户模拟器及运行接口不同。' if zh else 'Evolution budgets and trials differ. ALIGN uses its own split. Telecom simulator and runtime-access protocols differ.',fontsize=9,color='#778498')
  fig.savefig(root/'assets'/('leaderboard.zh-CN.png' if zh else 'leaderboard.png'),dpi=160,facecolor=fig.get_facecolor());plt.close(fig)
 
