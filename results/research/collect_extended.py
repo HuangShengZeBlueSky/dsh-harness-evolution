@@ -281,9 +281,11 @@ state = read(D / 'promoted-checkpoint-tests-20261102/state.json')
 if state:
     public_queue = read(OUT / 'checkpoint-test-queue.json')
     public_queue['execution'] = {k: state.get(k) for k in ['updated_at', 'counts', 'done_test_episodes', 'planned_test_episodes']}
-    counts = dict(public_queue['execution'].get('counts') or {})
-    if 'awaiting_scope' in counts: counts['not_selected_for_backfill'] = counts.pop('awaiting_scope')
+    counts = dict(Counter('not_selected_for_backfill' if x.get('priority', 1) > 0 and x['state'] != 'complete' else x['state'] for x in state.get('jobs', [])))
+    if 'awaiting_scope' in counts: counts['not_selected_for_backfill'] = counts.get('not_selected_for_backfill', 0) + counts.pop('awaiting_scope')
     public_queue['execution']['counts'] = counts
+    public_queue['execution']['planned_highpoint_episodes'] = sum(x['expected'] for x in state.get('jobs', []) if x.get('priority', 1) <= 0)
+    public_queue['execution']['completed_highpoint_episodes'] = sum(x['expected'] for x in state.get('jobs', []) if x.get('priority', 1) <= 0 and x['state'] == 'complete')
     public_queue['policy'] = 'High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.'
     save(OUT / 'checkpoint-test-queue.json', public_queue)
 save(OUT / 'collection.json', {'collected_at': now, 'groups': len(groups), 'errors': errors,
