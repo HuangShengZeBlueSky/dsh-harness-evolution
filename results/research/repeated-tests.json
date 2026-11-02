@@ -1,5 +1,5 @@
 {
-  "updated_at": 1793614997.4341755,
+  "updated_at": 1793618749.378394,
   "definition": "Each repeat evaluates the same frozen harness on the complete fixed test set. \u00b1 is sample standard deviation across 3 repeat success rates (ddof=1); sample variance also stored. Not 3 independent searches.",
   "results": [
     {
@@ -229,15 +229,19 @@
       "artifact_identity": "unmodified official interface_react.py; shared tool-call runtime adapter"
     },
     {
-      "complete": false,
+      "complete": true,
       "task_count": 109,
-      "repeats": 0,
-      "valid_episodes": 35,
-      "repeat_rates": {},
-      "mean": null,
-      "sample_std": null,
-      "sample_variance": null,
-      "population_std": null,
+      "repeats": 3,
+      "valid_episodes": 327,
+      "repeat_rates": {
+        "0": 0.027522935779816515,
+        "1": 0.027522935779816515,
+        "2": 0.045871559633027525
+      },
+      "mean": 0.033639143730886854,
+      "sample_std": 0.010593582920910566,
+      "sample_variance": 0.00011222399910220802,
+      "population_std": 0.008649624234697829,
       "method": "ALIGN released ReAct interface",
       "benchmark": "alfworld",
       "source": "paper-comparisons-3x-20261102/align-alfworld/episodes.jsonl",
