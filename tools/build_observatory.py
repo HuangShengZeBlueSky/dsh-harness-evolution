@@ -106,8 +106,10 @@ def build(root):
         if match:
             a['optimizer_usage'] = match.get('tokens')
             a['rounds'] = match.get('rounds')
+    from master_comparison import write as write_master
+    master=write_master(root)
     data = {'updated_at': raw['collected_at'], 'groups': groups, 'methods': methods,
-            'artifacts': artifacts, 'board': board,
+            'artifacts': artifacts, 'board': board, 'master_comparison': master,
             'papers': read(root / 'results/paper-baselines.json'),
             'paper_evolution': read(root / 'results/research/paper-evolution.json'),
             'telecom_history': read(root / 'results/life-harness-telecom-history.json'),
