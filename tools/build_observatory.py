@@ -112,7 +112,7 @@ def build(root):
             'paper_evolution': read(root / 'results/research/paper-evolution.json'),
             'telecom_history': read(root / 'results/life-harness-telecom-history.json'),
             'local_references': read(root / 'results/local-references.json'), 'queue': queue}
-    for key, filename in [('repeated_tests','repeated-tests.json'),('comparison_catalog','comparison-catalog.json'),('competitor_evaluations','competitor-evaluations.json')]:
+    for key, filename in [('repeated_tests','repeated-tests.json'),('comparison_catalog','comparison-catalog.json'),('competitor_evaluations','competitor-evaluations.json'),('expanded_competitor_evaluations','expanded-competitor-evaluations.json')]:
         p=root/'results/research'/filename
         data[key]=read(p) if p.exists() else {}
     site = root / 'site'

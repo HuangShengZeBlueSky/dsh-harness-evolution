@@ -2327,6 +2327,1039 @@
           "inspection": "reference_list_discovery"
         }
       ]
+    },
+    {
+      "key": "harness-r1",
+      "url": "https://arxiv.org/html/2608.02276",
+      "citations": [
+        {
+          "citation": "Agrawal et al. (2026) L. A. Agrawal, S. Tan, D. Soylu, N. Ziems, R. Khare, K. Opsahl-Ong, A. Singhvi, H. Shandilya, M. J. Ryan, M. Jiang, C. Potts, K. Sen, A. G. Dimakis, I. Stoica, D. Klein, M. Zaharia, and O. Khattab GEPA: reflective prompt evolution can outperform reinforcement learning . External Links: 2507.19457 , Link",
+          "arxiv_ids": [
+            "2507.19457"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2507.19457"
+          ],
+          "known_entries": [
+            "gepa"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Chen et al. (2026a) M. Chen, J. Wang, Z. Liu, Y. Wang, H. Zheng, and Q. Wang From failed trajectories to reliable llm agents: diagnosing and repairing harness flaws . External Links: 2606.06324 , Link",
+          "arxiv_ids": [
+            "2606.06324"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2606.06324"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Chen et al. (2026b) T. Chen, S. Lu, K. Zhao, W. Meng, H. Teng, T. Li, C. Li, X. Liu, J. Liang, Z. Zhang, Y. Xie, H. Qu, K. Shao, and J. Luan HarnessX: a composable, adaptive, and evolvable agent harness foundry . External Links: 2606.14249 , Link",
+          "arxiv_ids": [
+            "2606.14249"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2606.14249"
+          ],
+          "known_entries": [
+            "harnessx"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Chen et al. (2026c) X. Chen, C. Xu, Y. Wang, B. Liu, Z. Yao, and Y. He Learning to self-evolve . External Links: 2603.18620 , Link",
+          "arxiv_ids": [
+            "2603.18620"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2603.18620"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "DeepSeek-AI et al. (2026) DeepSeek-AI et al. DeepSeek-v4: towards highly efficient million-token context intelligence . External Links: 2606.19348 , Link",
+          "arxiv_ids": [
+            "2606.19348"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2606.19348"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Fernando et al. (2023) C. Fernando, D. Banarse, H. Michalewski, S. Osindero, and T. Rocktäschel Promptbreeder: self-referential self-improvement via prompt evolution . External Links: 2309.16797 , Link",
+          "arxiv_ids": [
+            "2309.16797"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2309.16797"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Gao et al. (2026) H. Gao et al. A survey of self-evolving agents: what, when, how, and where to evolve on the path to artificial super intelligence . Transactions on Machine Learning Research . External Links: 2507.21046 , Document , Link",
+          "arxiv_ids": [
+            "2507.21046"
+          ],
+          "urls": [
+            "https://dx.doi.org/10.48550/arXiv.2507.21046",
+            "https://arxiv.org/abs/2507.21046"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Google DeepMind (2026) Google DeepMind Gemini 3.5 Flash: model card . Note: https://deepmind.google/models/model-cards/gemini-3-5-flash/ Accessed: 2026-07-28",
+          "arxiv_ids": [],
+          "urls": [
+            "https://deepmind.google/models/model-cards/gemini-3-5-flash/"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Guo et al. (2025) Q. Guo, R. Wang, J. Guo, B. Li, K. Song, X. Tan, G. Liu, J. Bian, and Y. Yang EvoPrompt: connecting llms with evolutionary algorithms yields powerful prompt optimizers . External Links: 2309.08532 , Link",
+          "arxiv_ids": [
+            "2309.08532"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2309.08532"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Karten et al. (2026) S. Karten, J. Zhang, T. U. Jr, R. Feng, W. Li, C. Shi, C. Jin, and K. Vodrahalli Continual harness: online adaptation for self-improving foundation agents . External Links: 2605.09998 , Link",
+          "arxiv_ids": [
+            "2605.09998"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2605.09998"
+          ],
+          "known_entries": [
+            "continual"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Khattab et al. (2023) O. Khattab, A. Singhvi, P. Maheshwari, Z. Zhang, K. Santhanam, S. Vardhamanan, S. Haq, A. Sharma, T. T. Joshi, H. Moazam, H. Miller, M. Zaharia, and C. Potts DSPy: compiling declarative language model calls into self-improving pipelines . External Links: 2310.03714 , Link",
+          "arxiv_ids": [
+            "2310.03714"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2310.03714"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Lee et al. (2026) Y. Lee, R. Nair, Q. Zhang, K. Lee, O. Khattab, and C. Finn Meta-harness: end-to-end optimization of model harnesses . External Links: 2603.28052 , Link",
+          "arxiv_ids": [
+            "2603.28052"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2603.28052"
+          ],
+          "known_entries": [
+            "meta"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Li et al. (2026a) X. Li, W. Jiao, J. Jin, G. Dong, J. Jin, Y. Wang, H. Wang, Y. Zhu, J. Wen, Y. Lu, and Z. Dou DeepAgent: a general reasoning agent with scalable toolsets . External Links: 2510.21618 , Link",
+          "arxiv_ids": [
+            "2510.21618"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2510.21618"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Li et al. (2026b) Y. Li, Y. Zhang, X. Zhang, X. Liu, and Y. Liu CODESKILL: learning self-evolving skills for coding agents . External Links: 2605.25430 , Link",
+          "arxiv_ids": [
+            "2605.25430"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2605.25430"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Li et al. (2024) Z. Li, S. Xu, K. Mei, W. Hua, B. Rama, O. Raheja, H. Wang, H. Zhu, and Y. Zhang AutoFlow: automated workflow generation for large language model agents . External Links: 2407.12821 , Link",
+          "arxiv_ids": [
+            "2407.12821"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2407.12821"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Liang et al. (2024) T. Liang, Z. He, W. Jiao, X. Wang, Y. Wang, R. Wang, Y. Yang, S. Shi, and Z. Tu Encouraging divergent thinking in large language models through multi-agent debate . External Links: 2305.19118 , Link",
+          "arxiv_ids": [
+            "2305.19118"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2305.19118"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Lin et al. (2026) J. Lin, S. Liu, C. Pan, L. Lin, S. Dou, Z. Xi, X. Huang, H. Yan, Z. Han, T. Gui, and Y. Jiang Agentic harness engineering: observability-driven automatic evolution of coding-agent harnesses . External Links: 2604.25850 , Link",
+          "arxiv_ids": [
+            "2604.25850"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2604.25850"
+          ],
+          "known_entries": [
+            "ahe"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Liu et al. (2025) X. Liu, H. Yu, H. Zhang, Y. Xu, X. Lei, H. Lai, Y. Gu, H. Ding, K. Men, K. Yang, S. Zhang, X. Deng, A. Zeng, Z. Du, C. Zhang, S. Shen, T. Zhang, Y. Su, H. Sun, M. Huang, Y. Dong, and J. Tang AgentBench: evaluating llms as agents . External Links: 2308.03688 , Link",
+          "arxiv_ids": [
+            "2308.03688"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2308.03688"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Lou et al. (2026) X. Lou, M. Lázaro-Gredilla, A. Dedieu, C. Wendelken, W. Lehrach, and K. P. Murphy AutoHarness: improving llm agents by automatically synthesizing a code harness . External Links: 2603.03329 , Link",
+          "arxiv_ids": [
+            "2603.03329"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2603.03329"
+          ],
+          "known_entries": [
+            "autoharness"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Lu et al. (2026) Z. Lu, Z. Yao, J. Wu, C. Han, Q. Gu, X. Cai, W. Lu, J. Xiao, Y. Zhuang, and Y. Shen SKILL0: in-context agentic reinforcement learning for skill internalization . External Links: 2604.02268 , Link",
+          "arxiv_ids": [
+            "2604.02268"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2604.02268"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Luo et al. (2026) H. Luo, Y. Huang, S. Luo, F. Liu, L. Li, Z. Hu, J. Feng, and Q. Liu Harness-aware self-evolving: co-evolving model weights, harness, and task solutions . External Links: 2607.03935 , Link",
+          "arxiv_ids": [
+            "2607.03935"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2607.03935"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Madaan et al. (2023) A. Madaan, N. Tandon, P. Gupta, S. Hallinan, L. Gao, S. Wiegreffe, U. Alon, N. Dziri, S. Prabhumoye, Y. Yang, S. Gupta, B. P. Majumder, K. Hermann, S. Welleck, A. Yazdanbakhsh, and P. Clark Self-refine: iterative refinement with self-feedback . External Links: 2303.17651 , Link",
+          "arxiv_ids": [
+            "2303.17651"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2303.17651"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Moonshot AI (2026) Moonshot AI Kimi K2.6: advancing open-source coding . Note: https://www.kimi.com/blog/kimi-k2-6 Accessed: 2026-07-28",
+          "arxiv_ids": [],
+          "urls": [
+            "https://www.kimi.com/blog/kimi-k2-6"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Nie et al. (2025) F. Nie, L. Feng, H. Ye, W. Liang, P. Lu, H. Yao, A. Alahi, and J. Zou Weak-for-strong: training weak meta-agent to harness strong executors . External Links: 2504.04785 , Link",
+          "arxiv_ids": [
+            "2504.04785"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2504.04785"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "OpenAI (2026) OpenAI Introducing GPT-5.5 . Note: https://openai.com/index/introducing-gpt-5-5/ Accessed: 2026-07-28",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openai.com/index/introducing-gpt-5-5/"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Opsahl-Ong et al. (2024) K. Opsahl-Ong, M. J. Ryan, J. Purtell, D. Broman, C. Potts, M. Zaharia, and O. Khattab Optimizing instructions and demonstrations for multi-stage language model programs . External Links: 2406.11695 , Link",
+          "arxiv_ids": [
+            "2406.11695"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2406.11695"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Pryzant et al. (2023) R. Pryzant, D. Iter, J. Li, Y. T. Lee, C. Zhu, and M. Zeng Automatic prompt optimization with ”gradient descent” and beam search . External Links: 2305.03495 , Link",
+          "arxiv_ids": [
+            "2305.03495"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2305.03495"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Qwen Team (2026) Qwen Team Qwen3.5: towards native multimodal agents . Note: https://qwen.ai/blog?id=qwen3.5 Accessed: 2026-07-28",
+          "arxiv_ids": [],
+          "urls": [
+            "https://qwen.ai/blog?id=qwen3.5"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Shao et al. (2024) Z. Shao, P. Wang, Q. Zhu, R. Xu, J. Song, X. Bi, H. Zhang, M. Zhang, Y. K. Li, Y. Wu, and D. Guo DeepSeekMath: pushing the limits of mathematical reasoning in open language models . External Links: 2402.03300 , Link",
+          "arxiv_ids": [
+            "2402.03300"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2402.03300"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Shi et al. (2026) Y. Shi, Y. Chen, Z. Lu, Y. Miao, S. Liu, Q. GU, X. Cai, X. Wang, and A. Zhang Skill1: unified evolution of skill-augmented agents via reinforcement learning . External Links: 2605.06130 , Link",
+          "arxiv_ids": [
+            "2605.06130"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2605.06130"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Shinn et al. (2023) N. Shinn, F. Cassano, E. Berman, A. Gopinath, K. Narasimhan, and S. Yao Reflexion: language agents with verbal reinforcement learning . External Links: 2303.11366 , Link",
+          "arxiv_ids": [
+            "2303.11366"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2303.11366"
+          ],
+          "known_entries": [
+            "reflexion"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Shridhar et al. (2021) M. Shridhar, X. Yuan, M. Côté, Y. Bisk, A. Trischler, and M. Hausknecht ALFWorld: aligning text and embodied environments for interactive learning . External Links: 2010.03768 , Link",
+          "arxiv_ids": [
+            "2010.03768"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2010.03768"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Vishe et al. (2026) Y. Vishe, R. Surana, X. Jiang, Z. Huang, X. Li, N. L. Kuang, T. Yu, R. A. Rossi, J. Shang, J. McAuley, and J. Wu Skill-r1: agent skill evolution via reinforcement learning . External Links: 2605.09359 , Link",
+          "arxiv_ids": [
+            "2605.09359"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2605.09359"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Wang et al. (2026) X. Wang, H. Wang, A. Taylor, J. Cong, Y. Sun, and W. Wang HarnessBridge: learnable bidirectional controller for llm agent harness . External Links: 2606.12882 , Link",
+          "arxiv_ids": [
+            "2606.12882"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2606.12882"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Wu et al. (2026) R. Wu, X. Wang, J. Mei, P. Cai, D. Fu, C. Yang, L. Wen, X. Yang, Y. Shen, Y. Wang, and B. Shi EvolveR: self-evolving LLM agents through an experience-driven lifecycle . In International Conference on Machine Learning , External Links: 2510.16079 , Document , Link",
+          "arxiv_ids": [
+            "2510.16079"
+          ],
+          "urls": [
+            "https://dx.doi.org/10.48550/arXiv.2510.16079",
+            "https://arxiv.org/abs/2510.16079"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Xia et al. (2026) P. Xia, J. Chen, H. Wang, J. Liu, K. Zeng, Y. Wang, S. Han, Y. Zhou, X. Zhao, H. Chen, Z. Zheng, C. Xie, and H. Yao SkillRL: evolving agents via recursive skill-augmented reinforcement learning . External Links: 2602.08234 , Link",
+          "arxiv_ids": [
+            "2602.08234"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2602.08234"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Xu et al. (2026) T. Xu, H. Wen, and M. Li Adapting the interface, not the model: runtime harness adaptation for deterministic llm agents . External Links: 2605.22166 , Link",
+          "arxiv_ids": [
+            "2605.22166"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2605.22166"
+          ],
+          "known_entries": [
+            "life"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yang et al. (2024) C. Yang, X. Wang, Y. Lu, H. Liu, Q. V. Le, D. Zhou, and X. Chen Large language models as optimizers . External Links: 2309.03409 , Link",
+          "arxiv_ids": [
+            "2309.03409"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2309.03409"
+          ],
+          "known_entries": [
+            "opro"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yao et al. (2023a) S. Yao, H. Chen, J. Yang, and K. Narasimhan WebShop: towards scalable real-world web interaction with grounded language agents . External Links: 2207.01206 , Link",
+          "arxiv_ids": [
+            "2207.01206"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2207.01206"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yao et al. (2023b) S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao ReAct: synergizing reasoning and acting in language models . External Links: 2210.03629 , Link",
+          "arxiv_ids": [
+            "2210.03629"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2210.03629"
+          ],
+          "known_entries": [
+            "react"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yi and Song (2026) H. Yi and X. Song Learning to control llm agent harnesses with offline reinforcement learning . External Links: 2607.05458 , Link",
+          "arxiv_ids": [
+            "2607.05458"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2607.05458"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yu et al. (2026) H. Yu, F. Zhu, G. Xie, and L. Shao Self-consolidation for self-evolving agents . External Links: 2602.01966 , Document , Link",
+          "arxiv_ids": [
+            "2602.01966"
+          ],
+          "urls": [
+            "https://dx.doi.org/10.48550/arXiv.2602.01966",
+            "https://arxiv.org/abs/2602.01966"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yuksekgonul et al. (2025) M. Yuksekgonul, F. Bianchi, J. Boen, S. Liu, P. Lu, Z. Huang, C. Guestrin, and J. Zou Optimizing generative ai by backpropagating language model feedback . Nature 639 ( 8055 ), pp. 609–616 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Z.ai (2026) Z.ai GLM-5.2: built for long-horizon tasks . Note: https://z.ai/blog/glm-5.2 Accessed: 2026-07-28",
+          "arxiv_ids": [],
+          "urls": [
+            "https://z.ai/blog/glm-5.2"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhang et al. (2026a) H. Zhang, S. Zhang, K. Li, C. Zhang, Y. Chen, Y. Zhang, L. Bai, and S. Hu Self-harness: harnesses that improve themselves . External Links: 2606.09498 , Link",
+          "arxiv_ids": [
+            "2606.09498"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2606.09498"
+          ],
+          "known_entries": [
+            "selfharness"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhang et al. (2025) K. Zhang, W. Jiao, K. Du, Y. Lu, W. Liu, W. Zhang, and Y. Yu LoopTool: closing the data-training loop for robust llm tool calls . External Links: 2511.09148 , Link",
+          "arxiv_ids": [
+            "2511.09148"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2511.09148"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhang et al. (2026b) M. Zhang, W. Liu, T. Shen, Q. Lin, R. Mao, E. Cambria, X. Tang, and H. Luo FlowSteer: towards agents designing agentic workflows via reinforced progressive canvas editing . External Links: 2602.01664 , Link",
+          "arxiv_ids": [
+            "2602.01664"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2602.01664"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhao et al. (2024) A. Zhao, D. Huang, Q. Xu, M. Lin, Y. Liu, and G. Huang ExpeL: llm agents are experiential learners . External Links: 2308.10144 , Link",
+          "arxiv_ids": [
+            "2308.10144"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2308.10144"
+          ],
+          "known_entries": [
+            "expel"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhou et al. (2023) Y. Zhou, A. I. Muresanu, Z. Han, K. Paster, S. Pitis, H. Chan, and J. Ba Large language models are human-level prompt engineers . External Links: 2211.01910 , Link",
+          "arxiv_ids": [
+            "2211.01910"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2211.01910"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        }
+      ]
+    },
+    {
+      "key": "gepa-curator",
+      "url": "https://arxiv.org/html/2610.37651",
+      "citations": [
+        {
+          "citation": "Agarwal et al. (2025) S. Agarwal, L. Ahmad, J. Ai, S. Altman, A. Applebaum, E. Arbus, R. K. Arora, Y. Bai, B. Baker, H. Bao, et al. Gpt-oss-120b & gpt-oss-20b model card . arXiv preprint arXiv:2508.10925 .",
+          "arxiv_ids": [
+            "2508.10925"
+          ],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Agrawal et al. (2026) L. A. Agrawal, S. Tan, D. Soylu, N. Ziems, R. Khare, K. Opsahl-Ong, A. Singhvi, H. Shandilya, M. J. Ryan, M. Jiang, et al. Gepa: reflective prompt evolution can outperform reinforcement learning . In International Conference on Learning Representations , Vol. 2026 , pp. 8479–8565 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [
+            "gepa"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Anthropic (2026) Anthropic System card: claude opus 5 . Technical report Anthropic . External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://www-cdn.anthropic.com/b514064af1408018e64b1ad24e7d5e75850b4ffd/Claude%20Opus%205%20System%20Card.pdf"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Balunovic et al. (2025) M. Balunovic, J. Dekoninck, I. Petrov, N. Jovanović, and M. Vechev Matharena: evaluating llms on uncontaminated math competitions . Advances in Neural Information Processing Systems 38 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Bengio et al. (2009) Y. Bengio, J. Louradour, R. Collobert, and J. Weston Curriculum learning . In Proceedings of the 26th Annual International Conference on Machine Learning , ICML ’09 , New York, NY, USA , pp. 41–48 . External Links: ISBN 9781605585161 , Link , Document",
+          "arxiv_ids": [],
+          "urls": [
+            "https://doi.org/10.1145/1553374.1553380",
+            "https://dx.doi.org/10.1145/1553374.1553380"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Chen et al. (2024) L. Chen, S. Li, J. Yan, H. Wang, K. Gunaratna, V. Yadav, Z. Tang, V. Srinivasan, T. Zhou, H. Huang, et al. Alpagasus: training a better alpaca with fewer data . In International Conference on Learning Representations , Vol. 2024 , pp. 34767–34797 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "DeepMind (2026) G. DeepMind Gemini 3.1 pro: model card . Technical report External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://deepmind.google/models/model-cards/gemini-3-1-pro/"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Dekoninck et al. (2026) J. Dekoninck, T. Gehrunger, and M. Vechev ArXivMath: evaluating LLMs on mathematical research problems from recent ArXiv papers . Note: MathArena External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://matharena.ai/arxivmath/"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Diao et al. (2024) S. Diao, P. Wang, Y. Lin, R. Pan, X. Liu, and T. Zhang Active prompting with chain-of-thought for large language models . In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pp. 1330–1350 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Erdogan et al. (2024) L. E. Erdogan, N. Lee, S. Jha, S. Kim, R. Tabrizi, S. Moon, C. R. C. Hooper, G. Anumanchipalli, K. Keutzer, and A. Gholami Tinyagent: function calling at the edge . In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: System Demonstrations , pp. 80–88 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Erdogan et al. (2025) L. E. Erdogan, N. Lee, S. Kim, S. Moon, H. Furuta, G. Anumanchipalli, K. Keutzer, and A. Gholami Plan-and-act: improving planning of agents for long-horizon tasks . In Forty-second International Conference on Machine Learning , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=ybA4EcMmUZ"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Fan et al. (2018) Y. Fan, F. Tian, T. Qin, X. Li, and T. Liu Learning to teach . In International Conference on Learning Representations , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=HJewuJWCZ"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Favaro and Clark (2026) M. Favaro and J. Clark When ai builds itself . Note: Anthropic Institute blog post External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://www.anthropic.com/institute/recursive-self-improvement"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Fei et al. (2024) Z. Fei, X. Shen, D. Zhu, F. Zhou, Z. Han, A. Huang, S. Zhang, K. Chen, Z. Yin, Z. Shen, et al. Lawbench: benchmarking legal knowledge of large language models . In Proceedings of the 2024 conference on empirical methods in natural language processing , pp. 7933–7962 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Gandhi and Neubig (2026) A. Gandhi and G. Neubig Go-browse: training web agents with structured exploration . In International Conference on Learning Representations , Vol. 2026 , pp. 138973–138992 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Gretel AI (2023) Gretel AI Symptom to diagnosis dataset . Note: Hugging Face External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://huggingface.co/datasets/gretelai/symptom_to_diagnosis"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Gür et al. (2023) I. Gür, O. Nachum, Y. Miao, M. Safdari, A. Huang, A. Chowdhery, S. Narang, N. Fiedel, and A. Faust Understanding html with large language models . In Findings of the Association for Computational Linguistics: EMNLP 2023 , pp. 2803–2821 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "He et al. (2024) H. He, W. Yao, K. Ma, W. Yu, Y. Dai, H. Zhang, Z. Lan, and D. Yu Webvoyager: building an end-to-end web agent with large multimodal models . In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pp. 6864–6890 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Jiang et al. (2020) Y. Jiang, S. Bordia, Z. Zhong, C. Dognin, M. Singh, and M. Bansal HoVer: a dataset for many-hop fact extraction and claim verification . In Findings of the Association for Computational Linguistics: EMNLP 2020 , pp. 3441–3460 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Kim et al. (2023) G. Kim, P. Baldi, and S. McAleer Language models can solve computer tasks . Advances in Neural Information Processing Systems 36 , pp. 39648–39677 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Kim et al. (2024) S. Kim, S. Moon, R. Tabrizi, N. Lee, M. W. Mahoney, K. Keutzer, and A. Gholami An LLM compiler for parallel function calling . In Forty-first International Conference on Machine Learning , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=uQ2FUoFjnF"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Kirichenko et al. (2025) P. Kirichenko, M. Ibrahim, K. Chaudhuri, and S. J. Bell AbstentionBench: reasoning llms fail on unanswerable questions . In Advances in Neural Information Processing Systems ,",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Kwon et al. (2023) W. Kwon, Z. Li, S. Zhuang, Y. Sheng, L. Zheng, C. H. Yu, J. Gonzalez, H. Zhang, and I. Stoica Efficient memory management for large language model serving with pagedattention . In Proceedings of the 29th symposium on operating systems principles , pp. 611–626 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Lee et al. (2024) N. Lee, T. Wattanawong, S. Kim, K. Mangalam, S. Shen, G. Anumanchipalli, M. Mahoney, K. Keutzer, and A. Gholami Llm2llm: boosting llms with novel iterative data enhancement . In Findings of the Association for Computational Linguistics: ACL 2024 , pp. 6498–6526 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Lee et al. (2026) Y. Lee, R. S. Nair, Q. Zhang, K. Lee, O. Khattab, and C. Finn Meta-harness: end-to-end optimization of model harnesses . In Third Conference on Language Modeling , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=tmbOUyFx3R"
+          ],
+          "known_entries": [
+            "meta"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Luong et al. (2025) M. Luong, D. Hwang, H. H. Nguyen, G. Ghiasi, Y. Chervonyi, I. Seo, J. Kim, G. Bingham, J. Lee, S. Mishra, et al. Towards robust mathematical reasoning . In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing , pp. 35418–35442 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "OpenAI (2026) OpenAI GPT-6 Astra: A New Generation of Intelligence . Note: https://openai.com/index/gpt-6-astra/ Accessed: 2026-09-25",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openai.com/index/gpt-6-astra/"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Opsahl-Ong et al. (2024) K. Opsahl-Ong, M. J. Ryan, J. Purtell, D. Broman, C. Potts, M. Zaharia, and O. Khattab Optimizing instructions and demonstrations for multi-stage language model programs . In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing , pp. 9340–9366 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Patil et al. (2024) S. G. Patil, T. Zhang, X. Wang, and J. E. Gonzalez Gorilla: large language model connected with massive apis . Advances in Neural Information Processing Systems 37 , pp. 126544–126565 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Patil et al. (2025) S. G. Patil, H. Mao, C. Cheng-Jie Ji, F. Yan, V. Suresh, I. Stoica, and J. E. Gonzalez The berkeley function calling leaderboard (bfcl): from tool use to agentic evaluation of large language models . In Forty-second International Conference on Machine Learning ,",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Pryzant et al. (2023) R. Pryzant, D. Iter, J. Li, Y. Lee, C. Zhu, and M. Zeng Automatic prompt optimization with “gradient descent” and beam search . In Proceedings of the 2023 conference on empirical methods in natural language processing , pp. 7957–7968 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Pyatkin et al. (2025) V. Pyatkin, S. Malik, V. Graf, H. Ivison, S. Huang, P. Dasigi, N. Lambert, and H. Hajishirzi Generalizing verifiable instruction following . Advances in Neural Information Processing Systems 38 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Qi et al. (2025) Z. Qi, X. Liu, I. L. Iong, H. Lai, X. Sun, J. Sun, X. Yang, Y. Yang, S. Yao, W. Xu, et al. Webrl: training llm web agents via self-evolving online curriculum reinforcement learning . In International Conference on Learning Representations , Vol. 2025 , pp. 79791–79821 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Rawles et al. (2023) C. Rawles, A. Li, D. Rodriguez, O. Riva, and T. Lillicrap Androidinthewild: a large-scale dataset for android device control . Advances in Neural Information Processing Systems 36 , pp. 59708–59728 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Sayana et al. (2026) K. Sayana, K. Todi, and A. Jash Prompting policies for multi-step reasoning and tool-use in black-box llms with iterative distillation of experience . arXiv preprint arXiv:2605.14443 .",
+          "arxiv_ids": [
+            "2605.14443"
+          ],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Schick et al. (2023) T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, E. Hambro, L. Zettlemoyer, N. Cancedda, and T. Scialom Toolformer: language models can teach themselves to use tools . Advances in neural information processing systems 36 , pp. 68539–68551 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Schneider et al. (2016) N. Schneider, N. Stiefl, and G. A. Landrum What’s what: the (nearly) definitive guide to reaction role assignment . Journal of chemical information and modeling 56 ( 12 ), pp. 2336–2346 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Shen et al. (2023) Y. Shen, K. Song, X. Tan, D. Li, W. Lu, and Y. Zhuang Hugginggpt: solving ai tasks with chatgpt and its friends in hugging face . Advances in Neural Information Processing Systems 36 , pp. 38154–38180 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Shridhar et al. (2021) M. Shridhar, X. Yuan, M. Cote, Y. Bisk, A. Trischler, and M. Hausknecht ALFWorld: aligning text and embodied environments for interactive learning . In International Conference on Learning Representations , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=0IOX0YcCdTn"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Team (2025) Q. Team Qwen3 technical report . External Links: 2505.09388 , Link",
+          "arxiv_ids": [
+            "2505.09388"
+          ],
+          "urls": [
+            "https://arxiv.org/abs/2505.09388"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Trivedi et al. (2024) H. Trivedi, T. Khot, M. Hartmann, R. Manku, V. Dong, E. Li, S. Gupta, A. Sabharwal, and N. Balasubramanian Appworld: a controllable world of apps and people for benchmarking interactive coding agents . In Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pp. 16022–16076 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Wang et al. (2024) F. Wang, N. Mehrabi, P. Goyal, R. Gupta, K. Chang, and A. Galstyan Data advisor: dynamic data curation for safety alignment of large language models . In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing , pp. 8089–8100 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Xie et al. (2024) T. Xie, D. Zhang, J. Chen, X. Li, S. Zhao, R. Cao, T. J. Hua, Z. Cheng, D. Shin, F. Lei, et al. Osworld: benchmarking multimodal agents for open-ended tasks in real computer environments . Advances in Neural Information Processing Systems 37 , pp. 52040–52094 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Xu et al. (2023) B. Xu, Z. Peng, B. Lei, S. Mukherjee, Y. Liu, and D. Xu Rewoo: decoupling reasoning from observations for efficient augmented language models . arXiv preprint arXiv:2305.18323 .",
+          "arxiv_ids": [
+            "2305.18323"
+          ],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Xue et al. (2025) T. Xue, W. Qi, T. Shi, C. H. Song, B. Gou, D. Song, H. Sun, and Y. Su An illusion of progress? assessing the current state of web agents . In Second Conference on Language Modeling , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=6jZi4HSs6o"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yang et al. (2024) C. Yang, X. Wang, Y. Lu, H. Liu, Q. V. Le, D. Zhou, and X. Chen Large language models as optimizers . In International Conference on Learning Representations , Vol. 2024 , pp. 12028–12068 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [
+            "opro"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yang et al. (2025) K. Yang, Y. Liu, S. Chaudhary, R. Fakoor, P. A. Chaudhari, G. Karypis, and H. Rangwala Agentoccam: a simple yet strong baseline for llm-based web agents . In International Conference on Learning Representations , Vol. 2025 , pp. 97533–97565 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yang et al. (2026) Y. Yang, Z. Gong, W. Huang, Q. Yang, Z. Zhou, Z. Huang, Y. Li, X. Gao, Q. Dai, B. Liu, et al. Skillopt: executive strategy for self-evolving agent skills . arXiv preprint arXiv:2605.23904 .",
+          "arxiv_ids": [
+            "2605.23904"
+          ],
+          "urls": [],
+          "known_entries": [
+            "skillopt"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yang et al. (2018) Z. Yang, P. Qi, S. Zhang, Y. Bengio, W. Cohen, R. Salakhutdinov, and C. D. Manning HotpotQA: a dataset for diverse, explainable multi-hop question answering . In Proceedings of the 2018 conference on empirical methods in natural language processing , pp. 2369–2380 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yao et al. (2024) S. Yao, N. Shinn, P. Razavi, and K. Narasimhan τ \\tau -Bench: a benchmark for tool-agent-user interaction in real-world domains . arXiv preprint arXiv:2406.12045 .",
+          "arxiv_ids": [
+            "2406.12045"
+          ],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yao et al. (2023) S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. R. Narasimhan, and Y. Cao ReAct: synergizing reasoning and acting in language models . In The Eleventh International Conference on Learning Representations , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=WE_vluYUL-X"
+          ],
+          "known_entries": [
+            "react"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yuan et al. (2026) M. Yuan, Z. Zhou, X. Xiong, W. Wu, J. Sun, J. Song, K. Cui, B. Wang, H. Wu, Y. Li, et al. OSWorld 2.0: benchmarking computer use agents on long-horizon real-world tasks . arXiv preprint arXiv:2606.29537 .",
+          "arxiv_ids": [
+            "2606.29537"
+          ],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Yuksekgonul et al. (2024) M. Yuksekgonul, F. Bianchi, J. Boen, S. Liu, Z. Huang, C. Guestrin, and J. Zou Textgrad: automatic ”differentiation” via text . arXiv preprint arXiv:2406.07496 .",
+          "arxiv_ids": [
+            "2406.07496"
+          ],
+          "urls": [],
+          "known_entries": [
+            "textgrad"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhang et al. (2026) Q. Zhang, C. Hu, S. Upasani, B. Ma, F. Hong, V. Kamanuru, J. Rainton, C. Wu, M. Ji, H. Li, et al. Agentic context engineering: evolving contexts for self-improving language models . In International Conference on Learning Representations , Vol. 2026 , pp. 86069–86100 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [
+            "ace"
+          ],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zheng et al. (2023) L. Zheng, W. Chiang, Y. Sheng, S. Zhuang, Z. Wu, Y. Zhuang, Z. Lin, Z. Li, D. Li, E. Xing, et al. Judging llm-as-a-judge with mt-bench and chatbot arena . Advances in neural information processing systems 36 , pp. 46595–46623 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhou et al. (2023a) C. Zhou, P. Liu, P. Xu, S. Iyer, J. Sun, Y. Mao, X. Ma, A. Efrat, P. Yu, L. Yu, et al. Lima: less is more for alignment . Advances in Neural Information Processing Systems 36 , pp. 55006–55021 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhou et al. (2024) S. Zhou, F. F. Xu, H. Zhu, X. Zhou, R. Lo, A. Sridhar, X. Cheng, T. Ou, Y. Bisk, D. Fried, et al. Webarena: a realistic web environment for building autonomous agents . In International Conference on Learning Representations , Vol. 2024 , pp. 15585–15606 .",
+          "arxiv_ids": [],
+          "urls": [],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        },
+        {
+          "citation": "Zhou et al. (2023b) Y. Zhou, A. I. Muresanu, Z. Han, K. Paster, S. Pitis, H. Chan, and J. Ba Large language models are human-level prompt engineers . In The Eleventh International Conference on Learning Representations , External Links: Link",
+          "arxiv_ids": [],
+          "urls": [
+            "https://openreview.net/forum?id=92gvk82DE-"
+          ],
+          "known_entries": [],
+          "inspection": "reference_list_discovery"
+        }
+      ]
     }
   ],
   "edges": [
@@ -3906,6 +4939,648 @@
       "source": "skillfm",
       "relation": "cites",
       "target": "arxiv:2606.30015",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "gepa",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2606.06324",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "harnessx",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2603.18620",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2606.19348",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2309.16797",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2507.21046",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "Google DeepMind (2026) Google DeepMind Gemini 3.5 Flash: model card . Note: https://deepmind.google/models/model-cards/g",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2309.08532",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "continual",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2310.03714",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "meta",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2510.21618",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2605.25430",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2407.12821",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2305.19118",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "ahe",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2308.03688",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "autoharness",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2604.02268",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2607.03935",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2303.17651",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "Moonshot AI (2026) Moonshot AI Kimi K2.6: advancing open-source coding . Note: https://www.kimi.com/blog/kimi-k2-6 Acces",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2504.04785",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "OpenAI (2026) OpenAI Introducing GPT-5.5 . Note: https://openai.com/index/introducing-gpt-5-5/ Accessed: 2026-07-28",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2406.11695",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2305.03495",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "Qwen Team (2026) Qwen Team Qwen3.5: towards native multimodal agents . Note: https://qwen.ai/blog?id=qwen3.5 Accessed: 2",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2402.03300",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2605.06130",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "reflexion",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2010.03768",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2605.09359",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2606.12882",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2510.16079",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2602.08234",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "life",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "opro",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2207.01206",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "react",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2607.05458",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2602.01966",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "Yuksekgonul et al. (2025) M. Yuksekgonul, F. Bianchi, J. Boen, S. Liu, P. Lu, Z. Huang, C. Guestrin, and J. Zou Optimizi",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "Z.ai (2026) Z.ai GLM-5.2: built for long-horizon tasks . Note: https://z.ai/blog/glm-5.2 Accessed: 2026-07-28",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "selfharness",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2511.09148",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2602.01664",
+      "primary_checked": false
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "expel",
+      "primary_checked": true
+    },
+    {
+      "source": "harness-r1",
+      "relation": "cites",
+      "target": "arxiv:2211.01910",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "arxiv:2508.10925",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "gepa",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Anthropic (2026) Anthropic System card: claude opus 5 . Technical report Anthropic . External Links: Link",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Balunovic et al. (2025) M. Balunovic, J. Dekoninck, I. Petrov, N. Jovanović, and M. Vechev Matharena: evaluating llms on",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Bengio et al. (2009) Y. Bengio, J. Louradour, R. Collobert, and J. Weston Curriculum learning . In Proceedings of the 26",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Chen et al. (2024) L. Chen, S. Li, J. Yan, H. Wang, K. Gunaratna, V. Yadav, Z. Tang, V. Srinivasan, T. Zhou, H. Huang, e",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "DeepMind (2026) G. DeepMind Gemini 3.1 pro: model card . Technical report External Links: Link",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Dekoninck et al. (2026) J. Dekoninck, T. Gehrunger, and M. Vechev ArXivMath: evaluating LLMs on mathematical research pr",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Diao et al. (2024) S. Diao, P. Wang, Y. Lin, R. Pan, X. Liu, and T. Zhang Active prompting with chain-of-thought for lar",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Erdogan et al. (2024) L. E. Erdogan, N. Lee, S. Jha, S. Kim, R. Tabrizi, S. Moon, C. R. C. Hooper, G. Anumanchipalli, K.",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Erdogan et al. (2025) L. E. Erdogan, N. Lee, S. Kim, S. Moon, H. Furuta, G. Anumanchipalli, K. Keutzer, and A. Gholami P",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Fan et al. (2018) Y. Fan, F. Tian, T. Qin, X. Li, and T. Liu Learning to teach . In International Conference on Learning",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Favaro and Clark (2026) M. Favaro and J. Clark When ai builds itself . Note: Anthropic Institute blog post External Link",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Fei et al. (2024) Z. Fei, X. Shen, D. Zhu, F. Zhou, Z. Han, A. Huang, S. Zhang, K. Chen, Z. Yin, Z. Shen, et al. Lawbenc",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Gandhi and Neubig (2026) A. Gandhi and G. Neubig Go-browse: training web agents with structured exploration . In Interna",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Gretel AI (2023) Gretel AI Symptom to diagnosis dataset . Note: Hugging Face External Links: Link",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Gür et al. (2023) I. Gür, O. Nachum, Y. Miao, M. Safdari, A. Huang, A. Chowdhery, S. Narang, N. Fiedel, and A. Faust Und",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "He et al. (2024) H. He, W. Yao, K. Ma, W. Yu, Y. Dai, H. Zhang, Z. Lan, and D. Yu Webvoyager: building an end-to-end web",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Jiang et al. (2020) Y. Jiang, S. Bordia, Z. Zhong, C. Dognin, M. Singh, and M. Bansal HoVer: a dataset for many-hop fact",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Kim et al. (2023) G. Kim, P. Baldi, and S. McAleer Language models can solve computer tasks . Advances in Neural Informa",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Kim et al. (2024) S. Kim, S. Moon, R. Tabrizi, N. Lee, M. W. Mahoney, K. Keutzer, and A. Gholami An LLM compiler for par",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Kirichenko et al. (2025) P. Kirichenko, M. Ibrahim, K. Chaudhuri, and S. J. Bell AbstentionBench: reasoning llms fail on",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Kwon et al. (2023) W. Kwon, Z. Li, S. Zhuang, Y. Sheng, L. Zheng, C. H. Yu, J. Gonzalez, H. Zhang, and I. Stoica Efficie",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Lee et al. (2024) N. Lee, T. Wattanawong, S. Kim, K. Mangalam, S. Shen, G. Anumanchipalli, M. Mahoney, K. Keutzer, and A",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "meta",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Luong et al. (2025) M. Luong, D. Hwang, H. H. Nguyen, G. Ghiasi, Y. Chervonyi, I. Seo, J. Kim, G. Bingham, J. Lee, S. Mi",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "OpenAI (2026) OpenAI GPT-6 Astra: A New Generation of Intelligence . Note: https://openai.com/index/gpt-6-astra/ Accesse",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Opsahl-Ong et al. (2024) K. Opsahl-Ong, M. J. Ryan, J. Purtell, D. Broman, C. Potts, M. Zaharia, and O. Khattab Optimizi",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Patil et al. (2024) S. G. Patil, T. Zhang, X. Wang, and J. E. Gonzalez Gorilla: large language model connected with mass",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Patil et al. (2025) S. G. Patil, H. Mao, C. Cheng-Jie Ji, F. Yan, V. Suresh, I. Stoica, and J. E. Gonzalez The berkeley ",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Pryzant et al. (2023) R. Pryzant, D. Iter, J. Li, Y. Lee, C. Zhu, and M. Zeng Automatic prompt optimization with “gradie",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Pyatkin et al. (2025) V. Pyatkin, S. Malik, V. Graf, H. Ivison, S. Huang, P. Dasigi, N. Lambert, and H. Hajishirzi Gener",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Qi et al. (2025) Z. Qi, X. Liu, I. L. Iong, H. Lai, X. Sun, J. Sun, X. Yang, Y. Yang, S. Yao, W. Xu, et al. Webrl: train",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Rawles et al. (2023) C. Rawles, A. Li, D. Rodriguez, O. Riva, and T. Lillicrap Androidinthewild: a large-scale dataset f",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "arxiv:2605.14443",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Schick et al. (2023) T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, E. Hambro, L. Zettlemoyer, N. Cancedda,",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Schneider et al. (2016) N. Schneider, N. Stiefl, and G. A. Landrum What’s what: the (nearly) definitive guide to reactio",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Shen et al. (2023) Y. Shen, K. Song, X. Tan, D. Li, W. Lu, and Y. Zhuang Hugginggpt: solving ai tasks with chatgpt and i",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Shridhar et al. (2021) M. Shridhar, X. Yuan, M. Cote, Y. Bisk, A. Trischler, and M. Hausknecht ALFWorld: aligning text a",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "arxiv:2505.09388",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Trivedi et al. (2024) H. Trivedi, T. Khot, M. Hartmann, R. Manku, V. Dong, E. Li, S. Gupta, A. Sabharwal, and N. Balasub",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Wang et al. (2024) F. Wang, N. Mehrabi, P. Goyal, R. Gupta, K. Chang, and A. Galstyan Data advisor: dynamic data curatio",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Xie et al. (2024) T. Xie, D. Zhang, J. Chen, X. Li, S. Zhao, R. Cao, T. J. Hua, Z. Cheng, D. Shin, F. Lei, et al. Osworl",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "arxiv:2305.18323",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Xue et al. (2025) T. Xue, W. Qi, T. Shi, C. H. Song, B. Gou, D. Song, H. Sun, and Y. Su An illusion of progress? assessi",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "opro",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Yang et al. (2025) K. Yang, Y. Liu, S. Chaudhary, R. Fakoor, P. A. Chaudhari, G. Karypis, and H. Rangwala Agentoccam: a ",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "skillopt",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Yang et al. (2018) Z. Yang, P. Qi, S. Zhang, Y. Bengio, W. Cohen, R. Salakhutdinov, and C. D. Manning HotpotQA: a datase",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "arxiv:2406.12045",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "react",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "arxiv:2606.29537",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "textgrad",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "ace",
+      "primary_checked": true
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Zheng et al. (2023) L. Zheng, W. Chiang, Y. Sheng, S. Zhuang, Z. Wu, Y. Zhuang, Z. Lin, Z. Li, D. Li, E. Xing, et al. Ju",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Zhou et al. (2023a) C. Zhou, P. Liu, P. Xu, S. Iyer, J. Sun, Y. Mao, X. Ma, A. Efrat, P. Yu, L. Yu, et al. Lima: less is",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Zhou et al. (2024) S. Zhou, F. F. Xu, H. Zhu, X. Zhou, R. Lo, A. Sridhar, X. Cheng, T. Ou, Y. Bisk, D. Fried, et al. Web",
+      "primary_checked": false
+    },
+    {
+      "source": "gepa-curator",
+      "relation": "cites",
+      "target": "Zhou et al. (2023b) Y. Zhou, A. I. Muresanu, Z. Han, K. Paster, S. Pitis, H. Chan, and J. Ba Large language models are h",
       "primary_checked": false
     }
   ],

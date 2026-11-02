@@ -110,9 +110,9 @@
         "webshop"
       ],
       "surface": "generated skill",
-      "status": "awaiting_generator_and_adapter",
-      "reason_zh": "Qwen3-4B结果存在；需核实生成器权重、额外模型调用与任务划分后运行。",
-      "reason_en": "Qwen3-4B rows exist; generator weights, auxiliary calls and splits must be aligned."
+      "status": "blocked_missing_codec_flow_weights",
+      "reason_zh": "原作者明确未发布模型权重，仅提供代码、配置与训练技能库。完整复现需额外训练资源，不以检索替代生成方法。",
+      "reason_en": "No model weights released; complete reproduction needs codec/flow training, not a retrieval substitution."
     },
     {
       "name": "Reflexion",
@@ -211,6 +211,57 @@
       "status": "primary_source_verified_pending_adapter",
       "reason_zh": "从AutoManual与SkillFM引用链发现；核实原作者代码覆盖ALFWorld/WebShop。需对齐训练经验、规则提取和评测时检索。",
       "reason_en": "Discovered through AutoManual and SkillFM references; official code covers ALFWorld/WebShop. Training experience, insight extraction and inference retrieval need alignment."
+    },
+    {
+      "name": "Harness-R1",
+      "paper": "https://arxiv.org/abs/2608.02276",
+      "code": "https://github.com/DeepExperience/Harness-R1",
+      "benchmarks": [
+        "dbbench",
+        "webshop",
+        "alfworld"
+      ],
+      "status": "released_patch_three_repeats_running_dbbench",
+      "surface": "See original paper",
+      "reason_zh": "已启动原作者释放补丁的DBBench共同300题三遍评测，固定Qwen3-4B；不重新训练9B编辑模型。",
+      "reason_en": "Released engineer patch available; DBBench shared-Qwen3-4B transfer evaluation running."
+    },
+    {
+      "name": "GEPA-Curator",
+      "paper": "https://arxiv.org/abs/2610.37651",
+      "code": null,
+      "benchmarks": [
+        "alfworld"
+      ],
+      "status": "primary_paper_verified_original_curator_code_pending",
+      "surface": "See original paper",
+      "reason_zh": "优化任务筛选与成功经验检索；原文使用gpt-oss-120b执行模型。所查原文未定位Curator专用释放代码；τ-bench不是τ²-Telecom。",
+      "reason_en": "Task curation and success retrieval for prompt optimization; original actor gpt-oss-120b, no directly matching Qwen3-4B artifact located."
+    },
+    {
+      "name": "Verify-Backtrack Loop",
+      "paper": "https://arxiv.org/abs/2610.41564",
+      "code": null,
+      "benchmarks": [
+        "alfworld"
+      ],
+      "status": "primary_paper_verified_adapter_pending",
+      "surface": "See original paper",
+      "reason_zh": "无需训练的目标栈、双层验证与回退机制；ALFWorld重合，所查原文未定位官方代码，适配待做。",
+      "reason_en": "Training-free goal-stack verification and backtracking; no official code URL located in the inspected paper."
+    },
+    {
+      "name": "Repairs for Whom?",
+      "paper": "https://arxiv.org/abs/2610.38610",
+      "code": "https://github.com/lyj20071013/repairs-for-whom",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "status": "evaluation_method_reference",
+      "surface": "See original paper",
+      "reason_zh": "评估器与执行器不一致的修复选择研究；用于方法讨论，不是最终Harness主榜成绩。",
+      "reason_en": "Repair-evaluator/executor mismatch study; cite selection methodology, not a final harness leaderboard row."
     }
   ]
 }

@@ -419,5 +419,71 @@
     "year": 2023,
     "arxiv": "2308.10144",
     "url": "https://arxiv.org/abs/2308.10144"
+  },
+  "gepa-curator": {
+    "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
+    "authors": [
+      "Zack Yu",
+      "Nicholas Lee",
+      "Minjae Lee",
+      "Lakshya Agarwal",
+      "Luca Manolache",
+      "Wonjun Kang",
+      "Matei Zaharia",
+      "Michael W. Mahoney",
+      "Kurt Keutzer",
+      "Sehoon Kim",
+      "Amir Gholami"
+    ],
+    "year": 2026,
+    "arxiv": "2610.37651",
+    "url": "https://arxiv.org/abs/2610.37651",
+    "published": "2026-10-27T17:58:11Z"
+  },
+  "repair-mismatch": {
+    "title": "Repairs for Whom? Evaluator-Executor Mismatch in Selecting Repairs for Failed LLM Agents",
+    "authors": [
+      "Yijun Liao",
+      "Fanwei Liang"
+    ],
+    "year": 2026,
+    "arxiv": "2610.38610",
+    "url": "https://arxiv.org/abs/2610.38610",
+    "published": "2026-10-28T10:29:11Z"
+  },
+  "vbl": {
+    "title": "Verify--Backtrack Loop: Structured Precondition Recovery for Long-Horizon Language Agents",
+    "authors": [
+      "Mingyang Liu",
+      "Qingcan Kang",
+      "Shixiong Kai",
+      "Tao Zhong",
+      "Mingxuan Yuan",
+      "Xin Li",
+      "Linqi Song"
+    ],
+    "year": 2026,
+    "arxiv": "2610.41564",
+    "url": "https://arxiv.org/abs/2610.41564",
+    "published": "2026-10-30T10:58:17Z"
+  },
+  "harness-r1": {
+    "title": "Harness-R1: Learning to Edit Executable Runtime Harnesses from Agent Failure Trajectories",
+    "authors": [
+      "Shuai Shao",
+      "Kangning Zhang",
+      "Qingyao Li",
+      "Shijian Wang",
+      "Hao Wang",
+      "Wenxiang Jiao",
+      "Yuan Lu",
+      "Yi Guo",
+      "Weiwen Liu",
+      "Weinan Zhang"
+    ],
+    "year": 2026,
+    "arxiv": "2608.02276",
+    "url": "https://arxiv.org/abs/2608.02276",
+    "published": "2026-08-03T14:12:18Z"
   }
 }

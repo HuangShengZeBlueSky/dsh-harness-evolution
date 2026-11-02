@@ -17,5 +17,9 @@ def main():
  files={'env_history.py':'env_history.py','autobuild_utils.py':'autobuild_utils.py','test_trial.py':'test_trial.py','provider-source-ChatGPT_API.py':'OpenAI_Agent_API/ChatGPT_API.py','provider-source-__init__.py':'OpenAI_Agent_API/__init__.py','rule_manager.json':'gpt4preview_autobuildcase_manual/rule_manager.json','skill_bank.json':'gpt4preview_autobuildcase_manual/skill_bank.json','prompts/worker_prompt.txt':'prompts/worker_prompt.txt','prompts/autobuild_simple_examples.py':'prompts/autobuild_simple_examples.py'}
  for local,remote in files.items():(target/local).write_bytes(retrieve(base+remote))
  (out/'source-manifest.json').write_text(json.dumps(dict(react_reflact=url,automanual={local:base+remote for local,remote in files.items()}),indent=2)+'\n')
+ r1=out/'harness-r1';r1.mkdir(exist_ok=True)
+ r1base='https://raw.githubusercontent.com/DeepExperience/Harness-R1/main/'
+ r1files={'dbbench.py':'code/life-harness/AgentBench/src/server/harness/dbbench.py','task.py':'code/life-harness/AgentBench/src/server/tasks/dbbench/task.py','code_runner.py':'code/life-harness/AgentBench/src/server/harness/code_runner.py','patch.json':'examples/heldout_generalization/harness-r1/seed20260720/dbbench.json'}
+ for local,remote in r1files.items():(r1/local).write_bytes(retrieve(r1base+remote))
  print('Published prompts, manual and planner sources retrieved with provenance.')
 if __name__=='__main__':main()
