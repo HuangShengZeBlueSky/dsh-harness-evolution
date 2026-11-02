@@ -134,7 +134,7 @@
         "alfworld"
       ],
       "surface": "goal-state reflection",
-      "status": "native_three_repeats_running_alfworld",
+      "status": "native_three_repeats_complete_alfworld",
       "reason_zh": "原论文指令与两条附录示例已接入共同ALFWorld环境；109题×3，Qwen3-4B，单题50次模型调用上限；不是原论文模型成绩。",
       "reason_en": "Original instructions and two appendix demonstrations run on shared ALFWorld109×3 with Qwen3-4B and50 model calls; cross-executor prompt transfer."
     },
@@ -146,7 +146,7 @@
         "alfworld"
       ],
       "surface": "learned manual",
-      "status": "released_manual_planner_three_repeats_running",
+      "status": "native_three_repeats_complete_alfworld",
       "reason_zh": "冻结原作者释放的手册、六类技能与Planner测试流程，在共同ALFWorld109题×3复测。原文WebArena不是WebShop。",
       "reason_en": "Frozen released manual, six task-type skills and original planner on shared ALFWorld109×3. Original WebArena is not WebShop."
     },
@@ -183,7 +183,7 @@
         "webshop"
       ],
       "surface": "reasoning-action prompt",
-      "status": "native_three_repeats_running_alfworld",
+      "status": "native_three_repeats_complete_alfworld",
       "reason_zh": "与ReflAct采用相同两条任务示例与ALFWorld题单，比较Thought和Reflection策略；冻结提示，无测试反馈。",
       "reason_en": "Matched two demonstrations and shared ALFWorld tasks compare thought versus reflection; frozen prompts with no test feedback."
     },
