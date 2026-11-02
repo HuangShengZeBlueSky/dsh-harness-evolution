@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-11-02T10:00:26.951975+00:00",
+  "collected_at": "2026-11-02T10:16:34.217555+00:00",
   "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
   "counts": {
-    "alfworld": 58,
+    "alfworld": 57,
     "dbbench": 154,
-    "webshop": 184,
-    "osbench": 138,
+    "webshop": 183,
+    "osbench": 136,
     "telecom": 80
   },
   "jobs": [
@@ -197,30 +197,6 @@
       "screening": {
         "selected": false,
         "reason": "Not a selected development high point"
-      }
-    },
-    {
-      "id": "failure-frontier-fivebench-20261029--experiments--alfworld--dsh-summary--v08",
-      "group_id": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-summary",
-      "domain": "alfworld",
-      "version": "v08",
-      "parent": "v05",
-      "expected": 109,
-      "kind": "native",
-      "artifact_available": true,
-      "training_finished": true,
-      "defer_until_final": false,
-      "priority": 1,
-      "test_feedback_to_optimizer": false,
-      "admitted_highpoint": true,
-      "screening": {
-        "selected": true,
-        "basis": "2",
-        "development_gap": 0.0,
-        "group_final_test": 0.9541284403669725,
-        "reference_target": 0.89,
-        "reference_margin": 0.05,
-        "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
       }
     },
     {
@@ -1095,54 +1071,6 @@
       "screening": {
         "selected": false,
         "reason": "Not a selected development high point"
-      }
-    },
-    {
-      "id": "failure-frontier-fivebench-20261029--experiments--osbench--dsh-mechanism--v06",
-      "group_id": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-mechanism",
-      "domain": "osbench",
-      "version": "v06",
-      "parent": "v04",
-      "expected": 432,
-      "kind": "native",
-      "artifact_available": true,
-      "training_finished": true,
-      "defer_until_final": false,
-      "priority": 1,
-      "test_feedback_to_optimizer": false,
-      "admitted_highpoint": true,
-      "screening": {
-        "selected": true,
-        "basis": "6",
-        "development_gap": 0.040000000000000036,
-        "group_final_test": 0.3287037037037037,
-        "reference_target": 0.396,
-        "reference_margin": 0.1,
-        "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
-      }
-    },
-    {
-      "id": "failure-frontier-fivebench-20261029--experiments--osbench--dsh-mechanism--v07",
-      "group_id": "failure-frontier-fivebench-20261029/experiments/osbench/dsh-mechanism",
-      "domain": "osbench",
-      "version": "v07",
-      "parent": "v06",
-      "expected": 432,
-      "kind": "native",
-      "artifact_available": true,
-      "training_finished": true,
-      "defer_until_final": false,
-      "priority": 1,
-      "test_feedback_to_optimizer": false,
-      "admitted_highpoint": true,
-      "screening": {
-        "selected": true,
-        "basis": "1",
-        "development_gap": 0.040000000000000036,
-        "group_final_test": 0.3287037037037037,
-        "reference_target": 0.396,
-        "reference_margin": 0.1,
-        "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
       }
     },
     {
@@ -2191,30 +2119,6 @@
       "screening": {
         "selected": false,
         "reason": "Not a selected development high point"
-      }
-    },
-    {
-      "id": "failure-frontier-fivebench-20261029--experiments--webshop--dsh-mechanism--v09",
-      "group_id": "failure-frontier-fivebench-20261029/experiments/webshop/dsh-mechanism",
-      "domain": "webshop",
-      "version": "v09",
-      "parent": "v08",
-      "expected": 600,
-      "kind": "native",
-      "artifact_available": true,
-      "training_finished": true,
-      "defer_until_final": false,
-      "priority": 1,
-      "test_feedback_to_optimizer": false,
-      "admitted_highpoint": true,
-      "screening": {
-        "selected": true,
-        "basis": "3",
-        "development_gap": 0.0,
-        "group_final_test": 0.42333333333333334,
-        "reference_target": 0.455,
-        "reference_margin": 0.05,
-        "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
       }
     },
     {
@@ -12077,17 +11981,17 @@
     }
   ],
   "execution": {
-    "updated_at": 1793613608.4168198,
+    "updated_at": 1793614590.2504828,
     "counts": {
-      "not_selected_for_backfill": 533,
-      "complete": 29,
+      "not_selected_for_backfill": 534,
+      "complete": 33,
       "running": 6,
-      "queued": 60,
+      "queued": 56,
       "waiting_for_search_completion": 14
     },
-    "done_test_episodes": 16294,
-    "planned_test_episodes": 349583,
+    "done_test_episodes": 18155,
+    "planned_test_episodes": 350483,
     "planned_highpoint_episodes": 53860,
-    "completed_highpoint_episodes": 11109
+    "completed_highpoint_episodes": 12682
   }
 }
