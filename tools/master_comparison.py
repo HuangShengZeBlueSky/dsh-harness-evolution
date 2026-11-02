@@ -71,5 +71,7 @@ def markdown(data,language='zh'):
 def write(root):
  root=Path(root);data=build(root);p=root/'site/master-comparison.json';p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  for language,suffix in [('zh','.zh-CN'),('en','')]:
-  (root/'docs'/('MASTER-COMPARISON'+suffix+'.md')).write_text('# '+data['title_'+language]+'\n\n'+markdown(data,language)+'\n\n'+data['notes_'+language]+'\n')
+  filename='LEADERBOARD'+suffix+'.md'
+  (root/filename).write_text('# '+data['title_'+language]+'\n\n'+markdown(data,language)+'\n\n'+data['notes_'+language]+'\n')
+  (root/'docs'/('MASTER-COMPARISON'+suffix+'.md')).write_text('[统一主表 / Unified main comparison](../'+filename+')\n')
  return data
