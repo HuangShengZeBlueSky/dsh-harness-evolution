@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-11-02T08:51:31.680768+00:00",
+  "collected_at": "2026-11-02T08:56:03.032671+00:00",
   "policy": "Frozen promoted checkpoints, retrospective evaluation only. The current three L4 reproduction groups wait for their original final selection. No test feedback to optimizers.",
   "counts": {
     "alfworld": 67,
     "dbbench": 158,
     "osbench": 144,
-    "webshop": 184,
+    "webshop": 183,
     "telecom": 80
   },
   "jobs": [
@@ -4258,20 +4258,6 @@
       "version": "v04",
       "parent": "v03",
       "expected": 432,
-      "kind": "native",
-      "artifact_available": true,
-      "training_finished": true,
-      "defer_until_final": false,
-      "priority": 0,
-      "test_feedback_to_optimizer": false
-    },
-    {
-      "id": "loop-expansion-sol40-20261026--webshop--l4-best-sol61--v07",
-      "group_id": "loop-expansion-sol40-20261026/webshop/l4-best-sol61",
-      "domain": "webshop",
-      "version": "v07",
-      "parent": "v06",
-      "expected": 600,
       "kind": "native",
       "artifact_available": true,
       "training_finished": true,
@@ -8873,15 +8859,15 @@
     }
   ],
   "execution": {
-    "updated_at": 1793609481.3777208,
+    "updated_at": 1793609761.8965158,
     "counts": {
-      "queued": 595,
+      "queued": 594,
       "running": 6,
       "needs_attention": 1,
-      "waiting_for_search_completion": 30,
-      "complete": 6
+      "waiting_for_search_completion": 31,
+      "complete": 7
     },
-    "done_test_episodes": 5866,
-    "planned_test_episodes": 346883
+    "done_test_episodes": 6928,
+    "planned_test_episodes": 347783
   }
 }

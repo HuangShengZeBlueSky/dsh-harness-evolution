@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T08:51:31.680768+00:00",
+  "updated_at": "2026-11-02T08:56:03.032671+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -19631,7 +19631,7 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 28,
+      "rounds": 29,
       "budget": 40,
       "adopted": 11,
       "best": "v28",
@@ -19693,18 +19693,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 90270582,
-        "cached_input_tokens": 89820928,
-        "output_tokens": 257192,
-        "reasoning_output_tokens": 148773,
-        "uncached_input_tokens": 449654,
-        "total_tokens": 90527774
+        "input_tokens": 91089577,
+        "cached_input_tokens": 90632192,
+        "output_tokens": 261098,
+        "reasoning_output_tokens": 149974,
+        "uncached_input_tokens": 457385,
+        "total_tokens": 91350675
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 4.549630199538337,
+      "hours": 4.632508096893629,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--dbbench--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--dbbench--sol61-high.json",
       "state": "optimizer_running",
@@ -20296,6 +20296,27 @@
           "optimizer_tokens": 90319411,
           "repairs": null,
           "regressions": null
+        },
+        {
+          "round": 29,
+          "version": "v29",
+          "parent": "v28",
+          "adopted": false,
+          "train": 0.76,
+          "train_strict": null,
+          "reward": 0.76,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 91112388,
+          "repairs": null,
+          "regressions": null
         }
       ]
     },
@@ -20307,7 +20328,7 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 33,
+      "rounds": 34,
       "budget": 40,
       "adopted": 11,
       "best": "v30",
@@ -20369,18 +20390,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 97434592,
-        "cached_input_tokens": 96809216,
-        "output_tokens": 135701,
-        "reasoning_output_tokens": 40805,
-        "uncached_input_tokens": 625376,
-        "total_tokens": 97570293
+        "input_tokens": 99579028,
+        "cached_input_tokens": 98941312,
+        "output_tokens": 141506,
+        "reasoning_output_tokens": 44114,
+        "uncached_input_tokens": 637716,
+        "total_tokens": 99720534
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 4.365301412608888,
+      "hours": 4.501881054706043,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--osbench--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--osbench--sol61-high.json",
       "state": "optimizer_running",
@@ -21077,6 +21098,27 @@
           "optimizer_tokens": 94614999,
           "repairs": null,
           "regressions": null
+        },
+        {
+          "round": 34,
+          "version": "v34",
+          "parent": "v30",
+          "adopted": false,
+          "train": 0.83,
+          "train_strict": null,
+          "reward": 0.83,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 97996012,
+          "repairs": null,
+          "regressions": null
         }
       ]
     },
@@ -21088,7 +21130,7 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 20,
+      "rounds": 21,
       "budget": 40,
       "adopted": 9,
       "best": "v17",
@@ -21150,18 +21192,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 60352748,
-        "cached_input_tokens": 59757440,
-        "output_tokens": 191329,
-        "reasoning_output_tokens": 118445,
-        "uncached_input_tokens": 595308,
-        "total_tokens": 60544077
+        "input_tokens": 60971402,
+        "cached_input_tokens": 60353536,
+        "output_tokens": 194266,
+        "reasoning_output_tokens": 119001,
+        "uncached_input_tokens": 617866,
+        "total_tokens": 61165668
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 4.518256429831187,
+      "hours": 4.59789923608303,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--webshop--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--webshop--sol61-high.json",
       "state": "optimizer_running",
@@ -21583,6 +21625,27 @@
           "all3": null,
           "test_std": null,
           "optimizer_tokens": 60090711,
+          "repairs": null,
+          "regressions": null
+        },
+        {
+          "round": 21,
+          "version": "v21",
+          "parent": "v17",
+          "adopted": false,
+          "train": 0.722547619047619,
+          "train_strict": 0.47,
+          "reward": 0.722547619047619,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 60544077,
           "repairs": null,
           "regressions": null
         }
@@ -46225,8 +46288,8 @@
       },
       "coverage": {
         "promoted": 13,
-        "tested_promoted": 5,
-        "missing_promoted": 8
+        "tested_promoted": 6,
+        "missing_promoted": 7
       },
       "checkpoint_test_protocol": null,
       "tokens": {
@@ -46389,10 +46452,10 @@
           "reward": 0.7073333333333334,
           "validation": null,
           "batch": 1,
-          "test": null,
-          "test_kind": null,
-          "test_valid": null,
-          "test_expected": null,
+          "test": 0.43666666666666665,
+          "test_kind": "retrospective_checkpoint",
+          "test_valid": 600,
+          "test_expected": 600,
           "any3": null,
           "all3": null,
           "test_std": null,
@@ -113624,13 +113687,13 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-02T08:51:31.680768+00:00",
+    "collected_at": "2026-11-02T08:56:03.032671+00:00",
     "policy": "Frozen promoted checkpoints, retrospective evaluation only. The current three L4 reproduction groups wait for their original final selection. No test feedback to optimizers.",
     "counts": {
       "alfworld": 67,
       "dbbench": 158,
       "osbench": 144,
-      "webshop": 184,
+      "webshop": 183,
       "telecom": 80
     },
     "jobs": [
@@ -117883,20 +117946,6 @@
         "version": "v04",
         "parent": "v03",
         "expected": 432,
-        "kind": "native",
-        "artifact_available": true,
-        "training_finished": true,
-        "defer_until_final": false,
-        "priority": 0,
-        "test_feedback_to_optimizer": false
-      },
-      {
-        "id": "loop-expansion-sol40-20261026--webshop--l4-best-sol61--v07",
-        "group_id": "loop-expansion-sol40-20261026/webshop/l4-best-sol61",
-        "domain": "webshop",
-        "version": "v07",
-        "parent": "v06",
-        "expected": 600,
         "kind": "native",
         "artifact_available": true,
         "training_finished": true,
@@ -122498,16 +122547,16 @@
       }
     ],
     "execution": {
-      "updated_at": 1793609481.3777208,
+      "updated_at": 1793609761.8965158,
       "counts": {
-        "queued": 595,
+        "queued": 594,
         "running": 6,
         "needs_attention": 1,
-        "waiting_for_search_completion": 30,
-        "complete": 6
+        "waiting_for_search_completion": 31,
+        "complete": 7
       },
-      "done_test_episodes": 5866,
-      "planned_test_episodes": 346883
+      "done_test_episodes": 6928,
+      "planned_test_episodes": 347783
     }
   }
 }
