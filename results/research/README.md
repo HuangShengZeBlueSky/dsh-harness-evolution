@@ -53,3 +53,11 @@ The public snapshot now includes fixed-set multi-model runs, the current restore
 `token_accounting.optimizer` separates total input, cached input, uncached input, output and reasoning output. Total is input plus output; cached and reasoning are subsets. Session cumulative usage snapshots are never summed repeatedly. When session logs are no longer present, available completed-session CLI usage is retained with its source label. Per-decision usage is the latest earlier observed snapshot, not an interpolated bill. Actor inference and inherited prior-search costs are excluded. `token_accounting.learning` reports separately observed learning jobs.
 
 `curve.test_measurement` contains only complete actual tests, labelled as final-selected or retrospective checkpoint measurements. Native final selection remains unchanged. The original ALFWorld manifest contains a single 109-task pass; its supplemental checkpoint protocol uses 327 episodes over three trials and is identified separately.
+
+### Reproduce the extended snapshot and usage accounting
+
+```bash
+python collect_extended.py --root /path/to/native-experiments --output /path/to/numeric-export --session-root /path/to/codex/sessions
+```
+
+The collector reads the named native archives and usage records, exports numeric data, and does not launch tests or alter a controller. `highpoint_policy.py` documents the current budget heuristic: near-reference groups first, then promoted points within five percentage points of that group’s validation or same-batch development high. It does not compare raw training scores to paper test scores. The prior wider OS margin is retained. Lower points remain visible but are not scheduled. The native queue waits for the current three L4 groups to finish selection before screening them.
