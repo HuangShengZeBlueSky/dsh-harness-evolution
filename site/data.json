@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T09:13:34.386564+00:00",
+  "updated_at": "2026-11-02T09:26:35.572101+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -4952,8 +4952,8 @@
       },
       "coverage": {
         "promoted": 2,
-        "tested_promoted": 1,
-        "missing_promoted": 1
+        "tested_promoted": 2,
+        "missing_promoted": 0
       },
       "checkpoint_test_protocol": null,
       "tokens": {
@@ -5025,10 +5025,10 @@
           "reward": 0.59,
           "validation": 0.5833333333333334,
           "batch": null,
-          "test": null,
-          "test_kind": null,
-          "test_valid": null,
-          "test_expected": null,
+          "test": 0.30092592592592593,
+          "test_kind": "retrospective_checkpoint",
+          "test_valid": 432,
+          "test_expected": 432,
           "any3": null,
           "all3": null,
           "test_std": null,
@@ -5208,8 +5208,8 @@
       },
       "coverage": {
         "promoted": 2,
-        "tested_promoted": 1,
-        "missing_promoted": 1
+        "tested_promoted": 2,
+        "missing_promoted": 0
       },
       "checkpoint_test_protocol": null,
       "tokens": {
@@ -5344,10 +5344,10 @@
           "reward": 0.59,
           "validation": 0.55,
           "batch": null,
-          "test": null,
-          "test_kind": null,
-          "test_valid": null,
-          "test_expected": null,
+          "test": 0.3101851851851852,
+          "test_kind": "retrospective_checkpoint",
+          "test_valid": 432,
+          "test_expected": 432,
           "any3": null,
           "all3": null,
           "test_std": null,
@@ -10645,8 +10645,8 @@
       },
       "coverage": {
         "promoted": 6,
-        "tested_promoted": 2,
-        "missing_promoted": 4
+        "tested_promoted": 3,
+        "missing_promoted": 3
       },
       "checkpoint_test_protocol": null,
       "tokens": {
@@ -10907,10 +10907,10 @@
           "reward": 1.0,
           "validation": null,
           "batch": 6,
-          "test": null,
-          "test_kind": null,
-          "test_valid": null,
-          "test_expected": null,
+          "test": 0.944954128440367,
+          "test_kind": "retrospective_checkpoint",
+          "test_valid": 109,
+          "test_expected": 109,
           "any3": null,
           "all3": null,
           "test_std": null,
@@ -19631,7 +19631,7 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 31,
+      "rounds": 32,
       "budget": 40,
       "adopted": 11,
       "best": "v28",
@@ -19693,18 +19693,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 94737130,
-        "cached_input_tokens": 94206464,
-        "output_tokens": 274320,
-        "reasoning_output_tokens": 156244,
-        "uncached_input_tokens": 530666,
-        "total_tokens": 95011450
+        "input_tokens": 98032718,
+        "cached_input_tokens": 97490176,
+        "output_tokens": 282507,
+        "reasoning_output_tokens": 160405,
+        "uncached_input_tokens": 542542,
+        "total_tokens": 98315225
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 4.91046129292912,
+      "hours": 5.089189350472556,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--dbbench--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--dbbench--sol61-high.json",
       "state": "optimizer_running",
@@ -20359,6 +20359,27 @@
           "optimizer_tokens": 94551850,
           "repairs": null,
           "regressions": null
+        },
+        {
+          "round": 32,
+          "version": "v32",
+          "parent": "v28",
+          "adopted": false,
+          "train": 0.76,
+          "train_strict": null,
+          "reward": 0.76,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 97276254,
+          "repairs": null,
+          "regressions": null
         }
       ]
     },
@@ -20370,7 +20391,7 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 36,
+      "rounds": 37,
       "budget": 40,
       "adopted": 11,
       "best": "v30",
@@ -20432,18 +20453,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 108493114,
-        "cached_input_tokens": 107817728,
-        "output_tokens": 152165,
-        "reasoning_output_tokens": 48942,
-        "uncached_input_tokens": 675386,
-        "total_tokens": 108645279
+        "input_tokens": 114058567,
+        "cached_input_tokens": 113371392,
+        "output_tokens": 155648,
+        "reasoning_output_tokens": 50225,
+        "uncached_input_tokens": 687175,
+        "total_tokens": 114214215
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 4.729810363650322,
+      "hours": 4.879673396878772,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--osbench--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--osbench--sol61-high.json",
       "state": "optimizer_running",
@@ -21203,6 +21224,27 @@
           "optimizer_tokens": 104561171,
           "repairs": null,
           "regressions": null
+        },
+        {
+          "round": 37,
+          "version": "v37",
+          "parent": "v30",
+          "adopted": false,
+          "train": 0.81,
+          "train_strict": null,
+          "reward": 0.81,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 108645279,
+          "repairs": null,
+          "regressions": null
         }
       ]
     },
@@ -21214,10 +21256,10 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 23,
+      "rounds": 25,
       "budget": 40,
-      "adopted": 10,
-      "best": "v22",
+      "adopted": 11,
+      "best": "v25",
       "complete": false,
       "final_test": null,
       "any3": null,
@@ -21270,24 +21312,24 @@
         "concurrency": 3
       },
       "coverage": {
-        "promoted": 10,
+        "promoted": 11,
         "tested_promoted": 0,
-        "missing_promoted": 10
+        "missing_promoted": 11
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 63392314,
-        "cached_input_tokens": 62737280,
-        "output_tokens": 199508,
-        "reasoning_output_tokens": 120100,
-        "uncached_input_tokens": 655034,
-        "total_tokens": 63591822
+        "input_tokens": 65746110,
+        "cached_input_tokens": 65069696,
+        "output_tokens": 204264,
+        "reasoning_output_tokens": 120982,
+        "uncached_input_tokens": 676414,
+        "total_tokens": 65950374
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 4.894857756561703,
+      "hours": 5.156525088747342,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--webshop--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--webshop--sol61-high.json",
       "state": "optimizer_running",
@@ -21772,6 +21814,48 @@
           "all3": null,
           "test_std": null,
           "optimizer_tokens": 62822139,
+          "repairs": null,
+          "regressions": null
+        },
+        {
+          "round": 24,
+          "version": "v24",
+          "parent": "v22",
+          "adopted": false,
+          "train": 0.7456428571428572,
+          "train_strict": 0.49,
+          "reward": 0.7456428571428572,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 64243207,
+          "repairs": null,
+          "regressions": null
+        },
+        {
+          "round": 25,
+          "version": "v25",
+          "parent": "v22",
+          "adopted": true,
+          "train": 0.7448095238095238,
+          "train_strict": 0.5,
+          "reward": 0.7448095238095238,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 65501770,
           "repairs": null,
           "regressions": null
         }
@@ -24071,8 +24155,8 @@
       },
       "coverage": {
         "promoted": 5,
-        "tested_promoted": 2,
-        "missing_promoted": 3
+        "tested_promoted": 4,
+        "missing_promoted": 1
       },
       "checkpoint_test_protocol": null,
       "tokens": {
@@ -24529,10 +24613,10 @@
           "reward": 0.675,
           "validation": 0.7333333333333333,
           "batch": 3,
-          "test": null,
-          "test_kind": null,
-          "test_valid": null,
-          "test_expected": null,
+          "test": 0.6033333333333334,
+          "test_kind": "retrospective_checkpoint",
+          "test_valid": 900,
+          "test_expected": 900,
           "any3": null,
           "all3": null,
           "test_std": null,
@@ -24592,10 +24676,10 @@
           "reward": 0.65,
           "validation": 0.7333333333333333,
           "batch": 6,
-          "test": null,
-          "test_kind": null,
-          "test_valid": null,
-          "test_expected": null,
+          "test": 0.62,
+          "test_kind": "retrospective_checkpoint",
+          "test_valid": 900,
+          "test_expected": 900,
           "any3": null,
           "all3": null,
           "test_std": null,
@@ -113813,13 +113897,13 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-02T09:13:34.386564+00:00",
+    "collected_at": "2026-11-02T09:26:35.572101+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
-      "alfworld": 65,
-      "dbbench": 156,
-      "osbench": 142,
-      "webshop": 184,
+      "alfworld": 64,
+      "dbbench": 154,
+      "osbench": 140,
+      "webshop": 185,
       "telecom": 80
     },
     "jobs": [
@@ -113935,54 +114019,6 @@
         "screening": {
           "selected": false,
           "reason": "Not a selected development high point"
-        }
-      },
-      {
-        "id": "architecture-luna8-fourbench-20261101--experiments--osbench--mechanism--v03",
-        "group_id": "architecture-luna8-fourbench-20261101/experiments/osbench/mechanism",
-        "domain": "osbench",
-        "version": "v03",
-        "parent": "baseline",
-        "expected": 432,
-        "kind": "native",
-        "artifact_available": true,
-        "training_finished": true,
-        "defer_until_final": false,
-        "priority": 1,
-        "test_feedback_to_optimizer": false,
-        "admitted_highpoint": true,
-        "screening": {
-          "selected": true,
-          "basis": "validation",
-          "development_gap": 0.0,
-          "group_final_test": 0.3148148148148148,
-          "reference_target": 0.396,
-          "reference_margin": 0.1,
-          "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
-        }
-      },
-      {
-        "id": "architecture-luna8-fourbench-20261101--experiments--osbench--memory--v06",
-        "group_id": "architecture-luna8-fourbench-20261101/experiments/osbench/memory",
-        "domain": "osbench",
-        "version": "v06",
-        "parent": "baseline",
-        "expected": 432,
-        "kind": "native",
-        "artifact_available": true,
-        "training_finished": true,
-        "defer_until_final": false,
-        "priority": 1,
-        "test_feedback_to_optimizer": false,
-        "admitted_highpoint": true,
-        "screening": {
-          "selected": true,
-          "basis": "validation",
-          "development_gap": 0.016666666666666607,
-          "group_final_test": 0.30092592592592593,
-          "reference_target": 0.396,
-          "reference_margin": 0.1,
-          "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
         }
       },
       {
@@ -114131,30 +114167,6 @@
         "screening": {
           "selected": true,
           "basis": "3",
-          "development_gap": 0.0,
-          "group_final_test": 0.944954128440367,
-          "reference_target": 0.89,
-          "reference_margin": 0.05,
-          "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
-        }
-      },
-      {
-        "id": "failure-frontier-fivebench-20261029--experiments--alfworld--dsh-mechanism--v12",
-        "group_id": "failure-frontier-fivebench-20261029/experiments/alfworld/dsh-mechanism",
-        "domain": "alfworld",
-        "version": "v12",
-        "parent": "v04",
-        "expected": 109,
-        "kind": "native",
-        "artifact_available": true,
-        "training_finished": true,
-        "defer_until_final": false,
-        "priority": 1,
-        "test_feedback_to_optimizer": false,
-        "admitted_highpoint": true,
-        "screening": {
-          "selected": true,
-          "basis": "6",
           "development_gap": 0.0,
           "group_final_test": 0.944954128440367,
           "reference_target": 0.89,
@@ -117403,7 +117415,7 @@
         "screening": {
           "selected": true,
           "basis": "fixed",
-          "development_gap": 0.03999999999999998,
+          "development_gap": 0.04999999999999999,
           "group_final_test": null,
           "reference_target": 0.455,
           "reference_margin": 0.05,
@@ -117427,7 +117439,7 @@
         "screening": {
           "selected": true,
           "basis": "fixed",
-          "development_gap": 0.02999999999999997,
+          "development_gap": 0.03999999999999998,
           "group_final_test": null,
           "reference_target": 0.455,
           "reference_margin": 0.05,
@@ -117451,7 +117463,7 @@
         "screening": {
           "selected": true,
           "basis": "fixed",
-          "development_gap": 0.020000000000000018,
+          "development_gap": 0.030000000000000027,
           "group_final_test": null,
           "reference_target": 0.455,
           "reference_margin": 0.05,
@@ -117475,7 +117487,7 @@
         "screening": {
           "selected": true,
           "basis": "fixed",
-          "development_gap": 0.010000000000000009,
+          "development_gap": 0.020000000000000018,
           "group_final_test": null,
           "reference_target": 0.455,
           "reference_margin": 0.05,
@@ -117488,6 +117500,30 @@
         "domain": "webshop",
         "version": "v22",
         "parent": "v17",
+        "expected": 600,
+        "kind": "native",
+        "artifact_available": true,
+        "training_finished": false,
+        "defer_until_final": true,
+        "priority": 1,
+        "test_feedback_to_optimizer": false,
+        "admitted_highpoint": true,
+        "screening": {
+          "selected": true,
+          "basis": "fixed",
+          "development_gap": 0.010000000000000009,
+          "group_final_test": null,
+          "reference_target": 0.455,
+          "reference_margin": 0.05,
+          "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
+        }
+      },
+      {
+        "id": "l4-fixed100-sol61-high-20261102--experiments--webshop--sol61-high--v25",
+        "group_id": "l4-fixed100-sol61-high-20261102/experiments/webshop/sol61-high",
+        "domain": "webshop",
+        "version": "v25",
+        "parent": "v22",
         "expected": 600,
         "kind": "native",
         "artifact_available": true,
@@ -117675,54 +117711,6 @@
         "screening": {
           "selected": false,
           "reason": "Not a selected development high point"
-        }
-      },
-      {
-        "id": "loop-comparison-20r-20261025--dbbench--l2-sol61--v21",
-        "group_id": "loop-comparison-20r-20261025/dbbench/l2-sol61",
-        "domain": "dbbench",
-        "version": "v21",
-        "parent": "v09",
-        "expected": 900,
-        "kind": "native",
-        "artifact_available": true,
-        "training_finished": true,
-        "defer_until_final": false,
-        "priority": 1,
-        "test_feedback_to_optimizer": false,
-        "admitted_highpoint": true,
-        "screening": {
-          "selected": true,
-          "basis": "validation",
-          "development_gap": 0.03333333333333344,
-          "group_final_test": 0.6122222222222222,
-          "reference_target": 0.65,
-          "reference_margin": 0.05,
-          "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
-        }
-      },
-      {
-        "id": "loop-comparison-20r-20261025--dbbench--l2-sol61--v24",
-        "group_id": "loop-comparison-20r-20261025/dbbench/l2-sol61",
-        "domain": "dbbench",
-        "version": "v24",
-        "parent": "v21",
-        "expected": 900,
-        "kind": "native",
-        "artifact_available": true,
-        "training_finished": true,
-        "defer_until_final": false,
-        "priority": 1,
-        "test_feedback_to_optimizer": false,
-        "admitted_highpoint": true,
-        "screening": {
-          "selected": true,
-          "basis": "validation",
-          "development_gap": 0.03333333333333344,
-          "group_final_test": 0.6122222222222222,
-          "reference_target": 0.65,
-          "reference_margin": 0.05,
-          "reason": "Within five pp of the same-group validation or same-batch development high. Group test anchor must be near reference; live L4 reproduction waits for final screening."
         }
       },
       {
@@ -126213,17 +126201,18 @@
       }
     ],
     "execution": {
-      "updated_at": 1793610803.1199744,
+      "updated_at": 1793611584.5353973,
       "counts": {
+        "not_selected_for_backfill": 532,
+        "complete": 18,
         "running": 6,
-        "queued": 76,
-        "complete": 13,
-        "needs_attention": 1,
-        "waiting_for_search_completion": 13,
-        "not_selected_for_backfill": 531
+        "queued": 71,
+        "waiting_for_search_completion": 13
       },
-      "done_test_episodes": 10058,
-      "planned_test_episodes": 348383
+      "done_test_episodes": 12007,
+      "planned_test_episodes": 348383,
+      "planned_highpoint_episodes": 53260,
+      "completed_highpoint_episodes": 7491
     }
   }
 }
