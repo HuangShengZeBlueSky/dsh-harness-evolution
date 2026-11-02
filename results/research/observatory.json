@@ -128428,6 +128428,72 @@
         "source": "paper-comparisons-3x-20261102/align-alfworld/episodes.jsonl",
         "measurement_origin": "new",
         "artifact_identity": "unmodified official interface_react.py; shared tool-call runtime adapter"
+      },
+      {
+        "method": "ReAct",
+        "benchmark": "alfworld",
+        "complete": true,
+        "comparison_eligible": true,
+        "task_count": 109,
+        "repeats": 3,
+        "valid_episodes": 327,
+        "repeat_rates": {
+          "0": 0.10091743119266056,
+          "1": 0.10091743119266056,
+          "2": 0.11926605504587157
+        },
+        "mean": 0.10703363914373089,
+        "sample_std": 0.010593582920910566,
+        "sample_variance": 0.00011222399910220802,
+        "model_calls": 8175,
+        "input_tokens": 51046644,
+        "output_tokens": 584404,
+        "measurement_origin": "new_published_policy_transfer",
+        "source": "competitors-20261102/jobs/react"
+      },
+      {
+        "method": "ReflAct",
+        "benchmark": "alfworld",
+        "complete": true,
+        "comparison_eligible": true,
+        "task_count": 109,
+        "repeats": 3,
+        "valid_episodes": 327,
+        "repeat_rates": {
+          "0": 0.1651376146788991,
+          "1": 0.2018348623853211,
+          "2": 0.1834862385321101
+        },
+        "mean": 0.1834862385321101,
+        "sample_std": 0.01834862385321101,
+        "sample_variance": 0.00033667199730662403,
+        "model_calls": 9113,
+        "input_tokens": 62123894,
+        "output_tokens": 567029,
+        "measurement_origin": "new_published_policy_transfer",
+        "source": "competitors-20261102/jobs/reflact"
+      },
+      {
+        "method": "AutoManual",
+        "benchmark": "alfworld",
+        "complete": true,
+        "comparison_eligible": true,
+        "task_count": 109,
+        "repeats": 3,
+        "valid_episodes": 327,
+        "repeat_rates": {
+          "0": 0.7431192660550459,
+          "1": 0.7706422018348624,
+          "2": 0.7706422018348624
+        },
+        "mean": 0.7614678899082569,
+        "sample_std": 0.01589037438136588,
+        "sample_variance": 0.00025250399797996907,
+        "model_calls": 667,
+        "input_tokens": 5051607,
+        "output_tokens": 934347,
+        "measurement_origin": "new_published_policy_transfer",
+        "source": "competitors-20261102/jobs/automanual"
       }
     ]
   },
@@ -128567,7 +128633,7 @@
           "alfworld"
         ],
         "surface": "goal-state reflection",
-        "status": "native_three_repeats_running_alfworld",
+        "status": "native_three_repeats_complete_alfworld",
         "reason_zh": "原论文指令与两条附录示例已接入共同ALFWorld环境；109题×3，Qwen3-4B，单题50次模型调用上限；不是原论文模型成绩。",
         "reason_en": "Original instructions and two appendix demonstrations run on shared ALFWorld109×3 with Qwen3-4B and50 model calls; cross-executor prompt transfer."
       },
@@ -128579,7 +128645,7 @@
           "alfworld"
         ],
         "surface": "learned manual",
-        "status": "released_manual_planner_three_repeats_running",
+        "status": "native_three_repeats_complete_alfworld",
         "reason_zh": "冻结原作者释放的手册、六类技能与Planner测试流程，在共同ALFWorld109题×3复测。原文WebArena不是WebShop。",
         "reason_en": "Frozen released manual, six task-type skills and original planner on shared ALFWorld109×3. Original WebArena is not WebShop."
       },
@@ -128616,7 +128682,7 @@
           "webshop"
         ],
         "surface": "reasoning-action prompt",
-        "status": "native_three_repeats_running_alfworld",
+        "status": "native_three_repeats_complete_alfworld",
         "reason_zh": "与ReflAct采用相同两条任务示例与ALFWorld题单，比较Thought和Reflection策略；冻结提示，无测试反馈。",
         "reason_en": "Matched two demonstrations and shared ALFWorld tasks compare thought versus reflection; frozen prompts with no test feedback."
       },
@@ -128648,17 +128714,37 @@
     ]
   },
   "competitor_evaluations": {
-    "collected_at": "2026-11-02T15:26:17.491332+00:00",
+    "collected_at": "2026-11-02T15:50:22.480769+00:00",
     "scope": "Frozen published policies on common ALFWorld tasks; no new optimizer calls. Prior artifact-learning cost is separate.",
     "jobs": [
       {
         "id": "react",
         "method": "ReAct",
         "benchmark": "alfworld",
-        "state": "running",
-        "valid": 127,
+        "state": "complete",
+        "valid": 327,
         "expected": 327,
-        "summary": {},
+        "summary": {
+          "method": "ReAct",
+          "benchmark": "alfworld",
+          "complete": true,
+          "valid_episodes": 327,
+          "expected_episodes": 327,
+          "repeat_rates": {
+            "0": 0.10091743119266056,
+            "1": 0.10091743119266056,
+            "2": 0.11926605504587157
+          },
+          "mean": 0.10703363914373089,
+          "sample_std": 0.010593582920910566,
+          "sample_variance": 0.00011222399910220802,
+          "input_tokens": 51046644,
+          "output_tokens": 584404,
+          "model_calls": 8175,
+          "elapsed_seconds": 11442.316653490067,
+          "finished_at": 1793634508.754122,
+          "selection": "frozen paper prompt; no training/search on our test tasks"
+        },
         "protocol": {
           "method": "ReAct",
           "benchmark": "alfworld",
@@ -130321,10 +130407,30 @@
         "id": "reflact",
         "method": "ReflAct",
         "benchmark": "alfworld",
-        "state": "running",
-        "valid": 125,
+        "state": "complete",
+        "valid": 327,
         "expected": 327,
-        "summary": {},
+        "summary": {
+          "method": "ReflAct",
+          "benchmark": "alfworld",
+          "complete": true,
+          "valid_episodes": 327,
+          "expected_episodes": 327,
+          "repeat_rates": {
+            "0": 0.1651376146788991,
+            "1": 0.2018348623853211,
+            "2": 0.1834862385321101
+          },
+          "mean": 0.1834862385321101,
+          "sample_std": 0.01834862385321101,
+          "sample_variance": 0.00033667199730662403,
+          "input_tokens": 62123894,
+          "output_tokens": 567029,
+          "model_calls": 9113,
+          "elapsed_seconds": 12278.218148469925,
+          "finished_at": 1793634622.2927284,
+          "selection": "frozen paper prompt; no training/search on our test tasks"
+        },
         "protocol": {
           "method": "ReflAct",
           "benchmark": "alfworld",
@@ -131987,10 +132093,28 @@
         "id": "automanual",
         "method": "AutoManual",
         "benchmark": "alfworld",
-        "state": "running",
-        "valid": 105,
+        "state": "complete",
+        "valid": 327,
         "expected": 327,
-        "summary": {},
+        "summary": {
+          "method": "AutoManual released manual and planner",
+          "benchmark": "alfworld",
+          "complete": true,
+          "valid_episodes": 327,
+          "expected_episodes": 327,
+          "repeat_rates": {
+            "0": 0.7431192660550459,
+            "1": 0.7706422018348624,
+            "2": 0.7706422018348624
+          },
+          "mean": 0.7614678899082569,
+          "sample_std": 0.01589037438136588,
+          "sample_variance": 0.00025250399797996907,
+          "model_calls": 667,
+          "input_tokens": 5051607,
+          "output_tokens": 934347,
+          "finished_at": 1793634252.5657842
+        },
         "protocol": {
           "method": "AutoManual released manual and planner",
           "source_url": "https://github.com/minghchen/automanual",
