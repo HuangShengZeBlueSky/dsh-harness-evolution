@@ -45,3 +45,11 @@ python collect.py --root /path/to/experiments --output /path/to/export
 The output includes only aggregate decisions, numeric outcomes and sanitized configuration evidence. `--skip-episodes` reuses an existing final-test export only if the selected checkpoint is unchanged; leave it off when regenerating the complete snapshot. This exporter does not provide benchmark datasets, images, model credentials or missing historical logs. The archived curves are frozen source records, not fabricated reruns of the cleaned public package.
 
 Source identity is preserved as relative experiment names and checkpoint IDs. Machine paths and request content are not required to interpret the public records. Execution recipes and their current support boundaries are documented separately in the repository reproduction guide.
+
+## 2026-11-02 refresh
+
+The public snapshot now includes fixed-set multi-model runs, the current restored-L4 study, and per-promoted-checkpoint coverage. `checkpoint-test-queue.json` records remaining measurements and native execution status. `paper-evolution.json` reproduces exact six-round training-batch scores and cumulative optimizer costs from Life-Harness v3 Table 12; these are not test curves.
+
+`token_accounting.optimizer` separates total input, cached input, uncached input, output and reasoning output. Total is input plus output; cached and reasoning are subsets. Session cumulative usage snapshots are never summed repeatedly. When session logs are no longer present, available completed-session CLI usage is retained with its source label. Per-decision usage is the latest earlier observed snapshot, not an interpolated bill. Actor inference and inherited prior-search costs are excluded. `token_accounting.learning` reports separately observed learning jobs.
+
+`curve.test_measurement` contains only complete actual tests, labelled as final-selected or retrospective checkpoint measurements. Native final selection remains unchanged. The original ALFWorld manifest contains a single 109-task pass; its supplemental checkpoint protocol uses 327 episodes over three trials and is identified separately.

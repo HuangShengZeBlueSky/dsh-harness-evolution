@@ -70,8 +70,8 @@ def readmes(root,data):
  for zh in [False,True]:
   suffix='.zh-CN' if zh else '';other='[English](README.md) | **简体中文**' if zh else '**English** | [简体中文](README.zh-CN.md)'
   lines=['# DSH Harness Evolution','',other,'', '**方法、进化曲线、可复现配置与真实插件产物。**' if zh else '**Methods, evolution curves, reproducible configurations, and measured plugin artifacts.**','',
-   '固定做题模型，进化运行时 Harness。我们公开每种循环改了什么、怎样采用候选、结果如何，以及代码目前能复现到哪一层。' if zh else 'Freeze the actor and evolve its runtime harness. Inspect what each loop changes, how candidates are selected, what happened, and which reproduction steps are actually supported.','',
-   f'[**8轮架构试验**]({SITE}pilot.html) · [**架构与学习工作台**]({SITE}architecture.html) · [**交互式摘要与全部曲线**]({SITE}) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)' if zh else f'[**Architecture lab (中文)**]({SITE}architecture.html) · [**Interactive summary and all curves**]({SITE}?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)','',
+   '固定Qwen3-4B做题模型，扩大可修改空间：提示词、Skill、工具、状态与完整Harness。基于DSH复用已有框架，研究更强的优化模型能否提出更复杂且可泛化的机制。真实结果、逐轮曲线和优化Token共同公开。' if zh else 'Freeze the Qwen3-4B actor and expand the editable space from prompts and skills to tools, state and full harness mechanisms. Reuse DSH interfaces and study whether more capable optimizers can exploit this space. Publish measured outcomes, checkpoint curves and optimization tokens together.','',
+   f'[**进化主榜与全部曲线**]({SITE}) · [**方法**](docs/SCALING-METHOD.zh-CN.md) · [**研究数据**](results/research/README.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md) · [**架构工作台**]({SITE}architecture.html)' if zh else f'[**Evolution leaderboard and curves**]({SITE}?lang=en) · [**Method**](docs/SCALING-METHOD.md) · [**Research data**](results/research/README.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md) · [**Architecture**]({SITE}architecture.html)','',
    '## 五场景产物' if zh else '## Five benchmark artifacts','',
    '| 场景 | 最佳已发布最终版 | 已发布回溯高点 | Life-Harness v3参考 |' if zh else '| Benchmark | Best released final-selected artifact | Retrospective high point | Life-Harness v3 reference |','|---|---:|---:|---:|']
   for b in NAMES:
@@ -84,6 +84,7 @@ def readmes(root,data):
    '- **选择规则仍有改进空间。** Web回溯47.00%高于该组最终44.33%；OS早期39.35%高于最终38.89%。保留原选择，不倒写历史。' if zh else '- **Selection leaves headroom.** Web retrospective 47.00% exceeds that campaign final 44.33%; OS early 39.35% exceeds final 38.89%. Original selections are preserved.',
    '- **总分提高与机制成立分别判断。** 已加载、已触发、已传入经验是执行事实；目标修复和整体收益是另外两层证据。' if zh else '- **Overall gain and mechanism support are separate.** Loading, triggering, and experience delivery are execution facts; intended repairs and global outcome changes require additional evidence.','',
    '- **平均分与稳定性分开。** OS机制反馈平均成功32.87%高于摘要29.40%，三次全过25.00%却低于26.39%；单次搜索显示覆盖与稳定性没有同步改善。' if zh else '- **Mean success and reliability can diverge.** OS mechanism feedback reached 32.87% versus summary 29.40%, yet all-three success was 25.00% versus 26.39%. This is a single-search observation.','',
+   '[**核心方法：修改空间与模型能力**](docs/SCALING-METHOD.zh-CN.md) · [**详细研究记录**](results/research/README.md)' if zh else '[**Core method: editable space and optimizer capability**](docs/SCALING-METHOD.md) · [**Detailed research records**](results/research/README.md)','',
    '![各方法最终测试](assets/method-final-tests.png)' if zh else '![Final tests by method](assets/method-final-tests.png)','',
    '## 从一份公共基础开始复现' if zh else '## Reproduce from a shared core','',
    '`evolution/` 提供三场景 L1–L9 的共同运行代码、36份配置、任务编号与一个离线小例子。每种方法以“输入 → 改动 → 评测 → 采用 → 最终选择”说明；所有历史方法的可复现层级逐项标明。' if zh else '`evolution/` supplies shared three-benchmark L1–L9 code, 36 profiles, task IDs and a small offline example. Each method documents inputs → edits → evaluation → adoption → final selection, with explicit reproduction coverage.','',
@@ -99,7 +100,7 @@ def build(root):
  if not (root/'results/research-methods.json').exists():return
  data=dataset(root);final_matrix(root,data);readmes(root,data)
  text=(root/'tools/research-template.html').read_text();payload=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
- out=root/'site';out.mkdir(exist_ok=True);(out/'index.html').write_text(text.replace('__RESEARCH_DATA__',payload));(out/'.nojekyll').write_text('')
+ out=root/'site';out.mkdir(exist_ok=True);(out/'research.html').write_text(text.replace('__RESEARCH_DATA__',payload));(out/'.nojekyll').write_text('')
  for zh in [False,True]:
-  p=root/('docs/CURVES.zh-CN.md' if zh else 'docs/CURVES.md');s=p.read_text();idx=s.index('\n\n');s=s[:idx]+('\n\n[**按方法、模型和场景查看全部进化曲线**]('+SITE+')。开发分数、原最终测试与回溯补测单独显示；可导出当前曲线。' if zh else '\n\n[**Explore every method, model and benchmark curve**]('+SITE+'?lang=en). Development, original final tests and retrospective measurements remain distinct; export the selected curve.')+s[idx:];p.write_text(s)
+  p=root/('docs/CURVES.zh-CN.md' if zh else 'docs/CURVES.md');s=p.read_text();s=re.sub(r'\n\n\[\*\*(?:按方法、模型和场景查看全部进化曲线|Explore every method, model and benchmark curve)\*\*\].*?(?=\n|$)', '', s);idx=s.index('\n\n');s=s[:idx]+('\n\n[**按方法、模型和场景查看全部进化曲线**]('+SITE+')。开发分数、原最终测试与回溯补测单独显示；可导出当前曲线。' if zh else '\n\n[**Explore every method, model and benchmark curve**]('+SITE+'?lang=en). Development, original final tests and retrospective measurements remain distinct; export the selected curve.')+s[idx:];p.write_text(s)
  print(f'Research view: {len(data["groups"])} recorded campaigns, {len(data["methods"])} method definitions.')

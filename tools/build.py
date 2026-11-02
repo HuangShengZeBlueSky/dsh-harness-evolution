@@ -139,5 +139,7 @@ def main():
  build_architecture(ROOT)
  from build_pilot import build as build_pilot
  build_pilot(ROOT)
+ from build_observatory import build as build_observatory
+ build_observatory(ROOT)
  print(f'Rendered {len(rows)} releases across {len(winners)} benchmarks.')
 if __name__=='__main__':main()

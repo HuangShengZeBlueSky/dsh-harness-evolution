@@ -1,0 +1,681 @@
+{
+  "checked_on": "2026-11-02",
+  "source_url": "https://arxiv.org/html/2605.22166v3#A2.T12",
+  "paper_version": "2605.22166v3",
+  "source_table": "12",
+  "note_zh": "论文逐轮成绩来自各轮训练批次，不是测试曲线。Meta-Harness/AHE是Life-Harness作者的适配复现。",
+  "note_en": "Round scores use changing training batches, not held-out tests. Meta-Harness/AHE are reproductions by the Life-Harness authors.",
+  "curves": [
+    {
+      "benchmark": "alfworld",
+      "method": "Meta-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.32,
+          "optimizer_tokens": 1844422
+        },
+        {
+          "round": 2,
+          "train": 0.34,
+          "optimizer_tokens": 8005177
+        },
+        {
+          "round": 3,
+          "train": 0.36,
+          "optimizer_tokens": 11587642
+        },
+        {
+          "round": 4,
+          "train": 0.36,
+          "optimizer_tokens": 20431198
+        },
+        {
+          "round": 5,
+          "train": 0.36,
+          "optimizer_tokens": 26129534
+        },
+        {
+          "round": 6,
+          "train": 0.38,
+          "optimizer_tokens": 37138309
+        }
+      ]
+    },
+    {
+      "benchmark": "alfworld",
+      "method": "AHE",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.2,
+          "optimizer_tokens": 19811543
+        },
+        {
+          "round": 2,
+          "train": 0.64,
+          "optimizer_tokens": 34404126
+        },
+        {
+          "round": 3,
+          "train": 0.98,
+          "optimizer_tokens": 48259083
+        },
+        {
+          "round": 4,
+          "train": 0.96,
+          "optimizer_tokens": 61652816
+        },
+        {
+          "round": 5,
+          "train": 0.96,
+          "optimizer_tokens": 83687531
+        },
+        {
+          "round": 6,
+          "train": 0.98,
+          "optimizer_tokens": 95632347
+        }
+      ]
+    },
+    {
+      "benchmark": "alfworld",
+      "method": "Life-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.28,
+          "optimizer_tokens": 4161138
+        },
+        {
+          "round": 2,
+          "train": 0.28,
+          "optimizer_tokens": 12190452
+        },
+        {
+          "round": 3,
+          "train": 0.72,
+          "optimizer_tokens": 14076471
+        },
+        {
+          "round": 4,
+          "train": 0.82,
+          "optimizer_tokens": 19234043
+        },
+        {
+          "round": 5,
+          "train": 0.86,
+          "optimizer_tokens": 23082260
+        },
+        {
+          "round": 6,
+          "train": 0.88,
+          "optimizer_tokens": 24288432
+        }
+      ]
+    },
+    {
+      "benchmark": "dbbench",
+      "method": "Meta-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.5,
+          "optimizer_tokens": 6207521
+        },
+        {
+          "round": 2,
+          "train": 0.52,
+          "optimizer_tokens": 11129491
+        },
+        {
+          "round": 3,
+          "train": 0.54,
+          "optimizer_tokens": 15462932
+        },
+        {
+          "round": 4,
+          "train": 0.54,
+          "optimizer_tokens": 19411225
+        },
+        {
+          "round": 5,
+          "train": 0.5,
+          "optimizer_tokens": 23968214
+        },
+        {
+          "round": 6,
+          "train": 0.5,
+          "optimizer_tokens": 32813601
+        }
+      ]
+    },
+    {
+      "benchmark": "dbbench",
+      "method": "AHE",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.62,
+          "optimizer_tokens": 22526526
+        },
+        {
+          "round": 2,
+          "train": 0.52,
+          "optimizer_tokens": 39553218
+        },
+        {
+          "round": 3,
+          "train": 0.52,
+          "optimizer_tokens": 59377453
+        },
+        {
+          "round": 4,
+          "train": 0.4,
+          "optimizer_tokens": 74165373
+        },
+        {
+          "round": 5,
+          "train": 0.44,
+          "optimizer_tokens": 89109728
+        },
+        {
+          "round": 6,
+          "train": 0.4,
+          "optimizer_tokens": 104524554
+        }
+      ]
+    },
+    {
+      "benchmark": "dbbench",
+      "method": "Life-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.6,
+          "optimizer_tokens": 1440875
+        },
+        {
+          "round": 2,
+          "train": 0.66,
+          "optimizer_tokens": 3114184
+        },
+        {
+          "round": 3,
+          "train": 0.72,
+          "optimizer_tokens": 5352370
+        },
+        {
+          "round": 4,
+          "train": 0.58,
+          "optimizer_tokens": 7673629
+        },
+        {
+          "round": 5,
+          "train": 0.56,
+          "optimizer_tokens": 10090936
+        },
+        {
+          "round": 6,
+          "train": 0.7,
+          "optimizer_tokens": 11204889
+        }
+      ]
+    },
+    {
+      "benchmark": "osbench",
+      "method": "Meta-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.54,
+          "optimizer_tokens": 4498792
+        },
+        {
+          "round": 2,
+          "train": 0.54,
+          "optimizer_tokens": 6217706
+        },
+        {
+          "round": 3,
+          "train": 0.4,
+          "optimizer_tokens": 13970941
+        },
+        {
+          "round": 4,
+          "train": 0.38,
+          "optimizer_tokens": 15285055
+        },
+        {
+          "round": 5,
+          "train": 0.44,
+          "optimizer_tokens": 23800235
+        },
+        {
+          "round": 6,
+          "train": 0.44,
+          "optimizer_tokens": 26787235
+        }
+      ]
+    },
+    {
+      "benchmark": "osbench",
+      "method": "AHE",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.36,
+          "optimizer_tokens": 9228392
+        },
+        {
+          "round": 2,
+          "train": 0.56,
+          "optimizer_tokens": 20312020
+        },
+        {
+          "round": 3,
+          "train": 0.6,
+          "optimizer_tokens": 34483700
+        },
+        {
+          "round": 4,
+          "train": 0.6,
+          "optimizer_tokens": 52001022
+        },
+        {
+          "round": 5,
+          "train": 0.54,
+          "optimizer_tokens": 68599918
+        },
+        {
+          "round": 6,
+          "train": 0.56,
+          "optimizer_tokens": 93994363
+        }
+      ]
+    },
+    {
+      "benchmark": "osbench",
+      "method": "Life-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.54,
+          "optimizer_tokens": 2155531
+        },
+        {
+          "round": 2,
+          "train": 0.54,
+          "optimizer_tokens": 4468800
+        },
+        {
+          "round": 3,
+          "train": 0.52,
+          "optimizer_tokens": 8748913
+        },
+        {
+          "round": 4,
+          "train": 0.66,
+          "optimizer_tokens": 14528703
+        },
+        {
+          "round": 5,
+          "train": 0.56,
+          "optimizer_tokens": 19816520
+        },
+        {
+          "round": 6,
+          "train": 0.62,
+          "optimizer_tokens": 25709768
+        }
+      ]
+    },
+    {
+      "benchmark": "webshop",
+      "method": "Meta-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.4,
+          "optimizer_tokens": 2192980
+        },
+        {
+          "round": 2,
+          "train": 0.48,
+          "optimizer_tokens": 5495748
+        },
+        {
+          "round": 3,
+          "train": 0.48,
+          "optimizer_tokens": 11348118
+        },
+        {
+          "round": 4,
+          "train": 0.46,
+          "optimizer_tokens": 22286791
+        },
+        {
+          "round": 5,
+          "train": 0.42,
+          "optimizer_tokens": 30234742
+        },
+        {
+          "round": 6,
+          "train": 0.38,
+          "optimizer_tokens": 36741591
+        }
+      ]
+    },
+    {
+      "benchmark": "webshop",
+      "method": "AHE",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.38,
+          "optimizer_tokens": 19530428
+        },
+        {
+          "round": 2,
+          "train": 0.36,
+          "optimizer_tokens": 31618208
+        },
+        {
+          "round": 3,
+          "train": 0.42,
+          "optimizer_tokens": 52015559
+        },
+        {
+          "round": 4,
+          "train": 0.34,
+          "optimizer_tokens": 65935271
+        },
+        {
+          "round": 5,
+          "train": 0.42,
+          "optimizer_tokens": 79875431
+        },
+        {
+          "round": 6,
+          "train": 0.36,
+          "optimizer_tokens": 103843620
+        }
+      ]
+    },
+    {
+      "benchmark": "webshop",
+      "method": "Life-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.38,
+          "optimizer_tokens": 6778022
+        },
+        {
+          "round": 2,
+          "train": 0.42,
+          "optimizer_tokens": 10291263
+        },
+        {
+          "round": 3,
+          "train": 0.48,
+          "optimizer_tokens": 18581490
+        },
+        {
+          "round": 4,
+          "train": 0.36,
+          "optimizer_tokens": 26987334
+        },
+        {
+          "round": 5,
+          "train": 0.38,
+          "optimizer_tokens": 32180838
+        },
+        {
+          "round": 6,
+          "train": 0.42,
+          "optimizer_tokens": 37750993
+        }
+      ]
+    },
+    {
+      "benchmark": "telecom",
+      "method": "Meta-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.3,
+          "optimizer_tokens": 2324074
+        },
+        {
+          "round": 2,
+          "train": 0.32,
+          "optimizer_tokens": 5075319
+        },
+        {
+          "round": 3,
+          "train": 0.28,
+          "optimizer_tokens": 7244553
+        },
+        {
+          "round": 4,
+          "train": 0.28,
+          "optimizer_tokens": 11817103
+        },
+        {
+          "round": 5,
+          "train": 0.28,
+          "optimizer_tokens": 17158854
+        },
+        {
+          "round": 6,
+          "train": 0.3,
+          "optimizer_tokens": 21322791
+        }
+      ]
+    },
+    {
+      "benchmark": "telecom",
+      "method": "AHE",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.46,
+          "optimizer_tokens": 18510187
+        },
+        {
+          "round": 2,
+          "train": 0.54,
+          "optimizer_tokens": 35043410
+        },
+        {
+          "round": 3,
+          "train": 0.86,
+          "optimizer_tokens": 49187608
+        },
+        {
+          "round": 4,
+          "train": 0.88,
+          "optimizer_tokens": 63274049
+        },
+        {
+          "round": 5,
+          "train": 0.88,
+          "optimizer_tokens": 75883376
+        },
+        {
+          "round": 6,
+          "train": 1.0,
+          "optimizer_tokens": 88348598
+        }
+      ]
+    },
+    {
+      "benchmark": "telecom",
+      "method": "Life-Harness",
+      "actor": "Qwen3-4B-Instruct",
+      "optimizer": "GPT-5.5",
+      "rounds": 6,
+      "score_scope": "each_round_training_batch",
+      "token_scope": "cumulative evolution input+output; solver/evaluation excluded; cache split not reported",
+      "points": [
+        {
+          "round": 1,
+          "train": 0.36,
+          "optimizer_tokens": 11711806
+        },
+        {
+          "round": 2,
+          "train": 0.78,
+          "optimizer_tokens": 16036978
+        },
+        {
+          "round": 3,
+          "train": 0.9,
+          "optimizer_tokens": 23454801
+        },
+        {
+          "round": 4,
+          "train": 0.92,
+          "optimizer_tokens": 30082366
+        },
+        {
+          "round": 5,
+          "train": 0.84,
+          "optimizer_tokens": 37984775
+        },
+        {
+          "round": 6,
+          "train": 0.82,
+          "optimizer_tokens": 42638396
+        }
+      ]
+    }
+  ],
+  "related": [
+    {
+      "name": "SkillOpt",
+      "url": "https://arxiv.org/html/2605.23904v2",
+      "code": "https://github.com/microsoft/SkillOpt",
+      "surface": "skill_text",
+      "comparable": false,
+      "reason_zh": "官方ALFWorld主结果的做题模型与测试划分不同；作为方法参照，不混入Qwen3-4B榜单。",
+      "reason_en": "Different actor and ALFWorld test split; a method reference, not a Qwen3-4B leaderboard row."
+    },
+    {
+      "name": "Meta-Harness",
+      "url": "https://arxiv.org/abs/2603.28052",
+      "code": "https://github.com/stanford-iris-lab/meta-harness",
+      "surface": "harness_code",
+      "comparable": true,
+      "reason_zh": "五场景可比数值引用Life-Harness的同做题模型适配结果，非原作者原始成绩。",
+      "reason_en": "Five-benchmark numbers are Life-Harness adaptations, not the original authors’ measurements."
+    },
+    {
+      "name": "AHE",
+      "url": "https://arxiv.org/abs/2604.25850",
+      "code": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
+      "surface": "harness_components",
+      "comparable": true,
+      "reason_zh": "主榜引用Life-Harness的同做题模型适配结果；原论文任务不同。",
+      "reason_en": "Main-board values use Life-Harness adaptations with the same actor; the original paper uses other tasks."
+    },
+    {
+      "name": "SkillOpt-Lite / HarnessOpt",
+      "url": "https://arxiv.org/abs/2607.03451",
+      "code": "https://github.com/EvolvingLMMs-Lab/SkillOpt-Lite",
+      "surface": "skill_or_harness",
+      "comparable": false,
+      "reason_zh": "完整Harness修改已有相关工作；未找到可直接并列的同协议五场景结果。",
+      "reason_en": "Related work already edits full harnesses; no directly aligned five-benchmark row is asserted."
+    },
+    {
+      "name": "GEPA",
+      "url": "https://arxiv.org/abs/2507.19457",
+      "code": "https://github.com/gepa-ai/gepa",
+      "surface": "reflective_prompt_search",
+      "comparable": false,
+      "reason_zh": "参考反思与互补候选搜索；不把不同任务和模型的分数硬填进主榜。",
+      "reason_en": "A reflection and candidate-search reference; unrelated tasks/models are not forced into the main board."
+    },
+    {
+      "name": "Harness-Delta Attribution",
+      "url": "https://arxiv.org/abs/2610.22466",
+      "code": "https://github.com/Wenwen-D/HarnessDeltaAttribution",
+      "surface": "harness_gain_attribution",
+      "comparable": false,
+      "reason_zh": "区分过拟合、推理开销扩大与可泛化收益；ALFWorld模型、任务划分不同，不并入主榜。其模型缩放主要改变做题模型，我们的对照改变优化模型。",
+      "reason_en": "Separates overfitting, test-time scaling and generalizable gains. Different ALFWorld actors/splits; excluded from the main board. Its scaling changes executors, whereas our optimizer comparison changes improvers."
+    }
+  ]
+}

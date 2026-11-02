@@ -151,7 +151,7 @@ def collect_group(base,root,outdir,group_id,kind):
     if f:
         final={k:f.get(k) for k in ('best','rounds','loop','test_policy','selection_metric','startpoint')}
         for split in ('train','validation','test'):
-            if split in f:final[split]={k:simple_metrics(v) for k,v in f[split].items() if k in ('baseline','best')}
+            if isinstance(f.get(split),dict):final[split]={k:simple_metrics(v) for k,v in f[split].items() if k in ('baseline','best')}
     final_test=None
     if f and f.get('best'):
         expected=sum(x['episodes'] for x in man.get('test',[])) or f.get('test',{}).get('best',{}).get('episodes')

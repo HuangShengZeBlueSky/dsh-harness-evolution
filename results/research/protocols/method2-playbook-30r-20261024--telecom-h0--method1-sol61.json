@@ -23,5 +23,6 @@
     "max_tokens": 2048,
     "simulator": "glm-5.3-flash",
     "test_schedule": "final"
-  }
+  },
+  "publication_note": "Configuration evidence, not a complete environment bundle. Use the released reproduction instructions for executable setup."
 }

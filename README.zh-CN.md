@@ -4,9 +4,9 @@
 
 **方法、进化曲线、可复现配置与真实插件产物。**
 
-固定做题模型，进化运行时 Harness。我们公开每种循环改了什么、怎样采用候选、结果如何，以及代码目前能复现到哪一层。
+固定Qwen3-4B做题模型，扩大可修改空间：提示词、Skill、工具、状态与完整Harness。基于DSH复用已有框架，研究更强的优化模型能否提出更复杂且可泛化的机制。真实结果、逐轮曲线和优化Token共同公开。
 
-[**8轮架构试验**](https://huangshengzebluesky.github.io/dsh-harness-evolution/pilot.html) · [**架构与学习工作台**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html) · [**交互式摘要与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/METHODS.zh-CN.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md)
+[**进化主榜与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/SCALING-METHOD.zh-CN.md) · [**研究数据**](results/research/README.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md) · [**架构工作台**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html)
 
 ## 五场景产物
 
@@ -28,6 +28,8 @@
 - **总分提高与机制成立分别判断。** 已加载、已触发、已传入经验是执行事实；目标修复和整体收益是另外两层证据。
 
 - **平均分与稳定性分开。** OS机制反馈平均成功32.87%高于摘要29.40%，三次全过25.00%却低于26.39%；单次搜索显示覆盖与稳定性没有同步改善。
+
+[**核心方法：修改空间与模型能力**](docs/SCALING-METHOD.zh-CN.md) · [**详细研究记录**](results/research/README.md)
 
 ![各方法最终测试](assets/method-final-tests.png)
 

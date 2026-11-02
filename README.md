@@ -4,9 +4,9 @@
 
 **Methods, evolution curves, reproducible configurations, and measured plugin artifacts.**
 
-Freeze the actor and evolve its runtime harness. Inspect what each loop changes, how candidates are selected, what happened, and which reproduction steps are actually supported.
+Freeze the Qwen3-4B actor and expand the editable space from prompts and skills to tools, state and full harness mechanisms. Reuse DSH interfaces and study whether more capable optimizers can exploit this space. Publish measured outcomes, checkpoint curves and optimization tokens together.
 
-[**Architecture lab (中文)**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html) · [**Interactive summary and all curves**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [**Methods**](docs/METHODS.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md)
+[**Evolution leaderboard and curves**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [**Method**](docs/SCALING-METHOD.md) · [**Research data**](results/research/README.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md) · [**Architecture**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html)
 
 ## Five benchmark artifacts
 
@@ -28,6 +28,8 @@ These artifacts come from different methods and protocols, not one unified algor
 - **Overall gain and mechanism support are separate.** Loading, triggering, and experience delivery are execution facts; intended repairs and global outcome changes require additional evidence.
 
 - **Mean success and reliability can diverge.** OS mechanism feedback reached 32.87% versus summary 29.40%, yet all-three success was 25.00% versus 26.39%. This is a single-search observation.
+
+[**Core method: editable space and optimizer capability**](docs/SCALING-METHOD.md) · [**Detailed research records**](results/research/README.md)
 
 ![Final tests by method](assets/method-final-tests.png)
 
