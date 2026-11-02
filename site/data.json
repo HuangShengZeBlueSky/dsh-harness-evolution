@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T09:26:35.572101+00:00",
+  "updated_at": "2026-11-02T09:28:23.915409+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -19631,7 +19631,7 @@
       "effort": "high",
       "start": "H0 empty enhancement plugins",
       "collection": "l4_fixed100_reproduction",
-      "rounds": 32,
+      "rounds": 33,
       "budget": 40,
       "adopted": 11,
       "best": "v28",
@@ -19693,18 +19693,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 98032718,
-        "cached_input_tokens": 97490176,
-        "output_tokens": 282507,
-        "reasoning_output_tokens": 160405,
-        "uncached_input_tokens": 542542,
-        "total_tokens": 98315225
+        "input_tokens": 98694370,
+        "cached_input_tokens": 98150528,
+        "output_tokens": 283305,
+        "reasoning_output_tokens": 160643,
+        "uncached_input_tokens": 543842,
+        "total_tokens": 98977675
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 5.089189350472556,
+      "hours": 5.185775351723035,
       "configuration_file": "results/research/protocols/l4-fixed100-sol61-high-20261102--experiments--dbbench--sol61-high.json",
       "task_manifest_file": "results/research/tasks/l4-fixed100-sol61-high-20261102--experiments--dbbench--sol61-high.json",
       "state": "optimizer_running",
@@ -20380,6 +20380,27 @@
           "optimizer_tokens": 97276254,
           "repairs": null,
           "regressions": null
+        },
+        {
+          "round": 33,
+          "version": "v33",
+          "parent": "v28",
+          "adopted": false,
+          "train": 0.76,
+          "train_strict": null,
+          "reward": 0.76,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 98844660,
+          "repairs": null,
+          "regressions": null
         }
       ]
     },
@@ -20453,12 +20474,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 114058567,
-        "cached_input_tokens": 113371392,
-        "output_tokens": 155648,
+        "input_tokens": 114988440,
+        "cached_input_tokens": 114300800,
+        "output_tokens": 155710,
         "reasoning_output_tokens": 50225,
-        "uncached_input_tokens": 687175,
-        "total_tokens": 114214215
+        "uncached_input_tokens": 687640,
+        "total_tokens": 115144150
       },
       "token_sources": {
         "session_cumulative": 1
@@ -21318,12 +21339,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 65746110,
-        "cached_input_tokens": 65069696,
-        "output_tokens": 204264,
+        "input_tokens": 65899429,
+        "cached_input_tokens": 65222784,
+        "output_tokens": 204295,
         "reasoning_output_tokens": 120982,
-        "uncached_input_tokens": 676414,
-        "total_tokens": 65950374
+        "uncached_input_tokens": 676645,
+        "total_tokens": 66103724
       },
       "token_sources": {
         "session_cumulative": 1
@@ -113897,7 +113918,7 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-02T09:26:35.572101+00:00",
+    "collected_at": "2026-11-02T09:28:23.915409+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 64,
@@ -126201,17 +126222,17 @@
       }
     ],
     "execution": {
-      "updated_at": 1793611584.5353973,
+      "updated_at": 1793611684.7112505,
       "counts": {
         "not_selected_for_backfill": 532,
         "complete": 18,
         "running": 6,
         "queued": 71,
-        "waiting_for_search_completion": 13
+        "waiting_for_search_completion": 14
       },
-      "done_test_episodes": 12007,
-      "planned_test_episodes": 348383,
-      "planned_highpoint_episodes": 53260,
+      "done_test_episodes": 12393,
+      "planned_test_episodes": 348983,
+      "planned_highpoint_episodes": 53860,
       "completed_highpoint_episodes": 7491
     }
   }
