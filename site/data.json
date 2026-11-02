@@ -117690,6 +117690,1334 @@
       "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
     }
   },
+  "master_comparison": {
+    "title_zh": "统一主表：性能、模型、数据来源与优化预算",
+    "title_en": "Unified main comparison: performance, models, provenance and optimization budget",
+    "benchmarks": [
+      "alfworld",
+      "dbbench",
+      "webshop",
+      "osbench",
+      "telecom"
+    ],
+    "groups": {
+      "paper_qwen": {
+        "zh": "Qwen3-4B：论文报告与本方法",
+        "en": "Qwen3-4B: literature and our framework"
+      },
+      "paper_other": {
+        "zh": "论文报告 · 其他执行模型",
+        "en": "Paper reports · other executors"
+      },
+      "local": {
+        "zh": "共同执行模型实测 · Qwen3-4B",
+        "en": "Local measurements · Qwen3-4B"
+      },
+      "frozen_web": {
+        "zh": "共同冻结环境 · WebShop",
+        "en": "Common frozen environment · WebShop"
+      },
+      "pending": {
+        "zh": "待适配或待资源的相关方法",
+        "en": "Related methods awaiting adapters or resources"
+      }
+    },
+    "rows": [
+      {
+        "id": "paper-bare",
+        "method": "Bare",
+        "executor": "Qwen3-4B",
+        "source": "P-L",
+        "group": "paper_qwen",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.1651,
+          "dbbench": 0.44,
+          "webshop": 0.295,
+          "osbench": 0.215,
+          "telecom": 0.2583
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-align",
+        "method": "ALIGN",
+        "executor": "Qwen3-4B",
+        "source": "P-L",
+        "group": "paper_qwen",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.2836,
+          "dbbench": null,
+          "webshop": 0.18,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "align",
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2505.21055",
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-agentsquare",
+        "method": "AgentSquare",
+        "executor": "Qwen3-4B",
+        "source": "P-L",
+        "group": "paper_qwen",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.2936,
+          "dbbench": null,
+          "webshop": 0.185,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "agentsquare",
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2410.06153",
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-meta",
+        "method": "Meta-Harness",
+        "executor": "Qwen3-4B",
+        "source": "P-L",
+        "group": "paper_qwen",
+        "rounds": 6,
+        "values": {
+          "alfworld": 0.358,
+          "dbbench": 0.503,
+          "webshop": 0.425,
+          "osbench": 0.257,
+          "telecom": 0.508
+        },
+        "tokens": {
+          "alfworld": 37138309,
+          "dbbench": 32813601,
+          "webshop": 36741591,
+          "osbench": 26787235,
+          "telecom": 21322791
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "meta",
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2603.28052",
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-ahe",
+        "method": "AHE",
+        "executor": "Qwen3-4B",
+        "source": "P-L",
+        "group": "paper_qwen",
+        "rounds": 6,
+        "values": {
+          "alfworld": 0.89,
+          "dbbench": 0.573,
+          "webshop": 0.39,
+          "osbench": 0.375,
+          "telecom": 0.95
+        },
+        "tokens": {
+          "alfworld": 95632347,
+          "dbbench": 104524554,
+          "webshop": 103843620,
+          "osbench": 93994363,
+          "telecom": 88348598
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "ahe",
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2604.25850",
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-life",
+        "method": "Life-Harness v3",
+        "executor": "Qwen3-4B",
+        "source": "P-L",
+        "group": "paper_qwen",
+        "rounds": 6,
+        "values": {
+          "alfworld": 0.8807,
+          "dbbench": 0.65,
+          "webshop": 0.455,
+          "osbench": 0.396,
+          "telecom": 0.9
+        },
+        "tokens": {
+          "alfworld": 24288432,
+          "dbbench": 11204889,
+          "webshop": 37750993,
+          "osbench": 25709768,
+          "telecom": 42638396
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-skillfm",
+        "method": "SkillFM*",
+        "executor": "Qwen3-4B",
+        "source": "P*",
+        "group": "paper_qwen",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.7701,
+          "dbbench": null,
+          "webshop": 0.146,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "skillfm"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2609.39382"
+        ]
+      },
+      {
+        "id": "paper-life-earlier",
+        "method": "Life-Harness v1/v2",
+        "executor": "Qwen3-4B",
+        "source": "P-v1/2",
+        "group": "paper_qwen",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": 0.575
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "life"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2605.22166"
+        ]
+      },
+      {
+        "id": "paper-harness-r1",
+        "method": "Harness-R1",
+        "executor": "Qwen3-4B",
+        "source": "P*",
+        "group": "paper_qwen",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.291,
+          "dbbench": 0.557,
+          "webshop": 0.386,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "harness-r1"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2608.02276"
+        ]
+      },
+      {
+        "id": "ours-historical",
+        "method": "Our framework",
+        "executor": "Qwen3-4B",
+        "source": "H",
+        "group": "paper_qwen",
+        "rounds": "8–40",
+        "values": {
+          "alfworld": 0.9541284403669725,
+          "dbbench": 0.7055555555555556,
+          "webshop": 0.47,
+          "osbench": 0.39351851851851855,
+          "telecom": 0.8416666666666667
+        },
+        "tokens": {
+          "alfworld": 27863643,
+          "dbbench": 127067227,
+          "webshop": 116965771,
+          "osbench": 26024065,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.0,
+          "dbbench": 0.003849001794597466,
+          "webshop": 0.008660254037844362,
+          "osbench": 0.021215628217388156,
+          "telecom": 0.10103629710818453
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [],
+        "ours": true,
+        "paper_urls": []
+      },
+      {
+        "id": "paper-skillopt",
+        "method": "SkillOpt",
+        "executor": "GPT-5.5",
+        "source": "P-S",
+        "group": "paper_other",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.955,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "skillopt",
+          "skillopt"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2605.23904",
+          "https://arxiv.org/abs/2605.23904"
+        ]
+      },
+      {
+        "id": "paper-gepa",
+        "method": "GEPA (SkillOpt evaluation)",
+        "executor": "GPT-5.5",
+        "source": "P-S",
+        "group": "paper_other",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.858,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "gepa",
+          "skillopt"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2507.19457",
+          "https://arxiv.org/abs/2605.23904"
+        ]
+      },
+      {
+        "id": "paper-textgrad",
+        "method": "TextGrad (SkillOpt evaluation)",
+        "executor": "GPT-5.5",
+        "source": "P-S",
+        "group": "paper_other",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.828,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "textgrad",
+          "skillopt"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2406.07496",
+          "https://arxiv.org/abs/2605.23904"
+        ]
+      },
+      {
+        "id": "paper-harnessx",
+        "method": "HarnessX",
+        "executor": "Qwen3.5-9B",
+        "source": "P2",
+        "group": "paper_other",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.97,
+          "dbbench": null,
+          "webshop": 0.49,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "harnessx"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2606.14249"
+        ]
+      },
+      {
+        "id": "paper-curator-gemini",
+        "method": "GEPA-Curator / Gemini",
+        "executor": "gpt-oss-120b",
+        "source": "P*",
+        "group": "paper_other",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.918,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.014,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "gepa-curator"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2610.37651"
+        ]
+      },
+      {
+        "id": "paper-curator-claude",
+        "method": "GEPA-Curator / Claude",
+        "executor": "gpt-oss-120b",
+        "source": "P*",
+        "group": "paper_other",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.984,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.006,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "gepa-curator"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2610.37651"
+        ]
+      },
+      {
+        "id": "local-life-harness-public-built-in",
+        "method": "Life-Harness (released)",
+        "executor": "Qwen3-4B",
+        "source": "M",
+        "group": "local",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.8776758409785933,
+          "dbbench": 0.6411111111111111,
+          "webshop": null,
+          "osbench": 0.3680555555555556,
+          "telecom": 0.5750000000000001
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.01909785320611132,
+          "dbbench": 0.003849001794597466,
+          "webshop": null,
+          "osbench": 0.0,
+          "telecom": 0.09013878188659975
+        },
+        "states": {
+          "alfworld": "measured",
+          "dbbench": "measured",
+          "webshop": "unreported",
+          "osbench": "measured",
+          "telecom": "measured"
+        },
+        "citations": [],
+        "paper_urls": []
+      },
+      {
+        "id": "local-align-released-react-interface",
+        "method": "ALIGN (released)",
+        "executor": "Qwen3-4B",
+        "source": "M",
+        "group": "local",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.033639143730886854,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.010593582920910566,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "measured",
+          "dbbench": "unreported",
+          "webshop": "running",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [],
+        "paper_urls": []
+      },
+      {
+        "id": "local-react",
+        "method": "ReAct",
+        "executor": "Qwen3-4B",
+        "source": "M",
+        "group": "local",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.10703363914373089,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.010593582920910566,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "measured",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "react"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2210.03629"
+        ]
+      },
+      {
+        "id": "local-reflact",
+        "method": "ReflAct",
+        "executor": "Qwen3-4B",
+        "source": "M",
+        "group": "local",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.1834862385321101,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.01834862385321101,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "measured",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "reflact"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2505.15182"
+        ]
+      },
+      {
+        "id": "local-automanual",
+        "method": "AutoManual",
+        "executor": "Qwen3-4B",
+        "source": "M",
+        "group": "local",
+        "rounds": null,
+        "values": {
+          "alfworld": 0.7614678899082569,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": 0.01589037438136588,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "measured",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "automanual"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2405.16247"
+        ]
+      },
+      {
+        "id": "local-harness-r1-released-patch",
+        "method": "Harness-R1 (released patch)",
+        "executor": "Qwen3-4B",
+        "source": "M",
+        "group": "local",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "running",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "harness-r1"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2608.02276"
+        ]
+      },
+      {
+        "id": "frozen-life",
+        "method": "Life-Harness",
+        "executor": "Qwen3-4B",
+        "source": "F",
+        "group": "frozen_web",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "running",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [],
+        "paper_urls": []
+      },
+      {
+        "id": "frozen-align",
+        "method": "ALIGN",
+        "executor": "Qwen3-4B",
+        "source": "F",
+        "group": "frozen_web",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "running",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [],
+        "paper_urls": []
+      },
+      {
+        "id": "frozen-ours-v10",
+        "method": "Our framework / checkpoint A",
+        "executor": "Qwen3-4B",
+        "source": "F",
+        "group": "frozen_web",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "running",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [],
+        "ours": true,
+        "paper_urls": []
+      },
+      {
+        "id": "frozen-ours-v12",
+        "method": "Our framework / checkpoint B",
+        "executor": "Qwen3-4B",
+        "source": "F",
+        "group": "frozen_web",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "unreported",
+          "dbbench": "unreported",
+          "webshop": "running",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [],
+        "ours": true,
+        "paper_urls": []
+      },
+      {
+        "id": "pending-expel",
+        "method": "ExpeL",
+        "executor": "Qwen3-4B",
+        "source": "Q",
+        "group": "pending",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "pending",
+          "dbbench": "unreported",
+          "webshop": "pending",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "expel"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2308.10144"
+        ]
+      },
+      {
+        "id": "pending-agentsquare",
+        "method": "AgentSquare (local)",
+        "executor": "Qwen3-4B",
+        "source": "Q",
+        "group": "pending",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "pending",
+          "dbbench": "unreported",
+          "webshop": "pending",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "agentsquare"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2410.06153"
+        ]
+      },
+      {
+        "id": "pending-vbl",
+        "method": "Verify–Backtrack Loop",
+        "executor": "Qwen3-4B",
+        "source": "Q",
+        "group": "pending",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "pending",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "vbl"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2610.41564"
+        ]
+      },
+      {
+        "id": "pending-gepa-curator",
+        "method": "GEPA-Curator (local)",
+        "executor": "Qwen3-4B",
+        "source": "Q",
+        "group": "pending",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "pending",
+          "dbbench": "unreported",
+          "webshop": "unreported",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "gepa-curator"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2610.37651"
+        ]
+      },
+      {
+        "id": "pending-skillfm",
+        "method": "SkillFM (local)",
+        "executor": "Qwen3-4B",
+        "source": "Q",
+        "group": "pending",
+        "rounds": null,
+        "values": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "tokens": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "std": {
+          "alfworld": null,
+          "dbbench": null,
+          "webshop": null,
+          "osbench": null,
+          "telecom": null
+        },
+        "states": {
+          "alfworld": "weights",
+          "dbbench": "unreported",
+          "webshop": "weights",
+          "osbench": "unreported",
+          "telecom": "unreported"
+        },
+        "citations": [
+          "skillfm"
+        ],
+        "paper_urls": [
+          "https://arxiv.org/abs/2609.39382"
+        ]
+      }
+    ],
+    "notes_zh": "每格先列成功率及可用标准差，再列累计优化Token（百万）。P-L：Life-Harness论文适配对照；P-S：SkillOpt论文评测；P*：原文划分；P2：进化集峰值pass@2；M：本地测量；H：历史释放产物；F：共同冻结WebShop环境；Q：待适配或资源。不同分组保留各自协议。",
+    "notes_en": "Cells give success and available SD, then cumulative optimizer tokens in millions. P-L: Life-Harness adaptation; P-S: SkillOpt evaluation; P*: original split; P2: adaptation-set peak pass@2; M: local measurement; H: historical release; F: common frozen WebShop environment; Q: pending adapter/resources. Each group retains its protocol."
+  },
   "papers": {
     "schema_version": 1,
     "source_url": "https://arxiv.org/html/2605.22166v3",
