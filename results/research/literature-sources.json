@@ -334,5 +334,90 @@
     "year": 2026,
     "arxiv": "2608.06301",
     "url": "https://arxiv.org/abs/2608.06301"
+  },
+  "react": {
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "authors": [
+      "Yao, Shunyu",
+      "Zhao, Jeffrey",
+      "Yu, Dian",
+      "Du, Nan",
+      "Shafran, Izhak",
+      "Narasimhan, Karthik",
+      "Cao, Yuan"
+    ],
+    "year": 2022,
+    "arxiv": "2210.03629",
+    "url": "https://arxiv.org/abs/2210.03629"
+  },
+  "reflact": {
+    "title": "ReflAct: World-Grounded Decision Making in LLM Agents via Goal-State Reflection",
+    "authors": [
+      "Kim, Jeonghye",
+      "Rhee, Sojeong",
+      "Kim, Minbeom",
+      "Kim, Dohyung",
+      "Lee, Sangmook",
+      "Sung, Youngchul",
+      "Jung, Kyomin"
+    ],
+    "year": 2025,
+    "arxiv": "2505.15182",
+    "url": "https://arxiv.org/abs/2505.15182"
+  },
+  "reflexion": {
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "authors": [
+      "Shinn, Noah",
+      "Cassano, Federico",
+      "Berman, Edward",
+      "Gopinath, Ashwin",
+      "Narasimhan, Karthik",
+      "Yao, Shunyu"
+    ],
+    "year": 2023,
+    "arxiv": "2303.11366",
+    "url": "https://arxiv.org/abs/2303.11366"
+  },
+  "automanual": {
+    "title": "AutoManual: Constructing Instruction Manuals by LLM Agents via Interactive Environmental Learning",
+    "authors": [
+      "Chen, Minghao",
+      "Li, Yihang",
+      "Yang, Yanting",
+      "Yu, Shiyu",
+      "Lin, Binbin",
+      "He, Xiaofei"
+    ],
+    "year": 2024,
+    "arxiv": "2405.16247",
+    "url": "https://arxiv.org/abs/2405.16247"
+  },
+  "adaplanner": {
+    "title": "AdaPlanner: Adaptive Planning from Feedback with Language Models",
+    "authors": [
+      "Sun, Haotian",
+      "Zhuang, Yuchen",
+      "Kong, Lingkai",
+      "Dai, Bo",
+      "Zhang, Chao"
+    ],
+    "year": 2023,
+    "arxiv": "2305.16653",
+    "url": "https://arxiv.org/abs/2305.16653"
+  },
+  "expel": {
+    "title": "ExpeL: LLM Agents Are Experiential Learners",
+    "authors": [
+      "Zhao, Andrew",
+      "Huang, Daniel",
+      "Xu, Quentin",
+      "Lin, Matthieu",
+      "Liu, Yong-Jin",
+      "Huang, Gao"
+    ],
+    "year": 2023,
+    "arxiv": "2308.10144",
+    "url": "https://arxiv.org/abs/2308.10144"
   }
 }

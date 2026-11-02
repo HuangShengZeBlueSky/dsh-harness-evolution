@@ -41,8 +41,8 @@
       ],
       "surface": "modular agent",
       "status": "awaiting_native_adapter",
-      "reason_zh": "模块化规划、推理、工具、记忆；公开运行入口存在，尚未完成我们的Qwen端点及题单适配。",
-      "reason_en": "Public runtime exists; Qwen endpoint and fixed-task adaptation not completed."
+      "reason_zh": "已有ALFWorld/WebShop模块代码；推荐组合涉及OpenAI嵌入检索与跨任务记忆，接入共同评测前需明确这些额外资源和测试期记忆规则。",
+      "reason_en": "Public modular policies exist; the recommended combination uses embedding retrieval and cross-task memory, requiring explicit resource and evaluation-memory alignment."
     },
     {
       "name": "Meta-Harness",
@@ -134,22 +134,21 @@
         "alfworld"
       ],
       "surface": "goal-state reflection",
-      "status": "awaiting_native_adapter",
-      "reason_zh": "原论文可查；按其原始指令与示例接入，保持相同测试题与执行预算。",
-      "reason_en": "Use original instructions/examples with shared tasks and execution budgets."
+      "status": "native_three_repeats_running_alfworld",
+      "reason_zh": "原论文指令与两条附录示例已接入共同ALFWorld环境；109题×3，Qwen3-4B，单题50次模型调用上限；不是原论文模型成绩。",
+      "reason_en": "Original instructions and two appendix demonstrations run on shared ALFWorld109×3 with Qwen3-4B and50 model calls; cross-executor prompt transfer."
     },
     {
       "name": "AutoManual",
       "paper": "https://github.com/minghchen/automanual",
       "code": "https://github.com/minghchen/automanual",
       "benchmarks": [
-        "alfworld",
-        "webshop"
+        "alfworld"
       ],
       "surface": "learned manual",
-      "status": "awaiting_native_adapter",
-      "reason_zh": "需冻结训练阶段生成的手册，并区分生成手册与测试期间更新。",
-      "reason_en": "Freeze training-derived manuals and distinguish manual generation from test-time adaptation."
+      "status": "released_manual_planner_three_repeats_running",
+      "reason_zh": "冻结原作者释放的手册、六类技能与Planner测试流程，在共同ALFWorld109题×3复测。原文WebArena不是WebShop。",
+      "reason_en": "Frozen released manual, six task-type skills and original planner on shared ALFWorld109×3. Original WebArena is not WebShop."
     },
     {
       "name": "GEPA",
@@ -174,6 +173,44 @@
       "status": "awaiting_protocol_verification",
       "reason_zh": "作为完整Harness搜索参照；确认共享场景与冻结权重协议后才入主榜。",
       "reason_en": "Full-harness search reference; benchmark overlap and frozen-weight protocol still require verification."
+    },
+    {
+      "name": "ReAct",
+      "paper": "https://arxiv.org/abs/2210.03629",
+      "code": "https://github.com/ysymyth/ReAct",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "reasoning-action prompt",
+      "status": "native_three_repeats_running_alfworld",
+      "reason_zh": "与ReflAct采用相同两条任务示例与ALFWorld题单，比较Thought和Reflection策略；冻结提示，无测试反馈。",
+      "reason_en": "Matched two demonstrations and shared ALFWorld tasks compare thought versus reflection; frozen prompts with no test feedback."
+    },
+    {
+      "name": "AdaPlanner",
+      "paper": "https://arxiv.org/abs/2305.16653",
+      "code": null,
+      "benchmarks": [
+        "alfworld"
+      ],
+      "surface": "adaptive code planning and skills",
+      "status": "primary_paper_verified_pending_adapter",
+      "reason_zh": "从既有方法引用链发现；已核实ALFWorld重合，下一批适配原始代码规划与反馈机制。",
+      "reason_en": "Discovered through prior-work references; ALFWorld overlap verified, code-planning/feedback adapter pending."
+    },
+    {
+      "name": "ExpeL",
+      "paper": "https://arxiv.org/abs/2308.10144",
+      "code": "https://github.com/LeapLabTHU/ExpeL",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "training experience, extracted insights and retrieval",
+      "status": "primary_source_verified_pending_adapter",
+      "reason_zh": "从AutoManual与SkillFM引用链发现；核实原作者代码覆盖ALFWorld/WebShop。需对齐训练经验、规则提取和评测时检索。",
+      "reason_en": "Discovered through AutoManual and SkillFM references; official code covers ALFWorld/WebShop. Training experience, insight extraction and inference retrieval need alignment."
     }
   ]
 }
