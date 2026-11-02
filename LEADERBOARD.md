@@ -4,13 +4,13 @@
 
 ![Multi-method leaderboard](assets/leaderboard.png)
 
-| Benchmark | Bare | ALIGN | AgentSquare | Meta-Harness | AHE | Life-Harness v3 | Ours |
-|---|---|---|---|---|---|---|---|
-| ALFWorld | 16.51% | 28.36% | 29.36% | 35.80% | 89.00% | 88.07% | **95.41%** |
-| DBBench | 44.00% | — | — | 50.30% | 57.30% | 65.00% | **70.56%** |
-| WebShop | 29.50% | 18.00% | 18.50% | 42.50% | 39.00% | 45.50% | **47.00%** |
-| OSBench | 21.50% | — | — | 25.70% | 37.50% | 39.60% | **39.35%** |
-| τ²-Telecom | 25.83% | — | — | 50.80% | 95.00% | 90.00% | **84.17%** |
+| Benchmark | Bare | ALIGN | AgentSquare | Meta-Harness | AHE | Life-Harness v3 | SkillFM* | Ours |
+|---|---|---|---|---|---|---|---|---|
+| ALFWorld | 16.51% | 28.36% | 29.36% | 35.80% | 89.00% | 88.07% | 77.01% | **95.41%** |
+| DBBench | 44.00% | — | — | 50.30% | 57.30% | 65.00% | — | **70.56%** |
+| WebShop | 29.50% | 18.00% | 18.50% | 42.50% | 39.00% | 45.50% | 14.60% | **47.00%** |
+| OSBench | 21.50% | — | — | 25.70% | 37.50% | 39.60% | — | **39.35%** |
+| τ²-Telecom | 25.83% | — | — | 50.80% | 95.00% | 90.00% | — | **84.17%** |
 
 The Ours column shows the highest complete test score among published promoted checkpoints, including retrospective releases. Training-selected final artifacts remain separate below; a retrospective high score is not a fresh independent test.
 
@@ -57,6 +57,7 @@ Sources: [v1 Table 7](https://arxiv.org/html/2605.22166v1), [v2 Table 8](https:/
 | Meta-Harness | Searches harness programs using previous code, scores, and traces. |
 | AHE | Edits harness files and checks expected effects in evaluations. |
 | Life-Harness v3 | Evolves interventions across four interaction lifecycle layers. |
+| SkillFM* | Task-conditioned skill generation; original paper split and auxiliary generator. |
 | Ours | Evolve DSH plugins after mapping current capabilities; assign problem-class responsibilities and evaluate adoption. |
 
 ## Telecom reliability and WebShop mean reward
