@@ -63,6 +63,7 @@ def plot(a,r,reference):
   measured={x['version']:x.get('test_measurement') or {} for x in run.get('curve',[])}
   for p in points:
    t=measured.get(p['version'],{})
+   if r['benchmark']=='webshop' and t.get('origin')=='backfill' and (ROOT/'results/research/webshop-environment-status.json').exists():t={}
    if t.get('complete') and t.get('strict_pass_at_1') is not None:
     p['strict_test' if r['benchmark']=='webshop' else 'test']=t['strict_pass_at_1']
     rates=t.get('strict_repeat_means') if r['benchmark']=='webshop' else t.get('repeat_means')

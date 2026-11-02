@@ -1,0 +1,11 @@
+{
+  "benchmark": "webshop",
+  "comparison_status": "environment_alignment_pending",
+  "main_search": "paused_at_27_of_40",
+  "reason": "Runtime restart regenerated product prices and task price bounds. Historical environment snapshot has not been recovered; session failures also need classification.",
+  "main_score": 0.47,
+  "new_measurement": 0.4816666666666667,
+  "new_measurement_rank_eligible": false,
+  "backfill_overlay_allowed": false,
+  "preserve_all_measurements": true
+}

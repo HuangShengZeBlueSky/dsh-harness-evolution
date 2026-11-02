@@ -26,6 +26,8 @@ def build(root):
         oldpoints = {p['version']: p for p in old.get('points', [])}
         for p in r['curve']:
             t = p.get('test_measurement') or {}
+            if r['benchmark']=='webshop' and t.get('origin')=='backfill' and (root/'results/research/webshop-environment-status.json').exists():
+                t = {}
             legacy = oldpoints.get(p['version'], {})
             if not t and legacy.get('independent_test'):
                 z = legacy['independent_test']

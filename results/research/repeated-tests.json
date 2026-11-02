@@ -1,6 +1,6 @@
 {
   "updated_at": 1793618749.378394,
-  "definition": "Each repeat evaluates the same frozen harness on the complete fixed test set. \u00b1 is sample standard deviation across 3 repeat success rates (ddof=1); sample variance also stored. Not 3 independent searches.",
+  "definition": "Each repeat evaluates the same frozen harness on the complete fixed test set. ± is sample standard deviation across 3 repeat success rates (ddof=1); sample variance also stored. Not 3 independent searches.",
   "results": [
     {
       "complete": true,
@@ -80,7 +80,9 @@
       "benchmark": "webshop",
       "source": "paper-comparisons-3x-20261102/webshop/episodes.jsonl",
       "measurement_origin": "new",
-      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle"
+      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle",
+      "comparison_eligible": false,
+      "environment_note": "Measured after WebShop environment reconstruction; price/task-bound alignment with the historical environment is pending."
     },
     {
       "complete": true,
@@ -226,7 +228,9 @@
       "benchmark": "webshop",
       "source": "paper-comparisons-3x-20261102/align-webshop/episodes.jsonl",
       "measurement_origin": "new",
-      "artifact_identity": "unmodified official interface_react.py; shared tool-call runtime adapter"
+      "artifact_identity": "unmodified official interface_react.py; shared tool-call runtime adapter",
+      "comparison_eligible": false,
+      "environment_note": "Measured after WebShop environment reconstruction; price/task-bound alignment with the historical environment is pending."
     },
     {
       "complete": true,
