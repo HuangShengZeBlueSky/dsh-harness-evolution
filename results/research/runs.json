@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-02T08:56:03.032671+00:00",
+  "collected_at": "2026-11-02T09:13:34.386564+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -25867,6 +25867,21 @@
           },
           "cross_batch_review": null,
           "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.944954128440367,
+            "mean_reward": 0.944954128440367,
+            "valid_episodes": 109,
+            "expected_episodes": 109,
+            "strict_successes": 103,
+            "repeat_means": {
+              "0": 0.944954128440367
+            },
+            "mean_reward_repeat_population_std": 0.0,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          },
           "optimizer_usage_at_decision": {
             "input_tokens": 19255285,
             "cached_input_tokens": 18858368,
@@ -29805,8 +29820,8 @@
       "baseline_test": null,
       "test_coverage": {
         "promoted": 6,
-        "tested_promoted": 1,
-        "missing_promoted": 5
+        "tested_promoted": 2,
+        "missing_promoted": 4
       },
       "token_accounting": {
         "optimizer": {
@@ -30088,6 +30103,21 @@
           },
           "cross_batch_review": null,
           "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.3211009174311927,
+            "mean_reward": 0.3211009174311927,
+            "valid_episodes": 109,
+            "expected_episodes": 109,
+            "strict_successes": 35,
+            "repeat_means": {
+              "0": 0.3211009174311927
+            },
+            "mean_reward_repeat_population_std": 0.0,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          },
           "optimizer_usage_at_decision": {
             "input_tokens": 3522528,
             "cached_input_tokens": 3402752,
@@ -33879,8 +33909,8 @@
       "baseline_test": null,
       "test_coverage": {
         "promoted": 7,
-        "tested_promoted": 1,
-        "missing_promoted": 6
+        "tested_promoted": 2,
+        "missing_promoted": 5
       },
       "token_accounting": {
         "optimizer": {
@@ -70987,7 +71017,7 @@
         }
       },
       "candidate_budget": 40,
-      "decisions_completed": 29,
+      "decisions_completed": 31,
       "adopted_candidates": 11,
       "champion_changes": 0,
       "status": "optimizer_running",
@@ -72416,11 +72446,109 @@
             "uncached_input_tokens": 451325,
             "total_tokens": 91112388
           }
+        },
+        {
+          "round": 30,
+          "version": "v30",
+          "parent": "v28",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 100,
+            "valid": 100,
+            "invalid": 0,
+            "mean": 0.73,
+            "repeat_means": {
+              "0": 0.73
+            },
+            "repeat_standard_deviation": 0.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793610051.397703,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": null,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 92175326,
+            "cached_input_tokens": 91714560,
+            "output_tokens": 263527,
+            "reasoning_output_tokens": 151676,
+            "uncached_input_tokens": 460766,
+            "total_tokens": 92438853
+          }
+        },
+        {
+          "round": 31,
+          "version": "v31",
+          "parent": "v28",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 100,
+            "valid": 100,
+            "invalid": 0,
+            "mean": 0.76,
+            "repeat_means": {
+              "0": 0.76
+            },
+            "repeat_standard_deviation": 0.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793610688.7762036,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": null,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 94281259,
+            "cached_input_tokens": 93756800,
+            "output_tokens": 270591,
+            "reasoning_output_tokens": 154776,
+            "uncached_input_tokens": 524459,
+            "total_tokens": 94551850
+          }
         }
       ],
       "efficiency": {
-        "first_to_last_decision_seconds": 16677.029148817062,
-        "optimizer_tokens": 91350675,
+        "first_to_last_decision_seconds": 17677.66065454483,
+        "optimizer_tokens": 95011450,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -72445,12 +72573,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 91089577,
-          "cached_input_tokens": 90632192,
-          "output_tokens": 261098,
-          "reasoning_output_tokens": 149974,
-          "uncached_input_tokens": 457385,
-          "total_tokens": 91350675
+          "input_tokens": 94737130,
+          "cached_input_tokens": 94206464,
+          "output_tokens": 274320,
+          "reasoning_output_tokens": 156244,
+          "uncached_input_tokens": 530666,
+          "total_tokens": 95011450
         },
         "learning": null,
         "sessions_observed": 1,
@@ -72524,7 +72652,7 @@
         }
       },
       "candidate_budget": 40,
-      "decisions_completed": 34,
+      "decisions_completed": 36,
       "adopted_candidates": 11,
       "champion_changes": 0,
       "status": "optimizer_running",
@@ -74198,11 +74326,109 @@
             "uncached_input_tokens": 626095,
             "total_tokens": 97996012
           }
+        },
+        {
+          "round": 35,
+          "version": "v35",
+          "parent": "v30",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 100,
+            "valid": 100,
+            "invalid": 0,
+            "mean": 0.73,
+            "repeat_means": {
+              "0": 0.73
+            },
+            "repeat_standard_deviation": 0.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793610044.5821383,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": null,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 101755535,
+            "cached_input_tokens": 101116160,
+            "output_tokens": 142202,
+            "reasoning_output_tokens": 44378,
+            "uncached_input_tokens": 639375,
+            "total_tokens": 101897737
+          }
+        },
+        {
+          "round": 36,
+          "version": "v36",
+          "parent": "v30",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 100,
+            "valid": 100,
+            "invalid": 0,
+            "mean": 0.83,
+            "repeat_means": {
+              "0": 0.83
+            },
+            "repeat_standard_deviation": 0.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793610326.1883192,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": null,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 104414421,
+            "cached_input_tokens": 103764224,
+            "output_tokens": 146750,
+            "reasoning_output_tokens": 46221,
+            "uncached_input_tokens": 650197,
+            "total_tokens": 104561171
+          }
         }
       ],
       "efficiency": {
-        "first_to_last_decision_seconds": 16206.771796941757,
-        "optimizer_tokens": 99720534,
+        "first_to_last_decision_seconds": 17027.31730914116,
+        "optimizer_tokens": 108645279,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -74227,12 +74453,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 99579028,
-          "cached_input_tokens": 98941312,
-          "output_tokens": 141506,
-          "reasoning_output_tokens": 44114,
-          "uncached_input_tokens": 637716,
-          "total_tokens": 99720534
+          "input_tokens": 108493114,
+          "cached_input_tokens": 107817728,
+          "output_tokens": 152165,
+          "reasoning_output_tokens": 48942,
+          "uncached_input_tokens": 675386,
+          "total_tokens": 108645279
         },
         "learning": null,
         "sessions_observed": 1,
@@ -74306,8 +74532,8 @@
         }
       },
       "candidate_budget": 40,
-      "decisions_completed": 21,
-      "adopted_candidates": 9,
+      "decisions_completed": 23,
+      "adopted_candidates": 10,
       "champion_changes": 0,
       "status": "optimizer_running",
       "independent_search_repetitions": 1,
@@ -75385,11 +75611,113 @@
             "uncached_input_tokens": 595308,
             "total_tokens": 60544077
           }
+        },
+        {
+          "round": 22,
+          "version": "v22",
+          "parent": "v17",
+          "adopted": true,
+          "champion_changed": null,
+          "training": {
+            "episodes": 100,
+            "valid": 100,
+            "invalid": 0,
+            "mean": 0.7383809523809524,
+            "strict_pass_at_1": 0.49,
+            "strict_successes": 49,
+            "repeat_means": {
+              "0": 0.7383809523809524
+            },
+            "repeat_standard_deviation": 0.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793609899.757268,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": 0.49,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 61246260,
+            "cached_input_tokens": 60627072,
+            "output_tokens": 194406,
+            "reasoning_output_tokens": 119010,
+            "uncached_input_tokens": 619188,
+            "total_tokens": 61440666
+          }
+        },
+        {
+          "round": 23,
+          "version": "v23",
+          "parent": "v22",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 100,
+            "valid": 100,
+            "invalid": 0,
+            "mean": 0.7456428571428572,
+            "strict_pass_at_1": 0.49,
+            "strict_successes": 49,
+            "repeat_means": {
+              "0": 0.7456428571428572
+            },
+            "repeat_standard_deviation": 0.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793610553.4817255,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": 0.49,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 62624807,
+            "cached_input_tokens": 61981440,
+            "output_tokens": 197332,
+            "reasoning_output_tokens": 119678,
+            "uncached_input_tokens": 643367,
+            "total_tokens": 62822139
+          }
         }
       ],
       "efficiency": {
-        "first_to_last_decision_seconds": 16552.43724989891,
-        "optimizer_tokens": 61165668,
+        "first_to_last_decision_seconds": 17621.48792362213,
+        "optimizer_tokens": 63591822,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -75405,21 +75733,21 @@
         "effort": "high",
         "turn": 2
       },
-      "current_champion": "v17",
+      "current_champion": "v22",
       "baseline_test": null,
       "test_coverage": {
-        "promoted": 9,
+        "promoted": 10,
         "tested_promoted": 0,
-        "missing_promoted": 9
+        "missing_promoted": 10
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 60971402,
-          "cached_input_tokens": 60353536,
-          "output_tokens": 194266,
-          "reasoning_output_tokens": 119001,
-          "uncached_input_tokens": 617866,
-          "total_tokens": 61165668
+          "input_tokens": 63392314,
+          "cached_input_tokens": 62737280,
+          "output_tokens": 199508,
+          "reasoning_output_tokens": 120100,
+          "uncached_input_tokens": 655034,
+          "total_tokens": 63591822
         },
         "learning": null,
         "sessions_observed": 1,
@@ -120193,7 +120521,24 @@
           "planned_target_repairs": null,
           "runtime_evidence": {},
           "cross_batch_review": null,
-          "validation_family_macro": null
+          "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.6466666666666666,
+            "mean_reward": 0.6466666666666666,
+            "valid_episodes": 900,
+            "expected_episodes": 900,
+            "strict_successes": 582,
+            "repeat_means": {
+              "0": 0.6466666666666666,
+              "1": 0.6366666666666667,
+              "2": 0.6566666666666666
+            },
+            "mean_reward_repeat_population_std": 0.008164965809277223,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          }
         },
         {
           "round": 13,
@@ -121901,8 +122246,8 @@
       "baseline_test": null,
       "test_coverage": {
         "promoted": 9,
-        "tested_promoted": 8,
-        "missing_promoted": 1
+        "tested_promoted": 9,
+        "missing_promoted": 0
       },
       "token_accounting": {
         "optimizer": {
@@ -122165,7 +122510,24 @@
           "planned_target_repairs": null,
           "runtime_evidence": {},
           "cross_batch_review": null,
-          "validation_family_macro": null
+          "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.4888888888888889,
+            "mean_reward": 0.4888888888888889,
+            "valid_episodes": 900,
+            "expected_episodes": 900,
+            "strict_successes": 440,
+            "repeat_means": {
+              "0": 0.49,
+              "1": 0.49,
+              "2": 0.4866666666666667
+            },
+            "mean_reward_repeat_population_std": 0.0015713484026367562,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          }
         },
         {
           "round": 2,
@@ -124616,8 +124978,8 @@
       "baseline_test": null,
       "test_coverage": {
         "promoted": 18,
-        "tested_promoted": 15,
-        "missing_promoted": 3
+        "tested_promoted": 16,
+        "missing_promoted": 2
       },
       "token_accounting": {
         "optimizer": {
@@ -133731,6 +134093,23 @@
           "runtime_evidence": {},
           "cross_batch_review": null,
           "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.37037037037037035,
+            "mean_reward": 0.37037037037037035,
+            "valid_episodes": 432,
+            "expected_episodes": 432,
+            "strict_successes": 160,
+            "repeat_means": {
+              "0": 0.3888888888888889,
+              "1": 0.375,
+              "2": 0.3472222222222222
+            },
+            "mean_reward_repeat_population_std": 0.01732248790173122,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          },
           "optimizer_usage_at_decision": {
             "input_tokens": 3194391,
             "cached_input_tokens": 3135488,
@@ -133793,6 +134172,23 @@
           "runtime_evidence": {},
           "cross_batch_review": null,
           "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.3449074074074074,
+            "mean_reward": 0.3449074074074074,
+            "valid_episodes": 432,
+            "expected_episodes": 432,
+            "strict_successes": 149,
+            "repeat_means": {
+              "0": 0.3402777777777778,
+              "1": 0.3333333333333333,
+              "2": 0.3611111111111111
+            },
+            "mean_reward_repeat_population_std": 0.01180328591109441,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          },
           "optimizer_usage_at_decision": {
             "input_tokens": 5437172,
             "cached_input_tokens": 5371520,
@@ -136296,8 +136692,8 @@
       "baseline_test": null,
       "test_coverage": {
         "promoted": 5,
-        "tested_promoted": 3,
-        "missing_promoted": 2
+        "tested_promoted": 5,
+        "missing_promoted": 0
       },
       "token_accounting": {
         "optimizer": {
