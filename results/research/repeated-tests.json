@@ -1,0 +1,208 @@
+{
+  "updated_at": 1793613046.1737738,
+  "definition": "Each repeat evaluates the same frozen harness on the complete fixed test set. \u00b1 is sample standard deviation across 3 repeat success rates (ddof=1); sample variance also stored. Not 3 independent searches.",
+  "results": [
+    {
+      "complete": true,
+      "task_count": 109,
+      "repeats": 3,
+      "valid_episodes": 327,
+      "repeat_rates": {
+        "0": 0.8990825688073395,
+        "1": 0.8623853211009175,
+        "2": 0.8715596330275229
+      },
+      "mean": 0.8776758409785933,
+      "sample_std": 0.01909785320611132,
+      "sample_variance": 0.0003647279970821764,
+      "population_std": 0.015593331845849503,
+      "method": "Life-Harness public built-in",
+      "benchmark": "alfworld",
+      "source": "alfworld-final-headtohead-20261023/life_harness/aligned-episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle"
+    },
+    {
+      "complete": true,
+      "task_count": 300,
+      "repeats": 3,
+      "valid_episodes": 900,
+      "repeat_rates": {
+        "0": 0.6366666666666667,
+        "1": 0.6433333333333333,
+        "2": 0.6433333333333333
+      },
+      "mean": 0.6411111111111111,
+      "sample_std": 0.003849001794597466,
+      "sample_variance": 1.4814814814814512e-05,
+      "population_std": 0.0031426968052735123,
+      "method": "Life-Harness public built-in",
+      "benchmark": "dbbench",
+      "source": "dbbench-methods-20r-20261023/life-harness/runs/evaluations/baseline/test/episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle"
+    },
+    {
+      "complete": true,
+      "task_count": 144,
+      "repeats": 3,
+      "valid_episodes": 432,
+      "repeat_rates": {
+        "0": 0.3680555555555556,
+        "1": 0.3680555555555556,
+        "2": 0.3680555555555556
+      },
+      "mean": 0.3680555555555556,
+      "sample_std": 0.0,
+      "sample_variance": 0.0,
+      "population_std": 0.0,
+      "method": "Life-Harness public built-in",
+      "benchmark": "osbench",
+      "source": "os-life-aligned-20r-20261023/life-reference/runs/evaluations/baseline/test/episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle"
+    },
+    {
+      "complete": false,
+      "task_count": 200,
+      "repeats": 0,
+      "valid_episodes": 36,
+      "repeat_rates": {},
+      "mean": null,
+      "sample_std": null,
+      "sample_variance": null,
+      "population_std": null,
+      "method": "Life-Harness public built-in",
+      "benchmark": "webshop",
+      "source": "paper-comparisons-3x-20261102/webshop/episodes.jsonl",
+      "measurement_origin": "new",
+      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle"
+    },
+    {
+      "complete": true,
+      "task_count": 40,
+      "repeats": 3,
+      "valid_episodes": 120,
+      "repeat_rates": {
+        "0": 0.675,
+        "1": 0.55,
+        "2": 0.5
+      },
+      "mean": 0.5750000000000001,
+      "sample_std": 0.09013878188659975,
+      "sample_variance": 0.008125000000000004,
+      "population_std": 0.07359800721939874,
+      "method": "Life-Harness public built-in",
+      "benchmark": "telecom",
+      "source": "life-telecom-v3-glm-20261027/results/full/results.json",
+      "user_model": "glm-5.3-flash",
+      "artifact_identity": "public built-in H2-H5; not certified paper-final evolved bundle",
+      "measurement_origin": "retained_completed_three_repeats"
+    },
+    {
+      "complete": true,
+      "task_count": 109,
+      "repeats": 3,
+      "valid_episodes": 327,
+      "repeat_rates": {
+        "0": 0.9541284403669725,
+        "1": 0.9541284403669725,
+        "2": 0.9541284403669725
+      },
+      "mean": 0.9541284403669725,
+      "sample_std": 0.0,
+      "sample_variance": 0.0,
+      "population_std": 0.0,
+      "method": "DSH",
+      "benchmark": "alfworld",
+      "checkpoint": "v18",
+      "source": "alfworld-final-headtohead-20261023/champion/aligned-episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "selection_kind": "training_final"
+    },
+    {
+      "complete": true,
+      "task_count": 300,
+      "repeats": 3,
+      "valid_episodes": 900,
+      "repeat_rates": {
+        "0": 0.7033333333333334,
+        "1": 0.7033333333333334,
+        "2": 0.71
+      },
+      "mean": 0.7055555555555556,
+      "sample_std": 0.003849001794597466,
+      "sample_variance": 1.4814814814814512e-05,
+      "population_std": 0.0031426968052735123,
+      "method": "DSH",
+      "benchmark": "dbbench",
+      "checkpoint": "v35",
+      "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61/runs/evaluations/v35/test/episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "selection_kind": "training_final"
+    },
+    {
+      "complete": true,
+      "task_count": 200,
+      "repeats": 3,
+      "valid_episodes": 600,
+      "repeat_rates": {
+        "0": 0.475,
+        "1": 0.46,
+        "2": 0.475
+      },
+      "mean": 0.47,
+      "sample_std": 0.008660254037844362,
+      "sample_variance": 7.499999999999957e-05,
+      "population_std": 0.007071067811865455,
+      "method": "DSH",
+      "benchmark": "webshop",
+      "checkpoint": "v12",
+      "source": "high-value-checkpoint-tests-20261026/jobs/webshop/webshop--expansion--original-best-sol61--v12/runs/evaluations/baseline/test/episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "selection_kind": "retrospective_adopted"
+    },
+    {
+      "complete": true,
+      "task_count": 144,
+      "repeats": 3,
+      "valid_episodes": 432,
+      "repeat_rates": {
+        "0": 0.3888888888888889,
+        "1": 0.375,
+        "2": 0.4166666666666667
+      },
+      "mean": 0.39351851851851855,
+      "sample_std": 0.021215628217388156,
+      "sample_variance": 0.0004501028806584366,
+      "population_std": 0.01732248790173122,
+      "method": "DSH",
+      "benchmark": "osbench",
+      "checkpoint": "v03",
+      "source": "high-value-checkpoint-tests-20261026/jobs/osbench/osbench--expansion--l4-h0-sol61--v03/runs/evaluations/baseline/test/episodes.jsonl",
+      "measurement_origin": "retained_completed_three_repeats",
+      "selection_kind": "retrospective_adopted"
+    },
+    {
+      "complete": true,
+      "task_count": 40,
+      "repeats": 3,
+      "valid_episodes": 120,
+      "repeat_rates": {
+        "0": 0.9,
+        "1": 0.725,
+        "2": 0.9
+      },
+      "mean": 0.8416666666666667,
+      "sample_std": 0.10103629710818453,
+      "sample_variance": 0.010208333333333338,
+      "population_std": 0.08249579113843057,
+      "method": "DSH",
+      "benchmark": "telecom",
+      "checkpoint": "v06",
+      "source": "dsh-startpoint-ablation-20261020/start-luna-repaired/runs/v06/status.json",
+      "measurement_origin": "retained_completed_three_repeats",
+      "selection_kind": "training_final"
+    }
+  ]
+}

@@ -108,6 +108,9 @@ def build(root):
             'paper_evolution': read(root / 'results/research/paper-evolution.json'),
             'telecom_history': read(root / 'results/life-harness-telecom-history.json'),
             'local_references': read(root / 'results/local-references.json'), 'queue': queue}
+    for key, filename in [('repeated_tests','repeated-tests.json'),('comparison_catalog','comparison-catalog.json')]:
+        p=root/'results/research'/filename
+        data[key]=read(p) if p.exists() else {}
     site = root / 'site'
     site.mkdir(exist_ok=True)
     payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')

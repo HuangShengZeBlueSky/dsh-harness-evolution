@@ -56,11 +56,23 @@ def validate(r,artifact_dir=None):
 
 def plot(a,r,reference):
  points=json.loads((a/'curve.json').read_text())['points']
+ raw=ROOT/'results/research/runs.json'
+ if raw.exists():
+  run=next((x for x in json.loads(raw.read_text())['runs'] if x['id']==r['source_experiment']),{})
+  measured={x['version']:x.get('test_measurement') or {} for x in run.get('curve',[])}
+  for p in points:
+   t=measured.get(p['version'],{})
+   if t.get('complete') and t.get('strict_pass_at_1') is not None:
+    p['strict_test' if r['benchmark']=='webshop' else 'test']=t['strict_pass_at_1']
+    rates=t.get('strict_repeat_means') if r['benchmark']=='webshop' else t.get('repeat_means')
+    if rates and len(rates)==3:
+     import statistics
+     p['test_sample_std']=statistics.stdev(rates.values())
  fig,axes=plt.subplots(2,1,figsize=(10.2,6.5),sharex=True,gridspec_kw={'height_ratios':[2,1.3]})
  fig.patch.set_facecolor('#f7f9fc')
  for ax in axes:
   ax.set_facecolor('white');ax.spines[['top','right']].set_visible(False)
-  ax.spines[['left','bottom']].set_color('#ced6e0');ax.grid(axis='y',color='#edf0f5');ax.set_ylim(0,105)
+  ax.spines[['left','bottom']].set_color('#ced6e0');ax.grid(axis='y',color='#edf0f5')
  strict=r['benchmark']=='webshop' and all('training_strict' in p for p in points)
  series=[('training_strict','Candidate train (strict)','#bf7a24'),('champion_validation_strict','Selected validation (strict)','#3861d8')] if strict else [('after','Candidate train','#bf7a24'),('champion_validation','Selected validation','#3861d8')]
  for key,label,color in series:
@@ -69,6 +81,10 @@ def plot(a,r,reference):
  axes[0].set_title(f"{NAMES[r['benchmark']]}  /  {r['release_id']}",loc='left',fontweight='bold',pad=16)
  axes[0].set_ylabel('Strict success / %' if strict else 'Mean reward / 100' if r['benchmark']=='webshop' else 'Success / %')
  selected_point=next(p for p in points if version_id(p['version'])==version_id(r['checkpoint']))
+ repeat_file=ROOT/'results/research/repeated-tests.json'
+ if repeat_file.exists():
+  repeat=next((x for x in json.loads(repeat_file.read_text())['results'] if x['method']=='DSH' and x['benchmark']==r['benchmark'] and x.get('checkpoint')==r['checkpoint'] and x.get('complete')),None)
+  if repeat:selected_point['test_sample_std']=repeat['sample_std']
  adopted=[p for p in points if p.get('adopted') and p.get(series[0][0]) is not None]
  if adopted:axes[0].scatter([p['round'] for p in adopted],[p[series[0][0]]*100 for p in adopted],marker='D',s=25,facecolors='white',edgecolors='#83551c',zorder=4,label='Adopted record')
  axes[0].axvline(selected_point['round'],color='#0d876f',alpha=.55,linestyle=':',linewidth=1)
@@ -77,14 +93,26 @@ def plot(a,r,reference):
  valid=[p for p in points if p.get(key) is not None]
  if valid:
   axes[1].scatter([p['round'] for p in valid],[p[key]*100 for p in valid],color='#0d876f',s=36,label='Measured checkpoint tests',zorder=3)
+  uncertain=[p for p in valid if p.get('test_sample_std') is not None]
+  if uncertain:axes[1].errorbar([p['round'] for p in uncertain],[p[key]*100 for p in uncertain],yerr=[p['test_sample_std']*100 for p in uncertain],fmt='none',ecolor='#0d876f',alpha=.5,capsize=2,label='± sample SD (3 evaluations)')
  selected=selected_point['round']
  axes[1].scatter([selected],[r['metrics']['pass_at_1']*100],marker='*',s=170,color='#0d876f',edgecolor='white',zorder=4,label='Published retrospective checkpoint' if r.get('selection_kind')=='retrospective_adopted' else 'Training-selected final checkpoint')
  axes[1].annotate(f"{r['checkpoint']} · {pct(r['metrics']['pass_at_1'])}",(selected,r['metrics']['pass_at_1']*100),xytext=(6,10),textcoords='offset points',fontsize=9,color='#0d7563')
  axes[1].axhline(reference[1]*100,linestyle='--',color='#8c96a8',linewidth=1,label=f'Highest paper value: {reference[0]} (reference)')
+ # Each panel uses its own observed range; test scores never share a scale
+ # with development scores. Keep ticks explicit because the origin is cropped.
+ for ax,values in [(axes[0],[p[k]*100 for p in points for k,_,_ in series if p.get(k) is not None]),
+                   (axes[1],[p[key]*100+s*p.get('test_sample_std',0)*100 for p in valid for s in [-1,1]]+[reference[1]*100,r['metrics']['pass_at_1']*100])]:
+  if values:
+   lo,hi=min(values),max(values);pad=max(1.5,(hi-lo)*.18)
+   ax.set_ylim(max(0,lo-pad),min(100,hi+pad))
+   ax.tick_params(axis='y',labelsize=10)
+ for p in valid:
+  ax=axes[1];ax.annotate(f"{p[key]*100:.2f}",(p['round'],p[key]*100),xytext=(0,-15),textcoords='offset points',ha='center',fontsize=7,color='#0d7563')
  axes[1].set_ylabel('Test success / %');axes[1].set_xlabel('Candidate / round index')
  axes[1].legend(loc='lower right',frameon=False,fontsize=8)
  maximum=max([p['round'] for p in points]+[r['rounds']]);axes[1].set_xlim(-.6,maximum+.6)
- fig.text(.09,.015,'Development batches may rotate. Missing tests are not interpolated. Paper and local protocols differ.',fontsize=8,color='#526177')
+ fig.text(.09,.015,'Focused y-ranges, explicitly labeled. Batches may rotate. Missing tests are not interpolated. References may differ.',fontsize=8,color='#526177')
  fig.tight_layout(rect=[0,.035,1,1]);fig.savefig(a/'evolution.png',dpi=150,facecolor=fig.get_facecolor());plt.close(fig)
 
 def artifact_page(a,r):

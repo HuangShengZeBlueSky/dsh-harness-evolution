@@ -1,0 +1,179 @@
+{
+  "checked_on": "2026-11-02",
+  "scope": "Explicit user request: evaluate comparable published methods. Pending adapter/bundle states are not running jobs or measured results.",
+  "methods": [
+    {
+      "name": "Life-Harness",
+      "paper": "https://arxiv.org/html/2605.22166v3",
+      "code": "https://github.com/Tianshi-Xu/Life-Harness",
+      "benchmarks": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench",
+        "telecom"
+      ],
+      "surface": "frozen public built-in",
+      "status": "three_repeats_4_complete_webshop_running",
+      "reason_zh": "公开内置产物四场景三遍完成；WebShop补测中。论文最终进化包身份未确认。",
+      "reason_en": "Four completed triple evaluations; WebShop running. Paper-final bundle identity unconfirmed."
+    },
+    {
+      "name": "ALIGN",
+      "paper": "https://arxiv.org/html/2505.21055",
+      "code": "https://github.com/THUNLP-MT/ALIGN",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "environment interface",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "已核实原论文与代码，需将已释放接口接入固定题单；论文转引成绩不冒充本地复测。",
+      "reason_en": "Official paper/code verified; released interfaces require a fixed-task native adapter."
+    },
+    {
+      "name": "AgentSquare",
+      "paper": "https://arxiv.org/html/2410.06153",
+      "code": "https://github.com/tsinghua-fib-lab/AgentSquare",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "modular agent",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "模块化规划、推理、工具、记忆；公开运行入口存在，尚未完成我们的Qwen端点及题单适配。",
+      "reason_en": "Public runtime exists; Qwen endpoint and fixed-task adaptation not completed."
+    },
+    {
+      "name": "Meta-Harness",
+      "paper": "https://arxiv.org/abs/2603.28052",
+      "code": "https://github.com/stanford-iris-lab/meta-harness",
+      "benchmarks": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench",
+        "telecom"
+      ],
+      "surface": "harness program",
+      "status": "awaiting_paper_final_bundle",
+      "reason_zh": "Life提供原生搜索入口，但未定位与其表格成绩绑定的最终包；从头搜索与产物复测分开排期。",
+      "reason_en": "Life supplies native search entrypoints; a score-bound final bundle has not been located."
+    },
+    {
+      "name": "AHE",
+      "paper": "https://arxiv.org/abs/2604.25850",
+      "code": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
+      "benchmarks": [
+        "alfworld",
+        "dbbench",
+        "webshop",
+        "osbench",
+        "telecom"
+      ],
+      "surface": "harness components",
+      "status": "awaiting_paper_final_bundle",
+      "reason_zh": "已有Life原生适配入口；最终产物缺失时需要实际重新搜索，不能把空Harness当论文产物。",
+      "reason_en": "Life supplies native adaptation. Missing final bundles require an actual new search, not empty policies."
+    },
+    {
+      "name": "HarnessX",
+      "paper": "https://arxiv.org/html/2606.14249",
+      "code": "https://github.com/Darwin-Agent/HarnessX",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "typed runtime processors",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "原结果不同模型、pass@2、同任务进化峰值；当前公开树未定位论文场景的最终产物与完整适配。",
+      "reason_en": "Different actors, pass@2 peaks on adaptation tasks; final benchmark bundles/adapters not located."
+    },
+    {
+      "name": "SkillOpt",
+      "paper": "https://arxiv.org/html/2605.23904v2",
+      "code": null,
+      "benchmarks": [
+        "alfworld"
+      ],
+      "surface": "skill text",
+      "status": "awaiting_released_implementation",
+      "reason_zh": "需论文对应Skill与执行Harness；已有SkillOpt风格本地实验不能冒充原作者复现。",
+      "reason_en": "Requires paper-matched skills and executor harness; local SkillOpt-inspired runs are not original reproductions."
+    },
+    {
+      "name": "SkillFM",
+      "paper": "https://arxiv.org/html/2609.39382",
+      "code": "https://github.com/lulushang999/SkillFM",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "generated skill",
+      "status": "awaiting_generator_and_adapter",
+      "reason_zh": "Qwen3-4B结果存在；需核实生成器权重、额外模型调用与任务划分后运行。",
+      "reason_en": "Qwen3-4B rows exist; generator weights, auxiliary calls and splits must be aligned."
+    },
+    {
+      "name": "Reflexion",
+      "paper": "https://arxiv.org/abs/2303.11366",
+      "code": "https://github.com/noahshinn/reflexion",
+      "benchmarks": [
+        "alfworld"
+      ],
+      "surface": "test-time reflection",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "多次尝试与反馈是方法的一部分；必须报告first-attempt及额外尝试成本，不能冒充冻结单遍。",
+      "reason_en": "Repeated attempts/feedback are part of the method; separate first-attempt and additional-attempt cost."
+    },
+    {
+      "name": "ReflAct",
+      "paper": "https://arxiv.org/html/2505.15182",
+      "code": null,
+      "benchmarks": [
+        "alfworld"
+      ],
+      "surface": "goal-state reflection",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "原论文可查；按其原始指令与示例接入，保持相同测试题与执行预算。",
+      "reason_en": "Use original instructions/examples with shared tasks and execution budgets."
+    },
+    {
+      "name": "AutoManual",
+      "paper": "https://github.com/minghchen/automanual",
+      "code": "https://github.com/minghchen/automanual",
+      "benchmarks": [
+        "alfworld",
+        "webshop"
+      ],
+      "surface": "learned manual",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "需冻结训练阶段生成的手册，并区分生成手册与测试期间更新。",
+      "reason_en": "Freeze training-derived manuals and distinguish manual generation from test-time adaptation."
+    },
+    {
+      "name": "GEPA",
+      "paper": "https://arxiv.org/abs/2507.19457",
+      "code": "https://github.com/gepa-ai/gepa",
+      "benchmarks": [
+        "alfworld"
+      ],
+      "surface": "reflective prompt search",
+      "status": "awaiting_native_adapter",
+      "reason_zh": "通用优化方法；本场景需原生适配与真实搜索，不直接转抄其他任务结果。",
+      "reason_en": "A general optimizer; these tasks require a native adapter and actual optimization."
+    },
+    {
+      "name": "HarnessOpt",
+      "paper": "https://arxiv.org/abs/2607.03451",
+      "code": "https://github.com/EvolvingLMMs-Lab/SkillOpt-Lite",
+      "benchmarks": [
+        "alfworld"
+      ],
+      "surface": "skill or full harness",
+      "status": "awaiting_protocol_verification",
+      "reason_zh": "作为完整Harness搜索参照；确认共享场景与冻结权重协议后才入主榜。",
+      "reason_en": "Full-harness search reference; benchmark overlap and frozen-weight protocol still require verification."
+    }
+  ]
+}
