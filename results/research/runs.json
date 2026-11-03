@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T02:54:49.716388+00:00",
+  "collected_at": "2026-11-03T03:25:46.779154+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -59734,7 +59734,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 425479.32871723175,
-        "optimizer_tokens": 719197773,
+        "optimizer_tokens": 732070619,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59758,12 +59758,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 718473403,
-          "cached_input_tokens": 714350848,
-          "output_tokens": 724370,
-          "reasoning_output_tokens": 259476,
-          "uncached_input_tokens": 4122555,
-          "total_tokens": 719197773
+          "input_tokens": 731344142,
+          "cached_input_tokens": 727213440,
+          "output_tokens": 726477,
+          "reasoning_output_tokens": 259748,
+          "uncached_input_tokens": 4130702,
+          "total_tokens": 732070619
         },
         "learning": null,
         "sessions_observed": 1,
@@ -61540,7 +61540,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 371632.03917241096,
-        "optimizer_tokens": 992048196,
+        "optimizer_tokens": 1001365758,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -61564,12 +61564,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 991587180,
-          "cached_input_tokens": 987107840,
-          "output_tokens": 461016,
+          "input_tokens": 1000903842,
+          "cached_input_tokens": 996417408,
+          "output_tokens": 461916,
           "reasoning_output_tokens": 182998,
-          "uncached_input_tokens": 4479340,
-          "total_tokens": 992048196
+          "uncached_input_tokens": 4486434,
+          "total_tokens": 1001365758
         },
         "learning": null,
         "sessions_observed": 1,
