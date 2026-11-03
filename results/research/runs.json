@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T07:02:35.619903+00:00",
+  "collected_at": "2026-11-03T07:33:32.326778+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -58060,11 +58060,89 @@
       "decisions_completed": 40,
       "adopted_candidates": 8,
       "champion_changes": 0,
-      "status": "optimizer_running",
+      "status": "completed_with_native_summary",
       "independent_search_repetitions": 1,
       "test_repeats": 3,
-      "final_selection": null,
-      "final_test": null,
+      "final_selection": {
+        "best": "v13",
+        "rounds": 40,
+        "loop": null,
+        "test_policy": null,
+        "selection_metric": null,
+        "startpoint": null,
+        "test": {
+          "baseline": {
+            "episodes": 120,
+            "valid": 120,
+            "mean": 0.44166666666666665,
+            "successes": 53.0
+          }
+        }
+      },
+      "final_test": {
+        "valid_episodes": 120,
+        "expected_episodes": null,
+        "missing_episodes": null,
+        "raw_attempts": 120,
+        "invalid_attempts": 0,
+        "tasks": 40,
+        "repeats_observed": 3,
+        "strict_successes": 35,
+        "strict_pass_at_1": 0.2916666666666667,
+        "mean_reward": 0.2916666666666667,
+        "per_repeat": [
+          {
+            "trial": 0,
+            "episodes": 40,
+            "strict_successes": 9,
+            "strict_success_rate": 0.225,
+            "mean_reward": 0.225
+          },
+          {
+            "trial": 1,
+            "episodes": 40,
+            "strict_successes": 13,
+            "strict_success_rate": 0.325,
+            "mean_reward": 0.325
+          },
+          {
+            "trial": 2,
+            "episodes": 40,
+            "strict_successes": 13,
+            "strict_success_rate": 0.325,
+            "mean_reward": 0.325
+          }
+        ],
+        "strict_repeat_population_std": 0.04714045207910317,
+        "mean_reward_repeat_population_std": 0.04714045207910317,
+        "task_groups_with_three_trials": 40,
+        "observed_any_success_3": 0.45,
+        "observed_all_success_3": 0.15,
+        "termination_counts": {
+          "user_stop": 105,
+          "too_many_errors": 13,
+          "max_steps": 2
+        },
+        "runtime": {
+          "elapsed_seconds": null,
+          "requests": null,
+          "environment_actions": null,
+          "plugin_event_count": {
+            "sum": 0,
+            "mean": 0,
+            "observed_episodes": 120
+          },
+          "effective_control_receipts": {
+            "sum": 0,
+            "mean": 0,
+            "observed_episodes": 120
+          },
+          "plugin_event_episode_coverage": {},
+          "token_usage": null,
+          "note": "Request/event/control counts are execution observations, not causal gains. Elapsed-seconds sum is aggregate episode work, not wall-clock time."
+        },
+        "per_task_outcomes_file": "test-outcomes/failure-frontier-fivebench-20261029--experiments--telecom--dsh-mechanism.json"
+      },
       "curve": [
         {
           "round": 1,
@@ -59869,7 +59947,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 436530.72855210304,
-        "optimizer_tokens": 794965475,
+        "optimizer_tokens": 798358227,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59879,10 +59957,8 @@
         "Cross-stage train-test subtraction is omitted when task pools or metrics differ."
       ],
       "state": {
-        "phase": "optimizer_running",
-        "updated_at": 1793672325.7535725,
-        "turn": 978,
-        "model": "gpt-6.1-sol"
+        "phase": "complete",
+        "updated_at": 1793690644.5447853
       },
       "current_champion": "v13",
       "baseline_test": null,
@@ -59893,12 +59969,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 794207254,
-          "cached_input_tokens": 789867392,
-          "output_tokens": 758221,
-          "reasoning_output_tokens": 269314,
-          "uncached_input_tokens": 4339862,
-          "total_tokens": 794965475
+          "input_tokens": 797597140,
+          "cached_input_tokens": 793249152,
+          "output_tokens": 761087,
+          "reasoning_output_tokens": 270010,
+          "uncached_input_tokens": 4347988,
+          "total_tokens": 798358227
         },
         "learning": null,
         "sessions_observed": 1,
