@@ -2,10 +2,21 @@
   "benchmark": "webshop",
   "comparison_status": "environment_alignment_pending",
   "main_search": "paused_at_27_of_40",
-  "reason": "Runtime restart regenerated product prices and task price bounds. Historical environment snapshot has not been recovered; session failures also need classification.",
+  "reason": "Observed paired logs confirm changed task price bounds after restart; no displayed price change found among 2054 common observed products. Historical full environment snapshot unavailable.",
   "main_score": 0.47,
   "new_measurement": 0.4816666666666667,
   "new_measurement_rank_eligible": false,
   "backfill_overlay_allowed": false,
-  "preserve_all_measurements": true
+  "preserve_all_measurements": true,
+  "observed_environment_comparison": {
+    "paired_episodes": 600,
+    "paired_tasks": 200,
+    "tasks_with_changed_price_limit": 115,
+    "changed_task_fraction": 0.575,
+    "mean_absolute_price_limit_change_dollars": 13.565217391304348,
+    "other_instruction_text_changes": 0,
+    "common_observed_products": 2054,
+    "common_observed_product_display_price_changes": 0,
+    "scope": "Original released WebShop v12 historical 3-repeat logs versus same artifact frozen-environment 3-repeat logs; observed products only, not a full catalog comparison."
+  }
 }
