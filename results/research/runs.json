@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T06:00:39.781868+00:00",
+  "collected_at": "2026-11-03T06:31:36.538756+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -59869,7 +59869,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 436530.72855210304,
-        "optimizer_tokens": 786721856,
+        "optimizer_tokens": 790829377,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59893,12 +59893,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 785969207,
-          "cached_input_tokens": 781645440,
-          "output_tokens": 752649,
-          "reasoning_output_tokens": 267752,
-          "uncached_input_tokens": 4323767,
-          "total_tokens": 786721856
+          "input_tokens": 790073798,
+          "cached_input_tokens": 785741952,
+          "output_tokens": 755579,
+          "reasoning_output_tokens": 268595,
+          "uncached_input_tokens": 4331846,
+          "total_tokens": 790829377
         },
         "learning": null,
         "sessions_observed": 1,
@@ -61841,7 +61841,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 432911.4838488102,
-        "optimizer_tokens": 1053295311,
+        "optimizer_tokens": 1053656623,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -61851,10 +61851,8 @@
         "Cross-stage train-test subtraction is omitted when task pools or metrics differ."
       ],
       "state": {
-        "phase": "optimizer_running",
-        "updated_at": 1793672325.7508628,
-        "turn": 957,
-        "model": "gpt-6.1-sol"
+        "phase": "complete",
+        "updated_at": 1793685646.8238723
       },
       "current_champion": "v18",
       "baseline_test": null,
@@ -61865,12 +61863,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 1052821785,
-          "cached_input_tokens": 1047927424,
-          "output_tokens": 473526,
-          "reasoning_output_tokens": 185610,
-          "uncached_input_tokens": 4894361,
-          "total_tokens": 1053295311
+          "input_tokens": 1053182851,
+          "cached_input_tokens": 1048282368,
+          "output_tokens": 473772,
+          "reasoning_output_tokens": 185770,
+          "uncached_input_tokens": 4900483,
+          "total_tokens": 1053656623
         },
         "learning": null,
         "sessions_observed": 1,
