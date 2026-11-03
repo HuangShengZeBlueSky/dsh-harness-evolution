@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T04:27:41.785238+00:00",
+  "updated_at": "2026-11-03T04:58:38.427275+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -16768,7 +16768,7 @@
       "effort": "high",
       "start": "H0零增强插件",
       "collection": "feedback",
-      "rounds": 38,
+      "rounds": 39,
       "budget": 40,
       "adopted": 8,
       "best": "v13",
@@ -16806,18 +16806,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 763605447,
-        "cached_input_tokens": 759430912,
-        "output_tokens": 738426,
-        "reasoning_output_tokens": 264168,
-        "uncached_input_tokens": 4174535,
-        "total_tokens": 764343873
+        "input_tokens": 779823361,
+        "cached_input_tokens": 775528832,
+        "output_tokens": 746461,
+        "reasoning_output_tokens": 266577,
+        "uncached_input_tokens": 4294529,
+        "total_tokens": 780569822
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 119.35458986785677,
+      "hours": 120.32822346389294,
       "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--telecom--dsh-mechanism.json",
       "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--telecom--dsh-mechanism.json",
       "state": "optimizer_running",
@@ -17657,6 +17657,28 @@
           "optimizer_tokens": 745105547,
           "repairs": null,
           "regressions": null
+        },
+        {
+          "round": 39,
+          "version": "v39",
+          "parent": "v13",
+          "adopted": false,
+          "train": null,
+          "candidate_train": 0.6801801801801802,
+          "train_strict": null,
+          "reward": 0.6801801801801802,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 776279061,
+          "repairs": null,
+          "regressions": null
         }
       ]
     },
@@ -17668,7 +17690,7 @@
       "effort": "high",
       "start": "H0零增强插件",
       "collection": "feedback",
-      "rounds": 39,
+      "rounds": 40,
       "budget": 40,
       "adopted": 4,
       "best": "v18",
@@ -17706,18 +17728,18 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 1023440859,
-        "cached_input_tokens": 1018923008,
-        "output_tokens": 467590,
-        "reasoning_output_tokens": 184136,
-        "uncached_input_tokens": 4517851,
-        "total_tokens": 1023908449
+        "input_tokens": 1036856020,
+        "cached_input_tokens": 1032318592,
+        "output_tokens": 470892,
+        "reasoning_output_tokens": 184833,
+        "uncached_input_tokens": 4537428,
+        "total_tokens": 1037326912
       },
       "token_sources": {
         "session_cumulative": 1
       },
       "learning_tokens": null,
-      "hours": 119.27940197494294,
+      "hours": 120.25318995800284,
       "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--telecom--dsh-summary.json",
       "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--telecom--dsh-summary.json",
       "state": "optimizer_running",
@@ -18577,6 +18599,28 @@
           "all3": null,
           "test_std": null,
           "optimizer_tokens": 1008886389,
+          "repairs": null,
+          "regressions": null
+        },
+        {
+          "round": 40,
+          "version": "v40",
+          "parent": "v18",
+          "adopted": false,
+          "train": null,
+          "candidate_train": 0.545045045045045,
+          "train_strict": null,
+          "reward": 0.545045045045045,
+          "validation": null,
+          "batch": null,
+          "test": null,
+          "test_kind": null,
+          "test_valid": null,
+          "test_expected": null,
+          "any3": null,
+          "all3": null,
+          "test_std": null,
+          "optimizer_tokens": 1031009143,
           "repairs": null,
           "regressions": null
         }
@@ -120233,7 +120277,7 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-03T04:27:41.785238+00:00",
+    "collected_at": "2026-11-03T04:58:38.427275+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -130611,7 +130655,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793680042.1649826,
+      "updated_at": 1793681903.253869,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
