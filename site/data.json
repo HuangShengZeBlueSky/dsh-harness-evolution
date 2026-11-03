@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T10:08:13.935675+00:00",
+  "updated_at": "2026-11-03T10:39:10.133267+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -120299,7 +120299,7 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-03T10:08:13.935675+00:00",
+    "collected_at": "2026-11-03T10:39:10.133267+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -130677,7 +130677,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793700454.2823262,
+      "updated_at": 1793702315.366155,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
