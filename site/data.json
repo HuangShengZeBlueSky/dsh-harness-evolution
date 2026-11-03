@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T06:31:36.538756+00:00",
+  "updated_at": "2026-11-03T07:02:35.619903+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -16806,12 +16806,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 790073798,
-        "cached_input_tokens": 785741952,
-        "output_tokens": 755579,
-        "reasoning_output_tokens": 268595,
-        "uncached_input_tokens": 4331846,
-        "total_tokens": 790829377
+        "input_tokens": 794207254,
+        "cached_input_tokens": 789867392,
+        "output_tokens": 758221,
+        "reasoning_output_tokens": 269314,
+        "uncached_input_tokens": 4339862,
+        "total_tokens": 794965475
       },
       "token_sources": {
         "session_cumulative": 1
@@ -120299,7 +120299,7 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-03T06:31:36.538756+00:00",
+    "collected_at": "2026-11-03T07:02:35.619903+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -130677,7 +130677,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793687486.630253,
+      "updated_at": 1793689347.7642949,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
