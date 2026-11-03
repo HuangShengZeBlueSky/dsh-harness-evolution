@@ -118454,7 +118454,7 @@
         "values": {
           "alfworld": 0.033639143730886854,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.31,
           "osbench": null,
           "telecom": null
         },
@@ -118468,14 +118468,14 @@
         "std": {
           "alfworld": 0.010593582920910566,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.0050000000000000044,
           "osbench": null,
           "telecom": null
         },
         "states": {
           "alfworld": "measured",
           "dbbench": "unreported",
-          "webshop": "running",
+          "webshop": "measured",
           "osbench": "unreported",
           "telecom": "unreported"
         },
@@ -118660,7 +118660,7 @@
         "values": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.41333333333333333,
           "osbench": null,
           "telecom": null
         },
@@ -118674,14 +118674,14 @@
         "std": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.0028867513459481316,
           "osbench": null,
           "telecom": null
         },
         "states": {
           "alfworld": "unreported",
           "dbbench": "unreported",
-          "webshop": "running",
+          "webshop": "measured",
           "osbench": "unreported",
           "telecom": "unreported"
         },
@@ -118698,7 +118698,7 @@
         "values": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.31,
           "osbench": null,
           "telecom": null
         },
@@ -118712,14 +118712,14 @@
         "std": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.0050000000000000044,
           "osbench": null,
           "telecom": null
         },
         "states": {
           "alfworld": "unreported",
           "dbbench": "unreported",
-          "webshop": "running",
+          "webshop": "measured",
           "osbench": "unreported",
           "telecom": "unreported"
         },
@@ -118736,7 +118736,7 @@
         "values": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.48,
           "osbench": null,
           "telecom": null
         },
@@ -118750,14 +118750,14 @@
         "std": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.0050000000000000044,
           "osbench": null,
           "telecom": null
         },
         "states": {
           "alfworld": "unreported",
           "dbbench": "unreported",
-          "webshop": "running",
+          "webshop": "measured",
           "osbench": "unreported",
           "telecom": "unreported"
         },
@@ -118775,7 +118775,7 @@
         "values": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.48166666666666663,
           "osbench": null,
           "telecom": null
         },
@@ -118789,14 +118789,14 @@
         "std": {
           "alfworld": null,
           "dbbench": null,
-          "webshop": null,
+          "webshop": 0.0028867513459481316,
           "osbench": null,
           "telecom": null
         },
         "states": {
           "alfworld": "unreported",
           "dbbench": "unreported",
-          "webshop": "running",
+          "webshop": "measured",
           "osbench": "unreported",
           "telecom": "unreported"
         },
@@ -137729,13 +137729,13 @@
     ]
   },
   "expanded_competitor_evaluations": {
-    "collected_at": "2026-11-02T15:52:11.675243+00:00",
+    "collected_at": "2026-11-03T02:06:27.573624+00:00",
     "jobs": [
       {
         "id": "harness-r1-dbbench",
         "benchmark": "dbbench",
         "state": "running",
-        "valid": 129,
+        "valid": 890,
         "expected": 900,
         "protocol": {
           "method": "Harness-R1 released DBBench patch",
@@ -142256,13 +142256,27 @@
           "selection": "First released engineer seed20260720, fixed before our evaluation; no selection by our test scores.",
           "runtime": "Released hook compiler, runner, DB state updater and code-context builder; built-in Life-Harness H2-H5 disabled. Shared database initialization and grading."
         },
-        "summary": {}
+        "summary": {
+          "method": "Harness-R1 released DBBench patch",
+          "benchmark": "dbbench",
+          "complete": false,
+          "valid_episodes": 890,
+          "expected_episodes": 900,
+          "repeat_rates": {},
+          "mean": null,
+          "sample_std": null,
+          "sample_variance": null,
+          "input_tokens": 7515527,
+          "output_tokens": 775682,
+          "model_calls": 4731,
+          "finished_at": 1793636426.5714114
+        }
       },
       {
         "id": "life",
         "benchmark": "webshop",
-        "state": "running",
-        "valid": 395,
+        "state": "complete",
+        "valid": 600,
         "expected": 600,
         "protocol": {
           "method": "Life-Harness",
@@ -142487,13 +142501,33 @@
           "train_or_optimizer_calls": 0,
           "test_feedback_to_optimizer": false
         },
-        "summary": {}
+        "summary": {
+          "method": "Life-Harness",
+          "benchmark": "webshop",
+          "environment_id": "webshop-fixed-stage2-20261102",
+          "comparison_group": "webshop-frozen20261102-fixed200-3",
+          "complete": true,
+          "valid_episodes": 600,
+          "expected_episodes": 600,
+          "repeat_rates": {
+            "1": 0.41,
+            "2": 0.415,
+            "0": 0.415
+          },
+          "mean": 0.41333333333333333,
+          "sample_std": 0.0028867513459481316,
+          "sample_variance": 8.333333333333349e-06,
+          "input_tokens": 7975569,
+          "output_tokens": 108706,
+          "model_calls": 3809,
+          "finished_at": 1793634957.9335608
+        }
       },
       {
         "id": "align",
         "benchmark": "webshop",
-        "state": "running",
-        "valid": 582,
+        "state": "complete",
+        "valid": 600,
         "expected": 600,
         "protocol": {
           "method": "ALIGN released ReAct interface",
@@ -142718,13 +142752,33 @@
           "train_or_optimizer_calls": 0,
           "test_feedback_to_optimizer": false
         },
-        "summary": {}
+        "summary": {
+          "method": "ALIGN",
+          "benchmark": "webshop",
+          "environment_id": "webshop-fixed-stage2-20261102",
+          "comparison_group": "webshop-frozen20261102-fixed200-3",
+          "complete": true,
+          "valid_episodes": 600,
+          "expected_episodes": 600,
+          "repeat_rates": {
+            "0": 0.305,
+            "1": 0.315,
+            "2": 0.31
+          },
+          "mean": 0.31,
+          "sample_std": 0.0050000000000000044,
+          "sample_variance": 2.5000000000000045e-05,
+          "input_tokens": 5153278,
+          "output_tokens": 75982,
+          "model_calls": 2572,
+          "finished_at": 1793634742.642677
+        }
       },
       {
         "id": "ours-v10",
         "benchmark": "webshop",
-        "state": "running",
-        "valid": 324,
+        "state": "complete",
+        "valid": 600,
         "expected": 600,
         "protocol": {
           "method": "DSH published harness",
@@ -142743,20 +142797,24 @@
         "summary": {
           "method": "DSH v10",
           "benchmark": "webshop",
-          "complete": false,
-          "valid_episodes": 324,
+          "complete": true,
+          "valid_episodes": 600,
           "expected_episodes": 600,
-          "repeat_rates": {},
-          "mean": null,
-          "sample_std": null,
-          "sample_variance": null
+          "repeat_rates": {
+            "0": 0.48,
+            "1": 0.475,
+            "2": 0.485
+          },
+          "mean": 0.48,
+          "sample_std": 0.0050000000000000044,
+          "sample_variance": 2.5000000000000045e-05
         }
       },
       {
         "id": "ours-v12",
         "benchmark": "webshop",
-        "state": "running",
-        "valid": 272,
+        "state": "complete",
+        "valid": 600,
         "expected": 600,
         "protocol": {
           "method": "DSH published harness",
@@ -142775,15 +142833,17 @@
         "summary": {
           "method": "DSH v12",
           "benchmark": "webshop",
-          "complete": false,
-          "valid_episodes": 272,
+          "complete": true,
+          "valid_episodes": 600,
           "expected_episodes": 600,
           "repeat_rates": {
-            "0": 0.48
+            "0": 0.48,
+            "1": 0.48,
+            "2": 0.485
           },
-          "mean": null,
-          "sample_std": null,
-          "sample_variance": null
+          "mean": 0.48166666666666663,
+          "sample_std": 0.0028867513459481316,
+          "sample_variance": 8.333333333333349e-06
         }
       }
     ]
