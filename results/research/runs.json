@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T06:31:36.538756+00:00",
+  "collected_at": "2026-11-03T07:02:35.619903+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -59869,7 +59869,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 436530.72855210304,
-        "optimizer_tokens": 790829377,
+        "optimizer_tokens": 794965475,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59893,12 +59893,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 790073798,
-          "cached_input_tokens": 785741952,
-          "output_tokens": 755579,
-          "reasoning_output_tokens": 268595,
-          "uncached_input_tokens": 4331846,
-          "total_tokens": 790829377
+          "input_tokens": 794207254,
+          "cached_input_tokens": 789867392,
+          "output_tokens": 758221,
+          "reasoning_output_tokens": 269314,
+          "uncached_input_tokens": 4339862,
+          "total_tokens": 794965475
         },
         "learning": null,
         "sessions_observed": 1,
