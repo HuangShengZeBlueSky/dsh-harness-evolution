@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-03T05:29:36.382883+00:00",
+  "collected_at": "2026-11-03T06:00:39.781868+00:00",
   "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
   "counts": {
     "alfworld": 55,
@@ -1690,7 +1690,7 @@
       "expected": 120,
       "kind": "tau",
       "artifact_available": true,
-      "training_finished": false,
+      "training_finished": true,
       "defer_until_final": false,
       "priority": 1,
       "test_feedback_to_optimizer": false,
@@ -1709,7 +1709,7 @@
       "expected": 120,
       "kind": "tau",
       "artifact_available": true,
-      "training_finished": false,
+      "training_finished": true,
       "defer_until_final": false,
       "priority": 1,
       "test_feedback_to_optimizer": false,
@@ -1728,7 +1728,7 @@
       "expected": 120,
       "kind": "tau",
       "artifact_available": true,
-      "training_finished": false,
+      "training_finished": true,
       "defer_until_final": false,
       "priority": 1,
       "test_feedback_to_optimizer": false,
@@ -1747,7 +1747,7 @@
       "expected": 120,
       "kind": "tau",
       "artifact_available": true,
-      "training_finished": false,
+      "training_finished": true,
       "defer_until_final": false,
       "priority": 1,
       "test_feedback_to_optimizer": false,
@@ -10377,7 +10377,7 @@
     }
   ],
   "execution": {
-    "updated_at": 1793683764.3478065,
+    "updated_at": 1793685625.4871776,
     "counts": {
       "not_selected_for_backfill": 539,
       "complete": 98,

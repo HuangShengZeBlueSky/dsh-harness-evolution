@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T05:29:36.382883+00:00",
+  "collected_at": "2026-11-03T06:00:39.781868+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -58057,7 +58057,7 @@
       },
       "split_counts": {},
       "candidate_budget": 40,
-      "decisions_completed": 39,
+      "decisions_completed": 40,
       "adopted_candidates": 8,
       "champion_changes": 0,
       "status": "optimizer_running",
@@ -59820,11 +59820,56 @@
             "uncached_input_tokens": 4190630,
             "total_tokens": 776279061
           }
+        },
+        {
+          "round": 40,
+          "version": "v40",
+          "parent": "v13",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 222,
+            "valid": 222,
+            "mean": 0.6711711711711712,
+            "successes": 149.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793684747.5821722,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": null,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 783722572,
+            "cached_input_tokens": 779404160,
+            "output_tokens": 750207,
+            "reasoning_output_tokens": 267287,
+            "uncached_input_tokens": 4318412,
+            "total_tokens": 784472779
+          }
         }
       ],
       "efficiency": {
-        "first_to_last_decision_seconds": 433181.6044700146,
-        "optimizer_tokens": 782426330,
+        "first_to_last_decision_seconds": 436530.72855210304,
+        "optimizer_tokens": 786721856,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59848,12 +59893,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 781678437,
-          "cached_input_tokens": 777379584,
-          "output_tokens": 747893,
-          "reasoning_output_tokens": 266950,
-          "uncached_input_tokens": 4298853,
-          "total_tokens": 782426330
+          "input_tokens": 785969207,
+          "cached_input_tokens": 781645440,
+          "output_tokens": 752649,
+          "reasoning_output_tokens": 267752,
+          "uncached_input_tokens": 4323767,
+          "total_tokens": 786721856
         },
         "learning": null,
         "sessions_observed": 1,
@@ -59911,11 +59956,87 @@
       "decisions_completed": 40,
       "adopted_candidates": 4,
       "champion_changes": 0,
-      "status": "optimizer_running",
+      "status": "completed_with_native_summary",
       "independent_search_repetitions": 1,
       "test_repeats": 3,
-      "final_selection": null,
-      "final_test": null,
+      "final_selection": {
+        "best": "v18",
+        "rounds": 40,
+        "loop": null,
+        "test_policy": null,
+        "selection_metric": null,
+        "startpoint": null,
+        "test": {
+          "baseline": {
+            "episodes": 120,
+            "valid": 120,
+            "mean": 0.43333333333333335,
+            "successes": 52.0
+          }
+        }
+      },
+      "final_test": {
+        "valid_episodes": 120,
+        "expected_episodes": null,
+        "missing_episodes": null,
+        "raw_attempts": 120,
+        "invalid_attempts": 0,
+        "tasks": 40,
+        "repeats_observed": 3,
+        "strict_successes": 77,
+        "strict_pass_at_1": 0.6416666666666667,
+        "mean_reward": 0.6416666666666667,
+        "per_repeat": [
+          {
+            "trial": 0,
+            "episodes": 40,
+            "strict_successes": 26,
+            "strict_success_rate": 0.65,
+            "mean_reward": 0.65
+          },
+          {
+            "trial": 1,
+            "episodes": 40,
+            "strict_successes": 25,
+            "strict_success_rate": 0.625,
+            "mean_reward": 0.625
+          },
+          {
+            "trial": 2,
+            "episodes": 40,
+            "strict_successes": 26,
+            "strict_success_rate": 0.65,
+            "mean_reward": 0.65
+          }
+        ],
+        "strict_repeat_population_std": 0.011785113019775802,
+        "mean_reward_repeat_population_std": 0.011785113019775802,
+        "task_groups_with_three_trials": 40,
+        "observed_any_success_3": 0.95,
+        "observed_all_success_3": 0.375,
+        "termination_counts": {
+          "user_stop": 120
+        },
+        "runtime": {
+          "elapsed_seconds": null,
+          "requests": null,
+          "environment_actions": null,
+          "plugin_event_count": {
+            "sum": 0,
+            "mean": 0,
+            "observed_episodes": 120
+          },
+          "effective_control_receipts": {
+            "sum": 0,
+            "mean": 0,
+            "observed_episodes": 120
+          },
+          "plugin_event_episode_coverage": {},
+          "token_usage": null,
+          "note": "Request/event/control counts are execution observations, not causal gains. Elapsed-seconds sum is aggregate episode work, not wall-clock time."
+        },
+        "per_task_outcomes_file": "test-outcomes/failure-frontier-fivebench-20261029--experiments--telecom--dsh-summary.json"
+      },
       "curve": [
         {
           "round": 1,
@@ -61720,7 +61841,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 432911.4838488102,
-        "optimizer_tokens": 1043327516,
+        "optimizer_tokens": 1053295311,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -61744,12 +61865,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 1042856114,
-          "cached_input_tokens": 1038314624,
-          "output_tokens": 471402,
-          "reasoning_output_tokens": 184833,
-          "uncached_input_tokens": 4541490,
-          "total_tokens": 1043327516
+          "input_tokens": 1052821785,
+          "cached_input_tokens": 1047927424,
+          "output_tokens": 473526,
+          "reasoning_output_tokens": 185610,
+          "uncached_input_tokens": 4894361,
+          "total_tokens": 1053295311
         },
         "learning": null,
         "sessions_observed": 1,
