@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T02:54:49.716388+00:00",
+  "updated_at": "2026-11-03T03:25:46.779154+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -16806,12 +16806,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 718473403,
-        "cached_input_tokens": 714350848,
-        "output_tokens": 724370,
-        "reasoning_output_tokens": 259476,
-        "uncached_input_tokens": 4122555,
-        "total_tokens": 719197773
+        "input_tokens": 731344142,
+        "cached_input_tokens": 727213440,
+        "output_tokens": 726477,
+        "reasoning_output_tokens": 259748,
+        "uncached_input_tokens": 4130702,
+        "total_tokens": 732070619
       },
       "token_sources": {
         "session_cumulative": 1
@@ -17684,12 +17684,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 991587180,
-        "cached_input_tokens": 987107840,
-        "output_tokens": 461016,
+        "input_tokens": 1000903842,
+        "cached_input_tokens": 996417408,
+        "output_tokens": 461916,
         "reasoning_output_tokens": 182998,
-        "uncached_input_tokens": 4479340,
-        "total_tokens": 992048196
+        "uncached_input_tokens": 4486434,
+        "total_tokens": 1001365758
       },
       "token_sources": {
         "session_cumulative": 1
@@ -120189,7 +120189,7 @@
     }
   ],
   "queue": {
-    "collected_at": "2026-11-03T02:54:49.716388+00:00",
+    "collected_at": "2026-11-03T03:25:46.779154+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -130567,7 +130567,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793674458.8982027,
+      "updated_at": 1793676319.9965074,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
