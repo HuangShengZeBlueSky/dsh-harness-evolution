@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-03T10:39:10.133267+00:00",
+  "collected_at": "2026-11-03T11:39:45.489889+00:00",
   "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
   "counts": {
     "alfworld": 55,
@@ -10377,7 +10377,7 @@
     }
   ],
   "execution": {
-    "updated_at": 1793702315.366155,
+    "updated_at": 1793705977.495054,
     "counts": {
       "not_selected_for_backfill": 539,
       "complete": 98,
