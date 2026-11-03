@@ -762,7 +762,7 @@
       "values": {
         "alfworld": 0.033639143730886854,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.31,
         "osbench": null,
         "telecom": null
       },
@@ -776,14 +776,14 @@
       "std": {
         "alfworld": 0.010593582920910566,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.0050000000000000044,
         "osbench": null,
         "telecom": null
       },
       "states": {
         "alfworld": "measured",
         "dbbench": "unreported",
-        "webshop": "running",
+        "webshop": "measured",
         "osbench": "unreported",
         "telecom": "unreported"
       },
@@ -968,7 +968,7 @@
       "values": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.41333333333333333,
         "osbench": null,
         "telecom": null
       },
@@ -982,14 +982,14 @@
       "std": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.0028867513459481316,
         "osbench": null,
         "telecom": null
       },
       "states": {
         "alfworld": "unreported",
         "dbbench": "unreported",
-        "webshop": "running",
+        "webshop": "measured",
         "osbench": "unreported",
         "telecom": "unreported"
       },
@@ -1006,7 +1006,7 @@
       "values": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.31,
         "osbench": null,
         "telecom": null
       },
@@ -1020,14 +1020,14 @@
       "std": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.0050000000000000044,
         "osbench": null,
         "telecom": null
       },
       "states": {
         "alfworld": "unreported",
         "dbbench": "unreported",
-        "webshop": "running",
+        "webshop": "measured",
         "osbench": "unreported",
         "telecom": "unreported"
       },
@@ -1044,7 +1044,7 @@
       "values": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.48,
         "osbench": null,
         "telecom": null
       },
@@ -1058,14 +1058,14 @@
       "std": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.0050000000000000044,
         "osbench": null,
         "telecom": null
       },
       "states": {
         "alfworld": "unreported",
         "dbbench": "unreported",
-        "webshop": "running",
+        "webshop": "measured",
         "osbench": "unreported",
         "telecom": "unreported"
       },
@@ -1083,7 +1083,7 @@
       "values": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.48166666666666663,
         "osbench": null,
         "telecom": null
       },
@@ -1097,14 +1097,14 @@
       "std": {
         "alfworld": null,
         "dbbench": null,
-        "webshop": null,
+        "webshop": 0.0028867513459481316,
         "osbench": null,
         "telecom": null
       },
       "states": {
         "alfworld": "unreported",
         "dbbench": "unreported",
-        "webshop": "running",
+        "webshop": "measured",
         "osbench": "unreported",
         "telecom": "unreported"
       },

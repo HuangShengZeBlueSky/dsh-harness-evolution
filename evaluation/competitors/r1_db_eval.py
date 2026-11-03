@@ -57,7 +57,9 @@ def episode(task):
    if calls:reply['tool_calls']=calls[:1]
    messages.append(reply)
    if not calls:runtime.note_text_only_turn();messages.append(dict(role='user',content='No executable tool calls found. Please call a tool.'));continue
-   runtime.reset_text_only_streak();call=calls[0];name=call['function']['name'];args=json.loads(call['function'].get('arguments') or '{}');sql=args.get('query','');answers=args.get('answers',[]);blocked=False
+   runtime.reset_text_only_streak();call=calls[0];name=call['function']['name'];args=json.loads(call['function'].get('arguments') or '{}')
+   if not isinstance(args,dict):reason='malformed_tool_arguments';break
+   sql=args.get('query','');answers=args.get('answers',[]);blocked=False
    for out in apply('on_before_action',tool_name=name,sql=sql,answers=answers,remaining_rounds=15-step,round_num=step+1):
     if out.get('kind')=='block_and_prompt':messages.append(dict(role='tool',tool_call_id=call['id'],content=out['message']));blocked=True;break
    if blocked:continue

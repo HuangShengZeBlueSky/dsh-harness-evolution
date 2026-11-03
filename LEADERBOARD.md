@@ -22,16 +22,16 @@
 | GEPA-Curator / Claude | gpt-oss-120b | P* | — | 98.40 ± 0.60 | — | — | — | — |
 | **Local measurements · Qwen3-4B** | | | | | | | | |
 | Life-Harness (released) | Qwen3-4B | M | — | 87.77 ± 1.91 | 64.11 ± 0.38 | — | 36.81 ± 0.00 | 57.50 ± 9.01 |
-| ALIGN (released) | Qwen3-4B | M | — | 3.36 ± 1.06 | — | Running | — | — |
+| ALIGN (released) | Qwen3-4B | M | — | 3.36 ± 1.06 | — | 31.00 ± 0.50 | — | — |
 | ReAct | Qwen3-4B | M | — | 10.70 ± 1.06 | — | — | — | — |
 | ReflAct | Qwen3-4B | M | — | 18.35 ± 1.83 | — | — | — | — |
 | AutoManual | Qwen3-4B | M | — | 76.15 ± 1.59 | — | — | — | — |
 | Harness-R1 (released patch) | Qwen3-4B | M | — | — | Running | — | — | — |
 | **Common frozen environment · WebShop** | | | | | | | | |
-| Life-Harness | Qwen3-4B | F | — | — | — | Running | — | — |
-| ALIGN | Qwen3-4B | F | — | — | — | Running | — | — |
-| Our framework / checkpoint A | Qwen3-4B | F | — | — | — | Running | — | — |
-| Our framework / checkpoint B | Qwen3-4B | F | — | — | — | Running | — | — |
+| Life-Harness | Qwen3-4B | F | — | — | — | 41.33 ± 0.29 | — | — |
+| ALIGN | Qwen3-4B | F | — | — | — | 31.00 ± 0.50 | — | — |
+| Our framework / checkpoint A | Qwen3-4B | F | — | — | — | 48.00 ± 0.50 | — | — |
+| Our framework / checkpoint B | Qwen3-4B | F | — | — | — | 48.17 ± 0.29 | — | — |
 | **Related methods awaiting adapters or resources** | | | | | | | | |
 | ExpeL | Qwen3-4B | Q | — | Pending | — | Pending | — | — |
 | AgentSquare (local) | Qwen3-4B | Q | — | Pending | — | Pending | — | — |
