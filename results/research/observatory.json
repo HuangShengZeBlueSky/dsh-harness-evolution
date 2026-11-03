@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T07:02:35.619903+00:00",
+  "updated_at": "2026-11-03T07:33:32.326778+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -16772,12 +16772,12 @@
       "budget": 40,
       "adopted": 8,
       "best": "v13",
-      "complete": false,
-      "final_test": null,
-      "any3": null,
-      "all3": null,
-      "std": null,
-      "test_valid": null,
+      "complete": true,
+      "final_test": 0.2916666666666667,
+      "any3": 0.45,
+      "all3": 0.15,
+      "std": 0.04714045207910317,
+      "test_valid": 120,
       "test_expected": null,
       "actor": "Qwen3-4B-Instruct-2507",
       "simulator": "glm-5.3-flash",
@@ -16806,12 +16806,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 794207254,
-        "cached_input_tokens": 789867392,
-        "output_tokens": 758221,
-        "reasoning_output_tokens": 269314,
-        "uncached_input_tokens": 4339862,
-        "total_tokens": 794965475
+        "input_tokens": 797597140,
+        "cached_input_tokens": 793249152,
+        "output_tokens": 761087,
+        "reasoning_output_tokens": 270010,
+        "uncached_input_tokens": 4347988,
+        "total_tokens": 798358227
       },
       "token_sources": {
         "session_cumulative": 1
@@ -16820,7 +16820,7 @@
       "hours": 121.2585357089175,
       "configuration_file": "results/research/protocols/failure-frontier-fivebench-20261029--experiments--telecom--dsh-mechanism.json",
       "task_manifest_file": "results/research/tasks/failure-frontier-fivebench-20261029--experiments--telecom--dsh-mechanism.json",
-      "state": "optimizer_running",
+      "state": "complete",
       "points": [
         {
           "round": 1,
@@ -117727,7 +117727,7 @@
     "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
   },
   "queue": {
-    "collected_at": "2026-11-03T07:02:35.619903+00:00",
+    "collected_at": "2026-11-03T07:33:32.326778+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -119266,7 +119266,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119285,7 +119285,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119304,7 +119304,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119323,7 +119323,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119342,7 +119342,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119361,7 +119361,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119380,7 +119380,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -119399,7 +119399,7 @@
         "expected": 120,
         "kind": "tau",
         "artifact_available": true,
-        "training_finished": false,
+        "training_finished": true,
         "defer_until_final": false,
         "priority": 1,
         "test_feedback_to_optimizer": false,
@@ -128105,7 +128105,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793689347.7642949,
+      "updated_at": 1793691208.849083,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
