@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T10:39:10.133267+00:00",
+  "updated_at": "2026-11-03T12:15:58.498444+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -32871,7 +32871,7 @@
         "total_tokens": 464909049
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 51.682309046652584,
@@ -32904,7 +32904,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 37615738,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -32926,7 +32926,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 89654129,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -32948,7 +32948,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 121231300,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -32970,7 +32970,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 132209919,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -32992,7 +32992,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 140628515,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33014,7 +33014,7 @@
           "any3": 0.8,
           "all3": 0.175,
           "test_std": 0.011785113019775802,
-          "optimizer_tokens": 144702624,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33036,7 +33036,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 150836699,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33058,7 +33058,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 184395385,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33080,7 +33080,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 194596908,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33102,7 +33102,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 232435782,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33124,7 +33124,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 286507270,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33146,7 +33146,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 310808997,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33168,7 +33168,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 338904243,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33190,7 +33190,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 366696029,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33212,7 +33212,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 385741771,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33234,7 +33234,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 399038877,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33256,7 +33256,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 418392344,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33278,7 +33278,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 436543637,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33300,7 +33300,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 451381472,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33322,7 +33322,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 456799206,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         }
@@ -33401,7 +33401,7 @@
         "total_tokens": 285747031
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 36.978803982138636,
@@ -33434,7 +33434,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 17627009,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33456,7 +33456,7 @@
           "any3": 0.775,
           "all3": 0.2,
           "test_std": 0.08498365855987976,
-          "optimizer_tokens": 29807429,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33478,7 +33478,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 42041838,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33500,7 +33500,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 44430542,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33522,7 +33522,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 45858827,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33544,7 +33544,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 50343976,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33566,7 +33566,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 54332028,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33588,7 +33588,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 65228620,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33610,7 +33610,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 78584413,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33632,7 +33632,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 107183487,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33654,7 +33654,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 131566392,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33676,7 +33676,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 158178709,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33698,7 +33698,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 177312948,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33720,7 +33720,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 195654562,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33742,7 +33742,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 205659831,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33764,7 +33764,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 225983625,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33786,7 +33786,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 242742010,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33808,7 +33808,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 258801983,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33830,7 +33830,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 271677097,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33852,7 +33852,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 284066059,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         }
@@ -33931,7 +33931,7 @@
         "total_tokens": 412474530
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 54.79861602326234,
@@ -33964,7 +33964,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 56381445,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -33986,7 +33986,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 88347702,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34008,7 +34008,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 101309163,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34030,7 +34030,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 105402819,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34052,7 +34052,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 109305773,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34074,7 +34074,7 @@
           "any3": 0.725,
           "all3": 0.1,
           "test_std": 0.07359800721939874,
-          "optimizer_tokens": 113773637,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34096,7 +34096,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 128786108,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34118,7 +34118,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 146946806,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34140,7 +34140,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 189408646,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34162,7 +34162,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 220804338,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34184,7 +34184,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 225769397,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34206,7 +34206,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 234341467,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34228,7 +34228,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 237049623,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34250,7 +34250,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 247711174,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34272,7 +34272,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 259183892,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34294,7 +34294,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 279122891,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34316,7 +34316,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 312929121,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34338,7 +34338,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 340205049,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34360,7 +34360,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 374031698,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34382,7 +34382,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 409172656,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         }
@@ -34461,7 +34461,7 @@
         "total_tokens": 268680029
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 37.57377673414018,
@@ -34494,7 +34494,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 9988458,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34516,7 +34516,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 19194165,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34538,7 +34538,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 28194165,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34560,7 +34560,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 38172533,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34582,7 +34582,7 @@
           "any3": 0.925,
           "all3": 0.225,
           "test_std": 0.08164965809277258,
-          "optimizer_tokens": 39777604,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34604,7 +34604,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 44602685,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34626,7 +34626,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 47763931,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34648,7 +34648,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 57890962,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34670,7 +34670,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 65246626,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34692,7 +34692,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 86379329,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34714,7 +34714,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 107147524,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34736,7 +34736,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 129157922,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34758,7 +34758,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 146185141,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34780,7 +34780,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 163755967,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34802,7 +34802,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 172368089,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34824,7 +34824,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 186877437,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34846,7 +34846,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 200750911,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34868,7 +34868,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 226735337,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34890,7 +34890,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 251258063,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -34912,7 +34912,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 264985801,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         }
@@ -34991,7 +34991,7 @@
         "total_tokens": 581439860
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 53.89566091352039,
@@ -35024,7 +35024,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 38454656,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35046,7 +35046,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 92676842,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35068,7 +35068,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 110597836,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35090,7 +35090,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 114970917,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35112,7 +35112,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 121092961,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35134,7 +35134,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 135714689,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35156,7 +35156,7 @@
           "any3": 0.85,
           "all3": 0.275,
           "test_std": 0.061237243569579464,
-          "optimizer_tokens": 156784416,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35178,7 +35178,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 200604576,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35200,7 +35200,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 228249571,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35222,7 +35222,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 268013791,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35244,7 +35244,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 304765513,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35266,7 +35266,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 342551646,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35288,7 +35288,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 369020893,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35310,7 +35310,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 377411698,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35332,7 +35332,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 401258981,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35354,7 +35354,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 467552435,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35376,7 +35376,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 511968142,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35398,7 +35398,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 532061108,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35420,7 +35420,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 568992089,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         },
@@ -35442,7 +35442,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 579387843,
+          "optimizer_tokens": null,
           "repairs": null,
           "regressions": null
         }
@@ -55681,7 +55681,7 @@
         "total_tokens": 292838741
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 24.161606161263254,
@@ -55714,7 +55714,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 14105921,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -55736,7 +55736,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 29305761,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 4
         },
@@ -55758,7 +55758,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 50717686,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 5
         },
@@ -55780,7 +55780,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 86289959,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 1
         },
@@ -55802,7 +55802,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 117351179,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         },
@@ -55824,7 +55824,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 140069007,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -55846,7 +55846,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 145764350,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -55868,7 +55868,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 147489467,
+          "optimizer_tokens": null,
           "repairs": 10,
           "regressions": 4
         },
@@ -55890,7 +55890,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 151497627,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -55912,7 +55912,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 154063620,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -55934,7 +55934,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 156841155,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -55956,7 +55956,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 160084134,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -55978,7 +55978,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 164574459,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -56000,7 +56000,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 171999545,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -56022,7 +56022,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 176722258,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -56044,7 +56044,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 179050668,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -56066,7 +56066,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 186053186,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 0
         },
@@ -56088,7 +56088,7 @@
           "any3": 0.5266666666666666,
           "all3": 0.46,
           "test_std": 0.0054433105395181635,
-          "optimizer_tokens": 189537796,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -56110,7 +56110,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 202597113,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -56132,7 +56132,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 206982891,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -56154,7 +56154,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 210237909,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -56176,7 +56176,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 213779438,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -56198,7 +56198,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 218703283,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -56220,7 +56220,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 223816463,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -56242,7 +56242,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 227519567,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -56264,7 +56264,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 232995203,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         },
@@ -56286,7 +56286,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 236955530,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -56308,7 +56308,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 241029263,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -56330,7 +56330,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 245413953,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -56352,7 +56352,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 251546523,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -56374,7 +56374,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 256725378,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -56396,7 +56396,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 260966520,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 1
         },
@@ -56418,7 +56418,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 264712948,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -56440,7 +56440,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 268929780,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -56462,7 +56462,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 273612769,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -56484,7 +56484,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 278104431,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -56506,7 +56506,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 284861551,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -56528,7 +56528,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 288133513,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 4
         },
@@ -56550,7 +56550,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 290071361,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -56572,7 +56572,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 291323501,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         }
@@ -56667,7 +56667,7 @@
         "total_tokens": 147155795
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 1673043,
       "hours": 23.163065865106052,
@@ -56700,7 +56700,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 9793752,
+          "optimizer_tokens": null,
           "repairs": 9,
           "regressions": 6
         },
@@ -56722,7 +56722,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 12877419,
+          "optimizer_tokens": null,
           "repairs": 9,
           "regressions": 2
         },
@@ -56744,7 +56744,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 15771507,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -56766,7 +56766,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 21349393,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -56788,7 +56788,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 22546234,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -56810,7 +56810,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 24512191,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -56832,7 +56832,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 27041421,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -56854,7 +56854,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 29394401,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -56876,7 +56876,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 33065633,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -56898,7 +56898,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 36295449,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -56920,7 +56920,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 40350148,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -56942,7 +56942,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 42386707,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -56964,7 +56964,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 44128688,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -56986,7 +56986,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 48086404,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 2
         },
@@ -57008,7 +57008,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 52306801,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -57030,7 +57030,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 54295160,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -57052,7 +57052,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 56845254,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -57074,7 +57074,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 60532185,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -57096,7 +57096,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 63984482,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 5
         },
@@ -57118,7 +57118,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 68205614,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 2
         },
@@ -57140,7 +57140,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 71733692,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 5
         },
@@ -57162,7 +57162,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 75087057,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -57184,7 +57184,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 79961322,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -57206,7 +57206,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 84332512,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -57228,7 +57228,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 87676986,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -57250,7 +57250,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 89717731,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 1
         },
@@ -57272,7 +57272,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 92416645,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -57294,7 +57294,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 95425671,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -57316,7 +57316,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 99074633,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -57338,7 +57338,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 102695439,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -57360,7 +57360,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 105450103,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -57382,7 +57382,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 107043952,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 1
         },
@@ -57404,7 +57404,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 110392301,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -57426,7 +57426,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 114506437,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -57448,7 +57448,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 118295447,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -57470,7 +57470,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 120105433,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -57492,7 +57492,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 124283862,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -57514,7 +57514,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 128062349,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 2
         },
@@ -57536,7 +57536,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 131846291,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -57558,7 +57558,7 @@
           "any3": 0.6433333333333333,
           "all3": 0.5666666666666667,
           "test_std": 0.010886621079036372,
-          "optimizer_tokens": 137478814,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         }
@@ -57650,7 +57650,7 @@
         "total_tokens": 269262405
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 1850711,
       "hours": 25.804199066228335,
@@ -57683,7 +57683,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 16944308,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 6
         },
@@ -57705,7 +57705,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 35686519,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 4
         },
@@ -57727,7 +57727,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 53331750,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 3
         },
@@ -57749,7 +57749,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 70791892,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -57771,7 +57771,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 90199681,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -57793,7 +57793,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 96949732,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 5
         },
@@ -57815,7 +57815,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 105253274,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -57837,7 +57837,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 111130557,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 2
         },
@@ -57859,7 +57859,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 122178784,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -57881,7 +57881,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 124679307,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 5
         },
@@ -57903,7 +57903,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 127563654,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 1
         },
@@ -57925,7 +57925,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 132157852,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -57947,7 +57947,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 143782859,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -57969,7 +57969,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 147928635,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -57991,7 +57991,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 154761210,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -58013,7 +58013,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 162200391,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -58035,7 +58035,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 166073283,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -58057,7 +58057,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 169829971,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -58079,7 +58079,7 @@
           "any3": 0.4866666666666667,
           "all3": 0.38,
           "test_std": 0.0027216552697590817,
-          "optimizer_tokens": 177130585,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -58101,7 +58101,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 182643888,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 5
         },
@@ -58123,7 +58123,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 185270580,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -58145,7 +58145,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 187759661,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 2
         },
@@ -58167,7 +58167,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 191143434,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -58189,7 +58189,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 193893968,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -58211,7 +58211,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 197026111,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -58233,7 +58233,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 200817220,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 6
         },
@@ -58255,7 +58255,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 206803662,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -58277,7 +58277,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 211959737,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 2
         },
@@ -58299,7 +58299,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 215915974,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -58321,7 +58321,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 220310894,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -58343,7 +58343,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 225261044,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -58365,7 +58365,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 230490782,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 5
         },
@@ -58387,7 +58387,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 234589899,
+          "optimizer_tokens": null,
           "repairs": 8,
           "regressions": 1
         },
@@ -58409,7 +58409,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 239604584,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 0
         },
@@ -58431,7 +58431,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 245208185,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -58453,7 +58453,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 249412081,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -58475,7 +58475,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 254114324,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -58497,7 +58497,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 257319713,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 8
         },
@@ -58519,7 +58519,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 263946311,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -58541,7 +58541,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 267951841,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         }
@@ -58633,7 +58633,7 @@
         "total_tokens": 102065748
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 493222,
       "hours": 21.76773931622505,
@@ -58666,7 +58666,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 10975295,
+          "optimizer_tokens": null,
           "repairs": 14,
           "regressions": 0
         },
@@ -58688,7 +58688,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 12880914,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -58710,7 +58710,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 14757979,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -58732,7 +58732,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 17079388,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -58754,7 +58754,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 19886833,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -58776,7 +58776,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 23440480,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -58798,7 +58798,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 26782914,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -58820,7 +58820,7 @@
           "any3": 0.6933333333333334,
           "all3": 0.6633333333333333,
           "test_std": 0.005665577237325346,
-          "optimizer_tokens": 30083096,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -58842,7 +58842,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 33564358,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -58864,7 +58864,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 36047144,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -58886,7 +58886,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 38343475,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -58908,7 +58908,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 40411067,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -58930,7 +58930,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 42564430,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -58952,7 +58952,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 45300479,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -58974,7 +58974,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 46510132,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -58996,7 +58996,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 48209309,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -59018,7 +59018,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 50096882,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -59040,7 +59040,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 52282192,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -59062,7 +59062,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 53695574,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -59084,7 +59084,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 54471280,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -59106,7 +59106,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 55586601,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -59128,7 +59128,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 57396432,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -59150,7 +59150,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 58918635,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -59172,7 +59172,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 60614041,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -59194,7 +59194,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 62537056,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -59216,7 +59216,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 64438607,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -59238,7 +59238,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 66675764,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -59260,7 +59260,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 69250590,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -59282,7 +59282,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 73117393,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -59304,7 +59304,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 75716778,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -59326,7 +59326,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 77132607,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -59348,7 +59348,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 78529650,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -59370,7 +59370,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 79987309,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -59392,7 +59392,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 82892004,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -59414,7 +59414,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 85320800,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 0
         },
@@ -59436,7 +59436,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 87567338,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -59458,7 +59458,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 89931504,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -59480,7 +59480,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 92204641,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -59502,7 +59502,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 94550740,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -59524,7 +59524,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 97003416,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 0
         }
@@ -59677,7 +59677,7 @@
         "total_tokens": 196520543
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 22.162722885145083,
@@ -59710,7 +59710,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 8313858,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -59732,7 +59732,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 19314311,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 3
         },
@@ -59754,7 +59754,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 36696878,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -59776,7 +59776,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 66165837,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -59798,7 +59798,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 79015480,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -59820,7 +59820,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 88016876,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 1
         },
@@ -59842,7 +59842,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 92227038,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 3
         },
@@ -59864,7 +59864,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 94746406,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 3
         },
@@ -59886,7 +59886,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 98687379,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -59908,7 +59908,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 103133577,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         },
@@ -59930,7 +59930,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 107621177,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -59952,7 +59952,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 111535265,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -59974,7 +59974,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 113475931,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -59996,7 +59996,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 114445869,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 0
         },
@@ -60018,7 +60018,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 115623598,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -60040,7 +60040,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 117445312,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -60062,7 +60062,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 120889365,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -60084,7 +60084,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 123490926,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -60106,7 +60106,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 127142703,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -60128,7 +60128,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 129209995,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -60150,7 +60150,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 130927637,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -60172,7 +60172,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 133444401,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -60194,7 +60194,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 135331574,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -60216,7 +60216,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 143868345,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -60238,7 +60238,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 146366098,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -60260,7 +60260,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 148526718,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -60282,7 +60282,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 149931843,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -60304,7 +60304,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 151891563,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -60326,7 +60326,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 155880667,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -60348,7 +60348,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 162460055,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -60370,7 +60370,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 165310374,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -60392,7 +60392,7 @@
           "any3": 0.3819444444444444,
           "all3": 0.25,
           "test_std": 0.011803285911094393,
-          "optimizer_tokens": 167985742,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -60414,7 +60414,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 170070731,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -60436,7 +60436,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 171800898,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -60458,7 +60458,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 174321512,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -60480,7 +60480,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 182298199,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -60502,7 +60502,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 184718574,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 1
         },
@@ -60524,7 +60524,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 187212518,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -60546,7 +60546,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 188723615,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -60568,7 +60568,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 190561606,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         }
@@ -60724,7 +60724,7 @@
         "total_tokens": 119724842
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 1525593,
       "hours": 21.02681695871883,
@@ -60757,7 +60757,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 4197213,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -60779,7 +60779,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 11057589,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 3
         },
@@ -60801,7 +60801,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 18807287,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         },
@@ -60823,7 +60823,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 35048161,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 6
         },
@@ -60845,7 +60845,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 39574180,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -60867,7 +60867,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 48123995,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -60889,7 +60889,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 50000303,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         },
@@ -60911,7 +60911,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 51720128,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -60933,7 +60933,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 54147218,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -60955,7 +60955,7 @@
           "any3": 0.4027777777777778,
           "all3": 0.25,
           "test_std": 0.006547285010986554,
-          "optimizer_tokens": 57617867,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 3
         },
@@ -60977,7 +60977,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 60751909,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -60999,7 +60999,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 63853101,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -61021,7 +61021,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 68577593,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 5
         },
@@ -61043,7 +61043,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 72221570,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -61065,7 +61065,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 74185254,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 0
         },
@@ -61087,7 +61087,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 75213048,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -61109,7 +61109,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 76449507,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -61131,7 +61131,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 77923945,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -61153,7 +61153,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 79485251,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -61175,7 +61175,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 81084528,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -61197,7 +61197,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 83100527,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -61219,7 +61219,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 85620884,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 2
         },
@@ -61241,7 +61241,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 87820479,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -61263,7 +61263,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 90384337,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -61285,7 +61285,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 91998119,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -61307,7 +61307,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 94652661,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -61329,7 +61329,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 95740991,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -61351,7 +61351,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 96267109,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -61373,7 +61373,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 96833267,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -61395,7 +61395,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 98114824,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -61417,7 +61417,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 99041006,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -61439,7 +61439,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 99892877,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -61461,7 +61461,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 101431636,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -61483,7 +61483,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 103751676,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 4
         },
@@ -61505,7 +61505,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 104928286,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -61527,7 +61527,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 106160302,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -61549,7 +61549,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 107619078,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -61571,7 +61571,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 108973654,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 4
         },
@@ -61593,7 +61593,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 110570122,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 5
         },
@@ -61615,7 +61615,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 112261982,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         }
@@ -61768,7 +61768,7 @@
         "total_tokens": 190484143
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 1466332,
       "hours": 22.104539383451144,
@@ -61801,7 +61801,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 5512896,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 8
         },
@@ -61823,7 +61823,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 18314866,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 2
         },
@@ -61845,7 +61845,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 36633657,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -61867,7 +61867,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 69994762,
+          "optimizer_tokens": null,
           "repairs": 8,
           "regressions": 3
         },
@@ -61889,7 +61889,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 79499151,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 2
         },
@@ -61911,7 +61911,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 91074565,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -61933,7 +61933,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 95494845,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 3
         },
@@ -61955,7 +61955,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 99487048,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -61977,7 +61977,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 105379908,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -61999,7 +61999,7 @@
           "any3": 0.3541666666666667,
           "all3": 0.24305555555555555,
           "test_std": 0.014269476858724477,
-          "optimizer_tokens": 111134250,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 3
         },
@@ -62021,7 +62021,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 114298000,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -62043,7 +62043,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 115661455,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -62065,7 +62065,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 119075986,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 1
         },
@@ -62087,7 +62087,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 122483245,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -62109,7 +62109,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 127826298,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -62131,7 +62131,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 131866114,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 6
         },
@@ -62153,7 +62153,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 133485830,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -62175,7 +62175,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 135156147,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -62197,7 +62197,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 139424341,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -62219,7 +62219,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 141374497,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -62241,7 +62241,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 143869315,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -62263,7 +62263,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 147243404,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 11
         },
@@ -62285,7 +62285,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 148896109,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -62307,7 +62307,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 150384838,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -62329,7 +62329,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 152144837,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -62351,7 +62351,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 153900099,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -62373,7 +62373,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 156471572,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -62395,7 +62395,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 158247036,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -62417,7 +62417,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 160114962,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -62439,7 +62439,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 162290346,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -62461,7 +62461,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 164315320,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 1
         },
@@ -62483,7 +62483,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 166419266,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -62505,7 +62505,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 168586509,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -62527,7 +62527,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 170535356,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 6
         },
@@ -62549,7 +62549,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 171561755,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -62571,7 +62571,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 172568353,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -62593,7 +62593,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 173671058,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -62615,7 +62615,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 174883931,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -62637,7 +62637,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 176204460,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -62659,7 +62659,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 177952537,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 7
         }
@@ -62812,7 +62812,7 @@
         "total_tokens": 117220724
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 145911,
       "hours": 21.30945864657561,
@@ -62845,7 +62845,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 2284187,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 9
         },
@@ -62867,7 +62867,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 5395474,
+          "optimizer_tokens": null,
           "repairs": 7,
           "regressions": 3
         },
@@ -62889,7 +62889,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 8104274,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 4
         },
@@ -62911,7 +62911,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 12043483,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -62933,7 +62933,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 16311325,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -62955,7 +62955,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 20050427,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -62977,7 +62977,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 23917276,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -62999,7 +62999,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 26564236,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -63021,7 +63021,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 27732617,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -63043,7 +63043,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 29432203,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -63065,7 +63065,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 31808290,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -63087,7 +63087,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 34797658,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -63109,7 +63109,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 38410549,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -63131,7 +63131,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 42611319,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -63153,7 +63153,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 48890788,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -63175,7 +63175,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 53244122,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -63197,7 +63197,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 55250871,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -63219,7 +63219,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 56269068,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 0
         },
@@ -63241,7 +63241,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 58054064,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 1
         },
@@ -63263,7 +63263,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 60568334,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -63285,7 +63285,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 62743676,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -63307,7 +63307,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 64290253,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 3
         },
@@ -63329,7 +63329,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 65405557,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 5
         },
@@ -63351,7 +63351,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 66624051,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -63373,7 +63373,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 68431639,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -63395,7 +63395,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 70226006,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -63417,7 +63417,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 72736609,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -63439,7 +63439,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 76928449,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 3
         },
@@ -63461,7 +63461,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 78462674,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 1
         },
@@ -63483,7 +63483,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 79700389,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -63505,7 +63505,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 80679737,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -63527,7 +63527,7 @@
           "any3": 0.4166666666666667,
           "all3": 0.3402777777777778,
           "test_std": 0.005670115145331433,
-          "optimizer_tokens": 82675231,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -63549,7 +63549,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 86382233,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -63571,7 +63571,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 89622337,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 5
         },
@@ -63593,7 +63593,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 94068678,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -63615,7 +63615,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 97224334,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -63637,7 +63637,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 104956617,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -63659,7 +63659,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 106436620,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -63681,7 +63681,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 107976383,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         },
@@ -63703,7 +63703,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 110015404,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 4
         }
@@ -63795,7 +63795,7 @@
         "total_tokens": 196376183
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": null,
       "hours": 21.21333830151293,
@@ -63828,7 +63828,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 3741632,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -63850,7 +63850,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 12565860,
+          "optimizer_tokens": null,
           "repairs": 6,
           "regressions": 0
         },
@@ -63872,7 +63872,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 22433555,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -63894,7 +63894,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 35783055,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -63916,7 +63916,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 52164079,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -63938,7 +63938,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 80773001,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -63960,7 +63960,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 96031864,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -63982,7 +63982,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 104248675,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -64004,7 +64004,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 110446262,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -64026,7 +64026,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 112940853,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -64048,7 +64048,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 116851103,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -64070,7 +64070,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 121167414,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -64092,7 +64092,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 126823150,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -64114,7 +64114,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 130693840,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64136,7 +64136,7 @@
           "any3": 0.375,
           "all3": 0.36,
           "test_std": 0.004082482904638634,
-          "optimizer_tokens": 135635617,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -64158,7 +64158,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 141054124,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -64180,7 +64180,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 147688685,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -64202,7 +64202,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 151799515,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64224,7 +64224,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 153096059,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64246,7 +64246,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 154304865,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -64268,7 +64268,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 156527296,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -64290,7 +64290,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 158186743,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -64312,7 +64312,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 161772953,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64334,7 +64334,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 163381744,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64356,7 +64356,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 165144322,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -64378,7 +64378,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 166978879,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 2
         },
@@ -64400,7 +64400,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 168080968,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -64422,7 +64422,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 169455738,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -64444,7 +64444,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 170967958,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64466,7 +64466,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 173602548,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64488,7 +64488,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 175180292,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -64510,7 +64510,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 178167395,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -64532,7 +64532,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 180687110,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 3
         },
@@ -64554,7 +64554,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 182916057,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -64576,7 +64576,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 184579038,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64598,7 +64598,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 186516202,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64620,7 +64620,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 188529942,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -64642,7 +64642,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 191561680,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 2
         },
@@ -64664,7 +64664,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 193087763,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -64686,7 +64686,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 194150425,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         }
@@ -64781,7 +64781,7 @@
         "total_tokens": 174589750
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 1917326,
       "hours": 20.6781272412671,
@@ -64814,7 +64814,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 4520294,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64836,7 +64836,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 10430616,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -64858,7 +64858,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 15657509,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -64880,7 +64880,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 22601124,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64902,7 +64902,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 31020734,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64924,7 +64924,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 42473508,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 5
         },
@@ -64946,7 +64946,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 57649817,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -64968,7 +64968,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 70370151,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -64990,7 +64990,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 86334714,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 2
         },
@@ -65012,7 +65012,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 92997914,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65034,7 +65034,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 94445332,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65056,7 +65056,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 95334199,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -65078,7 +65078,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 96488423,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65100,7 +65100,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 97621269,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65122,7 +65122,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 99549436,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 3
         },
@@ -65144,7 +65144,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 101362716,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65166,7 +65166,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 103734114,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65188,7 +65188,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 105747956,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65210,7 +65210,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 108131317,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -65232,7 +65232,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 111758333,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65254,7 +65254,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 114085568,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 2
         },
@@ -65276,7 +65276,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 116560959,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65298,7 +65298,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 119468179,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65320,7 +65320,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 122321772,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65342,7 +65342,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 125964749,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65364,7 +65364,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 128875655,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65386,7 +65386,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 132292409,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -65408,7 +65408,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 135159561,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65430,7 +65430,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 138558372,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65452,7 +65452,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 142108004,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65474,7 +65474,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 144954494,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65496,7 +65496,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 147873135,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65518,7 +65518,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 150878960,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -65540,7 +65540,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 153262702,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65562,7 +65562,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 155435516,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65584,7 +65584,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 157232931,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65606,7 +65606,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 160009198,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -65628,7 +65628,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 163663927,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65650,7 +65650,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 165843809,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -65672,7 +65672,7 @@
           "any3": 0.35,
           "all3": 0.34,
           "test_std": 0.0023570226039551345,
-          "optimizer_tokens": 168850789,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         }
@@ -65764,7 +65764,7 @@
         "total_tokens": 227543285
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 1748674,
       "hours": 21.38227232740985,
@@ -65797,7 +65797,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 6629606,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 4
         },
@@ -65819,7 +65819,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 15989669,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -65841,7 +65841,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 24276220,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -65863,7 +65863,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 34363549,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -65885,7 +65885,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 48035521,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -65907,7 +65907,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 71018156,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -65929,7 +65929,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 91775863,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65951,7 +65951,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 111332965,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -65973,7 +65973,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 118729969,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -65995,7 +65995,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 120754187,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66017,7 +66017,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 123386612,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 1
         },
@@ -66039,7 +66039,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 127069532,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66061,7 +66061,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 130155901,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66083,7 +66083,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 133320657,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66105,7 +66105,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 137487464,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -66127,7 +66127,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 141015790,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -66149,7 +66149,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 144846720,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66171,7 +66171,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 150209662,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66193,7 +66193,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 154944328,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -66215,7 +66215,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 161435102,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66237,7 +66237,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 169170359,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -66259,7 +66259,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 174157173,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66281,7 +66281,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 180652895,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -66303,7 +66303,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 184307586,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66325,7 +66325,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 185545464,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -66347,7 +66347,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 187505197,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -66369,7 +66369,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 189464430,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -66391,7 +66391,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 191922685,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66413,7 +66413,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 195310790,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -66435,7 +66435,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 198060506,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66457,7 +66457,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 201958451,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -66479,7 +66479,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 204152089,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -66501,7 +66501,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 205935245,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -66523,7 +66523,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 207660903,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -66545,7 +66545,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 210262332,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66567,7 +66567,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 214006885,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -66589,7 +66589,7 @@
           "any3": 0.355,
           "all3": 0.355,
           "test_std": 0.0,
-          "optimizer_tokens": 217615311,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -66611,7 +66611,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 220670725,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66633,7 +66633,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 223466838,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66655,7 +66655,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 225041777,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         }
@@ -66747,7 +66747,7 @@
         "total_tokens": 243414978
       },
       "token_sources": {
-        "session_cumulative": 1
+        "cli_completed_session": 1
       },
       "learning_tokens": 341225,
       "hours": 21.797323289579815,
@@ -66780,7 +66780,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 7172882,
+          "optimizer_tokens": null,
           "repairs": 5,
           "regressions": 1
         },
@@ -66802,7 +66802,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 25841992,
+          "optimizer_tokens": null,
           "repairs": 4,
           "regressions": 3
         },
@@ -66824,7 +66824,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 46048599,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -66846,7 +66846,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 74912114,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -66868,7 +66868,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 89662640,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 1
         },
@@ -66890,7 +66890,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 116069169,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -66912,7 +66912,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 121246796,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66934,7 +66934,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 124522631,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -66956,7 +66956,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 128180971,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -66978,7 +66978,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 133042350,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -67000,7 +67000,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 139264561,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -67022,7 +67022,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 143885091,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67044,7 +67044,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 148165962,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -67066,7 +67066,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 152904802,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67088,7 +67088,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 159375160,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -67110,7 +67110,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 166000688,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -67132,7 +67132,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 173842652,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -67154,7 +67154,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 181818066,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -67176,7 +67176,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 183755752,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -67198,7 +67198,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 186262098,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 3
         },
@@ -67220,7 +67220,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 190292610,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -67242,7 +67242,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 192648763,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67264,7 +67264,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 194546619,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 2
         },
@@ -67286,7 +67286,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 197022925,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -67308,7 +67308,7 @@
           "any3": 0.445,
           "all3": 0.425,
           "test_std": 0.0023570226039551605,
-          "optimizer_tokens": 198582443,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67330,7 +67330,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 202274114,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -67352,7 +67352,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 205362684,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67374,7 +67374,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 209220619,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 1
         },
@@ -67396,7 +67396,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 214847747,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -67418,7 +67418,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 217222221,
+          "optimizer_tokens": null,
           "repairs": 2,
           "regressions": 0
         },
@@ -67440,7 +67440,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 218771948,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -67462,7 +67462,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 220562591,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -67484,7 +67484,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 222165450,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -67506,7 +67506,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 225183152,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67528,7 +67528,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 227244217,
+          "optimizer_tokens": null,
           "repairs": 3,
           "regressions": 0
         },
@@ -67550,7 +67550,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 229530750,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         },
@@ -67572,7 +67572,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 231777866,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -67594,7 +67594,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 233945459,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 1
         },
@@ -67616,7 +67616,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 236101323,
+          "optimizer_tokens": null,
           "repairs": 0,
           "regressions": 0
         },
@@ -67638,7 +67638,7 @@
           "any3": null,
           "all3": null,
           "test_std": null,
-          "optimizer_tokens": 239111151,
+          "optimizer_tokens": null,
           "repairs": 1,
           "regressions": 0
         }
@@ -117727,7 +117727,7 @@
     "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
   },
   "queue": {
-    "collected_at": "2026-11-03T10:39:10.133267+00:00",
+    "collected_at": "2026-11-03T12:15:58.498444+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -128105,7 +128105,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793702315.366155,
+      "updated_at": 1793708138.7512581,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
