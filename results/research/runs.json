@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T02:23:50.271446+00:00",
+  "collected_at": "2026-11-03T02:54:49.716388+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -58057,7 +58057,7 @@
       },
       "split_counts": {},
       "candidate_budget": 40,
-      "decisions_completed": 36,
+      "decisions_completed": 37,
       "adopted_candidates": 8,
       "champion_changes": 0,
       "status": "optimizer_running",
@@ -59685,11 +59685,56 @@
             "uncached_input_tokens": 3696141,
             "total_tokens": 682827226
           }
+        },
+        {
+          "round": 37,
+          "version": "v37",
+          "parent": "v13",
+          "adopted": false,
+          "champion_changed": null,
+          "training": {
+            "episodes": 222,
+            "valid": 222,
+            "mean": 0.6621621621621622,
+            "successes": 147.0
+          },
+          "validation": null,
+          "parent_validation": null,
+          "selection_metric": null,
+          "at": 1793673696.1823373,
+          "batch": null,
+          "parent_training": null,
+          "training_strict": null,
+          "validation_strict": null,
+          "validation_mean_reward": null,
+          "paired_reward": null,
+          "paired": {
+            "before": null,
+            "after": null,
+            "net_successes": null,
+            "repaired": null,
+            "regressed": null,
+            "diagnosed_failed_tasks": null,
+            "parent_failed_tasks": null
+          },
+          "target_clusters": [],
+          "planned_target_repairs": null,
+          "runtime_evidence": {},
+          "cross_batch_review": null,
+          "validation_family_macro": null,
+          "optimizer_usage_at_decision": {
+            "input_tokens": 712592994,
+            "cached_input_tokens": 708481408,
+            "output_tokens": 714212,
+            "reasoning_output_tokens": 253489,
+            "uncached_input_tokens": 4111586,
+            "total_tokens": 713307206
+          }
         }
       ],
       "efficiency": {
-        "first_to_last_decision_seconds": 368805.79750084877,
-        "optimizer_tokens": 704324339,
+        "first_to_last_decision_seconds": 425479.32871723175,
+        "optimizer_tokens": 719197773,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59713,12 +59758,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 703615504,
-          "cached_input_tokens": 699524480,
-          "output_tokens": 708835,
-          "reasoning_output_tokens": 251668,
-          "uncached_input_tokens": 4091024,
-          "total_tokens": 704324339
+          "input_tokens": 718473403,
+          "cached_input_tokens": 714350848,
+          "output_tokens": 724370,
+          "reasoning_output_tokens": 259476,
+          "uncached_input_tokens": 4122555,
+          "total_tokens": 719197773
         },
         "learning": null,
         "sessions_observed": 1,
@@ -61495,7 +61540,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 371632.03917241096,
-        "optimizer_tokens": 982502289,
+        "optimizer_tokens": 992048196,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -61519,12 +61564,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 982042203,
-          "cached_input_tokens": 977570176,
-          "output_tokens": 460086,
+          "input_tokens": 991587180,
+          "cached_input_tokens": 987107840,
+          "output_tokens": 461016,
           "reasoning_output_tokens": 182998,
-          "uncached_input_tokens": 4472027,
-          "total_tokens": 982502289
+          "uncached_input_tokens": 4479340,
+          "total_tokens": 992048196
         },
         "learning": null,
         "sessions_observed": 1,
