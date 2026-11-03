@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "collected_at": "2026-11-03T02:07:56.614613+00:00",
+  "collected_at": "2026-11-03T02:23:50.271446+00:00",
   "run_count": 156,
   "runs": [
     {
@@ -59689,7 +59689,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 368805.79750084877,
-        "optimizer_tokens": 702012577,
+        "optimizer_tokens": 704324339,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -59700,8 +59700,8 @@
       ],
       "state": {
         "phase": "optimizer_running",
-        "updated_at": 1793616906.3406916,
-        "turn": 977,
+        "updated_at": 1793672325.7535725,
+        "turn": 978,
         "model": "gpt-6.1-sol"
       },
       "current_champion": "v13",
@@ -59713,12 +59713,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 701304988,
-          "cached_input_tokens": 697587456,
-          "output_tokens": 707589,
-          "reasoning_output_tokens": 251551,
-          "uncached_input_tokens": 3717532,
-          "total_tokens": 702012577
+          "input_tokens": 703615504,
+          "cached_input_tokens": 699524480,
+          "output_tokens": 708835,
+          "reasoning_output_tokens": 251668,
+          "uncached_input_tokens": 4091024,
+          "total_tokens": 704324339
         },
         "learning": null,
         "sessions_observed": 1,
@@ -61495,7 +61495,7 @@
       ],
       "efficiency": {
         "first_to_last_decision_seconds": 371632.03917241096,
-        "optimizer_tokens": 980360515,
+        "optimizer_tokens": 982502289,
         "learning_tokens": null,
         "cost_currency": null,
         "note": "Decision span excludes unrecorded start time and final test; it is not total compute cost."
@@ -61506,8 +61506,8 @@
       ],
       "state": {
         "phase": "optimizer_running",
-        "updated_at": 1793613592.4598188,
-        "turn": 956,
+        "updated_at": 1793672325.7508628,
+        "turn": 957,
         "model": "gpt-6.1-sol"
       },
       "current_champion": "v18",
@@ -61519,12 +61519,12 @@
       },
       "token_accounting": {
         "optimizer": {
-          "input_tokens": 979901334,
-          "cached_input_tokens": 975723648,
-          "output_tokens": 459181,
-          "reasoning_output_tokens": 182855,
-          "uncached_input_tokens": 4177686,
-          "total_tokens": 980360515
+          "input_tokens": 982042203,
+          "cached_input_tokens": 977570176,
+          "output_tokens": 460086,
+          "reasoning_output_tokens": 182998,
+          "uncached_input_tokens": 4472027,
+          "total_tokens": 982502289
         },
         "learning": null,
         "sessions_observed": 1,
@@ -75104,6 +75104,23 @@
           "runtime_evidence": {},
           "cross_batch_review": null,
           "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.3333333333333333,
+            "mean_reward": 0.3333333333333333,
+            "valid_episodes": 432,
+            "expected_episodes": 432,
+            "strict_successes": 144,
+            "repeat_means": {
+              "0": 0.3333333333333333,
+              "1": 0.3263888888888889,
+              "2": 0.3402777777777778
+            },
+            "mean_reward_repeat_population_std": 0.005670115145331433,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          },
           "optimizer_usage_at_decision": {
             "input_tokens": 52073431,
             "cached_input_tokens": 51597184,
@@ -75398,6 +75415,23 @@
           "runtime_evidence": {},
           "cross_batch_review": null,
           "validation_family_macro": null,
+          "test_measurement": {
+            "strict_pass_at_1": 0.3125,
+            "mean_reward": 0.3125,
+            "valid_episodes": 432,
+            "expected_episodes": 432,
+            "strict_successes": 135,
+            "repeat_means": {
+              "0": 0.3055555555555556,
+              "1": 0.3194444444444444,
+              "2": 0.3125
+            },
+            "mean_reward_repeat_population_std": 0.005670115145331411,
+            "source": "native_summary",
+            "complete": true,
+            "kind": "retrospective_checkpoint",
+            "origin": "backfill"
+          },
           "optimizer_usage_at_decision": {
             "input_tokens": 72441152,
             "cached_input_tokens": 71895168,
@@ -76150,8 +76184,8 @@
       "baseline_test": null,
       "test_coverage": {
         "promoted": 11,
-        "tested_promoted": 1,
-        "missing_promoted": 10
+        "tested_promoted": 3,
+        "missing_promoted": 8
       },
       "token_accounting": {
         "optimizer": {
