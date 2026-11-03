@@ -116175,7 +116175,7 @@
         "rounds": null,
         "values": {
           "alfworld": null,
-          "dbbench": null,
+          "dbbench": 0.5222222222222223,
           "webshop": null,
           "osbench": null,
           "telecom": null
@@ -116189,14 +116189,14 @@
         },
         "std": {
           "alfworld": null,
-          "dbbench": null,
+          "dbbench": 0.0069388866648871,
           "webshop": null,
           "osbench": null,
           "telecom": null
         },
         "states": {
           "alfworld": "unreported",
-          "dbbench": "running",
+          "dbbench": "measured",
           "webshop": "unreported",
           "osbench": "unreported",
           "telecom": "unreported"
@@ -128352,6 +128352,27 @@
         "output_tokens": 934347,
         "measurement_origin": "new_published_policy_transfer",
         "source": "competitors-20261102/jobs/automanual"
+      },
+      {
+        "method": "Harness-R1 released patch",
+        "benchmark": "dbbench",
+        "complete": true,
+        "task_count": 300,
+        "repeats": 3,
+        "valid_episodes": 900,
+        "repeat_rates": {
+          "0": 0.52,
+          "1": 0.5166666666666667,
+          "2": 0.53
+        },
+        "mean": 0.5222222222222223,
+        "sample_std": 0.0069388866648871,
+        "sample_variance": 4.8148148148148026e-05,
+        "measurement_origin": "released_patch_cross_executor_transfer",
+        "comparison_eligible": true,
+        "model_calls": 4752,
+        "input_tokens": 7540138,
+        "output_tokens": 779836
       }
     ]
   },
@@ -133687,13 +133708,13 @@
     ]
   },
   "expanded_competitor_evaluations": {
-    "collected_at": "2026-11-03T02:06:27.573624+00:00",
+    "collected_at": "2026-11-03T02:15:08.323047+00:00",
     "jobs": [
       {
         "id": "harness-r1-dbbench",
         "benchmark": "dbbench",
-        "state": "running",
-        "valid": 890,
+        "state": "complete",
+        "valid": 900,
         "expected": 900,
         "protocol": {
           "method": "Harness-R1 released DBBench patch",
@@ -138217,17 +138238,21 @@
         "summary": {
           "method": "Harness-R1 released DBBench patch",
           "benchmark": "dbbench",
-          "complete": false,
-          "valid_episodes": 890,
+          "complete": true,
+          "valid_episodes": 900,
           "expected_episodes": 900,
-          "repeat_rates": {},
-          "mean": null,
-          "sample_std": null,
-          "sample_variance": null,
-          "input_tokens": 7515527,
-          "output_tokens": 775682,
-          "model_calls": 4731,
-          "finished_at": 1793636426.5714114
+          "repeat_rates": {
+            "0": 0.52,
+            "1": 0.5166666666666667,
+            "2": 0.53
+          },
+          "mean": 0.5222222222222223,
+          "sample_std": 0.0069388866648871,
+          "sample_variance": 4.8148148148148026e-05,
+          "input_tokens": 7540138,
+          "output_tokens": 779836,
+          "model_calls": 4752,
+          "finished_at": 1793672107.4301708
         }
       },
       {

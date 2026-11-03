@@ -925,7 +925,7 @@
       "rounds": null,
       "values": {
         "alfworld": null,
-        "dbbench": null,
+        "dbbench": 0.5222222222222223,
         "webshop": null,
         "osbench": null,
         "telecom": null
@@ -939,14 +939,14 @@
       },
       "std": {
         "alfworld": null,
-        "dbbench": null,
+        "dbbench": 0.0069388866648871,
         "webshop": null,
         "osbench": null,
         "telecom": null
       },
       "states": {
         "alfworld": "unreported",
-        "dbbench": "running",
+        "dbbench": "measured",
         "webshop": "unreported",
         "osbench": "unreported",
         "telecom": "unreported"

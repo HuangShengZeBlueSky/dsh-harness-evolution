@@ -26,7 +26,7 @@
 | ReAct | Qwen3-4B | M | — | 10.70 ± 1.06 | — | — | — | — |
 | ReflAct | Qwen3-4B | M | — | 18.35 ± 1.83 | — | — | — | — |
 | AutoManual | Qwen3-4B | M | — | 76.15 ± 1.59 | — | — | — | — |
-| Harness-R1 (released patch) | Qwen3-4B | M | — | — | 评测中 | — | — | — |
+| Harness-R1 (released patch) | Qwen3-4B | M | — | — | 52.22 ± 0.69 | — | — | — |
 | **共同冻结环境 · WebShop** | | | | | | | | |
 | Life-Harness | Qwen3-4B | F | — | — | — | 41.33 ± 0.29 | — | — |
 | ALIGN | Qwen3-4B | F | — | — | — | 31.00 ± 0.50 | — | — |
