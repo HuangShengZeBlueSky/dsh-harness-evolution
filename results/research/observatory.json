@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T03:56:45.224958+00:00",
+  "updated_at": "2026-11-03T04:27:41.785238+00:00",
   "groups": [
     {
       "id": "alfworld-official50-20r-20261022/method1-astra",
@@ -16806,12 +16806,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 748491899,
-        "cached_input_tokens": 744325760,
-        "output_tokens": 735960,
-        "reasoning_output_tokens": 263875,
-        "uncached_input_tokens": 4166139,
-        "total_tokens": 749227859
+        "input_tokens": 763605447,
+        "cached_input_tokens": 759430912,
+        "output_tokens": 738426,
+        "reasoning_output_tokens": 264168,
+        "uncached_input_tokens": 4174535,
+        "total_tokens": 764343873
       },
       "token_sources": {
         "session_cumulative": 1
@@ -17706,12 +17706,12 @@
       },
       "checkpoint_test_protocol": null,
       "tokens": {
-        "input_tokens": 1013380317,
-        "cached_input_tokens": 1008869504,
-        "output_tokens": 466690,
+        "input_tokens": 1023440859,
+        "cached_input_tokens": 1018923008,
+        "output_tokens": 467590,
         "reasoning_output_tokens": 184136,
-        "uncached_input_tokens": 4510813,
-        "total_tokens": 1013847007
+        "uncached_input_tokens": 4517851,
+        "total_tokens": 1023908449
       },
       "token_sources": {
         "session_cumulative": 1
@@ -117661,7 +117661,7 @@
     "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
   },
   "queue": {
-    "collected_at": "2026-11-03T03:56:45.224958+00:00",
+    "collected_at": "2026-11-03T04:27:41.785238+00:00",
     "policy": "High points only, as confirmed by user. Promoted development high points in near-reference groups. Low points stay unmeasured, not scheduled. Current L4 reproduction groups wait for final selection and screening. No test feedback to optimizers.",
     "counts": {
       "alfworld": 55,
@@ -128039,7 +128039,7 @@
       }
     ],
     "execution": {
-      "updated_at": 1793678181.080655,
+      "updated_at": 1793680042.1649826,
       "counts": {
         "not_selected_for_backfill": 539,
         "complete": 98,
