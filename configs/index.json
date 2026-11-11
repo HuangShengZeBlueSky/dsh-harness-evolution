@@ -1,0 +1,462 @@
+[
+  {
+    "profile": "abc/alfworld/A-luna56",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/A-luna6",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/A-sol61",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/A-terra61",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/B-luna56",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/B-luna6",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/B-sol61",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/B-terra61",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/C-sol61",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/alfworld/C-sol61-narrow",
+    "domain": "alfworld",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 2
+  },
+  {
+    "profile": "abc/dbbench/A-luna56",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/A-luna6",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/A-sol61",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/A-terra61",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/B-luna56",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/B-luna6",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/B-sol61",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/B-terra61",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/C-sol61",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/dbbench/C-sol61-narrow",
+    "domain": "dbbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 2
+  },
+  {
+    "profile": "abc/osbench/A-luna56",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/A-luna6",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/A-sol61",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/A-terra61",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/B-luna56",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/B-luna6",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/B-sol61",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/B-terra61",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/C-sol61",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/osbench/C-sol61-narrow",
+    "domain": "osbench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 0
+  },
+  {
+    "profile": "abc/webshop/A-luna56",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/A-luna6",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/A-sol61",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/A-terra61",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "A",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/B-luna56",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-5.6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/B-luna6",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6-luna",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/B-sol61",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/B-terra61",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6.1-terra",
+    "effort": "high",
+    "scope": "B",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/C-sol61",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 6
+  },
+  {
+    "profile": "abc/webshop/C-sol61-narrow",
+    "domain": "webshop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": "C",
+    "recipe": null,
+    "train_batches": 2
+  },
+  {
+    "profile": "artifacts/alfworld-sol61-20",
+    "domain": "alfworld",
+    "rounds": 20,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": null,
+    "recipe": "Base",
+    "train_batches": 6
+  },
+  {
+    "profile": "artifacts/webshop-l5-h0-sol61",
+    "domain": "WebShop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": null,
+    "recipe": "L5",
+    "train_batches": 6
+  },
+  {
+    "profile": "artifacts/webshop-original-best-sol61",
+    "domain": "WebShop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": null,
+    "recipe": "Resume",
+    "train_batches": 6
+  },
+  {
+    "profile": "l4/dbbench-l4-h0-sol61",
+    "domain": "DBBench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": null,
+    "recipe": "L4",
+    "train_batches": 6
+  },
+  {
+    "profile": "l4/osbench-l4-h0-sol61",
+    "domain": "OSBench",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": null,
+    "recipe": "L4",
+    "train_batches": 0
+  },
+  {
+    "profile": "l4/webshop-l4-h0-sol61",
+    "domain": "WebShop",
+    "rounds": 40,
+    "improver": "gpt-6.1-sol",
+    "effort": "high",
+    "scope": null,
+    "recipe": "L4",
+    "train_batches": 6
+  }
+]

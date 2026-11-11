@@ -1,54 +1,64 @@
 # DSH Harness Evolution
 
-**English** | [简体中文](README.zh-CN.md)
+[English](README.md) · [简体中文](README.zh-CN.md)
 
-**Methods, evolution curves, reproducible configurations, and measured plugin artifacts.**
+**Trajectory-guided harness evolution on DeepSeek Harness.**
 
-Freeze the Qwen3-4B actor and expand the editable space from prompts and skills to tools, state and full harness mechanisms. Reuse DSH interfaces and study whether more capable optimizers can exploit this space. Publish measured outcomes, checkpoint curves and optimization tokens together.
+[Leaderboard & curves](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [Reproduce](docs/REPRODUCING.md) · [Paper figures](paper/README.md) · [Test results](LEADERBOARD.md)
 
-[**Evolution leaderboard and curves**](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [**Method**](docs/SCALING-METHOD.md) · [**Research data**](results/research/README.md) · [**Reproduce**](docs/REPRODUCING.md) · [**Leaderboard**](LEADERBOARD.md) · [**Architecture**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html)
+Freeze the executor and evolve its harness. The mainline contains two methods.
 
-## Five benchmark artifacts
+| Method | What changes | Entry |
+|---|---|---|
+| L4 | Describe current capabilities and plugin responsibilities, then propose and evaluate native plugin edits | [Code](evolution/src/dsh_evolve/loops/l4.py) · [Configurations](configs/l4) |
+| A/B/C | A edits skill text; B edits one independent component; C coordinates hooks through episode state | [Controller](evolution/src/dsh_evolve/abc.py) · [40 configurations](configs/abc) |
 
-| Benchmark | Best released final-selected artifact | Retrospective high point | Life-Harness v3 reference |
-|---|---:|---:|---:|
-| ALFWorld | [95.41% · v18](harnesses/alfworld/20261026-method1-sol61-v18) | — | 88.07% |
-| DBBench | [70.56% · v35](harnesses/dbbench/20261026-l4-h0-sol61-v35) | — | 65.00% |
-| WebShop | [44.50% · v28](harnesses/webshop/20261026-l5-h0-sol61-v28) | [47.00% · v12](harnesses/webshop/20261027-original-best-sol61-v12) | 45.50% |
-| OSBench | [38.89% · v17](harnesses/osbench/20261026-l4-h0-sol61-v17) | [39.35% · v03](harnesses/osbench/20261030-l4-h0-sol61-v03) | 39.60% |
-| Telecom | [84.17% · v06](harnesses/telecom/20261026-start-luna-repaired-v06) | — | 90.00% |
+![A/B/C search](paper/previews/abc-search-procedure.png)
 
-These artifacts come from different methods and protocols, not one unified algorithm. Each final artifact follows its campaign selection rule; cross-campaign ranking and retrospective peaks use observed tests. Paper budgets, repeats, and Telecom simulator/access differ. The full leaderboard retains ALIGN, AgentSquare, Meta-Harness, AHE, and historical Life-Harness versions.
+## Paper results
 
-## What the audit established
+<!-- paper-table:start -->
+| Benchmark | Historical measured peak | Historical final-selected |
+|---|---:|---:|
+| ALFWorld | 95.41% | 95.41% |
+| DBBench | 70.56% | 70.56% |
+| WebShop · historical | 47.00% | 44.33% |
+| WebShop · frozen | 48.17% | — |
+| OSBench | 39.35% | 38.89% |
+| Telecom | 87.50% | 84.17% |
+<!-- paper-table:end -->
 
-- **More loop machinery did not reliably improve results.** L4/L5 remain strong; L8 delivered experience without consistent gains, and L9 did not dominate the earlier checkpoints.
-- **Protocol changes are additional variables.** DB/Web L4 use 300 training tasks and no separate validation; L5 uses 240+60. Their score difference is not a clean component ablation.
-- **Selection leaves headroom.** Web retrospective 47.00% exceeds that campaign final 44.33%; OS early 39.35% exceeds final 38.89%. Original selections are preserved.
-- **Overall gain and mechanism support are separate.** Loading, triggering, and experience delivery are execution facts; intended repairs and global outcome changes require additional evidence.
+These are the paper's historical artifact lineages. ALFWorld uses 20 rounds, DBBench/OSBench include L4, and WebShop includes a historical continuation. The separate OSBench C data-control peak of 41.67% remains in the figure archive. [Exact settings](docs/REPRODUCING.md) · [Full comparisons](LEADERBOARD.md).
 
-- **Mean success and reliability can diverge.** OS mechanism feedback reached 32.87% versus summary 29.40%, yet all-three success was 25.00% versus 26.39%. This is a single-search observation.
+Matched 40-round A/B/C final selections have their own [data](paper/data/controlled-abc.json) and website table.
 
-[**Core method: editable space and optimizer capability**](docs/SCALING-METHOD.md) · [**Detailed research records**](results/research/README.md)
+## Curves and figures
 
-![Final tests by method](assets/method-final-tests.png)
+Each of four benchmarks has an **eight-panel C model/effort plot** and a **nine-panel model-by-scope plot**. The 27 figures from the writing document and the aligned A/B/C algorithm are included.
 
-## Reproduce from a shared core
+[28 figures](paper/README.md) · [Figure-to-configuration mapping](paper/data/curve-manifest.json) · [Training and measured tests](paper/data/trajectories.json)
 
-`evolution/` supplies shared three-benchmark L1–L9 code, 36 profiles, task IDs and a small offline example. Each method documents inputs → edits → evaluation → adoption → final selection, with explicit reproduction coverage.
+## Run
 
-```bash
+~~~bash
 python -m pip install -e evolution
 dsh-evolve profiles
-python evolution/scripts/smoke.py ./workspaces/smoke
-```
+dsh-evolve init ./runs/db-c --profile abc/dbbench/C-sol61 --assets /data/dbbench
+# Set model and database environment variables as described in the guide.
+dsh-evolve setup ./runs/db-c/experiment.yaml
+dsh-evolve run ./runs/db-c/experiment.yaml
+~~~
 
-This scripted-model example exercises real DSH hooks and one adoption cycle; it does not remeasure benchmark scores. Formal runs require models, data and environments. ALFWorld/Telecom and feedback-extension integration boundaries are documented.
+A/B/C seals the final selection before testing promoted checkpoints. [Environment setup and artifact evaluation](docs/REPRODUCING.md).
 
-## Read and update the data
+## Repository
 
-[Round records and detailed statistics](results/research/README.md) · [Metric definitions](docs/METRICS.md) · [All artifacts](LEADERBOARD.md) · [Publishing](docs/PUBLISHING.md)
+- [evolution](evolution/) contains shared execution, L4 and A/B/C.
+- [configs](configs/) contains L4, A/B/C and historical artifact recipes.
+- [harnesses](harnesses/) contains five-benchmark artifacts, compositions and diagrams.
+- [paper](paper/) contains figure PDFs, tables and numeric records.
+- [tools](tools/) builds the website and publishes measurements.
 
-Training, validation and test measurements remain separate. Inspect repeats, valid coverage, adoption/regression, models and splits. Time fields state their scope; missing costs stay null; three test trials are not three independent searches. New measured records rebuild the site, which shows a collection date rather than pretending to be a live monitor.
+Earlier methods remain in [Git history](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/archive/pre-paper-cleanup-20261111). [Publishing](docs/PUBLISHING.md) rebuilds the leaderboard from canonical paper data.
 
-[MIT](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md) · [DSH](https://github.com/deepseek-ai/deepseek-harness)
+[MIT](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md) · [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)

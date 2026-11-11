@@ -1,0 +1,718 @@
+[
+  {
+    "benchmark": "alfworld",
+    "main": [
+      {
+        "model": "5.6 Luna high",
+        "A": {
+          "score": 14.984709480122325,
+          "version": "v08",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna56",
+          "final": 4.587155963302752,
+          "measured_points": 12
+        },
+        "B": {
+          "score": 17.12538226299694,
+          "version": "v38",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna56",
+          "final": 17.12538226299694,
+          "measured_points": 18
+        },
+        "C": null
+      },
+      {
+        "model": "6 Luna high",
+        "A": {
+          "score": 23.853211009174313,
+          "version": "v15",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+          "final": 22.018348623853214,
+          "measured_points": 12
+        },
+        "B": {
+          "score": 14.067278287461773,
+          "version": "v28",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+          "final": 11.009174311926607,
+          "measured_points": 8
+        },
+        "C": {
+          "score": 48.62385321100918,
+          "version": "v31",
+          "config": "②",
+          "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/luna-high",
+          "final": 48.62385321100918,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Terra high",
+        "A": {
+          "score": 26.911314984709477,
+          "version": "v13",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+          "final": 18.34862385321101,
+          "measured_points": 17
+        },
+        "B": {
+          "score": 29.96941896024465,
+          "version": "v33",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+          "final": 23.853211009174313,
+          "measured_points": 22
+        },
+        "C": {
+          "score": 52.90519877675841,
+          "version": "v33",
+          "config": "②",
+          "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/terra61-high",
+          "final": 52.90519877675841,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Sol high",
+        "A": {
+          "score": 27.217125382262996,
+          "version": "v12",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+          "final": 14.678899082568808,
+          "measured_points": 23
+        },
+        "B": {
+          "score": 33.33333333333333,
+          "version": "v39",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+          "final": 30.58103975535168,
+          "measured_points": 18
+        },
+        "C": {
+          "score": 95.4128440367,
+          "version": "v18",
+          "config": "③",
+          "source": "alfworld-official50-20r-20261022/method1-sol61",
+          "final": 95.4128440367,
+          "selection": "开发选定版"
+        }
+      }
+    ],
+    "supplement": [
+      {
+        "model": "6 Luna medium",
+        "score": 34.5565749235474,
+        "version": "v40",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/luna-medium",
+        "final": 34.5565749235474,
+        "measured_points": 1
+      },
+      {
+        "model": "6.1 Terra medium",
+        "score": 55.65749235474006,
+        "version": "v27",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/terra61-medium",
+        "final": 55.65749235474006,
+        "measured_points": 1
+      },
+      {
+        "model": "5.6 Sol medium",
+        "score": 84.40366972477065,
+        "version": "v39",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol56-medium",
+        "final": 84.40366972477065,
+        "measured_points": 1
+      },
+      {
+        "model": "5.6 Sol high",
+        "score": 48.92966360856269,
+        "version": "v40",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol56-high",
+        "final": 48.92966360856269,
+        "measured_points": 1
+      },
+      {
+        "model": "6.1 Sol medium",
+        "score": 95.41284403669725,
+        "version": "v03",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol61-medium",
+        "final": 95.41284403669725,
+        "measured_points": 2
+      }
+    ],
+    "configurations": [
+      [
+        "①",
+        "300训练题，6批×50轮换",
+        "无",
+        "40轮",
+        "H0",
+        "全部 A、B"
+      ],
+      [
+        "②",
+        "固定100训练题，每轮100题",
+        "无",
+        "40轮",
+        "H0",
+        "Luna / Terra 的 C；补充表全部；另有 Sol high C＝95.41% · v06"
+      ],
+      [
+        "③",
+        "300训练题，6批×50轮换",
+        "无",
+        "20轮",
+        "H0",
+        "主表 Sol high C＝95.41% · v18"
+      ]
+    ]
+  },
+  {
+    "benchmark": "dbbench",
+    "main": [
+      {
+        "model": "5.6 Luna high",
+        "A": {
+          "score": 54.11111111111111,
+          "version": "v12",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna56",
+          "final": 51.44444444444445,
+          "measured_points": 12
+        },
+        "B": {
+          "score": 54.888888888888886,
+          "version": "v35",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna56",
+          "final": 54.55555555555556,
+          "measured_points": 18
+        },
+        "C": null
+      },
+      {
+        "model": "6 Luna high",
+        "A": {
+          "score": 53.0,
+          "version": "v17",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+          "final": 50.0,
+          "measured_points": 16
+        },
+        "B": {
+          "score": 54.55555555555556,
+          "version": "v39",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+          "final": 54.55555555555556,
+          "measured_points": 14
+        },
+        "C": {
+          "score": 54.666666666666664,
+          "version": "v04",
+          "config": "③",
+          "source": "architecture-luna8-fourbench-20261101/experiments/dbbench/mechanism",
+          "final": 54.666666666666664,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Terra high",
+        "A": {
+          "score": 53.77777777777778,
+          "version": "v25",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+          "final": 48.888888888888886,
+          "measured_points": 17
+        },
+        "B": {
+          "score": 53.77777777777778,
+          "version": "v32",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+          "final": 53.77777777777778,
+          "measured_points": 17
+        },
+        "C": {
+          "score": 50.888888888888886,
+          "version": "v18",
+          "config": "②",
+          "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/terra61-high",
+          "final": 50.888888888888886,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Sol high",
+        "A": {
+          "score": 52.888888888888886,
+          "version": "v23",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+          "final": 52.22222222222223,
+          "measured_points": 23
+        },
+        "B": {
+          "score": 53.55555555555556,
+          "version": "v07",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+          "final": 48.11111111111111,
+          "measured_points": 21
+        },
+        "C": {
+          "score": 70.5555555556,
+          "version": "v35",
+          "config": "①",
+          "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+          "final": 70.5555555556,
+          "selection": "开发选定版"
+        }
+      }
+    ],
+    "supplement": [
+      {
+        "model": "6 Luna medium",
+        "score": 50.55555555555556,
+        "version": "v17",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/luna-medium",
+        "final": 50.55555555555556,
+        "measured_points": 1
+      },
+      {
+        "model": "6.1 Terra medium",
+        "score": 49.111111111111114,
+        "version": "v36",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/terra61-medium",
+        "final": 49.111111111111114,
+        "measured_points": 1
+      },
+      {
+        "model": "5.6 Sol medium",
+        "score": 55.00000000000001,
+        "version": "v35",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol56-medium",
+        "final": 55.00000000000001,
+        "measured_points": 1
+      },
+      {
+        "model": "5.6 Sol high",
+        "score": 57.666666666666664,
+        "version": "v31",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol56-high",
+        "final": 57.666666666666664,
+        "measured_points": 1
+      },
+      {
+        "model": "6.1 Sol medium",
+        "score": 52.666666666666664,
+        "version": "v40",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol61-medium",
+        "final": 52.666666666666664,
+        "measured_points": 1
+      }
+    ],
+    "configurations": [
+      [
+        "①",
+        "300训练题，6批×50轮换",
+        "无",
+        "40轮",
+        "H0",
+        "全部 A、B；主表 Sol high C"
+      ],
+      [
+        "②",
+        "固定100训练题，每轮100题",
+        "无",
+        "40轮",
+        "H0",
+        "主表 Terra high C；补充表全部；另有 Luna high C＝50.78% · v18、Sol high C＝54.89% · v33"
+      ],
+      [
+        "③",
+        "固定100训练题，每轮100题",
+        "60题",
+        "8轮",
+        "H0",
+        "主表 Luna high C，候选机制方案；验证结果是否参与晋升见原方法配置"
+      ]
+    ]
+  },
+  {
+    "benchmark": "webshop",
+    "main": [
+      {
+        "model": "5.6 Luna high",
+        "A": {
+          "score": 45.666666666666664,
+          "version": "v11",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/A-luna56",
+          "final": 43.833333333333336,
+          "measured_points": 18
+        },
+        "B": {
+          "score": 47.5,
+          "version": "v17",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/B-luna56",
+          "final": 45.83333333333333,
+          "measured_points": 8
+        },
+        "C": null
+      },
+      {
+        "model": "6 Luna high",
+        "A": {
+          "score": 47.833333333333336,
+          "version": "v02",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+          "final": 46.5,
+          "measured_points": 15
+        },
+        "B": {
+          "score": 47.66666666666667,
+          "version": "v36",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+          "final": 47.66666666666667,
+          "measured_points": 18
+        },
+        "C": {
+          "score": 37.0,
+          "version": "v39",
+          "config": "①",
+          "source": "webshop-methods-20r-20261023/method1-luna",
+          "final": 37.0,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Terra high",
+        "A": {
+          "score": 44.83333333333333,
+          "version": "v11",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+          "final": 44.666666666666664,
+          "measured_points": 22
+        },
+        "B": {
+          "score": 46.166666666666664,
+          "version": "v26",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+          "final": 41.16666666666667,
+          "measured_points": 13
+        },
+        "C": {
+          "score": 35.66666666666667,
+          "version": "v40",
+          "config": "②",
+          "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/terra61-high",
+          "final": 35.66666666666667,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Sol high",
+        "A": {
+          "score": 45.666666666666664,
+          "version": "v10",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+          "final": 44.0,
+          "measured_points": 23
+        },
+        "B": {
+          "score": 47.16666666666667,
+          "version": "v04",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+          "final": 44.166666666666664,
+          "measured_points": 18
+        },
+        "C": {
+          "score": 48.1666666667,
+          "version": "v12",
+          "config": "③",
+          "source": "competitors-webshop-frozen-20261102/jobs/ours-v12",
+          "final": null,
+          "selection": "冻结环境发布高分产物"
+        }
+      }
+    ],
+    "supplement": [
+      {
+        "model": "6 Luna medium",
+        "score": 29.666666666666668,
+        "version": "v31",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/luna-medium",
+        "final": 29.666666666666668,
+        "measured_points": 1
+      },
+      {
+        "model": "6.1 Terra medium",
+        "score": 35.5,
+        "version": "v40",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/terra61-medium",
+        "final": 35.5,
+        "measured_points": 1
+      },
+      {
+        "model": "5.6 Sol medium",
+        "score": 42.16666666666667,
+        "version": "v25",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-medium",
+        "final": 42.16666666666667,
+        "measured_points": 5
+      },
+      {
+        "model": "5.6 Sol high",
+        "score": 34.333333333333336,
+        "version": "v37",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-high",
+        "final": 34.333333333333336,
+        "measured_points": 1
+      },
+      {
+        "model": "6.1 Sol medium",
+        "score": 37.666666666666664,
+        "version": "v40",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol61-medium",
+        "final": 37.666666666666664,
+        "measured_points": 1
+      }
+    ],
+    "configurations": [
+      [
+        "①",
+        "300训练题，6批×50轮换",
+        "无",
+        "40轮",
+        "A/B继承历史v37插件；Luna旧C为H0",
+        "全部 A、B（冻结环境）；主表 Luna high C（历史环境）"
+      ],
+      [
+        "②",
+        "固定100训练题，每轮100题",
+        "无",
+        "40轮",
+        "H0",
+        "主表 Terra high C、补充表全部（历史环境）；另有 Luna high C＝30.67%、Sol high C＝44.17%"
+      ],
+      [
+        "③",
+        "300训练题，6批×50轮换",
+        "无",
+        "续跑预算40轮",
+        "历史最佳 v37",
+        "主表 Sol high C；产物 v12 在冻结环境补测48.17%"
+      ]
+    ]
+  },
+  {
+    "benchmark": "osbench",
+    "main": [
+      {
+        "model": "5.6 Luna high",
+        "A": {
+          "score": 42.592592592592595,
+          "version": "v17",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/A-luna56",
+          "final": 42.129629629629626,
+          "measured_points": 3
+        },
+        "B": {
+          "score": 37.03703703703704,
+          "version": "v16",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/B-luna56",
+          "final": 34.25925925925926,
+          "measured_points": 5
+        },
+        "C": null
+      },
+      {
+        "model": "6 Luna high",
+        "A": {
+          "score": 34.25925925925926,
+          "version": "v01",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/A-luna6",
+          "final": 34.25925925925926,
+          "measured_points": 1
+        },
+        "B": {
+          "score": 37.5,
+          "version": "v01",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/B-luna6",
+          "final": 36.80555555555556,
+          "measured_points": 2
+        },
+        "C": {
+          "score": 38.88888888888889,
+          "version": "v13",
+          "config": "③",
+          "source": "loop-comparison-20r-20261025/osbench/l3-luna",
+          "final": 31.01851851851852,
+          "measured_points": 4
+        }
+      },
+      {
+        "model": "6.1 Terra high",
+        "A": {
+          "score": 42.36111111111111,
+          "version": "v13",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/A-terra61",
+          "final": 39.58333333333333,
+          "measured_points": 4
+        },
+        "B": {
+          "score": 33.56481481481482,
+          "version": "v21",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/B-terra61",
+          "final": 31.712962962962965,
+          "measured_points": 6
+        },
+        "C": {
+          "score": 27.083333333333332,
+          "version": "v11",
+          "config": "②",
+          "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-high",
+          "final": 27.083333333333332,
+          "measured_points": 1
+        }
+      },
+      {
+        "model": "6.1 Sol high",
+        "A": {
+          "score": 37.73148148148148,
+          "version": "v17",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/A-sol61",
+          "final": 37.73148148148148,
+          "measured_points": 2
+        },
+        "B": {
+          "score": 39.58333333333333,
+          "version": "v04",
+          "config": "①",
+          "source": "dsh-scale-abc-20261105/groups/osbench/B-sol61",
+          "final": 38.88888888888889,
+          "measured_points": 3
+        },
+        "C": {
+          "score": 39.3518518519,
+          "version": "v03",
+          "config": "①",
+          "source": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
+          "final": 38.8888888889,
+          "selection": "回溯最高点"
+        }
+      }
+    ],
+    "supplement": [
+      {
+        "model": "6 Luna medium",
+        "score": 33.33333333333333,
+        "version": "v15",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/luna-medium",
+        "final": 31.25,
+        "measured_points": 3
+      },
+      {
+        "model": "6.1 Terra medium",
+        "score": 31.48148148148148,
+        "version": "v16",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-medium",
+        "final": 31.01851851851852,
+        "measured_points": 5
+      },
+      {
+        "model": "5.6 Sol medium",
+        "score": 31.712962962962965,
+        "version": "v36",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-medium",
+        "final": 30.324074074074076,
+        "measured_points": 5
+      },
+      {
+        "model": "5.6 Sol high",
+        "score": 31.25,
+        "version": "v17",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-high",
+        "final": 31.25,
+        "measured_points": 2
+      },
+      {
+        "model": "6.1 Sol medium",
+        "score": 31.25,
+        "version": "v29",
+        "config": "②",
+        "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol61-medium",
+        "final": 30.555555555555557,
+        "measured_points": 2
+      }
+    ],
+    "configurations": [
+      [
+        "①",
+        "固定80训练题，每轮80题",
+        "20题",
+        "40轮",
+        "H0",
+        "全部 A、B；主表 Sol high C（旧 L4）"
+      ],
+      [
+        "②",
+        "固定100训练题，每轮100题",
+        "无",
+        "40轮",
+        "H0",
+        "主表 Terra high C、补充表全部；另有 Luna high C＝29.40%、Sol high C＝28.01%"
+      ],
+      [
+        "③",
+        "固定80训练题，每轮80题",
+        "20题",
+        "20轮",
+        "H0",
+        "主表 Luna high C，三分支搜索"
+      ]
+    ]
+  }
+]

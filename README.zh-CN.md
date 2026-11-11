@@ -1,54 +1,64 @@
 # DSH Harness Evolution
 
-[English](README.md) | **简体中文**
+[English](README.md) · [简体中文](README.zh-CN.md)
 
-**方法、进化曲线、可复现配置与真实插件产物。**
+**基于 DeepSeek Harness，把执行轨迹转成可运行的插件改进。**
 
-固定Qwen3-4B做题模型，扩大可修改空间：提示词、Skill、工具、状态与完整Harness。基于DSH复用已有框架，研究更强的优化模型能否提出更复杂且可泛化的机制。真实结果、逐轮曲线和优化Token共同公开。
+[主榜与曲线](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=zh) · [复现步骤](docs/REPRODUCING.zh-CN.md) · [论文图集](paper/README.md) · [测试数据](LEADERBOARD.zh-CN.md)
 
-[**进化主榜与全部曲线**](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [**方法**](docs/SCALING-METHOD.zh-CN.md) · [**研究数据**](results/research/README.md) · [**复现**](docs/REPRODUCING.zh-CN.md) · [**完整榜单**](LEADERBOARD.zh-CN.md) · [**架构工作台**](https://huangshengzebluesky.github.io/dsh-harness-evolution/architecture.html)
+冻结执行模型，进化外围的 Harness。主线保留两种方法。
 
-## 五场景产物
+| 方法 | 做什么 | 入口 |
+|---|---|---|
+| L4 | 梳理当前能力和插件职责，再依据轨迹提出修改、评测和晋升 | [代码](evolution/src/dsh_evolve/loops/l4.py) · [配置](configs/l4) |
+| A/B/C | A改技能文本，B每轮改一个独立部件，C通过任务内状态协调钩子 | [控制器](evolution/src/dsh_evolve/abc.py) · [40套配置](configs/abc) |
 
-| 场景 | 最佳已发布最终版 | 已发布回溯高点 | Life-Harness v3参考 |
-|---|---:|---:|---:|
-| ALFWorld | [95.41% · v18](harnesses/alfworld/20261026-method1-sol61-v18/README.zh-CN.md) | — | 88.07% |
-| DBBench | [70.56% · v35](harnesses/dbbench/20261026-l4-h0-sol61-v35/README.zh-CN.md) | — | 65.00% |
-| WebShop | [44.50% · v28](harnesses/webshop/20261026-l5-h0-sol61-v28/README.zh-CN.md) | [47.00% · v12](harnesses/webshop/20261027-original-best-sol61-v12) | 45.50% |
-| OSBench | [38.89% · v17](harnesses/osbench/20261026-l4-h0-sol61-v17/README.zh-CN.md) | [39.35% · v03](harnesses/osbench/20261030-l4-h0-sol61-v03) | 39.60% |
-| Telecom | [84.17% · v06](harnesses/telecom/20261026-start-luna-repaired-v06/README.zh-CN.md) | — | 90.00% |
+![A/B/C进化流程](paper/previews/abc-search-procedure.png)
 
-这是不同方法及协议下的产物，不是一套统一算法的五场景成绩。最终版按各实验训练／验证规则选定；跨实验比较和回溯高点均已观察测试。论文预算、重复次数及 Telecom 用户／接口不同。主榜保留 ALIGN、AgentSquare、Meta-Harness、AHE 及 Life-Harness 历史版本。
+## 论文主榜
 
-## 这次审查留下的结论
+<!-- paper-table:start -->
+| 场景 | 历史产物已测高点 | 历史最终选版 |
+|---|---:|---:|
+| ALFWorld | 95.41% | 95.41% |
+| DBBench | 70.56% | 70.56% |
+| WebShop · historical | 47.00% | 44.33% |
+| WebShop · frozen | 48.17% | — |
+| OSBench | 39.35% | 38.89% |
+| Telecom | 87.50% | 84.17% |
+<!-- paper-table:end -->
 
-- **改进并不单调。** L4／L5仍较强；L8传入了经验但未产生稳定收益，L9组件复用也未全面超过旧高点。
-- **配置变化也是变量。** DB／Web的L4是300训练、无独立验证；L5是240训练＋60验证。不能把全部差距归因于一个新增模块。
-- **选择规则仍有改进空间。** Web回溯47.00%高于该组最终44.33%；OS早期39.35%高于最终38.89%。保留原选择，不倒写历史。
-- **总分提高与机制成立分别判断。** 已加载、已触发、已传入经验是执行事实；目标修复和整体收益是另外两层证据。
+沿用论文当前历史产物口径。ALFWorld是20轮历史搜索，DBBench、OSBench包含L4，WebShop包含历史续跑。另一题单的OSBench C高点41.67%保留在图集和原数据中。[来源与配置](docs/REPRODUCING.zh-CN.md) · [完整榜单](LEADERBOARD.zh-CN.md)。
 
-- **平均分与稳定性分开。** OS机制反馈平均成功32.87%高于摘要29.40%，三次全过25.00%却低于26.39%；单次搜索显示覆盖与稳定性没有同步改善。
+同协议四十轮A/B/C的终选结果在网站单列，并保留[完整数值](paper/data/controlled-abc.json)。
 
-[**核心方法：修改空间与模型能力**](docs/SCALING-METHOD.zh-CN.md) · [**详细研究记录**](results/research/README.md)
+## 看曲线
 
-![各方法最终测试](assets/method-final-tests.png)
+四个场景都提供 **8组C模型／推理强度曲线**，以及 **9组模型×修改面曲线**。飞书论文文档中的27张图完整收入，再附本轮对齐的A/B/C算法图。
 
-## 从一份公共基础开始复现
+[浏览28张图](paper/README.md) · [图与配置对应关系](paper/data/curve-manifest.json) · [逐轮训练和测试](paper/data/trajectories.json)
 
-`evolution/` 提供三场景 L1–L9 的共同运行代码、36份配置、任务编号与一个离线小例子。每种方法以“输入 → 改动 → 评测 → 采用 → 最终选择”说明；所有历史方法的可复现层级逐项标明。
+## 开始复现
 
-```bash
+~~~bash
 python -m pip install -e evolution
 dsh-evolve profiles
-python evolution/scripts/smoke.py ./workspaces/smoke
-```
+dsh-evolve init ./runs/db-c --profile abc/dbbench/C-sol61 --assets /data/dbbench
+# 按复现文档设置执行模型和数据库连接。
+dsh-evolve setup ./runs/db-c/experiment.yaml
+dsh-evolve run ./runs/db-c/experiment.yaml
+~~~
 
-该例子验证真实DSH运行钩子和一轮采用链，使用脚本模型，不是基准分数复测。正式运行另需模型、数据和环境；ALFWorld／Telecom及反馈扩展的接入边界见运行说明。
+L4和A/B/C共用执行基础。A/B/C在40轮决定完成并封存后测试所有晋升版。[复现说明](docs/REPRODUCING.zh-CN.md)给出环境、题单、模型、起点和预算。
 
-## 数据怎样读与更新
+## 目录
 
-[逐轮记录与详细指标](results/research/README.md) · [统计口径](docs/METRICS.zh-CN.md) · [全部已发布产物](LEADERBOARD.zh-CN.md) · [发布指南](docs/PUBLISHING.zh-CN.md)
+- [evolution](evolution/) — 共同执行层、L4、A/B/C。
+- [configs](configs/) — L4、A/B/C及历史高分配置。
+- [harnesses](harnesses/) — 五场景产物、装配、协议与框图。
+- [paper](paper/) — 论文图、表、数值及逐轮曲线。
+- [tools](tools/) — 榜单生成与产物发布。
 
-训练／验证／测试分开绘制，未测点不补线；每次重复、有效场数、采用与退步、模型和划分均可查看。时间注明计量范围，缺失成本不填零，三次测试不是三次独立搜索。新增实测记录后重新构建即可更新，网页显示采集日期，不冒充实时监控。
+早期方法保留在[整理前的历史版本](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/archive/pre-paper-cleanup-20261111)。后续通过[发布步骤](docs/PUBLISHING.md)更新数据并重建榜单。
 
-[MIT](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md) · [DSH](https://github.com/deepseek-ai/deepseek-harness)
+[MIT](LICENSE) · [第三方说明](docs/THIRD_PARTY.md) · [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)

@@ -1,0 +1,290 @@
+[
+  {
+    "benchmark": "alfworld",
+    "model": "6 Luna",
+    "effort": "medium",
+    "best_test": 34.5565749235474,
+    "version": "v40",
+    "final_test": 34.5565749235474,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/luna-medium"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "6 Luna",
+    "effort": "medium",
+    "best_test": 50.55555555555556,
+    "version": "v17",
+    "final_test": 50.55555555555556,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/luna-medium"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "6 Luna",
+    "effort": "medium",
+    "best_test": 29.666666666666668,
+    "version": "v31",
+    "final_test": 29.666666666666668,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/luna-medium"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "6 Luna",
+    "effort": "medium",
+    "best_test": 33.33333333333333,
+    "version": "v15",
+    "final_test": 31.25,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/luna-medium"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "6 Luna",
+    "effort": "high",
+    "best_test": 48.62385321100918,
+    "version": "v31",
+    "final_test": 48.62385321100918,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/luna-high"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "6 Luna",
+    "effort": "high",
+    "best_test": 50.77777777777778,
+    "version": "v18",
+    "final_test": 50.77777777777778,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/luna-high"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "6 Luna",
+    "effort": "high",
+    "best_test": 30.666666666666664,
+    "version": "v02",
+    "final_test": 30.666666666666664,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/luna-high"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "6 Luna",
+    "effort": "high",
+    "best_test": 29.398148148148145,
+    "version": "v35",
+    "final_test": 29.398148148148145,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/luna-high"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "6.1 Terra",
+    "effort": "medium",
+    "best_test": 55.65749235474006,
+    "version": "v27",
+    "final_test": 55.65749235474006,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/terra61-medium"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "6.1 Terra",
+    "effort": "medium",
+    "best_test": 49.111111111111114,
+    "version": "v36",
+    "final_test": 49.111111111111114,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/terra61-medium"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "6.1 Terra",
+    "effort": "medium",
+    "best_test": 35.5,
+    "version": "v40",
+    "final_test": 35.5,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/terra61-medium"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "6.1 Terra",
+    "effort": "medium",
+    "best_test": 31.48148148148148,
+    "version": "v16",
+    "final_test": 31.01851851851852,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-medium"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "6.1 Terra",
+    "effort": "high",
+    "best_test": 52.90519877675841,
+    "version": "v33",
+    "final_test": 52.90519877675841,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/terra61-high"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "6.1 Terra",
+    "effort": "high",
+    "best_test": 50.888888888888886,
+    "version": "v18",
+    "final_test": 50.888888888888886,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/terra61-high"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "6.1 Terra",
+    "effort": "high",
+    "best_test": 35.66666666666667,
+    "version": "v40",
+    "final_test": 35.66666666666667,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/terra61-high"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "6.1 Terra",
+    "effort": "high",
+    "best_test": 27.083333333333332,
+    "version": "v11",
+    "final_test": 27.083333333333332,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-high"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "5.6 Sol",
+    "effort": "medium",
+    "best_test": 84.40366972477065,
+    "version": "v39",
+    "final_test": 84.40366972477065,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol56-medium"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "5.6 Sol",
+    "effort": "medium",
+    "best_test": 55.00000000000001,
+    "version": "v35",
+    "final_test": 55.00000000000001,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol56-medium"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "5.6 Sol",
+    "effort": "medium",
+    "best_test": 42.16666666666667,
+    "version": "v25",
+    "final_test": 42.16666666666667,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-medium"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "5.6 Sol",
+    "effort": "medium",
+    "best_test": 31.712962962962965,
+    "version": "v36",
+    "final_test": 30.324074074074076,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-medium"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "5.6 Sol",
+    "effort": "high",
+    "best_test": 48.92966360856269,
+    "version": "v40",
+    "final_test": 48.92966360856269,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol56-high"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "5.6 Sol",
+    "effort": "high",
+    "best_test": 57.666666666666664,
+    "version": "v31",
+    "final_test": 57.666666666666664,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol56-high"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "5.6 Sol",
+    "effort": "high",
+    "best_test": 34.333333333333336,
+    "version": "v37",
+    "final_test": 34.333333333333336,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-high"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "5.6 Sol",
+    "effort": "high",
+    "best_test": 31.25,
+    "version": "v17",
+    "final_test": 31.25,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-high"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "6.1 Sol",
+    "effort": "medium",
+    "best_test": 95.41284403669725,
+    "version": "v03",
+    "final_test": 95.41284403669725,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol61-medium"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "6.1 Sol",
+    "effort": "medium",
+    "best_test": 52.666666666666664,
+    "version": "v40",
+    "final_test": 52.666666666666664,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol61-medium"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "6.1 Sol",
+    "effort": "medium",
+    "best_test": 37.666666666666664,
+    "version": "v40",
+    "final_test": 37.666666666666664,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol61-medium"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "6.1 Sol",
+    "effort": "medium",
+    "best_test": 31.25,
+    "version": "v29",
+    "final_test": 30.555555555555557,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol61-medium"
+  },
+  {
+    "benchmark": "alfworld",
+    "model": "6.1 Sol",
+    "effort": "high",
+    "best_test": 95.41284403669725,
+    "version": "v06",
+    "final_test": 95.41284403669725,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol61-high"
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "6.1 Sol",
+    "effort": "high",
+    "best_test": 54.888888888888886,
+    "version": "v33",
+    "final_test": 54.888888888888886,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/dbbench/sol61-high"
+  },
+  {
+    "benchmark": "webshop",
+    "model": "6.1 Sol",
+    "effort": "high",
+    "best_test": 44.166666666666664,
+    "version": "v36",
+    "final_test": 44.166666666666664,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol61-high"
+  },
+  {
+    "benchmark": "osbench",
+    "model": "6.1 Sol",
+    "effort": "high",
+    "best_test": 28.009259259259263,
+    "version": "v38",
+    "final_test": 28.009259259259263,
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol61-high"
+  }
+]

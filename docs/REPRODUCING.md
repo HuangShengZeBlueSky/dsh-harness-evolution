@@ -1,98 +1,69 @@
-# Reproduction: artifacts, search, and historical results
+# Reproduction
 
-The repository publishes three different things: **evaluated harnesses**, **evolution code**, and **recorded protocols/results**. They are linked, but installing the package does not reproduce every historical score. Rediscovering a good plugin through search is also a different experiment from evaluating a fixed artifact.
+[简体中文](REPRODUCING.zh-CN.md)
 
-| Goal | Included | Remaining requirements |
+Use Python 3.10–3.12 for full benchmark environments and Node.js 22.19+. Install with **python -m pip install -e evolution**.
+
+## Configuration families
+
+| Family | Path | Purpose |
 |---|---|---|
-| Inspect/load five-benchmark artifacts | Plugins, compositions, diagrams, protocols and curves in `harnesses/` | Actor service and corresponding benchmark environment; a running server is not an evaluation |
-| Run DBBench/WebShop/OSBench L1–L9 | Shared execution/evaluation, strategy modules, 36 configurations, task IDs and scoring bridges in `evolution/` | Dataset/environment assets, actor and optimizer access |
-| Reproduce historical ALFWorld search | Artifact, recorded protocol and actual environment adapter | Historical search not ported to these 36 profiles; generic inventory is not the published 109-task test set |
-| Reproduce historical Telecom search | Artifacts and two-role integration | Matching Tau2 extensions, GLM user, account facts and auxiliary review permissions; not the single-executor loop |
-| Run later summary/mechanism feedback | Actual core source, ten optimizer prompts, native host references | Separate historical integration; portable end-to-end launch has not been validated |
-| Earlier Skill/Workflow experiments | Method descriptions and bounded historical results | Not switches of one DSH implementation; not rerun by this package |
+| L4 | configs/l4 | Historical capability-guided plugin search |
+| A/B/C | configs/abc | 40-round controlled edit-scope search |
+| Data coverage | Each C-sol61-narrow profile | Same C controller, alternate training coverage |
+| Historical ALFWorld | configs/artifacts/alfworld-sol61-20 | 20 rounds, six 50-task batches |
+| Historical WebShop L5 | configs/artifacts/webshop-l5-h0-sol61 | 240 train + 60 validation, strict-success selection |
+| Historical WebShop continuation | configs/artifacts/webshop-original-best-sol61 | 300 tasks, inherited starting plugins |
 
-## Start with the small runnable example
+A/B/C contains A and B for four high-effort improvers, plus Sol-high C and its data arm, in four benchmarks. The paper's nine-panel plots show three improvers with historical C selections. See the [curve mapping](../paper/data/curve-manifest.json).
 
-Use Python 3.10+ and Node.js 22.19+. This release is a source checkout with an editable installation; profiles/adapters are repository assets, not a standalone wheel promise.
+## Environment inputs
 
-```bash
-cd evolution
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e .
-python scripts/smoke.py ./workspaces/demo
-```
+| Benchmark | Required assets and variables | Model-call cap |
+|---|---|---:|
+| ALFWorld | ALFWorld 0.4.2, TextWorld 1.7.0, spaCy 3.7.5, NumPy 1.26.4; official game files; ALFWORLD_DATA_ROOT | 50 |
+| DBBench | MySQL 8.4, mysql-connector-python; data/db_out_new.jsonl and data/standard.jsonl; MYSQL_PASSWORD | 15 |
+| WebShop | Matching product/goal files and frozen catalog webshop-fixed-stage2-20261102; reset/step/close service; WEBSHOP_URL | 20 |
+| OSBench | Docker, os-evolve task images, fixtures/train and fixtures/test; DOCKER_HOST | 16 |
 
-The fixture uses a scripted actor and a prewritten candidate. It executes real DSH hooks and L7 preparation, planning, evaluation, adoption and final testing. It proves the execution chain, **not autonomous discovery or benchmark performance**. npm installs the pinned runtime dependencies on the first run; no actor or optimizer API is called.
+Set BENCH_BASE_URL and, when needed, BENCH_API_KEY. DBBench also uses BENCH_CHAT_URL and BENCH_TOKENIZER_URL. Model identity, decoder settings, task lists and budgets remain in YAML.
 
-This release passed that chain with four training, two validation and two test episodes. The candidate's bounded denial/recovery changes the next actual action. The 36 formal campaigns were not rerun after packaging.
+The repository includes exact task IDs and inherited WebShop plugins. Large benchmark assets and hosted model access are supplied separately. Obtain the original frozen WebShop snapshot from the experiment owner when reproducing its reported catalog; regenerated prices change the condition.
 
-## Run a new campaign
+## Search
 
-The following example calls real model/environment services. Prepare matching assets first and use a new output directory.
+~~~bash
+dsh-evolve profiles
+dsh-evolve init ./runs/db-c --profile abc/dbbench/C-sol61 --assets /data/dbbench
+dsh-evolve setup ./runs/db-c/experiment.yaml
+dsh-evolve run ./runs/db-c/experiment.yaml
+dsh-evolve status ./runs/db-c/experiment.yaml
+~~~
 
-```bash
-cd evolution
-source .venv/bin/activate
-export BENCH_BASE_URL=http://localhost:8000/v1
-export BENCH_CHAT_URL=http://localhost:8000/v1/chat/completions
-export BENCH_TOKENIZER_URL=http://localhost:8000/tokenize
-# Set BENCH_API_KEY if your endpoint requires authentication.
-dsh-evolve init ./workspaces/os-l7 \
-  --profile osbench-l7-sol61 --assets /data/os-assets
-# Review experiment.yaml: model, tasks, Docker connection and budgets.
-dsh-evolve setup ./workspaces/os-l7/experiment.yaml
-dsh-evolve run ./workspaces/os-l7/experiment.yaml
-```
+Use **l4/dbbench-l4-h0-sol61** for L4. Rerunning run resumes completed decisions and valid cached evaluations. A/B/C samples up to eight failed and four successful traces, then requests one structured replacement and rationale. It compares matching task/trial/seed outcomes and promotes on strict metric gain, visible editable-hook output change, and nondecreasing validation when configured.
 
-`init` copies the selected protocol, prompts, task IDs and runtime template. DB/OS scoring-source subsets are included unless your asset directory explicitly supplies its own `source/`. `run` collects baseline evaluation before starting a persistent optimizer session. Strategy code enforces adoption; `finish` seals selection before the final test. Test results are not fed into another candidate.
+A edits skill text. B replaces one of skill, memory, action checking or receipt interpretation. C can replace a composition whose mechanisms share episode state. B components retain independent state.
 
-URLs are deployment settings, not model identity. `${ENVIRONMENT_VARIABLE}` values are resolved when loading a configuration. Actor names, temperatures, budgets, task lists and strategy remain YAML-owned. `BENCH_BASE_URL`, `BENCH_CHAT_URL` and `BENCH_TOKENIZER_URL` must refer to the same actor and tokenizer. The recorded profiles use `Qwen3-4B-Instruct-2507` and optimizer `gpt-6.1-sol`/high; substituting another available model is a new condition. The optimizer and L8/L9 learning calls require your own valid CLI login/model access.
+ALFWorld, DBBench and WebShop cycle six batches of 50. OSBench uses 80 training and 20 validation tasks. Narrow arms use the first two batches; OSBench substitutes another 80-task set with the same validation set. Training/validation seed is 42, test trials use 42–44; only OSBench forwards the seed to the actor. WebShop selects by mean reward and reports strict success.
 
-### Benchmark resources
+After 40 decisions, A/B/C seals the final parent and tests promoted versions three times. Error bars are sample standard deviations. Historical recipes preserve original schedules; ALFWorld's initial test manifest has 109 episodes, with later repeated-checkpoint evaluations in paper data.
 
-| Benchmark | Assets/service | Preserved semantics |
-|---|---|---|
-| DBBench | MySQL 8.4; `pip install -e '.[dbbench]'`; `data/db_out_new.jsonl`, `data/standard.jsonl` | 15 model calls; 32,768 context; 4,096 output; native database initialization/grading. Configure `mysql_host`, `mysql_port`, `mysql_password_env` |
-| WebShop | Matching product/goal data and `/reset`, `/step`, `/close` service; set `WEBSHOP_URL` | 20 calls/tool steps; mean reward and strict purchase success are different metrics |
-| OSBench | Docker; `fixtures/{train,test}/*.json` and matching `os-evolve/*` images | 16 calls/tool steps; 800-character observation protocol; native match/script grading |
-| ALFWorld | Official game assets and ALFWorld 0.4.2, TextWorld 1.7.0, spaCy 3.7.5, NumPy 1.26.4 | Included historical adapter preserves admissible-action/action-mapping behavior; the generic demo is not this protocol |
-| Telecom | Matching Tau2 two-role environment, tasks, GLM user and interface permissions | Account-fact access and auxiliary review are extra capabilities and must remain declared |
+## Frozen artifacts
 
-The small original scoring-source subset and its licenses are in `evolution/benchmark_sources/`. Datasets, databases and task images are not in Git. Matching task IDs alone does not establish matching products, database contents, images or graders. A different environment asset is a different protocol.
+Initialize a fresh workspace with a compatible profile and **--baseline /path/to/released-harness**, run setup, then:
 
-## Strategy identity
+~~~bash
+dsh-evolve test-artifact ./runs/artifact-check/experiment.yaml
+~~~
 
-| Strategy | Actual selection/input change | Module |
-|---|---|---|
-| L1 | Strict same-batch training gain, non-regressing validation, observed changed-plugin use | `loops/l123.py` |
-| L2 | L1 plus non-decreasing score on a fixed training subset; **not parent-success-only replay** | `l123.py`, `loop_policy.py` |
-| L3 | Up to three validation-ranked branches; least-used parent first; retaining a branch need not change champion | Same modules |
-| L4 | Explain current plugin capabilities/responsibilities before proposing; validation gate only where the configuration has validation | `loops/l45.py` |
-| L5 | DB next-batch review; Web strict-success selection; OS validation-family macro gate | `loops/l45.py` |
-| L6 | Plan before coding; complete same-batch strict gain and actual planned-plugin use; no independent-validation gate | `loops/l6.py` |
-| L7 | L6 plus complete failure-index classification, independent validation and benchmark-specific gates | `loops/l789.py` |
-| L8 internal/external | On L7, learn after each decision / learn prior whole campaigns once and hold that advice fixed | `l789.py`, `learning.py` |
-| L9 | On L7, select/modify training-selected prior components for current failures | `loops/l789.py` |
+This evaluates the loaded artifact on the profile's held-out tasks. Telecom uses [its two-role integration](../integrations/telecom/) and GLM user, with its settings in the released protocol.
 
-Actual inheritance is `Project → L1–3 / L4–5 / L6 → L7–9`, not a fully cumulative L1→L9 chain. The following values are **training tasks + separate validation tasks**. Exact task IDs, seeds and model settings are in the profiles and [profile index](../evolution/profile-index.json).
+## Installation check
 
-| Benchmark | L1–L3 | L4 H0 | L5 H0 | L6 | L7–L9 | Final test |
-|---|---|---|---|---|---|---|
-| DBBench | 240 + 60 | 300 + 0 | 240 + 60 | 300 + 0 | 300 + 60 | 300 × 3 |
-| WebShop | 240 + 60 | 300 + 0 | 240 + 60 | 300 + 0 | 300 + 60 | 200 × 3 |
-| OSBench | 80 + 20 | 80 + 20 | 83 + 17 | 300 + 0 | 300 + 60 | 144 × 3 |
+~~~bash
+python evolution/scripts/smoke.py /tmp/dsh-install-check
+~~~
 
-DB/Web rotate six batches. OS L1–L5 use fixed sets; L6–L9 rotate six batches. Parent and candidate comparisons use the same batch; scores across rotating batches are not a fixed-test monotonic curve. All 36 profiles budget 40 new candidates. Seeded continuations also inherit earlier search cost. Task seeds identify repeats; with `send_seed: false`, they are not sent to the actor endpoint, so output determinism is not promised.
+The scripted actor and synthetic task exercise real DSH hooks, L4/A/B/C, promotion/rejection, sealing and held-out execution. No paid model requests are used. This packaging check passed; full benchmark searches were not rerun during cleanup.
 
-### Prior resources are part of the method
-
-`l4-best`/`original-best` require `--baseline /path/to/training-selected-harness`. L8 external requires completed training workspaces in `loop.experience_sources`, including decisions and readable training evidence; an empty directory is not external experience. L9 requires `--components` with the appropriate training-selected prior artifacts and any required training materials. Substituting a test-peak artifact changes the information condition. Count prior search, learning calls and retries separately.
-
-## What a reproducible record contains
-
-Preserve configuration, task identity, environment version, initial artifact, actor/optimizer/user models, budgets, parent/adoption decisions, complete valid evaluations, final selection and its test. Record actual input/control evidence and paired repairs/regressions, not just a final percentage. Private raw requests can remain in the work directory while publishing compact metrics.
-
-Separate candidate count, retained count, champion changes, tasks, episode repeats, per-repeat scores, validity/retries, paired repairs/regressions, model calls/tokens and wall time. Missing values remain missing. Test repeats of one artifact are not independent search runs. Incomplete historical cost data cannot establish equal-budget superiority.
-
-Packaging changes concern command entrypoints, environment-variable connections and dependencies; strategy/scoring differences are retained. The native feedback reference is in [evolution/extensions/feedback](../evolution/extensions/feedback/README.md). Full benchmark reproduction requires new runs under matching conditions and new result records.
+Prior methods remain at **archive/pre-paper-cleanup-20261111**. [Publication updates](PUBLISHING.md) use versioned numeric records.

@@ -1,0 +1,27 @@
+{
+  "methods": [
+    {
+      "id": "search-evidence",
+      "module": "plugins/search-evidence.mjs",
+      "config": {}
+    },
+    {
+      "id": "option-ledger",
+      "module": "plugins/option-ledger.mjs",
+      "config": {}
+    },
+    {
+      "id": "scale-slot",
+      "module": "scale-slot.mjs",
+      "config": {
+        "skill": "",
+        "mode": "C"
+      }
+    }
+  ],
+  "selected": [
+    "search-evidence",
+    "option-ledger",
+    "scale-slot"
+  ]
+}

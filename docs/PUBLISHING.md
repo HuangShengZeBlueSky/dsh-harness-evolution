@@ -1,30 +1,20 @@
-# Publish another harness
+# Publish a measured result
 
-**English** | [简体中文](PUBLISHING.zh-CN.md)
+The canonical table is paper/data/main-results.json. Submit an explicit measured result, including its checkpoint, artifact and evaluation identity.
 
-The leaderboard is **release-driven**. It updates when a maintainer publishes an artifact and its measured data. It does not scrape an internal live experiment board.
+~~~bash
+python tools/publish.py --record /path/to/measured-result.json
+python tools/build.py
+~~~
 
-1. Give the new artifact a unique `release_id`; retain prior releases.
-2. Include executable plugin files and `composition.json`, `protocol.json`, `curve.json`, `diagram.mmd`, and `card.json`. Existing artifact directories are concrete templates.
-3. Supply a result JSON or YAML using the fields of an existing `results/<benchmark>--<release>.json`. Set `comparison_group` from `results/leaderboard-policy.json` and declare `selection_kind`: `training_final` or `retrospective_adopted`. A retrospective release must include the actual `promotion.json` adoption record and original `campaign_final_checkpoint`. Scores are fractions from 0 to 1. Record full valid coverage and the actual protocol. Missing cost or unsupported metrics stay `null`.
-4. Register it and regenerate the leaderboard:
+Example record, in percentage units:
 
-```bash
-python tools/publish.py --artifact /path/to/new-harness --result /path/to/result.yaml
-node tools/check.mjs
-git add harnesses results assets README*.md LEADERBOARD*.md docs
-git commit -m "Publish new harness and measured results"
-git push
-```
+~~~json
+{"row":"Ours (measured peak)","column":"dbbench","mean":70.56,"sd":0.38,
+ "checkpoint":"v35","artifact":"harnesses/dbbench/20261026-l4-h0-sol61-v35",
+ "evaluation":"three complete executions","source":"recorded evaluation identifier"}
+~~~
 
-`publish.py --check` validates an artifact/result pair without writing files. YAML dates such as `published_on: 2026-10-26` are accepted.
+WebShop requires webshop_historical or webshop_frozen. Existing measurements remain in results/publication-history.json. Add new PDFs and previews to paper/figures.json. Commit the matching configurations, numeric records, artifacts and generated pages, then push. GitHub Actions deploys the site.
 
-`publish.py` prepares local repository changes; only `git push` publishes them. It refuses an existing release identifier. Every artifact gets its own rendered Mermaid diagram, measured evolution curve, protocol, and score page. The primary leaderboard chooses the highest success score within each benchmark’s registered primary comparison group. Different actors or protocols require a separate group and remain in the release table.
-
-For a corrected measurement, publish a new dated record and explain the correction rather than silently replacing an old artifact. For a different actor, task set, simulator, or runtime-access contract, register another comparison group in `results/leaderboard-policy.json`; do not reuse an incompatible group.
-
-The practical maintainer handoff is: **new harness + checkpoint identity + test metrics/coverage + protocol + curve**. Providing these is sufficient to prepare the next publication. Detailed private paper material is not required.
-
-## Research-method releases
-
-Update `results/research-methods.json`, the measured records/configurations under `results/research/`, and optionally a final artifact in `research-artifacts/` linked by its run ID. `python tools/build.py` regenerates the bilingual entry pages, method comparison figure, and offline-capable `site/index.html`. GitHub Pages serves that dated snapshot. Preserve original selection and older measurements; incomplete tests and historical configuration gaps remain explicit. Publish numerical outcomes and configurations, not raw conversations, credentials, or private machine paths.
+Peak and development-selected rows retain their separate identities. Update README summary values alongside any intentional change to the paper's main table.

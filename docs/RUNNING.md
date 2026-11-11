@@ -29,15 +29,6 @@ Telecom preserves its actual profile and `review-bridge.mjs`, rather than reusin
 
 The released composition contains 30 inherited prompt/description/schema/result/memory surfaces and five custom registrations. The actual runtime additionally performs auxiliary review. Preserve these features when reproducing the reported result, and account for their information access and model calls when comparing methods.
 
-## Rebuilding public figures
+## Paper results
 
-```bash
-python -m venv .venv
-. .venv/bin/activate
-pip install -r requirements.txt
-# Linux: install a Chinese font once (macOS uses the system Heiti font).
-# sudo apt-get install fonts-noto-cjk
-python tools/build.py
-```
-
-This regenerates the public leaderboard and evolution figures from released data. It makes no model calls and does not start experiments.
+Run **python tools/build.py** to rebuild the table and website from the versioned paper data. [Figure PDFs and curve records](../paper/README.md) are preserved as the paper snapshot.

@@ -1,0 +1,3314 @@
+[
+  {
+    "benchmark": "alfworld",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol61-medium",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 1.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 1,
+    "candidate": "v01",
+    "parent": "baseline",
+    "train_gain": 10.0,
+    "test_gain": 8.256880733944953
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v01",
+    "train_gain": 44.0,
+    "test_gain": 75.22935779816514
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 10.0,
+    "test_gain": 0.9174311926605441
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v04",
+    "train_gain": 10.0,
+    "test_gain": 0.9174311926605583
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v07",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v09",
+    "train_gain": 4.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "alfworld-official50-20r-20261022/method1-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v11",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v07",
+    "train_gain": 12.0,
+    "test_gain": 2.000000000000007
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v09",
+    "train_gain": 4.0,
+    "test_gain": -0.3333333333333428
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v10",
+    "train_gain": 12.0,
+    "test_gain": 0.11111111111111427
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v12",
+    "train_gain": 6.0,
+    "test_gain": -0.22222222222222854
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v14",
+    "train_gain": 6.000000000000007,
+    "test_gain": 2.2222222222222285
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v16",
+    "train_gain": 4.0,
+    "test_gain": -0.11111111111111427
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v17",
+    "train_gain": 4.0,
+    "test_gain": 1.4444444444444429
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v21",
+    "train_gain": 2.0,
+    "test_gain": -0.6666666666666714
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v22",
+    "train_gain": 4.0,
+    "test_gain": 0.4444444444444571
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v23",
+    "train_gain": 4.0,
+    "test_gain": 0.11111111111111427
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v25",
+    "train_gain": 4.0,
+    "test_gain": -0.8888888888888999
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v27",
+    "train_gain": 4.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v28",
+    "train_gain": 4.0,
+    "test_gain": 1.444444444444457
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v32",
+    "train_gain": 4.0,
+    "test_gain": 0.22222222222221433
+  },
+  {
+    "benchmark": "webshop",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-medium",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v19",
+    "train_gain": 1.0,
+    "test_gain": 1.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-medium",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v22",
+    "train_gain": 1.0,
+    "test_gain": -0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-medium",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v24",
+    "train_gain": 2.000000000000007,
+    "test_gain": 0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/webshop/sol56-medium",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v25",
+    "train_gain": 1.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v02",
+    "train_gain": 2.0,
+    "test_gain": -0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v07",
+    "train_gain": -2.0,
+    "test_gain": 0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 2.0,
+    "test_gain": -0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v12",
+    "train_gain": 2.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v16",
+    "train_gain": 6.0,
+    "test_gain": -2.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v17",
+    "train_gain": 2.0,
+    "test_gain": 1.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v18",
+    "train_gain": 2.0,
+    "test_gain": -0.8333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v19",
+    "train_gain": 2.0,
+    "test_gain": 0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v24",
+    "train_gain": -2.0,
+    "test_gain": -2.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v25",
+    "train_gain": 2.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v27",
+    "train_gain": 2.0,
+    "test_gain": 0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v29",
+    "train_gain": 2.0,
+    "test_gain": 0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v32",
+    "train_gain": -2.0,
+    "test_gain": 1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v34",
+    "train_gain": 2.0,
+    "test_gain": -0.3333333333333286
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/luna-medium",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v15",
+    "train_gain": 1.0,
+    "test_gain": -2.3148148148148096
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/luna-medium",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v29",
+    "train_gain": 2.0,
+    "test_gain": 0.23148148148148096
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-medium",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v13",
+    "train_gain": 1.0,
+    "test_gain": 2.0833333333333357
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-medium",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v16",
+    "train_gain": 1.0,
+    "test_gain": -2.0833333333333357
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-medium",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v21",
+    "train_gain": 1.0,
+    "test_gain": -0.2314814814814774
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/terra61-medium",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v25",
+    "train_gain": 1.0,
+    "test_gain": 1.8518518518518512
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-medium",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v13",
+    "train_gain": 1.0,
+    "test_gain": 1.3888888888888893
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-medium",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v24",
+    "train_gain": 1.0,
+    "test_gain": 0.9259259259259309
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-medium",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v36",
+    "train_gain": 1.0,
+    "test_gain": -1.3888888888888893
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-medium",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol56-high",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v16",
+    "train_gain": 5.0,
+    "test_gain": 0.6944444444444429
+  },
+  {
+    "benchmark": "osbench",
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/osbench/sol61-medium",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v29",
+    "train_gain": 2.0,
+    "test_gain": -0.6944444444444429
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/C-sol61-narrow",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v01",
+    "train_gain": 6.25,
+    "test_gain": -1.6203703703703738
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 5,
+    "candidate": "v05",
+    "parent": "v04",
+    "train_gain": 4.0000000000000036,
+    "test_gain": 0.30581039755351824
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v05",
+    "train_gain": 6.0,
+    "test_gain": -5.5045871559633035
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 2.0,
+    "test_gain": -0.9174311926605494
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v07",
+    "train_gain": 8.0,
+    "test_gain": 8.256880733944955
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v08",
+    "train_gain": 5.999999999999998,
+    "test_gain": -6.727828746177373
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 8.000000000000004,
+    "test_gain": 3.669724770642201
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v11",
+    "train_gain": 2.0,
+    "test_gain": -1.2232415902140659
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v14",
+    "train_gain": 12.0,
+    "test_gain": 11.62079510703364
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v15",
+    "train_gain": 6.0,
+    "test_gain": -1.2232415902140694
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v16",
+    "train_gain": 2.0,
+    "test_gain": -4.892966360856267
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-luna6",
+    "round": 37,
+    "candidate": "v37",
+    "parent": "v18",
+    "train_gain": 2.0,
+    "test_gain": 4.281345565749238
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v04",
+    "train_gain": 4.0,
+    "test_gain": 3.9755351681957176
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 8.0,
+    "test_gain": -1.8348623853211006
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v09",
+    "train_gain": 1.9999999999999982,
+    "test_gain": -1.529051987767584
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v19",
+    "train_gain": 8.0,
+    "test_gain": 5.81039755351682
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v21",
+    "train_gain": 8.0,
+    "test_gain": 0.30581039755351647
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v28",
+    "train_gain": 9.999999999999998,
+    "test_gain": -4.892966360856269
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-luna6",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v31",
+    "train_gain": 12.0,
+    "test_gain": 1.8348623853211024
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 2,
+    "candidate": "v02",
+    "parent": "v01",
+    "train_gain": 2.0,
+    "test_gain": -7.951070336391435
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v02",
+    "train_gain": 2.0,
+    "test_gain": 8.256880733944953
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 14.0,
+    "test_gain": -1.2232415902140694
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v04",
+    "train_gain": 8.0,
+    "test_gain": 0.30581039755351824
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v08",
+    "train_gain": 8.0,
+    "test_gain": 3.0581039755351647
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v13",
+    "train_gain": 2.0000000000000036,
+    "test_gain": -3.6697247706421976
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v16",
+    "train_gain": 10.0,
+    "test_gain": 0.6116207951070329
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v18",
+    "train_gain": 6.0,
+    "test_gain": 1.2232415902140623
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 20,
+    "candidate": "v20",
+    "parent": "v19",
+    "train_gain": 2.0000000000000036,
+    "test_gain": -6.422018348623848
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v20",
+    "train_gain": 6.0,
+    "test_gain": 0.3058103975535147
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v23",
+    "train_gain": 4.0,
+    "test_gain": 3.3639143730886865
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v24",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 30,
+    "candidate": "v30",
+    "parent": "v27",
+    "train_gain": 2.0,
+    "test_gain": -0.6116207951070365
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v30",
+    "train_gain": 4.0,
+    "test_gain": -0.3058103975535147
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v38",
+    "train_gain": 4.0,
+    "test_gain": 1.529051987767584
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-terra61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 5.9999999999999964,
+    "test_gain": -4.587155963302752
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v01",
+    "train_gain": 1.9999999999999964,
+    "test_gain": -0.6116207951070329
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 5,
+    "candidate": "v05",
+    "parent": "v03",
+    "train_gain": 4.0,
+    "test_gain": 3.669724770642201
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v05",
+    "train_gain": 8.0,
+    "test_gain": -3.363914373088683
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 8.0,
+    "test_gain": 1.5290519877675806
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v07",
+    "train_gain": 2.0000000000000036,
+    "test_gain": 2.1406727828746206
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v09",
+    "train_gain": 10.0,
+    "test_gain": -0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 2.0,
+    "test_gain": 1.8348623853211024
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v11",
+    "train_gain": 2.0000000000000036,
+    "test_gain": -1.529051987767584
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v14",
+    "train_gain": 1.9999999999999964,
+    "test_gain": 2.4464831804281353
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v15",
+    "train_gain": 8.000000000000004,
+    "test_gain": 1.2232415902140623
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v18",
+    "train_gain": 5.9999999999999964,
+    "test_gain": 1.2232415902140694
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v24",
+    "train_gain": 9.999999999999996,
+    "test_gain": -7.339449541284402
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v26",
+    "train_gain": 4.0,
+    "test_gain": 2.75229357798165
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v27",
+    "train_gain": 4.0000000000000036,
+    "test_gain": 3.363914373088683
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v31",
+    "train_gain": 2.0,
+    "test_gain": 0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v32",
+    "train_gain": 2.0,
+    "test_gain": 2.1406727828746206
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v33",
+    "train_gain": 6.0,
+    "test_gain": -5.5045871559633035
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v34",
+    "train_gain": 2.0,
+    "test_gain": 1.2232415902140694
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 37,
+    "candidate": "v37",
+    "parent": "v35",
+    "train_gain": 8.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v37",
+    "train_gain": 2.0,
+    "test_gain": -1.5290519877675877
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-terra61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 2.0,
+    "test_gain": -0.3058103975535147
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v02",
+    "train_gain": 1.9999999999999964,
+    "test_gain": -2.75229357798165
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 6.0,
+    "test_gain": 2.4464831804281353
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v04",
+    "train_gain": 8.0,
+    "test_gain": 0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v06",
+    "train_gain": 4.0,
+    "test_gain": 1.5290519877675806
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v08",
+    "train_gain": 4.0,
+    "test_gain": 0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v12",
+    "train_gain": 4.0,
+    "test_gain": -1.5290519877675806
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 2.0,
+    "test_gain": -5.198776758409789
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v14",
+    "train_gain": 6.0,
+    "test_gain": -0.3058103975535147
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v16",
+    "train_gain": 10.000000000000004,
+    "test_gain": 1.2232415902140659
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 20,
+    "candidate": "v20",
+    "parent": "v18",
+    "train_gain": 4.0000000000000036,
+    "test_gain": -5.810397553516818
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v20",
+    "train_gain": 2.0,
+    "test_gain": 6.116207951070333
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v22",
+    "train_gain": 4.0,
+    "test_gain": 0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v23",
+    "train_gain": 2.0,
+    "test_gain": -4.587155963302752
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v24",
+    "train_gain": 4.0,
+    "test_gain": -1.5290519877675806
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v25",
+    "train_gain": 1.9999999999999964,
+    "test_gain": 0.6116207951070294
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v26",
+    "train_gain": 4.0,
+    "test_gain": 1.8348623853211024
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 30,
+    "candidate": "v30",
+    "parent": "v27",
+    "train_gain": 10.0,
+    "test_gain": -5.198776758409785
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v30",
+    "train_gain": 2.0,
+    "test_gain": 4.587155963302752
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v31",
+    "train_gain": 2.0,
+    "test_gain": 6.727828746177366
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v32",
+    "train_gain": 12.000000000000004,
+    "test_gain": -3.9755351681957123
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v36",
+    "train_gain": 2.0000000000000036,
+    "test_gain": -1.8348623853211024
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/A-sol61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 14.0,
+    "test_gain": -4.587155963302752
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v02",
+    "train_gain": 8.0,
+    "test_gain": -8.256880733944953
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v04",
+    "train_gain": 6.0,
+    "test_gain": 10.091743119266056
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v08",
+    "train_gain": 2.0000000000000036,
+    "test_gain": -1.529051987767584
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v11",
+    "train_gain": 8.0,
+    "test_gain": 1.2232415902140659
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 4.0,
+    "test_gain": 0.30581039755351824
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v14",
+    "train_gain": 5.9999999999999964,
+    "test_gain": 1.8348623853210988
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v16",
+    "train_gain": 2.0,
+    "test_gain": 0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v17",
+    "train_gain": 8.0,
+    "test_gain": -1.8348623853211024
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v18",
+    "train_gain": 4.0000000000000036,
+    "test_gain": 1.5290519877675877
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v19",
+    "train_gain": 2.0,
+    "test_gain": -0.9174311926605512
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v21",
+    "train_gain": 10.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v22",
+    "train_gain": 10.0,
+    "test_gain": 6.422018348623851
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v23",
+    "train_gain": 2.0,
+    "test_gain": 0.6116207951070365
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v31",
+    "train_gain": 5.9999999999999964,
+    "test_gain": -1.8348623853211024
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v32",
+    "train_gain": 4.0,
+    "test_gain": 2.7522935779816535
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v34",
+    "train_gain": 6.0,
+    "test_gain": 3.058103975535161
+  },
+  {
+    "benchmark": "alfworld",
+    "source": "dsh-scale-abc-20261105/groups/alfworld/B-sol61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 2.0,
+    "test_gain": -2.75229357798165
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v02",
+    "train_gain": 4.000000000000007,
+    "test_gain": -1.000000000000007
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 10.0,
+    "test_gain": 0.11111111111110716
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v04",
+    "train_gain": 2.000000000000007,
+    "test_gain": 0.5555555555555571
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 6.0,
+    "test_gain": -0.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v07",
+    "train_gain": 2.0,
+    "test_gain": -0.22222222222222143
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 6.000000000000007,
+    "test_gain": 1.4444444444444429
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v11",
+    "train_gain": 6.000000000000007,
+    "test_gain": -0.11111111111110006
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v12",
+    "train_gain": 6.000000000000007,
+    "test_gain": 0.7777777777777715
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v17",
+    "train_gain": 2.0,
+    "test_gain": -0.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v25",
+    "train_gain": 6.0,
+    "test_gain": -0.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v26",
+    "train_gain": 6.0,
+    "test_gain": 0.3333333333333428
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v28",
+    "train_gain": 2.000000000000007,
+    "test_gain": 0.55555555555555
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v29",
+    "train_gain": 2.0,
+    "test_gain": -2.555555555555557
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v34",
+    "train_gain": 2.0,
+    "test_gain": 1.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-luna6",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v35",
+    "train_gain": 2.0,
+    "test_gain": -1.5555555555555571
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v04",
+    "train_gain": 2.0,
+    "test_gain": 1.5555555555555571
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 4.0,
+    "test_gain": -0.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v07",
+    "train_gain": 4.0,
+    "test_gain": 0.8888888888888857
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v08",
+    "train_gain": 2.0,
+    "test_gain": -1.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 2.0,
+    "test_gain": 2.555555555555557
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v11",
+    "train_gain": 10.000000000000007,
+    "test_gain": 3.44444444444445
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v12",
+    "train_gain": 3.999999999999993,
+    "test_gain": -1.2222222222222285
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v15",
+    "train_gain": 4.0,
+    "test_gain": 0.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v17",
+    "train_gain": 4.0,
+    "test_gain": -0.6666666666666714
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v19",
+    "train_gain": 1.9999999999999858,
+    "test_gain": -0.44444444444444287
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v27",
+    "train_gain": 6.0,
+    "test_gain": 0.5555555555555642
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v29",
+    "train_gain": 4.0,
+    "test_gain": -0.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-luna6",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v38",
+    "train_gain": 5.999999999999993,
+    "test_gain": 3.8888888888888857
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 2,
+    "candidate": "v02",
+    "parent": "v01",
+    "train_gain": 6.0,
+    "test_gain": 1.5555555555555571
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v02",
+    "train_gain": 4.0,
+    "test_gain": -1.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v07",
+    "train_gain": 6.0,
+    "test_gain": 0.22222222222222854
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 4.0,
+    "test_gain": -2.000000000000007
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v09",
+    "train_gain": 8.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 4.0,
+    "test_gain": -0.22222222222222143
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v11",
+    "train_gain": 8.0,
+    "test_gain": 4.333333333333329
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v12",
+    "train_gain": 4.000000000000007,
+    "test_gain": 0.3333333333333428
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v17",
+    "train_gain": 2.0,
+    "test_gain": -1.5555555555555571
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v21",
+    "train_gain": 3.999999999999993,
+    "test_gain": 1.6666666666666572
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v23",
+    "train_gain": 6.0,
+    "test_gain": 1.44444444444445
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v25",
+    "train_gain": 1.9999999999999858,
+    "test_gain": -0.44444444444444287
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v27",
+    "train_gain": 4.0,
+    "test_gain": 0.22222222222222143
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v28",
+    "train_gain": 4.000000000000007,
+    "test_gain": -1.1111111111111072
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v29",
+    "train_gain": 6.0,
+    "test_gain": -1.6666666666666714
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-terra61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v32",
+    "train_gain": 4.0,
+    "test_gain": -1.8888888888888928
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v02",
+    "train_gain": 2.0,
+    "test_gain": 4.555555555555557
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 8.0,
+    "test_gain": -0.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v04",
+    "train_gain": 6.0,
+    "test_gain": -1.2222222222222214
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 2.0,
+    "test_gain": 0.8888888888888857
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v07",
+    "train_gain": 10.0,
+    "test_gain": -1.7777777777777715
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v09",
+    "train_gain": 2.0,
+    "test_gain": 0.55555555555555
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v11",
+    "train_gain": 10.000000000000007,
+    "test_gain": 2.6666666666666643
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v15",
+    "train_gain": 6.000000000000007,
+    "test_gain": -3.111111111111107
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v18",
+    "train_gain": 2.0,
+    "test_gain": 2.6666666666666643
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v19",
+    "train_gain": 8.000000000000007,
+    "test_gain": 0.6666666666666714
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v27",
+    "train_gain": 2.0,
+    "test_gain": 0.22222222222222143
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v28",
+    "train_gain": 4.0,
+    "test_gain": -0.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v29",
+    "train_gain": 6.0,
+    "test_gain": 1.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 37,
+    "candidate": "v37",
+    "parent": "v32",
+    "train_gain": 2.0,
+    "test_gain": -1.0
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v37",
+    "train_gain": 4.0,
+    "test_gain": 0.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-terra61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v38",
+    "train_gain": 4.0,
+    "test_gain": 0.6666666666666714
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 2,
+    "candidate": "v02",
+    "parent": "v01",
+    "train_gain": 4.0,
+    "test_gain": -0.44444444444444997
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v02",
+    "train_gain": 2.0,
+    "test_gain": -1.4444444444444429
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v03",
+    "train_gain": 4.0,
+    "test_gain": 1.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v04",
+    "train_gain": 8.0,
+    "test_gain": 2.555555555555557
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v08",
+    "train_gain": 14.000000000000007,
+    "test_gain": -0.44444444444444287
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v11",
+    "train_gain": 8.0,
+    "test_gain": -1.55555555555555
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v14",
+    "train_gain": 4.0,
+    "test_gain": 0.11111111111110716
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v15",
+    "train_gain": 4.0,
+    "test_gain": 0.8888888888888928
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v16",
+    "train_gain": 8.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v17",
+    "train_gain": 6.000000000000007,
+    "test_gain": 2.111111111111107
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 20,
+    "candidate": "v20",
+    "parent": "v18",
+    "train_gain": 6.0,
+    "test_gain": 1.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v20",
+    "train_gain": 4.000000000000007,
+    "test_gain": -0.6666666666666714
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v22",
+    "train_gain": 4.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v23",
+    "train_gain": 6.0,
+    "test_gain": -1.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v25",
+    "train_gain": 2.0,
+    "test_gain": 0.11111111111111427
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 30,
+    "candidate": "v30",
+    "parent": "v29",
+    "train_gain": 5.999999999999993,
+    "test_gain": 0.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v30",
+    "train_gain": 2.0,
+    "test_gain": -1.4444444444444429
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v31",
+    "train_gain": 16.0,
+    "test_gain": 0.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v33",
+    "train_gain": 4.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v34",
+    "train_gain": 4.000000000000007,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v36",
+    "train_gain": 10.0,
+    "test_gain": 1.8888888888888928
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/A-sol61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 10.000000000000007,
+    "test_gain": 0.7777777777777786
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v02",
+    "train_gain": 2.0,
+    "test_gain": 2.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v04",
+    "train_gain": 3.999999999999993,
+    "test_gain": 1.55555555555555
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v06",
+    "train_gain": 4.0,
+    "test_gain": 1.2222222222222285
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v07",
+    "train_gain": 8.0,
+    "test_gain": -1.8888888888888857
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 8.0,
+    "test_gain": -0.8888888888888928
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v09",
+    "train_gain": 2.0,
+    "test_gain": 0.11111111111110716
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v11",
+    "train_gain": 2.0,
+    "test_gain": 1.3333333333333428
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v13",
+    "train_gain": 2.0,
+    "test_gain": -1.8888888888889
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v15",
+    "train_gain": 10.0,
+    "test_gain": -3.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v16",
+    "train_gain": 4.0,
+    "test_gain": 6.111111111111107
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v17",
+    "train_gain": 2.0,
+    "test_gain": -1.1111111111111072
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v19",
+    "train_gain": 4.0,
+    "test_gain": -6.666666666666671
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v23",
+    "train_gain": 10.000000000000007,
+    "test_gain": 1.5555555555555642
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v24",
+    "train_gain": 8.0,
+    "test_gain": 0.3333333333333286
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v32",
+    "train_gain": 2.0,
+    "test_gain": 1.1111111111111143
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v33",
+    "train_gain": 2.0,
+    "test_gain": -3.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v34",
+    "train_gain": 4.0,
+    "test_gain": 4.333333333333336
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v35",
+    "train_gain": 4.000000000000007,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v36",
+    "train_gain": 6.0,
+    "test_gain": -1.3333333333333357
+  },
+  {
+    "benchmark": "dbbench",
+    "source": "dsh-scale-abc-20261105/groups/dbbench/B-sol61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v38",
+    "train_gain": 2.000000000000007,
+    "test_gain": 0.11111111111110716
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 7,
+    "candidate": "v07",
+    "parent": "v02",
+    "train_gain": 4.0,
+    "test_gain": -0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v07",
+    "train_gain": -2.0,
+    "test_gain": -3.1666666666666714
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v09",
+    "train_gain": 2.0,
+    "test_gain": 1.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 2.0,
+    "test_gain": -2.499999999999993
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v14",
+    "train_gain": -4.0,
+    "test_gain": -1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v21",
+    "train_gain": 6.0,
+    "test_gain": 1.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v22",
+    "train_gain": 6.0,
+    "test_gain": -1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v25",
+    "train_gain": 8.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v27",
+    "train_gain": -2.0,
+    "test_gain": -0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v28",
+    "train_gain": -2.0,
+    "test_gain": 2.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v32",
+    "train_gain": -2.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v33",
+    "train_gain": 0.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v34",
+    "train_gain": 0.0,
+    "test_gain": 0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-luna6",
+    "round": 37,
+    "candidate": "v37",
+    "parent": "v35",
+    "train_gain": 2.0,
+    "test_gain": 0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v03",
+    "train_gain": 4.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v09",
+    "train_gain": 2.0,
+    "test_gain": -1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v10",
+    "train_gain": 0.0,
+    "test_gain": 0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v12",
+    "train_gain": 6.0,
+    "test_gain": 1.1666666666666714
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 4.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v14",
+    "train_gain": 6.0,
+    "test_gain": -1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v16",
+    "train_gain": 0.0,
+    "test_gain": 1.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 20,
+    "candidate": "v20",
+    "parent": "v18",
+    "train_gain": 2.0,
+    "test_gain": -1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v20",
+    "train_gain": -2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v22",
+    "train_gain": 2.0,
+    "test_gain": 1.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v26",
+    "train_gain": -2.0,
+    "test_gain": -0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v28",
+    "train_gain": 2.0,
+    "test_gain": 0.6666666666666714
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 30,
+    "candidate": "v30",
+    "parent": "v29",
+    "train_gain": 6.0,
+    "test_gain": 0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v30",
+    "train_gain": 4.0,
+    "test_gain": 0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v33",
+    "train_gain": 2.0,
+    "test_gain": -2.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v34",
+    "train_gain": -2.0,
+    "test_gain": 2.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-luna6",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v35",
+    "train_gain": 2.0,
+    "test_gain": 1.1666666666666714
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v01",
+    "train_gain": 4.0,
+    "test_gain": 0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 0.0,
+    "test_gain": 1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v09",
+    "train_gain": 2.0,
+    "test_gain": 0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v11",
+    "train_gain": 0.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v12",
+    "train_gain": -2.0,
+    "test_gain": -1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v15",
+    "train_gain": -2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v16",
+    "train_gain": 4.0,
+    "test_gain": 0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v18",
+    "train_gain": 4.0,
+    "test_gain": 1.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v21",
+    "train_gain": 4.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v22",
+    "train_gain": 0.0,
+    "test_gain": -1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v23",
+    "train_gain": 0.0,
+    "test_gain": 0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v26",
+    "train_gain": 2.0,
+    "test_gain": -1.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v28",
+    "train_gain": 0.0,
+    "test_gain": 0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v29",
+    "train_gain": 0.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v31",
+    "train_gain": 0.0,
+    "test_gain": -1.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 35,
+    "candidate": "v35",
+    "parent": "v32",
+    "train_gain": 2.0,
+    "test_gain": 1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v35",
+    "train_gain": 2.0,
+    "test_gain": -0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 37,
+    "candidate": "v37",
+    "parent": "v36",
+    "train_gain": 0.0,
+    "test_gain": 1.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v37",
+    "train_gain": 4.0,
+    "test_gain": -2.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v38",
+    "train_gain": 0.0,
+    "test_gain": 1.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-terra61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v39",
+    "train_gain": 4.0,
+    "test_gain": 1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v07",
+    "train_gain": 4.0,
+    "test_gain": -0.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v09",
+    "train_gain": 4.0,
+    "test_gain": 0.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v19",
+    "train_gain": 2.0,
+    "test_gain": -1.499999999999993
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v21",
+    "train_gain": -2.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 24,
+    "candidate": "v24",
+    "parent": "v23",
+    "train_gain": -2.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v24",
+    "train_gain": 4.0,
+    "test_gain": 3.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 30,
+    "candidate": "v30",
+    "parent": "v26",
+    "train_gain": -2.0,
+    "test_gain": -2.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v30",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v31",
+    "train_gain": 4.0,
+    "test_gain": -0.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v33",
+    "train_gain": 2.0,
+    "test_gain": -0.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v34",
+    "train_gain": 0.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-terra61",
+    "round": 39,
+    "candidate": "v39",
+    "parent": "v38",
+    "train_gain": 4.0,
+    "test_gain": -1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 5,
+    "candidate": "v05",
+    "parent": "v02",
+    "train_gain": 4.0,
+    "test_gain": -2.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 6,
+    "candidate": "v06",
+    "parent": "v05",
+    "train_gain": 0.0,
+    "test_gain": 1.499999999999993
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 10,
+    "candidate": "v10",
+    "parent": "v06",
+    "train_gain": 2.0,
+    "test_gain": 2.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v10",
+    "train_gain": 4.0,
+    "test_gain": -1.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 12,
+    "candidate": "v12",
+    "parent": "v11",
+    "train_gain": 2.0,
+    "test_gain": -0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v12",
+    "train_gain": 0.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 4.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 15,
+    "candidate": "v15",
+    "parent": "v14",
+    "train_gain": 4.0,
+    "test_gain": -0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 16,
+    "candidate": "v16",
+    "parent": "v15",
+    "train_gain": -2.0,
+    "test_gain": 0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v16",
+    "train_gain": -2.0,
+    "test_gain": -1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v18",
+    "train_gain": 6.0,
+    "test_gain": -0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v19",
+    "train_gain": 2.0,
+    "test_gain": 0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 22,
+    "candidate": "v22",
+    "parent": "v21",
+    "train_gain": 4.0,
+    "test_gain": 1.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v22",
+    "train_gain": -2.0,
+    "test_gain": -1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v26",
+    "train_gain": 2.0,
+    "test_gain": -0.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 30,
+    "candidate": "v30",
+    "parent": "v28",
+    "train_gain": 6.0,
+    "test_gain": -2.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v30",
+    "train_gain": 6.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 32,
+    "candidate": "v32",
+    "parent": "v31",
+    "train_gain": 2.0,
+    "test_gain": 1.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v32",
+    "train_gain": 0.0,
+    "test_gain": -2.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 36,
+    "candidate": "v36",
+    "parent": "v34",
+    "train_gain": 2.0,
+    "test_gain": -0.6666666666666714
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 38,
+    "candidate": "v38",
+    "parent": "v36",
+    "train_gain": 0.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/A-sol61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v38",
+    "train_gain": 8.0,
+    "test_gain": 3.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v02",
+    "train_gain": 0.0,
+    "test_gain": 1.000000000000007
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 5,
+    "candidate": "v05",
+    "parent": "v04",
+    "train_gain": 4.0,
+    "test_gain": -0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v05",
+    "train_gain": 0.0,
+    "test_gain": -1.6666666666666714
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 0.0,
+    "test_gain": -0.6666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 11,
+    "candidate": "v11",
+    "parent": "v09",
+    "train_gain": 0.0,
+    "test_gain": 2.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v11",
+    "train_gain": 2.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 18,
+    "candidate": "v18",
+    "parent": "v17",
+    "train_gain": 4.0,
+    "test_gain": -1.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 19,
+    "candidate": "v19",
+    "parent": "v18",
+    "train_gain": 2.0,
+    "test_gain": -1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 23,
+    "candidate": "v23",
+    "parent": "v19",
+    "train_gain": 2.0,
+    "test_gain": 1.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v23",
+    "train_gain": 0.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 26,
+    "candidate": "v26",
+    "parent": "v25",
+    "train_gain": 4.0,
+    "test_gain": 0.1666666666666643
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 27,
+    "candidate": "v27",
+    "parent": "v26",
+    "train_gain": 0.0,
+    "test_gain": -2.3333333333333286
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 28,
+    "candidate": "v28",
+    "parent": "v27",
+    "train_gain": 0.0,
+    "test_gain": 3.5
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 29,
+    "candidate": "v29",
+    "parent": "v28",
+    "train_gain": -2.0,
+    "test_gain": -1.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 31,
+    "candidate": "v31",
+    "parent": "v29",
+    "train_gain": -2.0,
+    "test_gain": 0.3333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 33,
+    "candidate": "v33",
+    "parent": "v31",
+    "train_gain": 2.0,
+    "test_gain": -0.8333333333333357
+  },
+  {
+    "benchmark": "webshop",
+    "source": "dsh-scale-abc-20261105/groups/webshop/B-sol61",
+    "round": 40,
+    "candidate": "v40",
+    "parent": "v33",
+    "train_gain": 0.0,
+    "test_gain": 0.0
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-luna6",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v01",
+    "train_gain": 6.25,
+    "test_gain": -0.6944444444444429
+  },
+  {
+    "benchmark": "osbench",
+    "source": "loop-comparison-20r-20261025/osbench/l3-luna",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v11",
+    "train_gain": 3.75,
+    "test_gain": 0.9259259259259309
+  },
+  {
+    "benchmark": "osbench",
+    "source": "loop-comparison-20r-20261025/osbench/l3-luna",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 2.5,
+    "test_gain": -1.6203703703703738
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/A-terra61",
+    "round": 9,
+    "candidate": "v09",
+    "parent": "v08",
+    "train_gain": 2.5,
+    "test_gain": 3.4722222222222214
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/A-terra61",
+    "round": 13,
+    "candidate": "v13",
+    "parent": "v09",
+    "train_gain": 2.500000000000007,
+    "test_gain": 0.9259259259259238
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/A-terra61",
+    "round": 14,
+    "candidate": "v14",
+    "parent": "v13",
+    "train_gain": 3.749999999999993,
+    "test_gain": -2.7777777777777786
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-terra61",
+    "round": 3,
+    "candidate": "v03",
+    "parent": "v02",
+    "train_gain": 2.500000000000007,
+    "test_gain": -1.6203703703703667
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-terra61",
+    "round": 8,
+    "candidate": "v08",
+    "parent": "v03",
+    "train_gain": 3.749999999999993,
+    "test_gain": 0.23148148148148096
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-terra61",
+    "round": 21,
+    "candidate": "v21",
+    "parent": "v08",
+    "train_gain": 1.25,
+    "test_gain": 3.0092592592592595
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-terra61",
+    "round": 25,
+    "candidate": "v25",
+    "parent": "v21",
+    "train_gain": 3.75,
+    "test_gain": -2.0833333333333357
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-terra61",
+    "round": 34,
+    "candidate": "v34",
+    "parent": "v25",
+    "train_gain": 1.25,
+    "test_gain": 0.2314814814814845
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/A-sol61",
+    "round": 17,
+    "candidate": "v17",
+    "parent": "v04",
+    "train_gain": 2.5,
+    "test_gain": 2.3148148148148096
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-sol61",
+    "round": 4,
+    "candidate": "v04",
+    "parent": "v01",
+    "train_gain": 3.749999999999993,
+    "test_gain": 3.0092592592592524
+  },
+  {
+    "benchmark": "osbench",
+    "source": "dsh-scale-abc-20261105/groups/osbench/B-sol61",
+    "round": 5,
+    "candidate": "v05",
+    "parent": "v04",
+    "train_gain": 7.500000000000007,
+    "test_gain": -0.6944444444444358
+  }
+]

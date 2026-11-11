@@ -1,17 +1,85 @@
-"""One offline integration: real DSH hooks + unified L7; scripted actor, not a benchmark score."""
+"""Exercise L4 and A/B/C with a scripted provider and a synthetic task."""
+import argparse
+import json
+import shutil
 from pathlib import Path
-import argparse,json,shutil,yaml
-from astra_evolve.cli import init,setup,ASSETS
+
+import yaml
+
+from astra_evolve.cli import init, setup, ASSETS
 from astra_evolve.demo import ScriptedProvider
 from astra_evolve.records import write
 from dsh_evolve.factory import campaign
-p=argparse.ArgumentParser();p.add_argument('directory');p.add_argument('--runtime-deps');a=p.parse_args()
-r=init(a.directory,'demo');cfg=yaml.safe_load((r/'experiment.yaml').read_text());cfg.update(rounds=1,domain='Demo',test_schedule='final',loop={'variant':'L7'});cfg['benchmark'].update(train_batches=['train.jsonl'],validation='validation.jsonl',max_steps=8,max_model_calls=8,timeout_seconds=30,runner='demo');cfg['benchmark']['model'].update(name='offline-scripted-provider',api_key_env='',max_retries=0)
-(r/'validation.jsonl').write_text(''.join(json.dumps({'task_id':'validation-only','trial':i,'seed':s})+'\n' for i,s in enumerate([11,22])))
-if a.runtime_deps:(r/'runtime/node_modules').symlink_to(Path(a.runtime_deps).resolve(),target_is_directory=True)
-else:setup(r/'experiment.yaml')
+from dsh_evolve import abc
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("directory")
+parser.add_argument("--runtime-deps")
+args = parser.parse_args()
+root = Path(args.directory).resolve()
+dependencies = Path(args.runtime_deps).resolve() if args.runtime_deps else None
+
 with ScriptedProvider() as endpoint:
- cfg['benchmark']['model']['base_url']=endpoint;(r/'experiment.yaml').write_text(yaml.safe_dump(cfg));c=campaign(r/'experiment.yaml');c.evaluate('baseline','development');c.prepare('v01');candidate=c.candidate('v01')
- write(candidate/'analysis.json',{'parent':'baseline','agent_state':'No repair plugins. The scripted actor stops before the required visible sequence.','clusters':[{'id':'early-stop','hypothesis':'One recovery message changes the next real action.','members':['train-a','train-b'],'controls':[],'evidence':[{'task_id':'train-a','message_index':0,'observation':'Visible task requires take, clean, put before finish.'}]}],'repairs':[{'cluster_id':'early-stop','plugin_ids':['one-recovery'],'operation':'add','hooks':['tools/pre-execute'],'trigger':'finish before recovery','state_change':'Episode-local single-use recovery state','expected_behavior':'take then clean then put','at_risk_tasks':[]}]})
- c.plan('v01');shutil.copy2(ASSETS/'example-plugins/one-recovery.mjs',candidate/'plugins/one-recovery.mjs');write(candidate/'composition.json',{'methods':[{'id':'one-recovery','module':'plugins/one-recovery.mjs','config':{}}],'selected':['one-recovery']});c.evaluate('v01','development');c.decide('v01',True,'Offline scripted integration only');c.finish()
-print('PASS: shared L7 prepare/plan/DSH evaluation/promotion/final-test path; synthetic fixture only.')
+    for mode in ("L4", "A", "B", "C"):
+        folder = init(root / mode, "demo")
+        config = yaml.safe_load((folder / "experiment.yaml").read_text())
+        config.update(rounds=1, domain="alfworld", test_schedule="sealed_all_promoted")
+        config["benchmark"].update(max_steps=8, max_model_calls=8, timeout_seconds=30, runner="demo")
+        config["benchmark"]["model"].update(name="scripted", base_url=endpoint, api_key_env="", max_retries=0)
+        if mode == "L4":
+            config.update(domain="Demo", loop={"variant": "L4", "require_agent_map": True}, start_label="H0")
+        else:
+            config["scale"] = {"mode": mode, "selection": "strict_success"}
+            wrapper = "slot-c.mjs" if mode == "C" else "slot-ab.mjs"
+            shutil.copy2(abc.ASSETS / wrapper, folder / "baseline/scale-slot.mjs")
+            for name in ("memory", "action", "receipt"):
+                (folder / "baseline" / f"scale-{name}.mjs").write_text("export function create() { return {}; }")
+            (folder / "baseline/scale-composition.mjs").write_text("export function create() { return []; }")
+            write(folder / "baseline/composition.json", {"methods": [{"id": "scale-slot", "module": "scale-slot.mjs",
+                  "config": {"mode": mode, "skill": ""}}], "selected": ["scale-slot"]})
+        path = folder / "experiment.yaml"
+        path.write_text(yaml.safe_dump(config))
+        if dependencies:
+            (folder / "runtime/node_modules").symlink_to(dependencies, target_is_directory=True)
+        else:
+            setup(path)
+            dependencies = folder / "runtime/node_modules"
+        if mode == "L4":
+            project = campaign(path)
+            project.evaluate("baseline", "development")
+            project.prepare("v01")
+            candidate = project.candidate("v01")
+            (candidate / "proposal.md").write_text("Recover a premature finish using a tool check.")
+            shutil.copy2(ASSETS / "example-plugins/one-recovery.mjs", candidate / "plugins/one-recovery.mjs")
+            write(candidate / "composition.json", {"methods": [{"id": "one-recovery", "module": "plugins/one-recovery.mjs",
+                  "config": {}}], "selected": ["one-recovery"]})
+            project.evaluate("v01", "development")
+            project.decide("v01", True, "Synthetic runtime check")
+            project.finish()
+        else:
+            code = """export function create(state = {}) {
+  return {check(call) {
+    if (call.arguments.command === 'finish' && !state.used) {
+      state.used = true;
+      return 'RECOVER: take -> clean -> put.';
+    }
+  }};
+}"""
+            if mode == "A":
+                proposal = {"aspect": "skill", "content": "Complete the visible task.", "reason": "Synthetic text edit"}
+            elif mode == "B":
+                proposal = {"aspect": "action", "content": code, "reason": "Synthetic action check"}
+            else:
+                code = code.replace("return {check", "return [{id: 'recover', check").replace("  }};", "  }}];")
+                proposal = {"aspect": "composition", "content": json.dumps({"skill": "", "code": code}),
+                            "reason": "Synthetic shared state"}
+            original = abc.model
+            try:
+                abc.model = lambda *arguments: proposal
+                abc.run(path)
+            finally:
+                abc.model = original
+            result = json.loads((folder / "runs/final.json").read_text())
+            assert result["best"] == ("baseline" if mode == "A" else "v01"), (mode, result)
+        print("PASS", mode)
+print("Synthetic installation check complete; benchmark scores require real evaluation.")

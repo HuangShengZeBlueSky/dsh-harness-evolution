@@ -1,0 +1,15 @@
+{
+  "methods": [
+    {
+      "id": "scale-slot",
+      "module": "scale-slot.mjs",
+      "config": {
+        "skill": "",
+        "mode": "C"
+      }
+    }
+  ],
+  "selected": [
+    "scale-slot"
+  ]
+}

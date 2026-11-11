@@ -1,0 +1,1 @@
+Read the current harness and training traces. Propose task-specific native DSH plugins, compare on the current batch and retain improvements with observed execution changes. Complete 20 decisions and seal the selected checkpoint before held-out evaluation.

@@ -1,0 +1,50 @@
+name: osbench-A-terra61
+method: astra_autonomous
+output: runs
+rounds: 40
+node: node
+baseline: baseline
+runtime: runtime
+harness_api: interface.md
+min_improvement: 0
+test_schedule: sealed_all_promoted
+optimizer:
+  command:
+  - codex
+  model: gpt-6.1-terra
+  effort: high
+benchmark:
+  kind: python
+  train: train.jsonl
+  test: test.jsonl
+  direction: maximize
+  success_score: 1
+  concurrency: 4
+  max_steps: 16
+  max_model_calls: 16
+  timeout_seconds: 900
+  no_tool_feedback: No tool call detected. Please call a tool.
+  model:
+    name: Qwen3-4B-Instruct-2507
+    base_url: ${BENCH_BASE_URL}
+    api_key_env: BENCH_API_KEY
+    temperature: 0
+    max_tokens: 4096
+    timeout_seconds: 575
+    max_retries: 0
+    send_seed: true
+    extra_body:
+      parallel_tool_calls: false
+  environment:
+    factory: environment.py:create_environment
+    docker_host: ${DOCKER_HOST}
+    life_harness: false
+  validation: validation.jsonl
+domain: osbench
+start_label: "H0\u96F6\u589E\u5F3A\u63D2\u4EF6"
+playbook: PLAYBOOK.md
+scale:
+  mode: A
+  selection: strict_success
+  data: historical
+  benchmark: osbench

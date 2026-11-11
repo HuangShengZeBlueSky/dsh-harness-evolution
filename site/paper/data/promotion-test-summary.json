@@ -1,0 +1,94 @@
+[
+  {
+    "benchmark": "alfworld",
+    "paired_events": 104,
+    "train_positive": 104,
+    "train_positive_test_negative": 41,
+    "phase_counts": [
+      [
+        16,
+        4,
+        11
+      ],
+      [
+        15,
+        2,
+        13
+      ],
+      [
+        23,
+        3,
+        17
+      ]
+    ]
+  },
+  {
+    "benchmark": "dbbench",
+    "paired_events": 116,
+    "train_positive": 116,
+    "train_positive_test_negative": 51,
+    "phase_counts": [
+      [
+        14,
+        0,
+        16
+      ],
+      [
+        19,
+        1,
+        12
+      ],
+      [
+        30,
+        1,
+        23
+      ]
+    ]
+  },
+  {
+    "benchmark": "webshop",
+    "paired_events": 121,
+    "train_positive": 74,
+    "train_positive_test_negative": 37,
+    "phase_counts": [
+      [
+        6,
+        1,
+        10
+      ],
+      [
+        11,
+        2,
+        17
+      ],
+      [
+        36,
+        5,
+        33
+      ]
+    ]
+  },
+  {
+    "benchmark": "osbench",
+    "paired_events": 27,
+    "train_positive": 27,
+    "train_positive_test_negative": 12,
+    "phase_counts": [
+      [
+        3,
+        0,
+        4
+      ],
+      [
+        5,
+        0,
+        2
+      ],
+      [
+        6,
+        1,
+        6
+      ]
+    ]
+  }
+]

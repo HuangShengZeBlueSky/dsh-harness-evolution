@@ -9,20 +9,17 @@ def prompt(project):
     return f"""本组 {project.cfg.get('domain','benchmark')}，循环 {mode}，共 {project.cfg['rounds']} 轮。配置以 experiment.yaml 为准。
 先读 PLAYBOOK.md、{project.cfg['harness_api']}、progress.txt 和父版实际源码/训练轨迹。当前入口为 {helper}。
 共用流程：status → prepare → 读失败与成功对照 → 当前能力和机制假设 → 实现 → evaluate → report → decide → 复盘。
-L4/L5先更新候选 agent-state.md 和 proposal.md；L6–L9先写 analysis.json 并执行 plan，再改代码。
-L8经验由独立学习调用产生，说明适用/不适用；L9按计划通过component导入，不把组合视为自动有效。
-L3从归档分支继续，归档保留不等于冠军晋升。其余按本组当前最佳继续。
+先维护候选 agent-state.md 和 proposal.md，再依据当前能力与训练证据修改插件。
 命令示例：
 {helper} status {config}
 {helper} prepare {config} v01
-{helper} plan {config} v01
 {helper} evaluate {config} v01 --split development
 {helper} report {config} v01
 {helper} decide {config} v01 --adopt --reason '实际证据'
 拒绝用 --reject。已有完整有效评测复用。报告检查真实输入、运行器控制、行为变化与修复退步，不把加载等同收益。
 采用门槛由本组策略执行；不得修改运行器、任务、环境、评分、模型和预算来改变门槛。
 全部决定完成后 {helper} finish {config}；测试只报告，不用于设计或选下一轮。不得读取其他实验的测试。
-保持同一优化会话；除L8/L9规定的学习调用外，不增加优化模型或子代理。维护简明progress.txt。
+保持同一优化会话；使用配置指定的优化模型。维护简明progress.txt。
 """
 
 def evaluating(project):

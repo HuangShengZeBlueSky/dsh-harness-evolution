@@ -1,0 +1,226 @@
+[
+  {
+    "id": "abc-curves-alfworld",
+    "title": "abc curves alfworld",
+    "panels": 9,
+    "file": "figures/abc-curves-alfworld.pdf",
+    "preview": "previews/abc-curves-alfworld.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "abc-curves-dbbench",
+    "title": "abc curves dbbench",
+    "panels": 9,
+    "file": "figures/abc-curves-dbbench.pdf",
+    "preview": "previews/abc-curves-dbbench.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "abc-curves-osbench",
+    "title": "abc curves osbench",
+    "panels": 9,
+    "file": "figures/abc-curves-osbench.pdf",
+    "preview": "previews/abc-curves-osbench.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "abc-curves-webshop",
+    "title": "abc curves webshop",
+    "panels": 9,
+    "file": "figures/abc-curves-webshop.pdf",
+    "preview": "previews/abc-curves-webshop.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "abc-search-procedure",
+    "title": "abc search procedure",
+    "panels": null,
+    "file": "figures/abc-search-procedure.pdf",
+    "preview": "previews/abc-search-procedure.png",
+    "data": null
+  },
+  {
+    "id": "artifact-architecture",
+    "title": "artifact architecture",
+    "panels": null,
+    "file": "figures/artifact-architecture.pdf",
+    "preview": "previews/artifact-architecture.png",
+    "data": null
+  },
+  {
+    "id": "budget-main",
+    "title": "budget main",
+    "panels": null,
+    "file": "figures/budget-main.pdf",
+    "preview": "previews/budget-main.png",
+    "data": null
+  },
+  {
+    "id": "c-curves-alfworld",
+    "title": "c curves alfworld",
+    "panels": 8,
+    "file": "figures/c-curves-alfworld.pdf",
+    "preview": "previews/c-curves-alfworld.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "c-curves-dbbench",
+    "title": "c curves dbbench",
+    "panels": 8,
+    "file": "figures/c-curves-dbbench.pdf",
+    "preview": "previews/c-curves-dbbench.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "c-curves-osbench",
+    "title": "c curves osbench",
+    "panels": 8,
+    "file": "figures/c-curves-osbench.pdf",
+    "preview": "previews/c-curves-osbench.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "c-curves-webshop",
+    "title": "c curves webshop",
+    "panels": 8,
+    "file": "figures/c-curves-webshop.pdf",
+    "preview": "previews/c-curves-webshop.png",
+    "data": "data/trajectories.json"
+  },
+  {
+    "id": "candidate-exposure-test",
+    "title": "candidate exposure test",
+    "panels": null,
+    "file": "figures/candidate-exposure-test.pdf",
+    "preview": "previews/candidate-exposure-test.png",
+    "data": null
+  },
+  {
+    "id": "capacity-scope-evidence",
+    "title": "capacity scope evidence",
+    "panels": null,
+    "file": "figures/capacity-scope-evidence.pdf",
+    "preview": "previews/capacity-scope-evidence.png",
+    "data": null
+  },
+  {
+    "id": "dsh-plugin-scaling-with-landscape",
+    "title": "dsh plugin scaling with landscape",
+    "panels": null,
+    "file": "figures/dsh-plugin-scaling-with-landscape.pdf",
+    "preview": "previews/dsh-plugin-scaling-with-landscape.png",
+    "data": null
+  },
+  {
+    "id": "editable-scope-gains",
+    "title": "editable scope gains",
+    "panels": null,
+    "file": "figures/editable-scope-gains.pdf",
+    "preview": "previews/editable-scope-gains.png",
+    "data": null
+  },
+  {
+    "id": "fixed100-generation",
+    "title": "fixed100 generation",
+    "panels": null,
+    "file": "figures/fixed100-generation.pdf",
+    "preview": "previews/fixed100-generation.png",
+    "data": null
+  },
+  {
+    "id": "generalization-selection-evidence",
+    "title": "generalization selection evidence",
+    "panels": null,
+    "file": "figures/generalization-selection-evidence.pdf",
+    "preview": "previews/generalization-selection-evidence.png",
+    "data": null
+  },
+  {
+    "id": "improver-c-barline",
+    "title": "improver c barline",
+    "panels": null,
+    "file": "figures/improver-c-barline.pdf",
+    "preview": "previews/improver-c-barline.png",
+    "data": null
+  },
+  {
+    "id": "improver-c-comparison",
+    "title": "improver c comparison",
+    "panels": null,
+    "file": "figures/improver-c-comparison.pdf",
+    "preview": "previews/improver-c-comparison.png",
+    "data": null
+  },
+  {
+    "id": "improver-scope-heatmaps",
+    "title": "improver scope heatmaps",
+    "panels": null,
+    "file": "figures/improver-scope-heatmaps.pdf",
+    "preview": "previews/improver-scope-heatmaps.png",
+    "data": null
+  },
+  {
+    "id": "improver-scope-interaction",
+    "title": "improver scope interaction",
+    "panels": null,
+    "file": "figures/improver-scope-interaction.pdf",
+    "preview": "previews/improver-scope-interaction.png",
+    "data": null
+  },
+  {
+    "id": "initialization-study",
+    "title": "initialization study",
+    "panels": null,
+    "file": "figures/initialization-study.pdf",
+    "preview": "previews/initialization-study.png",
+    "data": null
+  },
+  {
+    "id": "late-regression",
+    "title": "late regression",
+    "panels": null,
+    "file": "figures/late-regression.pdf",
+    "preview": "previews/late-regression.png",
+    "data": null
+  },
+  {
+    "id": "main-full-train-test",
+    "title": "main full train test",
+    "panels": null,
+    "file": "figures/main-full-train-test.pdf",
+    "preview": "previews/main-full-train-test.png",
+    "data": "data/main-results.json"
+  },
+  {
+    "id": "optimization-architecture",
+    "title": "optimization architecture",
+    "panels": null,
+    "file": "figures/optimization-architecture.pdf",
+    "preview": "previews/optimization-architecture.png",
+    "data": null
+  },
+  {
+    "id": "scaling-dashboard",
+    "title": "scaling dashboard",
+    "panels": null,
+    "file": "figures/scaling-dashboard.pdf",
+    "preview": "previews/scaling-dashboard.png",
+    "data": null
+  },
+  {
+    "id": "mechanism-trace",
+    "title": "mechanism trace",
+    "panels": null,
+    "file": "figures/mechanism-trace.pdf",
+    "preview": "previews/mechanism-trace.png",
+    "data": null
+  },
+  {
+    "id": "search-landscape",
+    "title": "search landscape",
+    "panels": null,
+    "file": "figures/search-landscape.pdf",
+    "preview": "previews/search-landscape.png",
+    "data": null
+  }
+]

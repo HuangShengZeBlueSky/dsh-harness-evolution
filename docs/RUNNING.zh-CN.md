@@ -33,3 +33,5 @@ python tools/build.py
 ```
 
 生成页面不调用模型，也不启动实验。当前分数来自原实验；插件可加载不等于已经重新完成基准评测。
+
+论文原图与逐轮数据见[图集](../paper/README.md)，运行python tools/build.py从版本化数据重建榜单和网页。

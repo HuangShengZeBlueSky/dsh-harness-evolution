@@ -1,0 +1,438 @@
+{
+  "updated": "2026-11-11",
+  "metric": "Test success (%)",
+  "error": "Sample standard deviation across repeated executions",
+  "columns": [
+    "alfworld",
+    "dbbench",
+    "webshop_historical",
+    "webshop_frozen",
+    "osbench",
+    "telecom"
+  ],
+  "rows": [
+    {
+      "method": "Ours (measured peak)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 95.41,
+          "sd": 0.0
+        },
+        "dbbench": {
+          "mean": 70.56,
+          "sd": 0.38
+        },
+        "webshop_historical": {
+          "mean": 47.0,
+          "sd": 0.87
+        },
+        "webshop_frozen": {
+          "mean": 48.17,
+          "sd": 0.29
+        },
+        "osbench": {
+          "mean": 39.35,
+          "sd": 2.12
+        },
+        "telecom": {
+          "mean": 87.5,
+          "sd": 6.61
+        }
+      }
+    },
+    {
+      "method": "Ours (selected)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 95.41,
+          "sd": 0.0
+        },
+        "dbbench": {
+          "mean": 70.56,
+          "sd": 0.38
+        },
+        "webshop_historical": {
+          "mean": 44.33,
+          "sd": 0.29
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 38.89,
+          "sd": 0.69
+        },
+        "telecom": {
+          "mean": 84.17,
+          "sd": 10.1
+        }
+      }
+    },
+    {
+      "method": "Life-Harness (local)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 87.77,
+          "sd": 1.91
+        },
+        "dbbench": {
+          "mean": 64.11,
+          "sd": 0.38
+        },
+        "webshop_historical": null,
+        "webshop_frozen": {
+          "mean": 41.33,
+          "sd": 0.29
+        },
+        "osbench": {
+          "mean": 36.81,
+          "sd": 0.0
+        },
+        "telecom": {
+          "mean": 57.5,
+          "sd": 9.01
+        }
+      }
+    },
+    {
+      "method": "ALIGN (released)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 3.36,
+          "sd": 1.06
+        },
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": {
+          "mean": 31.0,
+          "sd": 0.5
+        },
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "ReAct",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 10.7,
+          "sd": 1.06
+        },
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "ReflAct",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 18.35,
+          "sd": 1.83
+        },
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "AutoManual",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 76.15,
+          "sd": 1.59
+        },
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Harness-R1 (released patch)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": null,
+        "dbbench": {
+          "mean": 52.22,
+          "sd": 0.69
+        },
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Life-Harness (v3)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 88.07,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 65.0,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 45.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 39.6,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 90.0,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "Life-Harness (v1)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 88.07,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 65.0,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 45.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 39.6,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 57.5,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "Bare",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 16.51,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 44.0,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 29.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 21.5,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 25.83,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "Prompt-evolving",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 13.8,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 60.7,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 30.0,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 18.8,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 35.0,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "ALIGN",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 28.36,
+          "sd": null
+        },
+        "dbbench": null,
+        "webshop_historical": {
+          "mean": 18.0,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "AgentSquare",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 29.36,
+          "sd": null
+        },
+        "dbbench": null,
+        "webshop_historical": {
+          "mean": 18.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Meta-Harness (Life rerun)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 35.8,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 50.3,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 42.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 25.7,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 50.8,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "AHE (Life rerun)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 89.0,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 57.3,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 39.0,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 37.5,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 95.0,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "SkillFM*",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 77.01,
+          "sd": null
+        },
+        "dbbench": null,
+        "webshop_historical": {
+          "mean": 14.6,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Harness-R1 (paper)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 29.1,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 55.7,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 38.6,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    }
+  ],
+  "notes": {
+    "webshop": "Historical and frozen catalogs are separate evaluation settings.",
+    "osbench": "Main table preserves historical C 39.35%; the curve archive also contains the separate C data-control peak 41.67%.",
+    "telecom": "Local user simulator is GLM; Life-Harness reports use DeepSeek.",
+    "peak": "Measured peaks are retrospective; development-selected rows retain the original selection."
+  }
+}

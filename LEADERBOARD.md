@@ -1,42 +1,42 @@
-# Unified main comparison: performance, models, provenance and optimization budget
+# Test leaderboard
 
-| Method | Executor | Source | Rounds | ALFWorld | DBBench | WebShop | OSBench | Telecom |
-|---|---|---|---:|---:|---:|---:|---:|---:|
-| **Qwen3-4B: literature and our framework** | | | | | | | | |
-| Bare | Qwen3-4B | P-L | — | 16.51 | 44.00 | 29.50 | 21.50 | 25.83 |
-| ALIGN | Qwen3-4B | P-L | — | 28.36 | — | 18.00 | — | — |
-| AgentSquare | Qwen3-4B | P-L | — | 29.36 | — | 18.50 | — | — |
-| Meta-Harness | Qwen3-4B | P-L | 6 | 35.80 / 37.14M | 50.30 / 32.81M | 42.50 / 36.74M | 25.70 / 26.79M | 50.80 / 21.32M |
-| AHE | Qwen3-4B | P-L | 6 | 89.00 / 95.63M | 57.30 / 104.52M | 39.00 / 103.84M | 37.50 / 93.99M | 95.00 / 88.35M |
-| Life-Harness v3 | Qwen3-4B | P-L | 6 | 88.07 / 24.29M | 65.00 / 11.20M | 45.50 / 37.75M | 39.60 / 25.71M | 90.00 / 42.64M |
-| SkillFM* | Qwen3-4B | P* | — | 77.01 | — | 14.60 | — | — |
-| Life-Harness v1/v2 | Qwen3-4B | P-v1/2 | — | — | — | — | — | 57.50 |
-| Harness-R1 | Qwen3-4B | P* | — | 29.10 | 55.70 | 38.60 | — | — |
-| Our framework | Qwen3-4B | H | 8–40 | 95.41 ± 0.00 / 27.86M | 70.56 ± 0.38 / 127.07M | 47.00 ± 0.87 / 116.97M | 39.35 ± 2.12 / 26.02M | 84.17 ± 10.10 |
-| **Paper reports · other executors** | | | | | | | | |
-| SkillOpt | GPT-5.5 | P-S | — | 95.50 | — | — | — | — |
-| GEPA (SkillOpt evaluation) | GPT-5.5 | P-S | — | 85.80 | — | — | — | — |
-| TextGrad (SkillOpt evaluation) | GPT-5.5 | P-S | — | 82.80 | — | — | — | — |
-| HarnessX | Qwen3.5-9B | P2 | — | 97.00 | — | 49.00 | — | — |
-| GEPA-Curator / Gemini | gpt-oss-120b | P* | — | 91.80 ± 1.40 | — | — | — | — |
-| GEPA-Curator / Claude | gpt-oss-120b | P* | — | 98.40 ± 0.60 | — | — | — | — |
-| **Local measurements · Qwen3-4B** | | | | | | | | |
-| Life-Harness (released) | Qwen3-4B | M | — | 87.77 ± 1.91 | 64.11 ± 0.38 | — | 36.81 ± 0.00 | 57.50 ± 9.01 |
-| ALIGN (released) | Qwen3-4B | M | — | 3.36 ± 1.06 | — | 31.00 ± 0.50 | — | — |
-| ReAct | Qwen3-4B | M | — | 10.70 ± 1.06 | — | — | — | — |
-| ReflAct | Qwen3-4B | M | — | 18.35 ± 1.83 | — | — | — | — |
-| AutoManual | Qwen3-4B | M | — | 76.15 ± 1.59 | — | — | — | — |
-| Harness-R1 (released patch) | Qwen3-4B | M | — | — | 52.22 ± 0.69 | — | — | — |
-| **Common frozen environment · WebShop** | | | | | | | | |
-| Life-Harness | Qwen3-4B | F | — | — | — | 41.33 ± 0.29 | — | — |
-| ALIGN | Qwen3-4B | F | — | — | — | 31.00 ± 0.50 | — | — |
-| Our framework / checkpoint A | Qwen3-4B | F | — | — | — | 48.00 ± 0.50 | — | — |
-| Our framework / checkpoint B | Qwen3-4B | F | — | — | — | 48.17 ± 0.29 | — | — |
-| **Related methods awaiting adapters or resources** | | | | | | | | |
-| ExpeL | Qwen3-4B | Q | — | Pending | — | Pending | — | — |
-| AgentSquare (local) | Qwen3-4B | Q | — | Pending | — | Pending | — | — |
-| Verify–Backtrack Loop | Qwen3-4B | Q | — | Pending | — | — | — | — |
-| GEPA-Curator (local) | Qwen3-4B | Q | — | Pending | — | — | — | — |
-| SkillFM (local) | Qwen3-4B | Q | — | Weights needed | — | Weights needed | — | — |
+Values follow the paper snapshot dated 2026-11-11.
 
-Cells give success and available SD, then cumulative optimizer tokens in millions. P-L: Life-Harness adaptation; P-S: SkillOpt evaluation; P*: original split; P2: adaptation-set peak pass@2; M: local measurement; H: historical release; F: common frozen WebShop environment; Q: pending adapter/resources. Each group retains its protocol.
+| Method | ALFWorld | DBBench | WebShop · historical | WebShop · frozen | OSBench | Telecom |
+|---|---|---|---|---|---|---|
+| Ours (measured peak) | 95.41 ± 0.00 | 70.56 ± 0.38 | 47.00 ± 0.87 | 48.17 ± 0.29 | 39.35 ± 2.12 | 87.50 ± 6.61 |
+| Ours (selected) | 95.41 ± 0.00 | 70.56 ± 0.38 | 44.33 ± 0.29 | — | 38.89 ± 0.69 | 84.17 ± 10.10 |
+| Life-Harness (local) | 87.77 ± 1.91 | 64.11 ± 0.38 | — | 41.33 ± 0.29 | 36.81 ± 0.00 | 57.50 ± 9.01 |
+| ALIGN (released) | 3.36 ± 1.06 | — | — | 31.00 ± 0.50 | — | — |
+| ReAct | 10.70 ± 1.06 | — | — | — | — | — |
+| ReflAct | 18.35 ± 1.83 | — | — | — | — | — |
+| AutoManual | 76.15 ± 1.59 | — | — | — | — | — |
+| Harness-R1 (released patch) | — | 52.22 ± 0.69 | — | — | — | — |
+| Life-Harness (v3) | 88.07 | 65.00 | 45.50 | — | 39.60 | 90.00 |
+| Life-Harness (v1) | 88.07 | 65.00 | 45.50 | — | 39.60 | 57.50 |
+| Bare | 16.51 | 44.00 | 29.50 | — | 21.50 | 25.83 |
+| Prompt-evolving | 13.80 | 60.70 | 30.00 | — | 18.80 | 35.00 |
+| ALIGN | 28.36 | — | 18.00 | — | — | — |
+| AgentSquare | 29.36 | — | 18.50 | — | — | — |
+| Meta-Harness (Life rerun) | 35.80 | 50.30 | 42.50 | — | 25.70 | 50.80 |
+| AHE (Life rerun) | 89.00 | 57.30 | 39.00 | — | 37.50 | 95.00 |
+| SkillFM* | 77.01 | — | 14.60 | — | — | — |
+| Harness-R1 (paper) | 29.10 | 55.70 | 38.60 | — | — | — |
+
+All values are test success percentages. ± denotes sample standard deviation across repeated executions.
+Historical and frozen WebShop catalogs are separate conditions. Local Telecom uses GLM.
+OSBench's historical 39.35% and the 41.67% data-control artifact have separate provenance.
+
+[Configurations](docs/REPRODUCING.md) · [Figures and source data](paper/README.md)
+
+## Released harnesses
+
+- [alfworld · 20261026-method1-sol61-v18](harnesses/alfworld/20261026-method1-sol61-v18)
+- [dbbench · 20261026-l4-h0-sol61-v35](harnesses/dbbench/20261026-l4-h0-sol61-v35)
+- [dbbench · 20261027-l4-h0-sol61-v32](harnesses/dbbench/20261027-l4-h0-sol61-v32)
+- [osbench · 20261026-l4-h0-sol61-v17](harnesses/osbench/20261026-l4-h0-sol61-v17)
+- [osbench · 20261027-l5-h0-sol61-v08](harnesses/osbench/20261027-l5-h0-sol61-v08)
+- [osbench · 20261030-l4-h0-sol61-v03](harnesses/osbench/20261030-l4-h0-sol61-v03)
+- [telecom · 20261026-start-luna-repaired-v06](harnesses/telecom/20261026-start-luna-repaired-v06)
+- [webshop · 20261026-l5-h0-sol61-v28](harnesses/webshop/20261026-l5-h0-sol61-v28)
+- [webshop · 20261027-original-best-sol61-v12](harnesses/webshop/20261027-original-best-sol61-v12)

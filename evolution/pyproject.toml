@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "dsh-autoharness"
-version = "0.1.0"
+version = "0.2.0"
 description = "Shared DSH runtime and selectable AutoHarness evolution loops"
 requires-python = ">=3.10"
 dependencies = ["PyYAML==6.0.3"]
@@ -17,3 +17,5 @@ dsh-evolve = "dsh_evolve.cli:main"
 where = ["src"]
 [tool.setuptools.package-data]
 astra_evolve = ["assets/*", "assets/runtime/*", "assets/example-plugins/*"]
+
+dsh_evolve = ["assets/*.mjs", "assets/*/*.mjs", "assets/*/*.py", "assets/*/package.json"]

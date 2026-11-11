@@ -1,1515 +1,438 @@
 {
-  "schema_version": 2,
-  "update_mode": "release-driven",
-  "champions": {
-    "alfworld": {
-      "schema_version": 1,
-      "release_id": "20261026-method1-sol61-v18",
-      "benchmark": "alfworld",
-      "checkpoint": "v18",
-      "method": "方法2 · Astra自由方案",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 20,
-      "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 109,
-        "repeats": 3,
-        "valid_episodes": 327,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.9541284403669725,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 50,
-        "max_model_calls": 50,
-        "task_count": 109,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "top_p": 0.8,
-          "top_k": 20,
-          "parallel_tool_calls": false
-        },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials.",
-        "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
-      ],
-      "source_experiment": "alfworld-official50-20r-20261022/method1-sol61",
-      "comparison_group": "alfworld-qwen3-4b-release-v1",
-      "method_en": "Method 2 · Free plugin evolution",
-      "selection_kind": "training_final"
-    },
-    "dbbench": {
-      "schema_version": 1,
-      "release_id": "20261026-l4-h0-sol61-v35",
-      "benchmark": "dbbench",
-      "checkpoint": "v35",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/dbbench/20261026-l4-h0-sol61-v35",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 300,
-        "repeats": 3,
-        "valid_episodes": 900,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.7055555555555556,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": null,
-        "max_model_calls": 15,
-        "task_count": 300,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
-        },
-        "send_seed": false,
-        "timeout_seconds": 740,
-        "max_retries": 0,
-        "environment": "AgentBench MySQL 8.4.11; 15 model calls"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
-      "comparison_group": "dbbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "training_final"
-    },
-    "webshop": {
-      "schema_version": 1,
-      "release_id": "20261026-l5-h0-sol61-v28",
-      "benchmark": "webshop",
-      "checkpoint": "v28",
-      "method": "L5 · 场景专用循环",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/webshop/20261026-l5-h0-sol61-v28",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 200,
-        "repeats": 3,
-        "valid_episodes": 600,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.445,
-        "mean_reward": 0.7068277777777777,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 20,
-        "max_model_calls": 20,
-        "task_count": 200,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
-        },
-        "send_seed": false,
-        "timeout_seconds": 180,
-        "max_retries": 2,
-        "environment": "WebShop 100k products",
-        "catalog_documents": 99995,
-        "goals": 1021
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
-      "comparison_group": "webshop-qwen3-4b-release-v1",
-      "method_en": "L5 · Benchmark-specific loop",
-      "selection_kind": "training_final"
-    },
-    "osbench": {
-      "schema_version": 1,
-      "release_id": "20261026-l4-h0-sol61-v17",
-      "benchmark": "osbench",
-      "checkpoint": "v17",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/osbench/20261026-l4-h0-sol61-v17",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 144,
-        "repeats": 3,
-        "valid_episodes": 432,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.3888888888888889,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 16,
-        "max_model_calls": 16,
-        "task_count": 144,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false
-        },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "AgentBench OS isolated Docker task environment"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
-      "comparison_group": "osbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "training_final"
-    },
-    "telecom": {
-      "schema_version": 1,
-      "release_id": "20261026-start-luna-repaired-v06",
-      "benchmark": "telecom",
-      "checkpoint": "v06",
-      "method": "方法2消融 · Luna修复版起点",
-      "optimizer": "Sol high",
-      "rounds": 8,
-      "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 40,
-        "repeats": 3,
-        "valid_episodes": 120,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.8416666666666667,
-        "pass_at_3": 1.0,
-        "pass_cubed": 0.625,
-        "mean_reward": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 2048,
-        "max_steps": 200,
-        "user_model": "GLM-5.3-Flash",
-        "task_count": 40,
-        "repeats": 3,
-        "trial_seeds": [
-          626729,
-          373753,
-          361454
-        ],
-        "start": "repaired Luna-derived checkpoint; not H0",
-        "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
-        "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
-      },
-      "notes": [
-        "Historical tests were visible during the campaign; not a fresh blind test.",
-        "User simulator differs from the Life-Harness paper; no direct ranking claim.",
-        "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
-        "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
-      ],
-      "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired",
-      "comparison_group": "telecom-qwen3-4b-release-v1",
-      "method_en": "Method 2 continuation · Repaired Luna-derived start",
-      "selection_kind": "training_final"
-    }
-  },
-  "best_measured": {
-    "alfworld": {
-      "schema_version": 1,
-      "release_id": "20261026-method1-sol61-v18",
-      "benchmark": "alfworld",
-      "checkpoint": "v18",
-      "method": "方法2 · Astra自由方案",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 20,
-      "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 109,
-        "repeats": 3,
-        "valid_episodes": 327,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.9541284403669725,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 50,
-        "max_model_calls": 50,
-        "task_count": 109,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "top_p": 0.8,
-          "top_k": 20,
-          "parallel_tool_calls": false
-        },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials.",
-        "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
-      ],
-      "source_experiment": "alfworld-official50-20r-20261022/method1-sol61",
-      "comparison_group": "alfworld-qwen3-4b-release-v1",
-      "method_en": "Method 2 · Free plugin evolution",
-      "selection_kind": "training_final"
-    },
-    "dbbench": {
-      "schema_version": 1,
-      "release_id": "20261026-l4-h0-sol61-v35",
-      "benchmark": "dbbench",
-      "checkpoint": "v35",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/dbbench/20261026-l4-h0-sol61-v35",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 300,
-        "repeats": 3,
-        "valid_episodes": 900,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.7055555555555556,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": null,
-        "max_model_calls": 15,
-        "task_count": 300,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
-        },
-        "send_seed": false,
-        "timeout_seconds": 740,
-        "max_retries": 0,
-        "environment": "AgentBench MySQL 8.4.11; 15 model calls"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
-      "comparison_group": "dbbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "training_final"
-    },
-    "webshop": {
-      "schema_version": 1,
-      "release_id": "20261027-original-best-sol61-v12",
-      "benchmark": "webshop",
-      "checkpoint": "v12",
-      "method": "方法1协同 · 旧最佳续跑",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/webshop/20261027-original-best-sol61-v12",
-      "published_on": "2026-10-27",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 200,
-        "repeats": 3,
-        "valid_episodes": 600,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.47,
-        "mean_reward": 0.7121246031746031,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 20,
-        "max_model_calls": 20,
-        "task_count": 200,
-        "repeats": 3,
-        "start": "old method-1 final checkpoint v37",
-        "selection": "same-batch mean reward improves with two effective plugin changes; retrospective adopted checkpoint selected for publication",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
-        },
-        "send_seed": false,
-        "timeout_seconds": 180,
-        "max_retries": 2,
-        "environment": "WebShop 100k products",
-        "catalog_documents": 99995,
-        "goals": 1021
-      },
-      "notes": [
-        "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
-        "Original training-selected final checkpoint is v36. Its identity and original result are retained.",
-        "Paper AgentBench uses one trial; this measurement averages three repeats.",
-        "The v01 training score of zero is a real 50/50-valid evaluation: a plugin scope error broke ledger receipts and the candidate was rejected. The failed candidate remains visible in the development curve."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
-      "comparison_group": "webshop-qwen3-4b-release-v1",
-      "method_en": "Method 1 cooperative · Best-checkpoint continuation",
-      "selection_kind": "retrospective_adopted",
-      "promoted": true,
-      "campaign_final_checkpoint": "v36",
-      "campaign_final_test": {
-        "mean": 0.7058523809523809,
-        "strict_pass_at_1": 0.44333333333333336,
-        "valid": 600
-      },
-      "evaluation_repeats": {
-        "0": 0.7181273809523809,
-        "1": 0.7060607142857143,
-        "2": 0.7121857142857143
-      }
-    },
-    "osbench": {
-      "schema_version": 1,
-      "release_id": "20261030-l4-h0-sol61-v03",
-      "benchmark": "osbench",
-      "checkpoint": "v03",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/osbench/20261030-l4-h0-sol61-v03",
-      "published_on": "2026-10-30",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 144,
-        "repeats": 3,
-        "valid_episodes": 432,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.39351851851851855,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 16,
-        "max_model_calls": 16,
-        "task_count": 144,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation promotion; retrospective adopted checkpoint selected for publication",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false
-        },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "AgentBench OS isolated Docker task environment"
-      },
-      "notes": [
-        "Complete retrospective evaluation of a previously promoted checkpoint: 170 successes / 432 episodes. Original training-selected final v17 remains 168/432.",
-        "Selected for publication after observing checkpoint tests; this is not a new confirmatory test.",
-        "Three repeat accuracies: 38.89%, 37.50%, 41.67%; population standard deviation 1.73 percentage points.",
-        "Paper AgentBench uses one trial; this measurement averages three."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
-      "comparison_group": "osbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "retrospective_adopted",
-      "promoted": true,
-      "campaign_final_checkpoint": "v17",
-      "campaign_final_test": {
-        "mean": 0.3888888888888889,
-        "strict_pass_at_1": null,
-        "valid": 432
-      },
-      "evaluation_repeats": {
-        "0": 0.3888888888888889,
-        "1": 0.375,
-        "2": 0.4166666666666667
-      }
-    },
-    "telecom": {
-      "schema_version": 1,
-      "release_id": "20261026-start-luna-repaired-v06",
-      "benchmark": "telecom",
-      "checkpoint": "v06",
-      "method": "方法2消融 · Luna修复版起点",
-      "optimizer": "Sol high",
-      "rounds": 8,
-      "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 40,
-        "repeats": 3,
-        "valid_episodes": 120,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.8416666666666667,
-        "pass_at_3": 1.0,
-        "pass_cubed": 0.625,
-        "mean_reward": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 2048,
-        "max_steps": 200,
-        "user_model": "GLM-5.3-Flash",
-        "task_count": 40,
-        "repeats": 3,
-        "trial_seeds": [
-          626729,
-          373753,
-          361454
-        ],
-        "start": "repaired Luna-derived checkpoint; not H0",
-        "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
-        "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
-      },
-      "notes": [
-        "Historical tests were visible during the campaign; not a fresh blind test.",
-        "User simulator differs from the Life-Harness paper; no direct ranking claim.",
-        "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
-        "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
-      ],
-      "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired",
-      "comparison_group": "telecom-qwen3-4b-release-v1",
-      "method_en": "Method 2 continuation · Repaired Luna-derived start",
-      "selection_kind": "training_final"
-    }
-  },
-  "releases": [
+  "updated": "2026-11-11",
+  "metric": "Test success (%)",
+  "error": "Sample standard deviation across repeated executions",
+  "columns": [
+    "alfworld",
+    "dbbench",
+    "webshop_historical",
+    "webshop_frozen",
+    "osbench",
+    "telecom"
+  ],
+  "rows": [
     {
-      "schema_version": 1,
-      "release_id": "20261026-method1-sol61-v18",
-      "benchmark": "alfworld",
-      "checkpoint": "v18",
-      "method": "方法2 · Astra自由方案",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 20,
-      "artifact": "harnesses/alfworld/20261026-method1-sol61-v18",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 109,
-        "repeats": 3,
-        "valid_episodes": 327,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.9541284403669725,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 50,
-        "max_model_calls": 50,
-        "task_count": 109,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "top_p": 0.8,
-          "top_k": 20,
-          "parallel_tool_calls": false
+      "method": "Ours (measured peak)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 95.41,
+          "sd": 0.0
         },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials.",
-        "Equal-score final artifact also exists for the cooperative method; this release uses the free method."
-      ],
-      "source_experiment": "alfworld-official50-20r-20261022/method1-sol61",
-      "comparison_group": "alfworld-qwen3-4b-release-v1",
-      "method_en": "Method 2 · Free plugin evolution",
-      "selection_kind": "training_final"
-    },
-    {
-      "schema_version": 1,
-      "release_id": "20261026-l4-h0-sol61-v35",
-      "benchmark": "dbbench",
-      "checkpoint": "v35",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/dbbench/20261026-l4-h0-sol61-v35",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 300,
-        "repeats": 3,
-        "valid_episodes": 900,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.7055555555555556,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": null,
-        "max_model_calls": 15,
-        "task_count": 300,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
+        "dbbench": {
+          "mean": 70.56,
+          "sd": 0.38
         },
-        "send_seed": false,
-        "timeout_seconds": 740,
-        "max_retries": 0,
-        "environment": "AgentBench MySQL 8.4.11; 15 model calls"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
-      "comparison_group": "dbbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "training_final"
-    },
-    {
-      "schema_version": 1,
-      "release_id": "20261027-l4-h0-sol61-v32",
-      "benchmark": "dbbench",
-      "checkpoint": "v32",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/dbbench/20261027-l4-h0-sol61-v32",
-      "published_on": "2026-10-27",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 300,
-        "repeats": 3,
-        "valid_episodes": 900,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.7033333333333334,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": null,
-        "max_model_calls": 15,
-        "task_count": 300,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
+        "webshop_historical": {
+          "mean": 47.0,
+          "sd": 0.87
         },
-        "send_seed": false,
-        "timeout_seconds": 740,
-        "max_retries": 0,
-        "environment": "AgentBench MySQL 8.4.11; 15 model calls"
-      },
-      "notes": [
-        "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
-        "Original training-selected final checkpoint is v35. Its identity and original result are retained.",
-        "Paper AgentBench uses one trial; this measurement averages three repeats."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/dbbench/l4-h0-sol61",
-      "comparison_group": "dbbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "retrospective_adopted",
-      "promoted": true,
-      "campaign_final_checkpoint": "v35",
-      "campaign_final_test": {
-        "mean": 0.7055555555555556,
-        "strict_pass_at_1": null,
-        "valid": 900
-      },
-      "evaluation_repeats": {
-        "0": 0.7066666666666667,
-        "1": 0.7033333333333334,
-        "2": 0.7
+        "webshop_frozen": {
+          "mean": 48.17,
+          "sd": 0.29
+        },
+        "osbench": {
+          "mean": 39.35,
+          "sd": 2.12
+        },
+        "telecom": {
+          "mean": 87.5,
+          "sd": 6.61
+        }
       }
     },
     {
-      "schema_version": 1,
-      "release_id": "20261026-l4-h0-sol61-v17",
-      "benchmark": "osbench",
-      "checkpoint": "v17",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/osbench/20261026-l4-h0-sol61-v17",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 144,
-        "repeats": 3,
-        "valid_episodes": 432,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.3888888888888889,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 16,
-        "max_model_calls": 16,
-        "task_count": 144,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false
+      "method": "Ours (selected)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 95.41,
+          "sd": 0.0
         },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "AgentBench OS isolated Docker task environment"
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
-      "comparison_group": "osbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "training_final"
-    },
-    {
-      "schema_version": 1,
-      "release_id": "20261027-l5-h0-sol61-v08",
-      "benchmark": "osbench",
-      "checkpoint": "v08",
-      "method": "L5 · 场景专用循环",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/osbench/20261027-l5-h0-sol61-v08",
-      "published_on": "2026-10-27",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 144,
-        "repeats": 3,
-        "valid_episodes": 432,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.38657407407407407,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 16,
-        "max_model_calls": 16,
-        "task_count": 144,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training improvement plus validation and family-macro nondecrease; retrospective adopted checkpoint selected for publication",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false
+        "dbbench": {
+          "mean": 70.56,
+          "sd": 0.38
         },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "AgentBench OS isolated Docker task environment"
-      },
-      "notes": [
-        "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
-        "Original training-selected final checkpoint is v11. Its identity and original result are retained.",
-        "Paper AgentBench uses one trial; this measurement averages three repeats."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/osbench/l5-h0-sol61",
-      "comparison_group": "osbench-qwen3-4b-release-v1",
-      "method_en": "L5 · Task-family validation",
-      "selection_kind": "retrospective_adopted",
-      "promoted": true,
-      "campaign_final_checkpoint": "v11",
-      "campaign_final_test": {
-        "mean": 0.3819444444444444,
-        "strict_pass_at_1": null,
-        "valid": 432
-      },
-      "evaluation_repeats": {
-        "0": 0.4097222222222222,
-        "1": 0.3680555555555556,
-        "2": 0.3819444444444444
+        "webshop_historical": {
+          "mean": 44.33,
+          "sd": 0.29
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 38.89,
+          "sd": 0.69
+        },
+        "telecom": {
+          "mean": 84.17,
+          "sd": 10.1
+        }
       }
     },
     {
-      "schema_version": 1,
-      "release_id": "20261030-l4-h0-sol61-v03",
-      "benchmark": "osbench",
-      "checkpoint": "v03",
-      "method": "L4 · Agent结构与多插件职责",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/osbench/20261030-l4-h0-sol61-v03",
-      "published_on": "2026-10-30",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 144,
-        "repeats": 3,
-        "valid_episodes": 432,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.39351851851851855,
-        "mean_reward": null,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 16,
-        "max_model_calls": 16,
-        "task_count": 144,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation promotion; retrospective adopted checkpoint selected for publication",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false
+      "method": "Life-Harness (local)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 87.77,
+          "sd": 1.91
         },
-        "send_seed": true,
-        "timeout_seconds": 575,
-        "max_retries": 0,
-        "environment": "AgentBench OS isolated Docker task environment"
-      },
-      "notes": [
-        "Complete retrospective evaluation of a previously promoted checkpoint: 170 successes / 432 episodes. Original training-selected final v17 remains 168/432.",
-        "Selected for publication after observing checkpoint tests; this is not a new confirmatory test.",
-        "Three repeat accuracies: 38.89%, 37.50%, 41.67%; population standard deviation 1.73 percentage points.",
-        "Paper AgentBench uses one trial; this measurement averages three."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/osbench/l4-h0-sol61",
-      "comparison_group": "osbench-qwen3-4b-release-v1",
-      "method_en": "L4 · Agent capability map",
-      "selection_kind": "retrospective_adopted",
-      "promoted": true,
-      "campaign_final_checkpoint": "v17",
-      "campaign_final_test": {
-        "mean": 0.3888888888888889,
-        "strict_pass_at_1": null,
-        "valid": 432
-      },
-      "evaluation_repeats": {
-        "0": 0.3888888888888889,
-        "1": 0.375,
-        "2": 0.4166666666666667
+        "dbbench": {
+          "mean": 64.11,
+          "sd": 0.38
+        },
+        "webshop_historical": null,
+        "webshop_frozen": {
+          "mean": 41.33,
+          "sd": 0.29
+        },
+        "osbench": {
+          "mean": 36.81,
+          "sd": 0.0
+        },
+        "telecom": {
+          "mean": 57.5,
+          "sd": 9.01
+        }
       }
     },
     {
-      "schema_version": 1,
-      "release_id": "20261026-start-luna-repaired-v06",
-      "benchmark": "telecom",
-      "checkpoint": "v06",
-      "method": "方法2消融 · Luna修复版起点",
-      "optimizer": "Sol high",
-      "rounds": 8,
-      "artifact": "harnesses/telecom/20261026-start-luna-repaired-v06",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 40,
-        "repeats": 3,
-        "valid_episodes": 120,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.8416666666666667,
-        "pass_at_3": 1.0,
-        "pass_cubed": 0.625,
-        "mean_reward": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 2048,
-        "max_steps": 200,
-        "user_model": "GLM-5.3-Flash",
-        "task_count": 40,
-        "repeats": 3,
-        "trial_seeds": [
-          626729,
-          373753,
-          361454
-        ],
-        "start": "repaired Luna-derived checkpoint; not H0",
-        "selection": "training-selected final checkpoint; historical intermediate tests were also measured",
-        "runtime": "native DSH Telecom bridge with account review and auxiliary requests"
-      },
-      "notes": [
-        "Historical tests were visible during the campaign; not a fresh blind test.",
-        "User simulator differs from the Life-Harness paper; no direct ranking claim.",
-        "Includes migrated source surfaces and evolved custom plugins; not 35 independently validated problem categories.",
-        "Measured runtime includes a read-only business account-facts adapter and auxiliary review/model calls; it does not share the pure observation-only contract of the four AgentBench artifacts."
-      ],
-      "source_experiment": "dsh-startpoint-ablation-20261020/start-luna-repaired",
-      "comparison_group": "telecom-qwen3-4b-release-v1",
-      "method_en": "Method 2 continuation · Repaired Luna-derived start",
-      "selection_kind": "training_final"
+      "method": "ALIGN (released)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 3.36,
+          "sd": 1.06
+        },
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": {
+          "mean": 31.0,
+          "sd": 0.5
+        },
+        "osbench": null,
+        "telecom": null
+      }
     },
     {
-      "schema_version": 1,
-      "release_id": "20261026-l5-h0-sol61-v28",
-      "benchmark": "webshop",
-      "checkpoint": "v28",
-      "method": "L5 · 场景专用循环",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/webshop/20261026-l5-h0-sol61-v28",
-      "published_on": "2026-10-26",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 200,
-        "repeats": 3,
-        "valid_episodes": 600,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.445,
-        "mean_reward": 0.7068277777777777,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 20,
-        "max_model_calls": 20,
-        "task_count": 200,
-        "repeats": 3,
-        "start": "H0",
-        "selection": "training/validation only; final selected checkpoint evaluated after evolution",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
+      "method": "ReAct",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 10.7,
+          "sd": 1.06
         },
-        "send_seed": false,
-        "timeout_seconds": 180,
-        "max_retries": 2,
-        "environment": "WebShop 100k products",
-        "catalog_documents": 99995,
-        "goals": 1021
-      },
-      "notes": [
-        "Paper AgentBench scores use one trial; these results average three trials."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/webshop/l5-h0-sol61",
-      "comparison_group": "webshop-qwen3-4b-release-v1",
-      "method_en": "L5 · Benchmark-specific loop",
-      "selection_kind": "training_final"
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
     },
     {
-      "schema_version": 1,
-      "release_id": "20261027-original-best-sol61-v12",
-      "benchmark": "webshop",
-      "checkpoint": "v12",
-      "method": "方法1协同 · 旧最佳续跑",
-      "optimizer": "Sol 6.1 high",
-      "rounds": 40,
-      "artifact": "harnesses/webshop/20261027-original-best-sol61-v12",
-      "published_on": "2026-10-27",
-      "evaluation_complete": true,
-      "coverage": {
-        "tasks": 200,
-        "repeats": 3,
-        "valid_episodes": 600,
-        "invalid_episodes": 0
-      },
-      "metrics": {
-        "pass_at_1": 0.47,
-        "mean_reward": 0.7121246031746031,
-        "pass_at_3": null,
-        "pass_cubed": null
-      },
-      "evolution_tokens": null,
-      "evolution_tokens_note": "Not yet consolidated across optimizer sessions and evaluation calls; not zero.",
-      "protocol": {
-        "actor": "Qwen3-4B-Instruct-2507",
-        "temperature": 0,
-        "max_tokens": 4096,
-        "max_steps": 20,
-        "max_model_calls": 20,
-        "task_count": 200,
-        "repeats": 3,
-        "start": "old method-1 final checkpoint v37",
-        "selection": "same-batch mean reward improves with two effective plugin changes; retrospective adopted checkpoint selected for publication",
-        "runtime": "native DSH benchmark/setup bridge",
-        "extra_body": {
-          "parallel_tool_calls": false,
-          "chat_template_kwargs": {
-            "enable_thinking": false
-          }
+      "method": "ReflAct",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 18.35,
+          "sd": 1.83
         },
-        "send_seed": false,
-        "timeout_seconds": 180,
-        "max_retries": 2,
-        "environment": "WebShop 100k products",
-        "catalog_documents": 99995,
-        "goals": 1021
-      },
-      "notes": [
-        "Published from an adopted checkpoint with a complete retrospective test. Selected for publication using already observed test scores; not a fresh confirmatory evaluation.",
-        "Original training-selected final checkpoint is v36. Its identity and original result are retained.",
-        "Paper AgentBench uses one trial; this measurement averages three repeats.",
-        "The v01 training score of zero is a real 50/50-valid evaluation: a plugin scope error broke ledger receipts and the candidate was rejected. The failed candidate remains visible in the development curve."
-      ],
-      "source_experiment": "loop-expansion-sol40-20261026/webshop/original-best-sol61",
-      "comparison_group": "webshop-qwen3-4b-release-v1",
-      "method_en": "Method 1 cooperative · Best-checkpoint continuation",
-      "selection_kind": "retrospective_adopted",
-      "promoted": true,
-      "campaign_final_checkpoint": "v36",
-      "campaign_final_test": {
-        "mean": 0.7058523809523809,
-        "strict_pass_at_1": 0.44333333333333336,
-        "valid": 600
-      },
-      "evaluation_repeats": {
-        "0": 0.7181273809523809,
-        "1": 0.7060607142857143,
-        "2": 0.7121857142857143
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "AutoManual",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 76.15,
+          "sd": 1.59
+        },
+        "dbbench": null,
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Harness-R1 (released patch)",
+      "group": "local",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": null,
+        "dbbench": {
+          "mean": 52.22,
+          "sd": 0.69
+        },
+        "webshop_historical": null,
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Life-Harness (v3)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 88.07,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 65.0,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 45.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 39.6,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 90.0,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "Life-Harness (v1)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 88.07,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 65.0,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 45.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 39.6,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 57.5,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "Bare",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 16.51,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 44.0,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 29.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 21.5,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 25.83,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "Prompt-evolving",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 13.8,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 60.7,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 30.0,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 18.8,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 35.0,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "ALIGN",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 28.36,
+          "sd": null
+        },
+        "dbbench": null,
+        "webshop_historical": {
+          "mean": 18.0,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "AgentSquare",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 29.36,
+          "sd": null
+        },
+        "dbbench": null,
+        "webshop_historical": {
+          "mean": 18.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Meta-Harness (Life rerun)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 35.8,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 50.3,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 42.5,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 25.7,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 50.8,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "AHE (Life rerun)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 89.0,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 57.3,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 39.0,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": {
+          "mean": 37.5,
+          "sd": null
+        },
+        "telecom": {
+          "mean": 95.0,
+          "sd": null
+        }
+      }
+    },
+    {
+      "method": "SkillFM*",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 77.01,
+          "sd": null
+        },
+        "dbbench": null,
+        "webshop_historical": {
+          "mean": 14.6,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
+      }
+    },
+    {
+      "method": "Harness-R1 (paper)",
+      "group": "paper",
+      "executor": "Qwen3-4B",
+      "scores": {
+        "alfworld": {
+          "mean": 29.1,
+          "sd": null
+        },
+        "dbbench": {
+          "mean": 55.7,
+          "sd": null
+        },
+        "webshop_historical": {
+          "mean": 38.6,
+          "sd": null
+        },
+        "webshop_frozen": null,
+        "osbench": null,
+        "telecom": null
       }
     }
   ],
-  "paper_references": {
-    "schema_version": 1,
-    "source_url": "https://arxiv.org/html/2605.22166v3",
-    "paper_version": "2605.22166v3",
-    "checked_on": "2026-11-02",
-    "actor": "Qwen3-4B-Instruct",
-    "provenance": "Life-Harness comparison rows follow its v3 report. SkillFM* follows its original paper and task split. Per-method source identities are retained; these literature rows are separate from local evaluations.",
-    "protocol_notes": [
-      "Meta-Harness, AHE and Life-Harness use six evolution rounds and the same training batches within the paper, with GPT-5.5 as evolution model. Our campaign budgets and optimizers differ.",
-      "ALIGN and AgentSquare are released final harness evaluations on ALFWorld and WebShop. ALIGN uses its released task split; AgentSquare uses the Life-Harness task selection.",
-      "Paper AgentBench uses one evaluation per task. Our released scores average three. Telecom simulator/access/auxiliary-call conditions differ.",
-      "Table 1 values and evolution-token totals are rounded; Table 10/11 values retain their published precision. Null means not reported here, never zero.",
-      "SkillFM* uses its original task split and auxiliary skill generator; a same-executor literature reference with distinct data and compute. Source: https://arxiv.org/html/2609.39382"
-    ],
-    "methods": [
-      {
-        "id": "bare",
-        "label": "Bare / 裸模型",
-        "description_en": "Frozen actor without an evolved harness.",
-        "description_zh": "冻结做题模型，不添加进化后的 harness。",
-        "table": "10",
-        "pass_at_1": {
-          "alfworld": 0.1651,
-          "dbbench": 0.44,
-          "webshop": 0.295,
-          "osbench": 0.215,
-          "telecom": 0.2583
-        },
-        "evolution_tokens": {
-          "alfworld": null,
-          "dbbench": null,
-          "webshop": null,
-          "osbench": null,
-          "telecom": null
-        },
-        "telecom_pass_at_3": 0.475,
-        "telecom_pass_cubed": 0.075
-      },
-      {
-        "id": "align",
-        "label": "ALIGN",
-        "description_en": "Generates an environment interface for the agent.",
-        "description_zh": "为智能体生成环境交互接口。",
-        "table": "11",
-        "pass_at_1": {
-          "alfworld": 0.2836,
-          "dbbench": null,
-          "webshop": 0.18,
-          "osbench": null,
-          "telecom": null
-        },
-        "evolution_tokens": {
-          "alfworld": null,
-          "dbbench": null,
-          "webshop": null,
-          "osbench": null,
-          "telecom": null
-        },
-        "telecom_pass_at_3": null,
-        "telecom_pass_cubed": null
-      },
-      {
-        "id": "agentsquare",
-        "label": "AgentSquare",
-        "description_en": "Searches modular agent architectures.",
-        "description_zh": "搜索模块化智能体架构。",
-        "table": "11",
-        "pass_at_1": {
-          "alfworld": 0.2936,
-          "dbbench": null,
-          "webshop": 0.185,
-          "osbench": null,
-          "telecom": null
-        },
-        "evolution_tokens": {
-          "alfworld": null,
-          "dbbench": null,
-          "webshop": null,
-          "osbench": null,
-          "telecom": null
-        },
-        "telecom_pass_at_3": null,
-        "telecom_pass_cubed": null
-      },
-      {
-        "id": "meta",
-        "label": "Meta-Harness",
-        "description_en": "Searches harness programs using previous code, scores, and traces.",
-        "description_zh": "结合历史代码、分数和轨迹搜索 harness 程序。",
-        "table": "1",
-        "pass_at_1": {
-          "alfworld": 0.358,
-          "dbbench": 0.503,
-          "webshop": 0.425,
-          "osbench": 0.257,
-          "telecom": 0.508
-        },
-        "evolution_tokens": {
-          "alfworld": 37000000,
-          "dbbench": 33000000,
-          "webshop": 37000000,
-          "osbench": 27000000,
-          "telecom": 21000000
-        },
-        "telecom_pass_at_3": null,
-        "telecom_pass_cubed": 0.4,
-        "evolution_tokens_exact_table12": {
-          "alfworld": 37138309,
-          "dbbench": 32813601,
-          "osbench": 26787235,
-          "webshop": 36741591,
-          "telecom": 21322791
-        }
-      },
-      {
-        "id": "ahe",
-        "label": "AHE",
-        "description_en": "Edits harness files and checks expected effects in evaluations.",
-        "description_zh": "修改 harness 组件文件，通过评测检验改动是否产生预期效果。",
-        "table": "1",
-        "pass_at_1": {
-          "alfworld": 0.89,
-          "dbbench": 0.573,
-          "webshop": 0.39,
-          "osbench": 0.375,
-          "telecom": 0.95
-        },
-        "evolution_tokens": {
-          "alfworld": 96000000,
-          "dbbench": 105000000,
-          "webshop": 104000000,
-          "osbench": 94000000,
-          "telecom": 88000000
-        },
-        "telecom_pass_at_3": null,
-        "telecom_pass_cubed": 0.875,
-        "evolution_tokens_exact_table12": {
-          "alfworld": 95632347,
-          "dbbench": 104524554,
-          "osbench": 93994363,
-          "webshop": 103843620,
-          "telecom": 88348598
-        }
-      },
-      {
-        "id": "life",
-        "label": "Life-Harness v3",
-        "description_en": "Evolves interventions across four interaction lifecycle layers.",
-        "description_zh": "围绕交互生命周期的四层结构进化干预机制。",
-        "table": "10 / 1",
-        "pass_at_1": {
-          "alfworld": 0.8807,
-          "dbbench": 0.65,
-          "webshop": 0.455,
-          "osbench": 0.396,
-          "telecom": 0.9
-        },
-        "evolution_tokens": {
-          "alfworld": 24000000,
-          "dbbench": 11000000,
-          "webshop": 38000000,
-          "osbench": 26000000,
-          "telecom": 43000000
-        },
-        "telecom_pass_at_3": 1.0,
-        "telecom_pass_cubed": 0.775,
-        "evolution_tokens_exact_table12": {
-          "alfworld": 24288432,
-          "dbbench": 11204889,
-          "osbench": 25709768,
-          "webshop": 37750993,
-          "telecom": 42638396
-        }
-      },
-      {
-        "id": "skillfm",
-        "label": "SkillFM*",
-        "description_en": "Task-conditioned skill generation; original paper split and auxiliary generator.",
-        "description_zh": "任务条件化技能生成；采用原论文划分及辅助生成模型。",
-        "table": "SkillFM main results / Table 1",
-        "source_url": "https://arxiv.org/html/2609.39382",
-        "pass_at_1": {
-          "alfworld": 0.7701,
-          "dbbench": null,
-          "webshop": 0.146,
-          "osbench": null,
-          "telecom": null
-        },
-        "evolution_tokens": {
-          "alfworld": null,
-          "dbbench": null,
-          "webshop": null,
-          "osbench": null,
-          "telecom": null
-        },
-        "comparison_role": "same_executor_original_task_split"
-      }
-    ]
-  },
-  "comparison_policy": {
-    "primary_groups": {
-      "webshop": "webshop-qwen3-4b-release-v1",
-      "dbbench": "dbbench-qwen3-4b-release-v1",
-      "telecom": "telecom-qwen3-4b-release-v1",
-      "alfworld": "alfworld-qwen3-4b-release-v1",
-      "osbench": "osbench-qwen3-4b-release-v1"
-    },
-    "groups": {
-      "webshop-qwen3-4b-release-v1": {
-        "benchmark": "webshop",
-        "label": "WebShop 100k / Qwen3-4B / 200 × 3",
-        "protocol": {
-          "actor": "Qwen3-4B-Instruct-2507",
-          "temperature": 0,
-          "max_tokens": 4096,
-          "max_steps": 20,
-          "max_model_calls": 20,
-          "task_count": 200,
-          "repeats": 3,
-          "user_model": null,
-          "environment": "WebShop 100k products",
-          "runtime": "native DSH benchmark/setup bridge",
-          "catalog_documents": 99995,
-          "goals": 1021,
-          "extra_body": {
-            "parallel_tool_calls": false,
-            "chat_template_kwargs": {
-              "enable_thinking": false
-            }
-          },
-          "send_seed": false,
-          "trial_seeds": null
-        }
-      },
-      "dbbench-qwen3-4b-release-v1": {
-        "benchmark": "dbbench",
-        "label": "DBBench MySQL / Qwen3-4B / 300 × 3",
-        "protocol": {
-          "actor": "Qwen3-4B-Instruct-2507",
-          "temperature": 0,
-          "max_tokens": 4096,
-          "max_steps": null,
-          "max_model_calls": 15,
-          "task_count": 300,
-          "repeats": 3,
-          "user_model": null,
-          "environment": "AgentBench MySQL 8.4.11; 15 model calls",
-          "runtime": "native DSH benchmark/setup bridge",
-          "catalog_documents": null,
-          "goals": null,
-          "extra_body": {
-            "parallel_tool_calls": false,
-            "chat_template_kwargs": {
-              "enable_thinking": false
-            }
-          },
-          "send_seed": false,
-          "trial_seeds": null
-        }
-      },
-      "telecom-qwen3-4b-release-v1": {
-        "benchmark": "telecom",
-        "label": "Telecom GLM user + account review / Qwen3-4B / 40 × 3",
-        "protocol": {
-          "actor": "Qwen3-4B-Instruct-2507",
-          "temperature": 0,
-          "max_tokens": 2048,
-          "max_steps": 200,
-          "max_model_calls": null,
-          "task_count": 40,
-          "repeats": 3,
-          "user_model": "GLM-5.3-Flash",
-          "environment": null,
-          "runtime": "native DSH Telecom bridge with account review and auxiliary requests",
-          "catalog_documents": null,
-          "goals": null,
-          "extra_body": null,
-          "send_seed": null,
-          "trial_seeds": [
-            626729,
-            373753,
-            361454
-          ]
-        }
-      },
-      "alfworld-qwen3-4b-release-v1": {
-        "benchmark": "alfworld",
-        "label": "ALFWorld official 109 / Qwen3-4B / 3 repeats",
-        "protocol": {
-          "actor": "Qwen3-4B-Instruct-2507",
-          "temperature": 0,
-          "max_tokens": 4096,
-          "max_steps": 50,
-          "max_model_calls": 50,
-          "task_count": 109,
-          "repeats": 3,
-          "user_model": null,
-          "environment": "ALFWorld json_2.1.1; official 109 evaluation tasks",
-          "runtime": "native DSH benchmark/setup bridge",
-          "catalog_documents": null,
-          "goals": null,
-          "extra_body": {
-            "top_p": 0.8,
-            "top_k": 20,
-            "parallel_tool_calls": false
-          },
-          "send_seed": true,
-          "trial_seeds": null
-        }
-      },
-      "osbench-qwen3-4b-release-v1": {
-        "benchmark": "osbench",
-        "label": "OSBench Docker / Qwen3-4B / 144 × 3",
-        "protocol": {
-          "actor": "Qwen3-4B-Instruct-2507",
-          "temperature": 0,
-          "max_tokens": 4096,
-          "max_steps": 16,
-          "max_model_calls": 16,
-          "task_count": 144,
-          "repeats": 3,
-          "user_model": null,
-          "environment": "AgentBench OS isolated Docker task environment",
-          "runtime": "native DSH benchmark/setup bridge",
-          "catalog_documents": null,
-          "goals": null,
-          "extra_body": {
-            "parallel_tool_calls": false
-          },
-          "send_seed": true,
-          "trial_seeds": null
-        }
-      }
-    }
-  },
-  "telecom_history": {
-    "benchmark": "telecom",
-    "checked_on": "2026-10-26",
-    "versions": [
-      {
-        "version": "v1",
-        "published_on": "2026-05-21",
-        "table": "7",
-        "source_url": "https://arxiv.org/html/2605.22166v1",
-        "actor": "Qwen3-4B-Instruct",
-        "user_model": "DeepSeek-V4-Flash",
-        "repeats": 3,
-        "metrics": {
-          "pass_at_1": 0.575,
-          "pass_at_3": 0.875,
-          "pass_cubed": 0.3
-        }
-      },
-      {
-        "version": "v2",
-        "published_on": "2026-05-27",
-        "table": "8",
-        "source_url": "https://arxiv.org/html/2605.22166v2",
-        "actor": "Qwen3-4B-Instruct",
-        "user_model": "DeepSeek-V4-Flash",
-        "repeats": 3,
-        "metrics": {
-          "pass_at_1": 0.575,
-          "pass_at_3": 0.875,
-          "pass_cubed": 0.3
-        }
-      },
-      {
-        "version": "v3",
-        "published_on": "2026-10-15",
-        "table": "10",
-        "source_url": "https://arxiv.org/html/2605.22166v3",
-        "actor": "Qwen3-4B-Instruct",
-        "user_model": "DeepSeek-V4-Flash",
-        "repeats": 3,
-        "metrics": {
-          "pass_at_1": 0.9,
-          "pass_at_3": 1,
-          "pass_cubed": 0.775
-        }
-      }
-    ],
-    "note_en": "Versioned paper reports, not our reruns. Qwen3-4B row, not the 18-model average. Score changes alone do not establish why the result changed. Our simulator and runtime-access protocol differ.",
-    "note_zh": "论文版本报告值，不是本地复测；使用 Qwen3-4B 单模型行，不混用 18 模型均值。不能仅凭分数变化推断修改原因。我们的用户模拟器和运行接口不同。"
+  "notes": {
+    "webshop": "Historical and frozen catalogs are separate evaluation settings.",
+    "osbench": "Main table preserves historical C 39.35%; the curve archive also contains the separate C data-control peak 41.67%.",
+    "telecom": "Local user simulator is GLM; Life-Harness reports use DeepSeek.",
+    "peak": "Measured peaks are retrospective; development-selected rows retain the original selection."
   }
 }

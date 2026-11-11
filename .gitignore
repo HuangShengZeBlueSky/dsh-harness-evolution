@@ -6,3 +6,6 @@ __pycache__/
 .env
 .DS_Store
 package-lock.json
+*.egg-info/
+workspaces/
+runs/

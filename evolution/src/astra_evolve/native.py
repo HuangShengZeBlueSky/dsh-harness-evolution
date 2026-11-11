@@ -2,6 +2,10 @@
 from importlib import import_module
 
 def run_native(cfg, base, request):
+    if cfg.get("scale"):
+        domain = cfg["domain"].lower()
+        module = "dbbench" if domain == "dbbench" else "abc_" + domain
+        return import_module("dsh_evolve.runners." + module).run_native(cfg, base, request)
     name=cfg['benchmark'].get('runner','webshop')
     if name not in ['dbbench','osbench','webshop','alfworld','demo']:
         raise ValueError('Unknown benchmark.runner: '+name)

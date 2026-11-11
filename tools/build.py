@@ -1,181 +1,72 @@
-"""Render public results and actual recorded curves. Never run an experiment."""
+"""Build the paper leaderboard and static reader from versioned data."""
+import html
+import json
+import re
+import shutil
 from pathlib import Path
-import json, re
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import comparison
-import method_diagrams
 
-ROOT=Path(__file__).resolve().parents[1]
-NAMES={'alfworld':'ALFWorld','dbbench':'DBBench','webshop':'WebShop','osbench':'OSBench','telecom':'τ²-Telecom'}
-PURPOSES={
- 'alfworld':'Household procedures + visible-state guidance',
- 'dbbench':'SQL grounding, execution, recovery and submission',
- 'webshop':'Search, product options and budget-aware checkout',
- 'osbench':'File inspection, shell-task contracts and recovery',
- 'telecom':'Customer identity, device diagnosis and account review',
-}
-ROUTES={'alfworld':'Free plugin evolution','dbbench':'L4 · Agent capability map','webshop':'L5 · Strict-success objective','osbench':'L4 · Agent capability map','telecom':'Repaired-start continuation'}
-def pct(v):return '—' if v is None else f'{100*v:.2f}%'
-def score(v):return '—' if v is None else f'{100*v:.2f}'
-def count_modules(r):return len(json.loads((ROOT/r['artifact']/'composition.json').read_text())['methods'])
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "paper/data"
+SITE = ROOT / "site"
+REPO = "https://github.com/HuangShengZeBlueSky/dsh-harness-evolution"
+labels = {"alfworld": "ALFWorld", "dbbench": "DBBench", "webshop_historical": "WebShop · historical",
+          "webshop_frozen": "WebShop · frozen", "osbench": "OSBench", "telecom": "Telecom"}
 
-def artifact_links(r):
- a=r['artifact'];return f'[Source]({a}/plugins) · [Diagram]({a}#architecture) · [Curve]({a}#evolution)'
-def records():return [json.loads(f.read_text()) for f in sorted((ROOT/'results').glob('*--*.json'))]
-def policy():return json.loads((ROOT/'results/leaderboard-policy.json').read_text())
-def version_id(value):return str(value).lstrip('v0')
-def select_winners(rows,rules,include_retrospective=False):
- return {d:max([r for r in rows if r['benchmark']==d and r['comparison_group']==rules['primary_groups'][d] and (include_retrospective or r.get('selection_kind','training_final')=='training_final')],key=lambda r:(r['metrics']['pass_at_1'],r['published_on'])) for d in NAMES}
-def validate(r,artifact_dir=None):
- a=Path(artifact_dir) if artifact_dir else ROOT/r['artifact'];c=r['coverage'];m=r['metrics']
- assert r['benchmark'] in NAMES and r['evaluation_complete'] is True
- assert r.get('selection_kind','training_final') in ['training_final','retrospective_adopted']
- assert a.is_dir()
- assert c['valid_episodes']==c['tasks']*c['repeats'] and c['invalid_episodes']==0
- assert 0<=m['pass_at_1']<=1
- for v in m.values():assert v is None or 0<=v<=1
- for name in ['composition.json','protocol.json','curve.json','diagram.mmd','card.json']:assert (a/name).is_file(),name
- composition=json.loads((a/'composition.json').read_text())
- for method in composition['methods']:assert (a/method['module']).is_file()
- assert r['protocol']==json.loads((a/'protocol.json').read_text()),'Result and artifact protocol differ'
- assert c['tasks']==r['protocol']['task_count'] and c['repeats']==r['protocol']['repeats'],'Coverage and protocol differ'
- rules=policy();group=rules['groups'].get(r.get('comparison_group'))
- assert group and group['benchmark']==r['benchmark'],'Choose a registered comparison_group from results/leaderboard-policy.json'
- mismatch=[k for k,v in group['protocol'].items() if r['protocol'].get(k)!=v]
- assert not mismatch,'Protocol differs from comparison_group: '+', '.join(mismatch)
- points=json.loads((a/'curve.json').read_text())['points'];selected=[p for p in points if version_id(p['version'])==version_id(r['checkpoint'])]
- assert len(selected)==1,'Selected checkpoint must have exactly one recorded curve point'
- metric='strict_test' if r['benchmark']=='webshop' else 'test';observed=selected[0].get(metric)
- assert observed is not None and abs(observed-m['pass_at_1'])<1e-9,'Published success must match the selected checkpoint test point'
- if r.get('selection_kind')=='retrospective_adopted':
-  promotion=json.loads((a/'promotion.json').read_text())
-  assert promotion.get('adopted') is True and version_id(promotion['candidate'])==version_id(r['checkpoint']),'Retrospective releases must be genuinely promoted checkpoints'
- return a
 
-def plot(a,r,reference):
- points=json.loads((a/'curve.json').read_text())['points']
- run={}
- raw=ROOT/'results/research/runs.json'
- if raw.exists():
-  run=next((x for x in json.loads(raw.read_text())['runs'] if x['id']==r['source_experiment']),{})
-  measured={x['version']:x.get('test_measurement') or {} for x in run.get('curve',[])}
-  for p in points:
-   t=measured.get(p['version'],{})
-   if r['benchmark']=='webshop' and t.get('origin')=='backfill' and (ROOT/'results/research/webshop-environment-status.json').exists():t={}
-   if t.get('complete') and t.get('strict_pass_at_1') is not None:
-    p['strict_test' if r['benchmark']=='webshop' else 'test']=t['strict_pass_at_1']
-    rates=t.get('strict_repeat_means') if r['benchmark']=='webshop' else t.get('repeat_means')
-    if rates and len(rates)==3:
-     import statistics
-     p['test_sample_std']=statistics.stdev(rates.values())
- fig,axes=plt.subplots(2,1,figsize=(10.2,6.5),sharex=True,gridspec_kw={'height_ratios':[2,1.3]})
- fig.patch.set_facecolor('#f7f9fc')
- for ax in axes:
-  ax.set_facecolor('white');ax.spines[['top','right']].set_visible(False)
-  ax.spines[['left','bottom']].set_color('#ced6e0');ax.grid(axis='y',color='#edf0f5')
- strict=r['benchmark']=='webshop' and all('training_strict' in p for p in points)
- native={version_id(x['version']):x for x in run.get('curve',[])}
- for p in points:
-  q=native.get(version_id(p['version']),{})
-  if q and q.get('adopted') is False:
-   parent=q.get('parent_training') or {}
-   p['after']=parent.get('mean');p['training_strict']=parent.get('strict_pass_at_1')
- series=[('training_strict','Retained train (strict)','#bf7a24'),('champion_validation_strict','Selected validation (strict)','#3861d8')] if strict else [('after','Retained train','#bf7a24'),('champion_validation','Selected validation','#3861d8')]
- for key,label,color in series:
-  valid=[p for p in points if p.get(key) is not None]
-  if valid:axes[0].plot([p['round'] for p in valid],[p[key]*100 for p in valid],'.-',label=label,color=color,linewidth=1.6,markersize=4)
- axes[0].set_title(f"{NAMES[r['benchmark']]}  /  {r['release_id']}",loc='left',fontweight='bold',pad=16)
- axes[0].set_ylabel('Strict success / %' if strict else 'Mean reward / 100' if r['benchmark']=='webshop' else 'Success / %')
- selected_point=next(p for p in points if version_id(p['version'])==version_id(r['checkpoint']))
- repeat_file=ROOT/'results/research/repeated-tests.json'
- if repeat_file.exists():
-  repeat=next((x for x in json.loads(repeat_file.read_text())['results'] if x['method']=='DSH' and x['benchmark']==r['benchmark'] and x.get('checkpoint')==r['checkpoint'] and x.get('complete')),None)
-  if repeat:selected_point['test_sample_std']=repeat['sample_std']
- adopted=[p for p in points if p.get('adopted') and p.get(series[0][0]) is not None]
- if adopted:axes[0].scatter([p['round'] for p in adopted],[p[series[0][0]]*100 for p in adopted],marker='D',s=25,facecolors='white',edgecolors='#83551c',zorder=4,label='Adopted record')
- axes[0].axvline(selected_point['round'],color='#0d876f',alpha=.55,linestyle=':',linewidth=1)
- axes[0].legend(loc='lower right',frameon=False,fontsize=9)
- key='strict_test' if r['benchmark']=='webshop' else 'test'
- valid=[p for p in points if p.get(key) is not None]
- if valid:
-  axes[1].scatter([p['round'] for p in valid],[p[key]*100 for p in valid],color='#0d876f',s=36,label='Measured checkpoint tests',zorder=3)
-  uncertain=[p for p in valid if p.get('test_sample_std') is not None]
-  if uncertain:axes[1].errorbar([p['round'] for p in uncertain],[p[key]*100 for p in uncertain],yerr=[p['test_sample_std']*100 for p in uncertain],fmt='none',ecolor='#0d876f',alpha=.5,capsize=2,label='± sample SD (3 evaluations)')
- selected=selected_point['round']
- axes[1].scatter([selected],[r['metrics']['pass_at_1']*100],marker='*',s=170,color='#0d876f',edgecolor='white',zorder=4,label='Published retrospective checkpoint' if r.get('selection_kind')=='retrospective_adopted' else 'Training-selected final checkpoint')
- axes[1].annotate(f"{r['checkpoint']} · {pct(r['metrics']['pass_at_1'])}",(selected,r['metrics']['pass_at_1']*100),xytext=(6,10),textcoords='offset points',fontsize=9,color='#0d7563')
- axes[1].axhline(reference[1]*100,linestyle='--',color='#8c96a8',linewidth=1,label=f'{reference[0]}: {reference[1]*100:.2f}% (paper reference)')
- # Each panel uses its own observed range; test scores never share a scale
- # with development scores. Keep ticks explicit because the origin is cropped.
- for ax,values in [(axes[0],[p[k]*100 for p in points for k,_,_ in series if p.get(k) is not None]),
-                   (axes[1],[p[key]*100+s*p.get('test_sample_std',0)*100 for p in valid for s in [-1,1]]+[reference[1]*100,r['metrics']['pass_at_1']*100])]:
-  if values:
-   lo,hi=min(values),max(values);pad=max(1.5,(hi-lo)*.18)
-   ax.set_ylim(max(0,lo-pad),min(100,hi+pad))
-   ax.tick_params(axis='y',labelsize=10)
- for p in valid:
-  ax=axes[1];ax.annotate(f"{p[key]*100:.2f}",(p['round'],p[key]*100),xytext=(0,-15),textcoords='offset points',ha='center',fontsize=7,color='#0d7563')
- axes[1].set_ylabel('Test success / %');axes[1].set_xlabel('Candidate / round index')
- axes[1].legend(loc='lower right',frameon=False,fontsize=8)
- maximum=max([p['round'] for p in points]+[r['rounds']]);axes[1].set_xlim(-.6,maximum+.6)
- fig.text(.09,.015,'Focused y-ranges, explicitly labeled. Batches may rotate. Missing tests are not interpolated. References may differ.',fontsize=8,color='#526177')
- fig.tight_layout(rect=[0,.035,1,1]);fig.savefig(a/'evolution.png',dpi=150,facecolor=fig.get_facecolor());plt.close(fig)
+def score(value):
+    if value is None:
+        return "—"
+    text = f'{value["mean"]:.2f}'
+    return text + (f' ± {value["sd"]:.2f}' if value.get("sd") is not None else "")
 
-def artifact_page(a,r):
- c=json.loads((a/'card.json').read_text());p=r['protocol'];composition=json.loads((a/'composition.json').read_text())
- retrospective=r.get('selection_kind')=='retrospective_adopted'
- lines=[f"# {NAMES[r['benchmark']]} · {r['checkpoint']}",'',c['summary'],'',
- '**Release basis: '+('Retrospective test of a promoted checkpoint**. Original training-selected final: **'+r['campaign_final_checkpoint']+'**.' if retrospective else 'Training-selected final checkpoint**.'),'',
- '| Test success | Published checkpoint | Plugin registrations | Test coverage |','|---:|---|---:|---|',
- f"| **{pct(r['metrics']['pass_at_1'])}** | **{r['checkpoint']}** / {r['rounds']} rounds | {len(composition['methods'])} | {r['coverage']['tasks']} tasks × {r['coverage']['repeats']} repeats |",'',
- '[**Plugin source**](plugins) · [**Method flow**](#method-flow) · [**Architecture**](#architecture) · [**Evolution curve**](#evolution) · [**Run**](#load-this-artifact) · [**All harnesses**](../../../README.md#choose-a-harness)','',
- f"Actor: **{p['actor']}** · Optimizer: **{r['optimizer']}** · Method: **{r.get('method_en',r['method'])}**.",'',
- '## Method flow','', '```mermaid',(a/'method.mmd').read_text().strip(),'```','','## Architecture','', '```mermaid',(a/'diagram.mmd').read_text().strip(),'```','',
- c.get('diagram_note','Arrows show runtime responsibilities, not independent causal gains.'),'','## Evolution','',
- '![Recorded evolution](evolution.png)','',
- '[Machine-readable curve](curve.json) · [Evaluation protocol](protocol.json) · [Composition](composition.json)','',
- ('This WebShop L5 curve shows the strict-success adoption objective. Mean rewards remain in curve.json. ' if r['benchmark']=='webshop' and r['method'].startswith('L5') else 'This cooperative WebShop method adopts by mean reward; the test panel ranks strict success. ' if r['benchmark']=='webshop' else '')+'Diamonds mark adoption records; the vertical line marks the released checkpoint. Training batches can rotate. Test dots represent actual measurements only.','',
- '## Plugin inventory','']
- if len(composition['methods'])>12:lines+=['<details>','<summary>Expand all native registrations and responsibilities</summary>','']
- lines+=['| Module | Responsibility |','|---|---|']
- for m in composition['methods']:
-  name=Path(m['module']).name;responsibility=c['responsibilities'].get(m['id'],c['responsibilities'].get(name,m.get('surface','Runtime intervention')))
-  lines.append(f"| [{name}]({m['module']}) | {responsibility} |")
- if len(composition['methods'])>12:lines+=['','</details>']
- if r['benchmark']=='telecom':lines+=['','**Why v06 rather than the highest historical test point?** v05 measured 87.50% on historical tests, but the training-selected final checkpoint is v06 (84.17%). We publish that final selection instead of retrospectively substituting a test-peak checkpoint. The eight new candidates were v03–v10, continuing from v02.','']
- lines+=['','## Load this artifact','','```bash',f"MODEL_BASE_URL=http://localhost:8000/v1 node tools/serve.mjs {r['artifact']}",'```','',
- 'Run from the repository root after `npm install`. This starts the native DSH bridge. Supply the benchmark environment/executor separately; see [integration instructions](../../../docs/RUNNING.md).','',
- '## Evaluation notes','']+['- '+n for n in r['notes']]+['',
- 'Export changes are limited to portable module paths, selectable listener ports, runtime configuration, and removal of local-path metadata. Reported scores come from the original completed evaluations; the packaged copy has not been scored again.','']
- (a/'README.md').write_text('\n'.join(lines))
 
 def main():
- rows=records();paper=json.loads((ROOT/'results/life-harness-paper.json').read_text());refs={r['id']:r for r in paper['rows']}
- local={r['id']:r for r in json.loads((ROOT/'results/local-references.json').read_text())}
- catalog=json.loads((ROOT/'results/paper-baselines.json').read_text())
- for r in rows:validate(r)
- finals=select_winners(rows,policy());winners=select_winners(rows,policy(),True)
- for r in rows:
-  reference=max([(m['label'],m['pass_at_1'][r['benchmark']]) for m in catalog['methods'] if m['id']!='bare' and m['pass_at_1'][r['benchmark']] is not None],key=lambda x:x[1])
-  a=ROOT/r['artifact'];method_diagrams.create(ROOT,r);plot(a,r,reference);artifact_page(a,r)
- readme=ROOT/'README.md';text=readme.read_text();cards=['| Harness · success | What it solves | Selected artifact | Explore |','|---|---|---|---|']
- for d,r in winners.items():cards.append(f"| **{NAMES[d]} · {pct(r['metrics']['pass_at_1'])}** | {PURPOSES[d]} | [{r['checkpoint']} · {comparison.release_label(r)}]({r['artifact']}) | {artifact_links(r)} |")
- text=re.sub(r'<!-- LEADERBOARD:START -->.*?<!-- LEADERBOARD:END -->','<!-- LEADERBOARD:START -->\n\n'+'\n'.join(cards)+'\n\n<!-- LEADERBOARD:END -->',text,flags=re.S);readme.write_text(text)
- curves=['# Evolution curves','','Recorded development scores and measured test checkpoints for the current published artifacts. Unmeasured test points are left empty.','']
- for d,r in winners.items():
-  curves += [f"## {NAMES[d]}",'',f"[{r['release_id']} — architecture and plugins](../{r['artifact']})",'',f"![{NAMES[d]} evolution](../{r['artifact']}/evolution.png)",'']
- (ROOT/'docs/CURVES.md').write_text('\n'.join(curves))
- comparison.render(ROOT,winners,rows,refs,local,finals)
- (ROOT/'results/leaderboard.json').write_text(json.dumps({'schema_version':2,'update_mode':'release-driven','champions':finals,'best_measured':winners,'releases':rows,'paper_references':catalog,'comparison_policy':policy(),'telecom_history':json.loads((ROOT/'results/life-harness-telecom-history.json').read_text())},ensure_ascii=False,indent=2)+'\n')
- from research_view import build as build_research
- build_research(ROOT)
- from build_architecture import build as build_architecture
- build_architecture(ROOT)
- from build_pilot import build as build_pilot
- build_pilot(ROOT)
- from build_observatory import build as build_observatory
- build_observatory(ROOT)
- print(f'Rendered {len(rows)} releases across {len(winners)} benchmarks.')
-if __name__=='__main__':main()
+    SITE.mkdir(exist_ok=True)
+    data = json.loads((DATA / "main-results.json").read_text())
+    manifest = json.loads((ROOT / "paper/figures.json").read_text())
+    header = ["Method"] + [labels[c] for c in data["columns"]]
+    lines = ["# Test leaderboard", "", "Values follow the paper snapshot dated " + data["updated"] + ".", "",
+             "| " + " | ".join(header) + " |", "|" + "|".join(["---"] * len(header)) + "|"]
+    for row in data["rows"]:
+        lines.append("| " + " | ".join([row["method"]] + [score(row["scores"][c]) for c in data["columns"]]) + " |")
+    lines += ["", "All values are test success percentages. ± denotes sample standard deviation across repeated executions.",
+              "Historical and frozen WebShop catalogs are separate conditions. Local Telecom uses GLM.",
+              "OSBench's historical 39.35% and the 41.67% data-control artifact have separate provenance.",
+              "", "[Configurations](docs/REPRODUCING.md) · [Figures and source data](paper/README.md)",
+              "", "## Released harnesses", ""]
+    artifacts=[]
+    for p in sorted((ROOT / "harnesses").glob("*/*/composition.json")):
+        folder=p.parent
+        artifacts.append({"benchmark":folder.parent.name,"path":str(folder.relative_to(ROOT)),"name":folder.name})
+        lines.append(f'- [{folder.parent.name} · {folder.name}]({folder.relative_to(ROOT)})')
+    peak, selected = data["rows"][:2]
+    for filename, chinese in (("README.md", False), ("README.zh-CN.md", True)):
+        path = ROOT / filename
+        headings = ["场景", "历史产物已测高点", "历史最终选版"] if chinese else ["Benchmark", "Historical measured peak", "Historical final-selected"]
+        summary = ["| " + " | ".join(headings) + " |", "|---|---:|---:|"]
+        for column in data["columns"]:
+            values = [row["scores"][column] for row in (peak, selected)]
+            summary.append("| " + " | ".join([labels[column]] + [f'{x["mean"]:.2f}%' if x else "—" for x in values]) + " |")
+        replacement = "<!-- paper-table:start -->\n" + "\n".join(summary) + "\n<!-- paper-table:end -->"
+        path.write_text(re.sub(r"<!-- paper-table:start -->.*?<!-- paper-table:end -->", lambda match: replacement, path.read_text(), flags=re.S))
+    text="\n".join(lines)+"\n"
+    (ROOT / "LEADERBOARD.md").write_text(text)
+    (ROOT / "paper/tables/main-results.md").write_text(text.replace("](docs/", "](" + REPO + "/blob/main/docs/").replace("](paper/", "](" + REPO + "/tree/main/paper/").replace("](harnesses/", "](" + REPO + "/tree/main/harnesses/"))
+    (ROOT / "LEADERBOARD.zh-CN.md").write_text(text.replace("# Test leaderboard","# 测试榜单")
+        .replace("Values follow the paper snapshot dated ","数据对齐论文快照日期 ")
+        .replace("## Released harnesses","## 已发布 Harness"))
+    (ROOT / "results/leaderboard.json").write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
+    payload={"leaderboard":data,"figures":manifest,"artifacts":artifacts,
+             "configs":json.loads((ROOT/"configs/index.json").read_text()),
+             "controlled":[{"benchmark":x["benchmark"],"arm":x["arm"],"final":x["final"]}
+                for x in json.loads((DATA/"controlled-abc.json").read_text())]}
+    template=(ROOT / "tools/site.html").read_text()
+    (SITE/"index.html").write_text(template.replace("__DATA__",json.dumps(payload,ensure_ascii=False).replace("</","<\\/")))
+    shutil.copytree(ROOT/"paper",SITE/"paper",dirs_exist_ok=True)
+    for legacy in ("architecture.html","research.html","pilot.html"):
+        (SITE/legacy).write_text('<!doctype html><meta http-equiv="refresh" content="0;url=./#method"><a href="./">DSH Harness Evolution</a>')
+    print("Built leaderboard,",len(manifest),"figures,",len(artifacts),"artifacts")
+
+
+if __name__ == "__main__":
+    main()
