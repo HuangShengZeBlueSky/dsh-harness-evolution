@@ -34,7 +34,7 @@ Matched 40-round A/B/C final selections have their own [data](paper/data/control
 
 ## Curves and figures
 
-Each of four benchmarks has an **eight-panel C model/effort plot** and a **nine-panel model-by-scope plot**. The 27 figures from the writing document and the aligned A/B/C algorithm are included.
+Each of four benchmarks has an **eight-panel C model/effort plot** and a **nine-panel model-by-scope plot**. The figure collection includes the algorithms, artifact architectures, main results and supplementary analyses.
 
 [28 figures](paper/README.md) · [Figure-to-configuration mapping](paper/data/curve-manifest.json) · [Training and measured tests](paper/data/trajectories.json)
 
@@ -59,6 +59,7 @@ A/B/C seals the final selection before testing promoted checkpoints. [Environmen
 - [paper](paper/) contains figure PDFs, tables and numeric records.
 - [tools](tools/) builds the website and publishes measurements.
 
-Earlier methods remain in [Git history](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/archive/pre-paper-cleanup-20261111). [Publishing](docs/PUBLISHING.md) rebuilds the leaderboard from canonical paper data.
 
 [MIT](LICENSE) · [Third-party notices](docs/THIRD_PARTY.md) · [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)
+
+[Citation](CITATION.cff) · [Publishing new results](docs/PUBLISHING.md)

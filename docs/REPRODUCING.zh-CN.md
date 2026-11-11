@@ -28,6 +28,6 @@ A改技能文本，B一次改一个独立组件，C允许任务内共享状态�
 
 WebShop按平均奖励晋升，以严格购买成功率报告。商品快照和起始插件需要一致。仓库提供题单和起始插件，大型数据库、游戏文件、镜像与冻结商品快照需另行准备；复测原报告环境需从实验维护者取得对应商品快照。
 
-用init的--baseline选项载入冻结产物，完成环境设置后，执行dsh-evolve test-artifact CONFIG。Telecom沿用integrations/telecom的双角色环境、GLM用户及产物协议。
+用init的--baseline选项载入冻结产物，完成环境设置后，执行dsh-evolve test-artifact CONFIG。Telecom沿用evolution/integrations/telecom的双角色环境、GLM用户及产物协议。
 
-安装检查为python evolution/scripts/smoke.py /tmp/dsh-install-check，使用真实DSH钩子和模拟任务，覆盖L4、A、B、C的采用、保留、封存和测试。本次已跑通，不消耗模型额度；完整Benchmark采用已有实测结果。
+安装检查为python evolution/scripts/smoke.py /tmp/dsh-install-check，使用真实DSH钩子和模拟任务，覆盖L4、A、B、C的采用、保留、封存和测试。这个检查使用模拟任务；论文成绩由记录中的完整Benchmark评测产生。

@@ -34,7 +34,7 @@
 
 ## 看曲线
 
-四个场景都提供 **8组C模型／推理强度曲线**，以及 **9组模型×修改面曲线**。飞书论文文档中的27张图完整收入，再附本轮对齐的A/B/C算法图。
+四个场景都提供 **8组C模型／推理强度曲线**，以及 **9组模型×修改面曲线**。图集涵盖方法、产物架构、主结果与补充分析。
 
 [浏览28张图](paper/README.md) · [图与配置对应关系](paper/data/curve-manifest.json) · [逐轮训练和测试](paper/data/trajectories.json)
 
@@ -59,6 +59,7 @@ L4和A/B/C共用执行基础。A/B/C在40轮决定完成并封存后测试所有
 - [paper](paper/) — 论文图、表、数值及逐轮曲线。
 - [tools](tools/) — 榜单生成与产物发布。
 
-早期方法保留在[整理前的历史版本](https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/archive/pre-paper-cleanup-20261111)。后续通过[发布步骤](docs/PUBLISHING.md)更新数据并重建榜单。
 
 [MIT](LICENSE) · [第三方说明](docs/THIRD_PARTY.md) · [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)
+
+[引用](CITATION.cff) · [发布新结果](docs/PUBLISHING.md)

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software when using the released code or artifacts."
+type: software
+title: "DSH Harness Evolution"
+authors:
+  - name: "DSH Harness Evolution contributors"
+version: 0.2.0
+license: MIT
+repository-code: "https://github.com/HuangShengZeBlueSky/dsh-harness-evolution"
+url: "https://huangshengzebluesky.github.io/dsh-harness-evolution/"

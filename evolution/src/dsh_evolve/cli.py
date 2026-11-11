@@ -23,7 +23,12 @@ def initialize(directory, profile, assets=None, baseline=None):
     if config.get("loop", {}).get("requires_seed_artifact") and not baseline:
         raise ValueError("This continuation requires --baseline with its recorded starting harness")
     destination = Path(directory).resolve()
-    shutil.copytree(template, destination)
+    shared = template.parent / "common"
+    if shared.is_dir():
+        shutil.copytree(shared, destination)
+        shutil.copytree(template, destination, dirs_exist_ok=True)
+    else:
+        shutil.copytree(template, destination)
     domain = config["domain"].lower()
     if config.get("scale"):
         runtime = ENGINE / "src/dsh_evolve/assets" / domain

@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['paper/**', 'results/**', 'harnesses/**', 'configs/**', 'evolution/**', 'tools/**', '.github/workflows/refresh-leaderboard.yml']
+    paths: ['paper/**', 'harnesses/**', 'configs/**', 'evolution/**', 'tools/**', '.github/workflows/refresh-leaderboard.yml']
 permissions:
   contents: read
   pages: write

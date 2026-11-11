@@ -56,7 +56,7 @@ Initialize a fresh workspace with a compatible profile and **--baseline /path/to
 dsh-evolve test-artifact ./runs/artifact-check/experiment.yaml
 ~~~
 
-This evaluates the loaded artifact on the profile's held-out tasks. Telecom uses [its two-role integration](../integrations/telecom/) and GLM user, with its settings in the released protocol.
+This evaluates the loaded artifact on the profile's held-out tasks. Telecom uses [its two-role integration](../evolution/integrations/telecom/) and GLM user, with its settings in the released protocol.
 
 ## Installation check
 
@@ -64,6 +64,6 @@ This evaluates the loaded artifact on the profile's held-out tasks. Telecom uses
 python evolution/scripts/smoke.py /tmp/dsh-install-check
 ~~~
 
-The scripted actor and synthetic task exercise real DSH hooks, L4/A/B/C, promotion/rejection, sealing and held-out execution. No paid model requests are used. This packaging check passed; full benchmark searches were not rerun during cleanup.
+The scripted actor and synthetic task exercise real DSH hooks, L4/A/B/C, promotion/rejection, sealing and held-out execution. No paid model requests are used.
 
 Prior methods remain at **archive/pre-paper-cleanup-20261111**. [Publication updates](PUBLISHING.md) use versioned numeric records.

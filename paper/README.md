@@ -1,6 +1,6 @@
 # Paper figures / 论文图集
 
-飞书中的27张图与新增A/B/C算法图。PDF为可放大的矢量原稿，PNG用于网页预览。
+论文方法、结果与补充分析图。PDF为可放大的矢量原稿，PNG用于网页预览。
 
 Source data and configurations remain paired with each plotted history.
 

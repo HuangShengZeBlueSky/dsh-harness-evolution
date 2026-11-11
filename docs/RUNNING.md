@@ -25,7 +25,7 @@ Base prompt/tool files are provided where the original runner used them. DBBench
 
 ## Telecom integration
 
-Telecom preserves its actual profile and `review-bridge.mjs`, rather than reusing an AgentBench bridge. Its native hooks include `telecom/setup`. [Integration sources](../integrations/telecom) show the original Python adapter contract (`tau2_bridge.py`) and read-only business-account fact selection (`account_facts.py`). They expect the matching Tau2 environment interfaces, including the local runner's message/account adapter extensions; they are integration references, not a claim that an unmodified upstream checkout is drop-in compatible.
+Telecom preserves its actual profile and `review-bridge.mjs`, rather than reusing an AgentBench bridge. Its native hooks include `telecom/setup`. [Integration sources](../evolution/integrations/telecom) show the original Python adapter contract (`tau2_bridge.py`) and read-only business-account fact selection (`account_facts.py`). They expect the matching Tau2 environment interfaces, including the local runner's message/account adapter extensions; they are integration references, not a claim that an unmodified upstream checkout is drop-in compatible.
 
 The released composition contains 30 inherited prompt/description/schema/result/memory surfaces and five custom registrations. The actual runtime additionally performs auxiliary review. Preserve these features when reproducing the reported result, and account for their information access and model calls when comparing methods.
 

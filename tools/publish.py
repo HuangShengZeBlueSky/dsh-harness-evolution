@@ -19,7 +19,7 @@ if record["column"] not in table["columns"]:
     raise ValueError("Choose an existing benchmark condition")
 if not (ROOT / record["artifact"] / "composition.json").is_file():
     raise ValueError("Publish the corresponding harness artifact first")
-path = ROOT / "results/publication-history.json"
+path = ROOT / "paper/data/publication-history.json"
 history = json.loads(path.read_text()) if path.exists() else []
 history.append({"previous": row["scores"][record["column"]], "record": record})
 row["scores"][record["column"]] = {"mean": record["mean"], "sd": record.get("sd"),

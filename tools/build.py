@@ -55,7 +55,6 @@ def main():
     (ROOT / "LEADERBOARD.zh-CN.md").write_text(text.replace("# Test leaderboard","# 测试榜单")
         .replace("Values follow the paper snapshot dated ","数据对齐论文快照日期 ")
         .replace("## Released harnesses","## 已发布 Harness"))
-    (ROOT / "results/leaderboard.json").write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
     payload={"leaderboard":data,"figures":manifest,"artifacts":artifacts,
              "configs":json.loads((ROOT/"configs/index.json").read_text()),
              "controlled":[{"benchmark":x["benchmark"],"arm":x["arm"],"final":x["final"]}

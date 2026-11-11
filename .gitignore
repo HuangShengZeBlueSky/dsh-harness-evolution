@@ -9,3 +9,5 @@ package-lock.json
 *.egg-info/
 workspaces/
 runs/
+
+/site/

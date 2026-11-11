@@ -19,7 +19,7 @@ MODEL_BASE_URL=http://localhost:8000/v1 \
 
 四个 AgentBench 产物通过原生 `benchmark/setup` 接口接入。环境负责任务状态、工具执行和评分，DSH 负责插件状态、提示组装和执行前后钩子。HTTP 接口为 `/health`、`/open`、`/advance`、`/result`、`/close`，精确请求字段见各产物 `lib/bridge.mjs`。
 
-Telecom 使用独立的 `telecom/setup` 和复核桥接。其账户事实与 Python 适配源码在 `integrations/telecom`；需要匹配的 Tau2 扩展接口，不能直接宣称未经适配的上游环境可以复现成绩。复现时也要保留并计入额外复核调用。
+Telecom 使用独立的 `telecom/setup` 和复核桥接。其账户事实与 Python 适配源码在 `evolution/integrations/telecom`；需要匹配的 Tau2 扩展接口，不能直接宣称未经适配的上游环境可以复现成绩。复现时也要保留并计入额外复核调用。
 
 ## 仅更新榜单和图片
 
