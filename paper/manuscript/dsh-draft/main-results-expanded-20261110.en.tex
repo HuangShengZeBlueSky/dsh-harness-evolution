@@ -1,0 +1,32 @@
+\begin{table*}[!htbp]
+\centering
+\caption{Test success with a Qwen3-4B executor across four benchmarks}
+\label{tab:main-results}
+\begingroup
+\setlength{\tabcolsep}{1.4pt}
+\renewcommand{\arraystretch}{1.08}
+\fontsize{8.5}{10}\selectfont
+\begin{tabularx}{\textwidth}{@{}p{0.32\textwidth}*{4}{>{\centering\arraybackslash}X}@{}}
+\toprule
+Method & ALFWorld & DBBench & WebShop & OSBench \\
+\midrule
+\rowcolor{grouphead}\multicolumn{5}{l}{\textbf{Local evaluations}} \\
+\rowcolor{ourrow}\textbf{Ours: Sol high (measured peak)} & \textbf{95.41$\pm$0.00} & \textbf{70.56$\pm$0.38} & \textbf{48.17$\pm$0.29} & \textbf{41.67$\pm$1.84} \\
+Life-Harness (local)\citep{life} & 87.77$\pm$1.91 & 64.11$\pm$0.38 & 41.33$\pm$0.29 & 36.81$\pm$0.00 \\
+\addlinespace[3pt]
+\rowcolor{grouphead}\multicolumn{5}{l}{\textbf{Published comparisons with Qwen3-4B}} \\
+Life-Harness (v3)\citep{life} & 88.07 & \underline{65.00} & \underline{45.50} & \underline{39.60} \\
+Bare\citep{life} & 16.51 & 44.00 & 29.50 & 21.50 \\
+ALIGN\citep{align}\citep{life} & 28.36 & — & 18.00 & — \\
+AgentSquare\citep{agentsquare}\citep{life} & 29.36 & — & 18.50 & — \\
+Meta-Harness (Life rerun)\citep{meta}\citep{life} & 35.80 & 50.30 & 42.50 & 25.70 \\
+AHE (Life rerun)\citep{ahe}\citep{life} & \underline{89.00} & 57.30 & 39.00 & 37.50 \\
+Harness-R1 (paper)\citep{harness-r1} & 29.10 & 55.70 & 38.60 & — \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\vspace{3pt}
+\begin{minipage}{\textwidth}\scriptsize
+Test success (\%); local measurements include sample SD. Meta-Harness and AHE values are reported by Life-Harness. Bold and underlining mark the highest and second-highest displayed results. Protocols and metric definitions are in Appendices~B and D.
+\end{minipage}
+\end{table*}

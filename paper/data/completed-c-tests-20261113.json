@@ -1,0 +1,487 @@
+[
+  {
+    "benchmark": "dbbench",
+    "model": "luna6",
+    "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6",
+    "final": {
+      "best": "v40",
+      "rounds": 40,
+      "adopted": [
+        "v01",
+        "v04",
+        "v05",
+        "v08",
+        "v15",
+        "v18",
+        "v21",
+        "v23",
+        "v24",
+        "v27",
+        "v29",
+        "v31",
+        "v33",
+        "v38",
+        "v40"
+      ],
+      "test": {
+        "valid": 300,
+        "successes": 170,
+        "strict_success": 0.5666666666666667,
+        "mean_reward": 0.5666666666666667,
+        "test_repeats": 1
+      }
+    },
+    "tests": [
+      {
+        "version": "v01",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5233333333333333,
+          "repeat_means": {
+            "0": 0.5233333333333333
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v01/test/summary.json"
+      },
+      {
+        "version": "v04",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.49666666666666665,
+          "repeat_means": {
+            "0": 0.49666666666666665
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v04/test/summary.json"
+      },
+      {
+        "version": "v05",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.49,
+          "repeat_means": {
+            "0": 0.49
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v05/test/summary.json"
+      },
+      {
+        "version": "v08",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5133333333333333,
+          "repeat_means": {
+            "0": 0.5133333333333333
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v08/test/summary.json"
+      },
+      {
+        "version": "v15",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5166666666666667,
+          "repeat_means": {
+            "0": 0.5166666666666667
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v15/test/summary.json"
+      },
+      {
+        "version": "v18",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5266666666666666,
+          "repeat_means": {
+            "0": 0.5266666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v18/test/summary.json"
+      },
+      {
+        "version": "v21",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5133333333333333,
+          "repeat_means": {
+            "0": 0.5133333333333333
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v21/test/summary.json"
+      },
+      {
+        "version": "v23",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5266666666666666,
+          "repeat_means": {
+            "0": 0.5266666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v23/test/summary.json"
+      },
+      {
+        "version": "v24",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5433333333333333,
+          "repeat_means": {
+            "0": 0.5433333333333333
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v24/test/summary.json"
+      },
+      {
+        "version": "v27",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5533333333333333,
+          "repeat_means": {
+            "0": 0.5533333333333333
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v27/test/summary.json"
+      },
+      {
+        "version": "v29",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.55,
+          "repeat_means": {
+            "0": 0.55
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v29/test/summary.json"
+      },
+      {
+        "version": "v31",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5566666666666666,
+          "repeat_means": {
+            "0": 0.5566666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v31/test/summary.json"
+      },
+      {
+        "version": "v33",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.57,
+          "repeat_means": {
+            "0": 0.57
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v33/test/summary.json"
+      },
+      {
+        "version": "v38",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5466666666666666,
+          "repeat_means": {
+            "0": 0.5466666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v38/test/summary.json"
+      },
+      {
+        "version": "v40",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5666666666666667,
+          "repeat_means": {
+            "0": 0.5666666666666667
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-luna6/runs/evaluations/v40/test/summary.json"
+      }
+    ]
+  },
+  {
+    "benchmark": "dbbench",
+    "model": "terra61",
+    "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61",
+    "final": {
+      "best": "v35",
+      "rounds": 40,
+      "adopted": [
+        "v01",
+        "v02",
+        "v04",
+        "v11",
+        "v12",
+        "v27",
+        "v35"
+      ],
+      "test": {
+        "valid": 300,
+        "successes": 161,
+        "strict_success": 0.5366666666666666,
+        "mean_reward": 0.5366666666666666,
+        "test_repeats": 1
+      }
+    },
+    "tests": [
+      {
+        "version": "v01",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5366666666666666,
+          "repeat_means": {
+            "0": 0.5366666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v01/test/summary.json"
+      },
+      {
+        "version": "v02",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5366666666666666,
+          "repeat_means": {
+            "0": 0.5366666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v02/test/summary.json"
+      },
+      {
+        "version": "v04",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.54,
+          "repeat_means": {
+            "0": 0.54
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v04/test/summary.json"
+      },
+      {
+        "version": "v11",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.53,
+          "repeat_means": {
+            "0": 0.53
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v11/test/summary.json"
+      },
+      {
+        "version": "v12",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5366666666666666,
+          "repeat_means": {
+            "0": 0.5366666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v12/test/summary.json"
+      },
+      {
+        "version": "v27",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5133333333333333,
+          "repeat_means": {
+            "0": 0.5133333333333333
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v27/test/summary.json"
+      },
+      {
+        "version": "v35",
+        "summary": {
+          "episodes": 300,
+          "valid": 300,
+          "invalid": 0,
+          "mean": 0.5366666666666666,
+          "repeat_means": {
+            "0": 0.5366666666666666
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/dbbench/C-terra61/runs/evaluations/v35/test/summary.json"
+      }
+    ]
+  },
+  {
+    "benchmark": "osbench",
+    "model": "luna6",
+    "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-luna6",
+    "final": {
+      "best": "v07",
+      "rounds": 40,
+      "adopted": [
+        "v07"
+      ],
+      "test": {
+        "valid": 144,
+        "successes": 52,
+        "strict_success": 0.3611111111111111,
+        "mean_reward": 0.3611111111111111,
+        "test_repeats": 1
+      }
+    },
+    "tests": [
+      {
+        "version": "v07",
+        "summary": {
+          "episodes": 144,
+          "valid": 144,
+          "invalid": 0,
+          "mean": 0.3611111111111111,
+          "repeat_means": {
+            "0": 0.3611111111111111
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-luna6/runs/evaluations/v07/test/summary.json"
+      }
+    ]
+  },
+  {
+    "benchmark": "osbench",
+    "model": "terra61",
+    "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-terra61",
+    "final": {
+      "best": "v22",
+      "rounds": 40,
+      "adopted": [
+        "v03",
+        "v06",
+        "v16",
+        "v22"
+      ],
+      "test": {
+        "valid": 144,
+        "successes": 49,
+        "strict_success": 0.3402777777777778,
+        "mean_reward": 0.3402777777777778,
+        "test_repeats": 1
+      }
+    },
+    "tests": [
+      {
+        "version": "v03",
+        "summary": {
+          "episodes": 144,
+          "valid": 144,
+          "invalid": 0,
+          "mean": 0.3263888888888889,
+          "repeat_means": {
+            "0": 0.3263888888888889
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-terra61/runs/evaluations/v03/test/summary.json"
+      },
+      {
+        "version": "v06",
+        "summary": {
+          "episodes": 144,
+          "valid": 144,
+          "invalid": 0,
+          "mean": 0.3125,
+          "repeat_means": {
+            "0": 0.3125
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-terra61/runs/evaluations/v06/test/summary.json"
+      },
+      {
+        "version": "v16",
+        "summary": {
+          "episodes": 144,
+          "valid": 144,
+          "invalid": 0,
+          "mean": 0.3125,
+          "repeat_means": {
+            "0": 0.3125
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-terra61/runs/evaluations/v16/test/summary.json"
+      },
+      {
+        "version": "v22",
+        "summary": {
+          "episodes": 144,
+          "valid": 144,
+          "invalid": 0,
+          "mean": 0.3402777777777778,
+          "repeat_means": {
+            "0": 0.3402777777777778
+          },
+          "repeat_standard_deviation": 0.0
+        },
+        "source": "/mnt/disk2/huangshengze/dsh-scale-abc-c-fill-20261112/groups/osbench/C-terra61/runs/evaluations/v22/test/summary.json"
+      }
+    ]
+  }
+]

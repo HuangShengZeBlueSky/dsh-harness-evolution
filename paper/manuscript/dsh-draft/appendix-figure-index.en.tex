@@ -1,0 +1,28 @@
+\section*{B. Experimental Setup for the A/B/C Study}
+\label{app:configurations}
+\paragraph{Executor and environments.}
+We use a frozen Qwen3-4B-Instruct-2507 executor on ALFWorld, DBBench, WebShop, and OSBench. Each benchmark adapter supplies task initialization, native tools, environment feedback, and scoring. Training trajectories drive candidate generation and selection. Validation, where present, supplies the non-degradation check in Appendix~A. Held-out evaluation follows the completed search.
+
+\paragraph{Improvers and editable scopes.}
+The study crosses GPT-6 Luna, GPT-6.1 Terra, and GPT-6.1 Sol, each at high reasoning effort, with scopes A, B, and C. The scope definitions below govern candidate construction within the common loop in Appendix~A.
+
+\begin{table}[h]
+\centering\small
+\caption{Editable representations in the A/B/C study.}
+\label{tab:scope-settings}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Scope & Permitted update\\
+\midrule
+A & Replace skill instructions.\\
+B & Replace one independent skill, memory, action-check, or receipt component; inherit the others.\\
+C & Replace skill instructions or jointly revise executable mechanisms and their shared episode state.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Evaluation procedure.}
+Within each update, parent and candidate are compared on the same task, trial, and seed schedule under the benchmark's training objective. The controller records score changes and observed execution effects before making the retention decision. The task manifests and objective are inputs to this procedure; the edit scope determines which replacements the improver may propose.
+
+\paragraph{Reported measurements.}
+The held-out sets contain 109 ALFWorld, 300 DBBench, 200 WebShop, and 144 OSBench tasks. Results report native task success; WebShop counts fully successful purchases. Headline evaluations use three executions. Repeated evaluations report the mean and sample standard deviation; single-execution cells report the measured success rate. Appendix~D defines checkpoint reporting and the evolution curves. Appendix~E describes the resulting harness mechanisms.

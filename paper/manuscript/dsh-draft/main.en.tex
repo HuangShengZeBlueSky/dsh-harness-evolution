@@ -1,0 +1,97 @@
+\documentclass[letterpaper]{article}
+\usepackage[submission]{aaai2027}
+\usepackage[hyphens]{url}
+\usepackage{graphicx}
+\urlstyle{rm}
+\def\UrlFont{\rm}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\frenchspacing
+\setcounter{secnumdepth}{0}
+\pdfinfo{/TemplateVersion (2027.1)}
+\title{Scaling Agent Harness Optimization with Composable Plugins: Richer Mechanisms, Stronger Improvers, Better Performance}
+\author{Anonymous Authors}
+\affiliations{}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\definecolor{ourrow}{HTML}{EAF3FA}
+\definecolor{grouphead}{HTML}{E9EFF4}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Training-free agent optimization improves a frozen language model's behavior by adapting the harness around it. Many approaches focus on predefined edit surfaces, such as system prompts, skills, or individual tools. As the models used to propose harness candidates become more capable, a central question is how the editable space should expand to make use of their capabilities. We introduce a plugin-based approach to harness evolution built on DeepSeek Harness, providing a common runtime for optimization across task environments. An improver uses execution trajectories to revise composable plugins that govern instructions, episode state, tool feedback, and action control. Candidates are evaluated against their parents, and accepted changes accumulate into task-specific harnesses. We compare three edit scopes, from skill text and independent components to coordinated executable mechanisms, and study different improver models at high reasoning effort. We evaluate on four agent benchmarks with a frozen Qwen3-4B executor. With GPT-6.1 Sol high as the improver, our evolved harnesses achieve test success rates of 95.41\% on ALFWorld, 70.56\% on DBBench, 48.17\% on WebShop, and 41.67\% on OSBench, achieving leading performance on all four benchmarks. Sol high's scores rise from A to B to C on all four benchmarks in the edit-scope comparison, motivating the use of capable improvers with richer candidate spaces.
+\end{abstract}
+
+\section*{1 Introduction}
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\linewidth]{dsh-draft/figures/intro-original-plus-expanded.pdf}
+\caption{Composable harness optimization and the expansion of editable space. (a) The shared DSH lifecycle exposes plugin hooks to the improver. (b) A edits skill text, B edits independent components, and C permits shared state and coordinated mechanisms. Reference edit units include skills and prompts in SkillOpt and GEPA, modules in AgentSquare, and operators in AFlow \citep{skillopt,gepa,agentsquare,aflow}. (c) The schematic training-loss surface shows candidate updates in the A, B, and C spaces. (d) Expanding editable mechanisms makes additional solutions accessible. Stronger improvers guide this search through diagnosis and candidate updates.}
+\label{fig:space}
+\end{figure*}
+
+Training-free optimization offers a practical way to improve language-model agents by adapting their harnesses. Prompts, skills, memory, and tool interfaces shape how a frozen model gathers information and acts~\citep{react,sweagent,codeact}. GEPA and SkillOpt demonstrate that execution feedback can improve prompts and reusable skills \citep{gepa,skillopt}, while Life-Harness, Meta-Harness, and AHE extend adaptation to executable runtime mechanisms \citep{life,meta,ahe}. As the models used to propose these changes become more capable, an important question emerges. \emph{How should the editable harness space expand to make use of a stronger improver?}
+
+Our starting point is that effective optimization requires both an expressive candidate space and the ability to search it. A failure can span several stages of an agent's execution. For example, a tool receipt may establish a fact that should be remembered, exposed in later context, and checked before a subsequent action. Expressing this repair requires choices about state, handlers, and their dependencies. Finding it requires the improver to attribute the failure and propose a useful update. Figure~\ref{fig:space}c--d illustrates this interaction through a training-loss landscape. Expanding editable mechanisms opens additional candidate directions. Our central hypothesis is that stronger improvers can exploit these directions through better attribution and candidate generation, making lower-loss harnesses accessible.
+
+We introduce harness evolution with composable plugins, built on DeepSeek Harness (DSH) \citep{deepseek-harness}. DSH supplies a common plugin runtime and lifecycle interfaces. Our evaluation host connects these interfaces to task setup, context assembly, tool execution, and feedback handling (Figure~\ref{fig:space}a). The improver edits plugin source and composition, allowing a task-specific harness to acquire new state and connect its producers and consumers across execution steps. An outer loop collects trajectories, proposes a candidate, compares it with its parent, and carries the retained program and measured feedback into the next round. Task adapters supply each environment's tools and scoring. This organization supports harness evolution across different environments through a shared execution and optimization structure.
+
+We investigate the editable space through three scopes (Figure~\ref{fig:space}b). Scope A revises skill text instructions only. Scope B allows one independent component to be revised per round, such as memory, an action check, or receipt interpretation. Scope C enables joint modification of multiple executable plugins that communicate through shared episode state. These scopes connect text editing to module and operator edits studied in prior work \citep{agentsquare,aflow}, and to the plugin mechanisms exposed by our framework. We study different improver models at high reasoning effort alongside these scopes. Held-out tests measure artifact performance, and evolution histories record how candidates accumulate into a retained harness.
+
+We evaluate on four agent benchmarks with a frozen Qwen3-4B executor. With GPT-6.1 Sol high as the improver, our evolved harnesses achieve test success rates of 95.41\% on ALFWorld, 70.56\% on DBBench, 48.17\% on WebShop, and 41.67\% on OSBench, achieving leading performance on all four benchmarks. These results motivate studying the mechanisms an improver can discover, alongside the permissions it receives.
+
+We make three contributions.
+\begin{itemize}
+\item \textbf{A unified representation and evolution method on DeepSeek Harness.} Edits to prompts, skills, memory, tools, workflows, and runtime mechanisms can be expressed as changes to plugin content, code, and composition. The improver uses execution traces to diagnose failures and synthesize repairs that coordinate context, action control, and tool feedback through shared state.
+\item \textbf{A study of edit scope and improver capability.} We compare skill-text edits, single-component edits, and coordinated plugin edits across improver models at high reasoning effort. The experiments show how stronger improvers use the expanded space to discover effective executable mechanisms.
+\item \textbf{Leading results and reproducible artifacts.} With a frozen Qwen3-4B executor, the evolved harnesses achieve leading test success on all four benchmarks. We release the harnesses, checkpoint results, evolution histories, and candidate-generation interfaces.
+\end{itemize}
+
+
+\FloatBarrier
+\section*{2 Related Work}
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\linewidth]{dsh-draft/figures/related-work-candidates/07-related-work-families.pdf}
+\caption{Candidate artifacts and their representation in DeepSeek Harness. The outer frame denotes the shared DSH representation space. (a) Runtime interfaces. (b) Method families, representative papers, and improver outputs. (c) Candidate structures and their plugin bindings. Improvers produce text, knowledge assets, modules, programs, interfaces, and runtime mechanisms \citep{gepa,textgrad,skillopt,expel,automanual,agentsquare,aflow,adas,meta,align,autoharness,life,ahe,harnessx}. DSH plugins provide a common implementation substrate for these forms. Shared state and lifecycle handlers allow them to participate in larger mechanisms spanning feedback, context, and action control.}
+\label{fig:related-candidates}
+\end{figure*}
+
+\paragraph{Prompt and program optimization.}
+OPRO searches instructions using the scores of earlier candidates, while ProTeGi converts minibatch errors into textual update directions~\citep{opro,protegi}. DSPy expresses language-model pipelines as optimizable programs; MIPRO jointly searches their instructions and demonstrations~\citep{dspy,mipro}. TextGrad propagates language feedback through computation graphs~\citep{textgrad}, and GEPA combines trajectory reflection with Pareto-based candidate search~\citep{gepa}. SkillOpt optimizes a reusable skill through bounded edits, validation, and rejected-edit feedback~\citep{skillopt}. These methods establish feedback-guided optimization over language artifacts and modular programs. Our study examines how an improver uses broader permissions to construct executable harness mechanisms.
+
+\paragraph{Feedback, experience, and reusable skills.}
+Self-Refine improves an output through iterative feedback, and Reflexion carries verbal feedback into subsequent trials~\citep{selfrefine,reflexion}. ExpeL extracts reusable insights from task experience; AutoGuide selects context-aware guidelines; AutoManual builds environmental rules and instruction manuals~\citep{expel,autoguide,automanual}. Voyager accumulates executable skills in a persistent library~\citep{voyager}. These approaches illustrate several ways to retain experience: text, retrieved rules, and reusable code. In our harness, learned capabilities can additionally maintain episode state and coordinate interventions across context, action, and receipt handling.
+
+\paragraph{Agent architecture and workflow search.}
+ADAS uses a meta agent to write agent programs from an archive of previous designs~\citep{adas}. AgentSquare evolves and recombines planning, reasoning, tool-use, and memory modules~\citep{agentsquare}. AFlow searches code-represented workflows by revising operators and their composition~\citep{aflow}. These candidates specify component behavior and information flow. Our common DSH substrate exposes plugin source, shared state, and composition as the editable representation, allowing us to compare edit scopes and improver configurations across task environments.
+
+\paragraph{Runtime interfaces and harness evolution.}
+SWE-agent demonstrates the importance of agent-computer interfaces, and CodeAct uses executable code as a compositional action space~\citep{sweagent,codeact}. ALIGN generates environment interfaces; AutoHarness synthesizes code harnesses from environment feedback~\citep{align,autoharness}. Life-Harness organizes adaptation across runtime lifecycle layers~\citep{life}. Meta-Harness gives its proposer access to prior source, scores, and traces~\citep{meta}; AHE connects component, trajectory, and decision observability~\citep{ahe}; HarnessX evolves typed, composable harness primitives~\citep{harnessx}. These systems establish executable runtime behavior as an optimization target.
+
+Figure~\ref{fig:related-candidates} maps these artifact families to the DSH plugin representation. Our focus is the relationship between editable scope, improver capability, and the executable mechanisms discovered during optimization.
+
+\FloatBarrier
+\input{dsh-draft/method.en.tex}
+
+\FloatBarrier
+\input{dsh-draft/experiments.en.tex}
+
+\section*{5 Conclusion}
+Our results support a joint direction for harness optimization: increase the capability of the improver and expand the complexity of the edits it can express. Composable plugins add editable dimensions over instructions, episode state, and executable control, opening more opportunities to discover effective harnesses. A capable improver can use trajectory evidence to identify recurring failures, infer a useful repair direction, and implement it across these dimensions. The A/B/C profiles and evolved mechanisms motivate this view of optimization: richer representations make better solutions reachable, while stronger diagnosis and candidate generation help find them.
+
+\paragraph{Limitations and next steps.}
+The allocation of training evidence remains an open design choice. How much data is needed, and which task and failure distributions best support reusable repairs? An update could use the full training set, a fixed subset, or successive batches that roll through the pool. These choices determine the evidence available for attribution and the frequency and cost of feedback. The promotion gate also merits study: how should aggregate improvement, repaired failures, regressions, and validation outcomes determine whether a candidate is retained? Finally, the organization of attribution and candidate generation can be improved through trajectory grouping, common-cause synthesis, prioritization of repair directions, and coordination of edits. Studying these choices would clarify how to convert stronger improvers and richer edit spaces into more effective search.
+
+\clearpage
+\bibliography{dsh-draft/references}
+\clearpage
+\input{dsh-draft/supplement.en.tex}
+\end{document}

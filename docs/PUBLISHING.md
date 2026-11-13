@@ -15,6 +15,6 @@ Example record, in percentage units:
  "evaluation":"three complete executions","source":"recorded evaluation identifier"}
 ~~~
 
-WebShop requires webshop_historical or webshop_frozen. Existing measurements remain in paper/data/publication-history.json. Add new PDFs and previews to paper/figures.json. Commit the matching configurations, numeric records and artifacts, then push. GitHub Actions deploys the site.
+The current manuscript uses the four columns alfworld, dbbench, webshop and osbench. The dated 2026-11-11 archive retains separate historical and frozen WebShop columns. Existing measurements remain in paper/data/publication-history.json. Add new PDFs and previews to paper/figures.json. Commit the matching configurations, numeric records and artifacts, then push. GitHub Actions deploys the site.
 
 Peak and development-selected rows retain their separate identities. Update README summary values alongside any intentional change to the paper's main table.

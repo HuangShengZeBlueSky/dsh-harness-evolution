@@ -1,0 +1,52 @@
+\begin{table*}[p]
+\section*{C. Additional Method and Model Comparisons}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Comparison of evolved Qwen3-4B harnesses with additional methods and larger executors. Scores are test success (\%); local measurements report mean and sample SD. Sources identify the numerical evaluations.}
+\label{tab:cross-model-context}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.19\textwidth}>{\raggedright\arraybackslash}p{.18\textwidth}*{4}{>{\centering\arraybackslash}X}>{\raggedright\arraybackslash}p{.20\textwidth}@{}}\toprule
+Executor & Method / harness & ALFWorld & DBBench & WebShop & OSBench & Source\\\midrule
+\rowcolor{grouphead}\multicolumn{7}{l}{\textbf{Qwen3-4B: evolved artifacts and additional baselines}}\\
+\rowcolor{ourrow}Qwen3-4B & Ours: Sol high & 95.41$\pm$0.00 & 70.56$\pm$0.38 & 48.17$\pm$0.29 & 41.67$\pm$1.84 & Local\\
+Qwen3-4B & ALIGN (released)\citep{align} & 3.36$\pm$1.06 & -- & 31.00$\pm$0.50 & -- & Local\\
+Qwen3-4B & ReAct\citep{react} & 10.70$\pm$1.06 & -- & -- & -- & Local\\
+Qwen3-4B & ReflAct\citep{reflact} & 18.35$\pm$1.83 & -- & -- & -- & Local\\
+Qwen3-4B & AutoManual\citep{automanual} & 76.15$\pm$1.59 & -- & -- & -- & Local\\
+Qwen3-4B & Harness-R1 patch\citep{harness-r1} & -- & 52.22$\pm$0.69 & -- & -- & Local\\
+Qwen3-4B & Prompt-evolving$^{\dagger}$ & 13.8 & 60.7 & 30.0 & 18.8 & \citep{life}\\
+Qwen3-4B & SkillFM & 77.01 & -- & 14.60 & -- & \citep{skillfm}\\
+\addlinespace[3pt]
+\rowcolor{grouphead}\multicolumn{7}{l}{\textbf{Larger open-model executors}}\\
+Qwen2.5-14B & Life-Harness & 83.49 & 66.00 & 45.00 & 40.97 & \citep{life}\\
+Qwen2.5-32B & Life-Harness & 92.66 & 69.33 & 46.50 & 45.83 & \citep{life}\\
+Qwen2.5-72B & Life-Harness & 85.32 & 71.33 & 48.00 & 47.22 & \citep{life}\\
+Llama-3.3-70B & Life-Harness & 92.66 & 68.67 & 44.00 & 39.58 & \citep{life}\\
+Qwen3.6-27B & Life-Harness & 89.91 & 74.33 & 43.00 & 56.94 & \citep{life}\\
+Qwen3.6-35B-A3B & Life-Harness & 89.91 & 71.33 & 45.00 & 54.17 & \citep{life}\\
+\addlinespace[3pt]
+\rowcolor{grouphead}\multicolumn{7}{l}{\textbf{Frontier-model executors}}\\
+GPT-5.5 high & Bare & 93.6 & 67.7 & 75.1 & 47.4 & \citep{life}\\
+GPT-5.5 high & Life-Harness & 95.4 & 75.0 & 75.8 & 53.1 & \citep{life}\\
+Opus 4.8 high & Bare & 97.2 & 71.7 & 73.8 & 50.4 & \citep{life}\\
+Opus 4.8 high & Life-Harness & 98.1 & 74.3 & 82.7 & 50.8 & \citep{life}\\
+Gemini 3.1 Pro & Bare & 96.3 & 76.5 & 67.3 & 50.0 & \citep{life}\\
+Gemini 3.1 Pro & Life-Harness & 96.3 & 78.4 & 68.1 & 48.6 & \citep{life}\\
+\addlinespace[3pt]
+\rowcolor{grouphead}\multicolumn{7}{l}{\textbf{Additional optimization methods}}\\
+GPT-5.5 & TextGrad & 82.80 & -- & -- & -- & \citep{textgrad,skillopt}\\
+GPT-5.5 & GEPA & 85.80 & -- & -- & -- & \citep{gepa,skillopt}\\
+GPT-5.5 & SkillOpt & 95.50 & -- & -- & -- & \citep{skillopt}\\
+GPT-4o & AgentSquare & 69.50 & -- & -- & -- & \citep{agentsquare}\\
+GPT-4o & ADAS & 54.30 & -- & -- & -- & \citep{adas,agentsquare}\\
+GPT-4o & ReflAct & 93.30 & -- & -- & -- & \citep{reflact}\\
+GPT-4-turbo & AutoManual & 97.40 & -- & -- & -- & \citep{automanual}\\
+GPT-3.5 series & AutoGuide & 79.10 & -- & 46.00 & -- & \citep{autoguide}\\
+PaLM-540B & ReAct & 57.00 & -- & 40.00 & -- & \citep{react}\\
+\bottomrule\end{tabularx}
+\vspace{4pt}\begin{minipage}{\textwidth}\footnotesize
+The evolved Qwen3-4B harnesses exceed the displayed Life-Harness Qwen2.5-14B scores on all four benchmarks and the Qwen2.5-32B scores on ALFWorld, DBBench, and WebShop.
+
+\smallskip
+$^{\dagger}$Prompt-evolving values are approximate readings from Life-Harness Figure 6. SkillFM retains its published task counts and protocol. Life-Harness Tables 10 and 2 provide the larger open-model and frontier-model rows.
+\end{minipage}
+\end{table*}

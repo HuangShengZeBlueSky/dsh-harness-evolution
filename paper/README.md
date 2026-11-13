@@ -1,3 +1,21 @@
+# Current paper and historical figure collection
+
+Current snapshot: **2026-11-13**. [Manuscript](manuscript/) · [Research status](STATUS.md) · [Current main table](data/main-results.json) · [Model–scope profiles](data/scope-profiles-20261113.json) · [Completed C tests](data/completed-c-tests-20261113.json).
+
+## Current manuscript figures
+
+- [best harness evolution](figures/current-best-harness-evolution.pdf)
+- [scope heatmap response gain](figures/current-scope-heatmap-response-gain.pdf)
+- [alfworld architecture](figures/current-alfworld-architecture.pdf)
+- [dbbench architecture](figures/current-dbbench-architecture.pdf)
+- [osbench architecture](figures/current-osbench-architecture.pdf)
+- [webshop architecture](figures/current-webshop-architecture.pdf)
+- [intro original plus expanded](figures/current-intro-original-plus-expanded.pdf)
+- [method overview](figures/current-method-overview.pdf)
+- [07 related work families](figures/current-07-related-work-families.pdf)
+
+## Historical collection · 2026-11-11
+
 # Paper figures / 论文图集
 
 论文方法、结果与补充分析图。PDF为可放大的矢量原稿，PNG用于网页预览。

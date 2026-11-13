@@ -1,0 +1,16 @@
+\clearpage
+\section*{D. Metric Definitions and Reporting}
+\label{app:metrics}
+\paragraph{Test success and repeated execution.}
+For $N$ held-out tasks and repeat $r$, let $s_{ir}\in\{0,1\}$ denote native task success. The repeat-level percentage is $p_r=100N^{-1}\sum_{i=1}^{N}s_{ir}$. We report the mean over the available complete repeats and their sample standard deviation:
+\[
+\bar p=\frac{1}{R}\sum_{r=1}^{R}p_r,\qquad
+\mathrm{SD}=\sqrt{\frac{\sum_{r=1}^{R}(p_r-\bar p)^2}{R-1}}.
+\]
+Local headline evaluations use three repeats. Sample SD is reported for repeated evaluations. The one-pass DBBench and OSBench Luna/Terra C results have no repeat SD. WebShop success counts fully successful purchases.
+
+\paragraph{Baseline-adjusted gains and error bars.}
+Gain is measured test success minus the Life-Harness bare-Qwen3-4B reference~\citep{life}: 16.51\%, 44.00\%, 29.50\%, and 21.50\% for ALFWorld, DBBench, WebShop, and OSBench. Error bars show the sample SD of repeated checkpoint evaluations.
+
+\paragraph{Evolution traces.}
+Candidate training includes each recorded proposal. Retained training uses the accepted candidate's score, or its evaluated parent's score if the proposal is rejected, on that round's task batch. Test markers identify measured checkpoints. The horizontal axis spans the full search budget. Figure~\ref{fig:evolution} averages available training scores over the latest six search rounds for the rotating-batch panels; it preserves the initial measured point and leaves the fixed-pool ALFWorld and OSBench scores unaveraged. The window resets at the WebShop stage boundary. Early rounds average the available recorded scores.

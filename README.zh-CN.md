@@ -6,13 +6,19 @@
 
 [项目主页](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=zh) · [测试结果](LEADERBOARD.zh-CN.md) · [复现方法](docs/REPRODUCING.zh-CN.md) · [产物](harnesses/) · [English](README.md)
 
+## 当前研究版本 · 2026-11-13
+
+已同步 Overleaf 当前论文源码、四基准主表、36 组模型与修改空间记录、最新 C 组测试、机制源码及图表。当前论文报告已测最高点；历史五基准数据和开发阶段选版继续保留。
+
+[论文源码与附录](paper/manuscript/) · [研究现状与数据说明](paper/STATUS.md) · [当前配置及数据来源](paper/manuscript/dsh-draft/reproducibility/experiment-index.json)
+
 ## 方法
 
 **观察归因 → 生成候选 → 评测选择 → 沉淀反馈。**
 
 循环读取当前 Harness 与执行轨迹，提出可复用的修复，与父版配对评测。DSH 提供执行循环、插件生命周期、上下文组装、工具钩子和任务内状态。
 
-![DSH上的受控进化流程](paper/previews/abc-search-procedure.png)
+![DSH上的受控进化流程](paper/previews/current-method-overview.png)
 
 **L4** 是历史的能力梳理驱动进化流程，先说明当前 Agent 能力和插件职责，再提出代码修改。**A/B/C** 是修改权限的对照设计，在共同搜索流程中控制改进模型可以修改什么。
 
@@ -35,27 +41,25 @@
 ## 结果与进化曲线
 
 <!-- paper-table:start -->
-| 场景 | 历史产物已测高点 | 历史最终选版 |
-|---|---:|---:|
-| ALFWorld | 95.41% | 95.41% |
-| DBBench | 70.56% | 70.56% |
-| WebShop · historical | 47.00% | 44.33% |
-| WebShop · frozen | 48.17% | — |
-| OSBench | 39.35% | 38.89% |
-| Telecom | 87.50% | 84.17% |
+| 场景 | 当前论文已测高点 |
+|---|---:|
+| ALFWorld | 95.41 ± 0.00% |
+| DBBench | 70.56 ± 0.38% |
+| WebShop | 48.17 ± 0.29% |
+| OSBench | 41.67 ± 1.84% |
 <!-- paper-table:end -->
 
-![训练与实测测试曲线](paper/previews/main-full-train-test.png)
+![训练与实测测试曲线](paper/previews/current-best-harness-evolution.png)
 
 <details>
-<summary>实验配置与检查点选择</summary>
+<summary>当前论文的配置与选版口径</summary>
 
-主表沿用论文的历史产物路线，已测高点与开发阶段最终选版各自保留。ALFWorld曲线为20轮，其余为40轮。WebShop区分历史与冻结商品环境，图中的从头搜索和主表的续跑也有各自记录。Telecom本地使用GLM用户模拟器。另一题单上的OSBench C高点41.67%保留在补充图表中。
+主表和曲线对应 2026-11-13 Overleaf 稿。主表报告已测最高测试点及重复执行的样本标准差；各检查点的历史来源、训练配置和测试记录见[当前实验索引](paper/manuscript/dsh-draft/reproducibility/experiment-index.json)。OSBench 当前主表为 C-sol61-narrow 的 v01，41.67%。
 
-同协议A/B/C搜索的[终选结果](paper/data/controlled-abc.json)单独记录。重复测试刻画同一冻结检查点的执行波动。[完整对比榜单](LEADERBOARD.zh-CN.md) · [配置对应表](paper/data/curve-manifest.json)。
+[历史五基准主表](paper/data/main-results-20261111.json)和[受控搜索的开发阶段终选结果](paper/data/controlled-abc.json)单独保留。当前 36 组模型与修改空间记录见[最新数据](paper/data/scope-profiles-20261113.json)。
 </details>
 
-## 看实验
+## 历史实验集
 
 | 研究问题 | 数据入口 |
 |---|---|

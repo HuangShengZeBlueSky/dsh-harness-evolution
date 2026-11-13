@@ -10,7 +10,7 @@ DATA = ROOT / "paper/data"
 SITE = ROOT / "site"
 REPO = "https://github.com/HuangShengZeBlueSky/dsh-harness-evolution"
 labels = {"alfworld": "ALFWorld", "dbbench": "DBBench", "webshop_historical": "WebShop · historical",
-          "webshop_frozen": "WebShop · frozen", "osbench": "OSBench", "telecom": "Telecom"}
+          "webshop_frozen": "WebShop · frozen", "webshop": "WebShop", "osbench": "OSBench", "telecom": "Telecom"}
 
 
 def score(value):
@@ -30,8 +30,8 @@ def main():
     for row in data["rows"]:
         lines.append("| " + " | ".join([row["method"]] + [score(row["scores"][c]) for c in data["columns"]]) + " |")
     lines += ["", "All values are test success percentages. ± denotes sample standard deviation across repeated executions.",
-              "Historical and frozen WebShop catalogs are separate conditions. Local Telecom uses GLM.",
-              "OSBench's historical 39.35% and the 41.67% data-control artifact have separate provenance.",
+              "The current manuscript covers four benchmarks. Headline values are measured test peaks.",
+              "The previous five-benchmark table is preserved in paper/data/main-results-20261111.json.",
               "", "[Configurations](docs/REPRODUCING.md) · [Figures and source data](paper/README.md)",
               "", "## Released harnesses", ""]
     artifacts=[]
@@ -39,14 +39,13 @@ def main():
         folder=p.parent
         artifacts.append({"benchmark":folder.parent.name,"path":str(folder.relative_to(ROOT)),"name":folder.name})
         lines.append(f'- [{folder.parent.name} · {folder.name}]({folder.relative_to(ROOT)})')
-    peak, selected = data["rows"][:2]
+    peak = data["rows"][0]
     for filename, chinese in (("README.md", False), ("README.zh-CN.md", True)):
         path = ROOT / filename
-        headings = ["场景", "历史产物已测高点", "历史最终选版"] if chinese else ["Benchmark", "Historical measured peak", "Historical final-selected"]
-        summary = ["| " + " | ".join(headings) + " |", "|---|---:|---:|"]
+        headings = ["场景", "当前论文已测高点"] if chinese else ["Benchmark", "Current manuscript measured peak"]
+        summary = ["| " + " | ".join(headings) + " |", "|---|---:|"]
         for column in data["columns"]:
-            values = [row["scores"][column] for row in (peak, selected)]
-            summary.append("| " + " | ".join([labels[column]] + [f'{x["mean"]:.2f}%' if x else "—" for x in values]) + " |")
+            summary.append("| " + labels[column] + " | " + score(peak["scores"][column]) + "% |")
         replacement = "<!-- paper-table:start -->\n" + "\n".join(summary) + "\n<!-- paper-table:end -->"
         path.write_text(re.sub(r"<!-- paper-table:start -->.*?<!-- paper-table:end -->", lambda match: replacement, path.read_text(), flags=re.S))
     text="\n".join(lines)+"\n"

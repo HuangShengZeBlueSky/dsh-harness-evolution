@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "aspect": {
+      "type": "string",
+      "enum": [
+        "skill",
+        "memory",
+        "action",
+        "receipt"
+      ]
+    },
+    "content": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "aspect",
+    "content",
+    "reason"
+  ],
+  "additionalProperties": false
+}

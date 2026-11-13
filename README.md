@@ -6,13 +6,19 @@ We study how improver capability and editable scope shape the harnesses discover
 
 [Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [Results](LEADERBOARD.md) · [Reproduce](docs/REPRODUCING.md) · [Artifacts](harnesses/) · [简体中文](README.zh-CN.md)
 
+## Current research snapshot · 2026-11-13
+
+Synced from the current Overleaf manuscript: four-benchmark results, 36 model–scope profiles, completed C evaluations, artifact source code, figures and reproduction materials. Headline results are measured peaks; historical five-benchmark results and development-selected outputs remain available.
+
+[Manuscript and appendices](paper/manuscript/) · [Research status and data](paper/STATUS.md) · [Configurations and provenance](paper/manuscript/dsh-draft/reproducibility/experiment-index.json)
+
 ## Method
 
 **Observe and attribute → propose a candidate → evaluate and select → retain feedback.**
 
 The loop reads the current harness and its execution traces, proposes a reusable repair, and compares it with its parent. DSH supplies the execution loop, plugin lifecycle, prompt assembly, tool hooks and episode state.
 
-![Controlled harness search on DSH](paper/previews/abc-search-procedure.png)
+![Controlled harness search on DSH](paper/previews/current-method-overview.png)
 
 **L4** is the historical capability-guided search recipe. It describes the current agent's abilities and plugin responsibilities before proposing code edits. **A/B/C** controls which edits the improver may make within a shared search procedure.
 
@@ -35,27 +41,25 @@ The released **DBBench L4 harness reaches 70.56% test success**. Its write workf
 ## Results and evolution
 
 <!-- paper-table:start -->
-| Benchmark | Historical measured peak | Historical final-selected |
-|---|---:|---:|
-| ALFWorld | 95.41% | 95.41% |
-| DBBench | 70.56% | 70.56% |
-| WebShop · historical | 47.00% | 44.33% |
-| WebShop · frozen | 48.17% | — |
-| OSBench | 39.35% | 38.89% |
-| Telecom | 87.50% | 84.17% |
+| Benchmark | Current manuscript measured peak |
+|---|---:|
+| ALFWorld | 95.41 ± 0.00% |
+| DBBench | 70.56 ± 0.38% |
+| WebShop | 48.17 ± 0.29% |
+| OSBench | 41.67 ± 1.84% |
 <!-- paper-table:end -->
 
-![Training and measured test trajectories](paper/previews/main-full-train-test.png)
+![Training and measured test trajectories](paper/previews/current-best-harness-evolution.png)
 
 <details>
-<summary>Experimental settings and checkpoint selection</summary>
+<summary>Current manuscript settings and checkpoint selection</summary>
 
-The table follows the paper's historical artifact lineages. Measured peaks and development-selected checkpoints retain their identities. ALFWorld uses 20 rounds; the other plotted searches use 40. WebShop has separate historical and frozen catalogs, and its non-continuation curve differs from the continuation in the table. Local Telecom uses a GLM user simulator. The separate OSBench C data-control peak of 41.67% is retained in the supplementary figures.
+The table and evolution figure follow the 2026-11-13 Overleaf manuscript. Headline values are highest measured test checkpoints with sample standard deviations across executions. The [experiment index](paper/manuscript/dsh-draft/reproducibility/experiment-index.json) preserves their lineages, training configurations and test records. The current OSBench headline is C-sol61-narrow v01 at 41.67%.
 
-The matched A/B/C search runs have their own [final-selected results](paper/data/controlled-abc.json). Test repeats measure execution variability of a frozen checkpoint. [Full comparison table](LEADERBOARD.md) · [Configuration mapping](paper/data/curve-manifest.json).
+The [historical five-benchmark table](paper/data/main-results-20261111.json) and [development-selected controlled outputs](paper/data/controlled-abc.json) remain separate. See the [current 36 model–scope profiles](paper/data/scope-profiles-20261113.json) for the updated comparison.
 </details>
 
-## Explore the experiments
+## Historical experiment collection
 
 | Question | Evidence |
 |---|---|

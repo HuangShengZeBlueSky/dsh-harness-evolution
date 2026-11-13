@@ -1,0 +1,142 @@
+\section*{A. Harness Evolution Algorithm}
+\label{app:algorithm}
+The A/B/C controllers implement the architecture in Figure~\ref{fig:method-overview}a: observe the current harness, propose a scoped edit, compare the candidate with its parent, and feed the measured decision into the next update. The editable scope determines the candidate representation. The executor, runtime hooks, and evaluation controller provide the surrounding execution structure.
+
+\subsection*{A.1 Harness State and Runtime Interfaces}
+A harness $H=(\lambda,G)$ consists of skill instructions $\lambda$ and an executable composition $G$. The runtime creates fresh state for each episode and invokes handlers at the corresponding execution events. An observation handler reads a tool call and its receipt; a guidance handler exposes relevant state in the next model context; an action handler checks a proposed call; and an explanation handler annotates tool feedback. These interfaces let an edit change how evidence is acquired, retained, and used in subsequent decisions.
+
+Scope A replaces skill text. Scope B replaces one independent component: skill text, memory, an action check, or receipt interpretation. Unedited components are inherited, and executable components maintain separate state. Scope C replaces skill text or a composition of named mechanisms whose handlers can share episode state. A coordinated edit can therefore introduce a fact, its producer, and its downstream consumers together.
+
+\subsection*{A.2 Diagnosis and Candidate Construction}
+The improver receives the current instructions and executable source, the available runtime interfaces, sampled successful and failed trajectories, and the preceding evaluation decision. The source and interfaces describe the parent's existing capabilities. The trajectories reveal where those capabilities fail or succeed; the preceding decision supplies the measured effects of the last attempted repair.
+
+A proposal identifies the editable aspect, supplies its replacement, and explains the evidence and intended behavioral change. Diagnosis and implementation are returned together. For a composed mechanism, the proposal specifies which handler records each fact and which handlers consume it. The host applies the replacement to a copy of the parent and checks the replacement format and executable syntax before evaluation.
+
+\subsection*{A.3 Algorithm: Feedback-Guided Harness Evolution}
+\label{alg:harness}
+\noindent\begin{minipage}{\linewidth}\small
+\noindent\rule{\linewidth}{.5pt}\par
+\textbf{Input:} initial harness $H_0$, frozen executor, improver $M$, edit scope $k$, training schedule, optional validation set, and search budget $B$.\par
+\textbf{Initialize:} retained harness $H\leftarrow H_0$; previous feedback $\mathcal R\leftarrow\varnothing$.\par
+\begin{enumerate}
+\item \textbf{Observe.} While budget remains, obtain the next training batch and the parent outcomes, trajectories, and hook outputs. Select successful and failed traces as proposal evidence.
+\item \textbf{Attribute and propose.} Give $M$ the parent source, runtime interfaces, sampled trajectories, previous feedback $\mathcal R$, and allowed edits $\mathcal E_k(H)$. Obtain a diagnosis and one candidate edit.
+\item \textbf{Construct the candidate.} Copy the parent and apply the scoped replacement to form $H'$. If it cannot be assembled, retain $H$ and pass the assembly result to the next round.
+\item \textbf{Execute and compare.} Run $H'$ through the runtime hooks with fresh episode state. Pair its results with the parent outcomes on matching tasks, trials, and seeds. Compare the training objective, emitted hook outputs, repaired failures, and regressions. Compare validation scores when a validation set is present.
+\item \textbf{Select.} Retain $H'$ if its training objective improves, its emitted hook outputs change, and its validation objective does not decrease when used. Otherwise retain $H$.
+\item \textbf{Feed back.} Set $\mathcal R$ to this round's proposal, measured outcomes, and retention decision. Continue from the retained harness.
+\end{enumerate}
+\textbf{Output:} the retained harness and the sequence of evaluated edits and decisions. Evaluate retained checkpoints on held-out tasks after search.\par
+\noindent\rule{\linewidth}{.5pt}\par
+\end{minipage}
+
+\subsection*{A.4 Selection and Feedback}
+Let $J_{\mathrm{tr}}$ denote the configured training objective, and let $a(H',H)$ indicate a difference in the emitted hook outputs on paired tasks. The retention rule is
+\[
+\begin{aligned}
+\operatorname{Accept}(H',H)&=
+\big[J_{\mathrm{tr}}(H')>J_{\mathrm{tr}}(H)\big]
+\\
+&\quad\land a(H',H)\land v(H',H),
+\end{aligned}
+\]
+where $v$ is true if no validation set is used, and otherwise requires $J_{\mathrm{val}}(H')\geq J_{\mathrm{val}}(H)$. Hook outputs comprise context guidance, action-check reasons, and receipt annotations; plugin-load events are excluded. The next proposal receives the latest decision, including both repairs and regressions. Accepted code persists across rounds, while runtime state is reset between episodes.
+
+
+\subsection*{A.5 Correspondence to the A/B/C Implementation}
+The bundled controllers implement observation with \texttt{score} and \texttt{trace\_sample}; \texttt{model} assembles the source, interface, sampled evidence, and previous feedback into the improver request. Its response binds the rationale to the replacement through the fields \texttt{reason}, \texttt{aspect}, and \texttt{content}. The \texttt{install} function realizes the scope-specific replacement. These operations correspond to the evidence inputs, improver workspace, and candidate block in Figure~\ref{fig:method-overview}a.
+
+The runtime wrappers implement the diagram's execution block: \texttt{guide} contributes to context assembly, \texttt{check} runs before tool execution, and \texttt{observe} followed by \texttt{explain} processes the receipt. B constructs independent memory, action, and receipt components; C calls \texttt{create(state)} to construct mechanisms sharing fresh episode state. The controllers then use \texttt{measure} and \texttt{signature} for paired scores and observable hook effects, record the retention decision, and provide it to the next \texttt{model} call. This closes the diagram's retained-code and measured-feedback loop.
+
+
+\subsection*{A.6 Improver Prompt and Scope-Specific Instructions}
+The following template reproduces the instruction text in the controllers' \texttt{model} function. Angle-bracket placeholders replace the values inserted at each round. The same template is used for A, B, and C; the editable-aspect descriptions and supplied executable sources depend on scope.
+
+\begin{quote}\small\raggedright
+Role: improve a frozen Qwen agent in \textless{}benchmark\textgreater{} by turning training observations into one reusable candidate edit.
+\par
+Inputs: the current parent, visible training traces, previous measured feedback, and the runtime interfaces.
+\par
+Editable aspects: \textless{}editable-aspect descriptions\textgreater{}.
+\par
+Choose exactly one aspect. Return its complete replacement in content and describe the evidence, expected behavior, and potential regression in reason.
+\par
+All other aspects are inherited. Each executable aspect is a self-contained JavaScript module, uses only its function arguments and its own local state, and is wired to its designated interface by the host.
+\par
+The host runs paired evaluation, records observed effects and decides promotion. The traces below are observations.
+\par
+Parent: \textless{}parent identifier\textgreater{}
+\par
+Interface reference:
+\par
+\textless{}runtime interface reference\textgreater{}
+\par
+Current skill:
+\par
+\textless{}parent skill text\textgreater{}
+\par
+Current executable aspects:
+\par
+\textless{}parent executable sources\textgreater{}
+\par
+Previous measured feedback:
+\par
+\textless{}previous decision\textgreater{}
+\par
+Training observations:
+\par
+\textless{}sampled training traces\textgreater{}
+\end{quote}
+
+\paragraph{Editable-aspect descriptions.}
+The controller inserts the following descriptions as a JSON object. A includes only \texttt{skill}; B includes \texttt{skill}, \texttt{memory}, \texttt{action}, and \texttt{receipt}; C includes \texttt{skill} and \texttt{composition}.
+
+\noindent\textbf{skill.} Reusable strategy and task guidance as plain text.\par
+
+\noindent\textbf{memory.} Episode-local state. JS export function create() returns \{observe(call, receipt), guide()\}. observe updates local facts; guide returns a short factual state summary.\par
+
+\noindent\textbf{action.} One action precondition. JS export function create() returns \{check(call)\}. Return a reason string to ask the actor to revise, or undefined to continue.\par
+
+\noindent\textbf{receipt.} One receipt interpretation or recovery rule. JS export function create() returns \{explain(call, receipt)\}. Return a short annotation or undefined.\par
+
+\noindent\textbf{composition.} One coherent executable mechanism edit. Return JSON text in content with keys skill and code. code is a JavaScript module exporting create(state), returning an ordered array of named mechanisms \{id, observe(call, receipt), guide(), check(call), explain(call, receipt)\}. Handlers are optional. The host supplies episode-local shared state. Name which mechanism writes each fact and which other mechanism uses it. All mechanisms may be edited together when the proposed repair requires it.\par
+
+For C, ``own local state'' in the common prompt is the episode-local state supplied to the composition; its mechanisms share that object as specified in the composition instruction. The source and interfaces instantiate the capability input in Figure~\ref{fig:method-overview}; no separate capability-generation call is required.
+
+\paragraph{Evidence inserted into the prompt.}
+Each sampled trajectory supplies its task identifier, native score, and opening and closing messages. Sampling draws from both successful and failed parent episodes, using the round identifier to seed the sampler. The previous-decision field is empty initially and thereafter contains the latest measured decision. The exact rendered prompt is saved before the improver call, so a proposal can be replayed with its original evidence. The bundled sampler specifies serialization and truncation details.
+
+\subsection*{A.7 Candidate and Feedback Formats}
+The improver returns one JSON object. All three fields below are required strings, and the response schema permits no additional fields:
+\begin{quote}\small
+\begin{verbatim}
+{
+  "aspect": "<permitted aspect>",
+  "content": "<complete replacement>",
+  "reason": "<rationale>"
+}
+\end{verbatim}
+\end{quote}
+The permitted aspects are those listed in A.6. For a skill edit, \texttt{content} is the replacement text. For B's executable aspects, it is module source exporting \texttt{create()}. For C's composition edit, it is a serialized JSON object with two fields, \texttt{skill} and \texttt{code}. The latter exports \texttt{create(state)} and returns an ordered array of named mechanisms. The following is an interface skeleton, with handler bodies supplied by the improver:
+\begin{quote}\small
+\begin{verbatim}
+export function create(state) {
+  return [{
+    id: "mechanism-name",
+    observe(call, receipt) {
+      /* update state */
+    },
+    guide() { /* context guidance */ },
+    check(call) {
+      /* denial or undefined */
+    },
+    explain(call, receipt) {
+      /* annotate receipt */
+    }
+  }];
+}
+\end{verbatim}
+\end{quote}
+Handlers are optional. The host calls observation handlers before receipt-explanation handlers, adds guidance during context assembly, and applies action checks before native tool execution. This ordering implements the information path shown in Figure~\ref{fig:method-overview}.
+
+The feedback record contains candidate and parent identifiers, the batch, the edited aspect and proposal rationale, before/after measurements, optional validation measurements, the observed-effect flag, repaired and regressed task counts, and the adoption decision. Measurements include strict success and mean native reward; the configured objective determines promotion. Invalid assembly instead records the error and retains the parent. Only the latest decision is inserted into the next prompt; the sequence of decisions is saved separately.

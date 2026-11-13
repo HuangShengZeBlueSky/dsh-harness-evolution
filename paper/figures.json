@@ -1,5 +1,86 @@
 [
   {
+    "id": "current-best-harness-evolution",
+    "title": "best harness evolution",
+    "panels": 1,
+    "file": "figures/current-best-harness-evolution.pdf",
+    "preview": "previews/current-best-harness-evolution.png",
+    "data": "data/best-harness-evolution-20261113.json",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-scope-heatmap-response-gain",
+    "title": "scope heatmap response gain",
+    "panels": 1,
+    "file": "figures/current-scope-heatmap-response-gain.pdf",
+    "preview": "previews/current-scope-heatmap-response-gain.png",
+    "data": "data/scope-profiles-20261113.json",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-alfworld-architecture",
+    "title": "alfworld architecture",
+    "panels": 1,
+    "file": "figures/current-alfworld-architecture.pdf",
+    "preview": "previews/current-alfworld-architecture.png",
+    "data": "data/artifact-source-code-20261113.json",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-dbbench-architecture",
+    "title": "dbbench architecture",
+    "panels": 1,
+    "file": "figures/current-dbbench-architecture.pdf",
+    "preview": "previews/current-dbbench-architecture.png",
+    "data": "data/artifact-source-code-20261113.json",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-osbench-architecture",
+    "title": "osbench architecture",
+    "panels": 1,
+    "file": "figures/current-osbench-architecture.pdf",
+    "preview": "previews/current-osbench-architecture.png",
+    "data": "data/artifact-source-code-20261113.json",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-webshop-architecture",
+    "title": "webshop architecture",
+    "panels": 1,
+    "file": "figures/current-webshop-architecture.pdf",
+    "preview": "previews/current-webshop-architecture.png",
+    "data": "data/artifact-source-code-20261113.json",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-intro-original-plus-expanded",
+    "title": "intro original plus expanded",
+    "panels": 1,
+    "file": "figures/current-intro-original-plus-expanded.pdf",
+    "preview": "previews/current-intro-original-plus-expanded.png",
+    "data": "manuscript/dsh-draft/method.en.tex",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-method-overview",
+    "title": "method overview",
+    "panels": 1,
+    "file": "figures/current-method-overview.pdf",
+    "preview": "previews/current-method-overview.png",
+    "data": "manuscript/dsh-draft/method.en.tex",
+    "snapshot": "2026-11-13"
+  },
+  {
+    "id": "current-07-related-work-families",
+    "title": "07 related work families",
+    "panels": 1,
+    "file": "figures/current-07-related-work-families.pdf",
+    "preview": "previews/current-07-related-work-families.png",
+    "data": "manuscript/dsh-draft/method.en.tex",
+    "snapshot": "2026-11-13"
+  },
+  {
     "id": "abc-curves-alfworld",
     "title": "abc curves alfworld",
     "panels": 9,
