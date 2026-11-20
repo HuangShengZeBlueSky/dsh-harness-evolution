@@ -65,4 +65,4 @@ if (call.arguments.command === 'finish' && !state.used) {
         result = json.loads((folder / "runs/final.json").read_text())
         assert result["best"] == ("baseline" if mode == "A" else "v01"), (mode, result)
         print("PASS", mode)
-print("Synthetic installation check complete; benchmark scores require real evaluation.")
+print("Synthetic A/B/C installation check passed.")

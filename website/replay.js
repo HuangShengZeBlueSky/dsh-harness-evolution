@@ -47,6 +47,6 @@ async function loadReplay() {
   el('filter').onchange = showCases;
   el('rounds').firstElementChild.click();
   el('record').hidden = false;
-  el('notice').textContent = 'The replay includes paired task outcomes and recorded decision rationale. Full message transcripts and per-call traces are outside this release.';
+  el('notice').textContent = 'Open Replay data to inspect the parent and candidate outcomes for each task and the reason recorded for each decision.';
 }
 loadReplay().catch(() => { el('notice').textContent = 'The recorded rounds could not be loaded. Open Replay data above to inspect the source.'; });

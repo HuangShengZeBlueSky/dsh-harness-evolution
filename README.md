@@ -14,7 +14,7 @@ HookEvo searches for task-specific plugins around a frozen language-model agent.
 
 ## Main leaderboard
 
-Held-out success with Qwen3-4B-family executors. HookEvo leads the comparisons reported in the paper on each of the four benchmarks.
+HookEvo achieves the highest held-out success among the Qwen3-4B-family methods in the table on all four benchmarks. On DBBench it reaches **70.56%**, up **6.45 percentage points** from the local Life-Harness rerun.
 
 | Method | ALFWorld | DBBench | WebShop | OSBench | Evaluation |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -72,7 +72,7 @@ python evolution/scripts/smoke.py ./runs/smoke
 
 The smoke run uses the real DSH runtime, a scripted actor, and a synthetic task. It installs Node dependencies and exercises A/B/C proposals, selection, and held-out evaluation without a model account. Choose a fresh output directory for another smoke run.
 
-For benchmark tasks, start with the [reproduction guide](REPRODUCING.md). It separates evaluation of a released checkpoint from running a new search and lists the external assets needed for each benchmark.
+Use the reproduction guide to [evaluate a released harness](REPRODUCING.md#evaluate-a-released-checkpoint) or [run a controlled search](REPRODUCING.md#run-a-controlled-search).
 
 ## Citation
 
