@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HookEvo · Coordinated Plugin Evolution</title>
 <meta name="description" content="How coordinated edits to runtime plugins improve a frozen tool-using agent. Explore the method, four benchmark checkpoints, and reproduction guide.">
+<meta property="og:title" content="HookEvo · Coordinated Plugin Evolution">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://huangshengzebluesky.github.io/dsh-harness-evolution/">
+<meta property="og:description" content="Explore how a frozen agent learns new procedures through coordinated edits to its runtime plugins. Inspect four released checkpoints and their evaluation records.">
+<meta property="og:image" content="https://huangshengzebluesky.github.io/dsh-harness-evolution/cover.png">
+<meta property="og:image:alt" content="HookEvo. Mean test success for GPT-6.1 Sol across edit scopes: 38.04%, 41.03%, and 63.95%.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +22,7 @@
 <div><p class="eyebrow">Agent harness evolution</p><h1>Hook<i>Evo</i></h1>
 <p class="title">A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes</p>
 <p class="lead">A tool receipt can change what an agent remembers and what it does next. HookEvo evolves the plugins that connect those steps while the executor stays frozen.</p>
-<div class="actions"><a class="primary" href="#method">Explore the method ↓</a><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">Code repository ↗</a><a href="#results">Checkpoints</a></div></div>
+<div class="actions"><a class="primary" href="#method">Explore the method ↓</a><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">Code repository ↗</a><a href="#checkpoints">Explore checkpoints</a></div></div>
 <aside><span class="tag">Edit-scope result</span><div class="metric">+25.91<small> pp</small></div><p>Gain in mean test success for GPT-6.1 Sol when moving from skill text to coordinated plugin edits.</p><div class="stats"><div><b>4</b>benchmarks</div><div><b>3</b>improvers</div><div><b>3</b>edit scopes</div></div></aside>
 </div></div>
 <section class="wrap" id="method"><p class="eyebrow">Method</p><h2>One candidate can change both ends of a repair.</h2>
@@ -30,6 +37,17 @@
 <tr><th>OSBench</th><td>144</td><td>41.67 ± 1.84</td><td><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/main/artifacts/osbench">v01 ↗</a></td><td><a href="figures/osbench-architecture.png">View figure</a></td></tr>
 </tbody></table></div>
 <details><summary>Evolution across search rounds</summary><figure><a href="figures/best-harness-evolution.png"><img loading="lazy" src="figures/best-harness-evolution.png" alt="Training curves and held-out checkpoints for the four benchmark searches"></a><figcaption>Test markers denote measured checkpoints. WebShop continues from an inherited harness in its second stage.</figcaption></figure></details></section>
+<section class="wrap" id="checkpoints"><p class="eyebrow">Inside the checkpoints</p><h2>What did the search actually change?</h2><div class="switcher" aria-label="Choose a checkpoint" hidden>
+<button type="button" aria-controls="inspect-alfworld" aria-pressed="true">ALFWorld</button>
+<button type="button" aria-controls="inspect-dbbench" aria-pressed="false">DBBench</button>
+<button type="button" aria-controls="inspect-webshop" aria-pressed="false">WebShop</button>
+<button type="button" aria-controls="inspect-osbench" aria-pressed="false">OSBench</button>
+</div>
+<article class="exhibit" id="inspect-alfworld"><div class="explain"><p class="eyebrow">ALFWorld · v06</p><h3>From a tool receipt to the next action</h3><p>After the environment accepts an action, the action-hint plugin records what changed. Context assembly and the pre-execution guard can then act on the same episode state.</p><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/alfworld/plugins/action-hint.mjs">Read the implementation ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/alfworld/evaluation.json">Inspect the evaluation ↗</a></div><a class="plate" href="figures/alfworld-architecture.png"><img loading="lazy" alt="ALFWorld checkpoint architecture, including its runtime bindings" src="figures/alfworld-architecture.png"></a></article>
+<article class="exhibit" id="inspect-dbbench"><div class="explain"><p class="eyebrow">DBBench · v35</p><h3>From a SQL result to an answer</h3><p>The result bridge parses SQL receipts into arguments for the final answer. A separate write-workflow plugin tracks database changes across calls.</p><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/dbbench/plugins/result-bridge.mjs">Read the implementation ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/dbbench/evaluation.json">Inspect the evaluation ↗</a></div><a class="plate" href="figures/dbbench-architecture.png"><img loading="lazy" alt="DBBench checkpoint architecture, including its runtime bindings" src="figures/dbbench-architecture.png"></a></article>
+<article class="exhibit" id="inspect-webshop"><div class="explain"><p class="eyebrow">WebShop · v12</p><h3>Keeping track of product options</h3><p>The option ledger tracks visible option evidence as the agent moves through a product page. The checkpoint also includes search-evidence and the helper modules used by both plugins.</p><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/webshop/plugins/option-ledger.mjs">Read the implementation ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/webshop/evaluation.json">Inspect the evaluation ↗</a></div><a class="plate" href="figures/webshop-architecture.png"><img loading="lazy" alt="WebShop checkpoint architecture, including its runtime bindings" src="figures/webshop-architecture.png"></a></article>
+<article class="exhibit" id="inspect-osbench"><div class="explain"><p class="eyebrow">OSBench · v01</p><h3>A skill can be the retained change</h3><p>The runtime inserts the retained filesystem instructions during prompt assembly. The composition returns an empty list of executable mechanisms in this checkpoint.</p><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/osbench/composition.json">Read the implementation ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/osbench/evaluation.json">Inspect the evaluation ↗</a></div><a class="plate" href="figures/osbench-architecture.png"><img loading="lazy" alt="OSBench checkpoint architecture, including its runtime bindings" src="figures/osbench-architecture.png"></a></article>
+</section>
 <section class="wrap" id="scope"><p class="eyebrow">Edit scope</p><h2>Who benefits from a broader edit?</h2><p class="intro">Each cell is mean test success (%) across the four benchmarks. Scope A changes skill text, B replaces one independent component, and C permits coordinated edits to handlers and shared state.</p><div class="table"><table><thead><tr><th>Improver</th><th>A · Skill</th><th>B · Component</th><th>C · Coordinated</th><th>C − A</th></tr></thead><tbody>
 <tr><th>GPT-6 Luna</th><td>35.86</td><td>34.36</td><td>43.10</td><td>+7.24 pp</td></tr>
 <tr><th>GPT-6.1 Terra</th><td>37.69</td><td>36.66</td><td>43.44</td><td>+5.75 pp</td></tr>
@@ -42,4 +60,5 @@ python -m pip install -e evolution
 python evolution/scripts/smoke.py ./runs/smoke</code></pre>
 <p>The reproduction guide lists the external assets and model access for each benchmark. Choose a frozen profile to evaluate a released checkpoint, or an A/B/C profile to run a new search.</p><div class="actions"><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/REPRODUCING.md">Reproduction guide ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/CITATION.cff">Cite the code ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/issues">Research questions ↗</a></div></section>
 </main><footer><div class="wrap"><a class="logo" href="#top">Hook<i>Evo</i></a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></div></footer>
+<script src="checkpoints.js"></script>
 </body></html>

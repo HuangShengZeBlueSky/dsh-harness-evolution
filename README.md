@@ -1,10 +1,12 @@
 # HookEvo
 
+[![HookEvo paper overview and edit-scope results](website/cover.png)](https://huangshengzebluesky.github.io/dsh-harness-evolution/)
+
 **A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes**
 
 HookEvo searches for task-specific plugins around a frozen language-model agent. A separate improver reads execution traces and proposes a patch. One patch can change both the handler that records a tool result and the handler that uses it later in the episode. DeepSeek Harness provides the runtime and lifecycle hooks.
 
-[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [Checkpoints](#paper-checkpoints) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
+[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [Explore a checkpoint](https://huangshengzebluesky.github.io/dsh-harness-evolution/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
 
 ![One round of HookEvo, from parent traces through a candidate patch to paired evaluation and feedback](figures/method-overview.png)
 
