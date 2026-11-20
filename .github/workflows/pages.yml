@@ -12,17 +12,28 @@ concurrency:
   group: paper-pages
   cancel-in-progress: false
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact: ${{ steps.bundle.outputs.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: cp -R figures website/
+      - uses: actions/configure-pages@v5
+      - id: bundle
+        run: echo "name=github-pages-${{ github.run_attempt }}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+          name: ${{ steps.bundle.outputs.name }}
   publish:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - run: cp -R figures website/
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: website
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ needs.build.outputs.artifact }}
