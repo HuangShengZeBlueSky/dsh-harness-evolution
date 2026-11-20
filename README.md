@@ -74,6 +74,10 @@ The smoke run uses the real DSH runtime, a scripted actor, and a synthetic task.
 
 For benchmark tasks, start with the [reproduction guide](REPRODUCING.md). It separates evaluation of a released checkpoint from running a new search and lists the external assets needed for each benchmark.
 
+## Citation
+
+[Paper citation and BibTeX](https://huangshengzebluesky.github.io/dsh-harness-evolution/#citation) · [Software citation](CITATION.cff)
+
 ## License
 
 The repository uses the [MIT license](LICENSE). Bundled benchmark scoring code carries its [upstream license notices](evolution/benchmark_sources/README.md).
