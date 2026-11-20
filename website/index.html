@@ -16,7 +16,7 @@
 </head>
 <body>
 <header><div class="bar"><a class="logo" href="#top">HookEvo</a>
-<nav aria-label="Sections"><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#scope">Edit scope</a><a href="#mechanisms">Mechanisms</a><a href="#reproduce">Reproduce</a><a href="#citation">Citation</a><a href="https://github.com/HuangShengZeBlueSky/HookEvo">GitHub ↗</a></nav></div></header>
+<nav aria-label="Sections"><a href="#idea">Idea</a><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#scope">Edit scope</a><a href="#mechanisms">Mechanisms</a><a href="#reproduce">Reproduce</a><a href="#citation">Citation</a><a href="https://github.com/HuangShengZeBlueSky/HookEvo">GitHub ↗</a></nav></div></header>
 <main id="top">
 <div class="product-stage"><div class="hero wrap">
 <h1>HookEvo</h1>
@@ -34,6 +34,15 @@
 <div id="hook-detail" aria-live="polite"><p id="hook-copy">A successful pickup updates the object held in episode state.</p><pre><code id="hook-code">if (take) { held = take[1]; known.delete(held); }</code></pre></div>
 <a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/artifacts/alfworld/plugins/action-hint.mjs">Inspect the plugin ↗</a></div></div>
 </div>
+<section class="wrap" id="idea" aria-labelledby="idea-title">
+<p class="eyebrow">Core idea</p>
+<h2 id="idea-title">Evolve the code that records a tool result together with the code that acts on it.</h2>
+<p class="intro">A tool can report success and the agent can still repeat the action a step later. Recording the result helps only if another part of the harness reads it. Tested separately, either half of the repair may leave the task score unchanged.</p>
+<h3>How this works in DBBench</h3>
+<p class="intro">After a database write succeeds, one plugin records the receipt in state shared within the task. A later action check reads that record before another write or a final submission. The state starts fresh for each task.</p>
+<p class="intro">HookEvo gives an external improver the execution traces and the current plugin source. In one candidate it can revise the shared state and the handlers bound to different runtime hooks. The controller runs that candidate and its parent on matched tasks with the same frozen executor, so their score difference measures the combined edit.</p>
+<p><a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/artifacts/dbbench/plugins/write-workflow.mjs">Read the DBBench plugin ↗</a> · <a href="#method">See the selection procedure ↓</a></p>
+</section>
 <div class="findings wrap"><div><b>+25.91 <small>pp</small></b><p>Mean success gain for GPT-6.1 Sol from skill text to coordinated edits.</p></div><div><b>4</b><p>Benchmarks evaluated with frozen Qwen3-4B.</p></div><div><b>3 × 3</b><p>Improvers and edit scopes compared.</p></div></div>
 <section class="wrap" id="leaderboard"><p class="eyebrow">Main leaderboard</p><h2>How do the harnesses compare?</h2><p class="intro">HookEvo achieves the highest held-out success among the Qwen3-4B-family methods in the table on all four benchmarks. Against our local Life-Harness rerun, the gains range from 4.86 percentage points on OSBench to 7.64 on ALFWorld.</p><div class="table"><table id="main-board"><thead><tr><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation</th></tr></thead><tbody>
 <tr class="ours"><th scope="row">HookEvo (Sol, scope C)</th><td>95.41 ± 0.00</td><td>70.56 ± 0.38</td><td>48.17 ± 0.29</td><td>41.67 ± 1.84</td><td>Local</td></tr>
