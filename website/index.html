@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HookEvo · Coordinated Plugin Evolution</title>
+<meta name="description" content="How coordinated edits to runtime plugins improve a frozen tool-using agent. Explore the method, four benchmark checkpoints, and reproduction guide.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="#top">Hook<i>Evo</i></a>
+<nav aria-label="Sections"><a href="#method">Method</a><a href="#results">Results</a><a href="#scope">Edit scope</a><a href="#reproduce">Reproduce</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></nav></div></header>
+<main id="top">
+<div class="wash"><div class="hero wrap">
+<div><p class="eyebrow">Agent harness evolution</p><h1>Hook<i>Evo</i></h1>
+<p class="title">A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes</p>
+<p class="lead">A tool receipt can change what an agent remembers and what it does next. HookEvo evolves the plugins that connect those steps while the executor stays frozen.</p>
+<div class="actions"><a class="primary" href="#method">Explore the method ↓</a><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">Code repository ↗</a><a href="#results">Checkpoints</a></div></div>
+<aside><span class="tag">Edit-scope result</span><div class="metric">+25.91<small> pp</small></div><p>Gain in mean test success for GPT-6.1 Sol when moving from skill text to coordinated plugin edits.</p><div class="stats"><div><b>4</b>benchmarks</div><div><b>3</b>improvers</div><div><b>3</b>edit scopes</div></div></aside>
+</div></div>
+<section class="wrap" id="method"><p class="eyebrow">Method</p><h2>One candidate can change both ends of a repair.</h2>
+<p class="intro">In ALFWorld, one handler records an accepted action in episode state. Other handlers use that state to guide the next prompt or check the next action. Evaluating those edits together lets their combined effect count toward selection.</p>
+<figure><a href="figures/method-overview.png"><img src="figures/method-overview.png" alt="Parent traces feed a scoped patch, followed by matched evaluation and a retention decision."></a><figcaption>One evolution round. Code persists across rounds; shared state starts fresh for every task.</figcaption></figure>
+<div class="steps"><article><h3>Observe</h3><p>Run the parent on a training batch. Sample successful and failed trajectories.</p></article><article><h3>Propose</h3><p>The improver reads the parent source, runtime interfaces and prior feedback, then returns one scoped edit.</p></article><article><h3>Compare</h3><p>Pair parent and candidate by task, trial and seed. Measure score changes, repairs, regressions and hook outputs.</p></article><article><h3>Retain</h3><p>Require a training gain, a changed hook output and, where used, nondecreasing validation performance.</p></article></div></section>
+<section class="wrap" id="results"><p class="eyebrow">Held-out evaluation</p><h2>Four benchmarks, four checkpoints.</h2><p class="intro">The same frozen Qwen3-4B-Instruct-2507 executor runs each harness. The table reports the highest measured checkpoint for each benchmark, with mean success and sample standard deviation over three executions.</p>
+<div class="table"><table><thead><tr><th>Benchmark</th><th>Tasks</th><th>Success (%)</th><th>Source</th><th>Architecture</th></tr></thead><tbody>
+<tr><th>ALFWorld</th><td>109</td><td>95.41 ± 0.00</td><td><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/main/artifacts/alfworld">v06 ↗</a></td><td><a href="figures/alfworld-architecture.png">View figure</a></td></tr>
+<tr><th>DBBench</th><td>300</td><td>70.56 ± 0.38</td><td><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/main/artifacts/dbbench">v35 ↗</a></td><td><a href="figures/dbbench-architecture.png">View figure</a></td></tr>
+<tr><th>WebShop</th><td>200</td><td>48.17 ± 0.29</td><td><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/main/artifacts/webshop">v12 ↗</a></td><td><a href="figures/webshop-architecture.png">View figure</a></td></tr>
+<tr><th>OSBench</th><td>144</td><td>41.67 ± 1.84</td><td><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/tree/main/artifacts/osbench">v01 ↗</a></td><td><a href="figures/osbench-architecture.png">View figure</a></td></tr>
+</tbody></table></div>
+<details><summary>Evolution across search rounds</summary><figure><a href="figures/best-harness-evolution.png"><img loading="lazy" src="figures/best-harness-evolution.png" alt="Training curves and held-out checkpoints for the four benchmark searches"></a><figcaption>Test markers denote measured checkpoints. WebShop continues from an inherited harness in its second stage.</figcaption></figure></details></section>
+<section class="wrap" id="scope"><p class="eyebrow">Edit scope</p><h2>Who benefits from a broader edit?</h2><p class="intro">Each cell is mean test success (%) across the four benchmarks. Scope A changes skill text, B replaces one independent component, and C permits coordinated edits to handlers and shared state.</p><div class="table"><table><thead><tr><th>Improver</th><th>A · Skill</th><th>B · Component</th><th>C · Coordinated</th><th>C − A</th></tr></thead><tbody>
+<tr><th>GPT-6 Luna</th><td>35.86</td><td>34.36</td><td>43.10</td><td>+7.24 pp</td></tr>
+<tr><th>GPT-6.1 Terra</th><td>37.69</td><td>36.66</td><td>43.44</td><td>+5.75 pp</td></tr>
+<tr><th>GPT-6.1 Sol</th><td>38.04</td><td>41.03</td><td>63.95</td><td><strong>+25.91 pp</strong></td></tr>
+</tbody></table></div></section>
+<section class="wrap" id="reproduce"><p class="eyebrow">Reproduction</p><h2>Start with one round.</h2><p class="intro">From a fresh checkout, run the synthetic A/B/C check with Python 3.10–3.12 and Node.js 22.19+ with npm. It exercises the real plugin runtime using a scripted actor.</p>
+<pre><code>python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e evolution
+python evolution/scripts/smoke.py ./runs/smoke</code></pre>
+<p>The reproduction guide lists the external assets and model access for each benchmark. Choose a frozen profile to evaluate a released checkpoint, or an A/B/C profile to run a new search.</p><div class="actions"><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/REPRODUCING.md">Reproduction guide ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/CITATION.cff">Cite the code ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/issues">Research questions ↗</a></div></section>
+</main><footer><div class="wrap"><a class="logo" href="#top">Hook<i>Evo</i></a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></div></footer>
+</body></html>
