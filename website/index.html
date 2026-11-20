@@ -16,7 +16,7 @@
 </head>
 <body>
 <header><div class="bar"><a class="logo" href="#top">HookEvo</a>
-<nav aria-label="Sections"><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#scope">Edit scope</a><a href="#reproduce">Reproduce</a><a href="#citation">Citation</a><a href="https://github.com/HuangShengZeBlueSky/HookEvo">GitHub ↗</a></nav></div></header>
+<nav aria-label="Sections"><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#scope">Edit scope</a><a href="#mechanisms">Mechanisms</a><a href="#reproduce">Reproduce</a><a href="#citation">Citation</a><a href="https://github.com/HuangShengZeBlueSky/HookEvo">GitHub ↗</a></nav></div></header>
 <main id="top">
 <div class="product-stage"><div class="hero wrap">
 <h1>HookEvo</h1>
@@ -44,7 +44,40 @@
 <tr><th scope="row">AgentSquare</th><td>29.36</td><td>—</td><td>18.50</td><td>—</td><td>Life-Harness</td></tr>
 <tr><th scope="row">Meta-Harness (Life rerun)</th><td>35.80</td><td>50.30</td><td>42.50</td><td>25.70</td><td>Life-Harness</td></tr>
 <tr><th scope="row">AHE (Life rerun)</th><td>89.00</td><td>57.30</td><td>39.00</td><td>37.50</td><td>Life-Harness</td></tr>
-<tr><th scope="row">Harness-R1 (paper)</th><td>29.10</td><td>55.70</td><td>38.60</td><td>—</td><td>Published</td></tr></tbody></table></div><p class="board-note">Local results show mean held-out success (%) ± sample SD over three executions. A dash indicates an unreported result. Life-Harness reports ALIGN and AgentSquare in Table 11 and its Meta-Harness and AHE reruns in Table 1. Harness-R1 specifies Qwen3-4B and uses 500 WebShop tasks; our evaluation uses 200. <a href="https://arxiv.org/abs/2605.22166v3">Life-Harness</a> · <a href="https://arxiv.org/abs/2608.02276">Harness-R1</a></p></section>
+<tr><th scope="row">Harness-R1 (paper)</th><td>29.10</td><td>55.70</td><td>38.60</td><td>—</td><td>Published</td></tr></tbody></table></div><p class="board-note">Local results show mean held-out success (%) ± sample SD over three executions. A dash indicates an unreported result. Life-Harness reports ALIGN and AgentSquare in Table 11 and its Meta-Harness and AHE reruns in Table 1. Harness-R1 specifies Qwen3-4B and uses 500 WebShop tasks; our evaluation uses 200. <a href="https://arxiv.org/abs/2605.22166v3">Life-Harness</a> · <a href="https://arxiv.org/abs/2608.02276">Harness-R1</a></p><div id="appendix-c"><h3>Appendix C · Additional method and model comparisons</h3><p>Held-out success (%). Local results include the sample standard deviation. Published results follow the task counts and protocols of their sources. A dash marks an unreported score.</p><details><summary>Qwen3-4B: evolved artifacts and additional baselines</summary><div class="table"><table aria-label="Qwen3-4B: evolved artifacts and additional baselines"><thead><tr><th scope="col">Executor</th><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation source</th></tr></thead><tbody>
+<tr><th scope="row">Qwen3-4B</th><td>HookEvo (Sol high)</td><td>95.41 ± 0.00</td><td>70.56 ± 0.38</td><td>48.17 ± 0.29</td><td>41.67 ± 1.84</td><td>Local</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>ALIGN (released)</td><td>3.36 ± 1.06</td><td>—</td><td>31.00 ± 0.50</td><td>—</td><td>Local</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>ReAct</td><td>10.70 ± 1.06</td><td>—</td><td>—</td><td>—</td><td>Local</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>ReflAct</td><td>18.35 ± 1.83</td><td>—</td><td>—</td><td>—</td><td>Local</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>AutoManual</td><td>76.15 ± 1.59</td><td>—</td><td>—</td><td>—</td><td>Local</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>Harness-R1 patch</td><td>—</td><td>52.22 ± 0.69</td><td>—</td><td>—</td><td>Local</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>Prompt-evolving†</td><td>13.8</td><td>60.7</td><td>30.0</td><td>18.8</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Qwen3-4B</th><td>SkillFM</td><td>77.01</td><td>—</td><td>14.60</td><td>—</td><td>SkillFM</td></tr></tbody></table></div></details>
+<details><summary>Larger open-model executors</summary><div class="table"><table aria-label="Larger open-model executors"><thead><tr><th scope="col">Executor</th><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation source</th></tr></thead><tbody>
+<tr><th scope="row">Qwen2.5-14B</th><td>Life-Harness</td><td>83.49</td><td>66.00</td><td>45.00</td><td>40.97</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Qwen2.5-32B</th><td>Life-Harness</td><td>92.66</td><td>69.33</td><td>46.50</td><td>45.83</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Qwen2.5-72B</th><td>Life-Harness</td><td>85.32</td><td>71.33</td><td>48.00</td><td>47.22</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Llama-3.3-70B</th><td>Life-Harness</td><td>92.66</td><td>68.67</td><td>44.00</td><td>39.58</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Qwen3.6-27B</th><td>Life-Harness</td><td>89.91</td><td>74.33</td><td>43.00</td><td>56.94</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Qwen3.6-35B-A3B</th><td>Life-Harness</td><td>89.91</td><td>71.33</td><td>45.00</td><td>54.17</td><td>Life-Harness</td></tr></tbody></table></div></details>
+<details><summary>Frontier-model executors</summary><div class="table"><table aria-label="Frontier-model executors"><thead><tr><th scope="col">Executor</th><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation source</th></tr></thead><tbody>
+<tr><th scope="row">GPT-5.5 high</th><td>Bare</td><td>93.6</td><td>67.7</td><td>75.1</td><td>47.4</td><td>Life-Harness</td></tr>
+<tr><th scope="row">GPT-5.5 high</th><td>Life-Harness</td><td>95.4</td><td>75.0</td><td>75.8</td><td>53.1</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Opus 4.8 high</th><td>Bare</td><td>97.2</td><td>71.7</td><td>73.8</td><td>50.4</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Opus 4.8 high</th><td>Life-Harness</td><td>98.1</td><td>74.3</td><td>82.7</td><td>50.8</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Gemini 3.1 Pro</th><td>Bare</td><td>96.3</td><td>76.5</td><td>67.3</td><td>50.0</td><td>Life-Harness</td></tr>
+<tr><th scope="row">Gemini 3.1 Pro</th><td>Life-Harness</td><td>96.3</td><td>78.4</td><td>68.1</td><td>48.6</td><td>Life-Harness</td></tr></tbody></table></div></details>
+<details><summary>Additional optimization methods</summary><div class="table"><table aria-label="Additional optimization methods"><thead><tr><th scope="col">Executor</th><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation source</th></tr></thead><tbody>
+<tr><th scope="row">GPT-5.5</th><td>TextGrad</td><td>82.80</td><td>—</td><td>—</td><td>—</td><td>TextGrad, SkillOpt</td></tr>
+<tr><th scope="row">GPT-5.5</th><td>GEPA</td><td>85.80</td><td>—</td><td>—</td><td>—</td><td>GEPA, SkillOpt</td></tr>
+<tr><th scope="row">GPT-5.5</th><td>SkillOpt</td><td>95.50</td><td>—</td><td>—</td><td>—</td><td>SkillOpt</td></tr>
+<tr><th scope="row">GPT-4o</th><td>AgentSquare</td><td>69.50</td><td>—</td><td>—</td><td>—</td><td>AgentSquare</td></tr>
+<tr><th scope="row">GPT-4o</th><td>ADAS</td><td>54.30</td><td>—</td><td>—</td><td>—</td><td>ADAS, AgentSquare</td></tr>
+<tr><th scope="row">GPT-4o</th><td>ReflAct</td><td>93.30</td><td>—</td><td>—</td><td>—</td><td>ReflAct</td></tr>
+<tr><th scope="row">GPT-4-turbo</th><td>AutoManual</td><td>97.40</td><td>—</td><td>—</td><td>—</td><td>AutoManual</td></tr>
+<tr><th scope="row">GPT-3.5 series</th><td>AutoGuide</td><td>79.10</td><td>—</td><td>46.00</td><td>—</td><td>AutoGuide</td></tr>
+<tr><th scope="row">PaLM-540B</th><td>ReAct</td><td>57.00</td><td>—</td><td>40.00</td><td>—</td><td>ReAct</td></tr></tbody></table></div></details>
+<p class="board-note">† Prompt-evolving scores are approximate readings from Life-Harness Figure 6. SkillFM uses its published task counts. Larger open-model and frontier-model results come from Life-Harness Tables 10 and 2.</p></div></section>
 <section class="wrap" id="method"><p class="eyebrow">Method</p><h2>One candidate can change both ends of a repair.</h2>
 <p class="intro">In ALFWorld, one handler records an accepted action in episode state. Other handlers use that state to guide the next prompt or check the next action. Evaluating those edits together lets their combined effect count toward selection.</p>
 <figure><a href="figures/intro-hookevo-scope.png"><img loading="lazy" src="figures/intro-hookevo-scope.png" alt="Figure 1. What a candidate can change. Skill text, an independent component, and coordinated handlers give the improver three different edit scopes."></a><figcaption><b>Figure 1. What a candidate can change.</b> Skill text, an independent component, and coordinated handlers give the improver three different edit scopes.</figcaption></figure>
@@ -70,11 +103,41 @@
 <article class="exhibit" id="inspect-webshop"><div class="explain"><p class="eyebrow">WebShop</p><h3>Keeping track of product options</h3><p>The option ledger tracks visible option evidence as the agent moves through a product page. The checkpoint also includes search-evidence and the helper modules used by both plugins.</p><a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/artifacts/webshop/plugins/option-ledger.mjs">Read the implementation ↗</a><a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/artifacts/webshop/evaluation.json">Inspect the evaluation ↗</a></div><a class="plate" href="figures/webshop-architecture.png"><img loading="lazy" alt="WebShop checkpoint architecture, including its runtime bindings" src="figures/webshop-architecture.png"></a></article>
 <article class="exhibit" id="inspect-osbench"><div class="explain"><p class="eyebrow">OSBench</p><h3>A skill can be the retained change</h3><p>The runtime inserts the retained filesystem instructions during prompt assembly. The composition returns an empty list of executable mechanisms in this checkpoint.</p><a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/artifacts/osbench/composition.json">Read the implementation ↗</a><a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/artifacts/osbench/evaluation.json">Inspect the evaluation ↗</a></div><a class="plate" href="figures/osbench-architecture.png"><img loading="lazy" alt="OSBench checkpoint architecture, including its runtime bindings" src="figures/osbench-architecture.png"></a></article>
 </section>
-<section class="wrap" id="scope"><p class="eyebrow">Edit scope</p><h2>Who benefits from a broader edit?</h2><p class="intro">Each cell is mean test success (%) across the four benchmarks. Scope A changes skill text, B replaces one independent component, and C permits coordinated edits to handlers and shared state.</p><div class="table"><table><thead><tr><th>Improver</th><th>A · Skill</th><th>B · Component</th><th>C · Coordinated</th><th>C − A</th></tr></thead><tbody>
+<section class="wrap" id="scope"><p class="eyebrow">Section 4.2 · Edit scope</p><h2>Who benefits from a broader edit?</h2><p class="intro">Each cell is mean test success (%) across the four benchmarks. Scope A changes skill text, B replaces one independent component, and C permits coordinated edits to handlers and shared state.</p><div class="table"><table><thead><tr><th>Improver</th><th>A · Skill</th><th>B · Component</th><th>C · Coordinated</th><th>C − A</th></tr></thead><tbody>
 <tr><th>GPT-6 Luna</th><td>35.86</td><td>34.36</td><td>43.10</td><td>+7.24 pp</td></tr>
 <tr><th>GPT-6.1 Terra</th><td>37.69</td><td>36.66</td><td>43.44</td><td>+5.75 pp</td></tr>
 <tr><th>GPT-6.1 Sol</th><td>38.04</td><td>41.03</td><td>63.95</td><td><strong>+25.91 pp</strong></td></tr>
-</tbody></table></div></section>
+</tbody></table></div><h3>Test success by benchmark (%)</h3><div class="table"><table aria-label="Section 4.2 test success"><thead><tr><th scope="col">Improver</th><th scope="col">Scope</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Mean</th></tr></thead><tbody>
+<tr><th scope="row">GPT-6 Luna</th><td>A</td><td>23.85</td><td>53.00</td><td>32.33</td><td>34.26</td><td>35.86</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>B</td><td>14.07</td><td>54.56</td><td>31.33</td><td>37.50</td><td>34.36</td></tr>
+<tr><th scope="row">GPT-6 Luna</th><td>C</td><td>48.62</td><td>57.00</td><td>30.67</td><td>36.11</td><td>43.10</td></tr>
+<tr><th scope="row">GPT-6.1 Terra</th><td>A</td><td>26.91</td><td>53.78</td><td>30.50</td><td>39.58</td><td>37.69</td></tr>
+<tr><th scope="row">GPT-6.1 Terra</th><td>B</td><td>29.97</td><td>53.78</td><td>29.33</td><td>33.56</td><td>36.66</td></tr>
+<tr><th scope="row">GPT-6.1 Terra</th><td>C</td><td>52.91</td><td>54.00</td><td>32.83</td><td>34.03</td><td>43.44</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>A</td><td>27.22</td><td>52.89</td><td>34.33</td><td>37.73</td><td>38.04</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>B</td><td>33.33</td><td>53.56</td><td>37.67</td><td>39.58</td><td>41.03</td></tr>
+<tr><th scope="row">GPT-6.1 Sol</th><td>C</td><td>95.41</td><td>70.56</td><td>48.17</td><td>41.67</td><td>63.95</td></tr></tbody></table></div><p class="board-note">The mean weights the four benchmarks equally. Luna and Terra each use one execution for scope C on DBBench and OSBench.</p></section>
+<section class="wrap" id="mechanisms"><p class="eyebrow">Section 4.3</p><h2>What changes inside the harness?</h2><h3>Mechanisms by improver at scope C</h3><p>Gains are percentage points over the bare Qwen3-4B executor on the same benchmark.</p><div class="table"><table aria-label="Section 4.3 mechanisms at scope C"><thead><tr><th scope="col">Benchmark</th><th scope="col">Improver</th><th scope="col">Gain (pp)</th><th scope="col">Selected mechanism</th></tr></thead><tbody>
+<tr><th scope="row">ALFWorld</th><td>GPT-6 Luna</td><td>+32.11</td><td>Training traces show receipt reminders and wrong-object checks.</td></tr>
+<tr><th scope="row">ALFWorld</th><td>GPT-6.1 Terra</td><td>+36.40</td><td>Training traces show pickup guidance and a target check in two-object tasks.</td></tr>
+<tr><th scope="row">ALFWorld</th><td>GPT-6.1 Sol</td><td>+78.90</td><td>Inventory and search history tell the action check when to require a pickup or stop a repeated search.</td></tr>
+<tr><th scope="row">DBBench</th><td>GPT-6 Luna</td><td>+13.00</td><td>An empty read can hold up submission until the agent checks the result.</td></tr>
+<tr><th scope="row">DBBench</th><td>GPT-6.1 Terra</td><td>+10.00</td><td>A SQL skill tells the agent how to quote identifiers.</td></tr>
+<tr><th scope="row">DBBench</th><td>GPT-6.1 Sol</td><td>+26.56</td><td>A log of successful writes guards two decisions: whether to repeat a write and whether to submit.</td></tr>
+<tr><th scope="row">WebShop</th><td>GPT-6 Luna</td><td>+1.17</td><td>A checklist prompts the agent to inspect options and price.</td></tr>
+<tr><th scope="row">WebShop</th><td>GPT-6.1 Terra</td><td>+3.33</td><td>A search skill preserves model numbers and sizes across queries.</td></tr>
+<tr><th scope="row">WebShop</th><td>GPT-6.1 Sol</td><td>+18.67</td><td>Search and option plugins share product state. Checkout can be blocked until a required option is selected.</td></tr>
+<tr><th scope="row">OSBench</th><td>GPT-6 Luna</td><td>+14.61</td><td>A counting skill distinguishes files from matching lines.</td></tr>
+<tr><th scope="row">OSBench</th><td>GPT-6.1 Terra</td><td>+12.53</td><td>A command check flags misleading pipelines. Receipt annotations explain the output.</td></tr>
+<tr><th scope="row">OSBench</th><td>GPT-6.1 Sol</td><td>+20.17</td><td>A skill specifies which files to inspect and which quantity to count.</td></tr></tbody></table></div><h3>Mechanisms as Sol’s edit scope expands</h3><p>Each gain compares selected harnesses from separate searches. WebShop C used a continued search.</p><div class="table"><table aria-label="Section 4.3 Sol scope transitions"><thead><tr><th scope="col">Benchmark</th><th scope="col">Scope change</th><th scope="col">Gain (pp)</th><th scope="col">Change in mechanism</th></tr></thead><tbody>
+<tr><th scope="row">ALFWorld</th><td>A → B</td><td>+6.12</td><td>Target-tracking instructions gain inventory updates from tool receipts.</td></tr>
+<tr><th scope="row">ALFWorld</th><td>B → C</td><td>+62.08</td><td>The action check goes beyond call format: it reads inventory and can block departure before pickup.</td></tr>
+<tr><th scope="row">DBBench</th><td>A → B</td><td>+0.67</td><td>SQL naming guidance is supplemented by repair suggestions after a query fails.</td></tr>
+<tr><th scope="row">DBBench</th><td>B → C</td><td>+17.00</td><td>A log of successful writes lets the harness block duplicate writes or early submission.</td></tr>
+<tr><th scope="row">WebShop</th><td>A → B</td><td>+3.33</td><td>The option checklist gains page feedback that highlights matching choices.</td></tr>
+<tr><th scope="row">WebShop</th><td>B → C</td><td>+10.50</td><td>Search and checkout share option state, so a missing selection can block purchase.</td></tr>
+<tr><th scope="row">OSBench</th><td>A → B</td><td>+1.85</td><td>A receipt annotation tells the agent whether its command counted files or lines.</td></tr>
+<tr><th scope="row">OSBench</th><td>B → C</td><td>+2.08</td><td>A written rule for file selection and aggregation replaces the output annotation.</td></tr></tbody></table></div></section>
 <section class="wrap" id="reproduce"><p class="eyebrow">Reproduction</p><h2>Start with one round.</h2><p class="intro">From a fresh checkout, run the synthetic A/B/C check with Python 3.10–3.12 and Node.js 22.19+ with npm. It exercises the real plugin runtime using a scripted actor.</p>
 <pre><code>python3 -m venv .venv
 source .venv/bin/activate
