@@ -1,0 +1,411 @@
+{
+  "source": "dsh-scale-abc-20261105/groups/osbench/C-sol61-narrow",
+  "budget": 40,
+  "headline_version": "v01",
+  "headline_test": 41.6666666667,
+  "rows": [
+    {
+      "round": 0,
+      "candidate": "baseline",
+      "parent": null,
+      "train": 58.75,
+      "parent_train": null,
+      "adopted": false,
+      "validation": 45.0
+    },
+    {
+      "round": 1,
+      "candidate": "v01",
+      "parent": "baseline",
+      "train": 71.25,
+      "parent_train": 58.75,
+      "adopted": true,
+      "validation": 75.0
+    },
+    {
+      "round": 2,
+      "candidate": "v02",
+      "parent": "v01",
+      "train": 52.5,
+      "parent_train": 71.25,
+      "adopted": false,
+      "validation": 55.00000000000001
+    },
+    {
+      "round": 3,
+      "candidate": "v03",
+      "parent": "v01",
+      "train": 77.5,
+      "parent_train": 71.25,
+      "adopted": true,
+      "validation": 75.0
+    },
+    {
+      "round": 4,
+      "candidate": "v04",
+      "parent": "v03",
+      "train": 76.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 5,
+      "candidate": "v05",
+      "parent": "v03",
+      "train": 70.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 65.0
+    },
+    {
+      "round": 6,
+      "candidate": "v06",
+      "parent": "v03",
+      "train": 76.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 7,
+      "candidate": "v07",
+      "parent": "v03",
+      "train": 76.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 8,
+      "candidate": "v08",
+      "parent": "v03",
+      "train": 77.5,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 60.0
+    },
+    {
+      "round": 9,
+      "candidate": "v09",
+      "parent": "v03",
+      "train": 73.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 10,
+      "candidate": "v10",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 70.0
+    },
+    {
+      "round": 11,
+      "candidate": "v11",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 70.0
+    },
+    {
+      "round": 12,
+      "candidate": "v12",
+      "parent": "v03",
+      "train": 73.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 13,
+      "candidate": "v13",
+      "parent": "v03",
+      "train": 66.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 14,
+      "candidate": "v14",
+      "parent": "v03",
+      "train": 55.00000000000001,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 45.0
+    },
+    {
+      "round": 15,
+      "candidate": "v15",
+      "parent": "v03",
+      "train": 68.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 50.0
+    },
+    {
+      "round": 16,
+      "candidate": "v16",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 17,
+      "candidate": "v17",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 18,
+      "candidate": "v18",
+      "parent": "v03",
+      "train": 58.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 65.0
+    },
+    {
+      "round": 19,
+      "candidate": "v19",
+      "parent": "v03",
+      "train": 73.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 20,
+      "candidate": "v20",
+      "parent": "v03",
+      "train": 78.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 70.0
+    },
+    {
+      "round": 21,
+      "candidate": "v21",
+      "parent": "v03",
+      "train": 48.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 65.0
+    },
+    {
+      "round": 22,
+      "candidate": "v22",
+      "parent": "v03",
+      "train": 58.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 50.0
+    },
+    {
+      "round": 23,
+      "candidate": "v23",
+      "parent": "v03",
+      "train": 67.5,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 65.0
+    },
+    {
+      "round": 24,
+      "candidate": "v24",
+      "parent": "v03",
+      "train": 43.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 45.0
+    },
+    {
+      "round": 25,
+      "candidate": "v25",
+      "parent": "v03",
+      "train": 73.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 26,
+      "candidate": "v26",
+      "parent": "v03",
+      "train": 73.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 70.0
+    },
+    {
+      "round": 27,
+      "candidate": "v27",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 80.0
+    },
+    {
+      "round": 28,
+      "candidate": "v28",
+      "parent": "v03",
+      "train": 77.5,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 29,
+      "candidate": "v29",
+      "parent": "v03",
+      "train": 76.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 30,
+      "candidate": "v30",
+      "parent": "v03",
+      "train": 77.5,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 31,
+      "candidate": "v31",
+      "parent": "v03",
+      "train": 76.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 80.0
+    },
+    {
+      "round": 32,
+      "candidate": "v32",
+      "parent": "v03",
+      "train": 77.5,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 80.0
+    },
+    {
+      "round": 33,
+      "candidate": "v33",
+      "parent": "v03",
+      "train": 55.00000000000001,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 50.0
+    },
+    {
+      "round": 34,
+      "candidate": "v34",
+      "parent": "v03",
+      "train": 58.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 40.0
+    },
+    {
+      "round": 35,
+      "candidate": "v35",
+      "parent": "v03",
+      "train": 68.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 65.0
+    },
+    {
+      "round": 36,
+      "candidate": "v36",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 80.0
+    },
+    {
+      "round": 37,
+      "candidate": "v37",
+      "parent": "v03",
+      "train": 75.0,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 38,
+      "candidate": "v38",
+      "parent": "v03",
+      "train": 68.75,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 65.0
+    },
+    {
+      "round": 39,
+      "candidate": "v39",
+      "parent": "v03",
+      "train": 76.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 75.0
+    },
+    {
+      "round": 40,
+      "candidate": "v40",
+      "parent": "v03",
+      "train": 56.25,
+      "parent_train": 77.5,
+      "adopted": false,
+      "validation": 55.00000000000001
+    }
+  ],
+  "tests": [
+    {
+      "round": 1,
+      "score": 41.66666666666667,
+      "sd": 1.8373272993504097,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.4375,
+        "1": 0.4097222222222222,
+        "2": 0.4027777777777778
+      }
+    },
+    {
+      "round": 3,
+      "score": 40.0462962962963,
+      "sd": 1.0607814108694067,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.4027777777777778,
+        "1": 0.3888888888888889,
+        "2": 0.4097222222222222
+      }
+    }
+  ],
+  "headline_evaluation": {
+    "source": "dsh-scale-abc-20261105/groups/osbench/C-sol61-narrow",
+    "checkpoint": "v01",
+    "repeat_rates": {
+      "0": 0.4375,
+      "1": 0.4097222222222222,
+      "2": 0.4027777777777778
+    },
+    "sample_sd_pp": 1.83732729935041
+  }
+}

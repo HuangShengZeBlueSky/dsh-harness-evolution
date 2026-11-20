@@ -1,0 +1,358 @@
+{
+  "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol61-high",
+  "budget": 40,
+  "headline_version": "v06",
+  "headline_test": 95.41284403669725,
+  "rows": [
+    {
+      "round": 0,
+      "candidate": "baseline",
+      "train": 17.0,
+      "parent_train": null,
+      "adopted": false
+    },
+    {
+      "round": 1,
+      "candidate": "v01",
+      "parent": "baseline",
+      "train": 18.0,
+      "parent_train": 17.0,
+      "adopted": true
+    },
+    {
+      "round": 2,
+      "candidate": "v02",
+      "parent": "v01",
+      "train": 68.0,
+      "parent_train": 18.0,
+      "adopted": true
+    },
+    {
+      "round": 3,
+      "candidate": "v03",
+      "parent": "v02",
+      "train": 77.0,
+      "parent_train": 68.0,
+      "adopted": true
+    },
+    {
+      "round": 4,
+      "candidate": "v04",
+      "parent": "v03",
+      "train": 91.0,
+      "parent_train": 77.0,
+      "adopted": true
+    },
+    {
+      "round": 5,
+      "candidate": "v05",
+      "parent": "v04",
+      "train": 94.0,
+      "parent_train": 91.0,
+      "adopted": true
+    },
+    {
+      "round": 6,
+      "candidate": "v06",
+      "parent": "v05",
+      "train": 98.0,
+      "parent_train": 94.0,
+      "adopted": true
+    },
+    {
+      "round": 7,
+      "candidate": "v07",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 8,
+      "candidate": "v08",
+      "parent": "v06",
+      "train": 96.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 9,
+      "candidate": "v09",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 10,
+      "candidate": "v10",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 11,
+      "candidate": "v11",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 12,
+      "candidate": "v12",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 13,
+      "candidate": "v13",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 14,
+      "candidate": "v14",
+      "parent": "v06",
+      "train": 71.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 15,
+      "candidate": "v15",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 16,
+      "candidate": "v16",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 17,
+      "candidate": "v17",
+      "parent": "v06",
+      "train": 96.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 18,
+      "candidate": "v18",
+      "parent": "v06",
+      "train": 95.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 19,
+      "candidate": "v19",
+      "parent": "v06",
+      "train": 67.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 20,
+      "candidate": "v20",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 21,
+      "candidate": "v21",
+      "parent": "v06",
+      "train": 94.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 22,
+      "candidate": "v22",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 23,
+      "candidate": "v23",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 24,
+      "candidate": "v24",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 25,
+      "candidate": "v25",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 26,
+      "candidate": "v26",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 27,
+      "candidate": "v27",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 28,
+      "candidate": "v28",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 29,
+      "candidate": "v29",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 30,
+      "candidate": "v30",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 31,
+      "candidate": "v31",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 32,
+      "candidate": "v32",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 33,
+      "candidate": "v33",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 34,
+      "candidate": "v34",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 35,
+      "candidate": "v35",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 36,
+      "candidate": "v36",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 37,
+      "candidate": "v37",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 38,
+      "candidate": "v38",
+      "parent": "v06",
+      "train": 98.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 39,
+      "candidate": "v39",
+      "parent": "v06",
+      "train": 86.0,
+      "parent_train": 98.0,
+      "adopted": false
+    },
+    {
+      "round": 40,
+      "candidate": "v40",
+      "parent": "v06",
+      "train": 97.0,
+      "parent_train": 98.0,
+      "adopted": false
+    }
+  ],
+  "tests": [
+    {
+      "round": 6,
+      "score": 95.41284403669725,
+      "sd": 0.0,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.9541284403669725,
+        "1": 0.9541284403669725,
+        "2": 0.9541284403669725
+      }
+    }
+  ],
+  "headline_evaluation": {
+    "source": "simple-dsh-l4-fixed40-20261030/experiments/alfworld/sol61-high",
+    "checkpoint": "v06",
+    "repeat_rates": {
+      "0": 0.9541284403669725,
+      "1": 0.9541284403669725,
+      "2": 0.9541284403669725
+    },
+    "sample_sd_pp": 0.0
+  }
+}

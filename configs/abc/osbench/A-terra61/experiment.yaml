@@ -40,9 +40,16 @@ benchmark:
     docker_host: ${DOCKER_HOST}
     life_harness: false
   validation: validation.jsonl
+  transport:
+    model_url: ${BENCH_CHAT_URL}
+    tokenizer_url: ${BENCH_TOKENIZER_URL}
+    max_context_tokens: 32768
+    max_output_tokens: 4096
+    request_timeout_seconds: 575
+    transport_retries: 2
+    max_model_calls: 16
 domain: osbench
-start_label: "H0\u96F6\u589E\u5F3A\u63D2\u4EF6"
-playbook: PLAYBOOK.md
+start_label: Initial harness
 scale:
   mode: A
   selection: strict_success

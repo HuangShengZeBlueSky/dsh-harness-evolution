@@ -1,101 +1,48 @@
-# DSH Harness Evolution
+# HookEvo
 
-**How much can a frozen agent improve by evolving its harness?**
+**A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes**
 
-We study how improver capability and editable scope shape the harnesses discovered from execution feedback. A frozen Qwen3-4B executor solves tasks; a separate improver updates the plugins around it on **DeepSeek Harness**.
+HookEvo searches for task-specific plugins around a frozen language-model agent. A separate improver reads execution traces and proposes a patch. One patch can change both the handler that records a tool result and the handler that uses it later in the episode. DeepSeek Harness provides the runtime and lifecycle hooks.
 
-[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en) · [Results](LEADERBOARD.md) · [Reproduce](docs/REPRODUCING.md) · [Artifacts](harnesses/) · [简体中文](README.zh-CN.md)
+[Checkpoints](#paper-checkpoints) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
 
-## Current research snapshot · 2026-11-13
+![One round of HookEvo, from parent traces through a candidate patch to paired evaluation and feedback](figures/method-overview.png)
 
-Synced from the current Overleaf manuscript: four-benchmark results, 36 model–scope profiles, completed C evaluations, artifact source code, figures and reproduction materials. Headline results are measured peaks; historical five-benchmark results and development-selected outputs remain available.
+## Paper checkpoints
 
-[Manuscript and appendices](paper/manuscript/) · [Research status and data](paper/STATUS.md) · [Configurations and provenance](paper/manuscript/dsh-draft/reproducibility/experiment-index.json)
+The executor is Qwen3-4B-Instruct-2507. Each row gives the highest measured checkpoint reported for that benchmark, with mean held-out success and sample standard deviation across three executions. The checkpoint identifier is local to its search run.
 
-## Method
+| Benchmark | Released checkpoint | Held-out tasks | Success (%) | What to inspect |
+| --- | --- | ---: | ---: | --- |
+| ALFWorld | [v06](artifacts/alfworld) | 109 | 95.41 ± 0.00 | [Action hints](artifacts/alfworld/plugins/action-hint.mjs) turn accepted receipts into episode state for context and action checks. [Architecture](figures/alfworld-architecture.png) |
+| DBBench | [v35](artifacts/dbbench) | 300 | 70.56 ± 0.38 | The [write workflow](artifacts/dbbench/plugins/write-workflow.mjs) and [result bridge](artifacts/dbbench/plugins/result-bridge.mjs) use SQL receipts to guide later calls and answers. [Architecture](figures/dbbench-architecture.png) |
+| WebShop | [v12](artifacts/webshop) | 200 | 48.17 ± 0.29 | The [option ledger](artifacts/webshop/plugins/option-ledger.mjs) and [search evidence](artifacts/webshop/plugins/search-evidence.mjs) track product and option evidence. [Architecture](figures/webshop-architecture.png) |
+| OSBench | [v01](artifacts/osbench) | 144 | 41.67 ± 1.84 | The retained change is the skill text in [composition.json](artifacts/osbench/composition.json). Its executable composition is empty. [Architecture](figures/osbench-architecture.png) |
 
-**Observe and attribute → propose a candidate → evaluate and select → retain feedback.**
+## How the search works
 
-The loop reads the current harness and its execution traces, proposes a reusable repair, and compares it with its parent. DSH supplies the execution loop, plugin lifecycle, prompt assembly, tool hooks and episode state.
+1. Run the parent harness on a training batch. Save its scores, hook outputs, and successful and failed trajectories.
+2. Give the improver sampled trajectories, parent source, runtime interfaces, and the previous decision. It proposes one replacement and a rationale. Scope A edits skill text, B edits one independent component, and C permits coordinated edits that share episode-local state.
+3. Compare the candidate and parent on matching tasks, trials, and seeds. Retain a candidate when the training objective improves, an emitted hook output changes, and validation performance holds or improves when validation is configured.
+4. Feed the decision, repairs, and regressions into the next round. Accepted code persists across rounds. Each new episode starts with fresh runtime state.
 
-![Controlled harness search on DSH](paper/previews/current-method-overview.png)
+[Reported evolution curves](figures/best-harness-evolution.png) · [Scope C hook implementation](evolution/src/dsh_evolve/assets/slot-c.mjs)
 
-**L4** is the historical capability-guided search recipe. It describes the current agent's abilities and plugin responsibilities before proposing code edits. **A/B/C** controls which edits the improver may make within a shared search procedure.
+## Installation
 
-| Scope | Editable surface |
-|---|---|
-| A | Skill text |
-| B | One independent component per round: skill, memory, action checking or receipt interpretation |
-| C | Skill or coordinated mechanisms sharing episode-local state across hooks |
-
-[L4 implementation](evolution/src/dsh_evolve/loops/l4.py) · [A/B/C controller](evolution/src/dsh_evolve/abc.py) · [Recorded configurations](configs/)
-
-## What evolves?
-
-The released **DBBench L4 harness reaches 70.56% test success**. Its write workflow records database receipts in episode state. Later context exposes that state to the solver, while action checks use it to handle repeated writes and premature submission. Other plugins provide schema grounding, result handling and recovery.
-
-![Evolved DBBench harness](paper/previews/artifact-architecture.png)
-
-[Inspect the harness](harnesses/dbbench/20261026-l4-h0-sol61-v35/) · [Runtime protocol](harnesses/dbbench/20261026-l4-h0-sol61-v35/protocol.json) · [Recorded evaluation](harnesses/dbbench/20261026-l4-h0-sol61-v35/evaluation.json)
-
-## Results and evolution
-
-<!-- paper-table:start -->
-| Benchmark | Current manuscript measured peak |
-|---|---:|
-| ALFWorld | 95.41 ± 0.00% |
-| DBBench | 70.56 ± 0.38% |
-| WebShop | 48.17 ± 0.29% |
-| OSBench | 41.67 ± 1.84% |
-<!-- paper-table:end -->
-
-![Training and measured test trajectories](paper/previews/current-best-harness-evolution.png)
-
-<details>
-<summary>Current manuscript settings and checkpoint selection</summary>
-
-The table and evolution figure follow the 2026-11-13 Overleaf manuscript. Headline values are highest measured test checkpoints with sample standard deviations across executions. The [experiment index](paper/manuscript/dsh-draft/reproducibility/experiment-index.json) preserves their lineages, training configurations and test records. The current OSBench headline is C-sol61-narrow v01 at 41.67%.
-
-The [historical five-benchmark table](paper/data/main-results-20261111.json) and [development-selected controlled outputs](paper/data/controlled-abc.json) remain separate. See the [current 36 model–scope profiles](paper/data/scope-profiles-20261113.json) for the updated comparison.
-</details>
-
-## Historical experiment collection
-
-| Question | Evidence |
-|---|---|
-| What changes across improvers and reasoning effort? | [Eight C configurations per benchmark](paper/README.md#多配置进化曲线) |
-| What changes across editable scopes? | [Nine-panel model × scope plots](https://huangshengzebluesky.github.io/dsh-harness-evolution/?lang=en#curves) and [matched A/B/C records](paper/data/controlled-abc.json) |
-| What changes with training data? | [C data-control configurations](configs/abc/) and their measured outcomes |
-| How do training gains relate to held-out performance? | [Evolution and late-regression figures](paper/README.md) |
-
-The four-benchmark collection contains **68 curve panels**, with measured test points, uncertainty where available, and configuration identities. [All 28 figures](paper/README.md) · [Numeric trajectories](paper/data/trajectories.json).
-
-## Quick start
-
-Prepare the benchmark assets and model access described in the [environment guide](docs/REPRODUCING.md), then run:
+From the repository root on Linux or macOS, use Python 3.10–3.12 and Node.js 22.19 or later with npm.
 
 ~~~bash
+python3 -m venv .venv
+source .venv/bin/activate
 python -m pip install -e evolution
-dsh-evolve init ./runs/db-c --profile abc/dbbench/C-sol61 --assets /data/dbbench
-dsh-evolve setup ./runs/db-c/experiment.yaml
-dsh-evolve run ./runs/db-c/experiment.yaml
+python evolution/scripts/smoke.py ./runs/smoke
 ~~~
 
-- **Historical L4 search** — select a profile from [configs/l4](configs/l4/).
-- **Controlled A/B/C search** — select a profile from [configs/abc](configs/abc/).
-- **Frozen-artifact evaluation** — load a [released harness](harnesses/) with the matching [evaluation protocol](docs/REPRODUCING.md#frozen-artifacts).
+The smoke run uses the real DSH runtime, a scripted actor, and a synthetic task. It installs Node dependencies and exercises A/B/C proposals, selection, and held-out evaluation without a model account. Choose a fresh output directory for another smoke run.
 
-The [installation check](evolution/scripts/smoke.py) exercises the runtime on a synthetic task without paid model calls.
+For benchmark tasks, start with the [reproduction guide](REPRODUCING.md). It separates evaluation of a released checkpoint from running a new search and lists the external assets needed for each benchmark.
 
-## Code and data
+## License
 
-| Directory | Contents |
-|---|---|
-| [evolution](evolution/) | Shared runtime, L4 recipe and A/B/C controller |
-| [configs](configs/) | Exact task schedules, model settings and starting compositions |
-| [harnesses](harnesses/) | Five-benchmark artifacts, diagrams, protocols and measurements |
-| [paper](paper/) | Figures, tables and numeric experiment records |
-
-[Software citation](CITATION.cff) · [Publishing results](docs/PUBLISHING.md) · [MIT license](LICENSE)
-
-Built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Benchmark and dependency credits are listed in [Third-party notices](docs/THIRD_PARTY.md).
+The repository uses the [MIT license](LICENSE). Bundled benchmark scoring code carries its [upstream license notices](evolution/benchmark_sources/README.md).
