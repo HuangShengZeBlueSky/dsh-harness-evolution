@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Round replay · HookEvo</title><link rel="stylesheet" href="style.css">
+<style>
+.replay{padding:40px 0 70px}.replay h1{font-size:clamp(44px,7vw,82px);margin:12px 0}.replay h2{font-size:34px}.pair-stats{display:flex;gap:clamp(18px,5vw,70px);flex-wrap:wrap;border-block:1px solid var(--border);padding:18px 0}.pair-stats b{display:block;font:600 34px Georgia;color:var(--violet)}.replay article{padding:12px 0}.replay details{background:white;border:1px solid var(--border);border-radius:12px;padding:15px}.replay select{font:inherit}.cases{max-height:350px;overflow:auto}.cases td,.cases th{font-size:14px;padding:8px 12px}.cases td:first-child{white-space:normal;overflow-wrap:anywhere}.replay .status{font:bold 14px var(--mono);color:var(--violet)}.switcher{align-items:center}.replay figure{margin:0}.replay .note{color:var(--muted);font-size:14px}
+</style></head><body><header><div class="bar"><a class="logo" href="./">Hook<i>Evo</i></a><nav><a href="./#method">Method</a><a href="./#leaderboard">Leaderboard</a><a href="alfworld-rounds.json">Replay data ↗</a></nav></div></header>
+<main class="wrap replay"><p class="eyebrow">ALFWorld · Evolution workbench</p><h1>Round replay</h1><p class="intro">Follow two consecutive decisions from the fixed-pool ALFWorld search. Each comparison uses the same 100 training tasks. The replay uses recorded outcomes and English summaries of the original decision notes.</p>
+<div id="rounds" class="switcher" aria-label="Select a search round"></div><div id="record" hidden>
+<p class="eyebrow">Observed behavior</p><h2 id="title"></h2><p id="observation"></p>
+<p class="eyebrow">Paired evaluation</p><div class="pair-stats" id="metrics"></div>
+<article><p class="eyebrow">Retention decision</p><h3 id="status"></h3><p id="decision"></p></article>
+<details open><summary>Inspect task outcomes</summary><p><label>Show <select id="filter"><option value="changed">Changed outcomes</option><option value="fail">Candidate failures</option><option value="all">All paired tasks</option></select></label></p>
+<p id="count" role="status"></p><div class="cases"><table><thead><tr><th>Task / trial</th><th>Parent</th><th>Candidate</th></tr></thead><tbody id="cases"></tbody></table></div></details></div>
+<p class="note" id="notice">Loading recorded rounds…</p><a href="./#results">See held-out results →</a></main><script src="replay.js"></script></body></html>

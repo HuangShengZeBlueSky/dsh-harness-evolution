@@ -1,0 +1,1220 @@
+[
+  {
+    "round": 6,
+    "title": "Placement into closed destinations",
+    "observation": "The decision record identifies three target tasks with closed destinations. In the successful candidate runs, the agent opened the destination before placing the object.",
+    "decision": "Four tasks changed from failure to success. The three target repairs showed the intended action sequence. The record leaves the cause of the additional cloth-task recovery open.",
+    "retained": true,
+    "cases": [
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-GarbageCan-411/trial_T20190908_051545_764778",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-305/trial_T20190909_110717_764199",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Cup-None-SideTable-21/trial_T20190906_192755_687590",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Ladle-None-Drawer-2/trial_T20190906_162750_791095",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Egg-None-DiningTable-23/trial_T20190908_083753_379941",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-6/trial_T20190906_214148_552057",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-307/trial_T20190908_190608_801964",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-SinkBasin-1/trial_T20190908_232530_634436",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Cloth-None-SinkBasin-417/trial_T20190908_120440_221872",
+        "trial": 0,
+        "parent": false,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-Cabinet-19/trial_T20190907_152738_415962",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SoapBar-None-BathtubBasin-408/trial_T20190907_165913_913312",
+        "trial": 0,
+        "parent": false,
+        "candidate": false
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-StoveBurner-1/trial_T20190907_183647_995754",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-CellPhone-None-Drawer-324/trial_T20190907_212046_809746",
+        "trial": 0,
+        "parent": false,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Newspaper-None-Sofa-211/trial_T20190906_174949_956681",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Pan-None-DiningTable-17/trial_T20190908_120954_429542",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-GarbageCan-411/trial_T20190908_051601_537197",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-22/trial_T20190907_070833_092620",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Newspaper-None-DeskLamp-225/trial_T20190909_085713_995585",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Plate-None-Fridge-13/trial_T20190907_040058_909208",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-KeyChain-None-Sofa-217/trial_T20190908_065419_074210",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Tomato-None-GarbageCan-15/trial_T20190907_082803_736076",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-413/trial_T20190908_023523_035014",
+        "trial": 0,
+        "parent": false,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Watch-None-CoffeeTable-222/trial_T20190908_032356_906995",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-WineBottle-None-DiningTable-17/trial_T20190908_003247_118049",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pencil-None-DeskLamp-302/trial_T20190908_101013_940730",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SaltShaker-None-CounterTop-25/trial_T20190908_084232_595551",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Watch-None-DeskLamp-205/trial_T20190907_001948_509721",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-StoveBurner-23/trial_T20190906_220116_510303",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-11/trial_T20190908_220000_908386",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_165603_183022",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SoapBar-None-BathtubBasin-429/trial_T20190909_011409_975928",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-1/trial_T20190907_100909_634204",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-Shelf-5/trial_T20190906_203924_704982",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-CoffeeTable-222/trial_T20190909_060926_764421",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-KeyChain-None-ArmChair-222/trial_T20190909_100429_589810",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-DishSponge-None-Cart-401/trial_T20190907_024617_000014",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-KeyChain-None-Ottoman-203/trial_T20190908_123648_878822",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Knife-None-Drawer-21/trial_T20190908_141841_920948",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-6/trial_T20190909_132658_532074",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Candle-None-Dresser-413/trial_T20190909_040707_760902",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-TissueBox-None-DeskLamp-216/trial_T20190908_200035_042748",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Egg-None-SideTable-28/trial_T20190908_115525_985140",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Cup-None-SinkBasin-22/trial_T20190909_054956_720701",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Pen-None-Desk-310/trial_T20190908_030156_053101",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-24/trial_T20190906_185300_516151",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-Cabinet-22/trial_T20190908_073018_399742",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034918_885162",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034855_345410",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SoapBar-None-Cart-430/trial_T20190909_145837_660135",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Laptop-None-DeskLamp-301/trial_T20190907_185618_889790",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Tomato-None-DiningTable-16/trial_T20190907_201141_969111",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093241_795263",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Tomato-None-Fridge-19/trial_T20190909_152219_111684",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-Cart-430/trial_T20190909_100630_359013",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-28/trial_T20190907_190721_183592",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Plate-None-Cabinet-7/trial_T20190907_231242_525267",
+        "trial": 0,
+        "parent": false,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Cloth-None-Toilet-417/trial_T20190908_152417_880895",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Egg-None-Microwave-14/trial_T20190907_232753_570897",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-KeyChain-None-Dresser-217/trial_T20190908_133414_664426",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-CD-None-DeskLamp-323/trial_T20190908_051103_156741",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SaltShaker-None-Cabinet-3/trial_T20190908_102405_454935",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-SinkBasin-1/trial_T20190908_232703_122907",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-218/trial_T20190909_043253_098401",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-HandTowel-None-GarbageCan-420/trial_T20190908_153305_392513",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093252_166576",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Potato-None-Microwave-15/trial_T20190908_154425_762831",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Pan-None-StoveBurner-5/trial_T20190907_124501_787647",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Egg-None-Microwave-12/trial_T20190911_171520_823105",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-Toilet-412/trial_T20190908_112135_164068",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-ToiletPaper-None-Cabinet-402/trial_T20190908_144858_323079",
+        "trial": 0,
+        "parent": false,
+        "candidate": false
+      },
+      {
+        "task": "train/pick_and_place_simple-Watch-None-CoffeeTable-207/trial_T20190907_152215_435376",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-ArmChair-214/trial_T20190909_011022_706846",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-ArmChair-214/trial_T20190909_020949_765614",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-SoapBar-None-BathtubBasin-419/trial_T20190907_133059_162744",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pen-None-DeskLamp-327/trial_T20190909_020841_759592",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Egg-None-SideTable-21/trial_T20190907_044013_708280",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Spatula-None-CounterTop-19/trial_T20190906_181400_748701",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Tomato-None-SinkBasin-3/trial_T20190909_004608_186817",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-SoapBar-None-Drawer-426/trial_T20190909_074540_552956",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-305/trial_T20190909_110653_100811",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-5/trial_T20190908_144144_976529",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SprayBottle-None-GarbageCan-415/trial_T20190907_070502_104667",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-WineBottle-None-Shelf-7/trial_T20190907_200104_945677",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Egg-None-GarbageCan-13/trial_T20190906_190930_720395",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Mug-None-Microwave-20/trial_T20190908_125321_767640",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Cloth-None-Toilet-426/trial_T20190910_045221_427487",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Egg-None-Fridge-24/trial_T20190909_005558_532531",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Pencil-None-Desk-313/trial_T20190906_200948_981650",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-SinkBasin-30/trial_T20190908_080503_071243",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Pan-None-StoveBurner-2/trial_T20190909_052052_434558",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Plate-None-Microwave-7/trial_T20190907_170059_704503",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-Sofa-212/trial_T20190907_235335_006124",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Pencil-None-Desk-307/trial_T20190909_075150_052392",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-12/trial_T20190907_125547_175997",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pencil-None-DeskLamp-328/trial_T20190906_201130_178664",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Potato-None-Microwave-25/trial_T20190908_113515_119158",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Statue-None-DeskLamp-304/trial_T20190909_011906_700145",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SprayBottle-None-Toilet-426/trial_T20190908_155236_907481",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Pencil-None-Drawer-316/trial_T20190907_003822_891019",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      }
+    ]
+  },
+  {
+    "round": 7,
+    "title": "Tracking a second object",
+    "observation": "The next edit exposed explicit quantity and undo counts to the executor. The second object still went unobserved on the targeted tasks.",
+    "decision": "Both target tasks still failed. The edit changed the input, but strict training success did not improve, so the parent was retained.",
+    "retained": false,
+    "cases": [
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-GarbageCan-411/trial_T20190908_051545_764778",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-305/trial_T20190909_110717_764199",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Cup-None-SideTable-21/trial_T20190906_192755_687590",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Ladle-None-Drawer-2/trial_T20190906_162750_791095",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Egg-None-DiningTable-23/trial_T20190908_083753_379941",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-6/trial_T20190906_214148_552057",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-307/trial_T20190908_190608_801964",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-SinkBasin-1/trial_T20190908_232530_634436",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Cloth-None-SinkBasin-417/trial_T20190908_120440_221872",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-Cabinet-19/trial_T20190907_152738_415962",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SoapBar-None-BathtubBasin-408/trial_T20190907_165913_913312",
+        "trial": 0,
+        "parent": false,
+        "candidate": false
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-StoveBurner-1/trial_T20190907_183647_995754",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-CellPhone-None-Drawer-324/trial_T20190907_212046_809746",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Newspaper-None-Sofa-211/trial_T20190906_174949_956681",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Pan-None-DiningTable-17/trial_T20190908_120954_429542",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-GarbageCan-411/trial_T20190908_051601_537197",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-22/trial_T20190907_070833_092620",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Newspaper-None-DeskLamp-225/trial_T20190909_085713_995585",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Plate-None-Fridge-13/trial_T20190907_040058_909208",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-KeyChain-None-Sofa-217/trial_T20190908_065419_074210",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Tomato-None-GarbageCan-15/trial_T20190907_082803_736076",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-413/trial_T20190908_023523_035014",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Watch-None-CoffeeTable-222/trial_T20190908_032356_906995",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-WineBottle-None-DiningTable-17/trial_T20190908_003247_118049",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pencil-None-DeskLamp-302/trial_T20190908_101013_940730",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Laptop-None-DeskLamp-216/trial_T20190907_185526_145194",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SaltShaker-None-CounterTop-25/trial_T20190908_084232_595551",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Watch-None-DeskLamp-205/trial_T20190907_001948_509721",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-StoveBurner-23/trial_T20190906_220116_510303",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Egg-None-GarbageCan-11/trial_T20190908_220000_908386",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Ladle-None-DiningTable-4/trial_T20190909_165603_183022",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SoapBar-None-BathtubBasin-429/trial_T20190909_011409_975928",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-1/trial_T20190907_100909_634204",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-Shelf-5/trial_T20190906_203924_704982",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-CoffeeTable-222/trial_T20190909_060926_764421",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-KeyChain-None-ArmChair-222/trial_T20190909_100429_589810",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-DishSponge-None-Cart-401/trial_T20190907_024617_000014",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-KeyChain-None-Ottoman-203/trial_T20190908_123648_878822",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Knife-None-Drawer-21/trial_T20190908_141841_920948",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-6/trial_T20190909_132658_532074",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Candle-None-Dresser-413/trial_T20190909_040707_760902",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-TissueBox-None-DeskLamp-216/trial_T20190908_200035_042748",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Egg-None-SideTable-28/trial_T20190908_115525_985140",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Cup-None-SinkBasin-22/trial_T20190909_054956_720701",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Pen-None-Desk-310/trial_T20190908_030156_053101",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-24/trial_T20190906_185300_516151",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-Cabinet-22/trial_T20190908_073018_399742",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034918_885162",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-303/trial_T20190907_034855_345410",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SoapBar-None-Cart-430/trial_T20190909_145837_660135",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Laptop-None-DeskLamp-301/trial_T20190907_185618_889790",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Tomato-None-DiningTable-16/trial_T20190907_201141_969111",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093241_795263",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Tomato-None-Fridge-19/trial_T20190909_152219_111684",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-Cart-430/trial_T20190909_100630_359013",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-28/trial_T20190907_190721_183592",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Plate-None-Cabinet-7/trial_T20190907_231242_525267",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Cloth-None-Toilet-417/trial_T20190908_152417_880895",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Egg-None-Microwave-14/trial_T20190907_232753_570897",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-KeyChain-None-Dresser-217/trial_T20190908_133414_664426",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-CD-None-DeskLamp-323/trial_T20190908_051103_156741",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-SaltShaker-None-Cabinet-3/trial_T20190908_102405_454935",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Pan-None-SinkBasin-1/trial_T20190908_232703_122907",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-218/trial_T20190909_043253_098401",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-HandTowel-None-GarbageCan-420/trial_T20190908_153305_392513",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-CellPhone-None-DeskLamp-320/trial_T20190908_093252_166576",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Potato-None-Microwave-15/trial_T20190908_154425_762831",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Pan-None-StoveBurner-5/trial_T20190907_124501_787647",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Egg-None-Microwave-12/trial_T20190911_171520_823105",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SoapBottle-None-Toilet-412/trial_T20190908_112135_164068",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-ToiletPaper-None-Cabinet-402/trial_T20190908_144858_323079",
+        "trial": 0,
+        "parent": false,
+        "candidate": false
+      },
+      {
+        "task": "train/pick_and_place_simple-Watch-None-CoffeeTable-207/trial_T20190907_152215_435376",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-ArmChair-214/trial_T20190909_011022_706846",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-ArmChair-214/trial_T20190909_020949_765614",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-SoapBar-None-BathtubBasin-419/trial_T20190907_133059_162744",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pen-None-DeskLamp-327/trial_T20190909_020841_759592",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Egg-None-SideTable-21/trial_T20190907_044013_708280",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Spatula-None-CounterTop-19/trial_T20190906_181400_748701",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Tomato-None-SinkBasin-3/trial_T20190909_004608_186817",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-SoapBar-None-Drawer-426/trial_T20190909_074540_552956",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pillow-None-DeskLamp-305/trial_T20190909_110653_100811",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-5/trial_T20190908_144144_976529",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SprayBottle-None-GarbageCan-415/trial_T20190907_070502_104667",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-WineBottle-None-Shelf-7/trial_T20190907_200104_945677",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Egg-None-GarbageCan-13/trial_T20190906_190930_720395",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Mug-None-Microwave-20/trial_T20190908_125321_767640",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Cloth-None-Toilet-426/trial_T20190910_045221_427487",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Egg-None-Fridge-24/trial_T20190909_005558_532531",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Pencil-None-Desk-313/trial_T20190906_200948_981650",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-SinkBasin-30/trial_T20190908_080503_071243",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Pan-None-StoveBurner-2/trial_T20190909_052052_434558",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_clean_then_place_in_recep-Plate-None-Microwave-7/trial_T20190907_170059_704503",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-RemoteControl-None-Sofa-212/trial_T20190907_235335_006124",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-Pencil-None-Desk-307/trial_T20190909_075150_052392",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_heat_then_place_in_recep-Potato-None-GarbageCan-12/trial_T20190907_125547_175997",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Pencil-None-DeskLamp-328/trial_T20190906_201130_178664",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_cool_then_place_in_recep-Potato-None-Microwave-25/trial_T20190908_113515_119158",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/look_at_obj_in_light-Statue-None-DeskLamp-304/trial_T20190909_011906_700145",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_and_place_simple-SprayBottle-None-Toilet-426/trial_T20190908_155236_907481",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      },
+      {
+        "task": "train/pick_two_obj_and_place-Pencil-None-Drawer-316/trial_T20190907_003822_891019",
+        "trial": 0,
+        "parent": true,
+        "candidate": true
+      }
+    ]
+  }
+]

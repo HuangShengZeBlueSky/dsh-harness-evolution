@@ -6,7 +6,7 @@
 
 HookEvo searches for task-specific plugins around a frozen language-model agent. A separate improver reads execution traces and proposes a patch. One patch can change both the handler that records a tool result and the handler that uses it later in the episode. DeepSeek Harness provides the runtime and lifecycle hooks.
 
-[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [Main leaderboard](#main-leaderboard) · [Explore a checkpoint](https://huangshengzebluesky.github.io/dsh-harness-evolution/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
+[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [Main leaderboard](#main-leaderboard) · [Round replay](https://huangshengzebluesky.github.io/dsh-harness-evolution/replay.html) · [Explore a harness](https://huangshengzebluesky.github.io/dsh-harness-evolution/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
 
 **Figure 1. What a candidate can change.** Skill text, an independent component, and coordinated handlers give the improver three different edit scopes.
 
@@ -31,16 +31,16 @@ Held-out success with Qwen3-4B-family executors. HookEvo leads the comparisons r
 Local results show mean held-out success (%) ± sample SD over three executions. A dash indicates an unreported result. Life-Harness reports ALIGN and AgentSquare in Table 11 and its Meta-Harness and AHE reruns in Table 1. Harness-R1 specifies Qwen3-4B and uses 500 WebShop tasks; our evaluation uses 200. [Life-Harness](https://arxiv.org/abs/2605.22166v3) · [Harness-R1](https://arxiv.org/abs/2608.02276)
 
 
-## Paper checkpoints
+## Released harnesses
 
-The executor is Qwen3-4B-Instruct-2507. Each row gives the highest measured checkpoint reported for that benchmark, with mean held-out success and sample standard deviation across three executions. The checkpoint identifier is local to its search run.
+The executor is Qwen3-4B-Instruct-2507. Each row gives the highest measured checkpoint reported for that benchmark, with mean held-out success and sample standard deviation across three executions.
 
-| Benchmark | Released checkpoint | Held-out tasks | Success (%) | What to inspect |
+| Benchmark | Artifact | Held-out tasks | Success (%) | What to inspect |
 | --- | --- | ---: | ---: | --- |
-| ALFWorld | [v06](artifacts/alfworld) | 109 | 95.41 ± 0.00 | [Action hints](artifacts/alfworld/plugins/action-hint.mjs) turn accepted receipts into episode state for context and action checks. [Architecture](figures/alfworld-architecture.png) |
-| DBBench | [v35](artifacts/dbbench) | 300 | 70.56 ± 0.38 | The [write workflow](artifacts/dbbench/plugins/write-workflow.mjs) and [result bridge](artifacts/dbbench/plugins/result-bridge.mjs) use SQL receipts to guide later calls and answers. [Architecture](figures/dbbench-architecture.png) |
-| WebShop | [v12](artifacts/webshop) | 200 | 48.17 ± 0.29 | The [option ledger](artifacts/webshop/plugins/option-ledger.mjs) and [search evidence](artifacts/webshop/plugins/search-evidence.mjs) track product and option evidence. [Architecture](figures/webshop-architecture.png) |
-| OSBench | [v01](artifacts/osbench) | 144 | 41.67 ± 1.84 | The retained change is the skill text in [composition.json](artifacts/osbench/composition.json). Its executable composition is empty. [Architecture](figures/osbench-architecture.png) |
+| ALFWorld | [View harness](artifacts/alfworld) | 109 | 95.41 ± 0.00 | [Action hints](artifacts/alfworld/plugins/action-hint.mjs) turn accepted receipts into episode state for context and action checks. [Architecture](figures/alfworld-architecture.png) |
+| DBBench | [View harness](artifacts/dbbench) | 300 | 70.56 ± 0.38 | The [write workflow](artifacts/dbbench/plugins/write-workflow.mjs) and [result bridge](artifacts/dbbench/plugins/result-bridge.mjs) use SQL receipts to guide later calls and answers. [Architecture](figures/dbbench-architecture.png) |
+| WebShop | [View harness](artifacts/webshop) | 200 | 48.17 ± 0.29 | The [option ledger](artifacts/webshop/plugins/option-ledger.mjs) and [search evidence](artifacts/webshop/plugins/search-evidence.mjs) track product and option evidence. [Architecture](figures/webshop-architecture.png) |
+| OSBench | [View harness](artifacts/osbench) | 144 | 41.67 ± 1.84 | The retained change is the skill text in [composition.json](artifacts/osbench/composition.json). Its executable composition is empty. [Architecture](figures/osbench-architecture.png) |
 
 ## How the search works
 
