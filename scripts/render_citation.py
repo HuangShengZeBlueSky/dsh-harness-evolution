@@ -17,7 +17,7 @@ def render(directory):
     paper_link = f'<a href="{url}">Paper on arXiv ↗</a>'
     section = f"""<p class="intro">Cite the HookEvo paper using the arXiv record. The code and benchmark artifacts have a separate software citation.</p>
 <pre><code id="bibtex">{html.escape(bibtex)}</code></pre>
-<div class="actions"><button type="button" id="copy-citation" hidden>Copy BibTeX</button><a href="paper.bib" download>Download .bib</a>{paper_link}<a href="https://github.com/HuangShengZeBlueSky/hookevo/blob/main/CITATION.cff">Software citation ↗</a></div>"""
+<div class="actions"><button type="button" id="copy-citation" hidden>Copy BibTeX</button><a href="paper.bib" download>Download .bib</a>{paper_link}<a href="https://github.com/HuangShengZeBlueSky/HookEvo/blob/main/CITATION.cff">Software citation ↗</a></div>"""
     index = directory / "index.html"
     page = index.read_text(encoding="utf-8")
     before, rest = page.split("<!-- citation:start -->")
