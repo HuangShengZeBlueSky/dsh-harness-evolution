@@ -1,12 +1,10 @@
-# HookEvo
+# HookEvo: A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes
 
-[![HookEvo: coordinated plugin evolution for tool-using agents](website/cover.png)](https://huangshengzebluesky.github.io/hookevo/)
-
-**A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes**
+[![HookEvo: coordinated plugin evolution for tool-using agents](website/cover.png)](https://huangshengzebluesky.github.io/HookEvo/)
 
 HookEvo searches for task-specific plugins around a frozen language-model agent. A separate improver reads execution traces and proposes a patch. One patch can change both the handler that records a tool result and the handler that uses it later in the episode. DeepSeek Harness provides the runtime and lifecycle hooks.
 
-[Project page](https://huangshengzebluesky.github.io/hookevo/) · [Main leaderboard](#main-leaderboard) · [Round replay](https://huangshengzebluesky.github.io/hookevo/replay.html) · [Explore a harness](https://huangshengzebluesky.github.io/hookevo/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
+[Project page](https://huangshengzebluesky.github.io/HookEvo/) · [Main leaderboard](#main-leaderboard) · [Round replay](https://huangshengzebluesky.github.io/HookEvo/replay.html) · [Explore a harness](https://huangshengzebluesky.github.io/HookEvo/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
 
 **Figure 1. What a candidate can change.** Skill text, an independent component, and coordinated handlers give the improver three different edit scopes.
 
@@ -76,7 +74,7 @@ Use the reproduction guide to [evaluate a released harness](REPRODUCING.md#evalu
 
 ## Citation
 
-[Paper citation and BibTeX](https://huangshengzebluesky.github.io/hookevo/#citation) · [Software citation](CITATION.cff)
+[Paper citation and BibTeX](https://huangshengzebluesky.github.io/HookEvo/#citation) · [Software citation](CITATION.cff)
 
 ## License
 
