@@ -6,9 +6,30 @@
 
 HookEvo searches for task-specific plugins around a frozen language-model agent. A separate improver reads execution traces and proposes a patch. One patch can change both the handler that records a tool result and the handler that uses it later in the episode. DeepSeek Harness provides the runtime and lifecycle hooks.
 
-[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [Explore a checkpoint](https://huangshengzebluesky.github.io/dsh-harness-evolution/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
+[Project page](https://huangshengzebluesky.github.io/dsh-harness-evolution/) · [Main leaderboard](#main-leaderboard) · [Explore a checkpoint](https://huangshengzebluesky.github.io/dsh-harness-evolution/#checkpoints) · [Download checkpoints](artifacts/) · [Installation](#installation) · [Evaluation and search](REPRODUCING.md) · [Controller source](evolution/src/dsh_evolve/abc.py)
 
-![One round of HookEvo, from parent traces through a candidate patch to paired evaluation and feedback](figures/method-overview.png)
+**Figure 1. What a candidate can change.** Skill text, an independent component, and coordinated handlers give the improver three different edit scopes.
+
+[![Figure 1. What a candidate can change](figures/intro-hookevo-scope.png)](figures/intro-hookevo-scope.png)
+
+## Main leaderboard
+
+Held-out success with Qwen3-4B-family executors. HookEvo leads the comparisons reported in the paper on each of the four benchmarks.
+
+| Method | ALFWorld | DBBench | WebShop | OSBench | Evaluation |
+| --- | ---: | ---: | ---: | ---: | --- |
+| **HookEvo (Sol, scope C)** | **95.41 ± 0.00** | **70.56 ± 0.38** | **48.17 ± 0.29** | **41.67 ± 1.84** | Local |
+| Life-Harness (local) | 87.77 ± 1.91 | 64.11 ± 0.38 | 41.33 ± 0.29 | 36.81 ± 0.00 | Local |
+| Life-Harness | 88.07 | 65.00 | 45.50 | 39.60 | Published |
+| Bare | 16.51 | 44.00 | 29.50 | 21.50 | Published |
+| ALIGN | 28.36 | — | 18.00 | — | Life-Harness |
+| AgentSquare | 29.36 | — | 18.50 | — | Life-Harness |
+| Meta-Harness (Life rerun) | 35.80 | 50.30 | 42.50 | 25.70 | Life-Harness |
+| AHE (Life rerun) | 89.00 | 57.30 | 39.00 | 37.50 | Life-Harness |
+| Harness-R1 (paper) | 29.10 | 55.70 | 38.60 | — | Published |
+
+Local results show mean held-out success (%) ± sample SD over three executions. A dash indicates an unreported result. Life-Harness reports ALIGN and AgentSquare in Table 11 and its Meta-Harness and AHE reruns in Table 1. Harness-R1 specifies Qwen3-4B and uses 500 WebShop tasks; our evaluation uses 200. [Life-Harness](https://arxiv.org/abs/2605.22166v3) · [Harness-R1](https://arxiv.org/abs/2608.02276)
+
 
 ## Paper checkpoints
 
@@ -22,6 +43,14 @@ The executor is Qwen3-4B-Instruct-2507. Each row gives the highest measured chec
 | OSBench | [v01](artifacts/osbench) | 144 | 41.67 ± 1.84 | The retained change is the skill text in [composition.json](artifacts/osbench/composition.json). Its executable composition is empty. [Architecture](figures/osbench-architecture.png) |
 
 ## How the search works
+
+**Figure 2. How candidate representations fit together.** The diagram maps earlier optimization targets to DeepSeek Harness interfaces and shows what one HookEvo candidate can edit.
+
+[![Figure 2. How candidate representations fit together](figures/dsh-candidate-representations.png)](figures/dsh-candidate-representations.png)
+
+**Figure 3. One evolution round.** The controller evaluates parent and candidate on matched tasks, then returns its retention decision and measured changes.
+
+[![Figure 3. One evolution round](figures/method-overview.png)](figures/method-overview.png)
 
 1. Run the parent harness on a training batch. Save its scores, hook outputs, and successful and failed trajectories.
 2. Give the improver sampled trajectories, parent source, runtime interfaces, and the previous decision. It proposes one replacement and a rationale. Scope A edits skill text, B edits one independent component, and C permits coordinated edits that share episode-local state.
