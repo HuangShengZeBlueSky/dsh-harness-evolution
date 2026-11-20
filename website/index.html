@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://huangshengzebluesky.github.io/dsh-harness-evolution/">
 <meta property="og:description" content="Explore how a frozen agent learns new procedures through coordinated edits to its runtime plugins. Inspect four released checkpoints and their evaluation records.">
 <meta property="og:image" content="https://huangshengzebluesky.github.io/dsh-harness-evolution/cover.png">
-<meta property="og:image:alt" content="HookEvo. Mean test success for GPT-6.1 Sol across edit scopes: 38.04%, 41.03%, and 63.95%.">
+<meta property="og:image:alt" content="HookEvo. Coordinated plugin evolution for tool-using agents. Receipt, context and action checks share episode state.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -18,13 +18,22 @@
 <header><div class="bar"><a class="logo" href="#top">Hook<i>Evo</i></a>
 <nav aria-label="Sections"><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#scope">Edit scope</a><a href="#reproduce">Reproduce</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></nav></div></header>
 <main id="top">
-<div class="wash"><div class="hero wrap">
-<div><p class="eyebrow">Agent harness evolution</p><h1>Hook<i>Evo</i></h1>
-<p class="title">A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes</p>
-<p class="lead">A tool receipt can change what an agent remembers and what it does next. HookEvo evolves the plugins that connect those steps while the executor stays frozen.</p>
-<div class="actions"><a class="primary" href="#leaderboard">View leaderboard ↓</a><a href="replay.html">Replay a search round →</a><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">Code repository ↗</a><a href="#checkpoints">Explore artifacts</a></div></div>
-<aside><span class="tag">Edit-scope result</span><div class="metric">+25.91<small> pp</small></div><p>Gain in mean test success for GPT-6.1 Sol when moving from skill text to coordinated plugin edits.</p><div class="stats"><div><b>4</b>benchmarks</div><div><b>3</b>improvers</div><div><b>3</b>edit scopes</div></div></aside>
+<div class="hero wrap">
+<h1>HookEvo<span>.</span></h1>
+<p class="title">Coordinated plugin evolution for tool-using agents.</p>
+<p class="lead">A frozen agent can learn a new procedure when its plugins change together. Follow a tool receipt from observation to the next action.</p>
+<div class="actions"><a class="primary" href="replay.html">Replay an experiment</a><a href="#leaderboard">View results ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">Get the code ↗</a></div>
+</div>
+<div class="instrument wrap" id="instrument">
+<div class="stack-zone" aria-hidden="true"><div class="stack">
+<div class="tile t3"><span>Action check</span></div>
+<div class="tile t2"><span>Context</span></div>
+<div class="tile t1"><span>Receipt</span><i></i></div>
 </div></div>
+<div class="instrument-body"><p class="eyebrow">ALFWorld / action-hint.mjs</p><h2>One state, three hooks.</h2><div class="hook-select" aria-label="Explore a hook" hidden></div>
+<div id="hook-detail" aria-live="polite"><p id="hook-copy">A successful pickup updates the object held in episode state.</p><pre><code id="hook-code">if (take) { held = take[1]; known.delete(held); }</code></pre></div>
+<a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/alfworld/plugins/action-hint.mjs">Inspect the plugin ↗</a></div></div>
+<div class="findings wrap"><div><b>+25.91 <small>pp</small></b><p>Mean success gain for GPT-6.1 Sol from skill text to coordinated edits.</p></div><div><b>4</b><p>Benchmarks evaluated with frozen Qwen3-4B.</p></div><div><b>3 × 3</b><p>Improvers and edit scopes compared.</p></div></div>
 <section class="wrap" id="leaderboard"><p class="eyebrow">Main leaderboard</p><h2>How do the harnesses compare?</h2><p class="intro">HookEvo leads the reported Qwen3-4B-family comparisons on all four benchmarks. Against our local Life-Harness rerun, the gains range from 4.86 percentage points on OSBench to 7.64 on ALFWorld.</p><div class="table"><table id="main-board"><thead><tr><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation</th></tr></thead><tbody>
 <tr class="ours"><th scope="row">HookEvo (Sol, scope C)</th><td>95.41 ± 0.00</td><td>70.56 ± 0.38</td><td>48.17 ± 0.29</td><td>41.67 ± 1.84</td><td>Local</td></tr>
 <tr><th scope="row">Life-Harness (local)</th><td>87.77 ± 1.91</td><td>64.11 ± 0.38</td><td>41.33 ± 0.29</td><td>36.81 ± 0.00</td><td>Local</td></tr>
@@ -72,6 +81,7 @@ python -m pip install -e evolution
 python evolution/scripts/smoke.py ./runs/smoke</code></pre>
 <p>The reproduction guide lists the external assets and model access for each benchmark. Choose a frozen profile to evaluate a released checkpoint, or an A/B/C profile to run a new search.</p><div class="actions"><a class="dark" href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/REPRODUCING.md">Reproduction guide ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/CITATION.cff">Cite the code ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/issues">Research questions ↗</a></div></section>
 </main><footer><div class="wrap"><a class="logo" href="#top">Hook<i>Evo</i></a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></div></footer>
+<script src="hooks.js"></script>
 <script src="checkpoints.js"></script>
 <script src="leaderboard.js"></script>
 </body></html>

@@ -1,6 +1,6 @@
 # HookEvo
 
-[![HookEvo paper overview and edit-scope results](website/cover.png)](https://huangshengzebluesky.github.io/dsh-harness-evolution/)
+[![HookEvo: coordinated plugin evolution for tool-using agents](website/cover.png)](https://huangshengzebluesky.github.io/dsh-harness-evolution/)
 
 **A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes**
 
