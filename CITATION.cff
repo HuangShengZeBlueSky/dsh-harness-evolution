@@ -1,10 +1,8 @@
 cff-version: 1.2.0
 message: "Please cite this software when using the released code or artifacts."
 type: software
-title: "DSH Harness Evolution"
+title: "HookEvo: A Framework for Coordinated Plugin Evolution on Hook-Enabled Agent Runtimes"
 authors:
-  - name: "DSH Harness Evolution contributors"
-version: 0.2.0
+  - name: "HookEvo contributors"
 license: MIT
 repository-code: "https://github.com/HuangShengZeBlueSky/dsh-harness-evolution"
-url: "https://huangshengzebluesky.github.io/dsh-harness-evolution/"

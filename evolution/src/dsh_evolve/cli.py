@@ -1,14 +1,14 @@
-"""Run the released L4 recipes or the controlled A/B/C search."""
+"""Evaluate a paper checkpoint or run the controlled A/B/C search."""
 import argparse
 import json
 import shutil
+import statistics
 from pathlib import Path
 
 import yaml
 
 from astra_evolve.config import load_config
 from astra_evolve.records import write
-from .factory import campaign
 
 ROOT = Path(__file__).resolve().parents[3]
 ENGINE = ROOT / "evolution"
@@ -20,8 +20,8 @@ def initialize(directory, profile, assets=None, baseline=None):
     if not config_file.exists():
         raise ValueError("Choose a profile listed by dsh-evolve profiles")
     config = yaml.safe_load(config_file.read_text())
-    if config.get("loop", {}).get("requires_seed_artifact") and not baseline:
-        raise ValueError("This continuation requires --baseline with its recorded starting harness")
+    if config.get("mode") == "frozen" and baseline is None:
+        baseline = ROOT / "artifacts" / config["domain"].lower()
     destination = Path(directory).resolve()
     shared = template.parent / "common"
     if shared.is_dir():
@@ -30,7 +30,7 @@ def initialize(directory, profile, assets=None, baseline=None):
     else:
         shutil.copytree(template, destination)
     domain = config["domain"].lower()
-    if config.get("scale"):
+    if config.get("scale") or domain == "osbench":
         runtime = ENGINE / "src/dsh_evolve/assets" / domain
         shutil.copytree(runtime, destination / "runtime", ignore=shutil.ignore_patterns("environment.py"))
         shutil.copy2(runtime / "environment.py", destination / "environment.py")
@@ -40,8 +40,6 @@ def initialize(directory, profile, assets=None, baseline=None):
         if domain == "alfworld":
             for name in ("host.mjs", "bridge.mjs", "package.json"):
                 shutil.copy2(ENGINE / "src/dsh_evolve/assets/alfworld" / name, destination / "runtime" / name)
-        for name in ("INNER_PROMPT.txt", "OUTER_PROMPT.txt"):
-            shutil.copy2(ENGINE / "prompts" / name, destination / name)
     if baseline:
         if (destination / "baseline").exists():
             shutil.rmtree(destination / "baseline")
@@ -77,16 +75,8 @@ def main():
     init.add_argument("--profile", required=True)
     init.add_argument("--assets")
     init.add_argument("--baseline")
-    for action in ("setup", "run", "test-artifact", "status", "finish", "prepare", "evaluate", "report", "decide"):
-        cmd = commands.add_parser(action)
-        cmd.add_argument("config")
-        cmd.add_argument("version", nargs="?")
-        cmd.add_argument("--parent")
-        cmd.add_argument("--split", default="development", choices=("train", "validation", "development", "test"))
-        cmd.add_argument("--batch", type=int)
-        cmd.add_argument("--adopt", action="store_true")
-        cmd.add_argument("--reject", action="store_true")
-        cmd.add_argument("--reason", default="")
+    for action in ("setup", "run", "test-artifact", "status"):
+        commands.add_parser(action).add_argument("config")
     args = parser.parse_args()
     if args.action == "profiles":
         for path in sorted((ROOT / "configs").rglob("experiment.yaml")):
@@ -102,6 +92,9 @@ def main():
     config = load_config(args.config)
     if args.action == "status":
         base = Path(args.config).resolve().parent
+        if config.get("mode") == "frozen":
+            print(json.dumps({"checkpoint": config["checkpoint"], "evaluation": str(base / "runs/evaluations/baseline/test")}))
+            return
         decisions = list((base / config.get("output", "runs") / "decisions").glob("v*.json"))
         print(json.dumps({"method": config.get("scale", {}).get("mode", config.get("loop", {}).get("variant")),
                           "decisions": len(decisions), "budget": config["rounds"]}))
@@ -109,32 +102,20 @@ def main():
     if args.action == "test-artifact":
         from astra_evolve.project import Project
         project = Project(args.config)
-        project.cfg["test_schedule"] = "artifact"
+        if config.get("mode") != "frozen":
+            parser.error("Choose a frozen profile for checkpoint evaluation.")
         project.evaluate("baseline", "test")
+        repeats = {}
+        for row in project.rows("baseline", "test"):
+            repeats.setdefault(row["trial"], []).append(row["score"] >= 1)
+        rates = [100 * statistics.mean(scores) for scores in repeats.values()]
+        print(json.dumps({"success_percent_by_trial": rates, "mean_percent": statistics.mean(rates),
+                          "sample_sd_pp": statistics.stdev(rates)}, indent=2))
         return
-    if config.get("scale"):
-        if args.action != "run":
-            raise ValueError("Use run to execute or resume the controller-owned A/B/C stages")
-        from .abc import run
-        run(args.config)
-        return
-    project = campaign(args.config)
-    if args.action == "run":
-        project.evaluate("baseline", "development")
-        from .keeper import run
-        run(project)
-    elif args.action == "prepare":
-        project.prepare(args.version, args.parent or project.best())
-    elif args.action == "evaluate":
-        project.evaluate(args.version, args.split, args.batch)
-    elif args.action == "report":
-        print(json.dumps(project.report(args.version)))
-    elif args.action == "decide":
-        if args.adopt == args.reject:
-            raise ValueError("Choose --adopt or --reject")
-        project.decide(args.version, args.adopt, args.reason)
-    elif args.action == "finish":
-        project.finish()
+    if not config.get("scale"):
+        parser.error("Choose an abc profile for search.")
+    from .abc import run
+    run(args.config)
 
 
 if __name__ == "__main__":

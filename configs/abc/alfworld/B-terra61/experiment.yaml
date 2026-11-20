@@ -23,8 +23,8 @@ benchmark:
   max_steps: 50
   max_model_calls: 50
   timeout_seconds: 1500
-  no_tool_feedback: "You MUST call the take_action tool \u2014 do NOT output plain\
-    \ text without a tool call."
+  no_tool_feedback: You MUST call the take_action tool — do NOT output plain text
+    without a tool call.
   model:
     name: Qwen3-4B-Instruct-2507
     base_url: ${BENCH_BASE_URL}
@@ -53,3 +53,4 @@ scale:
   selection: strict_success
   data: historical
   benchmark: alfworld
+start_label: Initial harness

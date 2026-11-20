@@ -26,9 +26,9 @@ class Project:
             other = {r['task_id'] for r in self.tasks['train']} | {r['task_id'] for r in self.tasks.get('test', [])}
             if other & {r['task_id'] for r in self.tasks['validation']}:
                 raise ValueError('Validation overlaps training or test')
-        if "train" not in self.tasks:
+        if "train" not in self.tasks and self.cfg.get("mode") != "frozen":
             raise ValueError("Training task list is required; run inventory first")
-        if "test" in self.tasks and {r['task_id'] for r in self.tasks['train']} & {r['task_id'] for r in self.tasks['test']}:
+        if "test" in self.tasks and {r['task_id'] for r in self.tasks.get('train', [])} & {r['task_id'] for r in self.tasks['test']}:
             raise ValueError("Train/test task IDs overlap")
 
     def freeze_experiment(self):

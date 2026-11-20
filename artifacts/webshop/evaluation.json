@@ -1,0 +1,1005 @@
+{
+  "source": "webshop-methods-20r-20261023/method2-sol61 -> loop-expansion-sol40-20261026/webshop/original-best-sol61",
+  "budget": 80,
+  "headline_version": "v12",
+  "headline_test": 48.1666666667,
+  "rows": [
+    {
+      "round": 0,
+      "candidate": "baseline",
+      "parent": null,
+      "train": 38.0,
+      "parent_train": null,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 1,
+      "candidate": "v01",
+      "parent": "baseline",
+      "train": 36.0,
+      "parent_train": 38.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 2,
+      "candidate": "v02",
+      "parent": "v01",
+      "train": 40.0,
+      "parent_train": 44.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 3,
+      "candidate": "v03",
+      "parent": "v02",
+      "train": 32.0,
+      "parent_train": 30.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 4,
+      "candidate": "v04",
+      "parent": "v03",
+      "train": 36.0,
+      "parent_train": 34.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 5,
+      "candidate": "v05",
+      "parent": "v04",
+      "train": 40.0,
+      "parent_train": 28.000000000000004,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 6,
+      "candidate": "v06",
+      "parent": "v05",
+      "train": 40.0,
+      "parent_train": 38.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 7,
+      "candidate": "v07",
+      "parent": "v06",
+      "train": 40.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 8,
+      "candidate": "v08",
+      "parent": "v06",
+      "train": 50.0,
+      "parent_train": 48.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 9,
+      "candidate": "v09",
+      "parent": "v08",
+      "train": 34.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 10,
+      "candidate": "v10",
+      "parent": "v08",
+      "train": 38.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 11,
+      "candidate": "v11",
+      "parent": "v08",
+      "train": 46.0,
+      "parent_train": 38.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 12,
+      "candidate": "v12",
+      "parent": "v11",
+      "train": 40.0,
+      "parent_train": 38.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 13,
+      "candidate": "v13",
+      "parent": "v11",
+      "train": 38.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 14,
+      "candidate": "v14",
+      "parent": "v11",
+      "train": 52.0,
+      "parent_train": 48.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 15,
+      "candidate": "v15",
+      "parent": "v14",
+      "train": 34.0,
+      "parent_train": 36.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 16,
+      "candidate": "v16",
+      "parent": "v14",
+      "train": 36.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 17,
+      "candidate": "v17",
+      "parent": "v14",
+      "train": 40.0,
+      "parent_train": 44.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 18,
+      "candidate": "v18",
+      "parent": "v14",
+      "train": 38.0,
+      "parent_train": 38.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 19,
+      "candidate": "v19",
+      "parent": "v14",
+      "train": 40.0,
+      "parent_train": 36.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 20,
+      "candidate": "v20",
+      "parent": "v19",
+      "train": 54.0,
+      "parent_train": 52.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 21,
+      "candidate": "v21",
+      "parent": "v20",
+      "train": 40.0,
+      "parent_train": 34.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 22,
+      "candidate": "v22",
+      "parent": "v21",
+      "train": 40.0,
+      "parent_train": 38.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 23,
+      "candidate": "v23",
+      "parent": "v21",
+      "train": 42.0,
+      "parent_train": 44.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 24,
+      "candidate": "v24",
+      "parent": "v21",
+      "train": 42.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 25,
+      "candidate": "v25",
+      "parent": "v21",
+      "train": 42.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 26,
+      "candidate": "v26",
+      "parent": "v21",
+      "train": 52.0,
+      "parent_train": 50.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 27,
+      "candidate": "v27",
+      "parent": "v21",
+      "train": 36.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 28,
+      "candidate": "v28",
+      "parent": "v21",
+      "train": 38.0,
+      "parent_train": 38.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 29,
+      "candidate": "v29",
+      "parent": "v28",
+      "train": 48.0,
+      "parent_train": 42.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 30,
+      "candidate": "v30",
+      "parent": "v29",
+      "train": 38.0,
+      "parent_train": 38.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 31,
+      "candidate": "v31",
+      "parent": "v29",
+      "train": 40.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 32,
+      "candidate": "v32",
+      "parent": "v29",
+      "train": 50.0,
+      "parent_train": 52.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 33,
+      "candidate": "v33",
+      "parent": "v29",
+      "train": 40.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 34,
+      "candidate": "v34",
+      "parent": "v29",
+      "train": 40.0,
+      "parent_train": 40.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 35,
+      "candidate": "v35",
+      "parent": "v34",
+      "train": 46.0,
+      "parent_train": 46.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 36,
+      "candidate": "v36",
+      "parent": "v35",
+      "train": 40.0,
+      "parent_train": 38.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 37,
+      "candidate": "v37",
+      "parent": "v35",
+      "train": 44.0,
+      "parent_train": 40.0,
+      "adopted": true,
+      "stage": 1
+    },
+    {
+      "round": 38,
+      "candidate": "v38",
+      "parent": "v37",
+      "train": 52.0,
+      "parent_train": 52.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 39,
+      "candidate": "v39",
+      "parent": "v37",
+      "train": 40.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 40,
+      "candidate": "v40",
+      "parent": "v37",
+      "train": 38.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "stage": 1
+    },
+    {
+      "round": 41,
+      "candidate": "v01",
+      "parent": "baseline",
+      "train": null,
+      "parent_train": 42.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 1
+    },
+    {
+      "round": 42,
+      "candidate": "v02",
+      "parent": "baseline",
+      "train": 50.0,
+      "parent_train": 50.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 2
+    },
+    {
+      "round": 43,
+      "candidate": "v03",
+      "parent": "v02",
+      "train": 40.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 3
+    },
+    {
+      "round": 44,
+      "candidate": "v04",
+      "parent": "v02",
+      "train": 36.0,
+      "parent_train": 38.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 4
+    },
+    {
+      "round": 45,
+      "candidate": "v05",
+      "parent": "v02",
+      "train": 48.0,
+      "parent_train": 50.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 5
+    },
+    {
+      "round": 46,
+      "candidate": "v06",
+      "parent": "v02",
+      "train": 38.0,
+      "parent_train": 40.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 6
+    },
+    {
+      "round": 47,
+      "candidate": "v07",
+      "parent": "v02",
+      "train": 44.0,
+      "parent_train": 42.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 7
+    },
+    {
+      "round": 48,
+      "candidate": "v08",
+      "parent": "v07",
+      "train": 48.0,
+      "parent_train": 50.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 8
+    },
+    {
+      "round": 49,
+      "candidate": "v09",
+      "parent": "v08",
+      "train": 44.0,
+      "parent_train": 42.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 9
+    },
+    {
+      "round": 50,
+      "candidate": "v10",
+      "parent": "v09",
+      "train": 38.0,
+      "parent_train": 36.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 10
+    },
+    {
+      "round": 51,
+      "candidate": "v11",
+      "parent": "v10",
+      "train": 46.0,
+      "parent_train": 48.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 11
+    },
+    {
+      "round": 52,
+      "candidate": "v12",
+      "parent": "v10",
+      "train": 42.0,
+      "parent_train": 38.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 12
+    },
+    {
+      "round": 53,
+      "candidate": "v13",
+      "parent": "v12",
+      "train": 44.0,
+      "parent_train": 46.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 13
+    },
+    {
+      "round": 54,
+      "candidate": "v14",
+      "parent": "v12",
+      "train": 48.0,
+      "parent_train": 48.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 14
+    },
+    {
+      "round": 55,
+      "candidate": "v15",
+      "parent": "v12",
+      "train": 40.0,
+      "parent_train": 44.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 15
+    },
+    {
+      "round": 56,
+      "candidate": "v16",
+      "parent": "v12",
+      "train": 42.0,
+      "parent_train": 40.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 16
+    },
+    {
+      "round": 57,
+      "candidate": "v17",
+      "parent": "v16",
+      "train": 44.0,
+      "parent_train": 38.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 17
+    },
+    {
+      "round": 58,
+      "candidate": "v18",
+      "parent": "v17",
+      "train": 44.0,
+      "parent_train": 42.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 18
+    },
+    {
+      "round": 59,
+      "candidate": "v19",
+      "parent": "v18",
+      "train": 46.0,
+      "parent_train": 44.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 19
+    },
+    {
+      "round": 60,
+      "candidate": "v20",
+      "parent": "v19",
+      "train": 50.0,
+      "parent_train": 50.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 20
+    },
+    {
+      "round": 61,
+      "candidate": "v21",
+      "parent": "v19",
+      "train": 46.0,
+      "parent_train": 46.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 21
+    },
+    {
+      "round": 62,
+      "candidate": "v22",
+      "parent": "v19",
+      "train": 44.0,
+      "parent_train": 44.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 22
+    },
+    {
+      "round": 63,
+      "candidate": "v23",
+      "parent": "v19",
+      "train": 36.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 23
+    },
+    {
+      "round": 64,
+      "candidate": "v24",
+      "parent": "v19",
+      "train": 42.0,
+      "parent_train": 40.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 24
+    },
+    {
+      "round": 65,
+      "candidate": "v25",
+      "parent": "v24",
+      "train": 42.0,
+      "parent_train": 44.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 25
+    },
+    {
+      "round": 66,
+      "candidate": "v26",
+      "parent": "v25",
+      "train": 46.0,
+      "parent_train": 46.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 26
+    },
+    {
+      "round": 67,
+      "candidate": "v27",
+      "parent": "v25",
+      "train": 46.0,
+      "parent_train": 44.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 27
+    },
+    {
+      "round": 68,
+      "candidate": "v28",
+      "parent": "v27",
+      "train": 42.0,
+      "parent_train": 44.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 28
+    },
+    {
+      "round": 69,
+      "candidate": "v29",
+      "parent": "v27",
+      "train": 46.0,
+      "parent_train": 44.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 29
+    },
+    {
+      "round": 70,
+      "candidate": "v30",
+      "parent": "v29",
+      "train": 44.0,
+      "parent_train": 44.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 30
+    },
+    {
+      "round": 71,
+      "candidate": "v31",
+      "parent": "v29",
+      "train": 44.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 31
+    },
+    {
+      "round": 72,
+      "candidate": "v32",
+      "parent": "v29",
+      "train": 48.0,
+      "parent_train": 46.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 32
+    },
+    {
+      "round": 73,
+      "candidate": "v33",
+      "parent": "v32",
+      "train": 46.0,
+      "parent_train": 46.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 33
+    },
+    {
+      "round": 74,
+      "candidate": "v34",
+      "parent": "v32",
+      "train": 42.0,
+      "parent_train": 44.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 34
+    },
+    {
+      "round": 75,
+      "candidate": "v35",
+      "parent": "v34",
+      "train": 46.0,
+      "parent_train": 46.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 35
+    },
+    {
+      "round": 76,
+      "candidate": "v36",
+      "parent": "v34",
+      "train": 44.0,
+      "parent_train": 42.0,
+      "adopted": true,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 36
+    },
+    {
+      "round": 77,
+      "candidate": "v37",
+      "parent": "v36",
+      "train": 46.0,
+      "parent_train": 48.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 37
+    },
+    {
+      "round": 78,
+      "candidate": "v38",
+      "parent": "v36",
+      "train": 48.0,
+      "parent_train": 48.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 38
+    },
+    {
+      "round": 79,
+      "candidate": "v39",
+      "parent": "v36",
+      "train": 40.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 39
+    },
+    {
+      "round": 80,
+      "candidate": "v40",
+      "parent": "v36",
+      "train": 42.0,
+      "parent_train": 42.0,
+      "adopted": false,
+      "validation": null,
+      "stage": 2,
+      "stage_round": 40
+    }
+  ],
+  "tests": [
+    {
+      "round": 2,
+      "score": 45.666666666666664,
+      "sd": 0.5773502691896263,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.45,
+        "1": 0.46,
+        "2": 0.46
+      }
+    },
+    {
+      "round": 7,
+      "score": 45.5,
+      "sd": 1.3228756555322934,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.445,
+        "1": 0.47,
+        "2": 0.45
+      }
+    },
+    {
+      "round": 8,
+      "score": 46.0,
+      "sd": 0.5000000000000004,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.46,
+        "1": 0.455,
+        "2": 0.465
+      }
+    },
+    {
+      "round": 9,
+      "score": 45.5,
+      "sd": 3.6055512754639905,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.415,
+        "1": 0.485,
+        "2": 0.465
+      }
+    },
+    {
+      "round": 12,
+      "score": 47.0,
+      "sd": 0.8660254037844363,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.475,
+        "1": 0.46,
+        "2": 0.475
+      }
+    },
+    {
+      "round": 16,
+      "score": 46.166666666666664,
+      "sd": 1.0408329997330652,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.465,
+        "1": 0.45,
+        "2": 0.47
+      }
+    },
+    {
+      "round": 17,
+      "score": 44.166666666666664,
+      "sd": 1.527525231651948,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.455,
+        "1": 0.425,
+        "2": 0.445
+      }
+    },
+    {
+      "round": 18,
+      "score": 45.83333333333333,
+      "sd": 1.0408329997330643,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.47,
+        "1": 0.455,
+        "2": 0.45
+      }
+    },
+    {
+      "round": 19,
+      "score": 45.0,
+      "sd": 0.8660254037844394,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.455,
+        "1": 0.455,
+        "2": 0.44
+      }
+    },
+    {
+      "round": 24,
+      "score": 45.666666666666664,
+      "sd": 1.2583057392117898,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.47,
+        "1": 0.445,
+        "2": 0.455
+      }
+    },
+    {
+      "round": 25,
+      "score": 43.666666666666664,
+      "sd": 1.258305739211793,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.425,
+        "1": 0.435,
+        "2": 0.45
+      }
+    },
+    {
+      "round": 27,
+      "score": 43.0,
+      "sd": 2.291287847477922,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.41,
+        "1": 0.455,
+        "2": 0.425
+      }
+    },
+    {
+      "round": 29,
+      "score": 43.333333333333336,
+      "sd": 0.763762615825974,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.435,
+        "1": 0.44,
+        "2": 0.425
+      }
+    },
+    {
+      "round": 32,
+      "score": 43.5,
+      "sd": 0.5000000000000004,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.44,
+        "1": 0.435,
+        "2": 0.43
+      }
+    },
+    {
+      "round": 34,
+      "score": 44.666666666666664,
+      "sd": 0.5773502691896263,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.45,
+        "1": 0.44,
+        "2": 0.45
+      }
+    },
+    {
+      "round": 36,
+      "score": 44.333333333333336,
+      "sd": 0.28867513459481314,
+      "n_repeats": 3,
+      "repeat_rates": {
+        "0": 0.44,
+        "1": 0.445,
+        "2": 0.445
+      }
+    }
+  ],
+  "headline_evaluation": {
+    "source": "competitors-webshop-frozen-20261102/jobs/ours-v12",
+    "checkpoint": "v12",
+    "repeat_rates": {
+      "0": 0.48,
+      "1": 0.48,
+      "2": 0.485
+    },
+    "sample_sd_pp": 0.28867513459481287
+  }
+}

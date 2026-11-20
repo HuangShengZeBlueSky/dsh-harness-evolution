@@ -1,0 +1,18 @@
+{
+  "methods": [
+    {
+      "id": "task-guide",
+      "module": "plugins/task-guide.mjs",
+      "config": {}
+    },
+    {
+      "id": "action-hint",
+      "module": "plugins/action-hint.mjs",
+      "config": {}
+    }
+  ],
+  "selected": [
+    "task-guide",
+    "action-hint"
+  ]
+}

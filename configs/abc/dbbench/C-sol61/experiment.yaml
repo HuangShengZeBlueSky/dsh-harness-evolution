@@ -59,7 +59,7 @@ benchmark:
     max_model_calls: 15
   runner: dbbench
 domain: dbbench
-start_label: "H0\u96F6\u589E\u5F3A\u63D2\u4EF6"
+start_label: Initial harness
 scale:
   mode: C
   selection: strict_success

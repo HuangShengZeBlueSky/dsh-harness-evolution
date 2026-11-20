@@ -52,7 +52,7 @@ benchmark:
   - batches/batch-05.jsonl
   - batches/batch-06.jsonl
 domain: webshop
-start_label: "\u65E7\u6700\u7EC8\u7248 v37"
+start_label: Initial harness
 scale:
   mode: A
   selection: mean_reward
