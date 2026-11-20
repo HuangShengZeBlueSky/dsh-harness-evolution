@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['website/**', 'figures/**', 'scripts/render_citation.py', '.github/workflows/pages.yml']
+    paths: ['website/**', 'figures/**', 'scripts/render_citation.py', 'scripts/embed_page_styles.py', '.github/workflows/pages.yml']
 permissions:
   contents: read
   pages: write
@@ -19,6 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/render_citation.py website
+      - run: python3 scripts/embed_page_styles.py website
       - run: cp -R figures website/
       - uses: actions/configure-pages@v5
       - id: bundle

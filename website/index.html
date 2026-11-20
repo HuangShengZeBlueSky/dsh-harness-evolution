@@ -15,11 +15,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="bar"><a class="logo" href="#top">Hook<i>Evo</i></a>
+<header><div class="bar"><a class="logo" href="#top">HookEvo</a>
 <nav aria-label="Sections"><a href="#method">Method</a><a href="#leaderboard">Leaderboard</a><a href="#scope">Edit scope</a><a href="#reproduce">Reproduce</a><a href="#citation">Citation</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></nav></div></header>
 <main id="top">
-<div class="hero wrap">
-<h1>HookEvo<span>.</span></h1>
+<div class="product-stage"><div class="hero wrap">
+<h1>HookEvo</h1>
 <p class="title">Coordinated plugin evolution for tool-using agents.</p>
 <p class="lead">A frozen agent can learn a new procedure when its plugins change together. Follow a tool receipt from observation to the next action.</p>
 <div class="actions"><a class="primary" href="replay.html">Replay an experiment</a><!-- paper-link --><a href="#leaderboard">View results ↗</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">Get the code ↗</a></div>
@@ -33,6 +33,7 @@
 <div class="instrument-body"><p class="eyebrow">ALFWorld / action-hint.mjs</p><h2>One state, three hooks.</h2><div class="hook-select" aria-label="Explore a hook" hidden></div>
 <div id="hook-detail" aria-live="polite"><p id="hook-copy">A successful pickup updates the object held in episode state.</p><pre><code id="hook-code">if (take) { held = take[1]; known.delete(held); }</code></pre></div>
 <a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/artifacts/alfworld/plugins/action-hint.mjs">Inspect the plugin ↗</a></div></div>
+</div>
 <div class="findings wrap"><div><b>+25.91 <small>pp</small></b><p>Mean success gain for GPT-6.1 Sol from skill text to coordinated edits.</p></div><div><b>4</b><p>Benchmarks evaluated with frozen Qwen3-4B.</p></div><div><b>3 × 3</b><p>Improvers and edit scopes compared.</p></div></div>
 <section class="wrap" id="leaderboard"><p class="eyebrow">Main leaderboard</p><h2>How do the harnesses compare?</h2><p class="intro">HookEvo leads the reported Qwen3-4B-family comparisons on all four benchmarks. Against our local Life-Harness rerun, the gains range from 4.86 percentage points on OSBench to 7.64 on ALFWorld.</p><div class="table"><table id="main-board"><thead><tr><th scope="col">Method</th><th scope="col">ALFWorld</th><th scope="col">DBBench</th><th scope="col">WebShop</th><th scope="col">OSBench</th><th scope="col">Evaluation</th></tr></thead><tbody>
 <tr class="ours"><th scope="row">HookEvo (Sol, scope C)</th><td>95.41 ± 0.00</td><td>70.56 ± 0.38</td><td>48.17 ± 0.29</td><td>41.67 ± 1.84</td><td>Local</td></tr>
@@ -92,7 +93,7 @@ python evolution/scripts/smoke.py ./runs/smoke</code></pre>
 <div class="actions"><button type="button" id="copy-citation" hidden>Copy BibTeX</button><a href="software.bib" download>Download .bib</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution/blob/main/CITATION.cff">Software citation ↗</a></div>
 <!-- citation:end -->
 <span id="copy-status" role="status"></span></section>
-</main><footer><div class="wrap"><a class="logo" href="#top">Hook<i>Evo</i></a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></div></footer>
+</main><footer><div class="wrap"><a class="logo" href="#top">HookEvo</a><a href="https://github.com/HuangShengZeBlueSky/dsh-harness-evolution">GitHub ↗</a></div></footer>
 <script src="hooks.js"></script>
 <script src="checkpoints.js"></script>
 <script src="leaderboard.js"></script>
